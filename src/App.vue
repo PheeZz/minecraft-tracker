@@ -8,6 +8,7 @@ const route = useRoute()
 const router = useRouter()
 
 const activeTracker = computed<TrackerId>(() => (route.meta.tracker as TrackerId) ?? 'trees')
+const year = new Date().getFullYear()
 
 // Тема трекера активируется атрибутом на корне документа; запоминаем последний.
 watchEffect(() => {
@@ -48,6 +49,15 @@ function switchTo(id: TrackerId) {
           <span class="switcher__kicker">{{ t.kicker }}</span>
         </span>
       </button>
+
+      <a
+        class="copyright"
+        href="https://github.com/PheeZz"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        © {{ year }} PheeZz
+      </a>
     </nav>
 
     <main class="shell__body">
@@ -70,9 +80,25 @@ function switchTo(id: TrackerId) {
 
 .switcher {
   display: flex;
+  align-items: center;
   gap: 8px;
   padding: 10px 16px;
   border-bottom: 1px solid var(--line);
+}
+
+.copyright {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.15s;
+}
+.copyright:hover {
+  opacity: 1;
+  color: var(--honey-dk, var(--leaf));
 }
 
 .switcher__btn {

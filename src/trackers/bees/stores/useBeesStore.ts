@@ -26,6 +26,8 @@ export const useBeesStore = defineStore('bees', () => {
   const mode = ref<BeeMode>('comb')
   const curComb = ref<string | null>(null)
   const curTarget = ref<string | null>(null)
+  /** Открыт ли раздел инвентаря (замещает канвас-цепочку). */
+  const inventoryOpen = ref(false)
 
   function persist(): void {
     storage.set(HAVE_KEY, [...have.value])
@@ -82,6 +84,9 @@ export const useBeesStore = defineStore('bees', () => {
   function setTarget(id: string): void {
     curTarget.value = id
   }
+  function toggleInventory(): void {
+    inventoryOpen.value = !inventoryOpen.value
+  }
 
   return {
     have,
@@ -90,6 +95,7 @@ export const useBeesStore = defineStore('bees', () => {
     mode,
     curComb,
     curTarget,
+    inventoryOpen,
     depthOf,
     haveCount,
     isHave,
@@ -101,5 +107,6 @@ export const useBeesStore = defineStore('bees', () => {
     selectComb,
     selectBee,
     setTarget,
+    toggleInventory,
   }
 })

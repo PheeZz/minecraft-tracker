@@ -71,6 +71,9 @@ function clearHave() {
       <span
         >в наличии <span class="cnt">{{ store.haveCount }}</span></span
       >
+      <button :class="{ on: store.inventoryOpen }" type="button" @click="store.toggleInventory()">
+        инвентарь
+      </button>
       <button :class="{ on: store.invOnly }" type="button" @click="store.invOnly = !store.invOnly">
         только мои
       </button>
