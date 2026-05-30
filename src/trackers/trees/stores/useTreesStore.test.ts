@@ -1,10 +1,11 @@
 import { beforeEach, describe, it, expect } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
+import { storage } from '@/shared/persistence/storage'
 import { useTreesStore } from './useTreesStore'
 import { STARTING_SAPLINGS, TREES } from '../data/trees.data'
 
 beforeEach(() => {
-  localStorage.clear()
+  storage.clear()
   setActivePinia(createPinia())
 })
 
@@ -23,7 +24,7 @@ describe('setState + persist', () => {
     const s = useTreesStore()
     s.setState('Бук европейский', 2)
     expect(s.progress['Бук европейский']).toBe(2)
-    const raw = JSON.parse(localStorage.getItem('trees.progress')!)
+    const raw = storage.get<Record<string, number>>('trees.progress', {})
     expect(raw['Бук европейский']).toBe(2)
   })
 
@@ -121,7 +122,7 @@ describe('undo / redo', () => {
     const s = useTreesStore()
     s.setState('Бук европейский', 2)
     s.undo()
-    const raw = JSON.parse(localStorage.getItem('trees.progress')!)
+    const raw = storage.get<Record<string, number>>('trees.progress', {})
     expect(raw['Бук европейский']).toBe(0)
   })
 
@@ -153,10 +154,10 @@ describe('reset', () => {
     const s = useTreesStore()
     s.setState('Бук европейский', 2)
     s.reset()
-    const raw = JSON.parse(localStorage.getItem('trees.progress')!)
+    const raw = storage.get<Record<string, number>>('trees.progress', {})
     expect(raw['Бук европейский']).toBe(0)
     expect(raw['Яблочный дуб']).toBe(2)
-    expect(localStorage.getItem('trees.inventory')).toBe('{}')
+    expect(storage.get('trees.inventory', null)).toEqual({})
   })
 })
 
@@ -168,7 +169,7 @@ describe('export / import', () => {
     const payload = a.exportData()
     expect(payload.v).toBe(3)
 
-    localStorage.clear()
+    storage.clear()
     setActivePinia(createPinia())
     const b = useTreesStore()
     b.importData(payload)

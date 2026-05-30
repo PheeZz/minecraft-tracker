@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
-import { readStorage, writeStorage } from '@/shared/persistence/useLocalStorage'
+import { storage } from '@/shared/persistence/storage'
 import { BY_ID, STARTING_SAPLINGS, TREES } from '../data/trees.data'
 import { isAvailable, type ProgressMap } from '../domain/graph'
 import { FRUIT_CHAIN, UNIQUE_FRUITS, computeUsage, fruitUnlocked, invTotal } from '../domain/plan'
@@ -44,7 +44,7 @@ function defaultProgress(): ProgressState {
 }
 
 function loadProgress(): ProgressState {
-  const saved = readStorage<Partial<ProgressState>>(PROGRESS_KEY, {})
+  const saved = storage.get<Partial<ProgressState>>(PROGRESS_KEY, {})
   const s = defaultProgress()
   for (const id of Object.keys(saved)) {
     if (id in BY_ID && (saved[id] === 0 || saved[id] === 2)) s[id] = saved[id]
@@ -53,7 +53,7 @@ function loadProgress(): ProgressState {
 }
 
 function loadInventory(): InventoryState {
-  const saved = readStorage<Record<string, Partial<Inventory>>>(INVENTORY_KEY, {})
+  const saved = storage.get<Record<string, Partial<Inventory>>>(INVENTORY_KEY, {})
   const inv: InventoryState = {}
   for (const id of Object.keys(saved)) {
     if (!(id in BY_ID)) continue
@@ -72,8 +72,8 @@ export const useTreesStore = defineStore('trees', () => {
 
   // ---------- персистентность ----------
   function persist(): void {
-    writeStorage(PROGRESS_KEY, progress.value)
-    writeStorage(INVENTORY_KEY, inventory.value)
+    storage.set(PROGRESS_KEY, progress.value)
+    storage.set(INVENTORY_KEY, inventory.value)
   }
 
   // ---------- история (undo/redo) ----------

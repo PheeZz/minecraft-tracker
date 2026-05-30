@@ -42,7 +42,8 @@ src/
   router/index.ts              # /trees, /bees, redirect /
   shared/
     cytoscape/useCytoscape.ts useNodeHtmlLabel.ts
-    persistence/useLocalStorage.ts
+    persistence/storage.ts        # KeyValueStorage: единственное место с localStorage
+                                  # (ESLint no-restricted-globals запрещает прямой доступ в остальном коде)
     ui/AppButton.vue AppModal.vue AppPopup.vue IconBase.vue
     icons/icons.ts
     types.ts

@@ -14,4 +14,20 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   ...vueTsEslintConfig(),
   prettierConfig,
+  {
+    // Прямой доступ к Web Storage разрешён только в обёртке storage.ts.
+    name: 'app/no-direct-web-storage',
+    rules: {
+      'no-restricted-globals': [
+        'error',
+        { name: 'localStorage', message: 'Используй обёртку @/shared/persistence/storage' },
+        { name: 'sessionStorage', message: 'Используй обёртку @/shared/persistence/storage' },
+      ],
+    },
+  },
+  {
+    name: 'app/storage-wrapper-exception',
+    files: ['src/shared/persistence/storage.ts'],
+    rules: { 'no-restricted-globals': 'off' },
+  },
 ]
