@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { onActivated, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { BEE_BY_ID } from '../data/bees.data'
 import { COMBS } from '../domain/combs'
 import { useBeesStore } from '../stores/useBeesStore'
@@ -45,6 +45,8 @@ onMounted(() => {
   }
 })
 onBeforeUnmount(() => graph.destroy())
+// возврат на вкладку (KeepAlive): контейнер был detached → вернуть размер
+onActivated(() => graph.resize())
 
 defineExpose({ fit: () => graph.fit() })
 </script>

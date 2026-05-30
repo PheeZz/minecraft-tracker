@@ -184,6 +184,10 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
   function fit(): void {
     cy?.fit(undefined, 45)
   }
+  /** Ресинхронизация размера после повторного показа (KeepAlive) без сброса пан/зума. */
+  function resize(): void {
+    cy?.resize()
+  }
   function destroy(): void {
     if (rafId) cancelAnimationFrame(rafId)
     cy?.destroy()
@@ -191,5 +195,5 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
     container = null
   }
 
-  return { mount, rebuild, fit, destroy, setHave }
+  return { mount, rebuild, fit, resize, destroy, setHave }
 }

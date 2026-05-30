@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onActivated, onDeactivated, onMounted, onUnmounted, ref } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
 import { useTreesStore } from '../stores/useTreesStore'
 import { provideTreeActions, type GraphHandle } from '../composables/useTreeActions'
@@ -15,7 +15,14 @@ const graphRef = ref<InstanceType<typeof TreeGraph>>()
 // Действия предоставляются с ленивым доступом к графу (заполнится после mount).
 provideTreeActions(() => graphRef.value as GraphHandle | undefined)
 
+// под KeepAlive вьюха не размонтируется при switch — хоткеи не должны
+// срабатывать, когда трекер в фоне (например Ctrl+Z с вкладки пчёл)
+const active = ref(true)
+onActivated(() => (active.value = true))
+onDeactivated(() => (active.value = false))
+
 function onKey(e: KeyboardEvent) {
+  if (!active.value) return
   const meta = e.ctrlKey || e.metaKey
   if (meta && e.key.toLowerCase() === 'z') {
     e.preventDefault()

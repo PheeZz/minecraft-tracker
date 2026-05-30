@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { onActivated, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
 import { BY_ID, TREES } from '../data/trees.data'
 import { isAvailable, unlockScore } from '../domain/graph'
@@ -121,19 +121,25 @@ function onResize() {
 }
 
 onMounted(() => {
-  if (!cyEl.value || !headersEl.value) return
-  graph.mount(cyEl.value, headersEl.value)
-  graph.onReady(() => {
-    graph.runLayout(ui.layout)
-    refresh()
-    graph.toggleAllEdges(ui.showAllEdges)
-    if (ui.selectedId) {
-      graph.selectNode(ui.selectedId)
-      graph.highlightLineage(ui.selectedId, 'ancestors')
-    }
+  // Отложенная сборка: даём шапке/сайдбару отрисоваться, тяжёлый cy строим в след. кадре.
+  requestAnimationFrame(() => {
+    if (!cyEl.value || !headersEl.value) return
+    graph.mount(cyEl.value, headersEl.value)
+    graph.onReady(() => {
+      graph.runLayout(ui.layout)
+      refresh()
+      graph.toggleAllEdges(ui.showAllEdges)
+      if (ui.selectedId) {
+        graph.selectNode(ui.selectedId)
+        graph.highlightLineage(ui.selectedId, 'ancestors')
+      }
+    })
   })
   window.addEventListener('resize', onResize)
 })
+
+// Возврат на вкладку (KeepAlive): ресинхронизировать размер, сохранив пан/зум.
+onActivated(() => graph.revalidateSize())
 onBeforeUnmount(() => {
   window.removeEventListener('resize', onResize)
   if (resizeTimer) clearTimeout(resizeTimer)

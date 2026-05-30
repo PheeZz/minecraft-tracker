@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watchEffect } from 'vue'
+import { computed, onMounted, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { storage } from '@/shared/persistence/storage'
 import { TRACKERS, type TrackerId } from '@/shared/types'
@@ -13,6 +13,17 @@ const activeTracker = computed<TrackerId>(() => (route.meta.tracker as TrackerId
 watchEffect(() => {
   document.documentElement.dataset.tracker = activeTracker.value
   storage.set('app.tracker', activeTracker.value)
+})
+
+// Префетч чанков обоих трекеров в простое — чтобы первое переключение не ждало
+// загрузку/парс тяжёлого кода (cytoscape). Те же спецификаторы, что в роутере → dedupe.
+onMounted(() => {
+  const warm = () => {
+    void import('@/trackers/trees/components/TreesView.vue')
+    void import('@/trackers/bees/components/BeesView.vue')
+  }
+  if ('requestIdleCallback' in window) requestIdleCallback(warm)
+  else setTimeout(warm, 1000)
 })
 
 function switchTo(id: TrackerId) {
@@ -40,7 +51,12 @@ function switchTo(id: TrackerId) {
     </nav>
 
     <main class="shell__body">
-      <RouterView />
+      <!-- KeepAlive: вьюхи (и их Cytoscape-инстансы) не пересоздаются при переключении -->
+      <RouterView v-slot="{ Component }">
+        <KeepAlive>
+          <component :is="Component" />
+        </KeepAlive>
+      </RouterView>
     </main>
   </div>
 </template>

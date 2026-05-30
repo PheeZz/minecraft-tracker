@@ -365,6 +365,14 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     }
   }
 
+  /** Лёгкая ресинхронизация размера без раскладки/fit — сохраняет пан/зум
+   *  (для возврата на вкладку KeepAlive, где габариты контейнера те же). */
+  function revalidateSize(): void {
+    if (!cy) return
+    cy.resize()
+    updateTierHeaders()
+  }
+
   function destroy(): void {
     if (panTimer) clearTimeout(panTimer)
     if (iconRaf) cancelAnimationFrame(iconRaf)
@@ -384,6 +392,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     onReady,
     destroy,
     resize,
+    revalidateSize,
     runLayout,
     applyStates,
     highlightLineage,
