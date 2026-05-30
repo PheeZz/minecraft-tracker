@@ -19,6 +19,18 @@
   --line: rgba(143, 209, 79, 0.14);
   --scroll-thumb: #21302770;
 
+  --t0: #5bbf63;
+  --t1: #e7d24a;
+  --t2: #4f8fd1;
+  --t3: #ef8a2a;
+  --t4: #a786e0;
+  --t5: #3fae6a;
+  --t6: #5285d6;
+  --t7: #3fc7c0;
+  --t8: #e36f9b;
+  --t9: #e05050;
+  --t10: #9a3030;
+
   --font-display: 'Golos Text', system-ui, sans-serif;
   --font-body: 'Golos Text', system-ui, sans-serif;
   --font-mono: 'Noto Sans Mono', monospace;
