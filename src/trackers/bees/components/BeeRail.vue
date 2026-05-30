@@ -133,7 +133,7 @@ function clearHave() {
 <style scoped>
 .rail {
   border-right: 1px solid var(--line);
-  background: rgba(255, 250, 240, 0.55);
+  background: var(--panel);
   display: flex;
   flex-direction: column;
   min-height: 0;

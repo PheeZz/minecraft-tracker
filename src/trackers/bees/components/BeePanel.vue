@@ -182,7 +182,7 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
 <style scoped>
 .panel {
   border-left: 1px solid var(--line);
-  background: rgba(255, 250, 240, 0.55);
+  background: var(--panel);
   overflow-y: auto;
   padding: 18px;
   backdrop-filter: blur(3px);

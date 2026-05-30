@@ -175,7 +175,7 @@ const recipeCount = computed(() =>
   color: var(--muted);
   flex-wrap: wrap;
   max-width: 60%;
-  background: rgba(255, 250, 240, 0.82);
+  background: var(--panel);
   border: 1px solid var(--cardln);
   padding: 7px 13px;
   border-radius: 14px;
