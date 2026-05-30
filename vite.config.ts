@@ -4,7 +4,10 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
-export default defineConfig({
+// base: при сборке — '/minecraft-tracker/' (project GitHub Pages), в dev — '/'.
+// Переопределяется переменной BASE_PATH (для других хостингов/форков).
+export default defineConfig(({ command }) => ({
+  base: process.env.BASE_PATH ?? (command === 'build' ? '/minecraft-tracker/' : '/'),
   plugins: [vue()],
   resolve: {
     alias: {
@@ -21,4 +24,4 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.ts'],
   },
-})
+}))

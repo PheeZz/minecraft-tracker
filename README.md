@@ -56,4 +56,17 @@ src/
 (прямой доступ к `localStorage` запрещён ESLint-правилом). Ключи: `trees.progress`,
 `trees.inventory`, `trees.ui`, `bees.have`, `app.tracker`.
 
+## Деплой (GitHub Pages)
+
+CI-workflow `.github/workflows/deploy.yml` собирает и публикует на Pages.
+- `base` при сборке = `/minecraft-tracker/` (project Pages); в dev — `/`.
+- Для SPA-роутинга копируется `404.html` (= `index.html`), чтобы deep-link
+  (`/minecraft-tracker/bees`) открывался корректно.
+
+Чтобы включить:
+1. Settings → Pages → Source: **GitHub Actions**.
+2. Запушить в `main` (или вручную Actions → Deploy to GitHub Pages → Run на нужной ветке).
+
+Сайт: `https://pheezz.github.io/minecraft-tracker/`.
+
 Подробности миграции с одно-файловых прототипов — в [MIGRATION_PLAN.md](./MIGRATION_PLAN.md).
