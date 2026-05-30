@@ -35,6 +35,14 @@ export type TreeState = 0 | 2
 /** Карта прогресса: дерево → состояние. */
 export type ProgressMap = Readonly<Record<string, TreeState>>
 
+/**
+ * Иконка дерева. forestry — готовый PNG; extratrees — шаблон кроны (tpl),
+ * тонируемый цветом листвы (c), поверх ствола. Перенос из tree-icons-export.
+ */
+export type TreeIcon =
+  | { kind: 'forestry'; file: string }
+  | { kind: 'extratrees'; tpl: string; c: string }
+
 /** Инвентарь дерева как родителя: саженцы и пыльца (взаимозаменяемы при скрещивании). */
 export interface Inventory {
   sap: number

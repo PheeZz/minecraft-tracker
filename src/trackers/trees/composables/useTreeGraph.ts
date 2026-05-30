@@ -9,6 +9,7 @@ import { buildEdges, buildNodes } from '../graph/elements'
 import { computeTiersLayout, LAYOUTS, type LayoutKey } from '../graph/layouts'
 import { nodeTemplate, type NodeRenderData } from '../graph/nodeLabel'
 import { GRAPH_STYLE } from '../graph/style'
+import { ensureTreeTextures, paintTreeIcons } from './useTreeTextures'
 
 /** Сигнатура метода, добавляемого расширением node-html-label. */
 interface NodeHtmlLabelConfig {
@@ -69,8 +70,18 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   let currentLayout: LayoutKey = 'tiers'
   let tierColumns: { tier: number; x: number }[] = []
   let headersEl: HTMLElement | null = null
+  let containerEl: HTMLElement | null = null
   let panTimer: ReturnType<typeof setTimeout> | null = null
   let invHandler: ((e: MouseEvent) => void) | null = null
+  let iconRaf = 0
+
+  function scheduleIconPaint(): void {
+    if (iconRaf || !containerEl) return
+    iconRaf = requestAnimationFrame(() => {
+      iconRaf = 0
+      if (containerEl) paintTreeIcons(containerEl)
+    })
+  }
 
   const setData = (n: NodeSingular, key: string, val: unknown): void => {
     if (n.data(key) !== val) n.data(key, val)
@@ -281,7 +292,9 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   // ---------- инициализация ----------
   function mount(container: HTMLElement, tierHeaders: HTMLElement): void {
     registerExtensions()
+    ensureTreeTextures()
     headersEl = tierHeaders
+    containerEl = container
     cy = cytoscape({
       container,
       elements: [...buildNodes(), ...buildEdges()],
@@ -332,6 +345,8 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
       if (panTimer) clearTimeout(panTimer)
       panTimer = setTimeout(() => document.body.classList.remove('is-panning'), 160)
     })
+    // node-html-label пересоздаёт canvas-иконки при ре-рендере → перекрашиваем (rAF-throttle)
+    cy.on('render zoom pan layoutstop', scheduleIconPaint)
   }
 
   function onReady(cb: () => void): void {
@@ -352,6 +367,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
 
   function destroy(): void {
     if (panTimer) clearTimeout(panTimer)
+    if (iconRaf) cancelAnimationFrame(iconRaf)
     if (invHandler) {
       document.removeEventListener('click', invHandler)
       invHandler = null
@@ -360,6 +376,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     cy?.destroy()
     cy = null
     headersEl = null
+    containerEl = null
   }
 
   return {
@@ -379,6 +396,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     search,
     applyFilters,
     updateTierHeaders,
+    repaintIcons: scheduleIconPaint,
     get currentLayout() {
       return currentLayout
     },

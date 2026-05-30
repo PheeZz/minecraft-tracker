@@ -1,6 +1,7 @@
 import { ICONS } from '@/shared/icons/icons'
 import type { Tree } from '../domain/types'
 import { plantGrid } from './format'
+import { treeIconHtml } from './iconHtml'
 
 /**
  * Невидимая многострочная метка для canvas-ноды — служит ТОЛЬКО для расчёта
@@ -52,7 +53,7 @@ export function nodeTemplate(d: NodeRenderData): string {
       <span class="node__badge">T${d.tier}</span>
       ${plant}
       <span class="node__check"><span class="icon">${ICONS.checkPlain}</span></span>
-      <div class="node__head"><span class="node__dot"></span><span class="node__name">${d.id}</span></div>
+      <div class="node__head">${treeIconHtml(d.id) || '<span class="node__dot"></span>'}<span class="node__name">${d.id}</span></div>
       ${fruit}
       <span class="node__inv" data-invk="${d.id}" title="Инвентарь саженцев/пыльцы"><span class="icon">${ICONS.box}</span></span>
     </div>`

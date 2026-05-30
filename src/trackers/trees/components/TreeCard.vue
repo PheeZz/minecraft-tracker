@@ -10,6 +10,7 @@ import { useTreesStore } from '../stores/useTreesStore'
 import { useTreesUiStore } from '../stores/useTreesUiStore'
 import { useTreeActions } from '../composables/useTreeActions'
 import InvCounters from './InvCounters.vue'
+import TreeIconView from './TreeIconView.vue'
 
 const store = useTreesStore()
 const ui = useTreesUiStore()
@@ -67,7 +68,7 @@ function stepMod(id: string): string {
     </template>
 
     <template v-else>
-      <div class="card__name">{{ tree.id }}</div>
+      <div class="card__name"><TreeIconView :name="tree.id" :size="26" />{{ tree.id }}</div>
       <div class="card__tags">
         <span class="pill pill--tier" :class="`t--${tree.tier}`">T{{ tree.tier }}</span>
         <span class="pill pill--state" :class="stateMod">
@@ -189,6 +190,9 @@ function stepMod(id: string): string {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .card__tags {
   margin: 2px 0;

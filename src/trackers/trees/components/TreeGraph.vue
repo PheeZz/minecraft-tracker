@@ -7,6 +7,7 @@ import { useTreesStore } from '../stores/useTreesStore'
 import { useTreesUiStore } from '../stores/useTreesUiStore'
 import { useTreeActions } from '../composables/useTreeActions'
 import { useTreeGraph } from '../composables/useTreeGraph'
+import { treeTexturesReady } from '../composables/useTreeTextures'
 
 const store = useTreesStore()
 const ui = useTreesUiStore()
@@ -98,6 +99,8 @@ watch(
   () => ui.selectedId,
   (id) => graph.selectNode(id),
 )
+// текстуры иконок догрузились → перекрасить
+watch(treeTexturesReady, (ready) => ready && graph.repaintIcons())
 watch(
   () => ui.searchQuery,
   (q) => {

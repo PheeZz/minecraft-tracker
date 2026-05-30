@@ -43,6 +43,12 @@
   vertical-align: -0.16em;
   flex: none;
 }
+.node .tic {
+  width: 18px;
+  height: 18px;
+  image-rendering: pixelated;
+  flex: none;
+}
 .icon svg {
   width: 100%;
   height: 100%;
