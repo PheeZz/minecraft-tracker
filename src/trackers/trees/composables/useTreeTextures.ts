@@ -47,6 +47,11 @@ export async function ensureTreeTextures(): Promise<void> {
   treeTexturesReady.value = true
 }
 
+// Шаблоны ствола экспортированы серыми и в исходном демо рисовались как есть
+// (светлый ствол). В игре ствол тёмно-коричневый — тонируем фиксированным bark-цветом
+// (multiply поверх серого даёт ≈#4b2c19, как у готовых саженцев Forestry).
+const TRUNK_COLOR = '#6b4327'
+
 const tintCache = new Map<string, HTMLCanvasElement>()
 function tint(label: string, img: HTMLImageElement, hex: string): HTMLCanvasElement {
   const key = `${label}|${hex}`
@@ -82,7 +87,7 @@ export function paintTreeCanvas(cv: HTMLCanvasElement): void {
     const tpl = cv.dataset.tpl ?? ''
     const trunk = trunkImg.get(tpl)
     const leaves = leavesImg.get(tpl)
-    if (trunk) ctx.drawImage(trunk, 0, 0, W, H)
+    if (trunk) ctx.drawImage(tint(`trunk:${tpl}`, trunk, TRUNK_COLOR), 0, 0, W, H)
     if (leaves) ctx.drawImage(tint(`leaves:${tpl}`, leaves, cv.dataset.c ?? '#6d8f1e'), 0, 0, W, H)
   }
 }
