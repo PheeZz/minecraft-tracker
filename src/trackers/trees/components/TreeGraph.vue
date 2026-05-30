@@ -1,40 +1,33 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
-import { BY_ID, TIERS, TREES } from '../data/trees.data'
+import { BY_ID, TREES } from '../data/trees.data'
 import { isAvailable, unlockScore } from '../domain/graph'
 import { useTreesStore } from '../stores/useTreesStore'
-import { useTreeGraph, type LineageDir } from '../composables/useTreeGraph'
-import type { LayoutKey } from '../graph/layouts'
-
-const props = defineProps<{
-  layout: LayoutKey
-  showAllEdges: boolean
-  visibleTiers: ReadonlySet<number>
-  onlyAvail: boolean
-  onlyFruit: boolean
-  selectedId: string | null
-}>()
-const emit = defineEmits<{ select: [id: string | null]; jumpDir: [dir: LineageDir] }>()
+import { useTreesUiStore } from '../stores/useTreesUiStore'
+import { useTreeActions } from '../composables/useTreeActions'
+import { useTreeGraph } from '../composables/useTreeGraph'
 
 const store = useTreesStore()
+const ui = useTreesUiStore()
+const actions = useTreeActions()
+
 const stageEl = ref<HTMLElement>()
 const cyEl = ref<HTMLElement>()
 const headersEl = ref<HTMLElement>()
-
-// тултип
 const tip = ref<{ id: string; x: number; y: number } | null>(null)
 
 const graph = useTreeGraph({
   onSelect: (id, shift) => {
-    emit('select', id)
+    ui.selectedId = id
     graph.highlightLineage(id, shift ? 'descendants' : 'ancestors')
   },
   onBackground: () => {
     graph.clearHighlight()
-    emit('select', null)
+    ui.selectedId = null
     stepIdx = 0
   },
+  onInventory: (id, x, y) => actions.openInv(id, x, y),
   onHover: (id, box) => {
     if (id && box && stageEl.value) {
       const r = stageEl.value.getBoundingClientRect()
@@ -45,37 +38,34 @@ const graph = useTreeGraph({
   },
 })
 
-function filterOpts() {
-  return {
-    visibleTiers: props.visibleTiers,
-    onlyAvail: props.onlyAvail,
-    onlyFruit: props.onlyFruit,
-  }
-}
-const filtersActive = () =>
-  props.onlyAvail || props.onlyFruit || props.visibleTiers.size < TIERS.length
+const filterOpts = () => ({
+  visibleTiers: ui.visibleTiers,
+  onlyAvail: ui.onlyAvail,
+  onlyFruit: ui.onlyFruit,
+})
 
 function refresh() {
   graph.applyStates(store.progress)
-  if (filtersActive()) graph.applyFilters(filterOpts())
+  if (ui.filtersActive) graph.applyFilters(filterOpts())
 }
 
 // ---------- навбар ----------
 let stepIdx = 0
-function nextStep() {
-  const av = TREES.filter(
+function availSorted() {
+  return TREES.filter(
     (t) => t.tier > 0 && (store.progress[t.id] ?? 0) === 0 && isAvailable(store.progress, t.id),
-  ).sort((a, b) => a.tier - b.tier || a.id.localeCompare(b.id, 'ru'))
+  )
+}
+function nextStep() {
+  const av = availSorted().sort((a, b) => a.tier - b.tier || a.id.localeCompare(b.id, 'ru'))
   if (!av.length) return
   const t = av[stepIdx % av.length]!
   stepIdx++
-  emit('select', t.id)
+  ui.selectedId = t.id
   graph.focus(t.id)
 }
 function bestStep() {
-  const av = TREES.filter(
-    (t) => t.tier > 0 && (store.progress[t.id] ?? 0) === 0 && isAvailable(store.progress, t.id),
-  )
+  const av = availSorted()
   if (!av.length) return
   av.sort(
     (a, b) =>
@@ -83,33 +73,40 @@ function bestStep() {
       a.tier - b.tier ||
       a.id.localeCompare(b.id, 'ru'),
   )
-  emit('select', av[0]!.id)
+  ui.selectedId = av[0]!.id
   graph.focus(av[0]!.id)
 }
 
 const tipTree = () => (tip.value ? BY_ID[tip.value.id] : undefined)
 
-// ---------- реакции на пропсы ----------
+// ---------- реакции на состояние ----------
 watch(() => store.progress, refresh, { deep: true })
 watch(
-  () => [props.visibleTiers, props.onlyAvail, props.onlyFruit] as const,
+  () => [[...ui.visibleTiers], ui.onlyAvail, ui.onlyFruit] as const,
   () => graph.applyFilters(filterOpts()),
   { deep: true },
 )
 watch(
-  () => props.showAllEdges,
+  () => ui.showAllEdges,
   (on) => graph.toggleAllEdges(on),
 )
 watch(
-  () => props.layout,
+  () => ui.layout,
   (l) => graph.runLayout(l),
 )
 watch(
-  () => props.selectedId,
-  (id) => {
-    graph.selectNode(id)
-    if (id) graph.highlightLineage(id, 'ancestors')
-    else graph.clearHighlight()
+  () => ui.selectedId,
+  (id) => graph.selectNode(id),
+)
+watch(
+  () => ui.searchQuery,
+  (q) => {
+    if (ui.filtersActive) graph.applyFilters(filterOpts())
+    const ids = graph.search(q)
+    if (ids.length === 1) {
+      ui.selectedId = ids[0]!
+      graph.focus(ids[0]!)
+    }
   },
 )
 
@@ -124,12 +121,12 @@ onMounted(() => {
   if (!cyEl.value || !headersEl.value) return
   graph.mount(cyEl.value, headersEl.value)
   graph.onReady(() => {
-    graph.runLayout(props.layout)
+    graph.runLayout(ui.layout)
     refresh()
-    graph.toggleAllEdges(props.showAllEdges)
-    if (props.selectedId) {
-      graph.selectNode(props.selectedId)
-      graph.highlightLineage(props.selectedId, 'ancestors')
+    graph.toggleAllEdges(ui.showAllEdges)
+    if (ui.selectedId) {
+      graph.selectNode(ui.selectedId)
+      graph.highlightLineage(ui.selectedId, 'ancestors')
     }
   })
   window.addEventListener('resize', onResize)
@@ -140,7 +137,7 @@ onBeforeUnmount(() => {
   graph.destroy()
 })
 
-defineExpose({ focus: (id: string) => graph.focus(id), search: (q: string) => graph.search(q) })
+defineExpose({ focus: (id: string) => graph.focus(id), flash: (ids: string[]) => graph.flash(ids) })
 </script>
 
 <template>
@@ -160,6 +157,15 @@ defineExpose({ focus: (id: string) => graph.focus(id), search: (q: string) => gr
       <button class="btn" type="button" title="Вписать весь граф" @click="graph.fit()">
         <IconBase name="fit" />Вписать
       </button>
+      <button
+        class="btn"
+        type="button"
+        :class="{ 'btn--on': ui.showAllEdges }"
+        title="Показывать все рёбра или только родословную"
+        @click="ui.showAllEdges = !ui.showAllEdges"
+      >
+        <IconBase name="branch" />Все рёбра
+      </button>
     </div>
     <div ref="headersEl" class="stage__tiers" />
     <div ref="cyEl" class="stage__cy" />
@@ -168,15 +174,13 @@ defineExpose({ focus: (id: string) => graph.focus(id), search: (q: string) => gr
       v-if="tip && tipTree()"
       class="tooltip is-open"
       :class="`t--${tipTree()!.tier}`"
-      :style="{ left: `${Math.min(Math.max(tip.x, 130), 100000)}px`, top: `${tip.y}px` }"
+      :style="{ left: `${Math.max(tip.x, 130)}px`, top: `${tip.y}px` }"
     >
       <div class="tooltip__name">
         {{ tip.id }} <span class="tooltip__tier">T{{ tipTree()!.tier }}</span>
       </div>
       <div v-if="tipTree()!.fruit" class="tooltip__fruit">{{ tipTree()!.fruit }}</div>
-      <div class="tooltip__recipe">
-        {{ tipTree()!.parents?.[0]?.join(' + ') ?? 'из мира' }}
-      </div>
+      <div class="tooltip__recipe">{{ tipTree()!.parents?.[0]?.join(' + ') ?? 'из мира' }}</div>
     </div>
   </div>
 </template>
@@ -215,7 +219,6 @@ defineExpose({ focus: (id: string) => graph.focus(id), search: (q: string) => gr
   z-index: 15;
   overflow: hidden;
 }
-
 .btn {
   display: flex;
   align-items: center;
@@ -239,7 +242,11 @@ defineExpose({ focus: (id: string) => graph.focus(id), search: (q: string) => gr
   background: rgba(143, 209, 79, 0.12);
   border-color: var(--leaf-dim);
 }
-
+.btn--on {
+  background: rgba(143, 209, 79, 0.16);
+  border-color: var(--leaf-dim);
+  color: var(--leaf);
+}
 .tooltip {
   position: fixed;
   z-index: 160;

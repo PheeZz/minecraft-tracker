@@ -59,6 +59,15 @@ export function breedPath(state: ProgressMap, id: string): string[] {
   return out
 }
 
+/** Множество деревьев (tier>0), доступных к выведению прямо сейчас и ещё не полученных. */
+export function availableSet(state: ProgressMap): Set<string> {
+  const set = new Set<string>()
+  for (const t of TREES) {
+    if (t.tier > 0 && (state[t.id] ?? 0) === 0 && isAvailable(state, t.id)) set.add(t.id)
+  }
+  return set
+}
+
 /** Сколько новых деревьев станет доступно к выведению, если вывести `id`. */
 export function unlockScore(state: ProgressMap, id: string): number {
   let count = 0
