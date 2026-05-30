@@ -60,6 +60,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
     cy = cytoscape({
       container,
       elements,
+      wheelSensitivity: 2, // скорость зума колесом
       minZoom: 0.2,
       maxZoom: 2.4,
       style: [

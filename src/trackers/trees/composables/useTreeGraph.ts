@@ -298,6 +298,8 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     cy = cytoscape({
       container,
       elements: [...buildNodes(), ...buildEdges()],
+      wheelSensitivity: 2, // скорость зума колесом
+
       minZoom: 0.001,
       maxZoom: 3,
       style: GRAPH_STYLE,
