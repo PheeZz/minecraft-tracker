@@ -54,6 +54,20 @@ describe('целостность данных', () => {
     for (const t of TREES) expect(t.fruit).not.toBe('—')
   })
 
+  it('восстановлены альтернативные рецепты из канона (recipes_output)', () => {
+    // У этих деревьев в jar-данных несколько рецептов; первый — основной (как в ragu.html).
+    const multi: Record<string, number> = {
+      Сакура: 2,
+      'Мировая лиственница': 2,
+      'Каштан посевной': 2,
+      'Белая ива': 3,
+      Тополь: 3,
+    }
+    for (const [id, count] of Object.entries(multi)) {
+      expect(BY_ID[id]?.parents?.length, `${id}: число рецептов`).toBe(count)
+    }
+  })
+
   it('граф ацикличен (нет дерева среди своих предков)', () => {
     for (const t of TREES) {
       expect(ancestorsOf(t.id).has(t.id), `${t.id} — собственный предок`).toBe(false)
