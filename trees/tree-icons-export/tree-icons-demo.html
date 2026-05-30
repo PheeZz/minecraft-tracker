@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Иконки деревьев · демо</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#101a12; --bg2:#0c140d; --card:#17231a; --cardln:#28392c;
+  --ink:#e8f0e6; --ink2:#b6c8b6; --muted:#7f9580; --dim:#5d705f;
+  --leaf:#5db075; --leaf-dk:#3c8a52; --bark:#a9763f; --gold:#d7b14e;
+  --for:#4fa3e0; --ext:#cf8a3a;
+  --disp:"Unbounded",sans-serif; --body:"Manrope",system-ui,sans-serif; --mono:"JetBrains Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;min-height:100%;}
+body{background:
+   radial-gradient(60% 50% at 85% -5%,rgba(93,176,117,.14),transparent 60%),
+   radial-gradient(45% 45% at 0% 100%,rgba(169,118,63,.10),transparent 55%),
+   linear-gradient(165deg,var(--bg),var(--bg2));
+  color:var(--ink);font-family:var(--body);min-height:100vh;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1180px;margin:0 auto;padding:34px 26px 70px;}
+header h1{font-family:var(--disp);font-weight:800;font-size:27px;letter-spacing:-.5px;margin:0 0 6px;
+  display:flex;align-items:center;gap:12px;}
+header h1 .leaf{width:30px;height:30px;display:inline-block;filter:drop-shadow(0 3px 6px rgba(93,176,117,.5));}
+header .sub{color:var(--muted);font-size:14px;max-width:680px;line-height:1.5;}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:24px 0 8px;}
+.seg{display:inline-flex;gap:4px;background:var(--card);border:1px solid var(--cardln);border-radius:11px;padding:4px;}
+.seg button{font:inherit;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+  padding:8px 14px;border:0;background:none;color:var(--muted);border-radius:8px;cursor:pointer;transition:.13s;}
+.seg button.on{background:var(--leaf-dk);color:#eafff0;}
+.search{flex:1;min-width:200px;display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--cardln);border-radius:11px;padding:0 14px;}
+.search input{flex:1;background:none;border:0;font:inherit;font-size:14px;padding:11px 0;color:var(--ink);outline:none;}
+.search svg{width:16px;height:16px;color:var(--leaf);}
+.size{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-family:var(--mono);}
+.size input{accent-color:var(--leaf);}
+.stats{font-family:var(--mono);font-size:12px;color:var(--dim);margin:2px 0 18px;}
+.stats b{color:var(--leaf);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(126px,1fr));gap:12px;}
+.cell{position:relative;background:var(--card);border:1px solid var(--cardln);border-radius:14px;padding:16px 10px 11px;
+  display:flex;flex-direction:column;align-items:center;gap:9px;transition:.14s;overflow:hidden;}
+.cell:hover{border-color:var(--leaf-dk);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.32);}
+.cell .tag{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:8.5px;font-weight:700;
+  padding:2px 6px;border-radius:6px;letter-spacing:.05em;}
+.tag.F{background:rgba(79,163,224,.16);color:var(--for);}
+.tag.E{background:rgba(207,138,58,.16);color:var(--ext);}
+.ic{image-rendering:pixelated;image-rendering:crisp-edges;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4));}
+.nm{font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;color:var(--ink);}
+.meta{font-family:var(--mono);font-size:9.5px;color:var(--dim);text-align:center;}
+.sw{display:inline-block;width:8px;height:8px;border-radius:2px;vertical-align:0;margin-right:3px;border:1px solid rgba(255,255,255,.18);}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:60px 20px;font-size:15px;}
+footer{margin-top:34px;color:var(--dim);font-size:12px;line-height:1.6;border-top:1px solid var(--cardln);padding-top:16px;}
+footer code{font-family:var(--mono);color:var(--muted);background:rgba(255,255,255,.04);padding:1px 5px;border-radius:5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><canvas class="leaf" id="logo" width="16" height="16"></canvas>Иконки деревьев</h1>
+    <div class="sub">Демонстрация ассетов из jar. <b style="color:var(--for)">Forestry</b> — готовые текстуры саженцев. <b style="color:var(--ext)">ExtraTrees</b> — серый шаблон кроны по форме, тонированный цветом вида (как соты/пчёлы).</div>
+  </header>
+
+  <div class="bar">
+    <div class="seg" id="src">
+      <button class="on" data-s="all">Все</button>
+      <button data-s="F">Forestry</button>
+      <button data-s="E">ExtraTrees</button>
+    </div>
+    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" placeholder="поиск по названию (RU / EN)…"></label>
+    <label class="size">размер <input type="range" id="zoom" min="32" max="96" step="8" value="56"><span id="zlbl">56px</span></label>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="grid" id="grid"></div>
+
+  <footer>
+    Источник: <code>tree-icons.js</code> (Forestry PNG) + <code>tree-colors.js</code> (ExtraTrees: шаблон+цвет) + <code>tree-templates/</code>, <code>tree-icons/</code>.<br>
+    ExtraTrees-саженец рисуется в 2 слоя: <code>&lt;tpl&gt;.trunk</code> (ствол) + тонированный <code>&lt;tpl&gt;.leaves</code> (крона).
+  </footer>
+</div>
+
+<script src="tree-icons.js"></script>
+<script src="tree-colors.js"></script>
+<script>
+const ICONS = window.TREEICONS || {};   // name -> "tree-icons/sapling.treeX.png"
+const COLS  = window.TREECOLORS || {};  // name -> {tpl, c}
+
+// ---- собрать уникальный список деревьев ----
+// Forestry имеет приоритет (готовая текстура). Группируем по файлу/(tpl+цвет),
+// чтобы один вид с RU и EN именами не дублировался; показываем оба названия.
+const byKey = new Map();   // key -> {names:Set, src, icon?, tpl?, c?}
+function add(name, rec){
+  if(!byKey.has(rec.key)) byKey.set(rec.key, {names:new Set(), ...rec});
+  byKey.get(rec.key).names.add(name);
+}
+for(const [name,file] of Object.entries(ICONS))
+  add(name, {key:'F:'+file, src:'F', icon:file});
+for(const [name,info] of Object.entries(COLS)){
+  // если это имя уже покрыто готовой текстурой Forestry — пропускаем дубль
+  if(ICONS[name]) continue;
+  add(name, {key:'E:'+info.tpl+info.c, src:'E', tpl:info.tpl, c:info.c});
+}
+const ITEMS = [...byKey.values()].map(v=>{
+  const names=[...v.names].sort((a,b)=>a.localeCompare(b,'ru'));
+  // RU = с кириллицей, EN = латиница
+  const ru=names.find(n=>/[а-яё]/i.test(n)), en=names.find(n=>!/[а-яё]/i.test(n));
+  return {...v, ru:ru||en||'', en:(en&&en!==ru)?en:'', all:names};
+}).sort((a,b)=>(a.ru||a.en).localeCompare(b.ru||b.en,'ru'));
+
+// ---- тонирование (как в пчелином макете) ----
+function tint(img,hex){const cv=document.createElement('canvas');cv.width=img.width;cv.height=img.height;
+  const x=cv.getContext('2d');x.imageSmoothingEnabled=false;x.drawImage(img,0,0);
+  x.globalCompositeOperation='multiply';x.fillStyle=hex;x.fillRect(0,0,cv.width,cv.height);
+  x.globalCompositeOperation='destination-in';x.drawImage(img,0,0);return cv;}
+function loadImg(src){return new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=src;});}
+
+const TPL={};   // tpl -> {leaves:img, trunk:img}
+const FOR={};   // file -> img
+async function preload(){
+  const tpls=[...new Set(ITEMS.filter(i=>i.src==='E').map(i=>i.tpl))];
+  await Promise.all(tpls.map(async t=>{
+    TPL[t]={leaves:await loadImg('tree-templates/'+t+'.leaves.png'),
+            trunk: await loadImg('tree-templates/'+t+'.trunk.png')};
+  }));
+  const files=[...new Set(ITEMS.filter(i=>i.src==='F').map(i=>i.icon))];
+  await Promise.all(files.map(async f=>{FOR[f]=await loadImg(f);}));
+}
+
+function paint(canvas){
+  const it=canvas._it, S=canvas.width, x=canvas.getContext('2d');
+  x.clearRect(0,0,S,S);x.imageSmoothingEnabled=false;
+  if(it.src==='F'){const im=FOR[it.icon];if(im)x.drawImage(im,0,0,im.width,im.height,0,0,S,S);}
+  else{const set=TPL[it.tpl];if(!set)return;
+    if(set.trunk)x.drawImage(set.trunk,0,0,set.trunk.width,set.trunk.height,0,0,S,S);
+    if(set.leaves)x.drawImage(tint(set.leaves,it.c),0,0,set.leaves.width,set.leaves.height,0,0,S,S);}
+}
+
+// ---- рендер сетки ----
+const grid=document.getElementById('grid'), stats=document.getElementById('stats');
+let filter='all', query='', SIZE=56;
+function render(){
+  grid.innerHTML='';
+  const q=query.trim().toLowerCase();
+  const list=ITEMS.filter(it=>(filter==='all'||it.src===filter) &&
+     (!q || it.all.some(n=>n.toLowerCase().includes(q))));
+  if(!list.length){grid.innerHTML='<div class="empty">Ничего не найдено 🌱</div>';
+    stats.innerHTML='';return;}
+  const nF=list.filter(i=>i.src==='F').length, nE=list.length-nF;
+  stats.innerHTML=`показано <b>${list.length}</b> · Forestry <b>${nF}</b> · ExtraTrees <b>${nE}</b>`;
+  const frag=document.createDocumentFragment();
+  for(const it of list){
+    const c=document.createElement('div');c.className='cell';
+    const sw=it.src==='E'?`<span class="sw" style="background:${it.c}"></span>`:'';
+    const meta=it.src==='E'?`${sw}${it.tpl} · ${it.c}`:'готовая текстура';
+    c.innerHTML=`<span class="tag ${it.src}">${it.src==='F'?'FOR':'EXT'}</span>
+      <canvas class="ic" width="${SIZE}" height="${SIZE}" style="width:${SIZE}px;height:${SIZE}px"></canvas>
+      <div class="nm">${it.ru||it.en}${it.en&&it.ru?`<div class="meta" style="margin-top:2px">${it.en}</div>`:''}</div>
+      <div class="meta">${meta}</div>`;
+    const cv=c.querySelector('canvas');cv._it=it;paint(cv);
+    frag.appendChild(c);
+  }
+  grid.appendChild(frag);
+}
+
+document.getElementById('src').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#src button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');filter=b.dataset.s;render();};
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value;render();});
+const zoom=document.getElementById('zoom'),zlbl=document.getElementById('zlbl');
+zoom.addEventListener('input',e=>{SIZE=+e.target.value;zlbl.textContent=SIZE+'px';render();});
+
+(async()=>{
+  await preload();
+  // лого: тонированная default-крона
+  const lg=document.getElementById('logo');
+  if(TPL.default&&TPL.default.leaves){const x=lg.getContext('2d');x.imageSmoothingEnabled=false;
+    if(TPL.default.trunk)x.drawImage(TPL.default.trunk,0,0,16,16);
+    x.drawImage(tint(TPL.default.leaves,'#5db075'),0,0,16,16);}
+  render();
+})();
+</script>
+</body>
+</html>
