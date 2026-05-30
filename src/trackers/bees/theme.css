@@ -1,0 +1,32 @@
+/* Тема трекера пчёл — пергамент/мёд (перенос токенов из bees-5-chain.html). */
+[data-tracker='bees'] {
+  color-scheme: light;
+  --bg: #f6efe2;
+  --bg2: #efe6d4;
+  --card: #fffaf0;
+  --cardln: #e4d6ba;
+  --ink: #2c2114;
+  --ink2: #574733;
+  --muted: #8a7757;
+  --dim: #ab9a78;
+  --honey: #e8a72c;
+  --honey-dk: #bf821a;
+  --amber: #f4c452;
+  --rust: #bf5a23;
+  --src-f: #2f7d5e;
+  --src-f-soft: #dcefe6;
+  --src-e: #c2622a;
+  --src-e-soft: #fbe6d6;
+  --line: #dccaa6;
+  --alt: #7a59b8;
+  --scroll-thumb: #cdbb95;
+
+  --font-display: 'Unbounded', sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  background:
+    radial-gradient(70% 55% at 80% -10%, rgba(232, 167, 44, 0.14), transparent 60%),
+    radial-gradient(50% 50% at 0% 100%, rgba(191, 90, 35, 0.08), transparent 55%),
+    linear-gradient(160deg, var(--bg), var(--bg2));
+}

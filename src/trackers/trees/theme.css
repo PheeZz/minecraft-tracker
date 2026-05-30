@@ -1,0 +1,30 @@
+/* Тема трекера деревьев — тёмная «лесная» (перенос токенов из ragu.html). */
+[data-tracker='trees'] {
+  color-scheme: dark;
+  --bg: #0c1410;
+  --bg2: #0f1a14;
+  --panel: rgba(22, 33, 26, 0.72);
+  --inset: #0e1712;
+  --edge: #2c4334;
+  --ink: #e8f0e6;
+  --muted: #8aa394;
+  --leaf: #8fd14f;
+  --leaf-dim: #5d8a3a;
+  --amber: #e6b864;
+  --sap: #bcd9f5;
+  --avail: #c9a7f0;
+  --ok: #7fd99a;
+  --bad: #e07a7a;
+  --dark-ink: #06120b;
+  --line: rgba(143, 209, 79, 0.14);
+  --scroll-thumb: #21302770;
+
+  --font-display: 'Golos Text', system-ui, sans-serif;
+  --font-body: 'Golos Text', system-ui, sans-serif;
+  --font-mono: 'Noto Sans Mono', monospace;
+
+  background:
+    radial-gradient(120% 90% at 18% -10%, rgba(143, 209, 79, 0.1), transparent 55%),
+    radial-gradient(90% 80% at 92% 110%, rgba(79, 143, 209, 0.1), transparent 50%),
+    linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+}
