@@ -1,7 +1,7 @@
 import { ICONS } from '@/shared/icons/icons'
 import type { Tree } from '../domain/types'
 import { plantGrid } from './format'
-import { treeIconHtml } from './iconHtml'
+import { fruitIconHtml, treeIconHtml } from './iconHtml'
 
 /**
  * Невидимая многострочная метка для canvas-ноды — служит ТОЛЬКО для расчёта
@@ -41,9 +41,7 @@ export function nodeTemplate(d: NodeRenderData): string {
   if (d.faded) cls += ' node--faded'
   if (d.flash) cls += ' node--flash'
 
-  const fruit = d.frt
-    ? `<div class="node__fruit"><span class="icon">${ICONS.fruit}</span>${d.frt}</div>`
-    : ''
+  const fruit = d.frt ? `<div class="node__fruit">${fruitIconHtml(d.frt)}${d.frt}</div>` : ''
   const plant =
     d.plant && d.plant > 1
       ? `<span class="node__plant" title="Посадка ${plantGrid(d.plant)} (${d.plant} саженцев)">⊞${plantGrid(d.plant)}</span>`

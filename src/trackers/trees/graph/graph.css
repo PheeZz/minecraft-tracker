@@ -49,6 +49,10 @@
   image-rendering: pixelated;
   flex: none;
 }
+.node .fic {
+  image-rendering: pixelated;
+  flex: none;
+}
 .icon svg {
   width: 100%;
   height: 100%;

@@ -2,6 +2,20 @@
 // (bees/mockups/*.js). Запуск: node scripts/gen-bees.mjs
 // Источник правды для трекера пчёл — chain-макет (bees-5-chain.html).
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { format } from 'prettier'
+
+async function writeTs(path, source) {
+  writeFileSync(
+    path,
+    await format(source, {
+      parser: 'typescript',
+      semi: false,
+      singleQuote: true,
+      printWidth: 100,
+      trailingComma: 'all',
+    }),
+  )
+}
 
 const MOCK = 'bees/mockups'
 const OUT = 'src/trackers/bees/data'
@@ -42,7 +56,7 @@ export const BEE_BY_ID: Readonly<Record<string, Bee>> = Object.fromEntries(
   BEES.map((b) => [b.id, b]),
 )
 `
-writeFileSync(`${OUT}/bees.data.ts`, beesTs)
+await writeTs(`${OUT}/bees.data.ts`, beesTs)
 
 // --- combColors.ts: COMBCOLORS (массив, ключи ru+en) + MBCOMBCOLORS (объект, ключ=en) ---
 const combMap = {}
@@ -66,7 +80,7 @@ import type { TintColor } from '../domain/types'
 
 export const COMB_COLOR: Readonly<Record<string, TintColor>> = ${JSON.stringify(combMap, null, 2)}
 `
-writeFileSync(`${OUT}/combColors.ts`, combTs)
+await writeTs(`${OUT}/combColors.ts`, combTs)
 
 // --- beeColors.ts (ключи по ru и en) ---
 const beeMap = {}
@@ -85,7 +99,7 @@ import type { TintColor } from '../domain/types'
 
 export const BEE_COLOR: Readonly<Record<string, TintColor>> = ${JSON.stringify(beeMap, null, 2)}
 `
-writeFileSync(`${OUT}/beeColors.ts`, beeTs)
+await writeTs(`${OUT}/beeColors.ts`, beeTs)
 
 console.log(
   `bees.data.ts: ${bees.length} пчёл | combColors: ${Object.keys(combMap).length} | beeColors: ${Object.keys(beeMap).length}`,

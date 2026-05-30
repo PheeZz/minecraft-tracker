@@ -9,6 +9,7 @@ import { useTreesStore } from '../stores/useTreesStore'
 import { useTreesUiStore } from '../stores/useTreesUiStore'
 import { useTreeActions } from '../composables/useTreeActions'
 import InvCounters from './InvCounters.vue'
+import FruitIcon from './FruitIcon.vue'
 
 const store = useTreesStore()
 const ui = useTreesUiStore()
@@ -118,7 +119,9 @@ const haveOf = (id: string) => invTotal(store.inv(id))
             "
           />
           <b class="plan__name">{{ t.id }}</b>
-          <span v-if="t.fruit" class="plan__fruit"><IconBase name="fruit" />{{ t.fruit }}</span>
+          <span v-if="t.fruit" class="plan__fruit"
+            ><FruitIcon :fruit="t.fruit" :size="14" />{{ t.fruit }}</span
+          >
           <span v-if="t.plant > 1" class="plan__fruit"
             >⊞{{ plantGrid(t.plant) }}·{{ t.plant }}</span
           >

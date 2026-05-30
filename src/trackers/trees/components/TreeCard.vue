@@ -11,6 +11,7 @@ import { useTreesUiStore } from '../stores/useTreesUiStore'
 import { useTreeActions } from '../composables/useTreeActions'
 import InvCounters from './InvCounters.vue'
 import TreeIconView from './TreeIconView.vue'
+import FruitIcon from './FruitIcon.vue'
 
 const store = useTreesStore()
 const ui = useTreesUiStore()
@@ -79,7 +80,7 @@ function stepMod(id: string): string {
       </div>
 
       <div v-if="tree.fruit" class="card__fruit">
-        <IconBase name="fruit" /> <b>{{ tree.fruit }}</b>
+        <FruitIcon :fruit="tree.fruit" :size="18" /> <b>{{ tree.fruit }}</b>
       </div>
       <div v-if="tree.plant > 1" class="card__cond">
         ⊞ Сажать {{ plantGrid(tree.plant) }} — нужно {{ tree.plant }} саженцев рядом

@@ -2,6 +2,20 @@
 // Ключи приводятся к nominative-id (как в trees.data.ts) через ALIAS genitive→nominative.
 // Запуск: node scripts/gen-tree-icons.mjs
 import { readFileSync, writeFileSync } from 'node:fs'
+import { format } from 'prettier'
+
+async function writeTs(path, source) {
+  writeFileSync(
+    path,
+    await format(source, {
+      parser: 'typescript',
+      semi: false,
+      singleQuote: true,
+      printWidth: 100,
+      trailingComma: 'all',
+    }),
+  )
+}
 
 const SRC = 'trees/tree-icons-export'
 const OUT = 'src/trackers/trees/data'
@@ -85,7 +99,7 @@ import type { TreeIcon } from '../domain/types'
 
 export const TREE_ICON: Readonly<Record<string, TreeIcon>> = ${JSON.stringify(map, null, 2)}
 `
-writeFileSync(`${OUT}/treeIcons.data.ts`, ts)
+await writeTs(`${OUT}/treeIcons.data.ts`, ts)
 console.log(
   `treeIcons: ${Object.keys(map).length} (forestry ${Object.values(map).filter((v) => v.kind === 'forestry').length}, extratrees ${Object.values(map).filter((v) => v.kind === 'extratrees').length}); деревьев ${ids.length}, vanilla ${VANILLA.size}, без иконки ${uncovered.length}`,
 )
