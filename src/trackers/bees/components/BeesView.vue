@@ -62,11 +62,12 @@ const recipeCount = computed(() =>
       </div>
 
       <div v-if="store.curTarget" class="legend">
-        <span><i style="background: #e8a72c" />цель</span>
-        <span><i style="background: #fffaf0; border: 1.5px solid #2f7d5e" />вывести</span>
-        <span><i style="background: #efe6d4; border: 1.5px dashed #8a7757" />дикая</span>
+        <span><i style="background: var(--honey)" />цель</span>
+        <span><i style="background: var(--card); border: 1.5px solid var(--src-f)" />вывести</span>
+        <span><i style="background: var(--bg2); border: 1.5px dashed var(--muted)" />дикая</span>
         <span
-          ><i style="background: #fffaf0; border: 2px double #7a59b8" />есть ⇄ альт. рецепты</span
+          ><i style="background: var(--card); border: 2px double var(--alt)" />есть ⇄ альт.
+          рецепты</span
         >
         <span
           ><i style="background: #f4c452; transform: rotate(45deg); width: 9px; height: 9px" />ромб

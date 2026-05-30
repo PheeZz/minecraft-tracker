@@ -177,9 +177,9 @@ function clearHave() {
   transition: 0.13s;
 }
 .seg button.on {
-  background: var(--ink);
-  color: #f6efe2;
-  border-color: var(--ink);
+  background: var(--solid);
+  color: var(--solid-ink);
+  border-color: var(--solid);
 }
 .search {
   margin: 0 14px 10px;

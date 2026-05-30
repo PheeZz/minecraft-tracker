@@ -26,13 +26,13 @@
   gap: 7px;
   padding: 7px 10px 7px 8px;
   border-radius: 12px;
-  background: #fffaf0;
-  border: 1.5px solid var(--pc, #cdbb95);
-  box-shadow: 0 5px 14px rgba(80, 55, 15, 0.18);
+  background: var(--card);
+  border: 1.5px solid var(--pc, var(--cardln));
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.4);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 13px;
-  color: #2c2114;
+  color: var(--ink);
   white-space: nowrap;
 }
 .gnode .gn {
@@ -43,25 +43,25 @@
 }
 .gnode.g-M {
   box-shadow:
-    0 0 0 2px rgba(122, 89, 184, 0.22),
-    0 5px 14px rgba(80, 55, 15, 0.18);
+    0 0 0 2px rgba(183, 155, 240, 0.28),
+    0 5px 14px rgba(0, 0, 0, 0.4);
 }
 .gnode.g-wild {
-  background: #efe6d4;
+  background: var(--bg2);
   border-style: dashed;
-  border-color: #8a7757;
-  color: #574733;
+  border-color: var(--muted);
+  color: var(--muted);
 }
 .gnode.g-alt {
   border-style: double;
   border-width: 3px;
-  border-color: #7a59b8;
+  border-color: var(--alt);
 }
 .gnode.g-have {
-  border-color: #2f7d5e !important;
+  border-color: var(--src-f) !important;
   box-shadow:
-    0 0 0 2px rgba(47, 125, 94, 0.28),
-    0 5px 14px rgba(80, 55, 15, 0.18);
+    0 0 0 2px rgba(68, 184, 122, 0.3),
+    0 5px 14px rgba(0, 0, 0, 0.4);
 }
 .gnode.g-target {
   background: linear-gradient(180deg, #ffd877, #e8a72c);
@@ -72,19 +72,19 @@
     0 8px 22px rgba(191, 130, 26, 0.4);
 }
 .gnode .ghav {
-  color: #2f7d5e;
+  color: var(--src-f);
   font-weight: 800;
   font-size: 12px;
 }
 .gnode .gflag {
   font-size: 11px;
-  color: #7a59b8;
+  color: var(--alt);
   font-weight: 800;
 }
 .gnode .gcomb {
   margin-left: 2px;
   padding-left: 7px;
-  border-left: 1px solid rgba(0, 0, 0, 0.14);
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
   display: inline-flex;
   align-items: center;
 }

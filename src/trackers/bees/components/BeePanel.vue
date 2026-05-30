@@ -378,8 +378,8 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--ink);
-  color: #f6efe2;
+  background: var(--solid);
+  color: var(--solid-ink);
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 12px;
@@ -445,11 +445,11 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
   padding: 3px 8px;
   border-radius: 8px;
   cursor: pointer;
-  background: rgba(122, 89, 184, 0.1);
-  border: 1px solid #cdbce8;
-  color: #5a3fa0;
+  background: rgba(183, 155, 240, 0.14);
+  border: 1px solid rgba(183, 155, 240, 0.4);
+  color: var(--alt);
 }
 .altchip:hover {
-  background: rgba(122, 89, 184, 0.22);
+  background: rgba(183, 155, 240, 0.26);
 }
 </style>
