@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Цепочка выведения · Соты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6efe2; --bg2:#efe6d4; --card:#fffaf0; --cardln:#e4d6ba;
+  --ink:#2c2114; --ink2:#574733; --muted:#8a7757; --dim:#ab9a78;
+  --honey:#e8a72c; --honey-dk:#bf821a; --amber:#f4c452; --rust:#bf5a23;
+  --f:#2f7d5e; --f-soft:#dcefe6; --e:#c2622a; --e-soft:#fbe6d6;
+  --line:#dccaa6; --alt:#7a59b8;
+  --disp:"Unbounded",sans-serif; --body:"Manrope",system-ui,sans-serif; --mono:"JetBrains Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;height:100%;overflow:hidden;}
+body{background:
+   radial-gradient(70% 55% at 80% -10%,rgba(232,167,44,.14),transparent 60%),
+   radial-gradient(50% 50% at 0% 100%,rgba(191,90,35,.08),transparent 55%),
+   linear-gradient(160deg,var(--bg),var(--bg2));
+  color:var(--ink);font-family:var(--body);font-size:14px;height:100vh;-webkit-font-smoothing:antialiased;}
+.app{display:grid;grid-template-columns:296px 1fr 348px;height:100vh;}
+
+/* LEFT */
+.rail{border-right:1px solid var(--line);background:rgba(255,250,240,.55);display:flex;flex-direction:column;min-height:0;backdrop-filter:blur(3px);}
+.rail__h{padding:18px 18px 8px;}
+.rail__h .t{font-family:var(--disp);font-weight:800;font-size:18px;letter-spacing:-.3px;}
+.rail__h .s{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--honey-dk);margin-top:5px;}
+.seg{display:flex;gap:5px;margin:10px 14px 8px;}
+.seg button{flex:1;font:inherit;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  padding:8px;border:1px solid var(--cardln);background:var(--card);color:var(--muted);border-radius:9px;cursor:pointer;transition:.13s;}
+.seg button.on{background:var(--ink);color:#f6efe2;border-color:var(--ink);}
+.search{margin:0 14px 10px;display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--cardln);border-radius:10px;padding:0 12px;}
+.search input{flex:1;background:none;border:0;font:inherit;font-size:14px;padding:10px 0;color:var(--ink);outline:none;}
+.search svg{width:16px;height:16px;color:var(--honey-dk);}
+.list{flex:1;overflow:auto;padding:0 10px 18px;}
+.row{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:10px;cursor:pointer;transition:.12s;}
+.row:hover{background:rgba(232,167,44,.12);}
+.row.on{background:rgba(232,167,44,.2);box-shadow:inset 2px 0 0 var(--honey);}
+.row .nm{flex:1;font-weight:600;font-size:14.5px;}
+.row .ct{font-family:var(--mono);font-size:11.5px;color:var(--muted);}
+.row.rare .ct{color:var(--rust);font-weight:700;}
+
+/* инвентарь / склад */
+.havchk{flex:none;width:19px;height:19px;border-radius:6px;border:1.6px solid var(--cardln);background:var(--card);cursor:pointer;display:inline-grid;place-items:center;font-size:12px;line-height:1;color:transparent;transition:.12s;vertical-align:middle;}
+.havchk:hover{border-color:var(--f);}
+.havchk.on{background:var(--f);border-color:var(--f);color:#eafff5;}
+.row.owned{opacity:.85;}
+.row.owned .nm{color:var(--f);}
+.invbar{display:flex;align-items:center;gap:7px;margin:0 14px 8px;font-size:11.5px;color:var(--muted);flex-wrap:wrap;}
+.invbar .cnt{font-family:var(--mono);font-weight:700;color:var(--f);}
+.invbar button{font:inherit;font-size:10.5px;background:var(--card);border:1px solid var(--cardln);color:var(--ink2);padding:4px 8px;border-radius:7px;cursor:pointer;}
+.invbar button.on{background:var(--f);color:#eafff5;border-color:var(--f);}
+.prod.owned{border-color:var(--f);background:var(--f-soft);}
+.prod__easy.have{color:var(--f);font-weight:700;}
+.gnode.g-have{border-color:var(--f) !important;box-shadow:0 0 0 2px rgba(47,125,94,.28),0 5px 14px rgba(80,55,15,.18);}
+.gnode .ghav{color:var(--f);font-weight:800;font-size:12px;}
+.step.have .step__n{background:var(--f);}
+
+/* CENTER */
+.stage{position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.crumb{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-height:56px;}
+.crumb .goal{font-family:var(--disp);font-weight:800;font-size:17px;}
+.crumb .arrow{color:var(--muted);}
+.crumb .pick{font-weight:700;color:var(--honey-dk);}
+.crumb .muted{color:var(--muted);font-size:13px;}
+.tools{margin-left:auto;display:flex;gap:7px;}
+.tbtn{font:inherit;font-size:12px;font-weight:600;background:var(--card);border:1px solid var(--cardln);padding:7px 11px;border-radius:9px;cursor:pointer;color:var(--ink2);}
+.tbtn:hover{border-color:var(--honey-dk);}
+#cy{flex:1;min-height:0;}
+.welcome{position:absolute;inset:56px 0 0;display:grid;place-content:center;text-align:center;color:var(--muted);padding:30px;}
+.welcome .o{font-size:50px;color:var(--honey);filter:drop-shadow(0 6px 14px rgba(232,167,44,.4));}
+.welcome h2{font-family:var(--disp);font-weight:800;color:var(--ink);margin:14px 0 6px;font-size:22px;}
+.legend{position:absolute;left:16px;bottom:14px;display:flex;gap:13px;font-size:12px;color:var(--muted);flex-wrap:wrap;max-width:60%;
+  background:rgba(255,250,240,.82);border:1px solid var(--cardln);padding:7px 13px;border-radius:14px;backdrop-filter:blur(4px);}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block;vertical-align:-1px;margin-right:5px;}
+
+/* RIGHT */
+aside{border-left:1px solid var(--line);background:rgba(255,250,240,.55);overflow-y:auto;padding:18px;backdrop-filter:blur(3px);}
+.empty{color:var(--muted);text-align:center;padding:60px 14px;}
+.empty .o{font-size:38px;color:var(--honey);display:block;margin-bottom:10px;}
+.sect{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--honey-dk);margin:6px 0 10px;display:flex;align-items:center;gap:9px;}
+.sect::after{content:"";flex:1;height:1px;background:var(--line);}
+.prod{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--cardln);border-radius:11px;margin-bottom:8px;cursor:pointer;background:var(--card);transition:.13s;}
+.prod:hover{border-color:var(--honey);transform:translateX(-2px);}
+.prod.on{border-color:var(--honey);box-shadow:0 0 0 2px rgba(232,167,44,.3);}
+.prod__src{font-family:var(--mono);font-size:9px;font-weight:700;padding:2px 6px;border-radius:6px;flex:none;}
+.src-F{background:var(--f);color:#eafff5;}.src-E{background:var(--e);color:#fff1e8;}.src-M{background:#7a59b8;color:#f3e9ff;}
+.prod__nm{flex:1;font-weight:700;font-size:14px;}
+.prod__pct{font-family:var(--mono);font-weight:700;font-size:14px;color:var(--honey-dk);}
+.prod__easy{font-family:var(--mono);font-size:10px;color:var(--f);}
+
+.plan{counter-reset:step;margin-top:6px;}
+.step{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);}
+.step__n{counter-increment:step;flex:none;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#f6efe2;
+  font-family:var(--mono);font-weight:700;font-size:12px;display:grid;place-items:center;}
+.step__n::before{content:counter(step);}
+.step__b{flex:1;font-size:13.5px;line-height:1.45;}
+.step__cross{color:var(--rust);font-weight:700;}
+.step__res{color:var(--honey-dk);font-weight:700;}
+.step__ch{font-family:var(--mono);color:var(--honey-dk);font-size:12px;}
+.step__tag{font-family:var(--mono);font-size:10px;color:var(--muted);}
+.step__yield{display:block;color:var(--muted);font-size:12px;margin-top:3px;}
+.step__yield .hl{color:var(--rust);font-weight:600;}
+.alts{margin-top:6px;display:flex;flex-wrap:wrap;gap:5px;align-items:center;}
+.alts .lbl{font-size:11px;color:var(--alt);font-weight:600;}
+.altchip{font:inherit;font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:8px;cursor:pointer;
+  background:rgba(122,89,184,.1);border:1px solid #cdbce8;color:#5a3fa0;}
+.altchip:hover{background:rgba(122,89,184,.22);}
+.step.wildstep .step__n{background:var(--f);}
+.note{font-size:12.5px;color:var(--muted);background:rgba(47,125,94,.08);border:1px solid var(--f-soft);border-radius:10px;padding:9px 12px;margin-top:8px;}
+.cic{width:18px;height:18px;image-rendering:pixelated;image-rendering:crisp-edges;vertical-align:-4px;margin-right:6px;flex:none;filter:drop-shadow(0 1px 1px rgba(0,0,0,.28));}
+.cic.big{width:26px;height:26px;vertical-align:-6px;}
+.bic{width:20px;height:20px;image-rendering:pixelated;image-rendering:crisp-edges;vertical-align:-5px;margin-right:6px;flex:none;filter:drop-shadow(0 1px 1px rgba(0,0,0,.3));}
+.bic.big{width:30px;height:30px;vertical-align:-8px;}
+.row .nm{display:inline-flex;align-items:center;}
+/* узлы графа (HTML-метки) */
+.gnode{display:flex;align-items:center;gap:7px;padding:7px 10px 7px 8px;border-radius:12px;background:#fffaf0;
+  border:1.5px solid var(--pc,#cdbb95);box-shadow:0 5px 14px rgba(80,55,15,.18);font-family:var(--body);
+  font-weight:700;font-size:13px;color:var(--ink);white-space:nowrap;}
+.gnode .gn{line-height:1.05;}
+.gnode .bic{margin-right:0;}
+.gnode.g-M{box-shadow:0 0 0 2px rgba(122,89,184,.22),0 5px 14px rgba(80,55,15,.18);}
+.gnode.g-wild{background:#efe6d4;border-style:dashed;border-color:#8a7757;color:#574733;}
+.gnode.g-alt{border-style:double;border-width:3px;border-color:#7a59b8;}
+.gnode.g-target{background:linear-gradient(180deg,#ffd877,#e8a72c);border-color:#bf821a !important;color:#2c1d05;
+  box-shadow:0 0 0 3px rgba(232,167,44,.35),0 8px 22px rgba(191,130,26,.4);}
+.gnode .gflag{font-size:11px;color:#7a59b8;font-weight:800;}
+.gnode .gcomb{margin-left:2px;padding-left:7px;border-left:1px solid rgba(0,0,0,.14);display:inline-flex;align-items:center;}
+.gnode .gcomb .cic{margin-right:0;}
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="rail">
+    <div class="rail__h"><div class="t">Цепочка выведения</div><div class="s">соты → пчела → план</div></div>
+    <div class="seg"><button class="on" data-m="comb">Соты</button><button data-m="bee">Пчёлы</button></div>
+    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" placeholder="что ищем…"></label>
+    <div class="invbar" id="invbar"></div>
+    <div class="list" id="list"></div>
+  </nav>
+
+  <div class="stage">
+    <div class="crumb" id="crumb"><span class="muted">Выбери соту слева →</span></div>
+    <div id="cy"></div>
+    <div class="welcome" id="welcome">
+      <div class="o">⬡</div>
+      <h2>Что вывести ради соты?</h2>
+      <div>Выбери соту слева. Покажу пчёл-производителей (сначала самых лёгких)<br>и компактное дерево «что с чем скрестить». Где есть <b>альтернативные рецепты</b> — переключишь.</div>
+    </div>
+    <div class="legend" id="legend" style="display:none">
+      <span><i style="background:#e8a72c"></i>цель</span>
+      <span><i style="background:#fffaf0;border:1.5px solid #2f7d5e"></i>вывести</span>
+      <span><i style="background:#efe6d4;border:1.5px dashed #8a7757"></i>дикая</span>
+      <span><i style="background:#fffaf0;border:2px double #7a59b8"></i>есть ⇄ альт. рецепты</span>
+      <span><i style="background:#f4c452;transform:rotate(45deg);width:9px;height:9px"></i>ромб = рецепт, шанс % внутри</span>
+    </div>
+  </div>
+
+  <aside id="panel"><div class="empty"><span class="o">🍯</span>Здесь появятся пчёлы-производители выбранной соты и пошаговый план (с альтернативными рецептами).</div></aside>
+</div>
+
+<script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+<script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+<script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
+<script src="https://unpkg.com/cytoscape-node-html-label@1.2.2/dist/cytoscape-node-html-label.min.js"></script>
+<script src="bees-data.js"></script>
+<script src="combs-colors.js"></script>
+<script src="bees-colors.js"></script>
+<script>
+const BY=Object.fromEntries(BEES.map(b=>[b.id,b]));
+const REAL=new Set(BEES.map(b=>b.id));
+const isComb=n=>/сот/i.test(n);
+
+// ===== инвентарь (что уже выведено) =====
+const INVKEY='pricoli.bees.have';
+let HAVE=new Set();
+try{HAVE=new Set(JSON.parse(localStorage.getItem(INVKEY)||'[]').filter(id=>BY[id]));}catch(e){}
+const saveInv=()=>{try{localStorage.setItem(INVKEY,JSON.stringify([...HAVE]));}catch(e){}};
+const toggleHave=id=>{HAVE.has(id)?HAVE.delete(id):HAVE.add(id);saveInv();dMemo={};afterInv();};
+function afterInv(){renderInvbar();renderList(document.getElementById('q').value);if(curTarget)refocus();}
+function renderInvbar(){
+  const box=document.getElementById('invbar');if(!box)return;
+  box.innerHTML=`<span>в наличии <span class="cnt">${HAVE.size}</span></span>`+
+    `<button id="inv-only" class="${invOnly?'on':''}">только мои</button>`+
+    `<button id="inv-clear">сбросить</button>`;
+  box.querySelector('#inv-only').onclick=()=>{invOnly=!invOnly;afterInv();};
+  box.querySelector('#inv-clear').onclick=()=>{if(HAVE.size&&confirm('Очистить весь склад?')){HAVE.clear();saveInv();dMemo={};afterInv();}};
+}
+let invOnly=false;
+const short=n=>n.replace(/ соты$/,'');
+
+// ===== иконки сот и пчёл (тинт текстур цветами) =====
+const CIMG={}; (window.COMBCOLORS||[]).forEach(c=>{ if(c.ru)CIMG[c.ru]=c; if(c.en)CIMG[c.en]=c; });
+const BIMG={}; (window.BEECOLORS?Object.values(window.BEECOLORS):[]).forEach(b=>{ if(b.ru)BIMG[b.ru]=b; if(b.en)BIMG[b.en]=b; });
+function icHTML(name,cls){const c=CIMG[name];return c?`<canvas class="cic ${cls||''}" width="16" height="16" data-p="${c.p}" data-s="${c.s}"></canvas>`:'';}
+function beeIc(name,cls){const b=BIMG[name];return b?`<canvas class="bic ${cls||''}" width="16" height="16" data-p="${b.p}" data-s="${b.s}" data-body="${b.body||''}"></canvas>`:'';}
+function _tint(img,hex){const cv=document.createElement('canvas');cv.width=16;cv.height=16;const x=cv.getContext('2d');
+  x.imageSmoothingEnabled=false;x.drawImage(img,0,0,16,16,0,0,16,16);x.globalCompositeOperation='multiply';x.fillStyle=hex;x.fillRect(0,0,16,16);
+  x.globalCompositeOperation='destination-in';x.drawImage(img,0,0,16,16,0,0,16,16);return cv;}
+let _C0,_C1,_cb=0,_bb=0,BODIES={};
+function paintAll(root){root=root||document;
+  if(_cb)root.querySelectorAll('canvas.cic').forEach(cv=>{const x=cv.getContext('2d');x.clearRect(0,0,16,16);x.imageSmoothingEnabled=false;
+    x.drawImage(_tint(_C0,cv.dataset.p),0,0);if(_C1)x.drawImage(_tint(_C1,cv.dataset.s),0,0);});
+  if(_bb)root.querySelectorAll('canvas.bic').forEach(cv=>{const set=BODIES[cv.dataset.body||'']||BODIES[''];if(!set||!set[0])return;
+    const x=cv.getContext('2d');x.clearRect(0,0,16,16);x.imageSmoothingEnabled=false;
+    x.drawImage(_tint(set[0],cv.dataset.p),0,0);if(set[1])x.drawImage(_tint(set[1],cv.dataset.s),0,0);if(set[2])x.drawImage(set[2],0,0,16,16,0,0,16,16);});}
+function _img(src){return new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>r(null);i.src=src;});}
+(async function(){_C0=await _img('beeCombs.0.png');_C1=await _img('beeCombs.1.png');_cb=_C0?1:0;
+  const bodyset=async(dir)=>[await _img(dir+'/body1.png'),await _img(dir+'/drone.body2.png'),await _img(dir+'/drone.outline.png')];
+  BODIES['']=await bodyset('beebody'); BODIES['skulking']=await bodyset('beebody-skulking'); BODIES['doctoral']=await bodyset('beebody-doctoral');
+  _bb=BODIES[''][0]?1:0;
+  paintAll();})();
+function pale(hex){const n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&255,m=c=>Math.round(c+(255-c)*0.8);return `rgb(${m(r)},${m(g)},${m(b)})`;}
+const RC={};                                   // выбранный рецепт на пчелу
+const recOf=id=>{const b=BY[id];if(!b||!b.par.length)return null;return b.par[Math.min(RC[id]||0,b.par.length-1)];};
+
+let dMemo={};
+const expand=id=>REAL.has(id)&&!HAVE.has(id);   // углубляемся только в то, чего ещё нет на складе
+function depth(id,st){st=st||new Set();if(dMemo[id]!=null)return dMemo[id];const b=BY[id];
+  if(HAVE.has(id))return dMemo[id]=0;            // уже есть — лист
+  if(!b||!b.par.length)return dMemo[id]=0; if(st.has(id))return 0; st.add(id);let mx=0;
+  for(const[a,c]of b.par)for(const p of[a,c])if(expand(p))mx=Math.max(mx,depth(p,st)+1);st.delete(id);return dMemo[id]=mx;}
+
+const COMBS={};
+for(const b of BEES)for(const[nm,pct,sp]of b.prod)if(isComb(nm))(COMBS[nm]||=[]).push({bee:b.id,pct,sp,src:b.src});
+const combNames=Object.keys(COMBS).sort((a,b)=>COMBS[a].length-COMBS[b].length||a.localeCompare(b,'ru'));
+
+// подграф по ВЫБРАННОМУ рецепту: пара родителей -> ромб-рецепт (с шансом) -> потомок
+function subgraph(target){
+  const nodes=new Set([target]); const stack=[target];
+  while(stack.length){const id=stack.pop();if(id!==target&&HAVE.has(id))continue;  // имеющуюся не раскрываем
+    const r=recOf(id);if(!r)continue;
+    [r[0],r[1]].forEach(p=>{if(REAL.has(p)&&!nodes.has(p)){nodes.add(p);stack.push(p);}});}
+  const els=[];
+  nodes.forEach(id=>{const b=BY[id];const alt=b.par.length>1;const bc=BIMG[id];
+    els.push({data:{id,label:id+(alt?'  ⇄':''),src:b.src,wild:b.par.length?0:1,alt:alt?1:0,have:HAVE.has(id)?1:0,kind:'bee',bg:bc?pale(bc.p):'#fffaf0'}});});
+  nodes.forEach(id=>{if(id!==target&&HAVE.has(id))return;       // у имеющейся не рисуем рецепт
+    const r=recOf(id);if(!r)return;
+    const real=[r[0],r[1]].filter(p=>REAL.has(p));
+    if(!real.length) return;                          // выведена от диких — без ромба
+    const rid='rec::'+id;
+    els.push({data:{id:rid,label:r[2]+'%',kind:'recipe',forBee:id}});
+    els.push({data:{id:rid+'>out',source:rid,target:id,kind:'out'}});
+    real.forEach((p,i)=>els.push({data:{id:p+'>'+rid+'#'+i,source:p,target:rid,kind:'in'}}));
+  });
+  return {nodes:[...nodes],els};
+}
+
+let cy=null, mode='comb', curComb=null, curTarget=null;
+
+function buildGraph(target){
+  const {els}=subgraph(target);
+  document.getElementById('welcome').style.display='none';
+  document.getElementById('legend').style.display='flex';
+  if(cy)cy.destroy();
+  cy=cytoscape({container:document.getElementById('cy'),elements:els,wheelSensitivity:.25,minZoom:.2,maxZoom:2.4,
+    style:[
+      {selector:'node[kind="bee"]',style:{'label':'data(label)','text-opacity':0,'background-opacity':0,'border-width':0,
+        'width':'label','height':'label','padding':'16px','shape':'round-rectangle','font-size':13,'font-weight':700,
+        'text-wrap':'wrap','text-max-width':120,'text-valign':'center','text-halign':'center'}},
+      {selector:'node[kind="recipe"]',style:{'shape':'diamond','background-color':'#f4c452','border-width':1.5,'border-color':'#bf821a',
+        'label':'data(label)','font-family':'JetBrains Mono, monospace','font-size':10,'font-weight':700,'color':'#3a2a08',
+        'text-valign':'center','text-halign':'center','width':36,'height':36}},
+      {selector:'edge',style:{'width':1.8,'line-color':'#cbb78f','curve-style':'bezier'}},
+      {selector:'edge[kind="out"]',style:{'line-color':'#b89a64','target-arrow-shape':'triangle','target-arrow-color':'#b89a64','arrow-scale':1}},
+      {selector:'edge[kind="in"]',style:{'line-color':'#cbb78f','width':1.5,'target-arrow-shape':'none'}},
+    ],
+    layout:{name:'dagre',rankDir:'TB',nodeSep:22,rankSep:70,edgeSep:8}});
+  if(cy.nodeHtmlLabel) cy.nodeHtmlLabel([{
+    query:'node[kind="bee"]', valign:'center', halign:'center', valignBox:'center', halignBox:'center',
+    tpl:(d)=>{const b=BY[d.id];const cls=['gnode','g-'+d.src];const has=HAVE.has(d.id);
+      if(d.wild)cls.push('g-wild'); if(d.alt)cls.push('g-alt'); if(has&&d.id!==curTarget)cls.push('g-have'); if(d.id===curTarget)cls.push('g-target');
+      const ci=(curComb&&b&&b.prod.some(p=>p[0]===curComb))?`<span class="gcomb" title="${curComb}">${icHTML(curComb)}</span>`:'';
+      const pc=has?'#2f7d5e':(BIMG[d.id]?BIMG[d.id].p:'#cdbb95');
+      const hv=(has&&d.id!==curTarget)?'<span class="ghav" title="есть на складе">✓</span>':'';
+      return `<div class="${cls.join(' ')}" style="--pc:${pc}">${beeIc(d.id)}<span class="gn">${d.id}</span>${hv}${d.alt?'<span class="gflag">⇄</span>':''}${ci}</div>`;}
+  }]);
+  cy.on('tap','node',e=>onNodeTap(e.target.id()));
+  let _rp=0;
+  const repaint=()=>{if(_rp)return;_rp=requestAnimationFrame(()=>{_rp=0;paintAll(document.getElementById('cy'));});};
+  cy.on('render zoom pan layoutstop',repaint);   // node-html-label пересоздаёт canvas при зуме — перерисовываем
+  cy.ready(()=>{cy.fit(45);setTimeout(()=>paintAll(),60);});
+}
+
+function onNodeTap(id){
+  if(id.startsWith('rec::')){ const child=id.slice(5); const cb=BY[child];
+    if(cb && cb.par.length>1){ RC[child]=((RC[child]||0)+1)%cb.par.length; refocus(); } return; }
+  // производитель текущей соты -> сделать целью; иначе если есть альтернативы -> следующий рецепт
+  if(curComb && COMBS[curComb].some(p=>p.bee===id) && id!==curTarget){
+    curTarget=id; document.querySelectorAll('.prod').forEach(x=>x.classList.toggle('on',x.dataset.b===id)); refocus(); return;
+  }
+  const b=BY[id];
+  if(b && b.par.length>1){ RC[id]=((RC[id]||0)+1)%b.par.length; refocus(); }
+}
+
+function planSteps(target){
+  const order=[]; const vis=new Set();
+  (function dfs(id){if(vis.has(id))return;vis.add(id);
+    if(id!==target&&HAVE.has(id)){order.push(id);return;}   // есть на складе — не углубляемся
+    const r=recOf(id);
+    if(r)[r[0],r[1]].forEach(p=>{if(REAL.has(p))dfs(p);});order.push(id);})(target);
+  return {bred:order.filter(id=>BY[id]&&BY[id].par.length&&!HAVE.has(id)),
+          wild:order.filter(id=>BY[id]&&!BY[id].par.length&&!HAVE.has(id)),
+          have:order.filter(id=>BY[id]&&HAVE.has(id)&&id!==target)};
+}
+
+function drawPlan(box){
+  if(!box)return;
+  const {bred,wild,have}=planSteps(curTarget);
+  let html='';
+  if(HAVE.has(curTarget)) html+=`<div class="note" style="background:var(--f-soft);border-color:var(--f)"><b>${curTarget}</b> уже есть на складе ✓</div>`;
+  if(have.length) html+=`<div class="note" style="background:var(--f-soft);border-color:var(--f)">Со склада берём готовыми (дальше не разводим): <b>${have.join(', ')}</b>.</div>`;
+  if(wild.length) html+=`<div class="note">Сначала добудь диких пчёл из ульев: <b>${wild.join(', ')}</b>.</div>`;
+  if(!bred.length&&!HAVE.has(curTarget)) html+=`<div class="note">Скрещивать нечего — всё нужное уже на складе.</div>`;
+  html+='<div class="plan">';
+  bred.forEach(id=>{const b=BY[id];const act=Math.min(RC[id]||0,b.par.length-1);
+    const [a,c,ch]=b.par[act];
+    const yields=b.prod.filter(p=>isComb(p[0]));
+    const yl=yields.length?`<span class="step__yield">даёт: ${yields.map(p=>`<span class="${p[0]===curComb?'hl':''}">${icHTML(p[0])}${short(p[0])} ${p[1]}%</span>`).join(', ')}</span>`:'';
+    const tag=b.par.length>1?`<span class="step__tag"> · рецепт ${act+1}/${b.par.length}</span>`:'';
+    let alts='';
+    if(b.par.length>1){
+      const chips=b.par.map((r,ri)=>ri===act?'':`<button class="altchip" data-b="${id}" data-r="${ri}">${r[0]} × ${r[1]} @${r[2]}%</button>`).filter(Boolean).join('');
+      alts=`<div class="alts"><span class="lbl">⇄ ещё:</span>${chips}</div>`;
+    }
+    const hv=p=>HAVE.has(p)?'<span class="ghav" title="есть на складе">✓</span>':'';
+    html+=`<div class="step"><div class="step__n"></div><div class="step__b">
+      ${beeIc(a)}<b>${a}</b>${hv(a)} <span class="step__cross">×</span> ${beeIc(c)}<b>${c}</b>${hv(c)} → ${beeIc(id)}<b class="step__res">${id}</b> <span class="step__ch">@${ch}%</span>${tag}
+      ${yl}${alts}</div></div>`;});
+  html+='</div>';
+  box.innerHTML=html;
+  box.querySelectorAll('.altchip').forEach(el=>el.onclick=()=>{RC[el.dataset.b]=+el.dataset.r;refocus();});
+  paintAll(box);
+}
+
+function refocus(){
+  const pct=curComb?((COMBS[curComb].find(p=>p.bee===curTarget)||{}).pct):null;
+  const nrec=BY[curTarget]?BY[curTarget].par.length:0;
+  document.getElementById('crumb').innerHTML=
+    (curComb?`<span class="goal">${icHTML(curComb,'big')||'⬡'} ${curComb}</span><span class="arrow">→</span><span class="muted">вывести</span> <span class="pick">${curTarget}</span>`
+            :`<span class="goal">${curTarget}</span><span class="muted">дерево выведения</span>`)+
+    (pct!=null?` <span class="muted">(сота @${pct}%)</span>`:'')+
+    (nrec>1?` <span class="muted">· ${nrec} рецепта</span>`:'')+
+    `<span class="tools"><button class="tbtn" id="fit">Вписать</button></span>`;
+  document.getElementById('fit').onclick=()=>cy&&cy.fit(45);
+  buildGraph(curTarget);
+  drawPlan(document.getElementById('planbox'));
+  paintAll();
+}
+
+function selectComb(name,row){
+  curComb=name; mode='comb';
+  document.querySelectorAll('.row.on').forEach(r=>r.classList.remove('on')); row&&row.classList.add('on');
+  const prod=COMBS[name].map(p=>({...p,d:depth(p.bee)})).sort((a,b)=>a.d-b.d||b.pct-a.pct);
+  curTarget=prod[0].bee;
+  const panel=document.getElementById('panel');
+  const list=prod.map((p,i)=>{const has=HAVE.has(p.bee);return `<div class="prod${p.bee===curTarget?' on':''}${has?' owned':''}" data-b="${p.bee}">
+    <span class="havchk${has?' on':''}" data-h="${p.bee}" title="есть на складе">✓</span>
+    <span class="prod__src src-${p.src}">${({F:'FOR',E:'EXB',M:'MAG'}[p.src]||p.src)}</span>
+    ${beeIc(p.bee)}<span class="prod__nm">${p.bee}</span>${has?'<span class="prod__easy have">есть ✓</span>':(i===0?'<span class="prod__easy">проще всего</span>':'')}
+    <span class="prod__pct">${p.pct}%</span></div>`;}).join('');
+  panel.innerHTML=`<div class="sect">соту дают (${prod.length})</div>
+    <div style="font-size:12.5px;color:var(--muted);margin:-4px 0 10px">нажми пчелу — построю дерево под неё (проще = меньше глубина).</div>${list}
+    <div class="sect" style="margin-top:22px">пошаговый план</div><div id="planbox"></div>`;
+  panel.querySelectorAll('.prod').forEach(el=>el.onclick=e=>{
+    if(e.target.classList.contains('havchk')){toggleHave(el.dataset.b);return;}
+    curTarget=el.dataset.b;
+    panel.querySelectorAll('.prod').forEach(x=>x.classList.remove('on'));el.classList.add('on');refocus();});
+  refocus();
+}
+function selectBee(id,row){
+  mode='bee'; curComb=null; curTarget=id;
+  document.querySelectorAll('.row.on').forEach(r=>r.classList.remove('on')); row&&row.classList.add('on');
+  const b=BY[id];
+  const prods=b.prod.map(([n,c,s])=>`<span style="font-family:var(--mono);font-size:11px;white-space:nowrap">${icHTML(n)}${n} ${c}%${s?'✦':''}</span>`).join(' · ');
+  const has=HAVE.has(id);
+  document.getElementById('panel').innerHTML=
+    `<div class="sect">пчела</div>
+     <div style="font-family:var(--disp);font-weight:800;font-size:18px">${beeIc(id,'big')}${b.id}</div>
+     <div style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:10px">${b.en} · ${({F:'Forestry',E:'ExtraBees',M:'MagicBees'}[b.src]||b.src)} · глубина ${depth(id)}</div>
+     <button id="havbtn" class="invbar" style="all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:9px;border:1.5px solid ${has?'var(--f)':'var(--cardln)'};background:${has?'var(--f-soft)':'var(--card)'};font-size:13px;font-weight:600;color:${has?'var(--f)':'var(--ink2)'}"><span class="havchk${has?' on':''}" style="pointer-events:none">✓</span>${has?'есть на складе':'отметить как «есть»'}</button>
+     <div class="sect" style="margin-top:18px">даёт</div><div>${prods||'—'}</div>
+     <div class="sect" style="margin-top:20px">пошаговый план</div><div id="planbox"></div>`;
+  document.getElementById('havbtn').onclick=()=>toggleHave(id);
+  refocus();
+}
+
+const listEl=document.getElementById('list');
+function renderList(f=''){f=f.trim().toLowerCase();listEl.innerHTML='';
+  if(mode==='comb'){
+    combNames.filter(n=>!f||n.toLowerCase().includes(f))
+      .filter(n=>!invOnly||COMBS[n].some(p=>HAVE.has(p.bee))).forEach(nm=>{const r=document.createElement('div');
+      const own=COMBS[nm].filter(p=>HAVE.has(p.bee)).length;
+      r.className='row'+(COMBS[nm].length<=1?' rare':'')+(nm===curComb?' on':'')+(own?' owned':'');
+      r.innerHTML=`${icHTML(nm)}<span class="nm">${short(nm)}</span><span class="ct">${own?own+'/':''}${COMBS[nm].length} ист.</span>`;
+      r.onclick=()=>selectComb(nm,r);listEl.appendChild(r);});
+  }else{
+    BEES.filter(b=>!f||b.id.toLowerCase().includes(f)||b.en.toLowerCase().includes(f))
+      .filter(b=>!invOnly||HAVE.has(b.id))
+      .sort((a,b)=>(HAVE.has(b.id)-HAVE.has(a.id))||a.id.localeCompare(b.id,'ru')).forEach(b=>{const r=document.createElement('div');
+      const has=HAVE.has(b.id);
+      r.className='row'+(b.id===curTarget?' on':'')+(has?' owned':'');
+      r.innerHTML=`<span class="havchk${has?' on':''}" data-h="${b.id}" title="есть на складе">✓</span><span class="nm">${beeIc(b.id)}${b.id}</span><span class="ct">гл.${depth(b.id)}${b.par.length>1?' · ⇄'+b.par.length:''}</span>`;
+      r.onclick=e=>{if(e.target.classList.contains('havchk')){toggleHave(b.id);return;}selectBee(b.id,r);};
+      listEl.appendChild(r);});
+  }
+  paintAll(listEl);
+}
+document.querySelectorAll('.seg button').forEach(btn=>btn.onclick=()=>{
+  document.querySelectorAll('.seg button').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
+  mode=btn.dataset.m;document.getElementById('q').value='';renderList();});
+document.getElementById('q').addEventListener('input',e=>renderList(e.target.value));
+renderInvbar();
+renderList();
+</script>
+</body>
+</html>

@@ -1,0 +1,3797 @@
+{
+  "bees": 140,
+  "forestry": 44,
+  "extrabees": 96,
+  "data": [
+    {
+      "id_en": "Common",
+      "id_ru": "Обычная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "wild hive bee",
+          "p1_ru": "дикая пчела (из улья)",
+          "p2_en": "wild hive bee",
+          "p2_ru": "дикая пчела (из улья)",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.35,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Cultivated",
+      "id_ru": "Развитая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Common",
+          "p1_ru": "Обычная",
+          "p2_en": "wild hive bee",
+          "p2_ru": "дикая пчела (из улья)",
+          "chance": 12
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.4,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Noble",
+      "id_ru": "Знатная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Common",
+          "p1_ru": "Обычная",
+          "p2_en": "Cultivated",
+          "p2_ru": "Развитая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Dripping Comb",
+          "comb_ru": "Капающие соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Majestic",
+      "id_ru": "Величавая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Noble",
+          "p1_ru": "Знатная",
+          "p2_en": "Cultivated",
+          "p2_ru": "Развитая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Dripping Comb",
+          "comb_ru": "Капающие соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Imperial",
+      "id_ru": "Имперская",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Noble",
+          "p1_ru": "Знатная",
+          "p2_en": "Majestic",
+          "p2_ru": "Величавая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Dripping Comb",
+          "comb_ru": "Капающие соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Royal Jelly",
+          "comb_ru": "Маточное молочко",
+          "chance": 0.15,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Diligent",
+      "id_ru": "Прилежная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Common",
+          "p1_ru": "Обычная",
+          "p2_en": "Cultivated",
+          "p2_ru": "Развитая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Stringy Comb",
+          "comb_ru": "Вязкие соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Unweary",
+      "id_ru": "Неутомимая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Diligent",
+          "p1_ru": "Прилежная",
+          "p2_en": "Cultivated",
+          "p2_ru": "Развитая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Stringy Comb",
+          "comb_ru": "Вязкие соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Industrious",
+      "id_ru": "Трудолюбивая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Diligent",
+          "p1_ru": "Прилежная",
+          "p2_en": "Unweary",
+          "p2_ru": "Неутомимая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Stringy Comb",
+          "comb_ru": "Вязкие соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Pollen Cluster",
+          "comb_ru": "Комок пыльцы",
+          "chance": 0.15,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Heroic",
+      "id_ru": "Героическая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Steadfast",
+          "p1_ru": "Стойкая",
+          "p2_en": "Valiant",
+          "p2_ru": "Доблестная",
+          "chance": 6
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Cocoa Comb",
+          "comb_ru": "Какао-соты",
+          "chance": 0.4,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Sinister",
+      "id_ru": "Зловещая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Cultivated",
+          "p1_ru": "Развитая",
+          "p2_en": "config species (sinister)",
+          "p2_ru": "особый вид (задаётся конфигом)",
+          "chance": 60
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Simmering Comb",
+          "comb_ru": "Кипящие соты",
+          "chance": 0.45,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Fiendish",
+      "id_ru": "Жестокая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Sinister",
+          "p1_ru": "Зловещая",
+          "p2_en": "config species (sinister)",
+          "p2_ru": "особый вид (задаётся конфигом)",
+          "chance": 40
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Simmering Comb",
+          "comb_ru": "Кипящие соты",
+          "chance": 0.55,
+          "type": "product"
+        },
+        {
+          "comb_en": "Ash",
+          "comb_ru": "Зола",
+          "chance": 0.15,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Demonic",
+      "id_ru": "Одержимая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Sinister",
+          "p1_ru": "Зловещая",
+          "p2_en": "Fiendish",
+          "p2_ru": "Жестокая",
+          "chance": 25
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Simmering Comb",
+          "comb_ru": "Кипящие соты",
+          "chance": 0.45,
+          "type": "product"
+        },
+        {
+          "comb_en": "Glowstone Dust",
+          "comb_ru": "Светящаяся пыль",
+          "chance": 0.15,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Frugal",
+      "id_ru": "Бережливая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Modest",
+          "p1_ru": "Скромная",
+          "p2_en": "Sinister",
+          "p2_ru": "Зловещая",
+          "chance": 16
+        },
+        {
+          "p1_en": "Modest",
+          "p1_ru": "Скромная",
+          "p2_en": "Fiendish",
+          "p2_ru": "Жестокая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Parched Comb",
+          "comb_ru": "Пересохшие соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Austere",
+      "id_ru": "Суровая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Modest",
+          "p1_ru": "Скромная",
+          "p2_en": "Frugal",
+          "p2_ru": "Бережливая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Parched Comb",
+          "comb_ru": "Пересохшие соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Powdery Comb",
+          "comb_ru": "Рыхлые соты",
+          "chance": 0.5,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Exotic",
+      "id_ru": "Редкая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Austere",
+          "p1_ru": "Суровая",
+          "p2_en": "Tropical",
+          "p2_ru": "Тропическая",
+          "chance": 12
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Edenic",
+      "id_ru": "Райская",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Exotic",
+          "p1_ru": "Редкая",
+          "p2_en": "Tropical",
+          "p2_ru": "Тропическая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Spectral",
+      "id_ru": "Призрачная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Hermitic",
+          "p1_ru": "Уединённая",
+          "p2_en": "Ender",
+          "p2_ru": "Драконья",
+          "chance": 4
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Mysterious Comb",
+          "comb_ru": "Таинственные соты",
+          "chance": 0.5,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Phantasmal",
+      "id_ru": "Воображаемая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Spectral",
+          "p1_ru": "Призрачная",
+          "p2_en": "Ender",
+          "p2_ru": "Драконья",
+          "chance": 2
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Mysterious Comb",
+          "comb_ru": "Таинственные соты",
+          "chance": 0.4,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Icy",
+      "id_ru": "Ледяная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Industrious",
+          "p1_ru": "Трудолюбивая",
+          "p2_en": "Wintry",
+          "p2_ru": "Зимняя",
+          "chance": 12
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Frozen Comb",
+          "comb_ru": "Морозные соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Ice Shard",
+          "comb_ru": "Осколок льда",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Glacial",
+      "id_ru": "Ледниковая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Icy",
+          "p1_ru": "Ледяная",
+          "p2_en": "Wintry",
+          "p2_ru": "Зимняя",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Frozen Comb",
+          "comb_ru": "Морозные соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Ice Shard",
+          "comb_ru": "Осколок льда",
+          "chance": 0.4,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Vindictive",
+      "id_ru": "Карательная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Monastic",
+          "p1_ru": "Монашья",
+          "p2_en": "Demonic",
+          "p2_ru": "Одержимая",
+          "chance": 4
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Irradiated Comb",
+          "comb_ru": "Облучённые соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Vengeful",
+      "id_ru": "Мстительная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Demonic",
+          "p1_ru": "Одержимая",
+          "p2_en": "Vindictive",
+          "p2_ru": "Карательная",
+          "chance": 8
+        },
+        {
+          "p1_en": "Monastic",
+          "p1_ru": "Монашья",
+          "p2_en": "Vindictive",
+          "p2_ru": "Карательная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Irradiated Comb",
+          "comb_ru": "Облучённые соты",
+          "chance": 0.4,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Avenging",
+      "id_ru": "Мстящая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Vengeful",
+          "p1_ru": "Мстительная",
+          "p2_en": "Vindictive",
+          "p2_ru": "Карательная",
+          "chance": 4
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Irradiated Comb",
+          "comb_ru": "Облучённые соты",
+          "chance": 0.4,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Leporine",
+      "id_ru": "Заячья",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Meadows",
+          "p1_ru": "Луговая",
+          "p2_en": "Forest",
+          "p2_ru": "Лесная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Egg",
+          "comb_ru": "Яйцо",
+          "chance": 0.1,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Merry",
+      "id_ru": "Весёлая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Wintry",
+          "p1_ru": "Зимняя",
+          "p2_en": "Forest",
+          "p2_ru": "Лесная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Frozen Comb",
+          "comb_ru": "Морозные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Ice Shard",
+          "comb_ru": "Осколок льда",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Tipsy",
+      "id_ru": "Пьяная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Wintry",
+          "p1_ru": "Зимняя",
+          "p2_en": "Meadows",
+          "p2_ru": "Луговая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Frozen Comb",
+          "comb_ru": "Морозные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Ice Shard",
+          "comb_ru": "Осколок льда",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Tricky",
+      "id_ru": "Хитрая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Sinister",
+          "p1_ru": "Зловещая",
+          "p2_en": "Common",
+          "p2_ru": "Обычная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.4,
+          "type": "product"
+        },
+        {
+          "comb_en": "Cookie",
+          "comb_ru": "Печенье",
+          "chance": 0.15,
+          "type": "product"
+        },
+        {
+          "comb_en": "Skeleton Skull",
+          "comb_ru": "Череп скелета",
+          "chance": 0.02,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Zombie Head",
+          "comb_ru": "Голова зомби",
+          "chance": 0.02,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Steve Head",
+          "comb_ru": "Голова игрока",
+          "chance": 0.02,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Creeper Head",
+          "comb_ru": "Голова крипера",
+          "chance": 0.02,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Rural",
+      "id_ru": "Сельская",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Meadows",
+          "p1_ru": "Луговая",
+          "p2_en": "Diligent",
+          "p2_ru": "Прилежная",
+          "chance": 12
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Wheaten Comb",
+          "comb_ru": "Пшеничные соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Farmerly",
+      "id_ru": "Прошлая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Rural",
+          "p1_ru": "Сельская",
+          "p2_en": "Unweary",
+          "p2_ru": "Неутомимая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Wheaten Comb",
+          "comb_ru": "Пшеничные соты",
+          "chance": 0.27,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Agrarian",
+      "id_ru": "Земельная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Farmerly",
+          "p1_ru": "Прошлая",
+          "p2_en": "Industrious",
+          "p2_ru": "Трудолюбивая",
+          "chance": 6
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Wheaten Comb",
+          "comb_ru": "Пшеничные соты",
+          "chance": 0.35,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Miry",
+      "id_ru": "Топкая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Marshy",
+          "p1_ru": "Болотная",
+          "p2_en": "Noble",
+          "p2_ru": "Знатная",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Mossy Comb",
+          "comb_ru": "Замшелые соты",
+          "chance": 0.36,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Boggy",
+      "id_ru": "Болотистая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Marshy",
+          "p1_ru": "Болотная",
+          "p2_en": "Miry",
+          "p2_ru": "Топкая",
+          "chance": 9
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Mossy Comb",
+          "comb_ru": "Замшелые соты",
+          "chance": 0.39,
+          "type": "product"
+        },
+        {
+          "comb_en": "Peat",
+          "comb_ru": "Торф",
+          "chance": 0.08,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Secluded",
+      "id_ru": "Укромная",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Monastic",
+          "p1_ru": "Монашья",
+          "p2_en": "Austere",
+          "p2_ru": "Суровая",
+          "chance": 12
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Mellow Comb",
+          "comb_ru": "Спелые соты",
+          "chance": 0.2,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Hermitic",
+      "id_ru": "Уединённая",
+      "source": "Forestry",
+      "parents": [
+        {
+          "p1_en": "Monastic",
+          "p1_ru": "Монашья",
+          "p2_en": "Secluded",
+          "p2_ru": "Укромная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Mellow Comb",
+          "comb_ru": "Спелые соты",
+          "chance": 0.2,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Arid",
+      "id_ru": "Засушливая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Meadows",
+          "p1_ru": "Луговая",
+          "p2_en": "Frugal",
+          "p2_ru": "Бережливая",
+          "chance": 10
+        },
+        {
+          "p1_en": "Forest",
+          "p1_ru": "Лесная",
+          "p2_en": "Frugal",
+          "p2_ru": "Бережливая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Barren",
+      "id_ru": "Бесплодная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Common",
+          "p1_ru": "Обычная",
+          "p2_en": "Arid",
+          "p2_ru": "Засушливая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Desolate",
+      "id_ru": "Заброшенная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Arid",
+          "p1_ru": "Засушливая",
+          "p2_en": "Barren",
+          "p2_ru": "Бесплодная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Decomposing",
+      "id_ru": "Разлагающаяся",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Marshy",
+          "p1_ru": "Болотная",
+          "p2_en": "Barren",
+          "p2_ru": "Бесплодная",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Decomposed Comb",
+          "comb_ru": "Разлагающиеся соты",
+          "chance": 0.08,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Gnawing",
+      "id_ru": "Мучительная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Forest",
+          "p1_ru": "Лесная",
+          "p2_en": "Barren",
+          "p2_ru": "Бесплодная",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.25,
+          "type": "product"
+        },
+        {
+          "comb_en": "Dusty Comb",
+          "comb_ru": "Пыльные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Decaying",
+      "id_ru": "Гнилая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Meadows",
+          "p1_ru": "Луговая",
+          "p2_en": "Desolate",
+          "p2_ru": "Заброшенная",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Rotten Comb",
+          "comb_ru": "Гнилые соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Skeletal",
+      "id_ru": "Скелетная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Forest",
+          "p1_ru": "Лесная",
+          "p2_en": "Desolate",
+          "p2_ru": "Заброшенная",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Bone Comb",
+          "comb_ru": "Костяные соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Creepy",
+      "id_ru": "Криперная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Modest",
+          "p1_ru": "Скромная",
+          "p2_en": "Desolate",
+          "p2_ru": "Заброшенная",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Powdery Comb",
+          "comb_ru": "Рыхлые соты",
+          "chance": 0.08,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Tolerant",
+      "id_ru": "Толерантная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Diligent",
+          "p1_ru": "Прилежная",
+          "p2_en": "Rocky",
+          "p2_ru": "Каменная",
+          "chance": 12
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Robust",
+      "id_ru": "Выносливая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Unweary",
+          "p1_ru": "Неутомимая",
+          "p2_en": "Tolerant",
+          "p2_ru": "Толерантная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Resilient",
+      "id_ru": "Устойчивая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Industrious",
+          "p1_ru": "Трудолюбивая",
+          "p2_en": "Robust",
+          "p2_ru": "Выносливая",
+          "chance": 6
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Corroded",
+      "id_ru": "Коррозийная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Wintry",
+          "p1_ru": "Зимняя",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Modest",
+          "p1_ru": "Скромная",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Copper Comb",
+          "comb_ru": "Медные соты",
+          "chance": 0.06,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Tarnished",
+      "id_ru": "Потускневшая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Marshy",
+          "p1_ru": "Болотная",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Tropical",
+          "p1_ru": "Тропическая",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Tin Comb",
+          "comb_ru": "Оловянные соты",
+          "chance": 0.06,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Rusty",
+      "id_ru": "Ржавая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Meadows",
+          "p1_ru": "Луговая",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Forest",
+          "p1_ru": "Лесная",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Iron Comb",
+          "comb_ru": "Железные соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Leaden",
+      "id_ru": "Свинцовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Meadows",
+          "p1_ru": "Луговая",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Modest",
+          "p1_ru": "Скромная",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Leaden Comb",
+          "comb_ru": "Свинцовые соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Galvanized",
+      "id_ru": "Оцинкованная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Wintry",
+          "p1_ru": "Зимняя",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Tropical",
+          "p1_ru": "Тропическая",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Zinc Comb",
+          "comb_ru": "Цинковые соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Impregnable",
+      "id_ru": "Неприступная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Cultivated",
+          "p1_ru": "Развитая",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 3
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Titanium Comb",
+          "comb_ru": "Титановые соты",
+          "chance": 0.02,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Invincible",
+      "id_ru": "Непобедимая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Common",
+          "p1_ru": "Обычная",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 3
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Tungsten Comb",
+          "comb_ru": "Вольфрамовые соты",
+          "chance": 0.01,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Lustered",
+      "id_ru": "Взволнованная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Forest",
+          "p1_ru": "Лесная",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Marshy",
+          "p1_ru": "Болотная",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Nickel Comb",
+          "comb_ru": "Никелевые соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Glittering",
+      "id_ru": "Сверкающая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Majestic",
+          "p1_ru": "Величавая",
+          "p2_en": "Rusty",
+          "p2_ru": "Ржавая",
+          "chance": 2
+        },
+        {
+          "p1_en": "Majestic",
+          "p1_ru": "Величавая",
+          "p2_en": "Corroded",
+          "p2_ru": "Коррозийная",
+          "chance": 2
+        },
+        {
+          "p1_en": "Majestic",
+          "p1_ru": "Величавая",
+          "p2_en": "Lustered",
+          "p2_ru": "Взволнованная",
+          "chance": 2
+        },
+        {
+          "p1_en": "Majestic",
+          "p1_ru": "Величавая",
+          "p2_en": "Invincible",
+          "p2_ru": "Непобедимая",
+          "chance": 2
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Golden Comb",
+          "comb_ru": "Золотые соты",
+          "chance": 0.02,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Shining",
+      "id_ru": "Сияющая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Majestic",
+          "p1_ru": "Величавая",
+          "p2_en": "Galvanized",
+          "p2_ru": "Оцинкованная",
+          "chance": 2
+        },
+        {
+          "p1_en": "Majestic",
+          "p1_ru": "Величавая",
+          "p2_en": "Tarnished",
+          "p2_ru": "Потускневшая",
+          "chance": 2
+        },
+        {
+          "p1_en": "Majestic",
+          "p1_ru": "Величавая",
+          "p2_en": "Leaden",
+          "p2_ru": "Свинцовая",
+          "chance": 2
+        },
+        {
+          "p1_en": "Majestic",
+          "p1_ru": "Величавая",
+          "p2_en": "Impregnable",
+          "p2_ru": "Неприступная",
+          "chance": 2
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Silver Comb",
+          "comb_ru": "Серебряные соты",
+          "chance": 0.02,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Valuable",
+      "id_ru": "Ценная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Glittering",
+          "p1_ru": "Сверкающая",
+          "p2_en": "Shining",
+          "p2_ru": "Сияющая",
+          "chance": 2
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Platinum Comb",
+          "comb_ru": "Платиновые соты",
+          "chance": 0.01,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Lapis",
+      "id_ru": "Лазуритовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Imperial",
+          "p1_ru": "Имперская",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Lapis Comb",
+          "comb_ru": "Лазуритовые соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Emerald",
+      "id_ru": "Изумрудная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Forest",
+          "p1_ru": "Лесная",
+          "p2_en": "Lapis",
+          "p2_ru": "Лазуритовая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Emerald Comb",
+          "comb_ru": "Изумрудные соты",
+          "chance": 0.04,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Ruby",
+      "id_ru": "Рубиновая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Modest",
+          "p1_ru": "Скромная",
+          "p2_en": "Lapis",
+          "p2_ru": "Лазуритовая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Ruby Comb",
+          "comb_ru": "Рубиновые соты",
+          "chance": 0.03,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Sapphire",
+      "id_ru": "Сапфировая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Water",
+          "p1_ru": "Водная",
+          "p2_en": "Lapis",
+          "p2_ru": "Лазуритовая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Sapphire Comb",
+          "comb_ru": "Сапфировые соты",
+          "chance": 0.03,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Diamond",
+      "id_ru": "Алмазная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Cultivated",
+          "p1_ru": "Развитая",
+          "p2_en": "Lapis",
+          "p2_ru": "Лазуритовая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Diamond Comb",
+          "comb_ru": "Алмазные соты",
+          "chance": 0.01,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Unstable",
+      "id_ru": "Нестабильная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Prehistoric",
+          "p1_ru": "Доисторическая",
+          "p2_en": "Resilient",
+          "p2_ru": "Устойчивая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Nuclear",
+      "id_ru": "Ядерная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Unstable",
+          "p1_ru": "Нестабильная",
+          "p2_en": "Rusty",
+          "p2_ru": "Ржавая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Unstable",
+          "p1_ru": "Нестабильная",
+          "p2_en": "Corroded",
+          "p2_ru": "Коррозийная",
+          "chance": 5
+        },
+        {
+          "p1_en": "Unstable",
+          "p1_ru": "Нестабильная",
+          "p2_en": "Tarnished",
+          "p2_ru": "Потускневшая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Unstable",
+          "p1_ru": "Нестабильная",
+          "p2_en": "Galvanized",
+          "p2_ru": "Оцинкованная",
+          "chance": 5
+        },
+        {
+          "p1_en": "Unstable",
+          "p1_ru": "Нестабильная",
+          "p2_en": "Lustered",
+          "p2_ru": "Взволнованная",
+          "chance": 5
+        },
+        {
+          "p1_en": "Unstable",
+          "p1_ru": "Нестабильная",
+          "p2_en": "Leaden",
+          "p2_ru": "Свинцовая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Radioactive",
+      "id_ru": "Радиоактивная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Nuclear",
+          "p1_ru": "Ядерная",
+          "p2_en": "Glittering",
+          "p2_ru": "Сверкающая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Nuclear",
+          "p1_ru": "Ядерная",
+          "p2_en": "Shining",
+          "p2_ru": "Сияющая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Radioactive Comb",
+          "comb_ru": "Урановые соты",
+          "chance": 0.02,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Yellorium",
+      "id_ru": "Йеллориумовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Frugal",
+          "p1_ru": "Бережливая",
+          "p2_en": "Nuclear",
+          "p2_ru": "Ядерная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Yellorium Comb",
+          "comb_ru": "Йеллориумовые соты",
+          "chance": 0.02,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Cyanite",
+      "id_ru": "Цианитовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Nuclear",
+          "p1_ru": "Ядерная",
+          "p2_en": "Yellorium",
+          "p2_ru": "Йеллориумовая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Cyanite Comb",
+          "comb_ru": "Кианитовые соты",
+          "chance": 0.01,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Blutonium",
+      "id_ru": "Блутониевая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Cyanite",
+          "p1_ru": "Цианитовая",
+          "p2_en": "Yellorium",
+          "p2_ru": "Йеллориумовая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Barren Comb",
+          "comb_ru": "Бесплодные соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Blutonium Comb",
+          "comb_ru": "Блутониевые соты",
+          "chance": 0.01,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Ancient",
+      "id_ru": "Древняя",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Noble",
+          "p1_ru": "Знатная",
+          "p2_en": "Diligent",
+          "p2_ru": "Прилежная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Old Comb",
+          "comb_ru": "Древние соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Primeval",
+      "id_ru": "Первобытная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Secluded",
+          "p1_ru": "Укромная",
+          "p2_en": "Ancient",
+          "p2_ru": "Древняя",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Old Comb",
+          "comb_ru": "Древние соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Prehistoric",
+      "id_ru": "Доисторическая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Primeval",
+          "p1_ru": "Первобытная",
+          "p2_en": "Ancient",
+          "p2_ru": "Древняя",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Old Comb",
+          "comb_ru": "Древние соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Relic",
+      "id_ru": "Реликтовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Imperial",
+          "p1_ru": "Имперская",
+          "p2_en": "Prehistoric",
+          "p2_ru": "Доисторическая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Old Comb",
+          "comb_ru": "Древние соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Fossilised",
+      "id_ru": "Окаменелая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Primeval",
+          "p1_ru": "Первобытная",
+          "p2_en": "Growing",
+          "p2_ru": "Прорастающая",
+          "chance": 8
+        },
+        {
+          "p1_en": "Rural",
+          "p1_ru": "Сельская",
+          "p2_en": "Primeval",
+          "p2_ru": "Первобытная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Old Comb",
+          "comb_ru": "Древние соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Fossilised Comb",
+          "comb_ru": "Окаменевшие соты",
+          "chance": 0.08,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Resinous",
+      "id_ru": "Смолистая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Miry",
+          "p1_ru": "Топкая",
+          "p2_en": "Primeval",
+          "p2_ru": "Первобытная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Old Comb",
+          "comb_ru": "Древние соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Amber Comb",
+          "comb_ru": "Янтарные соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Oily",
+      "id_ru": "Нефтяная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Ocean",
+          "p1_ru": "Океаническая",
+          "p2_en": "Primeval",
+          "p2_ru": "Первобытная",
+          "chance": 8
+        },
+        {
+          "p1_en": "Frugal",
+          "p1_ru": "Бережливая",
+          "p2_en": "Primeval",
+          "p2_ru": "Первобытная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Old Comb",
+          "comb_ru": "Древние соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Oily Comb",
+          "comb_ru": "Масляные соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Distilled",
+      "id_ru": "Дистиллированная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Industrious",
+          "p1_ru": "Трудолюбивая",
+          "p2_en": "Oily",
+          "p2_ru": "Нефтяная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Old Comb",
+          "comb_ru": "Древние соты",
+          "chance": 0.1,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Refined",
+      "id_ru": "Изысканная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Distilled",
+          "p1_ru": "Дистиллированная",
+          "p2_en": "Oily",
+          "p2_ru": "Нефтяная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Oily Comb",
+          "comb_ru": "Масляные соты",
+          "chance": 0.1,
+          "type": "product"
+        },
+        {
+          "comb_en": "Petroleum Comb",
+          "comb_ru": "Нефтяные соты",
+          "chance": 0.04,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Tarry",
+      "id_ru": "Медлительная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Distilled",
+          "p1_ru": "Дистиллированная",
+          "p2_en": "Fossilised",
+          "p2_ru": "Окаменелая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Fossilised Comb",
+          "comb_ru": "Окаменевшие соты",
+          "chance": 0.1,
+          "type": "product"
+        },
+        {
+          "comb_en": "Tar Comb",
+          "comb_ru": "Смолистые соты",
+          "chance": 0.3,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Elastic",
+      "id_ru": "Эластичная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Distilled",
+          "p1_ru": "Дистиллированная",
+          "p2_en": "Resinous",
+          "p2_ru": "Смолистая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Amber Comb",
+          "comb_ru": "Янтарные соты",
+          "chance": 0.1,
+          "type": "product"
+        },
+        {
+          "comb_en": "Latex Comb",
+          "comb_ru": "Каучуковые соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "River",
+      "id_ru": "Речная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Diligent",
+          "p1_ru": "Прилежная",
+          "p2_en": "Water",
+          "p2_ru": "Водная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Damp Comb",
+          "comb_ru": "Влажные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Clay Comb",
+          "comb_ru": "Глиняные соты",
+          "chance": 0.2,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Ocean",
+      "id_ru": "Океаническая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Diligent",
+          "p1_ru": "Прилежная",
+          "p2_en": "Water",
+          "p2_ru": "Водная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Damp Comb",
+          "comb_ru": "Влажные соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Stained",
+      "id_ru": "Испачканная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Ebony",
+          "p1_ru": "Черномазая",
+          "p2_en": "Ocean",
+          "p2_ru": "Океаническая",
+          "chance": 8
+        },
+        {
+          "p1_en": "Forest",
+          "p1_ru": "Лесная",
+          "p2_en": "Diligent",
+          "p2_ru": "Прилежная",
+          "chance": 10
+        },
+        {
+          "p1_en": "Farmerly",
+          "p1_ru": "Прошлая",
+          "p2_en": "Meadows",
+          "p2_ru": "Луговая",
+          "chance": 10
+        },
+        {
+          "p1_en": "Unweary",
+          "p1_ru": "Неутомимая",
+          "p2_en": "Growing",
+          "p2_ru": "Прорастающая",
+          "chance": 10
+        },
+        {
+          "p1_en": "Industrious",
+          "p1_ru": "Трудолюбивая",
+          "p2_en": "Thriving",
+          "p2_ru": "Процветающая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Damp Comb",
+          "comb_ru": "Влажные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Ink Sac / Dye",
+          "comb_ru": "Краситель",
+          "chance": 0.1,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.35,
+          "type": "product"
+        },
+        {
+          "comb_en": "Wheaten Comb",
+          "comb_ru": "Пшеничные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Seedy Comb",
+          "comb_ru": "Семянные соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Sweetened",
+      "id_ru": "Сладкая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Valiant",
+          "p1_ru": "Доблестная",
+          "p2_en": "Diligent",
+          "p2_ru": "Прилежная",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.4,
+          "type": "product"
+        },
+        {
+          "comb_en": "Sugar",
+          "comb_ru": "Сахар",
+          "chance": 0.1,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Sugary",
+      "id_ru": "Сахарная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Rural",
+          "p1_ru": "Сельская",
+          "p2_en": "Sweetened",
+          "p2_ru": "Сладкая",
+          "chance": 15
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.4,
+          "type": "product"
+        },
+        {
+          "comb_en": "Sugar",
+          "comb_ru": "Сахар",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Ripening",
+      "id_ru": "Созревающая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Sweetened",
+          "p1_ru": "Сладкая",
+          "p2_en": "Growing",
+          "p2_ru": "Прорастающая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Sugar",
+          "comb_ru": "Сахар",
+          "chance": 0.1,
+          "type": "product"
+        },
+        {
+          "comb_en": "Fruity Comb",
+          "comb_ru": "Фруктовые соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Fruity",
+      "id_ru": "Фруктовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Sweetened",
+          "p1_ru": "Сладкая",
+          "p2_en": "Thriving",
+          "p2_ru": "Процветающая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Sugar",
+          "comb_ru": "Сахар",
+          "chance": 0.15,
+          "type": "product"
+        },
+        {
+          "comb_en": "Fruity Comb",
+          "comb_ru": "Фруктовые соты",
+          "chance": 0.2,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Fermented",
+      "id_ru": "Ферментная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Farmerly",
+          "p1_ru": "Прошлая",
+          "p2_en": "Meadows",
+          "p2_ru": "Луговая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Wheaten Comb",
+          "comb_ru": "Пшеничные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Alcoholic Comb",
+          "comb_ru": "Спиртовые соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Bovine",
+      "id_ru": "Коровья",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Farmerly",
+          "p1_ru": "Прошлая",
+          "p2_en": "Water",
+          "p2_ru": "Водная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Wheaten Comb",
+          "comb_ru": "Пшеничные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Milky Comb",
+          "comb_ru": "Молочные соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Caffeinated",
+      "id_ru": "Кофейная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Farmerly",
+          "p1_ru": "Прошлая",
+          "p2_en": "Tropical",
+          "p2_ru": "Тропическая",
+          "chance": 10
+        },
+        {
+          "p1_en": "Miry",
+          "p1_ru": "Топкая",
+          "p2_en": "Water",
+          "p2_ru": "Водная",
+          "chance": 10
+        },
+        {
+          "p1_en": "Boggy",
+          "p1_ru": "Болотистая",
+          "p2_en": "Damp",
+          "p2_ru": "Влажная",
+          "chance": 8
+        },
+        {
+          "p1_en": "Boggy",
+          "p1_ru": "Болотистая",
+          "p2_en": "Miry",
+          "p2_ru": "Топкая",
+          "chance": 8
+        },
+        {
+          "p1_en": "Boggy",
+          "p1_ru": "Болотистая",
+          "p2_en": "Fungal",
+          "p2_ru": "Грибная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Wheaten Comb",
+          "comb_ru": "Пшеничные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Caffeinated Comb",
+          "comb_ru": "Кофейные соты",
+          "chance": 0.08,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Mossy Comb",
+          "comb_ru": "Замшелые соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Fungal Comb",
+          "comb_ru": "Грибные соты",
+          "chance": 0.15,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Furious",
+      "id_ru": "Яростная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Fiendish",
+          "p1_ru": "Жестокая",
+          "p2_en": "Embittered",
+          "p2_ru": "Озлобленная",
+          "chance": 30
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Simmering Comb",
+          "comb_ru": "Кипящие соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Volcanic",
+      "id_ru": "Огнедышащая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Demonic",
+          "p1_ru": "Одержимая",
+          "p2_en": "Furious",
+          "p2_ru": "Яростная",
+          "chance": 20
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Simmering Comb",
+          "comb_ru": "Кипящие соты",
+          "chance": 0.25,
+          "type": "product"
+        },
+        {
+          "comb_en": "Blaze Comb",
+          "comb_ru": "Горящие соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Glowering",
+      "id_ru": "Сердитая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Furious",
+          "p1_ru": "Яростная",
+          "p2_en": "Excited",
+          "p2_ru": "Возбуждённая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Glowing Comb",
+          "comb_ru": "Пылающие соты",
+          "chance": 0.15,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Malicious",
+      "id_ru": "Вредоносная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Sinister",
+          "p1_ru": "Зловещая",
+          "p2_en": "Tropical",
+          "p2_ru": "Тропическая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Infectious",
+      "id_ru": "Заразная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Tropical",
+          "p1_ru": "Тропическая",
+          "p2_en": "Malicious",
+          "p2_ru": "Вредоносная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Virulent",
+      "id_ru": "Ядовитая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Malicious",
+          "p1_ru": "Вредоносная",
+          "p2_en": "Infectious",
+          "p2_ru": "Заразная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.25,
+          "type": "product"
+        },
+        {
+          "comb_en": "Venomous Comb",
+          "comb_ru": "Ядовитые соты",
+          "chance": 0.12,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Viscous",
+      "id_ru": "Вязкая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Exotic",
+          "p1_ru": "Редкая",
+          "p2_en": "Water",
+          "p2_ru": "Водная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Glutinous",
+      "id_ru": "Клейкая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Exotic",
+          "p1_ru": "Редкая",
+          "p2_en": "Viscous",
+          "p2_ru": "Вязкая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Sticky",
+      "id_ru": "Липкая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Viscous",
+          "p1_ru": "Вязкая",
+          "p2_en": "Glutinous",
+          "p2_ru": "Клейкая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.25,
+          "type": "product"
+        },
+        {
+          "comb_en": "Mucous Comb",
+          "comb_ru": "Слизистые соты",
+          "chance": 0.12,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Corrosive",
+      "id_ru": "Едкая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Malicious",
+          "p1_ru": "Вредоносная",
+          "p2_en": "Viscous",
+          "p2_ru": "Вязкая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Caustic",
+      "id_ru": "Едко-щелочная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Fiendish",
+          "p1_ru": "Жестокая",
+          "p2_en": "Corrosive",
+          "p2_ru": "Едкая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.25,
+          "type": "product"
+        },
+        {
+          "comb_en": "Brimstone Comb",
+          "comb_ru": "Серные соты",
+          "chance": 0.03,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Acidic",
+      "id_ru": "Едко-кислотная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Corrosive",
+          "p1_ru": "Едкая",
+          "p2_en": "Caustic",
+          "p2_ru": "Едко-щелочная",
+          "chance": 4
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Brimstone Comb",
+          "comb_ru": "Серные соты",
+          "chance": 0.16,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Excited",
+      "id_ru": "Возбуждённая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Valiant",
+          "p1_ru": "Доблестная",
+          "p2_en": "Cultivated",
+          "p2_ru": "Развитая",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Energetic Comb",
+          "comb_ru": "Энергетические соты",
+          "chance": 0.1,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Energetic",
+      "id_ru": "Энергетическая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Diligent",
+          "p1_ru": "Прилежная",
+          "p2_en": "Excited",
+          "p2_ru": "Возбуждённая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Energetic Comb",
+          "comb_ru": "Энергетические соты",
+          "chance": 0.12,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Ecstatic",
+      "id_ru": "Исступлённая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Excited",
+          "p1_ru": "Возбуждённая",
+          "p2_en": "Energetic",
+          "p2_ru": "Энергетическая",
+          "chance": 8
+        },
+        {
+          "p1_en": "Wintry",
+          "p1_ru": "Зимняя",
+          "p2_en": "Diligent",
+          "p2_ru": "Прилежная",
+          "chance": 10
+        },
+        {
+          "p1_en": "Ocean",
+          "p1_ru": "Океаническая",
+          "p2_en": "Frigid",
+          "p2_ru": "Бесстрастная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Energetic Comb",
+          "comb_ru": "Энергетические соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Static Comb",
+          "comb_ru": "Статические соты",
+          "chance": 0.08,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Frozen Comb",
+          "comb_ru": "Морозные соты",
+          "chance": 0.25,
+          "type": "product"
+        },
+        {
+          "comb_en": "Frozen Comb",
+          "comb_ru": "Морозные соты",
+          "chance": 0.2,
+          "type": "product"
+        },
+        {
+          "comb_en": "Glacial Comb",
+          "comb_ru": "Ледяные соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Shadowed",
+      "id_ru": "Омрачённая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Sinister",
+          "p1_ru": "Зловещая",
+          "p2_en": "Rocky",
+          "p2_ru": "Каменная",
+          "chance": 10
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Shadow Comb",
+          "comb_ru": "Теневые соты",
+          "chance": 0.05,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Darkened",
+      "id_ru": "Потемневшая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Shadowed",
+          "p1_ru": "Омрачённая",
+          "p2_en": "Rocky",
+          "p2_ru": "Каменная",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Shadow Comb",
+          "comb_ru": "Теневые соты",
+          "chance": 0.1,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Abyssal",
+      "id_ru": "Глубинная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Shadowed",
+          "p1_ru": "Омрачённая",
+          "p2_en": "Darkened",
+          "p2_ru": "Потемневшая",
+          "chance": 8
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Shadow Comb",
+          "comb_ru": "Теневые соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Maroon",
+      "id_ru": "Тёмно-бордовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Forest",
+          "p1_ru": "Лесная",
+          "p2_en": "Valiant",
+          "p2_ru": "Доблестная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Red Tinted Comb",
+          "comb_ru": "Красные окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Saffron",
+      "id_ru": "Шафрановая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Meadows",
+          "p1_ru": "Луговая",
+          "p2_en": "Valiant",
+          "p2_ru": "Доблестная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Yellow Tinted Comb",
+          "comb_ru": "Жёлтые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Prussian",
+      "id_ru": "Прусская",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Valiant",
+          "p1_ru": "Доблестная",
+          "p2_en": "Water",
+          "p2_ru": "Водная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Blue Tinted Comb",
+          "comb_ru": "Синие окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Natural",
+      "id_ru": "Зелёная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Tropical",
+          "p1_ru": "Тропическая",
+          "p2_en": "Valiant",
+          "p2_ru": "Доблестная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Green Tinted Comb",
+          "comb_ru": "Зелёные окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Ebony",
+      "id_ru": "Черномазая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Valiant",
+          "p1_ru": "Доблестная",
+          "p2_en": "Rocky",
+          "p2_ru": "Каменная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Black Tinted Comb",
+          "comb_ru": "Чёрные окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Bleached",
+      "id_ru": "Отбелённая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Wintry",
+          "p1_ru": "Зимняя",
+          "p2_en": "Valiant",
+          "p2_ru": "Доблестная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "White Tinted Comb",
+          "comb_ru": "Белые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Sepia",
+      "id_ru": "Коричневая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Marshy",
+          "p1_ru": "Болотная",
+          "p2_en": "Valiant",
+          "p2_ru": "Доблестная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Brown Tinted Comb",
+          "comb_ru": "Коричневые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Amber",
+      "id_ru": "Оранжевая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Maroon",
+          "p1_ru": "Тёмно-бордовая",
+          "p2_en": "Saffron",
+          "p2_ru": "Шафрановая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Orange Tinted Comb",
+          "comb_ru": "Оранжевые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Turquoise",
+      "id_ru": "Бирюзовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Natural",
+          "p1_ru": "Зелёная",
+          "p2_en": "Prussian",
+          "p2_ru": "Прусская",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Cyan Tinted Comb",
+          "comb_ru": "Бирюзовые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Indigo",
+      "id_ru": "Фиолетовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Maroon",
+          "p1_ru": "Тёмно-бордовая",
+          "p2_en": "Prussian",
+          "p2_ru": "Прусская",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Purple Tinted Comb",
+          "comb_ru": "Фиолетовые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Slate",
+      "id_ru": "Серая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Ebony",
+          "p1_ru": "Черномазая",
+          "p2_en": "Bleached",
+          "p2_ru": "Отбелённая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Gray Tinted Comb",
+          "comb_ru": "Серые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Azure",
+      "id_ru": "Голубая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Prussian",
+          "p1_ru": "Прусская",
+          "p2_en": "Bleached",
+          "p2_ru": "Отбелённая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Light Blue Tinted Comb",
+          "comb_ru": "Светло-голубые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Lavender",
+      "id_ru": "Розовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Maroon",
+          "p1_ru": "Тёмно-бордовая",
+          "p2_en": "Bleached",
+          "p2_ru": "Отбелённая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Pink Tinted Comb",
+          "comb_ru": "Розовые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Lime",
+      "id_ru": "Лаймовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Natural",
+          "p1_ru": "Зелёная",
+          "p2_en": "Bleached",
+          "p2_ru": "Отбелённая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Lime Green Tinted Comb",
+          "comb_ru": "Лаймовые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Fuchsia",
+      "id_ru": "Пурпурная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Indigo",
+          "p1_ru": "Фиолетовая",
+          "p2_en": "Lavender",
+          "p2_ru": "Розовая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Magenta Tinted Comb",
+          "comb_ru": "Пурпурные окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Ashen",
+      "id_ru": "Светло-серая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Slate",
+          "p1_ru": "Серая",
+          "p2_en": "Bleached",
+          "p2_ru": "Отбелённая",
+          "chance": 5
+        },
+        {
+          "p1_en": "Austere",
+          "p1_ru": "Суровая",
+          "p2_en": "Excited",
+          "p2_ru": "Возбуждённая",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.75,
+          "type": "product"
+        },
+        {
+          "comb_en": "Light Gray Tinted Comb",
+          "comb_ru": "Светло-серые окрашенные соты",
+          "chance": 0.25,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Jaded",
+      "id_ru": "Изнурённая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Ender",
+          "p1_ru": "Драконья",
+          "p2_en": "Relic",
+          "p2_ru": "Реликтовая",
+          "chance": 2
+        },
+        {
+          "p1_en": "Austere",
+          "p1_ru": "Суровая",
+          "p2_en": "Desolate",
+          "p2_ru": "Заброшенная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Pollen",
+          "comb_ru": "Пыльца",
+          "chance": 0.2,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Purple Tinted Comb",
+          "comb_ru": "Фиолетовые окрашенные соты",
+          "chance": 0.15,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Unstable Comb",
+          "comb_ru": "Нестабильные соты",
+          "chance": 0.12,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Quantum",
+      "id_ru": "Квантовая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Spectral",
+          "p1_ru": "Призрачная",
+          "p2_en": "Spatial",
+          "p2_ru": "Пространственная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Quartz Comb",
+          "comb_ru": "Кварцевые соты",
+          "chance": 0.25,
+          "type": "product"
+        },
+        {
+          "comb_en": "Certus Comb",
+          "comb_ru": "Уверенные соты",
+          "chance": 0.15,
+          "type": "specialty"
+        },
+        {
+          "comb_en": "Shimmering Comb",
+          "comb_ru": "Мерцающие соты",
+          "chance": 0.15,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Abnormal",
+      "id_ru": "Аномальная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Secluded",
+          "p1_ru": "Укромная",
+          "p2_en": "Ender",
+          "p2_ru": "Драконья",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Quartz Comb",
+          "comb_ru": "Кварцевые соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Spatial",
+      "id_ru": "Пространственная",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Hermitic",
+          "p1_ru": "Уединённая",
+          "p2_en": "Abnormal",
+          "p2_ru": "Аномальная",
+          "chance": 5
+        }
+      ],
+      "products": [
+        {
+          "comb_en": "Quartz Comb",
+          "comb_ru": "Кварцевые соты",
+          "chance": 0.25,
+          "type": "product"
+        },
+        {
+          "comb_en": "Certus Comb",
+          "comb_ru": "Уверенные соты",
+          "chance": 0.05,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Mystical",
+      "id_ru": "Мистическая",
+      "source": "ExtraBees",
+      "parents": [
+        {
+          "p1_en": "Noble",
+          "p1_ru": "Знатная",
+          "p2_en": "Monastic",
+          "p2_ru": "Монашья",
+          "chance": 5
+        }
+      ],
+      "products": []
+    },
+    {
+      "id_en": "Forest",
+      "id_ru": "Лесная",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Meadows",
+      "id_ru": "Луговая",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Honey Comb",
+          "comb_ru": "Медовые соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Steadfast",
+      "id_ru": "Стойкая",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Cocoa Comb",
+          "comb_ru": "Какао-соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Valiant",
+      "id_ru": "Доблестная",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Cocoa Comb",
+          "comb_ru": "Какао-соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Sugar",
+          "comb_ru": "Сахар",
+          "chance": 0.15,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Modest",
+      "id_ru": "Скромная",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Parched Comb",
+          "comb_ru": "Пересохшие соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Tropical",
+      "id_ru": "Тропическая",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Silky Comb",
+          "comb_ru": "Шелковистые соты",
+          "chance": 0.2,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Ender",
+      "id_ru": "Драконья",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Mysterious Comb",
+          "comb_ru": "Таинственные соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Wintry",
+      "id_ru": "Зимняя",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Frozen Comb",
+          "comb_ru": "Морозные соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Marshy",
+      "id_ru": "Болотная",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Mossy Comb",
+          "comb_ru": "Замшелые соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Monastic",
+      "id_ru": "Монашья",
+      "source": "Forestry",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Wheaten Comb",
+          "comb_ru": "Пшеничные соты",
+          "chance": 0.3,
+          "type": "product"
+        },
+        {
+          "comb_en": "Mellow Comb",
+          "comb_ru": "Спелые соты",
+          "chance": 0.1,
+          "type": "specialty"
+        }
+      ]
+    },
+    {
+      "id_en": "Rocky",
+      "id_ru": "Каменная",
+      "source": "ExtraBees",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Rocky Comb",
+          "comb_ru": "Каменистые соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Water",
+      "id_ru": "Водная",
+      "source": "ExtraBees",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Damp Comb",
+          "comb_ru": "Влажные соты",
+          "chance": 0.3,
+          "type": "product"
+        }
+      ]
+    },
+    {
+      "id_en": "Embittered",
+      "id_ru": "Озлобленная",
+      "source": "ExtraBees",
+      "parents": [],
+      "products": [
+        {
+          "comb_en": "Simmering Comb",
+          "comb_ru": "Кипящие соты",
+          "chance": 0.25,
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}

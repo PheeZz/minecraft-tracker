@@ -1,0 +1,1566 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Селекция деревьев — Вселенское рагу</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Noto+Sans+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ================= ТОКЕНЫ ================= */
+:root{
+  color-scheme: dark;
+  --bg:#0c1410; --bg2:#0f1a14;
+  --panel:rgba(22,33,26,.72); --inset:#0e1712;
+  --edge:#2c4334; --ink:#e8f0e6; --muted:#8aa394;
+  --leaf:#8fd14f; --leaf-dim:#5d8a3a; --amber:#e6b864; --sap:#bcd9f5; --avail:#c9a7f0;
+  --ok:#7fd99a; --bad:#e07a7a; --dark-ink:#06120b;
+  --line:rgba(143,209,79,.14);
+  --t0:#5bbf63; --t1:#e7d24a; --t2:#4f8fd1; --t3:#ef8a2a; --t4:#a786e0;
+  --t5:#3fae6a; --t6:#5285d6; --t7:#3fc7c0; --t8:#e36f9b; --t9:#e05050; --t10:#9a3030;
+  --font-d:"Golos Text",system-ui,sans-serif;
+  --font-b:"Golos Text",system-ui,sans-serif;
+  --font-m:"Noto Sans Mono",monospace;
+}
+/* цвет тира как переменная --tc (для бейджей, точек, рамок, чипов) */
+.t--0{--tc:var(--t0)} .t--1{--tc:var(--t1)} .t--2{--tc:var(--t2)} .t--3{--tc:var(--t3)}
+.t--4{--tc:var(--t4)} .t--5{--tc:var(--t5)} .t--6{--tc:var(--t6)} .t--7{--tc:var(--t7)}
+.t--8{--tc:var(--t8)} .t--9{--tc:var(--t9)} .t--10{--tc:var(--t10)}
+
+*, *::before, *::after{ box-sizing:border-box; }
+html, body{ margin:0; height:100%; overflow:hidden; background:var(--bg); color:var(--ink);
+  font-family:var(--font-b); font-size:14px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+body{ background:
+    radial-gradient(120% 90% at 18% -10%, rgba(143,209,79,.10), transparent 55%),
+    radial-gradient(90% 80% at 92% 110%, rgba(79,143,209,.10), transparent 50%),
+    linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%); }
+body::after{ content:""; position:fixed; inset:0; pointer-events:none; z-index:9999; opacity:.05;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+::-webkit-scrollbar{ width:10px; height:10px; }
+::-webkit-scrollbar-thumb{ background:#21302770; border-radius:6px; border:2px solid transparent; background-clip:padding-box; }
+::-webkit-scrollbar-thumb:hover{ background:#2c433480; background-clip:padding-box; }
+
+/* ================= ИКОНКИ ================= */
+.icon{ width:1.05em; height:1.05em; display:inline-block; vertical-align:-.16em; flex:none; }
+.icon svg{ width:100%; height:100%; display:block; }
+
+/* ================= УТИЛИТЫ ================= */
+.hint{ font-size:12px; color:var(--muted); line-height:1.5; }
+.link{ cursor:pointer; text-decoration:underline dotted; }
+.is-ok{ color:var(--ok); } .is-low{ color:var(--bad); }
+.u-mono{ font-family:var(--font-m); }
+
+/* ================= КАРКАС ================= */
+.app{ display:grid; grid-template-rows:auto 1fr; height:100vh; width:100vw; }
+.workspace{ display:grid; grid-template-columns:minmax(0,1fr) 480px; min-height:0; }
+
+/* ================= ШАПКА + ГЕРОЙ ================= */
+.topbar{ display:flex; align-items:center; gap:26px; padding:13px 22px; border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(143,209,79,.04), transparent); }
+.brand{ display:flex; align-items:center; gap:12px; white-space:nowrap; }
+.brand__mark{ font-size:26px; color:var(--leaf); filter:drop-shadow(0 0 10px rgba(143,209,79,.45)); display:flex; }
+.brand__title{ font-family:var(--font-d); font-weight:800; font-size:23px; letter-spacing:-.5px; margin:0;
+  background:linear-gradient(100deg,#f0f7ec,#bfe39a); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.brand__sub{ font-family:var(--font-m); font-weight:600; font-size:10.5px; letter-spacing:.26em; text-transform:uppercase; color:var(--leaf-dim); }
+
+.hero{ margin-left:auto; display:flex; align-items:center; gap:22px; }
+.hero__ring{ position:relative; width:58px; height:58px; flex:none; }
+.hero__ring-svg{ transform:rotate(-90deg); overflow:visible; }
+.hero__ring-fg{ filter:drop-shadow(0 0 6px rgba(143,209,79,.6)); }
+.hero__pct{ position:absolute; inset:0; display:grid; place-items:center; font-family:var(--font-m); font-weight:800; font-size:14px; color:var(--leaf); }
+.hero__stats{ display:flex; gap:18px; }
+.hero__stat{ display:flex; flex-direction:column; gap:3px; }
+.hero__val{ font-family:var(--font-m); font-size:18px; font-weight:800; color:var(--ink); line-height:1; }
+.hero__val small{ font-size:11px; color:var(--muted); font-weight:500; }
+.hero__val.is-active{ color:var(--avail); }
+.hero__lbl{ font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:5px; }
+.hero__stat--sap .hero__val, .hero__stat--sap .hero__lbl{ color:var(--sap); }
+.hero__stat--pol .hero__val, .hero__stat--pol .hero__lbl{ color:var(--amber); }
+.hero__stat--fruit .hero__lbl{ color:var(--amber); }
+
+/* ================= СЦЕНА ГРАФА ================= */
+.stage{ position:relative; overflow:hidden; }
+.stage__cy{ width:100%; height:100%; min-width:0; min-height:0; }
+.stage__navbar{ position:absolute; left:14px; top:46px; z-index:20; display:flex; gap:8px; flex-wrap:wrap; }
+.stage__navbar .btn{ box-shadow:0 4px 16px rgba(0,0,0,.4); background:rgba(18,27,21,.85); }
+.stage__tiers{ position:absolute; left:0; top:0; height:30px; right:0; pointer-events:none; z-index:15; overflow:hidden; }
+.tier-tab{ position:absolute; top:8px; transform:translateX(-50%); font-family:var(--font-m); font-weight:700; font-size:11px;
+  padding:2px 10px; border-radius:999px; color:var(--dark-ink); white-space:nowrap; box-shadow:0 2px 8px rgba(0,0,0,.5); background:var(--tc); }
+
+/* ================= НОДА ГРАФА (HTML-метка) ================= */
+.node{ position:relative; min-width:116px; padding:9px 12px; border-radius:13px;
+  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.12)), #16221b;
+  border:1.5px solid #3a4d40; font-family:var(--font-b); color:var(--ink);
+  box-shadow:0 6px 20px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.06);
+  pointer-events:none; transition:box-shadow .15s, border-color .15s, opacity .15s; contain:layout style;
+  border-color:var(--tc, #3a4d40); }
+.node__head{ display:flex; align-items:center; gap:7px; }
+.node__dot{ width:9px; height:9px; border-radius:50%; background:var(--tc); box-shadow:0 0 8px var(--tc); flex:none; }
+.node__name{ font-weight:700; font-size:13px; letter-spacing:-.1px; line-height:1.2; }
+.node__fruit{ margin-top:6px; padding-top:6px; border-top:1px dashed rgba(255,255,255,.14); font-size:11px; color:var(--amber); display:flex; align-items:center; gap:5px; }
+.node__fruit .icon{ width:13px; height:13px; }
+.node__badge{ position:absolute; top:-9px; right:-7px; font-family:var(--font-m); font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px; color:var(--dark-ink); background:var(--tc); }
+.node__plant{ position:absolute; bottom:-10px; left:50%; transform:translateX(-50%); font-family:var(--font-m); font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px; color:#cfe0c2; background:#2c4334; border:1px solid var(--leaf-dim); white-space:nowrap; }
+.node__inv{ position:absolute; bottom:-9px; right:-7px; width:22px; height:22px; border-radius:7px; display:flex; align-items:center; justify-content:center;
+  border:1px solid var(--edge); background:#13201a; color:var(--muted); cursor:pointer; pointer-events:auto; box-shadow:0 2px 8px rgba(0,0,0,.5); transition:.13s; }
+.node__inv:hover{ color:var(--leaf); border-color:var(--leaf-dim); transform:scale(1.12); }
+.node__inv .icon{ width:12px; height:12px; }
+.node__check{ display:none; }
+.node--have{ border-color:var(--leaf); box-shadow:0 6px 22px rgba(0,0,0,.45), 0 0 0 1px rgba(143,209,79,.25), 0 0 18px rgba(143,209,79,.22); }
+.node--have .node__check{ display:flex; position:absolute; top:-9px; left:-8px; width:18px; height:18px; border-radius:50%; background:var(--leaf); color:var(--dark-ink); align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,.5); }
+.node--have .node__check .icon{ width:12px; height:12px; }
+.node--avail{ border-style:dashed; border-color:var(--avail); box-shadow:0 6px 22px rgba(0,0,0,.45), 0 0 16px rgba(201,167,240,.3); }
+.node--sel{ outline:2px solid #fff; outline-offset:2px; }
+.node--faded{ opacity:.1; }
+.node--flash{ border-color:#fff7c2 !important; box-shadow:0 0 0 2px #fff7c2, 0 0 24px #fff7c2 !important; }
+/* «лёгкий рендер» при панораме/зуме — гасим дорогие эффекты */
+body.is-panning .node{ box-shadow:none !important; transition:none !important; background:#16221b !important; }
+body.is-panning .node--have{ box-shadow:inset 0 0 0 1px rgba(143,209,79,.4) !important; }
+body.is-panning .node__check, body.is-panning .node__inv, body.is-panning .node__dot{ display:none !important; }
+body.is-panning .node__fruit{ border-top-color:transparent !important; }
+
+/* ================= САЙДБАР ================= */
+.sidebar{ border-left:1px solid var(--line); padding:16px; overflow-y:auto; overflow-x:hidden;
+  background:linear-gradient(180deg, rgba(143,209,79,.03), transparent 30%); }
+.sidebar__title{ font-family:var(--font-d); font-weight:700; font-size:13px; letter-spacing:.2px; margin:18px 0 9px; color:#cfe0c2;
+  display:flex; align-items:center; gap:8px; }
+.sidebar__title:first-of-type{ margin-top:2px; }
+.sidebar__title::before{ content:""; width:14px; height:1.5px; background:var(--leaf-dim); }
+.row{ display:flex; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+
+/* поиск */
+.search{ display:flex; align-items:center; gap:8px; background:rgba(0,0,0,.25); border:1px solid var(--edge);
+  border-radius:10px; padding:0 11px; margin-bottom:12px; }
+.search .icon{ color:var(--leaf-dim); font-size:16px; }
+.search__input{ flex:1; background:none; border:0; color:var(--ink); font:inherit; padding:9px 0; outline:none; }
+
+/* кнопки */
+.btn{ display:flex; align-items:center; gap:8px; font-family:var(--font-b); font-weight:600; font-size:12.5px; color:var(--ink);
+  background:rgba(255,255,255,.04); border:1px solid var(--edge); padding:9px 12px; border-radius:10px; cursor:pointer; transition:.15s; }
+.btn .icon{ font-size:15px; color:var(--leaf); }
+.btn:hover{ background:rgba(143,209,79,.12); border-color:var(--leaf-dim); }
+.btn--primary{ background:linear-gradient(180deg,#9bda5d,#73b23c); color:var(--dark-ink); border-color:transparent; box-shadow:0 4px 14px rgba(143,209,79,.3); }
+.btn--primary .icon{ color:var(--dark-ink); }
+.btn--on{ background:rgba(143,209,79,.16); border-color:var(--leaf-dim); color:var(--leaf); }
+.btn--amber{ background:rgba(230,184,100,.18); border-color:var(--amber); color:var(--amber); }
+.btn--wide{ flex:1 1 100%; text-align:left; justify-content:flex-start; }
+.btn--xs{ padding:5px 9px; font-size:11px; }
+.select{ flex:1; background:var(--inset); border:1px solid var(--edge); color:var(--ink); padding:8px 9px; border-radius:9px; font:inherit; cursor:pointer; }
+.file-input{ display:none; }
+
+/* ================= КАРТОЧКА ДЕРЕВА ================= */
+.card{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px; min-height:54px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04); }
+.card__name{ font-family:var(--font-d); font-weight:700; font-size:18px; margin-bottom:4px; }
+.card__tags{ margin:2px 0; }
+.card__fruit{ color:var(--amber); font-size:13px; display:flex; align-items:center; gap:6px; margin-top:2px; }
+.card__cond{ margin-top:7px; font-size:12px; color:var(--amber); display:flex; align-items:center; gap:6px; }
+.card__recipe{ margin-top:9px; font-size:13px; color:#c4ccd8; }
+.card__recipe b{ color:#cfe0c2; }
+.card__recipe-row{ display:flex; align-items:center; gap:6px; margin-top:3px; }
+.card__alt{ color:var(--amber); font-size:12px; margin-top:4px; }
+.card__users{ margin-top:9px; font-size:12px; color:var(--muted); }
+.card__users b{ color:#cbd2dc; }
+.card__demand{ margin-top:10px; font-size:12px; color:var(--muted); }
+.card__hello{ line-height:1.7; }
+.card__hello b{ color:#cfe0c2; }
+.card__unlock{ margin-top:6px; display:flex; align-items:center; gap:6px; }
+.card__unlock b{ color:var(--avail); }
+.card__pathbtn{ margin-top:10px; }
+.btn:disabled{ opacity:.4; cursor:default; }
+.btn:disabled:hover{ background:rgba(255,255,255,.04); border-color:var(--edge); }
+
+/* путь к дереву */
+.path{ margin-top:8px; border-left:2px solid var(--edge); padding-left:8px; }
+.path__step{ display:flex; align-items:center; gap:6px; padding:3px 0; font-size:12px; flex-wrap:wrap; }
+.path__num{ font-family:var(--font-m); font-size:10px; color:var(--muted); min-width:16px; }
+.path__step--is-bred .path__name{ color:var(--leaf); }
+.path__step--is-avail .path__name{ color:var(--avail); }
+.path__step--is-locked .path__name{ color:#cfe0c2; }
+
+/* чипы */
+.pill{ display:inline-flex; align-items:center; gap:4px; font-family:var(--font-m); font-size:10px; font-weight:700;
+  padding:2px 8px; border-radius:999px; margin-right:4px; background:rgba(255,255,255,.06); }
+.pill--tier{ background:var(--tc); color:var(--dark-ink); }
+.pill--state.is-bred{ background:rgba(143,209,79,.18); color:var(--leaf); }
+.pill--state.is-avail{ background:rgba(201,167,240,.16); color:var(--avail); }
+.pill--state.is-none{ background:rgba(255,255,255,.06); color:var(--muted); }
+
+/* подсветка родителей в рецепте */
+.parent.is-ready{ color:#9fe09a; }
+.parent.is-pending{ color:#aab2a8; }
+.mark.is-ok{ color:var(--leaf); } .mark.is-bad{ color:var(--bad); }
+
+/* ================= СЧЁТЧИКИ ================= */
+.counter-group{ margin-top:6px; display:flex; gap:10px; flex-wrap:wrap; }
+.counter{ display:inline-flex; align-items:center; gap:4px; }
+.counter--sap{ color:var(--sap); } .counter--pol{ color:var(--amber); }
+.counter__btn{ width:24px; height:24px; border-radius:7px; border:1px solid var(--edge); background:rgba(255,255,255,.04);
+  color:var(--ink); cursor:pointer; display:inline-flex; align-items:center; justify-content:center; padding:0; line-height:0; font:inherit; }
+.counter__btn:hover{ background:rgba(143,209,79,.14); border-color:var(--leaf-dim); }
+.counter__btn .icon{ width:13px; height:13px; vertical-align:0; }
+.counter__val{ min-width:18px; text-align:center; font-family:var(--font-m); font-weight:700; }
+
+/* действие «отметить» */
+.action{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; font-family:var(--font-b);
+  font-weight:700; font-size:12.5px; padding:9px; border-radius:10px; cursor:pointer; border:1px solid transparent; }
+.action .icon{ width:15px; height:15px; vertical-align:0; }
+.action--get{ background:linear-gradient(180deg,#9bda5d,#73b23c); color:var(--dark-ink); }
+.action--unget{ background:rgba(255,255,255,.05); border-color:var(--edge); color:var(--muted); }
+.action--sm{ width:auto; padding:5px 10px; font-size:11px; }
+
+/* ================= ЛЕГЕНДА + ФИЛЬТР ТИРОВ ================= */
+.legend{ display:flex; flex-direction:column; gap:9px; font-size:13px; }
+.legend__item{ display:flex; align-items:center; gap:10px; }
+.legend__swatch{ width:20px; height:20px; border-radius:5px; flex:none; background:#16221b; }
+.legend__swatch--tier{ border:2.5px solid var(--t6); }
+.legend__swatch--avail{ background:#2c3a30; border:2px dashed var(--avail); }
+.legend__swatch--bred{ background:#2c3a30; border:2.5px solid var(--leaf); box-shadow:0 0 10px rgba(143,209,79,.4); }
+.legend__check{ color:var(--leaf); }
+
+.tier-filter{ display:grid; grid-template-columns:repeat(2,1fr); gap:5px 10px; }
+.tier-filter__item{ font-size:11.5px; display:flex; align-items:center; gap:6px; cursor:pointer; color:var(--muted); }
+.tier-filter__dot{ width:11px; height:11px; border-radius:3px; flex:none; background:var(--tc); }
+.tier-filter__count{ font-family:var(--font-m); font-size:10px; color:var(--muted); margin-left:auto; }
+.tier-filter__count.is-complete{ color:var(--ok); }
+
+/* ================= ПЛАН ================= */
+.plan{ display:none; background:var(--inset); border:1px solid var(--line); border-radius:12px; padding:11px;
+  margin-bottom:8px; font-size:12px; max-height:46vh; overflow:auto; }
+.plan.is-open{ display:block; }
+.plan__head{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:6px; }
+.plan__title{ font-weight:700; color:#cfe0c2; display:flex; align-items:center; gap:6px; }
+.plan__summary{ background:rgba(0,0,0,.25); border-radius:8px; padding:7px 9px; margin-bottom:8px; font-size:11px; line-height:1.5; }
+.plan__totals{ margin-top:3px; display:flex; gap:12px; }
+.counter-sum{ display:inline-flex; align-items:center; gap:4px; }
+.counter-sum--sap{ color:var(--sap); } .counter-sum--pol{ color:var(--amber); }
+.counter-sum b{ font-family:var(--font-m); }
+.counter-sum b.is-ok{ color:var(--ok); }
+.plan__tier{ margin:7px 0 3px; }
+.plan__tier .hint{ display:inline; }
+.plan__row{ padding:5px 0 5px 7px; border-left:2px solid #8aa394; margin:2px 0 2px 4px; }
+.plan__row--bred{ border-left-color:var(--leaf); opacity:.55; }
+.plan__row--avail{ border-left-color:var(--avail); }
+.plan__row-head{ cursor:pointer; display:flex; align-items:center; gap:5px; flex-wrap:wrap; }
+.plan__row--bred .plan__row-head, .plan__row--bred .plan__name{ color:var(--leaf); }
+.plan__row--avail .plan__row-head, .plan__row--avail .plan__name{ color:var(--avail); }
+.plan__row--locked .plan__row-head, .plan__row--locked .plan__name{ color:#8aa394; }
+.plan__fruit{ color:var(--amber); display:inline-flex; align-items:center; gap:3px; }
+.plan__action{ margin-top:5px; }
+/* строка инвентаря родителя */
+.pinv{ margin:4px 0 0 4px; font-size:11px; display:flex; align-items:center; gap:8px; flex-wrap:nowrap; }
+.pinv__name{ flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.pinv .counter{ flex:none; }
+.pinv .counter__val{ width:18px; min-width:18px; text-align:center; }
+.pinv__total{ flex:none; width:46px; text-align:right; font-family:var(--font-m); }
+
+/* ================= ПОПАП + МОДАЛКА ================= */
+.popup{ display:none; position:fixed; z-index:150; width:300px; background:linear-gradient(180deg, rgba(28,42,33,.99), rgba(18,27,21,.99));
+  border:1px solid var(--line); border-radius:15px; padding:15px 16px; box-shadow:0 18px 50px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.05); }
+.popup.is-open{ display:block; }
+.popup__head{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px; }
+.popup__title{ font-family:var(--font-d); font-weight:800; font-size:16px; }
+.popup__tools{ display:flex; gap:6px; align-items:center; }
+.popup__need{ margin-bottom:10px; }
+.popup__counters{ display:flex; gap:16px; align-items:center; font-size:14px; }
+.popup__counters .counter__val{ font-size:16px; min-width:22px; }
+.popup__total{ margin-top:10px; font-size:13px; }
+
+/* тултип по наведению на ноду */
+.tooltip{ display:none; position:fixed; z-index:160; max-width:240px; pointer-events:none;
+  background:#15201a; border:1px solid var(--line); border-radius:10px; padding:8px 10px; font-size:12px;
+  box-shadow:0 12px 32px rgba(0,0,0,.55); transform:translate(-50%,-100%); }
+.tooltip.is-open{ display:block; }
+.tooltip__name{ font-weight:700; display:flex; align-items:center; gap:6px; }
+.tooltip__tier{ font-family:var(--font-m); font-size:10px; color:var(--dark-ink); background:var(--tc); padding:1px 6px; border-radius:8px; }
+.tooltip__fruit{ color:var(--amber); margin-top:3px; }
+.tooltip__recipe{ color:var(--muted); margin-top:3px; }
+
+.modal{ display:none; position:fixed; inset:0; z-index:200; align-items:center; justify-content:center;
+  background:radial-gradient(60% 60% at 50% 40%, rgba(6,16,11,.55), rgba(4,9,7,.82)); backdrop-filter:blur(4px); }
+.modal.is-open{ display:flex; }
+.modal__box{ width:min(470px,92vw); background:linear-gradient(180deg, rgba(28,42,33,.98), rgba(18,27,21,.98));
+  border:1px solid var(--line); border-radius:18px; padding:20px 22px;
+  box-shadow:0 30px 80px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.05); }
+.modal__title{ font-family:var(--font-d); font-size:19px; font-weight:800; margin-bottom:3px; display:flex; align-items:center; gap:9px; }
+.modal__title .icon{ color:var(--leaf); font-size:20px; }
+.modal__hint{ margin-bottom:14px; }
+.modal__foot{ display:flex; gap:9px; margin-top:6px; }
+.modal__foot .btn{ flex:1; justify-content:center; }
+.breed-opt{ display:flex; align-items:center; gap:12px; width:100%; text-align:left; padding:12px 14px; margin-bottom:8px;
+  background:rgba(0,0,0,.22); border:1.5px solid var(--edge); border-radius:13px; color:var(--ink); cursor:pointer; font:inherit; }
+.breed-opt:hover{ border-color:var(--leaf-dim); }
+.breed-opt.is-ready{ border-color:rgba(143,209,79,.5); }
+.breed-opt__icons{ display:flex; gap:4px; flex:none; }
+.breed-opt__icons .icon{ font-size:20px; }
+.breed-opt__icons .icon--sap{ color:var(--sap); } .breed-opt__icons .icon--pol{ color:var(--amber); }
+.breed-opt__body{ flex:1; }
+.breed-opt__name{ font-size:14px; font-weight:700; margin-bottom:3px; }
+.breed-opt__name .accent-sap{ color:var(--sap); } .breed-opt__name .accent-pol{ color:var(--amber); }
+.breed-opt__avail{ font-size:11.5px; font-family:var(--font-m); }
+</style>
+</head>
+<body>
+<div class="popup" id="popup"></div>
+<div class="tooltip" id="tooltip"></div>
+<div class="modal" id="breedModal"><div class="modal__box"></div></div>
+
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand__mark icon" data-ic="leaf"></span>
+      <div>
+        <h1 class="brand__title">Селекция деревьев</h1>
+        <div class="brand__sub">Forestry · Вселенское рагу</div>
+      </div>
+    </div>
+    <div class="hero" id="stats"></div>
+  </header>
+
+  <div class="workspace">
+    <div class="stage">
+      <div class="stage__navbar">
+        <button class="btn" id="nextStep" title="Перейти к ближайшему дереву, доступному к выведению"><span class="icon" data-ic="target"></span>К следующему доступному</button>
+        <button class="btn" id="bestStep" title="Доступное дерево, разблокирующее больше всего нового"><span class="icon" data-ic="bolt"></span>Лучший шаг</button>
+        <button class="btn" id="fit" title="Вписать весь граф"><span class="icon" data-ic="fit"></span>Вписать</button>
+        <button class="btn" id="allEdges" title="Показывать все рёбра или только родословную выбранного"><span class="icon" data-ic="branch"></span>Все рёбра</button>
+      </div>
+      <div class="stage__tiers" id="tierHeaders"></div>
+      <div class="stage__cy" id="cy"></div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="search"><span class="icon" data-ic="search"></span><input class="search__input" id="q" type="search" placeholder="Поиск дерева или плода…"></div>
+
+      <h2 class="sidebar__title">Выбранное дерево</h2>
+      <div class="card" id="info"></div>
+
+      <h2 class="sidebar__title">Планирование</h2>
+      <div class="row"><button class="btn btn--wide" id="onlyAvail" title="Показать только деревья, доступные к выведению прямо сейчас"><span class="icon" data-ic="bolt"></span>Только доступные к выведению</button></div>
+      <div class="row"><button class="btn btn--wide" id="onlyFruit" title="Оставить только деревья с плодом и их цепочки"><span class="icon" data-ic="fruit"></span>Только цепочки к плодам</button></div>
+      <div class="row"><button class="btn btn--wide" id="plan" title="Пошаговый план: что вывести ради всех плодов"><span class="icon" data-ic="list"></span>План выведения всех плодов</button></div>
+      <div class="plan" id="planPanel"></div>
+
+      <h2 class="sidebar__title">Инструменты</h2>
+      <div class="row">
+        <button class="btn" id="undo" title="Отменить (Ctrl+Z)"><span class="icon" data-ic="undo"></span>Отменить</button>
+        <button class="btn" id="redo" title="Повторить (Ctrl+Y)"><span class="icon" data-ic="redo"></span>Повторить</button>
+      </div>
+      <div class="row">
+        <select class="select" id="layout">
+          <option value="tiers" selected>Раскладка: по тирам</option>
+          <option value="elk-layered">ELK layered ▸ LR</option>
+          <option value="elk-layered-tb">ELK layered ▾ TB</option>
+          <option value="dagre-lr">dagre ▸ LR</option>
+          <option value="dagre-tb">dagre ▾ TB</option>
+          <option value="breadthfirst">breadthfirst</option>
+        </select>
+        <button class="btn" id="relayout" title="Перерисовать раскладку"><span class="icon" data-ic="fit"></span></button>
+      </div>
+      <div class="row"><button class="btn" id="bypass" title="Когда включено — отметка «получено» не списывает ингредиенты и не спрашивает"><span class="icon" data-ic="bolt"></span>Без списания</button></div>
+      <div class="row">
+        <button class="btn" id="export"><span class="icon" data-ic="download"></span>Экспорт</button>
+        <label class="btn" for="import"><span class="icon" data-ic="upload"></span>Импорт</label>
+        <input class="file-input" id="import" type="file" accept="application/json">
+        <button class="btn" id="reset" title="Сбросить весь прогресс"><span class="icon" data-ic="reset"></span>Сброс</button>
+      </div>
+
+      <h2 class="sidebar__title">Фильтр по тирам</h2>
+      <div class="tier-filter" id="tierFilters"></div>
+
+      <h2 class="sidebar__title">Легенда</h2>
+      <div class="legend">
+        <div class="legend__item"><span class="legend__swatch legend__swatch--tier"></span>Рамка, бейдж и точка = цвет тира</div>
+        <div class="legend__item"><span class="legend__swatch legend__swatch--avail"></span>Доступно к выведению</div>
+        <div class="legend__item"><span class="legend__swatch legend__swatch--bred"></span>Получено / выведено <span class="icon legend__check" data-ic="check"></span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- библиотеки -->
+<script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+<script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+<script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
+<script src="https://unpkg.com/elkjs@0.9.3/lib/elk.bundled.js"></script>
+<script src="https://unpkg.com/cytoscape-elk@2.2.0/dist/cytoscape-elk.js"></script>
+<script src="https://unpkg.com/cytoscape-node-html-label@1.2.2/dist/cytoscape-node-html-label.min.js"></script>
+
+<script>
+// =================== ТИРЫ ===================
+const TIERS = [
+  { id:0, name:'Из мира',  color:'#5bbf63' },
+  { id:1, name:'Tier 1',   color:'#e7d24a' },
+  { id:2, name:'Tier 2',   color:'#4f8fd1' },
+  { id:3, name:'Tier 3',   color:'#ef8a2a' },
+  { id:4, name:'Tier 4',   color:'#a786e0' },
+  { id:5, name:'Tier 5',   color:'#3fae6a' },
+  { id:6, name:'Tier 6',   color:'#5285d6' },
+  { id:7, name:'Tier 7',   color:'#3fc7c0' },
+  { id:8, name:'Tier 8',   color:'#e36f9b' },
+  { id:9, name:'Tier 9',   color:'#e05050' },
+  { id:10,name:'Tier 10',  color:'#9a3030' },
+];
+
+// =================== SVG-ИКОНКИ ===================
+const _S='xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"';
+const _Sf='xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"';
+const ICONS={
+  leaf:`<svg ${_S}><path d="M11 20.5A8 8 0 0 1 9.8 5.6C15.5 4.4 17 3.9 19.5 1.5c1 2.3 1.9 4.7 1.9 8.6 0 6-5 10.4-10.4 10.4Z"/><path d="M2 22c0-3.5 2.2-6.2 6-7"/></svg>`,
+  fruit:`<svg ${_S}><path d="M12 7.5c-2.6 0-3.7 2-3.7 3.6 0 1.5-1.6 2.6-2.3 4.4-.9 2.3.4 5 3.2 5.4 1.7.2 2.1.2 2.8.2s1.1 0 2.8-.2c2.8-.4 4.1-3.1 3.2-5.4-.7-1.8-2.3-2.9-2.3-4.4 0-1.6-1.1-3.6-3.7-3.6Z"/><path d="M12 7.5V5a2.5 2.5 0 0 1 2.5-2.5"/></svg>`,
+  sprout:`<svg ${_S}><path d="M12 21v-9"/><path d="M12 12C12 8.5 9.2 6.5 5 6.7c-.2 4 2.6 6.3 7 6.3Z"/><path d="M12 13.5c0-3 2.4-5 6.5-5 .2 3.4-2.4 5.3-6.5 5Z"/></svg>`,
+  pollen:`<svg ${_Sf}><circle cx="12" cy="10" r="2.6"/><circle cx="6" cy="14.5" r="1.5"/><circle cx="18" cy="14" r="1.5"/><circle cx="9.5" cy="18" r="1.3"/><circle cx="15" cy="18.5" r="1.1"/><circle cx="8.5" cy="6" r="1.1"/><circle cx="16" cy="6.5" r="1.1"/></svg>`,
+  bolt:`<svg ${_S}><path d="M13 2 4.5 13.2c-.4.5 0 1.3.7 1.3H11l-1 7.5 8.8-11.2c.4-.5 0-1.3-.7-1.3H13Z"/></svg>`,
+  list:`<svg ${_S}><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9.5 4V3.2A1.2 1.2 0 0 1 10.7 2h2.6a1.2 1.2 0 0 1 1.2 1.2V4"/><path d="M9 10h6M9 13.5h6M9 17h3.5"/></svg>`,
+  check:`<svg ${_S}><circle cx="12" cy="12" r="9.2"/><path d="m8.3 12.2 2.6 2.6 4.8-5.3"/></svg>`,
+  checkPlain:`<svg ${_S}><path d="m5 12.5 4.5 4.5L19 7"/></svg>`,
+  ban:`<svg ${_S}><circle cx="12" cy="12" r="9"/><path d="m6 6 12 12"/></svg>`,
+  plus:`<svg ${_S}><path d="M12 6v12M6 12h12"/></svg>`,
+  minus:`<svg ${_S}><path d="M6 12h12"/></svg>`,
+  close:`<svg ${_S}><path d="M6 6l12 12M18 6 6 18"/></svg>`,
+  search:`<svg ${_S}><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-3.8-3.8"/></svg>`,
+  target:`<svg ${_S}><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.6"/><path d="M12 1.5V5M12 19v3.5M1.5 12H5M19 12h3.5"/></svg>`,
+  fit:`<svg ${_S}><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>`,
+  branch:`<svg ${_S}><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="9" r="2.4"/><path d="M6 8.4v7.2M8.2 7.2 15.8 8.7M8 16.8 15.8 10"/></svg>`,
+  box:`<svg ${_S}><path d="M3.5 8 12 3l8.5 5v8L12 21l-8.5-5V8Z"/><path d="m3.5 8 8.5 5 8.5-5M12 21v-8"/></svg>`,
+  download:`<svg ${_S}><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>`,
+  upload:`<svg ${_S}><path d="M12 21V9m0 0 4 4m-4-4-4 4M4 5h16"/></svg>`,
+  reset:`<svg ${_S}><path d="M3 12a9 9 0 1 1 2.6 6.3M3 18v-4h4"/></svg>`,
+  warn:`<svg ${_S}><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 10v4M12 17.5v.5"/></svg>`,
+  undo:`<svg ${_S}><path d="M9 7 4 12l5 5"/><path d="M4 12h11a5 5 0 0 1 0 10h-2"/></svg>`,
+  redo:`<svg ${_S}><path d="M15 7l5 5-5 5"/><path d="M20 12H9a5 5 0 0 0 0 10h2"/></svg>`,
+};
+function injectIcons(root=document){
+  root.querySelectorAll('.icon[data-ic]').forEach(el=>{
+    const n=el.dataset.ic;
+    if(ICONS[n] && !el.dataset.done){ el.innerHTML=ICONS[n]; el.dataset.done='1'; }
+  });
+}
+function ic(name){ return `<span class="icon" data-ic="${name}"></span>`; }
+
+// =================== ДЕРЕВЬЯ ===================
+// tier 0 = из мира (без рецепта). Остальные — выводятся. cond — особое условие.
+const TREES = [
+  // ---- Tier 0: vanilla / wild ----
+  { id:'Яблочный дуб',        tier:0, fruit:'Яблоко' },
+  { id:'Белая берёза',        tier:0 },
+  { id:'Красная ель',         tier:0 },
+  { id:'Тёмный дуб',          tier:0 },
+  { id:'Акация',              tier:0 },
+  { id:'Дерево джунглей',     tier:0 },
+
+  // ---- Tier 1 ----
+  { id:'Бук европейский',     tier:1, parents:[['Яблочный дуб','Белая берёза']] },
+  { id:'Липа пушистая',       tier:1, parents:[['Белая берёза','Яблочный дуб']] },
+  { id:'Мировая лиственница', tier:1, parents:[['Яблочный дуб','Красная ель']] },
+  { id:'Падук',               tier:1, parents:[['Дерево джунглей','Акация']] },
+  { id:'Тиковое дерево',      tier:1, parents:[['Тёмный дуб','Дерево джунглей']] },
+
+  // ---- Tier 2 ----
+  { id:'Бальза',              tier:2, parents:[['Акация','Тиковое дерево']] },
+  { id:'Белая ива',           tier:2, parents:[['Белая берёза','Липа пушистая']], cond:'Только в тропиках' },
+  { id:'Бразильский орех',    tier:2, parents:[['Дерево джунглей','Бук европейский']] },
+  { id:'Бук медный',          tier:2, parents:[['Красная ель','Бук европейский']] },
+  { id:'Жёлтая сосна',        tier:2, parents:[['Красная ель','Мировая лиственница']] },
+  { id:'Кешью',               tier:2, parents:[['Яблочный дуб','Тиковое дерево']] },
+  { id:'Муравьиное дерево',   tier:2, parents:[['Тёмный дуб','Тиковое дерево']] },
+  { id:'Ольха чёрная',        tier:2, parents:[['Белая берёза','Бук европейский']] },
+  { id:'Пекан обыкновенный',  tier:2, parents:[['Белая берёза','Бук европейский']] },
+  { id:'Сакура',              tier:2, parents:[['Яблочный дуб','Липа пушистая']] },
+  { id:'Сахарный клён',       tier:2, parents:[['Красная ель','Мировая лиственница']] },
+  { id:'Тис ягодный',         tier:2, parents:[['Красная ель','Мировая лиственница']] },
+  { id:'Хлопковое дерево',    tier:2, parents:[['Дерево джунглей','Тиковое дерево']] },
+  { id:'Ясень',               tier:2, parents:[['Красная ель','Липа пушистая']] },
+
+  // ---- Tier 3 ----
+  { id:'Банан',               tier:3, parents:[['Дерево джунглей','Бальза']] },
+  { id:'Дынное дерево',       tier:3, parents:[['Дерево джунглей','Сакура']] },
+  { id:'Кипарисовик Лавсона', tier:3, parents:[['Красная ель','Жёлтая сосна']] },
+  { id:'Кофейное дерево',     tier:3, parents:[['Дерево джунглей','Сакура']] },
+  { id:'Мирт',                tier:3, parents:[['Тёмный дуб','Хлопковое дерево']] },
+  { id:'Рябина круглолистная',tier:3, parents:[['Белая берёза','Ясень']] },
+  { id:'Сосна Лоблолли',      tier:3, parents:[['Красная ель','Жёлтая сосна']] },
+  { id:'Тополь',              tier:3, parents:[['Белая берёза','Белая ива']] },
+  { id:'Яблоня садовая',      tier:3, parents:[['Яблочный дуб','Сакура']] },
+  { id:'Эвкалипт гигантский', tier:3, parents:[['Дерево джунглей','Бальза']] },
+
+  // ---- Tier 4 ----
+  { id:'Береговая секвойя',   tier:4, parents:[['Мировая лиственница','Жёлтая сосна']] },
+  { id:'Вишня дикая',         tier:4, parents:[['Липа пушистая','Сакура']] },
+  { id:'Граб обыкновенный',   tier:4, parents:[['Мировая лиственница','Ясень']] },
+  { id:'Ироко',               tier:4, parents:[['Тиковое дерево','Бальза']] },
+  { id:'Клён красный',        tier:4, parents:[['Липа пушистая','Сахарный клён']] },
+  { id:'Ликвидамбар',         tier:4, parents:[['Мировая лиственница','Сахарный клён']] },
+  { id:'Лимонное дерево',     tier:4, parents:[['Липа пушистая','Сакура']] },
+  { id:'Обычное ореховое дерево', tier:4, parents:[['Липа пушистая','Сакура']] },
+  { id:'Осина',               tier:4, parents:[['Бук европейский','Ольха чёрная']] },
+  { id:'Пустынная акация',    tier:4, parents:[['Тиковое дерево','Бальза']] },
+  { id:'Пихта бальзамическая',tier:4, parents:[['Мировая лиственница','Ольха чёрная']] },
+  { id:'Робиния',             tier:4, parents:[['Липа пушистая','Бальза']] },
+
+  // ---- Tier 5 ----
+  { id:'Финиковая пальма',    tier:5, parents:[['Дерево джунглей','Дынное дерево']] },
+  { id:'Груша садовая',       tier:5, parents:[['Белая берёза','Яблоня садовая']] },
+  { id:'Яблоня айовская',     tier:5, parents:[['Белая берёза','Яблоня садовая']] },
+  { id:'Кокоболо',            tier:5, parents:[['Тёмный дуб','Пустынная акация']] },
+  { id:'Дуб черешчатый',      tier:5, parents:[['Яблочный дуб','Обычное ореховое дерево']] },
+
+  // ---- Tier 6 ----
+  { id:'Розовое дерево',      tier:6, parents:[['Тиковое дерево','Мирт']] },
+  { id:'Гвоздичное дерево',   tier:6, parents:[['Тиковое дерево','Кофейное дерево']] },
+  { id:'Цезальпиния ежовая',  tier:6, parents:[['Тиковое дерево','Мирт']] },
+  { id:'Маклюра красильная',  tier:6, parents:[['Тиковое дерево','Мирт']] },
+  { id:'Плантан',             tier:6, parents:[['Тиковое дерево','Банан']] },
+  { id:'Лещина обыкновенная', tier:6, parents:[['Бук европейский','Осина']] },
+  { id:'Каштан посевной',     tier:6, parents:[['Липа пушистая','Обычное ореховое дерево']] },
+  { id:'Жёлтый меранти',      tier:6, parents:[['Хлопковое дерево','Мирт']] },
+  { id:'Кокосовая пальма',    tier:6, parents:[['Бальза','Бразильский орех']] },
+  { id:'Вяз',                 tier:6, parents:[['Жёлтая сосна','Ясень']] },
+  { id:'Сикомор',             tier:6, parents:[['Сахарный клён','Ясень']] },
+  { id:'Олива',               tier:6, parents:[['Ольха чёрная','Сакура']] },
+  { id:'Вишня кислая',        tier:6, parents:[['Белая ива','Сакура']] },
+  { id:'Яблоня венечная',     tier:6, parents:[['Сахарный клён','Яблоня садовая']] },
+  { id:'Эвкалипт радужный',   tier:6, parents:[['Бальза','Эвкалипт гигантский']] },
+  { id:'Красный банан',       tier:6, parents:[['Хлопковое дерево','Банан']] },
+  { id:'Черёмуха поздняя',    tier:6, parents:[['Сакура','Мирт']] },
+  { id:'Помело',              tier:6, parents:[['Сакура','Лимонное дерево']] },
+  { id:'Лайм дикий',          tier:6, parents:[['Сакура','Лимонное дерево']] },
+  { id:'Бузина',              tier:6, parents:[['Ольха чёрная','Осина']] },
+  { id:'Ива козья',           tier:6, parents:[['Белая ива','Осина']] },
+  { id:'Рябина обыкновенная', tier:6, parents:[['Ольха чёрная','Осина']] },
+  { id:'Орех серый',          tier:6, parents:[['Сакура','Обычное ореховое дерево']] },
+  { id:'Пихта белая',         tier:6, parents:[['Жёлтая сосна','Пихта бальзамическая']] },
+  { id:'Сливовое дерево',     tier:6, parents:[['Сакура','Лимонное дерево']] },
+  { id:'Синий гибискус',      tier:6, parents:[['Бальза','Пустынная акация']] },
+  { id:'Зебрано',             tier:6, parents:[['Мирт','Тополь']] },
+
+  // ---- Tier 7 ----
+  { id:'Пихта Дугласа',       tier:7, parents:[['Красная ель','Пихта белая']], cond:'Мин. высота от бедрока — 60' },
+  { id:'Кедр',                tier:7, parents:[['Мировая лиственница','Пихта белая']], cond:'Мин. высота от бедрока — 60' },
+  { id:'Мускатный орех',      tier:7, parents:[['Тиковое дерево','Гвоздичное дерево']] },
+  { id:'Коричник цейлонский', tier:7, parents:[['Тиковое дерево','Розовое дерево']] },
+  { id:'Перец душистый',      tier:7, parents:[['Тиковое дерево','Гвоздичное дерево']] },
+  { id:'Боярышник',           tier:7, parents:[['Бук европейский','Рябина обыкновенная']] },
+  { id:'Венге',               tier:7, parents:[['Бальза','Кокоболо']] },
+  { id:'Сипири',              tier:7, parents:[['Хлопковое дерево','Жёлтый меранти']], cond:'Только в тропиках' },
+  { id:'Алыча',               tier:7, parents:[['Сакура','Сливовое дерево']] },
+  { id:'Мандарин',            tier:7, parents:[['Сакура','Помело']] },
+  { id:'Тсуга западная',      tier:7, parents:[['Жёлтая сосна','Пихта белая']], cond:'Мин. высота от бедрока — 80' },
+  { id:'Лещина карликовая',   tier:7, parents:[['Ольха чёрная','Лещина обыкновенная']] },
+  { id:'Остролист обыкновенный', tier:7, parents:[['Ольха чёрная','Рябина обыкновенная']] },
+  { id:'Смородина красная',   tier:7, parents:[['Сакура','Бузина']] },
+  { id:'Малина',              tier:7, parents:[['Сакура','Бузина']] },
+  { id:'Маклюра оранжевая',   tier:7, parents:[['Хлопковое дерево','Маклюра красильная']] },
+  { id:'Кампешевое дерево',   tier:7, parents:[['Хлопковое дерево','Розовое дерево']] },
+  { id:'Амарант',             tier:7, parents:[['Хлопковое дерево','Цезальпиния ежовая']] },
+  { id:'Яблоня замечательная',tier:7, parents:[['Яблоня садовая','Яблоня венечная']] },
+  { id:'Терновник',           tier:7, parents:[['Яблоня садовая','Сливовое дерево']] },
+  { id:'Эвкалипт болотный',   tier:7, parents:[['Эвкалипт гигантский','Жёлтый меранти']] },
+  { id:'Умнини',              tier:7, parents:[['Эвкалипт гигантский','Цезальпиния ежовая']] },
+  { id:'Миндаль',             tier:7, parents:[['Обычное ореховое дерево','Сливовое дерево']] },
+  { id:'Лайм пальчиковый',    tier:7, parents:[['Лимонное дерево','Лайм дикий']] },
+  { id:'Цитрон',              tier:7, parents:[['Лимонное дерево','Помело']] },
+  { id:'Персик',              tier:7, parents:[['Каштан посевной','Сливовое дерево']] },
+  { id:'Лайм',                tier:7, parents:[['Помело','Лайм дикий']] },
+
+  // ---- Tier 8 ----
+  { id:'Авокадо',             tier:8, parents:[['Яблочный дуб','Венге']] },
+  { id:'Араукария чилийская', tier:8, parents:[['Дерево джунглей','Тсуга западная']] },
+  { id:'Гинкго',              tier:8, parents:[['Липа пушистая','Венге']] },
+  { id:'Адансония Грандидье', tier:8, parents:[['Бальза','Венге']] },
+  { id:'Самшит вечнозелёный', tier:8, parents:[['Ольха чёрная','Остролист обыкновенный']] },
+  { id:'Кумкват',             tier:8, parents:[['Сакура','Мандарин']] },
+  { id:'Абрикос',             tier:8, parents:[['Сливовое дерево','Персик']] },
+  { id:'Нектарин',            tier:8, parents:[['Сливовое дерево','Персик']] },
+  { id:'Апельсин',            tier:8, parents:[['Помело','Мандарин']] },
+  { id:'Анис звёздчатый',     tier:8, parents:[['Гвоздичное дерево','Перец душистый']] },
+  { id:'Смородина чёрная',    tier:8, parents:[['Черёмуха поздняя','Смородина красная']] },
+  { id:'Ежевика',             tier:8, parents:[['Черёмуха поздняя','Малина']] },
+  { id:'Можжевельник',        tier:8, parents:[['Пихта белая','Малина']] },
+  { id:'Цитрон пальчатый',    tier:8, parents:[['Мандарин','Цитрон']] },
+  { id:'Крыжовник',           tier:8, parents:[['Малина','Лайм']] },
+
+  // ---- Tier 9 ----
+  { id:'Манго',               tier:9, parents:[['Дерево джунглей','Апельсин']] },
+  { id:'Грейпфрут',           tier:9, parents:[['Помело','Апельсин']] },
+  { id:'Лумбанг',             tier:9, parents:[['Лещина обыкновенная','Гинкго']] },
+  { id:'Перец красный',       tier:9, parents:[['Лещина обыкновенная','Гинкго']] },
+  { id:'Мандарин уншиу',      tier:9, parents:[['Мандарин','Кумкват']] },
+  { id:'Танжерин',            tier:9, parents:[['Мандарин','Кумкват']] },
+  { id:'Клюква',              tier:9, parents:[['Алыча','Ежевика']] },
+  { id:'Голубика',            tier:9, parents:[['Малина','Ежевика']] },
+  { id:'Малина золотая',      tier:9, parents:[['Малина','Апельсин']] },
+
+  // ---- Tier 10 ----
+  { id:'Карамбола',           tier:10, parents:[['Анис звёздчатый','Манго']] },
+];
+
+// Плоды. "*" в конце = дерево нужно сажать группой 2×2 (4 саженца рядом), иначе не вырастет.
+const FRUITS = {
+  'Яблочный дуб':'Яблоко',
+  'Апельсин':'Апельсин','Лайм':'Лайм','Обычное ореховое дерево':'Грецкий орех',
+  'Персик':'Персик','Банан':'Банан','Мандарин уншиу':'Мандарин уншиу',
+  'Дуб черешчатый':'Жёлудь','Цитрон пальчатый':'Цитрон пальчатый','Олива':'Олива',
+  'Лайм пальчиковый':'Лайм пальчиковый','Кумкват':'Кумкват','Бузина':'Бузина',
+  'Черёмуха поздняя':'Черёмуха поздняя','Яблоня айовская':'Яблоко-дичка',
+  'Гинкго':'Семена гинкго','Танжерин':'Танжерин','Груша садовая':'Груша',
+  'Терновник':'Тёрен','Кофейное дерево':'Кофейные зёрна','Абрикос':'Абрикос',
+  'Лещина обыкновенная':'Фундук','Дынное дерево':'Папайя','Бук европейский':'Буковый орешек',
+  'Гвоздичное дерево':'Гвоздика','Финиковая пальма':'Финик',
+  'Маклюра оранжевая':'Плод маклюра','Бразильский орех':'Бразильский орех',
+  'Орех серый':'Орех серый','Лимонное дерево':'Лимон','Грейпфрут':'Грейпфрут',
+  'Лайм дикий':'Лайм дикий','Сливовое дерево':'Слива','Помело':'Помело',
+  'Сикомор':'Инжир','Мандарин':'Мандарин','Вишня кислая':'Вишня кислая',
+  'Миндаль':'Миндаль','Каштан посевной':'Каштан','Алыча':'Алыча',
+  'Пекан обыкновенный':'Пекан обыкновенный','Вишня дикая':'Вишня дикая',
+  'Нектарин':'Нектарин','Сакура':'Вишня','Красный банан':'Банан красный',
+  'Карамбола':'Карамбола','Анис звёздчатый':'Анис звёздчатый',
+  'Перец красный':'Перец красный','Лумбанг':'Лумбанг','Кокосовая пальма':'Кокос',
+  'Малина золотая':'Малина золотая','Клюква':'Клюква','Можжевельник':'Семена можжевельника',
+  'Крыжовник':'Крыжовник','Голубика':'Голубика','Смородина чёрная':'Смородина чёрная',
+  'Смородина красная':'Смородина красная','Перец душистый':'Перец душистый',
+  'Цитрон':'Цитрон','Манго':'Манго','Ежевика':'Ежевика','Малина':'Малина',
+  'Авокадо':'Авокадо','Яблоня садовая':'Яблоко','Яблоня венечная':'Яблоко венечное',
+  'Яблоня замечательная':'Яблоко замечательное',
+};
+for (const t of TREES) if (FRUITS[t.id]) t.fruit = FRUITS[t.id];
+
+// Стоимость посадки: сколько саженцев посадить рядом, чтобы дерево выросло (по умолчанию 1).
+const PLANT = {
+  'Обычное ореховое дерево':4, 'Дуб черешчатый':4, 'Гинкго':4, 'Орех серый':4, 'Каштан посевной':4, // 2×2
+  'Мирт':9, // 3×3
+};
+function plantCost(id){ return PLANT[id] || 1; }
+function plantGrid(n){ return n===4?'2×2' : n===9?'3×3' : n===16?'4×4' : n+' шт'; }
+
+const BY_ID = Object.fromEntries(TREES.map(t => [t.id, t]));
+const STARTING_SAPLINGS = new Set(['Яблочный дуб','Белая берёза','Дерево джунглей','Акация','Тёмный дуб','Красная ель']);
+
+// =================== STATE ===================
+const STATE_KEY = 'ragu.progress.v2';
+const INV_KEY = 'ragu.inventory.v1';
+let state = loadState();
+let inventory = loadInventory();
+function loadInventory(){ try{ const r=localStorage.getItem(INV_KEY); if(r) return JSON.parse(r); }catch(e){} return {}; }
+function saveInventory(){ localStorage.setItem(INV_KEY, JSON.stringify(inventory)); }
+function inv(id){ return inventory[id] || { sap:0, pol:0 }; }
+function setInv(id, kind, val){
+  const cur = inventory[id] || { sap:0, pol:0 };
+  cur[kind] = Math.max(0, val|0);
+  inventory[id] = cur;
+  saveInventory();
+}
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STATE_KEY);
+    if(raw){
+      const s = JSON.parse(raw);
+      if('Дуб' in s){ s['Яблочный дуб'] = Math.max(s['Яблочный дуб']||0, s['Дуб']); delete s['Дуб']; }
+      for(const k of Object.keys(s)) if(s[k] === 1) s[k] = 2; // миграция: саженец → получено
+      for(const t of TREES) if(!(t.id in s)) s[t.id] = STARTING_SAPLINGS.has(t.id) ? 2 : 0;
+      return s;
+    }
+  }catch(e){}
+  const s = {};
+  for(const t of TREES) s[t.id] = STARTING_SAPLINGS.has(t.id) ? 2 : 0;
+  return s;
+}
+function saveState(){ localStorage.setItem(STATE_KEY, JSON.stringify(state)); }
+
+// =================== ИСТОРИЯ (undo/redo) ===================
+let undoStack = [], redoStack = [];
+function snapshot(){ return { st: {...state}, inv: JSON.parse(JSON.stringify(inventory)) }; }
+function pushHistory(){ undoStack.push(snapshot()); if(undoStack.length > 200) undoStack.shift(); redoStack.length = 0; updateUndoButtons(); }
+function applySnapshot(s){
+  state = {...s.st}; inventory = JSON.parse(JSON.stringify(s.inv));
+  saveState(); saveInventory(); applyStates(); renderInfo();
+}
+function undo(){ if(!undoStack.length) return; redoStack.push(snapshot()); applySnapshot(undoStack.pop()); updateUndoButtons(); }
+function redo(){ if(!redoStack.length) return; undoStack.push(snapshot()); applySnapshot(redoStack.pop()); updateUndoButtons(); }
+function updateUndoButtons(){
+  const u = document.getElementById('undo'), r = document.getElementById('redo');
+  if(u) u.disabled = !undoStack.length;
+  if(r) r.disabled = !redoStack.length;
+}
+
+function parentReady(p){ return (state[p] || 0) >= 1; }
+function isAvailable(id){
+  const t = BY_ID[id];
+  if(!t || !t.parents) return false;
+  return t.parents.some(pair => pair.every(parentReady));
+}
+
+// Все предки дерева (статично) — для оценки «усилия»
+const _anc = {};
+function ancestorsOf(id){
+  if(_anc[id]) return _anc[id];
+  const set = new Set(); const t = BY_ID[id];
+  if(t && t.parents) for(const p of t.parents[0]){ set.add(p); for(const a of ancestorsOf(p)) set.add(a); }
+  return _anc[id] = set;
+}
+const effort = id => ancestorsOf(id).size; // меньше предков → легче вывести
+
+// Один плод могут давать несколько деревьев. Для минимальных усилий берём
+// КАНОНИЧЕСКОГО производителя каждого плода — с наименьшим усилием (база/низкий тир).
+const FRUIT_PRODUCERS = {};            // плод -> [id деревьев]
+for(const t of TREES) if(t.fruit && t.fruit !== '—') (FRUIT_PRODUCERS[t.fruit] ||= []).push(t.id);
+const FRUIT_TARGETS = new Set();       // канонические (минимальные) производители
+for(const f of Object.keys(FRUIT_PRODUCERS)){
+  const best = FRUIT_PRODUCERS[f].slice()
+    .sort((a,b) => effort(a)-effort(b) || BY_ID[a].tier-BY_ID[b].tier || a.localeCompare(b,'ru'))[0];
+  FRUIT_TARGETS.add(best);
+}
+const UNIQUE_FRUITS = Object.keys(FRUIT_PRODUCERS);
+function fruitUnlocked(f){ return FRUIT_PRODUCERS[f].some(id => state[id] === 2); }
+
+// Цепочка к плодам = канонические производители + все их предки (минимальный набор ради всех плодов)
+const FRUIT_CHAIN = (() => {
+  const out = new Set();
+  const stack = [...FRUIT_TARGETS];
+  while(stack.length){
+    const id = stack.pop();
+    if(out.has(id)) continue;
+    out.add(id);
+    const t = BY_ID[id];
+    if(t && t.parents) for(const pair of t.parents) for(const p of pair) if(!out.has(p)) stack.push(p);
+  }
+  return out;
+})();
+
+// Спрос на дерево как родителя (саженцы/пыльца взаимозаменяемы)
+function computeUsage(needTrees){
+  const u = {};
+  for(const t of needTrees){
+    if(!t.parents) continue;
+    const [a, b] = t.parents[0];
+    u[a] = (u[a] || 0) + 1;
+    u[b] = (u[b] || 0) + 1;
+  }
+  return u;
+}
+function parentDemand(id){
+  const users = TREES.filter(x => x.parents && x.parents.some(p => p.includes(id)));
+  let need = 0, needRem = 0;
+  for(const u of users){
+    if(!FRUIT_CHAIN.has(u.id)) continue;
+    const [a, b] = u.parents[0];
+    const k = (a===id?1:0) + (b===id?1:0);
+    need += k; if(state[u.id] !== 2) needRem += k;
+  }
+  return { need, needRem };
+}
+// Упорядоченный список скрещиваний до дерева id (родители раньше потомков, только непройденные)
+function breedPath(id){
+  const out = [], seen = new Set();
+  (function visit(tid){
+    if(seen.has(tid)) return; seen.add(tid);
+    const t = BY_ID[tid];
+    if(!t || !t.parents || state[tid] === 2) return; // базовое или уже получено — выводить нечего
+    for(const p of t.parents[0]) visit(p);
+    out.push(tid);
+  })(id);
+  return out;
+}
+
+// =================== ГРАФ ===================
+// label — невидимый многострочный текст: служит ТОЛЬКО для расчёта размера canvas-ноды
+// (по нему раскладка считает зазоры), чтобы бокс совпадал с HTML-карточкой.
+function labelFor(t){
+  const pc = plantCost(t.id);
+  const mark = pc > 1 ? ' ⊞' + plantGrid(pc) : '';
+  if(!t.fruit || t.fruit === '—') return t.id + mark;
+  return `${t.id}${mark}\n──────\n${t.fruit}`;
+}
+const nodes = TREES.map(t => {
+  const hasFruit = t.fruit && t.fruit !== '—';
+  return { data: { id:t.id, label:labelFor(t), fruit:t.fruit || '—', frt: hasFruit ? t.fruit : '', plant: plantCost(t.id), tier:t.tier } };
+});
+const edges = [];
+for(const t of TREES){
+  if(!t.parents) continue;
+  t.parents.forEach((pair, idx) => {
+    for(const p of pair) edges.push({ data:{ id:`${p}>${t.id}#${idx}`, source:p, target:t.id, primary:idx===0, col:TIERS[t.tier].color } });
+  });
+}
+
+const cy = cytoscape({
+  container: document.getElementById('cy'),
+  elements: { nodes, edges },
+  wheelSensitivity: 0.2,
+  minZoom: 0.001, maxZoom: 3,
+  style: [
+    // canvas-нода невидима (только якорь рёбер и хит-бокс); видимая нода — HTML-метка .node
+    { selector:'node', style:{
+        'label':'data(label)', 'text-opacity':0, 'background-opacity':0, 'border-width':0,
+        'font-size':10, 'line-height':1.3, 'text-valign':'center', 'text-halign':'center',
+        'text-wrap':'wrap', 'text-max-width':150, 'width':'label', 'height':'label', 'padding':'11px', 'shape':'round-rectangle',
+    }},
+    { selector:'node.hidden', style:{ 'display':'none' } },
+    { selector:'node.filtered', style:{ 'events':'no' } },
+    { selector:'edge', style:{
+        'curve-style':'taxi', 'taxi-direction':'horizontal', 'taxi-turn':'50%', 'taxi-turn-min-distance':'8px',
+        'target-arrow-shape':'triangle', 'arrow-scale':0.7,
+        'line-color':'data(col)', 'target-arrow-color':'data(col)', 'width':1.6, 'opacity':0.16,
+    }},
+    { selector:'edge.show', style:{ 'opacity':0.5 } },
+    { selector:'edge.dim',  style:{ 'opacity':0.03 } },
+    { selector:'edge.hl',   style:{ 'opacity':1, 'width':2.6 } },
+    { selector:'edge.hidden', style:{ 'display':'none' } },
+  ],
+  layout: { name:'preset' }
+});
+
+// HTML-ноды (стиль .node)
+cy.nodeHtmlLabel([{
+  query:'node', halign:'center', valign:'center', halignBox:'center', valignBox:'center',
+  tpl:(d) => {
+    if(d.hide) return '';
+    let cls = 'node t--' + d.tier;
+    if(d.st === 2) cls += ' node--have'; else if(d.av) cls += ' node--avail';
+    if(d.sel) cls += ' node--sel';
+    if(d.faded) cls += ' node--faded';
+    if(d.flash) cls += ' node--flash';
+    const fr = d.frt ? `<div class="node__fruit"><span class="icon">${ICONS.fruit}</span>${d.frt}</div>` : '';
+    const plant = d.plant > 1 ? `<span class="node__plant" title="Посадка ${plantGrid(d.plant)} (${d.plant} саженцев)">⊞${plantGrid(d.plant)}</span>` : '';
+    return `<div class="${cls}" data-id="${d.id}">
+      <span class="node__badge">T${d.tier}</span>
+      ${plant}
+      <span class="node__check"><span class="icon">${ICONS.checkPlain}</span></span>
+      <div class="node__head"><span class="node__dot"></span><span class="node__name">${d.id}</span></div>
+      ${fr}
+      <span class="node__inv" data-invk="${d.id}" title="Инвентарь саженцев/пыльцы"><span class="icon">${ICONS.box}</span></span>
+    </div>`;
+  }
+}]);
+function setNodeData(n, key, val){ if(n.data(key) !== val) n.data(key, val); }
+
+// =================== РАСКЛАДКИ ===================
+let tierColumns = [];
+const GAP_X = 160, GAP_Y = 60, EXTRA_W = 22, EXTRA_H = 18;
+let currentLayoutKey = 'tiers';
+function lockMinZoom(){ cy.minZoom(Math.min(cy.zoom() * 0.55, 1)); }
+
+function tiersLayout(){
+  const byTier = {};
+  for(const t of TREES) (byTier[t.tier] ||= []).push(t.id);
+  for(const k of Object.keys(byTier)) byTier[k].sort((a,b)=>a.localeCompare(b,'ru'));
+  const tiers = Object.keys(byTier).map(Number).sort((a,b)=>a-b);
+  const W = id => cy.getElementById(id).width() + EXTRA_W;
+  const H = id => cy.getElementById(id).height() + EXTRA_H;
+  const positions = {};
+  tierColumns = [];
+  let cx = 0, prevColW = 0;
+  for(let ci = 0; ci < tiers.length; ci++){
+    const ids = byTier[tiers[ci]];
+    const colW = Math.max(...ids.map(W));
+    cx = ci === 0 ? colW/2 : cx + prevColW/2 + GAP_X + colW/2;
+    const totalH = ids.reduce((s,id)=>s+H(id),0) + GAP_Y*(ids.length-1);
+    let y = -totalH/2;
+    for(const id of ids){ const h = H(id); positions[id] = { x:cx, y:y + h/2 }; y += h + GAP_Y; }
+    tierColumns.push({ tier:tiers[ci], x:cx });
+    prevColW = colW;
+  }
+  cy.nodes().forEach(n => { const p = positions[n.id()]; if(p) n.position(p); });
+  cy.minZoom(0.001);
+  cy.fit(undefined, 50);
+  lockMinZoom();
+  buildTierHeaders();
+  updateTierHeaders();
+}
+
+function buildTierHeaders(){
+  const box = document.getElementById('tierHeaders');
+  if(currentLayoutKey !== 'tiers' || !tierColumns.length){ box.innerHTML=''; return; }
+  box.innerHTML = tierColumns.map(c =>
+    `<div class="tier-tab t--${c.tier}" data-tx="${c.x}">${c.tier===0?'T0 · из мира':'T'+c.tier}</div>`).join('');
+}
+function updateTierHeaders(){
+  const box = document.getElementById('tierHeaders');
+  if(currentLayoutKey !== 'tiers'){ if(box.childElementCount) box.innerHTML=''; return; }
+  const zoom = cy.zoom(), panx = cy.pan().x;
+  const ths = box.children;
+  for(let i = 0; i < ths.length; i++) ths[i].style.left = (parseFloat(ths[i].dataset.tx) * zoom + panx) + 'px';
+}
+
+const LAYOUTS = {
+  'tiers': null,
+  'elk-layered': { name:'elk', elk:{ algorithm:'layered', 'elk.direction':'RIGHT',
+      'elk.layered.spacing.nodeNodeBetweenLayers':140, 'elk.spacing.nodeNode':28, 'elk.edgeRouting':'ORTHOGONAL',
+      'elk.layered.crossingMinimization.strategy':'LAYER_SWEEP', 'elk.layered.nodePlacement.strategy':'NETWORK_SIMPLEX' }},
+  'elk-layered-tb': { name:'elk', elk:{ algorithm:'layered', 'elk.direction':'DOWN',
+      'elk.layered.spacing.nodeNodeBetweenLayers':140, 'elk.spacing.nodeNode':28, 'elk.edgeRouting':'ORTHOGONAL' }},
+  'dagre-lr': { name:'dagre', rankDir:'LR', nodeSep:28, edgeSep:12, rankSep:140 },
+  'dagre-tb': { name:'dagre', rankDir:'TB', nodeSep:28, edgeSep:12, rankSep:140 },
+  'breadthfirst': { name:'breadthfirst', directed:true, padding:20, spacingFactor:2 },
+};
+function runLayout(key){
+  currentLayoutKey = key || currentLayoutKey;
+  if(currentLayoutKey === 'tiers'){ tiersLayout(); return; }
+  document.getElementById('tierHeaders').innerHTML = '';
+  cy.minZoom(0.001);
+  cy.one('layoutstop', lockMinZoom);
+  cy.layout({ ...LAYOUTS[currentLayoutKey], fit:true, padding:30, animate:false }).run();
+}
+
+// =================== СОСТОЯНИЯ НОД ===================
+function applyStates(){
+  cy.batch(() => {
+    cy.nodes().forEach(n => {
+      const id = n.id();
+      const s = state[id] || 0;
+      setNodeData(n, 'st', s);
+      setNodeData(n, 'av', s === 0 && isAvailable(id));
+    });
+  });
+  renderStats();
+  renderTierCounts();
+  if(filtersActive()) applyFilters();
+  if(document.getElementById('planPanel').classList.contains('is-open')) renderPlan();
+}
+
+// =================== ГЕРОЙ-ПРОГРЕСС ===================
+function renderStats(){
+  const breedable = TREES.filter(t => t.tier > 0);
+  const bred = breedable.filter(t => state[t.id]===2).length;
+  const avail = breedable.filter(t => state[t.id]===0 && isAvailable(t.id)).length;
+  const totalFruits = UNIQUE_FRUITS.length;                 // по уникальным плодам (дубликаты не считаем)
+  const fruitsUnlocked = UNIQUE_FRUITS.filter(fruitUnlocked).length;
+  const pct = Math.round(bred/breedable.length*100);
+  const remaining = [...FRUIT_CHAIN].map(id => BY_ID[id]).filter(t => t.tier>0 && state[t.id]!==2);
+  const planSap = remaining.length, planPol = remaining.length;
+  const usageRemain = computeUsage(remaining);
+  // ТОЛЬКО для верхнего трекера: саженцы и пыльца взаимозаменяемы, поэтому на дерево
+  // считаем общий полезный вклад useful = min(саженцы+пыльца, нужно) и делим пополам
+  // между двумя трекерами (ceil → саженцы, floor → пыльца, в сумме ровно useful).
+  // Пример: Сакуре нужно 18, есть 14+15=29 → useful=18 → 9 саженцев + 9 пыльцы = 18.
+  let haveSap = 0, havePol = 0;
+  for(const id of Object.keys(inventory)){
+    const need = usageRemain[id] || 0;
+    if(!need) continue;
+    const useful = Math.min((inventory[id].sap || 0) + (inventory[id].pol || 0), need);
+    haveSap += Math.ceil(useful / 2);
+    havePol += Math.floor(useful / 2);
+  }
+  haveSap = Math.min(haveSap, planSap);
+  havePol = Math.min(havePol, planPol);
+  const C = 163.4;
+  const box = document.getElementById('stats');
+  box.innerHTML = `
+    <div class="hero__ring">
+      <svg class="hero__ring-svg" width="58" height="58">
+        <circle cx="29" cy="29" r="26" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="6"/>
+        <circle class="hero__ring-fg" cx="29" cy="29" r="26" fill="none" stroke="var(--leaf)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${C}"/>
+      </svg>
+      <div class="hero__pct">${pct}%</div>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat"><span class="hero__val">${bred}<small> / ${breedable.length}</small></span><span class="hero__lbl">Выведено</span></div>
+      <div class="hero__stat"><span class="hero__val ${avail?'is-active':''}">${avail}</span><span class="hero__lbl">${ic('bolt')}Доступно</span></div>
+      <div class="hero__stat hero__stat--fruit"><span class="hero__val">${fruitsUnlocked}<small> / ${totalFruits}</small></span><span class="hero__lbl">${ic('fruit')}Плодов</span></div>
+      <div class="hero__stat hero__stat--sap"><span class="hero__val">${haveSap}<small> / ${planSap}</small></span><span class="hero__lbl">${ic('sprout')}Саженцы</span></div>
+      <div class="hero__stat hero__stat--pol"><span class="hero__val">${havePol}<small> / ${planPol}</small></span><span class="hero__lbl">${ic('pollen')}Пыльца</span></div>
+    </div>`;
+  box.querySelector('.hero__ring-fg').style.strokeDashoffset = C * (1 - pct/100);
+  injectIcons(box);
+}
+
+// =================== КАРТОЧКА ===================
+let selectedId = null;
+let pathOpen = false;
+function selectNode(id){
+  selectedId = id;
+  pathOpen = false;
+  cy.batch(() => cy.nodes().forEach(n => setNodeData(n, 'sel', n.id() === id)));
+  renderInfo();
+  if(typeof saveUI === 'function') saveUI();
+}
+function counterGroup(id){
+  const i = inv(id);
+  const cnt = (kind, val) => `<span class="counter counter--${kind==='sap'?'sap':'pol'}">${ic(kind==='sap'?'sprout':'pollen')}`
+    + `<button class="counter__btn" data-id="${id}" data-kind="${kind}" data-delta="-1">${ic('minus')}</button>`
+    + `<b class="counter__val">${val}</b>`
+    + `<button class="counter__btn" data-id="${id}" data-kind="${kind}" data-delta="1">${ic('plus')}</button></span>`;
+  return `<div class="counter-group">${cnt('sap', i.sap)}${cnt('pol', i.pol)}</div>`;
+}
+function renderInfo(){
+  const box = document.getElementById('info');
+  if(!selectedId){
+    box.innerHTML = `<div class="hint card__hello">
+      ${ic('target')} <b>Клик по ноде</b> — выбрать дерево и подсветить родословную.<br>
+      ${ic('check')} Статус «получено» — кнопкой в этой карточке.<br>
+      ${ic('sprout')} Счётчики саженцев/пыльцы — здесь и в плане.<br>
+      ${ic('search')} Поиск — по названию дерева или плода.</div>`;
+    injectIcons(box);
+    return;
+  }
+  const t = BY_ID[selectedId];
+  const s = state[selectedId] || 0;
+  const got = s===2, avail = !got && isAvailable(selectedId);
+  const stateLbl = got?'получено':avail?'доступно':'не получено';
+  const stateMod = got?'is-bred':avail?'is-avail':'is-none';
+  let html = `<div class="card__name">${t.id}</div>
+    <div class="card__tags">
+      <span class="pill pill--tier t--${t.tier}">T${t.tier}</span>
+      <span class="pill pill--state ${stateMod}">${got?ic('check'):avail?ic('bolt'):''}${stateLbl}</span>
+    </div>`;
+  if(t.fruit && t.fruit !== '—') html += `<div class="card__fruit">${ic('fruit')} <b>${t.fruit}</b></div>`;
+  { const pc = plantCost(selectedId); if(pc > 1) html += `<div class="card__cond">⊞ Сажать ${plantGrid(pc)} — нужно ${pc} саженцев рядом, чтобы дерево выросло</div>`; }
+  if(t.cond) html += `<div class="card__cond">${ic('warn')} ${t.cond}</div>`;
+  if(avail){ const u = unlockScore(selectedId); if(u) html += `<div class="hint card__unlock">${ic('bolt')} Разблокирует деревьев: <b>${u}</b></div>`; }
+  if(t.parents){
+    html += `<div class="card__recipe"><b>Рецепт:</b>` +
+      t.parents.map((pair, i) => {
+        const ok = pair.every(parentReady);
+        const mark = `<span class="mark ${ok?'is-ok':'is-bad'}">${ok?ic('check'):ic('ban')}</span>`;
+        const inner = pair.map(p => `<span class="link parent ${parentReady(p)?'is-ready':'is-pending'}" data-jump="${p}">${p}</span>`).join(' + ');
+        return i===0 ? `<div class="card__recipe-row">${mark} <span>${inner}</span></div>` : `<div class="card__alt">альт: ${inner}</div>`;
+      }).join('') + `</div>`;
+  } else {
+    html += `<div class="hint">Базовое дерево — из мира, рецепта нет.</div>`;
+  }
+  html += `<button class="action ${got?'action--unget':'action--get'}" id="infoToggle">${ic(got?'close':'check')} ${got?'Снять «получено»':'Отметить полученным'}</button>`;
+
+  // путь к этому дереву (№5)
+  if(t.parents){
+    const path = breedPath(selectedId);
+    html += `<button class="btn btn--xs card__pathbtn" id="pathBtn">${ic('list')} Путь к этому дереву${path.length?` (${path.length})`:''}</button>`;
+    if(pathOpen){
+      if(path.length){
+        html += `<div class="path">` + path.map((id, i) => {
+          const s = state[id]||0, av = s===0 && isAvailable(id);
+          const mod = s===2 ? 'is-bred' : av ? 'is-avail' : 'is-locked';
+          const [a, b] = BY_ID[id].parents[0];
+          return `<div class="path__step path__step--${mod}"><span class="path__num">${i+1}</span><span class="link path__name" data-jump="${id}">${id}</span><span class="hint">← ${a} + ${b}</span></div>`;
+        }).join('') + `</div>`;
+      } else {
+        html += `<div class="hint card__pathbtn">Дерево уже получено — выводить нечего.</div>`;
+      }
+    }
+  }
+
+  const users = TREES.filter(x => x.parents && x.parents.some(p => p.includes(t.id)));
+  if(users.length){
+    const { need, needRem } = parentDemand(t.id);
+    if(need){
+      const i = inv(t.id), have = i.sap + i.pol;
+      html += `<div class="card__demand"><b>Собрать с этого дерева:</b>
+        <span class="u-mono ${have>=needRem?'is-ok':''}">${have}/${needRem}</span>${need!==needRem?` <span class="hint">(всего по плану ${need})</span>`:''}
+        <div class="hint">Саженцы и пыльца взаимозаменяемы.</div>
+        ${counterGroup(t.id)}</div>`;
+    }
+    html += `<div class="card__users"><b>Используется в (${users.length}):</b> ` +
+      users.map(u => `<span class="link" data-jump="${u.id}">${u.id}</span>`).join(', ') + `</div>`;
+  }
+  box.innerHTML = html;
+  injectIcons(box);
+  const tog = box.querySelector('#infoToggle');
+  if(tog) tog.addEventListener('click', () => setTreeState(selectedId, got ? 0 : 2));
+  const pb = box.querySelector('#pathBtn');
+  if(pb) pb.addEventListener('click', () => { pathOpen = !pathOpen; renderInfo(); });
+  bindJump(box);
+  bindCounters(box, () => { renderInfo(); if(planOpen()) renderPlan(); });
+}
+
+function bindJump(root){
+  root.querySelectorAll('[data-jump]').forEach(el => el.addEventListener('click', () => {
+    const id = el.dataset.jump;
+    selectNode(id);
+    highlightLineage(id, 'ancestors');
+    cy.animate({ center:{ eles: cy.getElementById(id) }, zoom: 1.2 }, { duration: 250 });
+  }));
+}
+function bindCounters(root, after){
+  root.querySelectorAll('.counter__btn').forEach(el => el.addEventListener('click', e => {
+    e.stopPropagation();
+    pushHistory();
+    setInv(el.dataset.id, el.dataset.kind, inv(el.dataset.id)[el.dataset.kind] + parseInt(el.dataset.delta, 10));
+    after && after();
+  }));
+}
+const planOpen = () => document.getElementById('planPanel').classList.contains('is-open');
+
+// =================== ВЗАИМОДЕЙСТВИЕ С ГРАФОМ ===================
+cy.on('tap', 'node', evt => {
+  const id = evt.target.id();
+  selectNode(id);
+  highlightLineage(id, evt.originalEvent && evt.originalEvent.shiftKey ? 'descendants' : 'ancestors');
+});
+cy.on('tap', evt => { if(evt.target === cy){ clearHighlight(); selectNode(null); stepIdx = 0; } });
+cy.on('cxttap', 'node', evt => {
+  const rect = document.getElementById('cy').getBoundingClientRect();
+  const rp = evt.renderedPosition || evt.position;
+  openInvPopup(evt.target.id(), rect.left + rp.x, rect.top + rp.y);
+});
+
+// =================== СМЕНА СТАТУСА ===================
+let bypassBreed = false;
+function availSet(){
+  const s = new Set();
+  for(const t of TREES) if(t.tier>0 && (state[t.id]||0)===0 && isAvailable(t.id)) s.add(t.id);
+  return s;
+}
+function flashUnlocked(before){
+  const fresh = [...availSet()].filter(x => !before.has(x));
+  if(!fresh.length) return;
+  fresh.forEach(id => setNodeData(cy.getElementById(id), 'flash', true));
+  setTimeout(() => fresh.forEach(id => setNodeData(cy.getElementById(id), 'flash', false)), 1300);
+}
+function setTreeState(id, newState){
+  if(newState === 2 && (state[id]||0) !== 2 && !bypassBreed){
+    const t = BY_ID[id];
+    if(t && t.parents){ askBreed(id); return; }
+  }
+  pushHistory();
+  const before = availSet();
+  state[id] = newState;
+  saveState();
+  applyStates();
+  if(selectedId === id) renderInfo();
+  if(newState === 2) flashUnlocked(before);
+}
+
+let breedEscHandler = null;
+function closeBreedModal(){
+  document.getElementById('breedModal').classList.remove('is-open');
+  if(breedEscHandler){ document.removeEventListener('keydown', breedEscHandler); breedEscHandler = null; }
+}
+function askBreed(id){
+  const t = BY_ID[id]; if(!t || !t.parents) return;
+  const prevState = state[id] || 0;
+  const [A, B] = t.parents[0];
+  const before = availSet();
+  const modal = document.getElementById('breedModal');
+  const box = modal.firstElementChild;
+  const optHtml = (sapTree, polTree) => {
+    const sapHave = inv(sapTree).sap, polHave = inv(polTree).pol;
+    const ok = sapHave > 0 && polHave > 0;
+    return `<button class="breed-opt ${ok?'is-ready':''}" data-sap="${sapTree}" data-pol="${polTree}">
+      <span class="breed-opt__icons"><span class="icon icon--sap">${ICONS.sprout}</span><span class="icon icon--pol">${ICONS.pollen}</span></span>
+      <span class="breed-opt__body">
+        <div class="breed-opt__name">${sapTree} <span class="accent-sap">саженец</span> + ${polTree} <span class="accent-pol">пыльца</span></div>
+        <div class="breed-opt__avail"><span class="${sapHave>0?'is-ok':'is-low'}">${sapTree}: ${sapHave}</span> · <span class="${polHave>0?'is-ok':'is-low'}">${polTree}: ${polHave}</span></div>
+      </span></button>`;
+  };
+  box.innerHTML = `
+    <div class="modal__title">${ic('check')}Выведено: ${t.id}</div>
+    <div class="hint modal__hint">Какие ингредиенты потратил? Саженцы и пыльца взаимозаменяемы — выбери комбинацию, счётчики уменьшатся на 1.</div>
+    ${optHtml(A, B)}${optHtml(B, A)}
+    <div class="modal__foot">
+      <button class="btn" id="breedSkip">Без списания</button>
+      <button class="btn" id="breedCancel">Отмена</button>
+    </div>`;
+  modal.classList.add('is-open');
+  injectIcons(box);
+  const finish = () => { state[id] = 2; saveState(); applyStates(); if(selectedId === id) renderInfo(); flashUnlocked(before); closeBreedModal(); };
+  box.querySelectorAll('.breed-opt').forEach(btn => btn.addEventListener('click', () => {
+    pushHistory();
+    setInv(btn.dataset.sap, 'sap', Math.max(0, inv(btn.dataset.sap).sap - 1));
+    setInv(btn.dataset.pol, 'pol', Math.max(0, inv(btn.dataset.pol).pol - 1));
+    finish();
+  }));
+  box.querySelector('#breedSkip').onclick = () => { pushHistory(); finish(); };
+  const cancel = () => { state[id] = prevState; saveState(); applyStates(); if(selectedId === id) renderInfo(); closeBreedModal(); };
+  box.querySelector('#breedCancel').onclick = cancel;
+  modal.onclick = (e) => { if(e.target === modal) cancel(); };
+  document.addEventListener('keydown', breedEscHandler = (e) => { if(e.key === 'Escape') cancel(); });
+}
+
+// =================== ПОПАП ИНВЕНТАРЯ ===================
+function openInvPopup(id, clientX, clientY){
+  const t = BY_ID[id]; if(!t) return;
+  const { need, needRem } = parentDemand(id);
+  const i = inv(id), have = i.sap + i.pol;
+  const popup = document.getElementById('popup');
+  popup.innerHTML = `
+    <div class="popup__head">
+      <div class="popup__title">${t.id}</div>
+      <div class="popup__tools"><span class="pill pill--tier t--${t.tier}">T${t.tier}</span><button class="counter__btn" id="popupClose">${ic('close')}</button></div>
+    </div>
+    ${need
+      ? `<div class="hint popup__need">Нужно как родитель: <b class="u-mono ${have>=needRem?'is-ok':''}">${needRem}</b> ед.${need!==needRem?` (всего по плану ${need})`:''} · саженцы/пыльца взаимозаменяемы</div>`
+      : `<div class="hint popup__need">В цепочке плодов не требуется как родитель.</div>`}
+    <div class="popup__counters">${counterGroup(id)}</div>
+    <div class="popup__total" id="ppTotal">Итого: <b class="u-mono ${have>=needRem?'is-ok':''}">${have}</b>${need?` / ${needRem}`:''}</div>`;
+  popup.style.left = Math.min(clientX, window.innerWidth - 320) + 'px';
+  popup.style.top  = Math.min(clientY, window.innerHeight - 200) + 'px';
+  popup.classList.add('is-open');
+  injectIcons(popup);
+  popup.querySelector('#popupClose').onclick = () => popup.classList.remove('is-open');
+  bindCounters(popup, () => {
+    const i2 = inv(id), have2 = i2.sap + i2.pol;
+    popup.querySelectorAll('.counter__val')[0].textContent = i2.sap;
+    popup.querySelectorAll('.counter__val')[1].textContent = i2.pol;
+    popup.querySelector('#ppTotal').innerHTML = `Итого: <b class="u-mono ${have2>=needRem?'is-ok':''}">${have2}</b>${need?` / ${needRem}`:''}`;
+    if(selectedId === id) renderInfo();
+    if(planOpen()) renderPlan();
+  });
+}
+// клик по кнопке-коробке ноды (HTML-метки пересоздаются расширением → делегирование)
+document.addEventListener('click', e => {
+  const k = e.target.closest && e.target.closest('[data-invk]');
+  if(k){ openInvPopup(k.dataset.invk, e.clientX, e.clientY); }
+});
+document.addEventListener('mousedown', e => {
+  const popup = document.getElementById('popup');
+  if(popup.classList.contains('is-open') && !popup.contains(e.target) && !(e.target.closest && e.target.closest('.node__inv'))) popup.classList.remove('is-open');
+});
+
+// =================== ПОДСВЕТКА РОДОСЛОВНОЙ ===================
+function colorForId(id){
+  let h = 0;
+  for(let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  return `hsl(${h % 360}, 85%, 62%)`;
+}
+function highlightLineage(id, dir){
+  clearHighlight();
+  const start = cy.getElementById(id);
+  const keep = (dir === 'ancestors' ? start.predecessors() : start.successors()).union(start);
+  const keepNodes = keep.nodes();
+  cy.batch(() => {
+    cy.nodes().forEach(n => setNodeData(n, 'faded', !keepNodes.contains(n)));
+    cy.edges().addClass('dim');
+    keep.edges().removeClass('dim').addClass('hl');
+    // предки — разноцветные рёбра (по целевой ноде); потомки — единый сиреневый (визуально отдельно)
+    keep.edges().forEach(e => {
+      const c = dir === 'descendants' ? '#c9a7f0' : colorForId(e.data('target'));
+      e.style({ 'line-color':c, 'target-arrow-color':c, 'width':3, 'opacity':1 });
+    });
+  });
+}
+function clearHighlight(){
+  cy.batch(() => {
+    cy.nodes().forEach(n => setNodeData(n, 'faded', false));
+    cy.edges().removeClass('dim hl');
+    cy.edges().removeStyle('line-color target-arrow-color width opacity');
+  });
+}
+
+// =================== ПЛАН ===================
+let planHideObtained = false;
+function parentInventoryRow(parentId, needRemain, needTotal){
+  const i = inv(parentId), have = i.sap + i.pol;
+  const note = needTotal !== needRemain ? ` <span class="hint">(из ${needTotal} всего)</span>` : '';
+  const cnt = (kind, val) => `<span class="counter counter--${kind==='sap'?'sap':'pol'}">${ic(kind==='sap'?'sprout':'pollen')}`
+    + `<button class="counter__btn" data-id="${parentId}" data-kind="${kind}" data-delta="-1">${ic('minus')}</button>`
+    + `<b class="counter__val">${val}</b>`
+    + `<button class="counter__btn" data-id="${parentId}" data-kind="${kind}" data-delta="1">${ic('plus')}</button></span>`;
+  return `<div class="pinv">
+    <span class="pinv__name"><b>${parentId}</b> <span class="hint">— нужно ${needRemain}${note}</span></span>
+    ${cnt('sap', i.sap)}${cnt('pol', i.pol)}
+    <span class="pinv__total ${have>=needRemain?'is-ok':''}">${have}/${needRemain}</span>
+  </div>`;
+}
+function renderPlan(){
+  const panel = document.getElementById('planPanel');
+  const need = [...FRUIT_CHAIN].filter(id => BY_ID[id].tier > 0).map(id => BY_ID[id]);
+  const usage = computeUsage(need);
+  const byTier = {};
+  for(const t of need) (byTier[t.tier] ||= []).push(t);
+  const rank = t => { const s=state[t.id]||0; if(s===2) return 2; if(isAvailable(t.id)) return 0; return 1; };
+  for(const k of Object.keys(byTier)) byTier[k].sort((a,b)=> rank(a)-rank(b) || a.id.localeCompare(b.id,'ru'));
+
+  const doneNeed = need.filter(t => state[t.id]===2).length;
+  const fruitsTotal = UNIQUE_FRUITS.length;                       // уникальные плоды
+  const fruitsDone = UNIQUE_FRUITS.filter(fruitUnlocked).length;
+  const remaining = need.filter(t => state[t.id] !== 2);
+  const usageRemain = computeUsage(remaining);
+  const M = remaining.length;
+  // В сводке плана — фактически собранное по нужным деревьям (без капа min, в отличие от топбара)
+  let totSap = 0, totPol = 0;
+  for(const id of Object.keys(inventory)){
+    if(!(usageRemain[id] > 0)) continue;
+    totSap += inventory[id].sap || 0;
+    totPol += inventory[id].pol || 0;
+  }
+
+  let html = `<div class="plan__head">
+    <span class="plan__title">${ic('list')} План выведения всех плодов</span>
+    <button class="btn btn--xs" id="planHideToggle">${planHideObtained?'Показать всё':'Скрыть полученные'}</button>
+  </div>`;
+  html += `<div class="hint">Минимум: <b>${need.length}</b> деревьев (${doneNeed} готово). Плодов: <b>${fruitsTotal}</b> (${fruitsDone} готово).</div>`;
+  html += `<div class="plan__summary">
+    <div><b>Скрещиваний осталось:</b> ${M}</div>
+    <div class="hint">Саженцы и пыльца взаимозаменяемы: на скрещивание нужно 1 ед. любого вида родителя A + 1 ед. родителя B. Глобально нужно ≥${M} саженцев и ≥${M} пыльцы.</div>
+    <div class="plan__totals">
+      <span class="counter-sum counter-sum--sap">${ic('sprout')} <b class="${totSap>=M?'is-ok':''}">${totSap}/${M}</b></span>
+      <span class="counter-sum counter-sum--pol">${ic('pollen')} <b class="${totPol>=M?'is-ok':''}">${totPol}/${M}</b></span>
+    </div>
+  </div>`;
+
+  for(const tier of Object.keys(byTier).map(Number).sort((a,b)=>a-b)){
+    let trees = byTier[tier];
+    if(planHideObtained) trees = trees.filter(t => state[t.id] !== 2);
+    if(!trees.length) continue;
+    html += `<div class="plan__tier"><span class="pill pill--tier t--${tier}">T${tier}</span> <span class="hint">${trees.length} шт</span></div>`;
+    for(const t of trees){
+      const s = state[t.id] || 0;
+      const avail = s===0 && isAvailable(t.id);
+      const rowMod = s===2 ? 'plan__row--bred' : avail ? 'plan__row--avail' : 'plan__row--locked';
+      const icon = s===2 ? ic('check') : avail ? ic('bolt') : ic('ban');
+      const fruitTxt = (t.fruit && t.fruit !== '—') ? `<span class="plan__fruit">${ic('fruit')}${t.fruit}</span>` : '';
+      const pc = plantCost(t.id);
+      const plantTxt = pc > 1 ? `<span class="plan__fruit" title="${pc} саженцев на посадку">⊞${plantGrid(pc)}·${pc}</span>` : '';
+      const [pa, pb] = t.parents[0];
+      const bred = s===2;
+      html += `<div class="plan__row ${rowMod}">
+        <div class="plan__row-head" data-jump="${t.id}">
+          ${icon} <b class="plan__name">${t.id}</b>${fruitTxt}${plantTxt}
+          <span class="hint"> ← ${pa} + ${pb}</span>
+        </div>
+        ${parentInventoryRow(pa, usageRemain[pa] || 0, usage[pa] || 0)}
+        ${parentInventoryRow(pb, usageRemain[pb] || 0, usage[pb] || 0)}
+        <div class="plan__action"><button class="action ${bred?'action--unget':'action--get'} action--sm" data-tree="${t.id}">${ic(bred?'check':'plus')}${bred?'получено':'отметить полученным'}</button></div>
+      </div>`;
+    }
+  }
+  const wildUsed = TREES.filter(t => t.tier===0 && (usage[t.id] || usageRemain[t.id]));
+  if(wildUsed.length){
+    html += `<div class="plan__tier"><span class="pill pill--tier t--0">T0 · база</span></div>`;
+    for(const t of wildUsed){
+      html += `<div class="plan__row plan__row--locked">
+        <div class="plan__row-head" data-jump="${t.id}"><b class="plan__name">${t.id}</b></div>
+        ${parentInventoryRow(t.id, usageRemain[t.id] || 0, usage[t.id] || 0)}
+      </div>`;
+    }
+  }
+  panel.innerHTML = html;
+  injectIcons(panel);
+  const ht = panel.querySelector('#planHideToggle');
+  if(ht) ht.addEventListener('click', () => { planHideObtained = !planHideObtained; renderPlan(); saveUI(); });
+  bindJump(panel);
+  bindCounters(panel, () => { renderPlan(); if(selectedId) renderInfo(); });
+  panel.querySelectorAll('[data-tree]').forEach(el => el.addEventListener('click', e => {
+    e.stopPropagation();
+    const id = el.dataset.tree;
+    setTreeState(id, state[id] === 2 ? 0 : 2);
+  }));
+}
+
+// =================== ПОИСК ===================
+document.getElementById('q').addEventListener('input', e => {
+  applyFilters();
+  const q = e.target.value.trim().toLowerCase();
+  if(!q){ clearHighlight(); return; }
+  const matches = cy.nodes().filter(n => !n.data('hide') &&
+    (n.id().toLowerCase().includes(q) || (n.data('fruit')||'').toLowerCase().includes(q)));
+  cy.batch(() => {
+    cy.nodes().forEach(n => setNodeData(n, 'faded', !matches.contains(n)));
+    cy.edges().addClass('dim');
+    matches.connectedEdges().removeClass('dim');
+  });
+  if(matches.length === 1){
+    selectNode(matches[0].id());
+    cy.animate({ center:{ eles: matches }, zoom: 1.2 }, { duration: 300 });
+  }
+});
+
+// =================== ФИЛЬТРЫ ===================
+const tierVisible = new Set(TIERS.map(t => t.id));
+const tierFiltersEl = document.getElementById('tierFilters');
+TIERS.forEach(t => {
+  const lbl = document.createElement('label');
+  lbl.className = 'tier-filter__item';
+  lbl.innerHTML = `<input type="checkbox" checked data-tier="${t.id}"> <span class="tier-filter__dot t--${t.id}"></span> ${t.id===0?'T0 · из мира':'T'+t.id} <span class="tier-filter__count" data-tcnt="${t.id}"></span>`;
+  lbl.querySelector('input').onchange = (e) => {
+    const tid = Number(e.target.dataset.tier);
+    if(e.target.checked) tierVisible.add(tid); else tierVisible.delete(tid);
+    applyFilters();
+  };
+  tierFiltersEl.appendChild(lbl);
+});
+function renderTierCounts(){
+  for(const t of TIERS){
+    const el = tierFiltersEl.querySelector(`[data-tcnt="${t.id}"]`);
+    if(!el) continue;
+    const trees = TREES.filter(x => x.tier === t.id);
+    if(t.id === 0){ el.textContent = `${trees.length}`; continue; }
+    const got = trees.filter(x => state[x.id]===2).length;
+    el.textContent = `${got}/${trees.length}`;
+    el.classList.toggle('is-complete', got === trees.length);
+  }
+}
+
+let onlyAvail = false, onlyFruit = false;
+const filtersActive = () => onlyAvail || onlyFruit || tierVisible.size < TIERS.length;
+function applyFilters(){
+  let availKeep = null;
+  if(onlyAvail){
+    availKeep = new Set();
+    for(const t of TREES) if(t.tier > 0 && (state[t.id]||0) === 0 && isAvailable(t.id)){
+      availKeep.add(t.id);
+      t.parents[0].forEach(p => availKeep.add(p));
+    }
+  }
+  cy.batch(() => {
+    cy.nodes().forEach(n => {
+      const id = n.id(), t = BY_ID[id];
+      let visible = tierVisible.has(t.tier);
+      if(onlyFruit) visible = visible && FRUIT_CHAIN.has(id);
+      if(onlyAvail) visible = visible && (availKeep.has(id) || state[id]===2);
+      n.toggleClass('filtered', !visible);
+      setNodeData(n, 'hide', !visible);
+    });
+    cy.edges().forEach(e => e.toggleClass('hidden', e.source().hasClass('filtered') || e.target().hasClass('filtered')));
+  });
+  if(typeof saveUI === 'function') saveUI();
+}
+
+// =================== КНОПКИ ===================
+document.getElementById('onlyAvail').onclick = (e) => { onlyAvail = !onlyAvail; e.currentTarget.classList.toggle('btn--on', onlyAvail); applyFilters(); };
+document.getElementById('onlyFruit').onclick = (e) => { onlyFruit = !onlyFruit; e.currentTarget.classList.toggle('btn--on', onlyFruit); applyFilters(); };
+document.getElementById('plan').onclick = () => {
+  const panel = document.getElementById('planPanel');
+  if(panel.classList.contains('is-open')){ panel.classList.remove('is-open'); saveUI(); return; }
+  renderPlan();
+  panel.classList.add('is-open');
+  saveUI();
+};
+document.getElementById('fit').onclick = () => cy.animate({ fit:{ padding:30 } }, { duration:300 });
+document.getElementById('bypass').onclick = (e) => { bypassBreed = !bypassBreed; e.currentTarget.classList.toggle('btn--amber', bypassBreed); saveUI(); };
+document.getElementById('relayout').onclick = () => runLayout();
+document.getElementById('layout').onchange = e => { runLayout(e.target.value); saveUI(); };
+document.getElementById('undo').onclick = undo;
+document.getElementById('redo').onclick = redo;
+document.addEventListener('keydown', e => {
+  if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z'){ e.preventDefault(); e.shiftKey ? redo() : undo(); }
+  else if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'y'){ e.preventDefault(); redo(); }
+});
+document.getElementById('reset').onclick = () => {
+  if(!confirm('Сбросить весь прогресс? Останутся только стартовые саженцы.')) return;
+  pushHistory();
+  state = {};
+  for(const t of TREES) state[t.id] = STARTING_SAPLINGS.has(t.id) ? 2 : 0;
+  inventory = {}; saveInventory(); saveState(); applyStates(); renderInfo();
+};
+document.getElementById('export').onclick = () => {
+  const payload = { v:3, exported:new Date().toISOString(), state, inventory };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type:'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'ragu-progress.json'; a.click();
+};
+document.getElementById('import').onchange = async e => {
+  const f = e.target.files[0]; if(!f) return;
+  try{
+    const obj = JSON.parse(await f.text());
+    pushHistory();
+    const st  = obj && obj.state ? obj.state : obj;           // новый формат или старый плоский
+    const inv = obj && obj.inventory ? obj.inventory : null;
+    for(const k of Object.keys(st || {})) if(BY_ID[k]) state[k] = st[k];
+    if(inv) for(const k of Object.keys(inv)) if(BY_ID[k]) inventory[k] = inv[k];
+    saveState(); saveInventory(); applyStates(); renderInfo();
+  }catch(err){ alert('Ошибка импорта: '+err.message); }
+};
+
+// навбар графа
+let showAllEdges = false;
+document.getElementById('allEdges').onclick = (e) => {
+  showAllEdges = !showAllEdges;
+  e.currentTarget.classList.toggle('btn--on', showAllEdges);
+  cy.batch(() => cy.edges().toggleClass('show', showAllEdges));
+  saveUI();
+};
+let stepIdx = 0;
+const COMFORT_ZOOM = 1.25;
+function focusTree(id){
+  selectNode(id);
+  highlightLineage(id, 'ancestors');
+  cy.animate({ center:{ eles: cy.getElementById(id) }, zoom: COMFORT_ZOOM }, { duration: 400, easing:'ease-in-out-cubic' });
+}
+document.getElementById('nextStep').onclick = () => {
+  const av = TREES.filter(t => t.tier>0 && (state[t.id]||0)===0 && isAvailable(t.id))
+    .sort((a,b)=> a.tier-b.tier || a.id.localeCompare(b.id,'ru'));
+  if(!av.length) return;
+  const t = av[stepIdx % av.length]; stepIdx++;
+  focusTree(t.id);
+};
+// Сколько новых деревьев станет доступно, если вывести `id`
+function unlockScore(id){
+  let c = 0;
+  for(const t of TREES){
+    if(!t.parents || state[t.id]===2 || isAvailable(t.id)) continue;
+    if(t.parents.some(pair => pair.every(p => p===id || parentReady(p)))) c++;
+  }
+  return c;
+}
+document.getElementById('bestStep').onclick = () => {
+  const av = TREES.filter(t => t.tier>0 && (state[t.id]||0)===0 && isAvailable(t.id));
+  if(!av.length) return;
+  av.sort((a,b)=> unlockScore(b.id)-unlockScore(a.id) || a.tier-b.tier || a.id.localeCompare(b.id,'ru'));
+  focusTree(av[0].id);
+};
+
+// тултип по наведению на ноду
+const tip = document.getElementById('tooltip');
+cy.on('mouseover', 'node', evt => {
+  const t = BY_ID[evt.target.id()]; if(!t) return;
+  const fruit = (t.fruit && t.fruit !== '—') ? `<div class="tooltip__fruit">${t.fruit.replace(/\s*\*$/,'')}</div>` : '';
+  const recipe = t.parents ? t.parents[0].join(' + ') : 'из мира';
+  tip.className = 'tooltip is-open t--' + t.tier;
+  tip.innerHTML = `<div class="tooltip__name">${t.id} <span class="tooltip__tier">T${t.tier}</span></div>${fruit}<div class="tooltip__recipe">${recipe}</div>`;
+  const rect = document.getElementById('cy').getBoundingClientRect();
+  const bb = evt.target.renderedBoundingBox();
+  tip.style.left = Math.min(Math.max(rect.left + (bb.x1+bb.x2)/2, 130), window.innerWidth - 130) + 'px';
+  tip.style.top  = (rect.top + bb.y1 - 8) + 'px';
+});
+cy.on('mouseout', 'node', () => tip.classList.remove('is-open'));
+
+// синхронизация заголовков тиров + «лёгкий рендер» при движении
+let panTimer = null;
+cy.on('pan zoom', () => {
+  updateTierHeaders();
+  tip.classList.remove('is-open');
+  if(!document.body.classList.contains('is-panning')) document.body.classList.add('is-panning');
+  clearTimeout(panTimer);
+  panTimer = setTimeout(() => document.body.classList.remove('is-panning'), 160);
+});
+
+// =================== СОХРАНЕНИЕ UI ===================
+const UI_KEY = 'ragu.ui.v1';
+function loadUI(){ try{ return JSON.parse(localStorage.getItem(UI_KEY)) || {}; }catch(e){ return {}; } }
+function saveUI(){
+  localStorage.setItem(UI_KEY, JSON.stringify({
+    layout: currentLayoutKey, onlyAvail, onlyFruit, showAllEdges, bypass: bypassBreed,
+    planHideObtained, planOpen: planOpen(), selected: selectedId, tiers: [...tierVisible]
+  }));
+}
+function restoreUI(){
+  const ui = loadUI();
+  if(Array.isArray(ui.tiers) && ui.tiers.length){
+    tierVisible.clear(); ui.tiers.forEach(x => tierVisible.add(x));
+    tierFiltersEl.querySelectorAll('input').forEach(inp => { inp.checked = tierVisible.has(Number(inp.dataset.tier)); });
+  }
+  onlyAvail = !!ui.onlyAvail;  document.getElementById('onlyAvail').classList.toggle('btn--on', onlyAvail);
+  onlyFruit = !!ui.onlyFruit;  document.getElementById('onlyFruit').classList.toggle('btn--on', onlyFruit);
+  bypassBreed = !!ui.bypass;   document.getElementById('bypass').classList.toggle('btn--amber', bypassBreed);
+  showAllEdges = !!ui.showAllEdges; document.getElementById('allEdges').classList.toggle('btn--on', showAllEdges);
+  if(showAllEdges) cy.edges().addClass('show');
+  planHideObtained = !!ui.planHideObtained;
+  const lay = ui.layout || 'tiers';
+  document.getElementById('layout').value = lay;
+  runLayout(lay);
+  applyFilters();
+  if(ui.planOpen){ document.getElementById('planPanel').classList.add('is-open'); renderPlan(); }
+  if(ui.selected && BY_ID[ui.selected]){ selectNode(ui.selected); highlightLineage(ui.selected, 'ancestors'); }
+  updateTierHeaders();
+}
+
+// =================== СТАРТ ===================
+injectIcons();
+applyStates();
+updateUndoButtons();
+cy.ready(restoreUI);
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  cy.resize();
+  updateTierHeaders();
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    if(currentLayoutKey==='tiers') tiersLayout();
+    else { cy.minZoom(0.001); cy.fit(undefined, 30); lockMinZoom(); }
+  }, 150);
+});
+</script>
+</body>
+</html>

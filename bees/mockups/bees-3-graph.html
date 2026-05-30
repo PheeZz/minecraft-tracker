@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Граф пасеки · Соты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#100a05; --void2:#190f07; --panel:rgba(36,22,11,.92); --inset:#1c1108;
+  --line:rgba(232,176,79,.16); --edge:#43301a;
+  --honey:#f4b53a; --honey-deep:#cf8a24; --amber:#ffcf6b; --wax:#e9c98a;
+  --ink:#f6ecdb; --muted:#b79a72; --dim:#876c4a; --prop:#cf6a2a;
+  --f:#3a8f72; --e:#c2622a;
+  --disp:"Unbounded",sans-serif; --body:"Manrope",system-ui,sans-serif; --mono:"JetBrains Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;height:100%;overflow:hidden;}
+body{background:radial-gradient(70% 60% at 75% -10%,rgba(244,181,58,.12),transparent 60%),linear-gradient(160deg,var(--void),var(--void2));
+  color:var(--ink);font-family:var(--body);font-size:14px;height:100vh;-webkit-font-smoothing:antialiased;}
+.app{display:grid;grid-template-rows:auto 1fr;height:100vh;}
+
+header{display:flex;align-items:center;gap:18px;padding:14px 22px;border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(244,181,58,.05),transparent);flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand .h{width:40px;height:44px;display:grid;place-items:center;font-size:20px;color:#2a1804;
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:linear-gradient(160deg,var(--honey),var(--honey-deep));}
+.brand h1{font-family:var(--disp);font-weight:900;font-size:19px;margin:0;letter-spacing:-.3px;}
+.brand .s{font-family:var(--mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--honey-deep);}
+.combpick{flex:1;min-width:240px;display:flex;align-items:center;gap:10px;background:rgba(0,0,0,.32);border:1px solid var(--edge);border-radius:12px;padding:0 14px;}
+.combpick svg{width:17px;height:17px;color:var(--honey-deep);}
+.combpick input{flex:1;background:none;border:0;color:var(--ink);font:inherit;padding:11px 0;outline:none;}
+.combpick input::placeholder{color:var(--dim);}
+.hbtn{font:inherit;font-weight:600;font-size:12.5px;color:var(--ink);background:rgba(255,255,255,.04);border:1px solid var(--edge);
+  padding:9px 13px;border-radius:11px;cursor:pointer;transition:.15s;white-space:nowrap;}
+.hbtn:hover{border-color:var(--honey-deep);background:rgba(244,181,58,.1);}
+.hbtn.on{background:linear-gradient(160deg,var(--honey),var(--honey-deep));color:#2a1804;border-color:transparent;}
+
+.workspace{display:grid;grid-template-columns:1fr 372px;min-height:0;}
+.stage{position:relative;overflow:hidden;}
+#cy{width:100%;height:100%;}
+.combchips{position:absolute;left:14px;top:12px;right:14px;z-index:10;display:flex;gap:7px;flex-wrap:wrap;max-height:96px;overflow:auto;padding-bottom:4px;}
+.cchip{font-family:var(--mono);font-size:11px;padding:5px 11px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  background:rgba(28,17,8,.8);border:1px solid var(--edge);color:var(--wax);backdrop-filter:blur(4px);transition:.13s;}
+.cchip:hover{border-color:var(--honey-deep);}
+.cchip.on{background:linear-gradient(160deg,var(--honey),var(--honey-deep));color:#2a1804;border-color:transparent;font-weight:700;}
+.cchip .n{opacity:.6;}
+.hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:10;font-size:12px;color:var(--dim);
+  background:rgba(16,10,5,.7);padding:6px 14px;border-radius:999px;border:1px solid var(--line);backdrop-filter:blur(4px);}
+
+aside{border-left:1px solid var(--line);overflow-y:auto;padding:18px;background:linear-gradient(180deg,rgba(244,181,58,.03),transparent 30%);}
+.empty{color:var(--dim);text-align:center;padding:70px 12px;}
+.empty .o{font-size:42px;display:block;margin-bottom:10px;color:var(--honey-deep);}
+.ptitle{font-family:var(--disp);font-weight:800;font-size:22px;line-height:1.05;display:flex;align-items:center;gap:10px;}
+.psrc{font-family:var(--mono);font-size:9px;font-weight:700;padding:3px 7px;border-radius:6px;}
+.psrc.F{background:var(--f);color:#e6f7ef;}.psrc.E{background:var(--e);color:#ffe9da;}
+.plat{font-family:var(--mono);font-size:11px;color:var(--muted);margin:3px 0 0;}
+.sect{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--honey-deep);margin:20px 0 9px;display:flex;gap:9px;align-items:center;}
+.sect::after{content:"";flex:1;height:1px;background:var(--line);}
+.rec{display:flex;align-items:center;gap:8px;padding:6px 0;flex-wrap:wrap;}
+.par{padding:4px 10px;border-radius:9px;background:rgba(244,181,58,.1);border:1px solid var(--edge);font-weight:600;font-size:13px;cursor:pointer;}
+.par:hover{background:rgba(244,181,58,.22);}
+.par.wild{background:rgba(120,90,50,.16);color:var(--muted);font-style:italic;cursor:default;}
+.x{color:var(--prop);font-weight:800;}
+.ch{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--honey-deep);}
+.rnone{color:var(--dim);font-style:italic;font-size:13px;}
+.pr{display:flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid var(--edge);border-radius:10px;margin-bottom:7px;background:rgba(0,0,0,.2);}
+.pr .nm{flex:1;font-weight:600;}
+.pr .pct{font-family:var(--mono);font-weight:700;color:var(--honey);}
+.pr.sp{border-color:var(--prop);}
+.pr .star{color:var(--prop);}
+.producers .bee{display:flex;align-items:center;gap:9px;padding:8px 10px;border:1px solid var(--edge);border-radius:10px;margin-bottom:7px;cursor:pointer;background:rgba(0,0,0,.2);transition:.13s;}
+.producers .bee:hover{border-color:var(--honey);}
+.producers .nm{flex:1;font-weight:600;}
+.producers .pct{font-family:var(--mono);font-weight:700;color:var(--honey);}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brand"><div class="h">⬡</div><div><h1>Граф пасеки</h1><div class="s">Forestry · ExtraBees</div></div></div>
+    <label class="combpick">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Подсветить пчелу по имени…">
+    </label>
+    <button class="hbtn" id="fit">Вписать</button>
+    <button class="hbtn" id="clear">Сброс подсветки</button>
+  </header>
+  <div class="workspace">
+    <div class="stage">
+      <div class="combchips" id="chips"></div>
+      <div id="cy"></div>
+      <div class="hint">Выбери соту-чип сверху → подсветятся пчёлы-производители и вся цепочка их выведения</div>
+    </div>
+    <aside id="panel"><div class="empty"><span class="o">⬡</span>Нажми узел-пчелу на графе или соту-чип сверху.</div></aside>
+  </div>
+</div>
+
+<script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+<script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+<script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
+<script src="bees-data.js"></script>
+<script>
+const BY=Object.fromEntries(BEES.map(b=>[b.id,b]));
+const isComb=n=>/сот/i.test(n);
+const REAL=new Set(BEES.map(b=>b.id));
+
+// граф
+const nodes=BEES.map(b=>({data:{id:b.id, label:b.id, src:b.src,
+  combs:b.prod.filter(p=>isComb(p[0])).length}}));
+const edges=[]; const seen=new Set();
+for(const b of BEES) for(const [p1,p2] of b.par) for(const p of [p1,p2]){
+  if(REAL.has(p)){ const id=p+'>'+b.id; if(!seen.has(id)){seen.add(id); edges.push({data:{id,source:p,target:b.id}});} }
+}
+// предки
+function ancestors(id,acc){acc=acc||new Set(); const b=BY[id]; if(!b)return acc;
+  for(const [p1,p2] of b.par) for(const p of [p1,p2]) if(REAL.has(p)&&!acc.has(p)){acc.add(p);ancestors(p,acc);} return acc;}
+
+// соты -> производители
+const COMBS={};
+for(const b of BEES)for(const[nm,pct,sp]of b.prod) if(isComb(nm))(COMBS[nm]||=[]).push({bee:b.id,pct,sp});
+const combNames=Object.keys(COMBS).sort((a,b)=>COMBS[a].length-COMBS[b].length||a.localeCompare(b,'ru'));
+
+const cy=cytoscape({container:document.getElementById('cy'),elements:{nodes,edges},
+  wheelSensitivity:.22,minZoom:.08,maxZoom:2.2,
+  style:[
+    {selector:'node',style:{'label':'data(label)','color':'#f6ecdb','font-family':'Manrope, sans-serif','font-size':12,'font-weight':600,
+      'text-valign':'center','text-halign':'center','text-wrap':'wrap','text-max-width':120,'width':'label','height':'label',
+      'padding':'10px','shape':'round-rectangle','background-color':'#241509','border-width':1.5,'border-color':'#43301a',
+      'background-opacity':.96,'text-outline-width':0,'transition-property':'opacity,border-color,border-width','transition-duration':'160ms'}},
+    {selector:'node[src="F"]',style:{'border-color':'#3a8f72'}},
+    {selector:'node[src="E"]',style:{'border-color':'#c2622a'}},
+    {selector:'node[combs>0]',style:{'background-color':'#2e1d0d'}},
+    {selector:'edge',style:{'width':1.4,'line-color':'#5a3f1f','target-arrow-color':'#5a3f1f','target-arrow-shape':'triangle',
+      'arrow-scale':.8,'curve-style':'bezier','opacity':.5}},
+    {selector:'.dim',style:{'opacity':.07}},
+    {selector:'node.lit',style:{'border-color':'#f4b53a','border-width':2.5,'background-color':'#3a2510'}},
+    {selector:'node.prod',style:{'border-color':'#ffcf6b','border-width':4,'background-color':'#4a3012',
+      'shadow-blur':24,'shadow-color':'#f4b53a','shadow-opacity':.9,'shadow-offset-x':0,'shadow-offset-y':0}},
+    {selector:'edge.lit',style:{'line-color':'#f4b53a','target-arrow-color':'#f4b53a','opacity':.95,'width':2.4}},
+    {selector:'node.sel',style:{'border-color':'#fff','border-width':3}},
+  ],
+  layout:{name:'dagre',rankDir:'LR',nodeSep:14,rankSep:80,edgeSep:6}
+});
+
+const panel=document.getElementById('panel');
+function recHTML(id){const b=BY[id];if(!b)return'';
+  if(!b.par.length)return'<div class="rnone">дикая — из ульев в мире</div>';
+  return b.par.map(([p1,p2,ch])=>{const mk=p=>REAL.has(p)?`<span class="par" data-b="${p}">${p}</span>`:`<span class="par wild">${p}</span>`;
+    return `<div class="rec">${mk(p1)}<span class="x">×</span>${mk(p2)}<span class="ch">@${ch}%</span></div>`;}).join('');}
+
+function showBee(id){
+  const b=BY[id];if(!b)return;
+  cy.elements().removeClass('sel'); const n=cy.getElementById(id); n.addClass('sel');
+  lineage(id);
+  const prods=b.prod.map(([nm,c,s])=>`<div class="pr${s?' sp':''}"><span class="nm">${nm}</span>${s?'<span class="star">★</span>':''}<span class="pct">${c}%</span></div>`).join('');
+  panel.innerHTML=`<div class="ptitle"><span class="psrc ${b.src}">${b.src==='F'?'FOR':'EXB'}</span>${b.id}</div>
+    <div class="plat">${b.en}</div>
+    <div class="sect">как вывести</div>${recHTML(id)}
+    <div class="sect">продукция (${b.prod.length})</div>${prods||'—'}`;
+  panel.querySelectorAll('.par[data-b]').forEach(e=>e.onclick=()=>showBee(e.dataset.b));
+}
+function lineage(id){
+  const anc=ancestors(id); anc.add(id);
+  cy.batch(()=>{
+    cy.elements().addClass('dim').removeClass('lit prod');
+    anc.forEach(a=>{const nd=cy.getElementById(a); nd.removeClass('dim').addClass('lit');});
+    cy.getElementById(id).removeClass('lit');
+    cy.edges().forEach(e=>{if(anc.has(e.data('source'))&&anc.has(e.data('target'))){e.removeClass('dim').addClass('lit');}});
+  });
+}
+function showComb(name,chip){
+  document.querySelectorAll('.cchip.on').forEach(c=>c.classList.remove('on')); chip&&chip.classList.add('on');
+  const prod=COMBS[name].slice().sort((a,b)=>b.pct-a.pct);
+  const keep=new Set();
+  prod.forEach(p=>{keep.add(p.bee); ancestors(p.bee).forEach(a=>keep.add(a));});
+  cy.batch(()=>{
+    cy.elements().addClass('dim').removeClass('lit prod sel');
+    keep.forEach(k=>cy.getElementById(k).removeClass('dim').addClass('lit'));
+    prod.forEach(p=>cy.getElementById(p.bee).removeClass('lit').addClass('prod'));
+    cy.edges().forEach(e=>{if(keep.has(e.data('source'))&&keep.has(e.data('target')))e.removeClass('dim').addClass('lit');});
+  });
+  const list=prod.map(p=>`<div class="bee" data-b="${p.bee}"><span class="psrc ${BY[p.bee].src}">${BY[p.bee].src==='F'?'F':'E'}</span><span class="nm">${p.bee}</span><span class="pct">${p.pct}%${p.sp?'★':''}</span></div>`).join('');
+  panel.innerHTML=`<div class="ptitle">⬡ ${name}</div>
+    <div class="plat">${prod.length} пчёл дают эту соту · цепочки подсвечены на графе</div>
+    <div class="sect">производители</div><div class="producers">${list}</div>`;
+  panel.querySelectorAll('.bee').forEach(e=>e.onclick=()=>showBee(e.dataset.b));
+}
+
+// чипы сот
+const chips=document.getElementById('chips');
+combNames.forEach(nm=>{const c=document.createElement('button');c.className='cchip';
+  c.innerHTML=`${nm.replace(/ соты$/,'')} <span class="n">${COMBS[nm].length}</span>`;
+  c.onclick=()=>showComb(nm,c); chips.appendChild(c);});
+
+cy.on('tap','node',e=>showBee(e.target.id()));
+document.getElementById('fit').onclick=()=>cy.fit(40);
+document.getElementById('clear').onclick=()=>{cy.elements().removeClass('dim lit prod sel');document.querySelectorAll('.cchip.on').forEach(c=>c.classList.remove('on'));
+  panel.innerHTML='<div class="empty"><span class="o">⬡</span>Нажми узел-пчелу на графе или соту-чип сверху.</div>';};
+document.getElementById('q').addEventListener('input',e=>{const f=e.target.value.trim().toLowerCase();
+  if(!f){cy.elements().removeClass('dim');return;}
+  cy.batch(()=>{cy.nodes().forEach(n=>{const hit=n.id().toLowerCase().includes(f)||(BY[n.id()]&&BY[n.id()].en.toLowerCase().includes(f));
+    n.toggleClass('dim',!hit);}); cy.edges().addClass('dim');});});
+cy.ready(()=>cy.fit(40));
+</script>
+</body>
+</html>
