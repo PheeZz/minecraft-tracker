@@ -84,7 +84,11 @@ function clearHave() {
           :key="row.name"
           class="row"
           :class="{ rare: row.rare, on: row.name === store.curComb, owned: row.own > 0 }"
+          role="button"
+          tabindex="0"
           @click="store.selectComb(row.name)"
+          @keydown.enter.prevent="store.selectComb(row.name)"
+          @keydown.space.prevent="store.selectComb(row.name)"
         >
           <CombIcon :name="row.name" />
           <span class="nm">{{ shortComb(row.name) }}</span>
@@ -97,7 +101,11 @@ function clearHave() {
           :key="row.id"
           class="row"
           :class="{ on: row.id === store.curTarget, owned: store.isHave(row.id) }"
+          role="button"
+          tabindex="0"
           @click="store.selectBee(row.id)"
+          @keydown.enter.prevent="store.selectBee(row.id)"
+          @keydown.space.prevent="store.selectBee(row.id)"
         >
           <span
             class="havchk"
@@ -243,6 +251,10 @@ function clearHave() {
 }
 .row:hover {
   background: rgba(232, 167, 44, 0.12);
+}
+.row:focus-visible {
+  outline: 2px solid var(--honey-dk);
+  outline-offset: -2px;
 }
 .row.on {
   background: rgba(232, 167, 44, 0.2);

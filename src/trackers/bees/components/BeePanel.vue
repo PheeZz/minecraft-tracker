@@ -70,7 +70,11 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
           :key="p.bee"
           class="prod"
           :class="{ on: p.bee === target, owned: store.isHave(p.bee) }"
+          role="button"
+          tabindex="0"
           @click="store.setTarget(p.bee)"
+          @keydown.enter.prevent="store.setTarget(p.bee)"
+          @keydown.space.prevent="store.setTarget(p.bee)"
         >
           <span
             class="havchk"
@@ -230,6 +234,10 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
 .prod:hover {
   border-color: var(--honey);
   transform: translateX(-2px);
+}
+.prod:focus-visible {
+  outline: 2px solid var(--honey-dk);
+  outline-offset: 2px;
 }
 .prod.on {
   border-color: var(--honey);

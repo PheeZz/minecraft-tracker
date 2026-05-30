@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { storage } from '@/shared/persistence/storage'
 import { TRACKERS, type TrackerId } from '@/shared/types'
 
 const route = useRoute()
@@ -8,9 +9,10 @@ const router = useRouter()
 
 const activeTracker = computed<TrackerId>(() => (route.meta.tracker as TrackerId) ?? 'trees')
 
-// Тема трекера активируется атрибутом на корне документа.
+// Тема трекера активируется атрибутом на корне документа; запоминаем последний.
 watchEffect(() => {
   document.documentElement.dataset.tracker = activeTracker.value
+  storage.set('app.tracker', activeTracker.value)
 })
 
 function switchTo(id: TrackerId) {
