@@ -312,11 +312,12 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
       if (node.empty()) return resolve()
       selectNode(id)
       highlightLineage(id, 'ancestors')
-      const reduce =
-        typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches
+      // если граф уничтожат во время анимации (уход с вкладки) — промис всё равно
+      // должен разрешиться, иначе шаг тура зависнет навсегда
+      cy.one('destroy', () => resolve())
       cy.animate(
         { center: { eles: node }, zoom: COMFORT_ZOOM },
-        { duration: reduce ? 0 : 400, easing: 'ease-in-out-cubic', complete: () => resolve() },
+        { duration: motionOk() ? 400 : 0, easing: 'ease-in-out-cubic', complete: () => resolve() },
       )
     })
   }
