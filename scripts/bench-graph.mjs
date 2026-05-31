@@ -6,8 +6,14 @@
 import { chromium } from 'playwright'
 
 const base = process.env.BASE || 'http://localhost:4173'
+const throttle = Number(process.env.THROTTLE || 1)
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+
+if (throttle > 1) {
+  const client = await page.context().newCDPSession(page)
+  await client.send('Emulation.setCPUThrottlingRate', { rate: throttle })
+}
 
 await page.goto(`${base}/trees`, { waitUntil: 'networkidle' })
 await page.waitForSelector('.node')
