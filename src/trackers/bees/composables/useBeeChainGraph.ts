@@ -192,7 +192,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
         : ''
     const pc = has ? '#2f7d5e' : (beeColor(d.id)?.p ?? '#cdbb95')
     const hv = has && d.id !== target ? '<span class="ghav" title="есть на складе">✓</span>' : ''
-    return `<div class="${cls.join(' ')}" style="--pc:${pc}">${beeIconHtml(d.id)}<span class="gn">${d.id}</span>${hv}${d.alt ? '<span class="gflag">⇄</span>' : ''}${ci}</div>`
+    return `<div class="${cls.join(' ')}" data-id="${d.id}" style="--pc:${pc}">${beeIconHtml(d.id)}<span class="gn">${d.id}</span>${hv}${d.alt ? '<span class="gflag">⇄</span>' : ''}${ci}</div>`
   }
 
   // склад выставляется снаружи перед rebuild (используется в шаблоне ноды)

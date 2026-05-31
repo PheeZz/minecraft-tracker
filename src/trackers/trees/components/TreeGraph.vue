@@ -68,17 +68,23 @@ function nextStep() {
   ui.selectedId = t.id
   graph.focus(t.id)
 }
-function bestStep() {
+/** id лучшего доступного дерева (макс. разблокировка) или null. */
+function bestAvailId(): string | null {
   const av = availSorted()
-  if (!av.length) return
+  if (!av.length) return null
   av.sort(
     (a, b) =>
       unlockScore(store.progress, b.id) - unlockScore(store.progress, a.id) ||
       a.tier - b.tier ||
       a.id.localeCompare(b.id, 'ru'),
   )
-  ui.selectedId = av[0]!.id
-  graph.focus(av[0]!.id)
+  return av[0]!.id
+}
+function bestStep() {
+  const id = bestAvailId()
+  if (!id) return
+  ui.selectedId = id
+  graph.focus(id)
 }
 
 const tipTree = () => (tip.value ? BY_ID[tip.value.id] : undefined)
@@ -159,12 +165,22 @@ onBeforeUnmount(() => {
   graph.destroy()
 })
 
-defineExpose({ focus: (id: string) => graph.focus(id), flash: (ids: string[]) => graph.flash(ids) })
+defineExpose({
+  focus: (id: string) => graph.focus(id),
+  flash: (ids: string[]) => graph.flash(ids),
+  // для онбординг-тура:
+  tourBestId: (): string | null => bestAvailId(),
+  tourSpotlight: async (id: string): Promise<void> => {
+    ui.selectedId = id
+    await graph.tourFocus(id)
+  },
+  isReady: (): boolean => graphReady.value,
+})
 </script>
 
 <template>
   <div ref="stageEl" class="stage">
-    <div class="stage__navbar">
+    <div class="stage__navbar" data-tour="trees-navbar">
       <button class="btn" type="button" title="К ближайшему доступному дереву" @click="nextStep">
         <IconBase name="target" />К следующему доступному
       </button>

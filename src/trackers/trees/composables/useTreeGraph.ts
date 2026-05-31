@@ -303,6 +303,24 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     )
   }
 
+  /** Как focus, но возвращает промис, резолвящийся по завершении пан/зума
+     (нужно туру, чтобы подсветить ноду уже на финальной позиции). */
+  function tourFocus(id: string): Promise<void> {
+    return new Promise((resolve) => {
+      if (!cy) return resolve()
+      const node = cy.getElementById(id)
+      if (node.empty()) return resolve()
+      selectNode(id)
+      highlightLineage(id, 'ancestors')
+      const reduce =
+        typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches
+      cy.animate(
+        { center: { eles: node }, zoom: COMFORT_ZOOM },
+        { duration: reduce ? 0 : 400, easing: 'ease-in-out-cubic', complete: () => resolve() },
+      )
+    })
+  }
+
   function fit(): void {
     // только видимые: при активных фильтрах скрытые ноды не должны влиять на вписывание
     cy?.animate({ fit: { eles: cy.elements(':visible'), padding: 30 } }, { duration: 300 })
@@ -518,6 +536,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     clearHighlight,
     selectNode,
     focus,
+    tourFocus,
     fit,
     flash,
     // пауза/возобновление «потока» рёбер — чтобы rAF не крутился, пока вкладка
