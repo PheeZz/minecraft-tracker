@@ -132,12 +132,13 @@ function switchTo(id: TrackerId) {
   text-align: left;
 }
 .switcher__title {
-  font-family: var(--font-display);
-  font-weight: 700;
+  /* фиксируем шрифт переключателя независимо от темы трекера (как на вкладке пчёл) */
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 800;
   font-size: 15px;
 }
 .switcher__kicker {
-  font-family: var(--font-mono);
+  font-family: 'JetBrains Mono', monospace;
   font-size: 9.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
