@@ -10,6 +10,7 @@ import BeeChainGraph from './BeeChainGraph.vue'
 import BeePanel from './BeePanel.vue'
 import BeeInventory from './BeeInventory.vue'
 import CombIcon from './CombIcon.vue'
+import BeeTasksModal from './BeeTasksModal.vue'
 
 const store = useBeesStore()
 const graphRef = ref<InstanceType<typeof BeeChainGraph>>()
@@ -128,6 +129,8 @@ const openTaskCount = computed(
         <BeePanel />
       </div>
     </Transition>
+
+    <BeeTasksModal v-if="store.tasksOpen" />
   </div>
 </template>
 
