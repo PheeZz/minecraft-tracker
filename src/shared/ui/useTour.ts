@@ -22,6 +22,16 @@ function reducedMotion(): boolean {
 }
 
 /**
+ * Привести element шага к типу driver.js. driver требует `() => Element`, а мы
+ * допускаем undefined (ноды может не быть на экране — driver центрирует поповер).
+ * Каст безопасен; параметр-биндинг сохраняет сужение типа внутри замыкания.
+ */
+function toDriverElement(el: TourStep['element']): string | (() => Element) {
+  if (typeof el === 'string') return el
+  return (() => el() ?? undefined) as () => Element
+}
+
+/**
  * Обёртка над driver.js. Шаги передаются фабрикой getSteps() (вычисляются на
  * момент start, т.к. зависят от состояния — напр. «лучшая нода»). before() шага
  * выполняется до его показа: переходы перехвачены (onNextClick/onPrevClick), мы
@@ -43,11 +53,7 @@ export function useTour(
     const reduce = reducedMotion()
 
     const driveSteps = steps.map((s) => ({
-      element:
-        typeof s.element === 'function'
-          ? ((() =>
-              (s.element as () => Element | null | undefined)() ?? undefined) as () => Element)
-          : s.element,
+      element: toDriverElement(s.element),
       popover: { title: s.title, description: s.text, side: s.side ?? ('bottom' as const) },
     }))
 
@@ -58,24 +64,34 @@ export function useTour(
       opts.onDone?.()
     }
 
+    // before() шага может быть долгим (зум к ноде); пока он выполняется, кнопка
+    // «Далее» остаётся кликабельной → защищаемся от повторных переходов.
+    let advancing = false
+    async function runBefore(step: TourStep | undefined): Promise<void> {
+      if (!step?.before) return
+      try {
+        await step.before()
+      } catch (e) {
+        console.error('[tour before]', e)
+      }
+    }
+
     async function advance(dir: 1 | -1): Promise<void> {
-      if (!drv) return
-      const i = drv.getActiveIndex() ?? 0
-      const targetIdx = i + dir
-      if (targetIdx < 0) return
-      if (targetIdx >= steps.length) {
-        drv.destroy()
-        return
-      }
-      const target = steps[targetIdx]
-      if (target?.before) {
-        try {
-          await target.before()
-        } catch (e) {
-          console.error('[tour before]', e)
+      if (!drv || advancing) return
+      advancing = true
+      try {
+        const i = drv.getActiveIndex() ?? 0
+        const targetIdx = i + dir
+        if (targetIdx < 0) return
+        if (targetIdx >= steps.length) {
+          drv.destroy()
+          return
         }
+        await runBefore(steps[targetIdx])
+        drv.moveTo(targetIdx)
+      } finally {
+        advancing = false
       }
-      drv.moveTo(targetIdx)
     }
 
     drv = driver({
