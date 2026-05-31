@@ -39,6 +39,12 @@ export const GRAPH_STYLE: StylesheetStyle[] = [
       'target-arrow-color': 'data(col)',
       width: 1.6,
       opacity: 0.16,
+      // Плавные переходы стиля рёбер: при выборе/подсветке/затемнении цвет, толщина и
+      // прозрачность меняются мягко, а не скачком. Анимация идёт только в момент смены
+      // стиля (нет постоянной нагрузки на кадр).
+      'transition-property': 'line-color, target-arrow-color, width, opacity',
+      'transition-duration': '0.2s',
+      'transition-timing-function': 'ease-out',
     },
   },
   { selector: 'edge.show', style: { opacity: 0.5 } },
