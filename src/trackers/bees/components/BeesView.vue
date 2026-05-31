@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { BEE_BY_ID } from '../data/bees.data'
 import { COMBS } from '../domain/combs'
 import { combColor } from '../domain/colors'
@@ -11,8 +11,21 @@ import BeeInventory from './BeeInventory.vue'
 import CombIcon from './CombIcon.vue'
 import BeeTasksModal from './BeeTasksModal.vue'
 import IconBase from '@/shared/ui/IconBase.vue'
+import { storage } from '@/shared/persistence/storage'
+import { useTour } from '@/shared/ui/useTour'
+import HintSpot from '@/shared/ui/HintSpot.vue'
+import { buildBeesTour } from '../onboarding/beesTour'
 
 const store = useBeesStore()
+const tour = useTour(() => buildBeesTour({ selectComb: (n) => store.selectComb(n) }), {
+  onDone: () => storage.set('onboard.bees', true),
+})
+onMounted(() => {
+  if (!storage.get('onboard.bees', false)) {
+    // даём модбару/рейлу отрисоваться; граф появится по демо-выбору внутри тура
+    setTimeout(() => void tour.start(), 500)
+  }
+})
 const graphRef = ref<InstanceType<typeof BeeChainGraph>>()
 
 const combPct = computed(() => {
@@ -27,7 +40,7 @@ const recipeCount = computed(() =>
 <template>
   <div class="beeswrap">
     <!-- Полоса-переключатель режимов: видна всегда, чинит спрятанную кнопку инвентаря. -->
-    <div class="modebar">
+    <div class="modebar" data-tour="bees-modebar">
       <div class="modebar__seg" role="group" aria-label="Режим">
         <button
           type="button"
@@ -46,18 +59,27 @@ const recipeCount = computed(() =>
           <IconBase name="box" />Инвентарь
         </button>
       </div>
-      <button type="button" class="modebar__tasks" @click="store.openTasks()">
+      <button
+        type="button"
+        class="modebar__tasks"
+        data-tour="bees-tasks"
+        @click="store.openTasks()"
+      >
         <IconBase name="list" />Задачи
         <span v-if="store.openTaskCount" class="modebar__badge">{{ store.openTaskCount }}</span>
       </button>
+      <HintSpot
+        text="Инвентарь — отмечаешь выведенных пчёл (склад). Задачи — список крафтов с нужными сотами и прогрессом."
+        side="bottom"
+      />
     </div>
 
     <Transition name="inv" mode="out-in">
       <BeeInventory v-if="store.view === 'inventory'" key="inv" class="bees-inv" />
       <div v-else key="layout" class="bees">
-        <BeeRail />
+        <BeeRail data-tour="bees-rail" />
 
-        <div class="stage">
+        <div class="stage" data-tour="bees-graph">
           <div key="graph" class="stagewrap">
             <div class="crumb">
               <template v-if="store.curTarget">
@@ -117,7 +139,7 @@ const recipeCount = computed(() =>
           </div>
         </div>
 
-        <BeePanel />
+        <BeePanel data-tour="bees-panel" />
       </div>
     </Transition>
 
