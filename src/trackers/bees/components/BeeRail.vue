@@ -37,10 +37,6 @@ const beeRows = computed(() =>
     )
     .map((b) => ({ id: b.id, depth: store.depthOf(b.id), recipes: b.parents.length })),
 )
-
-function clearHave() {
-  if (store.haveCount && confirm('Очистить весь склад?')) store.clearHave()
-}
 </script>
 
 <template>
@@ -74,7 +70,6 @@ function clearHave() {
       <button :class="{ on: store.invOnly }" type="button" @click="store.invOnly = !store.invOnly">
         только мои
       </button>
-      <button type="button" @click="clearHave">сбросить</button>
     </div>
 
     <div class="list">
