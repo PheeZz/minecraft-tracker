@@ -7,6 +7,7 @@ import type { LayoutKey } from '../graph/layouts'
 import TreeCard from './TreeCard.vue'
 import PlanPanel from './PlanPanel.vue'
 import TierFilter from './TierFilter.vue'
+import HintSpot from '@/shared/ui/HintSpot.vue'
 
 const store = useTreesStore()
 const ui = useTreesUiStore()
@@ -45,8 +46,8 @@ function reset() {
 </script>
 
 <template>
-  <aside class="sidebar">
-    <div class="search">
+  <aside class="sidebar" data-tour="trees-sidebar">
+    <div class="search" data-tour="trees-search">
       <IconBase name="search" />
       <input
         v-model="ui.searchQuery"
@@ -59,7 +60,12 @@ function reset() {
     <h2 class="sidebar__title">Выбранное дерево</h2>
     <TreeCard />
 
-    <h2 class="sidebar__title">Планирование</h2>
+    <h2 class="sidebar__title">
+      Планирование
+      <HintSpot
+        text="«Только доступные» прячет ещё не открытые деревья. «Только цепочки к плодам» оставляет ветки, ведущие к плодам."
+      />
+    </h2>
     <div class="row">
       <button
         class="btn btn--wide"
@@ -92,7 +98,10 @@ function reset() {
     </div>
     <PlanPanel v-if="ui.planOpen" />
 
-    <h2 class="sidebar__title">Инструменты</h2>
+    <h2 class="sidebar__title">
+      Инструменты
+      <HintSpot text="Отмена/повтор действий, выбор раскладки, экспорт/импорт прогресса в JSON." />
+    </h2>
     <div class="row">
       <button class="btn" type="button" :disabled="!store.canUndo" @click="store.undo()">
         <IconBase name="undo" />Отменить
@@ -102,7 +111,7 @@ function reset() {
       </button>
     </div>
     <div class="row">
-      <select v-model="ui.layout" class="select">
+      <select v-model="ui.layout" class="select" data-tour="trees-layout">
         <option v-for="o in LAYOUT_OPTIONS" :key="o.value" :value="o.value">{{ o.label }}</option>
       </select>
     </div>
@@ -137,10 +146,10 @@ function reset() {
     </div>
 
     <h2 class="sidebar__title">Фильтр по тирам</h2>
-    <TierFilter />
+    <div data-tour="trees-tiers"><TierFilter /></div>
 
     <h2 class="sidebar__title">Легенда</h2>
-    <div class="legend">
+    <div class="legend" data-tour="trees-legend">
       <div class="legend__item">
         <span class="legend__swatch legend__swatch--tier" />Рамка, бейдж и точка = цвет тира
       </div>

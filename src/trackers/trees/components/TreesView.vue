@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onActivated, onDeactivated, onMounted, onUnmounted, ref } from 'vue'
+import { onActivated, onDeactivated, onMounted, onUnmounted, ref, watch } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
 import { useTreesStore } from '../stores/useTreesStore'
 import { provideTreeActions, type GraphHandle } from '../composables/useTreeActions'
@@ -8,9 +8,34 @@ import TreeSidebar from './TreeSidebar.vue'
 import HeroStats from './HeroStats.vue'
 import BreedModal from './BreedModal.vue'
 import InventoryPopup from './InventoryPopup.vue'
+import { storage } from '@/shared/persistence/storage'
+import { useTour } from '@/shared/ui/useTour'
+import { buildTreesTour } from '../onboarding/treesTour'
 
 const store = useTreesStore()
 const graphRef = ref<InstanceType<typeof TreeGraph>>()
+
+const tour = useTour(
+  () =>
+    buildTreesTour({
+      tourBestId: () => graphRef.value?.tourBestId() ?? null,
+      tourSpotlight: (id) => graphRef.value?.tourSpotlight(id) ?? Promise.resolve(),
+    }),
+  { onDone: () => storage.set('onboard.trees', true) },
+)
+
+// авто-старт один раз, когда граф готов (ноды отрисованы → можно якориться)
+let autoStarted = false
+watch(
+  () => graphRef.value?.isReady?.(),
+  (ready) => {
+    if (ready && !autoStarted && !storage.get('onboard.trees', false)) {
+      autoStarted = true
+      void tour.start()
+    }
+  },
+  { immediate: true },
+)
 
 // Действия предоставляются с ленивым доступом к графу (заполнится после mount).
 provideTreeActions(() => graphRef.value as GraphHandle | undefined)
@@ -48,6 +73,9 @@ onUnmounted(() => document.removeEventListener('keydown', onKey))
         </div>
       </div>
       <HeroStats />
+      <button class="topbar__tour" type="button" title="Запустить обзор" @click="tour.start()">
+        ? Обзор
+      </button>
     </header>
 
     <div class="workspace">
@@ -106,5 +134,22 @@ onUnmounted(() => document.removeEventListener('keydown', onKey))
   display: grid;
   grid-template-columns: minmax(0, 1fr) 480px;
   min-height: 0;
+}
+.topbar__tour {
+  margin-left: auto;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink2, #cdbb98);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 7px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.topbar__tour:hover {
+  border-color: var(--leaf, var(--honey-dk));
+  color: var(--leaf, var(--honey-dk));
 }
 </style>
