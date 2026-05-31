@@ -5,9 +5,11 @@ import { BEES, BEE_BY_ID } from '../data/bees.data'
 import { type BeeSource } from '../domain/types'
 import { COMBS, type CombProducer } from '../domain/combs'
 import { makeDepth } from '../domain/graph'
+import type { BeeTask } from '../domain/tasks'
 
 const HAVE_KEY = 'bees.have'
 const INV_PREFS_KEY = 'bees.invPrefs'
+const TASKS_KEY = 'bees.tasks'
 
 export type BeeMode = 'comb' | 'bee'
 
@@ -49,8 +51,12 @@ export const useBeesStore = defineStore('bees', () => {
   const mode = ref<BeeMode>('comb')
   const curComb = ref<string | null>(null)
   const curTarget = ref<string | null>(null)
-  /** Открыт ли раздел инвентаря (замещает канвас-цепочку). */
-  const inventoryOpen = ref(false)
+  /** Текущий основной экран области пчёл. */
+  const view = ref<'graph' | 'inventory'>('graph')
+  /** Открыта ли модалка задач (независима от view, рисуется поверх). */
+  const tasksOpen = ref(false)
+  /** Список задач игрока (цель-предмет → требуемые соты). */
+  const tasks = ref<BeeTask[]>(storage.get<BeeTask[]>(TASKS_KEY, []))
 
   // настройки инвентаря (сорт/фильтр/свёрнутые секции) — один сохраняемый ключ
   const savedPrefs = storage.get<InvPrefs>(INV_PREFS_KEY, {
@@ -174,8 +180,48 @@ export const useBeesStore = defineStore('bees', () => {
   function setTarget(id: string): void {
     curTarget.value = id
   }
-  function toggleInventory(): void {
-    inventoryOpen.value = !inventoryOpen.value
+  function setView(v: 'graph' | 'inventory'): void {
+    view.value = v
+  }
+  function openTasks(): void {
+    tasksOpen.value = true
+  }
+  function closeTasks(): void {
+    tasksOpen.value = false
+  }
+  function toggleTasks(): void {
+    tasksOpen.value = !tasksOpen.value
+  }
+
+  function persistTasks(): void {
+    storage.set(TASKS_KEY, tasks.value)
+  }
+  function dedupe(combs: string[]): string[] {
+    return [...new Set(combs)]
+  }
+  function addTask(name: string, combs: string[]): void {
+    tasks.value = [...tasks.value, { id: crypto.randomUUID(), name, combs: dedupe(combs) }]
+    persistTasks()
+  }
+  function updateTask(id: string, patch: { name?: string; combs?: string[] }): void {
+    tasks.value = tasks.value.map((t) =>
+      t.id === id
+        ? {
+            ...t,
+            ...(patch.name != null ? { name: patch.name } : {}),
+            ...(patch.combs ? { combs: dedupe(patch.combs) } : {}),
+          }
+        : t,
+    )
+    persistTasks()
+  }
+  function removeTask(id: string): void {
+    tasks.value = tasks.value.filter((t) => t.id !== id)
+    persistTasks()
+  }
+  function toggleTaskCollapsed(id: string): void {
+    tasks.value = tasks.value.map((t) => (t.id === id ? { ...t, collapsed: !t.collapsed } : t))
+    persistTasks()
   }
 
   return {
@@ -185,7 +231,9 @@ export const useBeesStore = defineStore('bees', () => {
     mode,
     curComb,
     curTarget,
-    inventoryOpen,
+    view,
+    tasksOpen,
+    tasks,
     invSort,
     invFilter,
     collapsedSources,
@@ -208,6 +256,13 @@ export const useBeesStore = defineStore('bees', () => {
     selectComb,
     selectBee,
     setTarget,
-    toggleInventory,
+    setView,
+    openTasks,
+    closeTasks,
+    toggleTasks,
+    addTask,
+    updateTask,
+    removeTask,
+    toggleTaskCollapsed,
   }
 })

@@ -81,3 +81,57 @@ describe('producersOf / выбор', () => {
     expect(s.curTarget).toBe('Знатная')
   })
 })
+
+describe('навигация view/tasksOpen', () => {
+  it('view по умолчанию graph, setView переключает', () => {
+    const s = useBeesStore()
+    expect(s.view).toBe('graph')
+    s.setView('inventory')
+    expect(s.view).toBe('inventory')
+  })
+  it('tasksOpen независим, open/close/toggle', () => {
+    const s = useBeesStore()
+    expect(s.tasksOpen).toBe(false)
+    s.openTasks()
+    expect(s.tasksOpen).toBe(true)
+    s.closeTasks()
+    expect(s.tasksOpen).toBe(false)
+    s.toggleTasks()
+    expect(s.tasksOpen).toBe(true)
+  })
+})
+
+describe('CRUD задач', () => {
+  it('addTask создаёт задачу с id и дедупом сот', () => {
+    const s = useBeesStore()
+    s.addTask('Предмет №1', ['Медовые соты', 'Медовые соты', 'Фруктовые соты'])
+    expect(s.tasks).toHaveLength(1)
+    expect(s.tasks[0]!.name).toBe('Предмет №1')
+    expect(s.tasks[0]!.combs).toEqual(['Медовые соты', 'Фруктовые соты'])
+    expect(typeof s.tasks[0]!.id).toBe('string')
+    expect(s.tasks[0]!.id.length).toBeGreaterThan(0)
+  })
+  it('updateTask меняет name/combs (с дедупом)', () => {
+    const s = useBeesStore()
+    s.addTask('A', ['Медовые соты'])
+    const id = s.tasks[0]!.id
+    s.updateTask(id, { name: 'B', combs: ['Фруктовые соты', 'Фруктовые соты'] })
+    expect(s.tasks[0]!.name).toBe('B')
+    expect(s.tasks[0]!.combs).toEqual(['Фруктовые соты'])
+  })
+  it('removeTask удаляет', () => {
+    const s = useBeesStore()
+    s.addTask('A', ['Медовые соты'])
+    s.removeTask(s.tasks[0]!.id)
+    expect(s.tasks).toHaveLength(0)
+  })
+  it('toggleTaskCollapsed переключает флаг', () => {
+    const s = useBeesStore()
+    s.addTask('A', ['Медовые соты'])
+    const id = s.tasks[0]!.id
+    s.toggleTaskCollapsed(id)
+    expect(s.tasks[0]!.collapsed).toBe(true)
+    s.toggleTaskCollapsed(id)
+    expect(s.tasks[0]!.collapsed).toBe(false)
+  })
+})
