@@ -42,6 +42,7 @@ export function useTour(
   opts: { onDone?: () => void } = {},
 ): TourController {
   let drv: Driver | null = null
+  let teardownBlur: (() => void) | null = null
 
   async function start(): Promise<void> {
     if (drv?.isActive()) return
@@ -53,6 +54,47 @@ export function useTour(
     await import('./tour.css') // наша тема поверх дефолтов driver (тот же ленивый чанк)
     const reduce = reducedMotion()
 
+    // Слой размытия с «дыркой» вокруг активного элемента. Фон размывается, фокус-
+    // прямоугольник вырезается через clip-path(evenodd). Не зависит от stacking-
+    // context (в отличие от подъёма z-index самого элемента, который не работает для
+    // нод графа внутри transform-контейнеров node-html-label). Под reduced-motion
+    // слой не создаём.
+    let blurEl: HTMLDivElement | null = null
+    function syncBlur(el: Element | null | undefined): void {
+      if (reduce) return
+      if (!blurEl) {
+        blurEl = document.createElement('div')
+        blurEl.className = 'mc-tour-blur'
+        document.body.appendChild(blurEl)
+      }
+      const vw = window.innerWidth
+      const vh = window.innerHeight
+      if (!el) {
+        blurEl.style.clipPath = 'none'
+        return
+      }
+      const rc = el.getBoundingClientRect()
+      const pad = 8
+      const x = Math.max(0, rc.left - pad)
+      const y = Math.max(0, rc.top - pad)
+      const x2 = Math.min(vw, rc.right + pad)
+      const y2 = Math.min(vh, rc.bottom + pad)
+      const cp = `path(evenodd,"M0 0H${vw}V${vh}H0Z M${x} ${y}H${x2}V${y2}H${x} Z")`
+      blurEl.style.clipPath = cp
+      blurEl.style.setProperty('-webkit-clip-path', cp)
+    }
+    const onReflow = (): void => syncBlur(drv?.getActiveElement() ?? null)
+    if (!reduce) {
+      window.addEventListener('resize', onReflow)
+      window.addEventListener('scroll', onReflow, true)
+    }
+    teardownBlur = () => {
+      window.removeEventListener('resize', onReflow)
+      window.removeEventListener('scroll', onReflow, true)
+      blurEl?.remove()
+      blurEl = null
+    }
+
     const driveSteps = steps.map((s) => ({
       element: toDriverElement(s.element),
       popover: { title: s.title, description: s.text, side: s.side ?? ('bottom' as const) },
@@ -62,6 +104,8 @@ export function useTour(
     const finish = (): void => {
       if (done) return
       done = true
+      teardownBlur?.()
+      teardownBlur = null
       opts.onDone?.()
     }
 
@@ -114,6 +158,7 @@ export function useTour(
       onPrevClick: () => {
         void advance(-1)
       },
+      onHighlighted: (el) => syncBlur(el ?? null),
       onCloseClick: () => drv?.destroy(),
       onDestroyed: finish,
     })
@@ -129,6 +174,8 @@ export function useTour(
   }
 
   function destroy(): void {
+    teardownBlur?.()
+    teardownBlur = null
     drv?.destroy()
     drv = null
   }
