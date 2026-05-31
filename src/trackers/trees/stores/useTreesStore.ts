@@ -127,6 +127,14 @@ export const useTreesStore = defineStore('trees', () => {
   function adjustInv(id: string, kind: InvKind, delta: number): void {
     setInv(id, kind, inv(id)[kind] + delta)
   }
+  /**
+   * При получении дерева у игрока автоматически есть 1 его саженец.
+   * Не понижаем, если саженцев уже больше; на снятие отметки (→0) не трогаем.
+   * Без истории/persist — вызывается внутри breed()/setState() под одним снапшотом.
+   */
+  function ensureOwnSapling(id: string): void {
+    setInvRaw(id, 'sap', Math.max(inventory.value[id]?.sap ?? 0, 1))
+  }
 
   // ---------- прогресс ----------
   /**
@@ -139,6 +147,7 @@ export const useTreesStore = defineStore('trees', () => {
     if (!(id in BY_ID)) return
     pushHistory()
     progress.value[id] = state
+    if (state === 2) ensureOwnSapling(id)
     persist()
   }
   /**
@@ -151,6 +160,7 @@ export const useTreesStore = defineStore('trees', () => {
     setInvRaw(sapTree, 'sap', (inventory.value[sapTree]?.sap ?? 0) - 1)
     setInvRaw(polTree, 'pol', (inventory.value[polTree]?.pol ?? 0) - 1)
     progress.value[id] = 2
+    ensureOwnSapling(id)
     persist()
   }
 
@@ -201,6 +211,7 @@ export const useTreesStore = defineStore('trees', () => {
     const fruitsTotal = UNIQUE_FRUITS.length
     const fruitsUnlockedCount = UNIQUE_FRUITS.filter((f) => fruitUnlocked(progress.value, f)).length
     const pct = breedable.length ? Math.round((bred / breedable.length) * 100) : 0
+    const fruitPct = fruitsTotal ? Math.round((fruitsUnlockedCount / fruitsTotal) * 100) : 0
 
     // Саженцы и пыльца взаимозаменяемы: полезный вклад делим поровну между трекерами
     // (ceil → саженцы, floor → пыльца), капаем числом оставшихся скрещиваний.
@@ -229,6 +240,7 @@ export const useTreesStore = defineStore('trees', () => {
       fruitsUnlocked: fruitsUnlockedCount,
       fruitsTotal,
       pct,
+      fruitPct,
       haveSap,
       planSap,
       havePol,

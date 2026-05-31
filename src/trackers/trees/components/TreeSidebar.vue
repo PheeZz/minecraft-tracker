@@ -63,7 +63,7 @@ function reset() {
     <h2 class="sidebar__title">
       Планирование
       <HintSpot
-        text="«Только доступные» прячет ещё не открытые деревья. «Только цепочки к плодам» оставляет ветки, ведущие к плодам."
+        text="«Только доступные» прячет ещё не открытые деревья. «Только цепочки к плодам» оставляет ветки, ведущие к плодам. «Только плодовитые» — лишь деревья, дающие плод."
       />
     </h2>
     <div class="row">
@@ -84,6 +84,16 @@ function reset() {
         @click="ui.onlyFruit = !ui.onlyFruit"
       >
         <IconBase name="fruit" />Только цепочки к плодам
+      </button>
+    </div>
+    <div class="row">
+      <button
+        class="btn btn--wide"
+        :class="{ 'btn--on': ui.onlyFruitful }"
+        type="button"
+        @click="ui.onlyFruitful = !ui.onlyFruitful"
+      >
+        <IconBase name="fruit" />Только плодовитые деревья
       </button>
     </div>
     <div class="row">

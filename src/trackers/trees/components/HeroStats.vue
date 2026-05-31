@@ -5,35 +5,69 @@ import { useTreesStore } from '../stores/useTreesStore'
 
 const store = useTreesStore()
 const C = 163.4
-const dashOffset = computed(() => C * (1 - store.hero.pct / 100))
+const bredOffset = computed(() => C * (1 - store.hero.pct / 100))
+const fruitOffset = computed(() => C * (1 - store.hero.fruitPct / 100))
 </script>
 
 <template>
   <div class="hero">
-    <div class="hero__ring">
-      <svg class="hero__ring-svg" width="58" height="58">
-        <circle
-          cx="29"
-          cy="29"
-          r="26"
-          fill="none"
-          stroke="rgba(255,255,255,.08)"
-          stroke-width="6"
-        />
-        <circle
-          class="hero__ring-fg"
-          cx="29"
-          cy="29"
-          r="26"
-          fill="none"
-          stroke="var(--leaf)"
-          stroke-width="6"
-          stroke-linecap="round"
-          :stroke-dasharray="C"
-          :stroke-dashoffset="dashOffset"
-        />
-      </svg>
-      <div class="hero__pct">{{ store.hero.pct }}%</div>
+    <div class="hero__rings">
+      <div class="hero__ring">
+        <div class="hero__ring-circle">
+          <svg class="hero__ring-svg" width="58" height="58">
+            <circle
+              cx="29"
+              cy="29"
+              r="26"
+              fill="none"
+              stroke="rgba(255,255,255,.08)"
+              stroke-width="6"
+            />
+            <circle
+              class="hero__ring-fg"
+              cx="29"
+              cy="29"
+              r="26"
+              fill="none"
+              stroke="var(--leaf)"
+              stroke-width="6"
+              stroke-linecap="round"
+              :stroke-dasharray="C"
+              :stroke-dashoffset="bredOffset"
+            />
+          </svg>
+          <div class="hero__pct">{{ store.hero.pct }}%</div>
+        </div>
+        <span class="hero__ring-cap">Выведено</span>
+      </div>
+      <div class="hero__ring hero__ring--fruit">
+        <div class="hero__ring-circle">
+          <svg class="hero__ring-svg" width="58" height="58">
+            <circle
+              cx="29"
+              cy="29"
+              r="26"
+              fill="none"
+              stroke="rgba(255,255,255,.08)"
+              stroke-width="6"
+            />
+            <circle
+              class="hero__ring-fg"
+              cx="29"
+              cy="29"
+              r="26"
+              fill="none"
+              stroke="var(--amber)"
+              stroke-width="6"
+              stroke-linecap="round"
+              :stroke-dasharray="C"
+              :stroke-dashoffset="fruitOffset"
+            />
+          </svg>
+          <div class="hero__pct hero__pct--fruit">{{ store.hero.fruitPct }}%</div>
+        </div>
+        <span class="hero__ring-cap">Плоды</span>
+      </div>
     </div>
     <div class="hero__stats">
       <div class="hero__stat">
@@ -77,11 +111,21 @@ const dashOffset = computed(() => C * (1 - store.hero.pct / 100))
   align-items: center;
   gap: 22px;
 }
+.hero__rings {
+  display: flex;
+  gap: 16px;
+  flex: none;
+}
 .hero__ring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.hero__ring-circle {
   position: relative;
   width: 58px;
   height: 58px;
-  flex: none;
 }
 .hero__ring-svg {
   transform: rotate(-90deg);
@@ -90,6 +134,9 @@ const dashOffset = computed(() => C * (1 - store.hero.pct / 100))
 .hero__ring-fg {
   filter: drop-shadow(0 0 6px rgba(143, 209, 79, 0.6));
   transition: stroke-dashoffset 0.4s;
+}
+.hero__ring--fruit .hero__ring-fg {
+  filter: drop-shadow(0 0 6px rgba(230, 184, 100, 0.55));
 }
 .hero__pct {
   position: absolute;
@@ -100,6 +147,18 @@ const dashOffset = computed(() => C * (1 - store.hero.pct / 100))
   font-weight: 800;
   font-size: 14px;
   color: var(--leaf);
+}
+.hero__pct--fruit {
+  color: var(--amber);
+}
+.hero__ring-cap {
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero__ring--fruit .hero__ring-cap {
+  color: var(--amber);
 }
 .hero__stats {
   display: flex;

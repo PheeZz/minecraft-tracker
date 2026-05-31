@@ -10,6 +10,7 @@ interface UiSnapshot {
   layout: LayoutKey
   onlyAvail: boolean
   onlyFruit: boolean
+  onlyFruitful: boolean
   showAllEdges: boolean
   bypass: boolean
   planOpen: boolean
@@ -27,6 +28,7 @@ export const useTreesUiStore = defineStore('trees-ui', () => {
   const layout = ref<LayoutKey>(saved.layout ?? 'tiers')
   const onlyAvail = ref(saved.onlyAvail ?? false)
   const onlyFruit = ref(saved.onlyFruit ?? false)
+  const onlyFruitful = ref(saved.onlyFruitful ?? false)
   const showAllEdges = ref(saved.showAllEdges ?? false)
   const bypass = ref(saved.bypass ?? false)
   const planOpen = ref(saved.planOpen ?? false)
@@ -47,7 +49,11 @@ export const useTreesUiStore = defineStore('trees-ui', () => {
   }
 
   const filtersActive = computed(
-    () => onlyAvail.value || onlyFruit.value || visibleTiers.size < ALL_TIERS.length,
+    () =>
+      onlyAvail.value ||
+      onlyFruit.value ||
+      onlyFruitful.value ||
+      visibleTiers.size < ALL_TIERS.length,
   )
 
   // персистентность — единым снимком при любом изменении
@@ -56,6 +62,7 @@ export const useTreesUiStore = defineStore('trees-ui', () => {
       layout,
       onlyAvail,
       onlyFruit,
+      onlyFruitful,
       showAllEdges,
       bypass,
       planOpen,
@@ -68,6 +75,7 @@ export const useTreesUiStore = defineStore('trees-ui', () => {
         layout: layout.value,
         onlyAvail: onlyAvail.value,
         onlyFruit: onlyFruit.value,
+        onlyFruitful: onlyFruitful.value,
         showAllEdges: showAllEdges.value,
         bypass: bypass.value,
         planOpen: planOpen.value,
@@ -84,6 +92,7 @@ export const useTreesUiStore = defineStore('trees-ui', () => {
     layout,
     onlyAvail,
     onlyFruit,
+    onlyFruitful,
     showAllEdges,
     bypass,
     planOpen,

@@ -59,6 +59,7 @@ export interface FilterOptions {
   visibleTiers: ReadonlySet<number>
   onlyAvail: boolean
   onlyFruit: boolean
+  onlyFruitful: boolean
 }
 
 const COMFORT_ZOOM = 1.25
@@ -392,6 +393,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
         const t = BY_ID[id]
         let visible = !!t && opts.visibleTiers.has(t.tier)
         if (opts.onlyFruit) visible = visible && FRUIT_CHAIN.has(id)
+        if (opts.onlyFruitful) visible = visible && !!t?.fruit
         if (opts.onlyAvail) visible = visible && (availKeep!.has(id) || n.data('st') === 2)
         // Меняем данные/класс ТОЛЬКО при фактической смене видимости. Иначе на первом
         // вызове hide идёт undefined→false у всех нод, что шлёт 'data' по всем 131 →

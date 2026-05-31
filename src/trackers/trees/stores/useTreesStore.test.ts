@@ -65,6 +65,46 @@ describe('breed со списанием', () => {
   })
 })
 
+describe('авто-саженец при получении', () => {
+  it('setState(→2) проставляет 1 саженец полученного дерева', () => {
+    const s = useTreesStore()
+    expect(s.inv('Бук европейский').sap).toBe(0)
+    s.setState('Бук европейский', 2)
+    expect(s.inv('Бук европейский').sap).toBe(1)
+  })
+
+  it('breed тоже даёт 1 саженец выведенного дерева (помимо списания родителей)', () => {
+    const s = useTreesStore()
+    s.adjustInv('Яблочный дуб', 'sap', 1)
+    s.adjustInv('Белая берёза', 'pol', 1)
+    s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    expect(s.inv('Бук европейский').sap).toBe(1)
+  })
+
+  it('не понижает, если саженцев уже больше', () => {
+    const s = useTreesStore()
+    s.adjustInv('Бук европейский', 'sap', 5)
+    s.setState('Бук европейский', 2)
+    expect(s.inv('Бук европейский').sap).toBe(5)
+  })
+
+  it('снятие отметки (→0) не добавляет и не удаляет саженцы', () => {
+    const s = useTreesStore()
+    s.setState('Бук европейский', 2)
+    expect(s.inv('Бук европейский').sap).toBe(1)
+    s.setState('Бук европейский', 0)
+    expect(s.inv('Бук европейский').sap).toBe(1) // остаётся, не трогаем
+  })
+
+  it('undo откатывает и авто-саженец вместе со статусом', () => {
+    const s = useTreesStore()
+    s.setState('Бук европейский', 2)
+    s.undo()
+    expect(s.progress['Бук европейский']).toBe(0)
+    expect(s.inv('Бук европейский').sap).toBe(0)
+  })
+})
+
 describe('undo / redo', () => {
   it('откатывает и повторяет изменение состояния', () => {
     const s = useTreesStore()
@@ -203,6 +243,18 @@ describe('hero-метрики', () => {
     const before = s.hero.bred
     s.setState('Бук европейский', 2)
     expect(s.hero.bred).toBe(before + 1)
+  })
+
+  it('fruitPct = округлённая доля собранных плодов и растёт при разблокировке', () => {
+    const s = useTreesStore()
+    const ratio = (h: typeof s.hero) => Math.round((h.fruitsUnlocked / h.fruitsTotal) * 100)
+    expect(s.hero.fruitPct).toBe(ratio(s.hero))
+    expect(s.hero.fruitPct).toBeGreaterThanOrEqual(0)
+    expect(s.hero.fruitPct).toBeLessThanOrEqual(100)
+    const before = s.hero.fruitsUnlocked
+    s.setState('Сакура', 2) // единственный производитель «Вишни»
+    expect(s.hero.fruitsUnlocked).toBe(before + 1)
+    expect(s.hero.fruitPct).toBe(ratio(s.hero))
   })
 })
 

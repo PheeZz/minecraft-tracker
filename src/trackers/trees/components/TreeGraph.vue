@@ -47,6 +47,7 @@ const filterOpts = () => ({
   visibleTiers: ui.visibleTiers,
   onlyAvail: ui.onlyAvail,
   onlyFruit: ui.onlyFruit,
+  onlyFruitful: ui.onlyFruitful,
 })
 
 function refresh() {
@@ -59,7 +60,7 @@ let stepIdx = 0
 // Кандидаты для кнопок «следующий доступный» / «лучший шаг» (и шага тура «лучший выбор»):
 // доступные ноды, ВИДИМЫЕ при текущих фильтрах — иначе кнопка сфокусировалась бы на скрытой
 // ноде и панорама уехала бы в пустоту. onlyAvail тут самоудовлетворён (кандидаты по определению
-// доступны), поэтому учитываем onlyFruit и фильтр тиров — именно они скрывают доступные ноды.
+// доступны), поэтому учитываем onlyFruit, onlyFruitful и фильтр тиров — они скрывают доступные ноды.
 function availSorted() {
   return TREES.filter(
     (t) =>
@@ -67,7 +68,8 @@ function availSorted() {
       (store.progress[t.id] ?? 0) === 0 &&
       isAvailable(store.progress, t.id) &&
       ui.visibleTiers.has(t.tier) &&
-      (!ui.onlyFruit || FRUIT_CHAIN.has(t.id)),
+      (!ui.onlyFruit || FRUIT_CHAIN.has(t.id)) &&
+      (!ui.onlyFruitful || !!t.fruit),
   )
 }
 function nextStep() {
@@ -102,7 +104,7 @@ const tipTree = () => (tip.value ? BY_ID[tip.value.id] : undefined)
 // ---------- реакции на состояние ----------
 watch(() => store.progress, refresh, { deep: true })
 watch(
-  () => [[...ui.visibleTiers], ui.onlyAvail, ui.onlyFruit] as const,
+  () => [[...ui.visibleTiers], ui.onlyAvail, ui.onlyFruit, ui.onlyFruitful] as const,
   () => graph.applyFilters(filterOpts()),
   { deep: true },
 )
