@@ -1,0 +1,151 @@
+# Ресерч: рендеринг графа — производительность и альтернативы библиотек
+
+Ветка: `research/graph-libs`. Дата: 2026-05-31.
+
+Приоритеты задачи (в порядке важности):
+1. **Сохранить текущий визуальный стиль** (богатые HTML-карточки нод).
+2. Оптимизация / повышение производительности.
+3. Возможно, достаточно подкрутить конфиг/параметры, чтобы повысить плавность панорамы.
+
+---
+
+## TL;DR
+
+- **Менять библиотеку НЕ нужно.** При нашем масштабе (макс. ~131 нода) Cytoscape + `node-html-label`
+  — правильный класс решения. WebGL-рендереры (Sigma/Reagraph/Cosmos) предназначены для 10k–1M нод
+  и **не умеют рендерить произвольный HTML/CSS** — они уничтожат наш стиль. Это прямо противоречит
+  приоритету №1.
+- **Главная причина лагов — баг в нашем коде, а не библиотека.** Мы перекрашиваем все canvas-иконки
+  на каждом кадре `render/pan/zoom`, хотя при пане/зуме расширение иконки не пересоздаёт. Чинится
+  дёшево и без риска для визуала. **Это и есть ответ на пункт 3.**
+- Если когда-нибудь захочется уйти с Cytoscape, сохранив стиль — единственный кандидат это
+  **Vue Flow** (DOM-ноды = Vue-компоненты), НЕ WebGL. Но это большая миграция ради неясной выгоды.
+
+---
+
+## 1. Диагноз производительности (приоритет 3 → оказался самым важным)
+
+### Архитектура сейчас
+Каждая нода — это богатая HTML-карточка через `cytoscape-node-html-label` (реальный DOM поверх
+canvas Cytoscape), внутри неё `<canvas>`-иконка 16×16 (пиксель-арт Minecraft, `imageSmoothingEnabled=false`),
+имя, бейджи/флаги, состояния. Лейаут — dagre / ELK.
+
+### Баг (подтверждено чтением исходника расширения)
+В `useTreeGraph.ts:350` и `useBeeChainGraph.ts:146`:
+```
+cy.on('render zoom pan layoutstop', scheduleIconPaint)
+```
+с комментарием «node-html-label пересоздаёт canvas-иконки при ре-рендере». **Это неверно.**
+
+Исходник `cytoscape-node-html-label` (`updatePanZoom`) при `pan`/`zoom` ставит ровно один CSS-transform
+на div-обёртку: `translate(pan) scale(zoom)`. Он **не трогает** DOM каждой ноды и **не вызывает** `tpl()`.
+`tpl()` (который и порождает наш `<canvas>`) повторно выполняется только на событиях `data`, `style`,
+`add` и начальном `render`.
+
+Значит на каждом кадре панорамы `render` зря запускает `paintIcons()` →
+`querySelectorAll('canvas.tic/.bic')` по всем ~131 нодам + `clearRect` + 2× `drawImage` на каждую,
+перерисовывая пиксели, которые не менялись (они внутри CSS-transform обёртки и выглядят идентично
+кадр-в-кадр). **Это доминирующая стоимость на кадр.**
+
+Подтверждение, что расширение плохо масштабируется само по себе:
+[issue #40](https://github.com/kaluginserg/cytoscape-node-html-label/issues/40) — «poor performance
+at 50+ nodes». У нас 131. Но компоновку DOM-карточек браузер тянет; добивает именно лишний перекрас.
+
+### План правок (от самого дешёвого; визуал не страдает)
+
+1. **[ГЛАВНОЕ] Не перекрашивать иконки на `render/pan/zoom`.** Оставить перекрас только на `layoutstop`
+   и на путях изменения состояния (которые идут через `data()`/`style` — их расширение и так слушает,
+   там нода реально перерисовывается). Убирает `querySelectorAll` + N перерисовок канваса с каждого
+   кадра анимации. Риск: низкий — проверить, что иконки на месте после фильтров/смены состояний.
+   Файлы: `useTreeGraph.ts:78,350`, `useBeeChainGraph.ts:44,146`, `useTreeTextures.ts` (`paintTreeIcons`).
+
+2. **Добавить `is-panning`-деградацию в граф пчёл.** Сейчас она есть только у деревьев
+   (`useTreeGraph.ts:342-348` + `graph.css:236`): на время пана убираются тени/переходы/мелкие
+   элементы — самое дорогое в компоновке DOM-карточек. У пчёл (`useBeeChainGraph.ts`) этого нет.
+   Риск: низкий (паттерн уже проверен на деревьях).
+
+3. **`pixelRatio: 1` в init Cytoscape** (`useTreeGraph.ts:298`, `useBeeChainGraph.ts:60`). Дефолт `auto`
+   = devicePixelRatio (на Retina = 2). Уменьшает площадь backing-store, которую растрит Cytoscape.
+   ВАЖНО: влияет только на собственный canvas Cytoscape (рёбра, ромбы-рецепты, невидимые якоря нод),
+   НЕ на наши DOM-карточки и их `<canvas>`-иконки. Наши иконки с `imageSmoothingEnabled=false` не
+   замылятся. Выигрыш может быть скромным именно потому, что ноды у нас DOM. Замерить.
+
+4. **`min-zoomed-font-size` для нативных подписей пчёл** (`useBeeChainGraph.ts:70,93` рисуют реальные
+   подписи Cytoscape; у деревьев `text-opacity:0` → не применимо). Пропускает рендер подписи на мелком
+   зуме. Риск: низкий.
+
+5. **Рёбра пчёл `curve-style: 'bezier'` → `straight`** (`useBeeChainGraph.ts:106`). Bezier+стрелки —
+   из самых дорогих. `straight` сохранит стрелки (в отличие от `haystack`). Риск: умеренный (меняется
+   вид рёбер).
+
+### Чего НЕ делать (развенчано)
+- `textureOnViewport`, `hideEdgesOnViewport`, `motionBlur` — офиц. доки называют их «**largely moot**»
+  после оптимизаций ядра. Плюс структурно они касаются canvas Cytoscape, а наши ноды — DOM поверх него,
+  так что `textureOnViewport` снимет текстуру только с рёбер/якорей, а карточки всё равно рендерятся
+  живьём через transform обёртки. На нашем масштабе — пустая трата.
+- `wheelSensitivity: 2` — оставить, но это только «ощущение» скорости зума, на производительность
+  рендера не влияет вообще.
+
+---
+
+## 2. Альтернативные библиотеки
+
+### Сводка
+
+| Библиотека | Модель ноды | Сохранит наш CSS-стиль | Лейаут TB | Vue 3 | Вердикт |
+|---|---|---|---|---|---|
+| **Cytoscape (сейчас)** | DOM-overlay (html-label) | ✅ как есть | dagre/ELK встроены | через контейнер | Оставить |
+| **Vue Flow** | Vue-компонент = реальный DOM | ✅ почти как есть | ❌ нет встроенного (нужен elkjs/dagre — у нас есть) | нативно | Единственная разумная замена, если уходить |
+| **G6 v5 (AntV)** | canvas/WebGL (+ тип HTML Node, React-обёртка) | ⚠️ rich-карточки переписывать в его API | ✅ dagre/antv-dagre встроены | через контейнер (React-обёртка не для Vue) | Не стоит миграции |
+| **Sigma v3 + graphology** | WebGL (шейдеры/спрайты) | ❌ нет HTML, только круги/спрайты | ❌ внешний (dagre/elk) | через контейнер | Убьёт стиль |
+| **Reagraph** | Three.js / r3f | ❌ + **React-only** | — | ❌ нет Vue-биндинга | Исключена |
+| **Cosmos / cosmograph** | GPU-точки | ❌ только точки, без текста | ❌ только force | через контейнер | Не тот инструмент |
+
+### Vue Flow — единственный кандидат на сохранение стиля при уходе с Cytoscape
+- Нода = Vue SFC-компонент (реальный DOM) → наш `nodeLabel.ts`/`graph.css`/`iconHtml.ts` переносятся
+  почти 1:1, включая интерактивную кнопку-инвентарь (`pointer-events:auto`).
+- **Нет встроенного лейаута** — но у нас уже есть `dagre` и `elkjs`; координаты скармливаются нодам
+  (официальные примеры с d3-dagre/elkjs существуют).
+- `onlyRenderVisibleElements`: экономит на первом рендере, но при панораме монтирует/размонтирует ноды
+  → возможны рывки на сложных компонентах. То есть это **не бесплатная** оптимизация.
+- Vanilla под капотом + Vue 3 биндинг, TS, MIT, активный.
+- **Оценка миграции:** средняя-высокая. Переносится: данные лейаута (dagre/elkjs), пиксель-арт canvas,
+  CSS. Переписывается: оркестрация графа (`useTreeGraph`/`useBeeChainGraph` — события, fit, подсветка
+  родословной, фильтры, tier-заголовки), а это немало логики.
+
+### WebGL (Sigma/Reagraph/Cosmos) — прямой вердикт: **нет**
+1. Фиделити (приоритет №1): ни один WebGL-рендерер не рисует HTML/CSS. Градиенты + слоёные тени +
+   4 позиционированных бейджа + hover-кнопка + пунктирные glow-границы → пришлось бы писать шейдеры,
+   и всё равно не пиксель-в-пиксель. Интерактивной DOM-кнопке в WebGL нет чистого эквивалента.
+2. Масштаб: единственное преимущество WebGL (десятки тысяч нод) при 131 ноде нерелевантно.
+3. Экосистема: Reagraph — React-only; Cosmos — без слоистого лейаута и без текста; Sigma работает с Vue,
+   но выкидывает CSS.
+
+Пересматривать WebGL только если требования инвертируются: тысячи нод станут нормой И мы согласны
+свести ноду к цветной точке с однострочной подписью.
+
+---
+
+## Рекомендация
+
+1. Сделать правки производительности №1–3 на текущем Cytoscape (дёшево, без риска для стиля). №1 —
+   реальный баг и наибольший выигрыш. Замерить плавность панорамы до/после.
+2. Библиотеку не менять. Если правок мало — рассмотреть архитектурный вынос карточек на нативный
+   canvas Cytoscape (`background-image` из data-URI + нативные подписи) — тогда заработают
+   `textureOnViewport`/`pixelRatio`, но потеряется гибкость HTML (бейджи, кнопка).
+3. Vue Flow держать как «план Б» на случай отказа от Cytoscape — он один сохраняет DOM-стиль. WebGL
+   из рассмотрения исключить.
+
+## Источники
+- Cytoscape init-опции (textureOnViewport, pixelRatio, motionBlur, wheelSensitivity): https://js.cytoscape.org/
+- Cytoscape performance.md: https://github.com/cytoscape/cytoscape.js/blob/master/documentation/md/performance.md
+- Исходник node-html-label (pan/zoom = только transform обёртки): https://raw.githubusercontent.com/kaluginserg/cytoscape-node-html-label/master/src/cytoscape-node-html-label.ts
+- node-html-label issue #40 (плохая перф при 50+ нодах): https://github.com/kaluginserg/cytoscape-node-html-label/issues/40
+- Vue Flow — кастомные ноды: https://vueflow.dev/examples/nodes/
+- Vue Flow — onlyRenderVisibleElements: https://vueflow.dev/guide/vue-flow/config.html
+- G6 v5 — HTML Node: https://g6.antv.antgroup.com/en/manual/element/node/html
+- G6 v5 — Dagre Layout: https://g6.antv.antgroup.com/en/manual/layout/dagre-layout
+- G6 — performance tips: https://yanyanwang93.medium.com/problems-in-antv-g6-performance-tips-3b9a60f34abb
+- Sigma renderers (только WebGL-примитивы): https://www.sigmajs.org/docs/advanced/renderers/
+- Reagraph (React-only): https://reagraph.dev/
+- Cosmos README (только GPU-точки, force-лейаут): https://github.com/cosmograph-org/cosmos
