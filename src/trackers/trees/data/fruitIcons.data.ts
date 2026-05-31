@@ -57,6 +57,7 @@ export const FRUIT_ICON: Readonly<Record<string, string>> = {
   'Смородина чёрная': 'extratrees-food/Blackcurrant.png',
   'Смородина красная': 'extratrees-food/Redcurrant.png',
   'Перец душистый': 'extratrees-food/Allspice.png',
+  'Мускатный орех': 'extratrees-food/Nutmeg.png',
   Цитрон: 'extratrees-food/Citron.png',
   Манго: 'extratrees-food/Mango.png',
   Ежевика: 'extratrees-food/Blackberry.png',
