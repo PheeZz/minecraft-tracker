@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted } from 'vue'
+import { computed, ref } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
+import { useFocusTrap } from '@/shared/ui/useFocusTrap'
 import { BY_ID } from '../data/trees.data'
 import { useTreesStore } from '../stores/useTreesStore'
 import { useTreeActions } from '../composables/useTreeActions'
@@ -12,6 +13,11 @@ const id = computed(() => actions.breedModalId.value)
 const tree = computed(() => (id.value ? BY_ID[id.value] : undefined))
 const pair = computed(() => tree.value?.parents?.[0])
 
+// Фокус-трап: компонент всегда смонтирован, открыт по флагу (id && tree).
+const boxEl = ref<HTMLElement>()
+const open = computed(() => !!id.value && !!tree.value)
+useFocusTrap(boxEl, { active: open, onEscape: actions.breedCancel })
+
 /** Варианты пары (саженец/пыльца взаимозаменяемы): [A-саженец+B-пыльца], [B-саженец+A-пыльца]. */
 const options = computed(() => {
   const p = pair.value
@@ -21,18 +27,20 @@ const options = computed(() => {
     { sap: p[1], pol: p[0] },
   ]
 })
-
-function onKey(e: KeyboardEvent) {
-  if (e.key === 'Escape') actions.breedCancel()
-}
-onMounted(() => document.addEventListener('keydown', onKey))
-onUnmounted(() => document.removeEventListener('keydown', onKey))
 </script>
 
 <template>
   <div v-if="id && tree" class="modal is-open" @click.self="actions.breedCancel()">
-    <div class="modal__box" role="dialog" aria-modal="true">
-      <div class="modal__title"><IconBase name="check" />Выведено: {{ tree.id }}</div>
+    <div
+      ref="boxEl"
+      class="modal__box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="breed-title"
+    >
+      <div id="breed-title" class="modal__title">
+        <IconBase name="check" />Выведено: {{ tree.id }}
+      </div>
       <div class="hint modal__hint">
         Какие ингредиенты потратил? Саженцы и пыльца взаимозаменяемы — выбери комбинацию, счётчики
         уменьшатся на 1.

@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { useBeesStore } from '../stores/useBeesStore'
 import type { BeeTask } from '../domain/tasks'
 import BeeTaskCard from './BeeTaskCard.vue'
 import BeeTaskEditor from './BeeTaskEditor.vue'
 import IconBase from '@/shared/ui/IconBase.vue'
+import { useFocusTrap } from '@/shared/ui/useFocusTrap'
 
 const store = useBeesStore()
 
@@ -36,54 +37,9 @@ function jumpToGraph(bee: string): void {
   store.selectBee(bee)
 }
 
-// ── Управление фокусом (aria-modal обещает изоляцию) ──
-// На открытии запоминаем активный элемент и переводим фокус внутрь; на закрытии
-// возвращаем его на кнопку-триггер. Tab зациклен внутри окна (фокус-трап).
+// Фокус-трап + Escape + возврат фокуса (общий хук).
 const winEl = ref<HTMLElement>()
-let prevFocus: HTMLElement | null = null
-
-function focusables(): HTMLElement[] {
-  if (!winEl.value) return []
-  return Array.from(
-    winEl.value.querySelectorAll<HTMLElement>(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-    ),
-  ).filter((el) => !el.hasAttribute('disabled') && el.offsetParent !== null)
-}
-
-function onKey(e: KeyboardEvent): void {
-  if (e.key === 'Escape') {
-    store.closeTasks()
-    return
-  }
-  if (e.key !== 'Tab') return
-  const f = focusables()
-  if (!f.length) return
-  const first = f[0]!
-  const last = f[f.length - 1]!
-  const active = document.activeElement as HTMLElement | null
-  if (active && !winEl.value?.contains(active)) {
-    e.preventDefault()
-    first.focus()
-  } else if (e.shiftKey && active === first) {
-    e.preventDefault()
-    last.focus()
-  } else if (!e.shiftKey && active === last) {
-    e.preventDefault()
-    first.focus()
-  }
-}
-
-onMounted(async () => {
-  prevFocus = document.activeElement as HTMLElement | null
-  document.addEventListener('keydown', onKey)
-  await nextTick()
-  focusables()[0]?.focus()
-})
-onBeforeUnmount(() => {
-  document.removeEventListener('keydown', onKey)
-  prevFocus?.focus?.()
-})
+useFocusTrap(winEl, { onEscape: store.closeTasks })
 </script>
 
 <template>
