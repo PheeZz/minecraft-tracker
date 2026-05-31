@@ -10,8 +10,9 @@ const honeyProducers: CombProducerRanked[] = [
 ]
 
 describe('combStatus', () => {
-  it('have: есть пчела-производитель на складе (берёт с макс. шансом)', () => {
-    const s = combStatus('Медовые соты', honeyProducers, new Set(['Развитая']))
+  it('have: среди имеющихся производителей берёт с макс. шансом', () => {
+    // на складе и Обычная(35%), и Развитая(40%) — должна выбраться Развитая
+    const s = combStatus('Медовые соты', honeyProducers, new Set(['Обычная', 'Развитая']))
     expect(s).toEqual({ comb: 'Медовые соты', state: 'have', bee: 'Развитая', depth: 0 })
   })
   it('ready: производителя нет, но проще всего вывести с depth 0', () => {

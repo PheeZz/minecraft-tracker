@@ -17,7 +17,7 @@ export interface BeeTask {
   collapsed?: boolean
 }
 
-/** Производитель соты с посчитанной глубиной (структурно = RankedProducer стора). */
+/** Производитель соты с глубиной (подмножество полей RankedProducer стора). */
 export interface CombProducerRanked {
   bee: string
   pct: number
