@@ -43,8 +43,8 @@ export const GRAPH_STYLE: StylesheetStyle[] = [
       // прозрачность меняются мягко, а не скачком. Анимация идёт только в момент смены
       // стиля (нет постоянной нагрузки на кадр).
       'transition-property': 'line-color, target-arrow-color, width, opacity',
-      'transition-duration': '0.2s',
-      'transition-timing-function': 'ease-out',
+      'transition-duration': '0.38s',
+      'transition-timing-function': 'ease-in-out',
     },
   },
   { selector: 'edge.show', style: { opacity: 0.5 } },
