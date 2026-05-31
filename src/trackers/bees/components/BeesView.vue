@@ -3,7 +3,6 @@ import { computed, ref } from 'vue'
 import { BEE_BY_ID } from '../data/bees.data'
 import { COMBS } from '../domain/combs'
 import { combColor } from '../domain/colors'
-import { combStatus, taskProgress } from '../domain/tasks'
 import { useBeesStore } from '../stores/useBeesStore'
 import BeeRail from './BeeRail.vue'
 import BeeChainGraph from './BeeChainGraph.vue'
@@ -21,15 +20,6 @@ const combPct = computed(() => {
 })
 const recipeCount = computed(() =>
   store.curTarget ? (BEE_BY_ID[store.curTarget]?.parents.length ?? 0) : 0,
-)
-
-// Бейдж на кнопке «Задачи»: число незакрытых задач (done < total).
-const openTaskCount = computed(
-  () =>
-    store.tasks.filter((t) => {
-      const st = t.combs.map((c) => combStatus(c, store.producersOf(c), store.have))
-      return !taskProgress(st).ready
-    }).length,
 )
 </script>
 
@@ -57,7 +47,7 @@ const openTaskCount = computed(
       </div>
       <button type="button" class="modebar__tasks" @click="store.openTasks()">
         ✅ Задачи
-        <span v-if="openTaskCount" class="modebar__badge">{{ openTaskCount }}</span>
+        <span v-if="store.openTaskCount" class="modebar__badge">{{ store.openTaskCount }}</span>
       </button>
     </div>
 

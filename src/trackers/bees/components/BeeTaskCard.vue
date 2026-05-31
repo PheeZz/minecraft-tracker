@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useBeesStore } from '../stores/useBeesStore'
-import { combStatus, taskProgress, type BeeTask, type CombStatus } from '../domain/tasks'
+import { taskProgress, type BeeTask, type CombStatus } from '../domain/tasks'
 import CombIcon from './CombIcon.vue'
 
 const props = defineProps<{ task: BeeTask }>()
@@ -14,9 +14,7 @@ const emit = defineEmits<{
 
 const store = useBeesStore()
 
-const statuses = computed<CombStatus[]>(() =>
-  props.task.combs.map((c) => combStatus(c, store.producersOf(c), store.have)),
-)
+const statuses = computed<CombStatus[]>(() => store.statusesOf(props.task))
 const progress = computed(() => taskProgress(statuses.value))
 const pct = computed(() =>
   progress.value.total ? Math.round((progress.value.done / progress.value.total) * 100) : 0,

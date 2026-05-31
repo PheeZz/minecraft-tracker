@@ -5,7 +5,7 @@ import { BEES, BEE_BY_ID } from '../data/bees.data'
 import { type BeeSource } from '../domain/types'
 import { COMBS, type CombProducer } from '../domain/combs'
 import { makeDepth } from '../domain/graph'
-import type { BeeTask } from '../domain/tasks'
+import { combStatus, taskProgress, type BeeTask, type CombStatus } from '../domain/tasks'
 
 const HAVE_KEY = 'bees.have'
 const INV_PREFS_KEY = 'bees.invPrefs'
@@ -224,6 +224,16 @@ export const useBeesStore = defineStore('bees', () => {
     persistTasks()
   }
 
+  // Единый источник статусов сот задачи (сота → проще всего вывести/есть на складе).
+  // Используют и карточка задачи, и бейдж незакрытых — чтобы логика не двоилась.
+  function statusesOf(task: BeeTask): CombStatus[] {
+    return task.combs.map((c) => combStatus(c, producersOf(c), have.value))
+  }
+  /** Число незакрытых задач (есть незакрытая сота) — для бейджа на кнопке «Задачи». */
+  const openTaskCount = computed(
+    () => tasks.value.filter((t) => !taskProgress(statusesOf(t)).ready).length,
+  )
+
   return {
     have,
     invOnly,
@@ -264,5 +274,7 @@ export const useBeesStore = defineStore('bees', () => {
     updateTask,
     removeTask,
     toggleTaskCollapsed,
+    statusesOf,
+    openTaskCount,
   }
 })
