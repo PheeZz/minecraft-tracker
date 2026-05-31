@@ -7,13 +7,17 @@ import TreeGraph from './TreeGraph.vue'
 import TreeSidebar from './TreeSidebar.vue'
 import HeroStats from './HeroStats.vue'
 import BreedModal from './BreedModal.vue'
+import CelebrationModal from './CelebrationModal.vue'
 import InventoryPopup from './InventoryPopup.vue'
+import { useTreesCelebration } from '../stores/useTreesCelebration'
 import { storage } from '@/shared/persistence/storage'
 import { useTour } from '@/shared/ui/useTour'
 import { buildTreesTour } from '../onboarding/treesTour'
 
 const store = useTreesStore()
 const graphRef = ref<InstanceType<typeof TreeGraph>>()
+// инстанцируем стор празднования: его вотчеры ловят 100% (живой переход / импорт / загрузку)
+useTreesCelebration()
 
 const tour = useTour(
   () =>
@@ -84,6 +88,7 @@ onUnmounted(() => document.removeEventListener('keydown', onKey))
     </div>
 
     <BreedModal />
+    <CelebrationModal />
     <InventoryPopup />
   </div>
 </template>
