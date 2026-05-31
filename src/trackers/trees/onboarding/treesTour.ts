@@ -6,7 +6,8 @@ export interface TreesTourGraph {
   tourSpotlight: (id: string) => Promise<void>
 }
 
-/** Экранирование id для CSS-селектора (кириллица ок, но пробелы/кавычки — нет). */
+/** Экранирование id для CSS-селектора (кириллица/пробелы внутри кавычек ок;
+   опасны кавычки и бэкслеши — их и экранируем). */
 function cssEscape(s: string): string {
   return typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(s) : s.replace(/["\\]/g, '\\$&')
 }
