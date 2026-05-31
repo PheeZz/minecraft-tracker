@@ -11,5 +11,8 @@ services:
     image: minecraft-tracker:latest
     container_name: minecraft-tracker
     ports:
-      - '8080:80' # host:container — наружу http, проксируется внешним слоем
+      # наружу — стандартные веб-порты. Внутренний nginx отдаёт ПЛЕЙН http на обоих;
+      # TLS терминирует внешний reverse-proxy/LB (этот образ о домене/SSL не знает).
+      - '80:80'
+      - '443:443'
     restart: unless-stopped
