@@ -209,7 +209,7 @@ export const useBeesStore = defineStore('bees', () => {
         ? {
             ...t,
             ...(patch.name != null ? { name: patch.name } : {}),
-            ...(patch.combs ? { combs: dedupe(patch.combs) } : {}),
+            ...(patch.combs != null ? { combs: dedupe(patch.combs) } : {}),
           }
         : t,
     )

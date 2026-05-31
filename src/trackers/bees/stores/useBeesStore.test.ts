@@ -134,4 +134,16 @@ describe('CRUD задач', () => {
     s.toggleTaskCollapsed(id)
     expect(s.tasks[0]!.collapsed).toBe(false)
   })
+  it('генерит разные id и персистит — перезагрузка читает задачи', () => {
+    const s = useBeesStore()
+    s.addTask('A', ['Медовые соты'])
+    s.addTask('B', ['Фруктовые соты'])
+    expect(s.tasks[0]!.id).not.toBe(s.tasks[1]!.id)
+    // лёг ли список в storage
+    expect(storage.get('bees.tasks', []).length).toBe(2)
+    // новый стор после «перезагрузки» читает сохранённое
+    setActivePinia(createPinia())
+    const s2 = useBeesStore()
+    expect(s2.tasks.map((t) => t.name)).toEqual(['A', 'B'])
+  })
 })
