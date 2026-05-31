@@ -3,6 +3,7 @@ import { computed, onMounted, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { storage } from '@/shared/persistence/storage'
 import { TRACKERS, type TrackerId } from '@/shared/types'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -43,7 +44,7 @@ function switchTo(id: TrackerId) {
         type="button"
         @click="switchTo(t.id)"
       >
-        <span class="switcher__mark">{{ t.mark }}</span>
+        <span class="switcher__mark"><IconBase :name="t.mark" /></span>
         <span class="switcher__text">
           <span class="switcher__title">{{ t.title }}</span>
           <span class="switcher__kicker">{{ t.kicker }}</span>

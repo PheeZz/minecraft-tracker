@@ -6,6 +6,7 @@ import { planSteps } from '../domain/graph'
 import { useBeesStore } from '../stores/useBeesStore'
 import BeeIcon from './BeeIcon.vue'
 import CombIcon from './CombIcon.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const store = useBeesStore()
 
@@ -58,7 +59,9 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
 
 <template>
   <aside class="panel">
-    <div v-if="!target" class="empty"><span class="o">🍯</span>Выбери соту или пчелу слева.</div>
+    <div v-if="!target" class="empty">
+      <span class="o"><IconBase name="bee" /></span>Выбери соту или пчелу слева.
+    </div>
 
     <template v-else>
       <!-- режим соты: список производителей -->

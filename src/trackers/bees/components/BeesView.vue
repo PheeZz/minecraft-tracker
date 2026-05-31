@@ -10,6 +10,7 @@ import BeePanel from './BeePanel.vue'
 import BeeInventory from './BeeInventory.vue'
 import CombIcon from './CombIcon.vue'
 import BeeTasksModal from './BeeTasksModal.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const store = useBeesStore()
 const graphRef = ref<InstanceType<typeof BeeChainGraph>>()
@@ -34,7 +35,7 @@ const recipeCount = computed(() =>
           :class="{ on: store.view === 'graph' }"
           @click="store.setView('graph')"
         >
-          🌿 Граф
+          <IconBase name="leaf" />Граф
         </button>
         <button
           type="button"
@@ -42,11 +43,11 @@ const recipeCount = computed(() =>
           :class="{ on: store.view === 'inventory' }"
           @click="store.setView('inventory')"
         >
-          📦 Инвентарь
+          <IconBase name="box" />Инвентарь
         </button>
       </div>
       <button type="button" class="modebar__tasks" @click="store.openTasks()">
-        ✅ Задачи
+        <IconBase name="list" />Задачи
         <span v-if="store.openTaskCount" class="modebar__badge">{{ store.openTaskCount }}</span>
       </button>
     </div>
@@ -148,6 +149,9 @@ const recipeCount = computed(() =>
   gap: 3px;
 }
 .modebar__seg button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font: inherit;
   font-weight: 700;
   font-size: 13px;
@@ -174,6 +178,9 @@ const recipeCount = computed(() =>
 .modebar__tasks {
   margin-left: auto;
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font: inherit;
   font-weight: 700;
   font-size: 13px;

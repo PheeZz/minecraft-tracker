@@ -4,6 +4,7 @@ import { BEES } from '../data/bees.data'
 import type { Bee, BeeSource } from '../domain/types'
 import { useBeesStore, type InvFilter, type InvSort } from '../stores/useBeesStore'
 import BeeIcon from './BeeIcon.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const store = useBeesStore()
 const query = ref('')
@@ -184,14 +185,14 @@ const full = computed(() => store.haveCount === TOTAL)
         class="inv__breed inv__breed--full"
         @click="store.setInvFilter('owned')"
       >
-        склад полон 🐝 {{ TOTAL }}/{{ TOTAL }}
+        склад полон <IconBase name="bee" /> {{ TOTAL }}/{{ TOTAL }}
       </button>
       <button v-else type="button" class="inv__breed" @click="store.setInvFilter('breedable')">
         готово к выведению: {{ store.breedableCount }}
       </button>
 
       <button class="inv__close" type="button" title="Закрыть" @click="store.setView('graph')">
-        ✕ Закрыть
+        <IconBase name="close" />Закрыть
       </button>
     </header>
 
@@ -251,7 +252,7 @@ const full = computed(() => store.haveCount === TOTAL)
     <div class="inv__scroll">
       <!-- глобально пусто -->
       <div v-if="noResults" class="inv__none">
-        <div class="inv__none-glyph">🐝</div>
+        <div class="inv__none-glyph"><IconBase name="bee" /></div>
         <p class="inv__none-text">
           {{ searching ? 'Ничего не найдено' : 'Нет пчёл в этом фильтре' }}
         </p>
@@ -399,6 +400,9 @@ const full = computed(() => store.haveCount === TOTAL)
   background: var(--src-m);
 }
 .inv__breed {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font: inherit;
   font-size: 12px;
   font-weight: 700;
@@ -421,6 +425,9 @@ const full = computed(() => store.haveCount === TOTAL)
   box-shadow: 0 0 10px rgba(68, 184, 122, 0.2);
 }
 .inv__close {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font: inherit;
   font-size: 12px;
   font-weight: 600;

@@ -1,3 +1,5 @@
+import type { IconName } from '@/shared/icons/icons'
+
 /** Идентификаторы трекеров приложения. */
 export type TrackerId = 'trees' | 'bees'
 
@@ -8,13 +10,13 @@ export interface TrackerMeta {
   title: string
   /** Короткий подзаголовок/кикер. */
   kicker: string
-  /** Эмодзи-марка. */
-  mark: string
+  /** Иконка-марка (имя из набора ICONS). */
+  mark: IconName
   /** Путь маршрута. */
   path: string
 }
 
 export const TRACKERS: readonly TrackerMeta[] = [
-  { id: 'trees', title: 'Деревья', kicker: 'Forestry · Селекция', mark: '🌳', path: '/trees' },
-  { id: 'bees', title: 'Пчёлы', kicker: 'Forestry · ExtraBees', mark: '🐝', path: '/bees' },
+  { id: 'trees', title: 'Деревья', kicker: 'Forestry · Селекция', mark: 'sprout', path: '/trees' },
+  { id: 'bees', title: 'Пчёлы', kicker: 'Forestry · ExtraBees', mark: 'bee', path: '/bees' },
 ] as const

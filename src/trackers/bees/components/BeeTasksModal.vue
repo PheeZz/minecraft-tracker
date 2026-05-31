@@ -4,6 +4,7 @@ import { useBeesStore } from '../stores/useBeesStore'
 import type { BeeTask } from '../domain/tasks'
 import BeeTaskCard from './BeeTaskCard.vue'
 import BeeTaskEditor from './BeeTaskEditor.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const store = useBeesStore()
 
@@ -97,7 +98,7 @@ onBeforeUnmount(() => {
       <header class="modal__head">
         <h2 id="tasks-title" class="modal__title">Задачи</h2>
         <button type="button" class="modal__close" title="Закрыть" @click="store.closeTasks()">
-          ✕
+          <IconBase name="close" />
         </button>
       </header>
 
@@ -108,7 +109,9 @@ onBeforeUnmount(() => {
           @save="onSave"
           @cancel="onCancel"
         />
-        <button v-else type="button" class="modal__new" @click="startNew">➕ Новая задача</button>
+        <button v-else type="button" class="modal__new" @click="startNew">
+          <IconBase name="plus" />Новая задача
+        </button>
 
         <div v-if="!store.tasks.length && editing !== 'new'" class="modal__empty">
           Пока нет задач — создай первую.
@@ -211,6 +214,10 @@ onBeforeUnmount(() => {
   gap: 10px;
 }
 .modal__new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   font: inherit;
   font-weight: 700;
   font-size: 14px;

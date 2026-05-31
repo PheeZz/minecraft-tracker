@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useBeesStore } from '../stores/useBeesStore'
 import { taskProgress, type BeeTask, type CombStatus } from '../domain/tasks'
 import CombIcon from './CombIcon.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const props = defineProps<{ task: BeeTask }>()
 const emit = defineEmits<{
@@ -38,11 +39,15 @@ const LABEL: Record<CombStatus['state'], string> = {
       >
         <span class="tcard__chev" :class="{ open: !task.collapsed }">▸</span>
         {{ task.name }}
-        <span v-if="progress.ready" class="tcard__done">✅ готово</span>
+        <span v-if="progress.ready" class="tcard__done"><IconBase name="check" />готово</span>
       </button>
       <span class="tcard__count">{{ progress.done }} / {{ progress.total }}</span>
-      <button type="button" class="tcard__icon" title="Изменить" @click="emit('edit')">✎</button>
-      <button type="button" class="tcard__icon" title="Удалить" @click="emit('remove')">🗑</button>
+      <button type="button" class="tcard__icon" title="Изменить" @click="emit('edit')">
+        <IconBase name="pencil" />
+      </button>
+      <button type="button" class="tcard__icon" title="Удалить" @click="emit('remove')">
+        <IconBase name="trash" />
+      </button>
     </div>
 
     <div class="tcard__bar" aria-hidden="true">
@@ -112,6 +117,9 @@ const LABEL: Record<CombStatus['state'], string> = {
   transform: rotate(90deg);
 }
 .tcard__done {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--src-f);
@@ -122,6 +130,8 @@ const LABEL: Record<CombStatus['state'], string> = {
   color: var(--muted);
 }
 .tcard__icon {
+  display: inline-flex;
+  align-items: center;
   font: inherit;
   font-size: 13px;
   background: none;
