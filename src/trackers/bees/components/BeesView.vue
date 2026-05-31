@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { BEE_BY_ID } from '../data/bees.data'
 import { COMBS } from '../domain/combs'
 import { combColor } from '../domain/colors'
@@ -20,12 +20,14 @@ const store = useBeesStore()
 const tour = useTour(() => buildBeesTour({ selectComb: (n) => store.selectComb(n) }), {
   onDone: () => storage.set('onboard.bees', true),
 })
+let autoStartTimer: ReturnType<typeof setTimeout> | undefined
 onMounted(() => {
   if (!storage.get('onboard.bees', false)) {
     // даём модбару/рейлу отрисоваться; граф появится по демо-выбору внутри тура
-    setTimeout(() => void tour.start(), 500)
+    autoStartTimer = setTimeout(() => void tour.start(), 500)
   }
 })
+onBeforeUnmount(() => clearTimeout(autoStartTimer))
 const graphRef = ref<InstanceType<typeof BeeChainGraph>>()
 
 const combPct = computed(() => {

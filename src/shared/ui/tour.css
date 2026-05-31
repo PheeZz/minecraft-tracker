@@ -4,6 +4,24 @@
    CSS-переменные (--bg2/--ink/--line/--muted есть в обеих темах; акцент —
    --honey у пчёл, --leaf у деревьев). Селектор .driver-popover.mc-tour
    (класс добавляется через popoverClass) перекрывает дефолты driver по специфичности. */
+/* Размытие фона во время тура: затемняющий overlay получает backdrop-filter
+   (overlay z-index=10000), а подсвеченный элемент поднимаем НАД ним (но ниже
+   поповера z-index=1e9), чтобы он остался резким поверх размытого фона. */
+.driver-overlay {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.driver-active-element {
+  position: relative;
+  z-index: 100000;
+}
+@media (prefers-reduced-motion: reduce) {
+  .driver-overlay {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
 .driver-popover.mc-tour {
   --pop-bg: var(--bg2, #14110c);
   --pop-accent: var(--honey, var(--leaf, #e8a72c));
