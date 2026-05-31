@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onActivated, onBeforeUnmount, onDeactivated, onMounted, ref, watch } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
+import AppLoader from '@/shared/ui/AppLoader.vue'
 import { BY_ID, TREES } from '../data/trees.data'
 import { isAvailable, unlockScore } from '../domain/graph'
 import { useTreesStore } from '../stores/useTreesStore'
@@ -17,6 +18,8 @@ const stageEl = ref<HTMLElement>()
 const cyEl = ref<HTMLElement>()
 const headersEl = ref<HTMLElement>()
 const tip = ref<{ id: string; x: number; y: number } | null>(null)
+// лоадер поверх сцены, пока граф строится и раскладка не устаканилась (onReady)
+const graphReady = ref(false)
 
 const graph = useTreeGraph({
   onSelect: (id, shift) => {
@@ -136,6 +139,7 @@ onMounted(() => {
       // запускаем вход ПОСЛЕ применения состояний — иначе пересоздание карточек
       // (data-события от applyStates) перезапустило бы анимацию входа.
       graph.playIntro()
+      graphReady.value = true
     })
   })
   window.addEventListener('resize', onResize)
@@ -188,6 +192,12 @@ defineExpose({ focus: (id: string) => graph.focus(id), flash: (ids: string[]) =>
     <div ref="headersEl" class="stage__tiers" />
     <div ref="cyEl" class="stage__cy" />
 
+    <Transition name="stage-load">
+      <div v-if="!graphReady" class="stage__loading">
+        <AppLoader label="Строим граф…" />
+      </div>
+    </Transition>
+
     <div
       v-if="tip && tipTree()"
       class="tooltip is-open"
@@ -207,6 +217,21 @@ defineExpose({ focus: (id: string) => graph.focus(id), flash: (ids: string[]) =>
 .stage {
   position: relative;
   overflow: hidden;
+}
+/* оверлей-лоадер поверх сцены, пока граф строится (до onReady) */
+.stage__loading {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  background: var(--bg, #12190f);
+}
+.stage-load-leave-active {
+  transition: opacity 0.3s ease;
+}
+.stage-load-leave-to {
+  opacity: 0;
 }
 .stage__cy {
   width: 100%;
