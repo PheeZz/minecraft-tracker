@@ -13,6 +13,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "verify:trees": "python3 scripts/verify-trees-data.py",
+    "verify:bees": "vitest run src/trackers/bees/domain/integrity.test.ts",
     "gen:bees": "node scripts/gen-bees.mjs",
     "gen:tree-icons": "node scripts/gen-tree-icons.mjs",
     "gen:fruit-icons": "node scripts/gen-fruit-icons.mjs",
