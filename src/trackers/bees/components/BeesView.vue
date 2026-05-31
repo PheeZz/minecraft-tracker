@@ -72,6 +72,9 @@ const recipeCount = computed(() =>
         text="Инвентарь — отмечаешь выведенных пчёл (склад). Задачи — список крафтов с нужными сотами и прогрессом."
         side="bottom"
       />
+      <button class="modebar__tour" type="button" title="Запустить обзор" @click="tour.start()">
+        ? Обзор
+      </button>
     </div>
 
     <Transition name="inv" mode="out-in">
@@ -216,6 +219,23 @@ const recipeCount = computed(() =>
 }
 .modebar__tasks:hover {
   border-color: var(--honey-dk);
+}
+.modebar__tour {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink2);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--cardln);
+  border-radius: 9px;
+  padding: 7px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.13s;
+}
+.modebar__tour:hover {
+  border-color: var(--honey-dk);
+  color: var(--honey-dk);
 }
 .modebar__badge {
   display: inline-grid;

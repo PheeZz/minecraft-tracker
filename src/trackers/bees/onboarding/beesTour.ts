@@ -11,7 +11,10 @@ export interface BeesTourStore {
 const delay = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms))
 
 /** Шаги тура пчёл. Перед графовыми шагами демонстрационно выбираем соту, чтобы
-   появились граф и план; ждём, пока BeeChainGraph смонтируется и построится. */
+   появились граф и план; ждём, пока BeeChainGraph смонтируется и построится.
+   Якоря rail/graph/panel живут в граф-режиме (view==='graph' — дефолт); тур
+   рассчитан на него. При ручном запуске в режиме «Инвентарь» эти шаги
+   отцентрируются (driver покажет поповер по центру) — не падает. */
 export function buildBeesTour(store: BeesTourStore): TourStep[] {
   return [
     {
