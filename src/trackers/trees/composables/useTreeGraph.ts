@@ -75,7 +75,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   let introTimer: ReturnType<typeof setTimeout> | null = null
   let filterAnimTimer: ReturnType<typeof setTimeout> | null = null
   let invHandler: ((e: MouseEvent) => void) | null = null
-  let iconRaf = 0
+  let iconFlushTimer: ReturnType<typeof setTimeout> | null = null
   // иконки перекрашиваем точечно: копим id нод, чьи карточки пересоздались
   // (флаг allIcons — полная перерисовка, например когда догрузились текстуры).
   const dirtyIcons = new Set<string>()
@@ -94,16 +94,22 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   }
 
   function flushIconPaint(): void {
-    iconRaf = 0
+    iconFlushTimer = null
     if (!containerEl) return
     if (allIcons) paintTreeIcons(containerEl)
     else paintTreeIconsFor(containerEl, dirtyIcons)
     allIcons = false
     dirtyIcons.clear()
   }
+  // ВАЖНО: flush через setTimeout(0), а НЕ requestAnimationFrame. node-html-label
+  // пересоздаёт карточку (и обнуляет её canvas) тоже через setTimeout(0), а его обработчик
+  // зарегистрирован раньше нашего. clear+reschedule на каждое событие гарантирует, что
+  // наш flush встанет в очередь ПОСЛЕ всех пересозданий батча — иначе свежие canvas
+  // остались бы непокрашенными и иконки пропадали бы (например при клике/подсветке).
   function scheduleFlush(): void {
-    if (iconRaf || !containerEl) return
-    iconRaf = requestAnimationFrame(flushIconPaint)
+    if (!containerEl) return
+    if (iconFlushTimer) clearTimeout(iconFlushTimer)
+    iconFlushTimer = setTimeout(flushIconPaint, 0)
   }
   /** Иконка одной ноды (её карточка пересоздалась) — перекрасить точечно. */
   function scheduleNodeIcon(id: string): void {
@@ -432,7 +438,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     if (panTimer) clearTimeout(panTimer)
     if (introTimer) clearTimeout(introTimer)
     if (filterAnimTimer) clearTimeout(filterAnimTimer)
-    if (iconRaf) cancelAnimationFrame(iconRaf)
+    if (iconFlushTimer) clearTimeout(iconFlushTimer)
     if (invHandler) {
       document.removeEventListener('click', invHandler)
       invHandler = null
