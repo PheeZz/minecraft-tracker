@@ -107,11 +107,12 @@ function clearHave() {
           @keydown.enter.prevent="store.selectBee(row.id)"
           @keydown.space.prevent="store.selectBee(row.id)"
         >
+          <!-- только индикатор «выведена» (read-only); менять статус — в инвентаре -->
           <span
             class="havchk"
             :class="{ on: store.isHave(row.id) }"
-            title="есть на складе"
-            @click.stop="store.toggleHave(row.id)"
+            :title="store.isHave(row.id) ? 'выведена (есть на складе)' : ''"
+            aria-hidden="true"
             >✓</span
           >
           <span class="nm"><BeeIcon :name="row.id" />{{ row.id }}</span>
@@ -282,27 +283,21 @@ function clearHave() {
 .row.owned .nm {
   color: var(--src-f);
 }
+/* read-only индикатор: пусто (прозрачный спейсер) у не-выведенных, зелёная
+   галочка у выведенных. Не кликабелен — статус меняется в инвентаре. */
 .havchk {
   flex: none;
   width: 19px;
   height: 19px;
   border-radius: 6px;
-  border: 1.6px solid var(--cardln);
-  background: var(--card);
-  cursor: pointer;
   display: inline-grid;
   place-items: center;
   font-size: 12px;
   line-height: 1;
   color: transparent;
-  transition: 0.12s;
-}
-.havchk:hover {
-  border-color: var(--src-f);
 }
 .havchk.on {
   background: var(--src-f);
-  border-color: var(--src-f);
   color: #eafff5;
 }
 .empty-row {
