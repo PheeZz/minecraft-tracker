@@ -50,6 +50,7 @@ export function useTour(
 
     const { driver } = await import('driver.js')
     await import('driver.js/dist/driver.css')
+    await import('./tour.css') // наша тема поверх дефолтов driver (тот же ленивый чанк)
     const reduce = reducedMotion()
 
     const driveSteps = steps.map((s) => ({
@@ -99,6 +100,7 @@ export function useTour(
       smoothScroll: !reduce,
       allowClose: true,
       showProgress: true,
+      popoverClass: 'mc-tour', // наша тема (см. tour.css)
       overlayColor: 'rgba(0, 0, 0, 0.6)',
       nextBtnText: 'Далее',
       prevBtnText: 'Назад',
