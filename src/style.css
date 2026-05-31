@@ -1,18 +1,12 @@
 /* ============================================================
-   Базовый сброс + контракт дизайн-токенов.
-   Конкретные значения токенов задаются темами трекеров
-   (см. trackers/<id>/theme.css), активируемыми по [data-tracker].
+   Контракт дизайн-токенов и базовая типографика приложения.
+   Кросс-браузерный сброс живёт в reset.css (подключается раньше);
+   значения токенов задаются темами трекеров (trackers/<id>/theme.css),
+   активируемыми по [data-tracker].
    ============================================================ */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 html,
 body {
-  margin: 0;
   height: 100%;
 }
 
@@ -25,8 +19,6 @@ body {
   color: var(--ink, #e8f0e6);
   font-family: var(--font-body, system-ui, sans-serif);
   font-size: 14px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
 ::-webkit-scrollbar {
