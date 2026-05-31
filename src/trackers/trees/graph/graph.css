@@ -249,3 +249,51 @@ body.is-panning .node__dot {
 body.is-panning .node__fruit {
   border-top-color: transparent !important;
 }
+
+/* ---- одноразовый вход нод (класс cy-intro на контейнере, снимается через ~950мс) ----
+   анимируем ТОЛЬКО .node (внутреннюю карточку); transform позиционирования живёт
+   на обёртке node-html-label, поэтому не конфликтует. Ступенька — по тиру (t--N),
+   что даёт каскад слева-направо в раскладке тиров. */
+@keyframes treeNodeIn {
+  from {
+    opacity: 0;
+    transform: translateY(9px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.cy-intro .node {
+  animation: treeNodeIn 0.4s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+.cy-intro .node.t--1 {
+  animation-delay: 0.05s;
+}
+.cy-intro .node.t--2 {
+  animation-delay: 0.1s;
+}
+.cy-intro .node.t--3 {
+  animation-delay: 0.15s;
+}
+.cy-intro .node.t--4 {
+  animation-delay: 0.2s;
+}
+.cy-intro .node.t--5 {
+  animation-delay: 0.25s;
+}
+.cy-intro .node.t--6 {
+  animation-delay: 0.3s;
+}
+.cy-intro .node.t--7 {
+  animation-delay: 0.35s;
+}
+.cy-intro .node.t--8 {
+  animation-delay: 0.4s;
+}
+.cy-intro .node.t--9 {
+  animation-delay: 0.45s;
+}
+.cy-intro .node.t--10 {
+  animation-delay: 0.5s;
+}

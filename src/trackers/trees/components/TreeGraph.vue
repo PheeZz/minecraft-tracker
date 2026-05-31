@@ -133,6 +133,9 @@ onMounted(() => {
         graph.selectNode(ui.selectedId)
         graph.highlightLineage(ui.selectedId, 'ancestors')
       }
+      // запускаем вход ПОСЛЕ применения состояний — иначе пересоздание карточек
+      // (data-события от applyStates) перезапустило бы анимацию входа.
+      graph.playIntro()
     })
   })
   window.addEventListener('resize', onResize)
@@ -204,6 +207,13 @@ defineExpose({ focus: (id: string) => graph.focus(id), flash: (ids: string[]) =>
   height: 100%;
   min-width: 0;
   min-height: 0;
+  /* проявляется один раз после того, как лейаут устаканится (класс is-ready) —
+     прячет «прыжок» нод из preset-позиций в раскладку */
+  opacity: 0;
+}
+.stage__cy.is-ready {
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 .stage__navbar {
   position: absolute;

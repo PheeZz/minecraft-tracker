@@ -1,0 +1,81 @@
+/* ============================================================
+   Современный CSS-сброс. Подключается ПЕРВЫМ (до style.css и тем),
+   чтобы выровнять дефолты браузеров. Намеренно НЕ трогаем
+   canvas/svg (инлайновые пиксель-иконки .bic/.cic и svg-иконки
+   поиска рассчитывают на инлайновый поток и vertical-align).
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внешние отступы по умолчанию — компоненты задают свои. */
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* iOS: не масштабировать шрифт в ландшафте */
+  text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Медиа — блочные и не вылезают за контейнер. canvas/svg намеренно исключены. */
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Формы наследуют типографику, чтобы не было системного шрифта в инпутах/кнопках. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+
+/* Перенос длинных слов в текстовых блоках вместо overflow. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Заголовки/контролы не должны мешать выделению в дереве компонентов. */
+:where(ul, ol)[role='list'] {
+  list-style: none;
+  padding: 0;
+}

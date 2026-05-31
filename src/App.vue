@@ -61,11 +61,14 @@ function switchTo(id: TrackerId) {
     </nav>
 
     <main class="shell__body">
-      <!-- KeepAlive: вьюхи (и их Cytoscape-инстансы) не пересоздаются при переключении -->
+      <!-- KeepAlive: вьюхи (и их Cytoscape-инстансы) не пересоздаются при переключении.
+           Transition: лёгкий crossfade (только opacity) между вкладками. -->
       <RouterView v-slot="{ Component }">
-        <KeepAlive>
-          <component :is="Component" />
-        </KeepAlive>
+        <Transition name="tab" mode="out-in">
+          <KeepAlive>
+            <component :is="Component" />
+          </KeepAlive>
+        </Transition>
       </RouterView>
     </main>
   </div>
@@ -121,10 +124,29 @@ function switchTo(id: TrackerId) {
   border-color: var(--honey, var(--leaf));
   box-shadow: 0 0 0 1px var(--honey, var(--leaf));
 }
+.switcher__btn:active {
+  transform: scale(0.97);
+}
 
 .switcher__mark {
   font-size: 22px;
   line-height: 1;
+  display: inline-block;
+}
+/* «пружинка» значка активной вкладки — проигрывается один раз при активации */
+.switcher__btn.is-active .switcher__mark {
+  animation: markPop 0.34s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes markPop {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.22);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .switcher__text {
   display: flex;

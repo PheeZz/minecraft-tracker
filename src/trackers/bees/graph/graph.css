@@ -104,3 +104,19 @@ body.is-panning .bic,
 body.is-panning .cic {
   filter: none !important;
 }
+
+/* ---- вход нод пчёл (cy-intro на контейнере, снимается через ~600мс) ----
+   анимируем только .gnode (карточку-пчелу); ромбы-рецепты рисует canvas cytoscape. */
+@keyframes beeNodeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.cy-intro .gnode {
+  animation: beeNodeIn 0.34s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}

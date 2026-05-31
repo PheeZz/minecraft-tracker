@@ -41,6 +41,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
   let container: HTMLElement | null = null
   let rafId = 0
   let panTimer: ReturnType<typeof setTimeout> | null = null
+  let introTimer: ReturnType<typeof setTimeout> | null = null
 
   function repaint(): void {
     if (rafId || !container) return
@@ -57,6 +58,10 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
 
   function rebuild(elements: cytoscape.ElementDefinition[]): void {
     if (!container) return
+    // снимаем вход, чтобы при новом графе он проигрался заново (is-ready оставляем —
+    // граф уже видим, не моргаем; вход нод проигрывается поверх).
+    container.classList.remove('cy-intro')
+    if (introTimer) clearTimeout(introTimer)
     cy?.destroy()
     cy = cytoscape({
       container,
@@ -158,6 +163,10 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
     cy.ready(() => {
       cy?.fit(undefined, 45)
       setTimeout(() => container && paintIcons(container), 60)
+      // проявить контейнер + запустить вход нод (снимаем cy-intro после окна анимации,
+      // чтобы пересоздание карточек на data/style не перезапускало вход)
+      container?.classList.add('is-ready', 'cy-intro')
+      introTimer = setTimeout(() => container?.classList.remove('cy-intro'), 600)
     })
   }
 
@@ -202,6 +211,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
   function destroy(): void {
     if (rafId) cancelAnimationFrame(rafId)
     if (panTimer) clearTimeout(panTimer)
+    if (introTimer) clearTimeout(introTimer)
     document.body.classList.remove('is-panning')
     cy?.destroy()
     cy = null

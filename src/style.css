@@ -43,3 +43,51 @@ body {
 a {
   color: inherit;
 }
+
+/* ============================================================
+   Анимации переключения вкладок (классы применяются к корню
+   routed-компонента, поэтому живут глобально, не в scoped App.vue).
+   Только opacity: transform на предке cytoscape-контейнера сместил бы
+   DOM-слой меток нод (node-html-label) и сбил бы расчёт cy.resize().
+   ============================================================ */
+.tab-enter-active {
+  transition: opacity 0.16s ease-out;
+}
+.tab-leave-active {
+  transition: opacity 0.1s ease-in;
+}
+.tab-enter-from,
+.tab-leave-to {
+  opacity: 0;
+}
+
+/* Свап «инвентарь ⇄ граф» в трекере пчёл (корень одного из вариантов —
+   дочерний компонент с собственным scope, поэтому классы глобальные). */
+.inv-enter-active {
+  transition:
+    opacity 0.18s ease-out,
+    transform 0.18s ease-out;
+}
+.inv-leave-active {
+  transition:
+    opacity 0.12s ease-in,
+    transform 0.12s ease-in;
+}
+.inv-enter-from,
+.inv-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* Универсальный фолбэк: для пользователей с prefers-reduced-motion
+   гасим движение/длительности — конечное состояние применяется мгновенно. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

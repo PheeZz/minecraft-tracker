@@ -72,8 +72,21 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   let headersEl: HTMLElement | null = null
   let containerEl: HTMLElement | null = null
   let panTimer: ReturnType<typeof setTimeout> | null = null
+  let introTimer: ReturnType<typeof setTimeout> | null = null
   let invHandler: ((e: MouseEvent) => void) | null = null
   let iconRaf = 0
+
+  /**
+   * Одноразовая анимация появления: проявляем контейнер (is-ready) и запускаем
+   * ступенчатый вход нод (cy-intro). cy-intro снимаем после окна анимации —
+   * иначе пересоздание карточки на data/style-событии (выбор/фильтр/поиск)
+   * перезапустило бы вход и мигало бы. Вызывать ПОСЛЕ первого applyStates.
+   */
+  function playIntro(): void {
+    if (!containerEl) return
+    containerEl.classList.add('is-ready', 'cy-intro')
+    introTimer = setTimeout(() => containerEl?.classList.remove('cy-intro'), 950)
+  }
 
   function scheduleIconPaint(): void {
     if (iconRaf || !containerEl) return
@@ -378,6 +391,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
 
   function destroy(): void {
     if (panTimer) clearTimeout(panTimer)
+    if (introTimer) clearTimeout(introTimer)
     if (iconRaf) cancelAnimationFrame(iconRaf)
     if (invHandler) {
       document.removeEventListener('click', invHandler)
@@ -393,6 +407,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   return {
     mount,
     onReady,
+    playIntro,
     destroy,
     resize,
     revalidateSize,

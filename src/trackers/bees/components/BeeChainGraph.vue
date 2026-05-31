@@ -60,5 +60,10 @@ defineExpose({ fit: () => graph.fit() })
   width: 100%;
   height: 100%;
   min-height: 0;
+  opacity: 0; /* проявляется после готовности графа (класс is-ready) */
+}
+.bee-cy.is-ready {
+  opacity: 1;
+  transition: opacity 0.28s ease;
 }
 </style>

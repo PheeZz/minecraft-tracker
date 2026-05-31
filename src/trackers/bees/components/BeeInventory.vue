@@ -187,6 +187,18 @@ const rows = computed(() =>
   background: var(--src-f);
   border-color: var(--src-f);
   color: #eafff5;
+  animation: chkPop 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes chkPop {
+  0% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .card__body {
   flex: 1;

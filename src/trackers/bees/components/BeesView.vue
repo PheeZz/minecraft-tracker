@@ -27,60 +27,64 @@ const recipeCount = computed(() =>
     <BeeRail />
 
     <div class="stage">
-      <BeeInventory v-if="store.inventoryOpen" />
-      <template v-else>
-        <div class="crumb">
-          <template v-if="store.curTarget">
-            <template v-if="store.curComb">
-              <span class="goal">
-                <CombIcon v-if="combColor(store.curComb)" :name="store.curComb" big />
-                <span v-else class="goal__hex">⬡</span>
-                {{ store.curComb }}
+      <Transition name="inv" mode="out-in">
+        <BeeInventory v-if="store.inventoryOpen" key="inv" />
+        <div v-else key="graph" class="stagewrap">
+          <div class="crumb">
+            <template v-if="store.curTarget">
+              <template v-if="store.curComb">
+                <span class="goal">
+                  <CombIcon v-if="combColor(store.curComb)" :name="store.curComb" big />
+                  <span v-else class="goal__hex">⬡</span>
+                  {{ store.curComb }}
+                </span>
+                <span class="arrow">→</span>
+                <span class="muted">вывести</span> <span class="pick">{{ store.curTarget }}</span>
+                <span v-if="combPct != null" class="muted">(сота @{{ combPct }}%)</span>
+              </template>
+              <template v-else>
+                <span class="goal">{{ store.curTarget }}</span>
+                <span class="muted">дерево выведения</span>
+              </template>
+              <span v-if="recipeCount > 1" class="muted">· {{ recipeCount }} рецепта</span>
+              <span class="tools">
+                <button class="tbtn" type="button" @click="graphRef?.fit()">Вписать</button>
               </span>
-              <span class="arrow">→</span>
-              <span class="muted">вывести</span> <span class="pick">{{ store.curTarget }}</span>
-              <span v-if="combPct != null" class="muted">(сота @{{ combPct }}%)</span>
             </template>
-            <template v-else>
-              <span class="goal">{{ store.curTarget }}</span>
-              <span class="muted">дерево выведения</span>
-            </template>
-            <span v-if="recipeCount > 1" class="muted">· {{ recipeCount }} рецепта</span>
-            <span class="tools">
-              <button class="tbtn" type="button" @click="graphRef?.fit()">Вписать</button>
-            </span>
-          </template>
-          <span v-else class="muted">Выбери соту слева →</span>
-        </div>
+            <span v-else class="muted">Выбери соту слева →</span>
+          </div>
 
-        <BeeChainGraph v-if="store.curTarget" ref="graphRef" class="cy" />
-        <div v-else class="welcome">
-          <div class="o">⬡</div>
-          <h2>Что вывести ради соты?</h2>
-          <div>
-            Выбери соту слева. Покажу пчёл-производителей (сначала самых лёгких)<br />
-            и компактное дерево «что с чем скрестить». Где есть <b>альтернативные рецепты</b> —
-            переключишь.
+          <BeeChainGraph v-if="store.curTarget" ref="graphRef" class="cy" />
+          <div v-else class="welcome">
+            <div class="o">⬡</div>
+            <h2>Что вывести ради соты?</h2>
+            <div>
+              Выбери соту слева. Покажу пчёл-производителей (сначала самых лёгких)<br />
+              и компактное дерево «что с чем скрестить». Где есть <b>альтернативные рецепты</b> —
+              переключишь.
+            </div>
+          </div>
+
+          <div v-if="store.curTarget" class="legend">
+            <span><i style="background: var(--honey)" />цель</span>
+            <span
+              ><i style="background: var(--card); border: 1.5px solid var(--src-f)" />вывести</span
+            >
+            <span
+              ><i style="background: var(--bg2); border: 1.5px dashed var(--muted)" />дикая</span
+            >
+            <span
+              ><i style="background: var(--card); border: 2px double var(--alt)" />есть ⇄ альт.
+              рецепты</span
+            >
+            <span
+              ><i
+                style="background: #f4c452; transform: rotate(45deg); width: 9px; height: 9px"
+              />ромб = рецепт, шанс %</span
+            >
           </div>
         </div>
-
-        <div v-if="store.curTarget" class="legend">
-          <span><i style="background: var(--honey)" />цель</span>
-          <span
-            ><i style="background: var(--card); border: 1.5px solid var(--src-f)" />вывести</span
-          >
-          <span><i style="background: var(--bg2); border: 1.5px dashed var(--muted)" />дикая</span>
-          <span
-            ><i style="background: var(--card); border: 2px double var(--alt)" />есть ⇄ альт.
-            рецепты</span
-          >
-          <span
-            ><i
-              style="background: #f4c452; transform: rotate(45deg); width: 9px; height: 9px"
-            />ромб = рецепт, шанс %</span
-          >
-        </div>
-      </template>
+      </Transition>
     </div>
 
     <BeePanel />
@@ -100,6 +104,15 @@ const recipeCount = computed(() =>
   display: flex;
   flex-direction: column;
   min-height: 0;
+}
+/* обёртка центра (граф/приветствие/легенда) — отдельный узел для <Transition> между
+   ним и инвентарём; сохраняет колоночный flex, чтобы .cy тянулся (flex:1). */
+.stagewrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 .crumb {
   padding: 14px 20px;
