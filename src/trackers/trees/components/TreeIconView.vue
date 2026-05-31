@@ -28,6 +28,7 @@ watch(icon, paint)
     v-if="icon"
     ref="el"
     class="tree-icon"
+    :class="{ 'ico-skel': !treeTexturesReady }"
     :width="px"
     :height="px"
     :data-kind="icon.kind"

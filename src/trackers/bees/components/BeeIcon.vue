@@ -23,7 +23,7 @@ watch(color, paint)
     v-if="color"
     ref="el"
     class="bic"
-    :class="{ big }"
+    :class="{ big, 'ico-skel': !texturesReady }"
     width="16"
     height="16"
     :data-p="color.p"
