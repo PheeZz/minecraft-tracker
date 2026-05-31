@@ -261,11 +261,45 @@ body.is-panning .node__fruit {
   }
   to {
     opacity: 1;
-    transform: none;
+    /* явный identity вместо `none`: Safari/WebKit не интерполирует transform→none
+       и из-за этого не запускает анимацию вовсе */
+    transform: translateY(0) scale(1);
   }
 }
 .cy-intro .node {
   animation: treeNodeIn 0.4s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+/* ---- плавное появление/исчезание нод при переключении фильтров ----
+   data('anim')=in|out выставляется только в applyFilters и снимается через окно.
+   Анимация играет на пересоздаваемой карточке (node-html-label), поэтому это
+   keyframes (не transition) — иначе при пересоздании DOM перехода бы не было. */
+@keyframes nodeFilterIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes nodeFilterOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(5px) scale(0.96);
+  }
+}
+.node--in {
+  animation: nodeFilterIn 0.24s ease both;
+}
+.node--out {
+  animation: nodeFilterOut 0.24s ease forwards;
+  pointer-events: none;
 }
 .cy-intro .node.t--1 {
   animation-delay: 0.05s;

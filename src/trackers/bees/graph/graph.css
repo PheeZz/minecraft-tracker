@@ -114,7 +114,8 @@ body.is-panning .cic {
   }
   to {
     opacity: 1;
-    transform: none;
+    /* явный identity вместо `none` — иначе Safari не запускает анимацию */
+    transform: translateY(0) scale(1);
   }
 }
 .cy-intro .gnode {

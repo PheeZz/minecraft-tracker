@@ -73,6 +73,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   let containerEl: HTMLElement | null = null
   let panTimer: ReturnType<typeof setTimeout> | null = null
   let introTimer: ReturnType<typeof setTimeout> | null = null
+  let filterAnimTimer: ReturnType<typeof setTimeout> | null = null
   let invHandler: ((e: MouseEvent) => void) | null = null
   let iconRaf = 0
 
@@ -286,6 +287,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
         }
       })
     }
+    let flipped = false
     cy.batch(() => {
       cy!.nodes().forEach((n) => {
         const id = n.id()
@@ -293,6 +295,11 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
         let visible = !!t && opts.visibleTiers.has(t.tier)
         if (opts.onlyFruit) visible = visible && FRUIT_CHAIN.has(id)
         if (opts.onlyAvail) visible = visible && (availKeep!.has(id) || n.data('st') === 2)
+        // нода поменяла видимость → пометить для плавного входа/выхода карточки
+        if (!!n.data('hide') !== !visible) {
+          setData(n, 'anim', visible ? 'in' : 'out')
+          flipped = true
+        }
         n.toggleClass('filtered', !visible)
         setData(n, 'hide', !visible)
       })
@@ -300,6 +307,14 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
         e.toggleClass('hidden', e.source().hasClass('filtered') || e.target().hasClass('filtered'))
       })
     })
+    // снять транзиентные anim-флаги после окна анимации (карточки перерисуются в
+    // финальное состояние: показанные — без класса, скрытые — снова в '' пусто).
+    if (flipped) {
+      if (filterAnimTimer) clearTimeout(filterAnimTimer)
+      filterAnimTimer = setTimeout(() => {
+        cy?.batch(() => cy!.nodes().forEach((n) => n.data('anim') && n.removeData('anim')))
+      }, 280)
+    }
   }
 
   // ---------- инициализация ----------
@@ -392,6 +407,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   function destroy(): void {
     if (panTimer) clearTimeout(panTimer)
     if (introTimer) clearTimeout(introTimer)
+    if (filterAnimTimer) clearTimeout(filterAnimTimer)
     if (iconRaf) cancelAnimationFrame(iconRaf)
     if (invHandler) {
       document.removeEventListener('click', invHandler)

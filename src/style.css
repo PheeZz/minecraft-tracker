@@ -42,11 +42,15 @@ a {
    Только opacity: transform на предке cytoscape-контейнера сместил бы
    DOM-слой меток нод (node-html-label) и сбил бы расчёт cy.resize().
    ============================================================ */
-.tab-enter-active {
-  transition: opacity 0.16s ease-out;
-}
+.tab-enter-active,
 .tab-leave-active {
-  transition: opacity 0.1s ease-in;
+  transition: opacity 0.28s ease;
+}
+/* уходящую вьюху выносим из потока и накладываем поверх — обе живут одновременно,
+   получается мягкий crossfade без провала в пустой фон. */
+.tab-leave-active {
+  position: absolute;
+  inset: 0;
 }
 .tab-enter-from,
 .tab-leave-to {

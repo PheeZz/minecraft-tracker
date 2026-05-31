@@ -62,9 +62,10 @@ function switchTo(id: TrackerId) {
 
     <main class="shell__body">
       <!-- KeepAlive: вьюхи (и их Cytoscape-инстансы) не пересоздаются при переключении.
-           Transition: лёгкий crossfade (только opacity) между вкладками. -->
+           Transition: настоящий crossfade (без out-in, чтобы не было провала в пустоту) —
+           уходящая вьюха кладётся absolute поверх, обе плавно меняют opacity. -->
       <RouterView v-slot="{ Component }">
-        <Transition name="tab" mode="out-in">
+        <Transition name="tab">
           <KeepAlive>
             <component :is="Component" />
           </KeepAlive>
@@ -169,5 +170,6 @@ function switchTo(id: TrackerId) {
 
 .shell__body {
   min-height: 0;
+  position: relative; /* якорь для absolute-позиционирования уходящей вьюхи в crossfade */
 }
 </style>

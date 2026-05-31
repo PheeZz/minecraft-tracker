@@ -25,6 +25,8 @@ export interface NodeRenderData {
   faded?: boolean
   flash?: boolean
   hide?: boolean
+  /** Транзиентная анимация фильтра: 'in' | 'out' (выставляется applyFilters). */
+  anim?: 'in' | 'out'
   /** Плод (пусто, если нет). */
   frt?: string
   /** Стоимость посадки (саженцев). */
@@ -33,13 +35,17 @@ export interface NodeRenderData {
 
 /** HTML-шаблон видимой ноды (.node). Перенос tpl из ragu.html nodeHtmlLabel. */
 export function nodeTemplate(d: NodeRenderData): string {
-  if (d.hide) return ''
+  // Скрытая нода без анимации — карточки нет вовсе (как раньше). Во время fade-out
+  // (anim==='out') карточку рендерим, чтобы было что анимировать.
+  if (d.hide && d.anim !== 'out') return ''
   let cls = `node t--${d.tier}`
   if (d.st === 2) cls += ' node--have'
   else if (d.av) cls += ' node--avail'
   if (d.sel) cls += ' node--sel'
   if (d.faded) cls += ' node--faded'
   if (d.flash) cls += ' node--flash'
+  if (d.anim === 'in') cls += ' node--in'
+  else if (d.anim === 'out') cls += ' node--out'
 
   const fruit = d.frt ? `<div class="node__fruit">${fruitIconHtml(d.frt)}${d.frt}</div>` : ''
   const plant =
