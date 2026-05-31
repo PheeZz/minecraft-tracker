@@ -299,7 +299,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
       container,
       elements: [...buildNodes(), ...buildEdges()],
       wheelSensitivity: 2, // скорость зума колесом
-
+      pixelRatio: 1, // не растрить canvas под devicePixelRatio (рёбра/якоря; ноды — DOM)
       minZoom: 0.001,
       maxZoom: 3,
       style: GRAPH_STYLE,
@@ -346,8 +346,10 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
       if (panTimer) clearTimeout(panTimer)
       panTimer = setTimeout(() => document.body.classList.remove('is-panning'), 160)
     })
-    // node-html-label пересоздаёт canvas-иконки при ре-рендере → перекрашиваем (rAF-throttle)
-    cy.on('render zoom pan layoutstop', scheduleIconPaint)
+    // node-html-label пересоздаёт canvas-иконки (заново гоняет tpl) ТОЛЬКО на add/data/style;
+    // на pan/zoom/render он лишь двигает CSS-transform обёртки и иконки не трогает. Поэтому
+    // перекрашиваем именно на этих событиях, а не на каждом кадре панорамы (rAF-throttle).
+    cy.on('add data style', scheduleIconPaint)
   }
 
   function onReady(cb: () => void): void {

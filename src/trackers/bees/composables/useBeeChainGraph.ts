@@ -40,6 +40,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
   let cy: Core | null = null
   let container: HTMLElement | null = null
   let rafId = 0
+  let panTimer: ReturnType<typeof setTimeout> | null = null
 
   function repaint(): void {
     if (rafId || !container) return
@@ -61,6 +62,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
       container,
       elements,
       wheelSensitivity: 2, // скорость зума колесом
+      pixelRatio: 1, // не растрить canvas под devicePixelRatio (касается только рёбер/ромбов)
       minZoom: 0.2,
       maxZoom: 2.4,
       style: [
@@ -143,7 +145,16 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
       if (id.startsWith('rec::')) cb.onTapRecipe(id.slice(5))
       else cb.onTapBee(id)
     })
-    cy.on('render zoom pan layoutstop', repaint)
+    // canvas-иконки расширение пересоздаёт только на add/data/style (на pan/zoom — лишь
+    // CSS-transform обёртки), поэтому перекрашиваем здесь, а не на каждом кадре панорамы.
+    cy.on('add data style', repaint)
+    // «лёгкий рендер» при панораме/зуме (как у графа деревьев): на время движения снимаем
+    // тени с карточек, чтобы браузер не композил их каждый кадр.
+    cy.on('pan zoom', () => {
+      if (!document.body.classList.contains('is-panning')) document.body.classList.add('is-panning')
+      if (panTimer) clearTimeout(panTimer)
+      panTimer = setTimeout(() => document.body.classList.remove('is-panning'), 160)
+    })
     cy.ready(() => {
       cy?.fit(undefined, 45)
       setTimeout(() => container && paintIcons(container), 60)
@@ -190,6 +201,8 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
   }
   function destroy(): void {
     if (rafId) cancelAnimationFrame(rafId)
+    if (panTimer) clearTimeout(panTimer)
+    document.body.classList.remove('is-panning')
     cy?.destroy()
     cy = null
     container = null

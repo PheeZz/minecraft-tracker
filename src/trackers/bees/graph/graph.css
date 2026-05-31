@@ -91,3 +91,16 @@
 .gnode .gcomb .cic {
   margin-right: 0;
 }
+
+/* «лёгкий рендер» при панораме/зуме: тени слоёв и drop-shadow иконок — самое дорогое
+   в компоновке DOM-карточек; на время движения снимаем их (восстанавливаются через 160мс). */
+body.is-panning .gnode,
+body.is-panning .gnode.g-M,
+body.is-panning .gnode.g-have,
+body.is-panning .gnode.g-target {
+  box-shadow: none !important;
+}
+body.is-panning .bic,
+body.is-panning .cic {
+  filter: none !important;
+}
