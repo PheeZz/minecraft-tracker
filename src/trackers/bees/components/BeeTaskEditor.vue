@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { COMB_NAMES, shortComb } from '../domain/combs'
 import type { BeeTask } from '../domain/tasks'
 import CombIcon from './CombIcon.vue'
@@ -13,6 +13,16 @@ const emit = defineEmits<{
 const name = ref(props.initial?.name ?? '')
 const picked = ref<Set<string>>(new Set(props.initial?.combs ?? []))
 const query = ref('')
+
+// Родитель монтирует форму через v-if на задачу, но на случай переиспользования
+// инстанса синхронизируем поля при смене initial — иначе показались бы старые данные.
+watch(
+  () => props.initial,
+  (t) => {
+    name.value = t?.name ?? ''
+    picked.value = new Set(t?.combs ?? [])
+  },
+)
 
 const q = computed(() => query.value.trim().toLowerCase())
 const rows = computed(() => COMB_NAMES.filter((n) => !q.value || n.toLowerCase().includes(q.value)))
@@ -45,7 +55,7 @@ function submit(): void {
         <circle cx="11" cy="11" r="7" />
         <path d="m20 20-3.5-3.5" />
       </svg>
-      <input v-model="query" type="text" placeholder="найти соту…" />
+      <input v-model="query" type="text" placeholder="найти соту…" aria-label="найти соту" />
     </label>
 
     <div class="editor__combs">
@@ -61,6 +71,7 @@ function submit(): void {
         <CombIcon :name="comb" />
         {{ shortComb(comb) }}
       </button>
+      <span v-if="!rows.length" class="editor__none">ничего не найдено</span>
     </div>
 
     <div class="editor__actions">
@@ -144,10 +155,20 @@ function submit(): void {
 .combchip:hover {
   border-color: var(--honey-dk);
 }
+.combchip:focus-visible {
+  outline: 2px solid var(--honey-dk);
+  outline-offset: 1px;
+}
 .combchip.on {
   background: var(--src-f-soft);
   border-color: var(--src-f);
   color: var(--ink);
+}
+.editor__none {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--dim);
+  padding: 6px 2px;
 }
 .editor__actions {
   display: flex;
