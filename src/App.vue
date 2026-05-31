@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { storage } from '@/shared/persistence/storage'
 import { TRACKERS, type TrackerId } from '@/shared/types'
 import IconBase from '@/shared/ui/IconBase.vue'
+import ErrorBoundary from '@/shared/ui/ErrorBoundary.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -65,13 +66,17 @@ function switchTo(id: TrackerId) {
       <!-- KeepAlive: вьюхи (и их Cytoscape-инстансы) не пересоздаются при переключении.
            Transition: настоящий crossfade (без out-in, чтобы не было провала в пустоту) —
            уходящая вьюха кладётся absolute поверх, обе плавно меняют opacity. -->
-      <RouterView v-slot="{ Component }">
-        <Transition name="tab">
-          <KeepAlive>
-            <component :is="Component" />
-          </KeepAlive>
-        </Transition>
-      </RouterView>
+      <!-- ErrorBoundary снаружи RouterView, чтобы не вмешиваться в кеширование
+           KeepAlive (он должен видеть сами вьюхи как прямых детей). -->
+      <ErrorBoundary>
+        <RouterView v-slot="{ Component }">
+          <Transition name="tab">
+            <KeepAlive>
+              <component :is="Component" />
+            </KeepAlive>
+          </Transition>
+        </RouterView>
+      </ErrorBoundary>
     </main>
   </div>
 </template>

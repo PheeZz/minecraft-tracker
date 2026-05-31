@@ -10,4 +10,12 @@ import './trackers/trees/graph/graph.css'
 import './trackers/bees/theme.css'
 import './trackers/bees/graph/graph.css'
 
-createApp(App).use(createPinia()).use(router).mount('#app')
+const app = createApp(App)
+
+// Глобальный перехват ошибок вне дерева рендера (вотчеры, асинхронные коллбэки
+// и т.п.). Рендер-ошибки компонентов ловит ErrorBoundary в App.vue.
+app.config.errorHandler = (err, _instance, info) => {
+  console.error('[app error]', info, err)
+}
+
+app.use(createPinia()).use(router).mount('#app')
