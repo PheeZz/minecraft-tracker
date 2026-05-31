@@ -39,16 +39,22 @@ export interface BeeChainCallbacks {
 export function useBeeChainGraph(cb: BeeChainCallbacks) {
   let cy: Core | null = null
   let container: HTMLElement | null = null
-  let rafId = 0
+  let paintTimer: ReturnType<typeof setTimeout> | null = null
   let panTimer: ReturnType<typeof setTimeout> | null = null
   let introTimer: ReturnType<typeof setTimeout> | null = null
 
   function repaint(): void {
-    if (rafId || !container) return
-    rafId = requestAnimationFrame(() => {
-      rafId = 0
+    if (!container) return
+    // node-html-label пересоздаёт карточки (и обнуляет внутренний canvas-иконок)
+    // через setTimeout(0). Наш обработчик зарегистрирован ПОСЛЕ него, поэтому
+    // планируем перекраску тоже через setTimeout(0) — она выполнится УЖЕ ПОСЛЕ
+    // пересоздания. На requestAnimationFrame была гонка: rAF мог сработать ДО
+    // пересоздания, красил устаревший canvas, и иконки моргали/пропадали.
+    if (paintTimer) clearTimeout(paintTimer)
+    paintTimer = setTimeout(() => {
+      paintTimer = null
       if (container) paintIcons(container)
-    })
+    }, 0)
   }
 
   function mount(el: HTMLElement): void {
@@ -209,7 +215,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
     cy?.resize()
   }
   function destroy(): void {
-    if (rafId) cancelAnimationFrame(rafId)
+    if (paintTimer) clearTimeout(paintTimer)
     if (panTimer) clearTimeout(panTimer)
     if (introTimer) clearTimeout(introTimer)
     document.body.classList.remove('is-panning')

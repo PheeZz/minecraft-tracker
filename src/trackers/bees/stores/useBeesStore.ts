@@ -51,6 +51,19 @@ const COMB_NAMES_SET: ReadonlySet<string> = new Set(Object.keys(COMBS))
 const VALID_SORT: readonly InvSort[] = ['name', 'depth', 'wild']
 const VALID_FILTER: readonly InvFilter[] = ['all', 'missing', 'owned', 'breedable', 'wild']
 
+/** Уникальный id задачи. crypto.randomUUID есть только в secure context (https/
+   localhost); на проде по http его нет → используем getRandomValues, иначе time+random. */
+function uid(): string {
+  const c = typeof crypto !== 'undefined' ? crypto : undefined
+  if (c && typeof c.randomUUID === 'function') return c.randomUUID()
+  if (c && typeof c.getRandomValues === 'function') {
+    return [...c.getRandomValues(new Uint8Array(16))]
+      .map((b) => b.toString(16).padStart(2, '0'))
+      .join('')
+  }
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 10)
+}
+
 /** Склад из ненадёжного источника (localStorage/импорт): только известные id. */
 function sanitizeHave(raw: unknown): Set<string> {
   if (!Array.isArray(raw)) return new Set()
@@ -248,7 +261,7 @@ export const useBeesStore = defineStore('bees', () => {
     return [...new Set(combs)]
   }
   function addTask(name: string, combs: string[]): void {
-    tasks.value = [...tasks.value, { id: crypto.randomUUID(), name, combs: dedupe(combs) }]
+    tasks.value = [...tasks.value, { id: uid(), name, combs: dedupe(combs) }]
     persistTasks()
   }
   function updateTask(id: string, patch: { name?: string; combs?: string[] }): void {
