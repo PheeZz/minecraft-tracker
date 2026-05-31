@@ -4,6 +4,7 @@ import IconBase from '@/shared/ui/IconBase.vue'
 import AppLoader from '@/shared/ui/AppLoader.vue'
 import { BY_ID, TREES } from '../data/trees.data'
 import { isAvailable, unlockScore } from '../domain/graph'
+import { FRUIT_CHAIN } from '../domain/plan'
 import { useTreesStore } from '../stores/useTreesStore'
 import { useTreesUiStore } from '../stores/useTreesUiStore'
 import { useTreeActions } from '../composables/useTreeActions'
@@ -55,9 +56,18 @@ function refresh() {
 
 // ---------- навбар ----------
 let stepIdx = 0
+// Кандидаты для кнопок «следующий доступный» / «лучший шаг» (и шага тура «лучший выбор»):
+// доступные ноды, ВИДИМЫЕ при текущих фильтрах — иначе кнопка сфокусировалась бы на скрытой
+// ноде и панорама уехала бы в пустоту. onlyAvail тут самоудовлетворён (кандидаты по определению
+// доступны), поэтому учитываем onlyFruit и фильтр тиров — именно они скрывают доступные ноды.
 function availSorted() {
   return TREES.filter(
-    (t) => t.tier > 0 && (store.progress[t.id] ?? 0) === 0 && isAvailable(store.progress, t.id),
+    (t) =>
+      t.tier > 0 &&
+      (store.progress[t.id] ?? 0) === 0 &&
+      isAvailable(store.progress, t.id) &&
+      ui.visibleTiers.has(t.tier) &&
+      (!ui.onlyFruit || FRUIT_CHAIN.has(t.id)),
   )
 }
 function nextStep() {
