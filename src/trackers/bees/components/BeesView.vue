@@ -23,13 +23,16 @@ const recipeCount = computed(() =>
 </script>
 
 <template>
-  <div class="bees">
-    <BeeRail />
+  <!-- Инвентарь — режим управления складом: разворачивается на всю ширину области
+       пчёл (рейл выбора цепочки и панель плана при этом не нужны), что даёт куда
+       больше колонок для 257 видов. Граф-режим — обычная 3-колоночная раскладка. -->
+  <Transition name="inv" mode="out-in">
+    <BeeInventory v-if="store.inventoryOpen" key="inv" class="bees-inv" />
+    <div v-else key="layout" class="bees">
+      <BeeRail />
 
-    <div class="stage">
-      <Transition name="inv" mode="out-in">
-        <BeeInventory v-if="store.inventoryOpen" key="inv" />
-        <div v-else key="graph" class="stagewrap">
+      <div class="stage">
+        <div key="graph" class="stagewrap">
           <div class="crumb">
             <template v-if="store.curTarget">
               <template v-if="store.curComb">
@@ -84,17 +87,22 @@ const recipeCount = computed(() =>
             >
           </div>
         </div>
-      </Transition>
-    </div>
+      </div>
 
-    <BeePanel />
-  </div>
+      <BeePanel />
+    </div>
+  </Transition>
 </template>
 
 <style scoped>
 .bees {
   display: grid;
   grid-template-columns: 296px 1fr 348px;
+  height: 100%;
+  min-height: 0;
+}
+/* инвентарь во весь размер области пчёл */
+.bees-inv {
   height: 100%;
   min-height: 0;
 }
