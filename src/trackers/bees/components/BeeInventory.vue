@@ -9,6 +9,7 @@ import IconBase from '@/shared/ui/IconBase.vue'
 const store = useBeesStore()
 const query = ref('')
 const confirmClear = ref(false)
+const fileInput = ref<HTMLInputElement>()
 
 const TOTAL = BEES.length
 
@@ -155,6 +156,27 @@ function doClear(): void {
   confirmClear.value = false
 }
 
+function onExport(): void {
+  const blob = new Blob([JSON.stringify(store.exportData(), null, 2)], {
+    type: 'application/json',
+  })
+  const a = document.createElement('a')
+  a.href = URL.createObjectURL(blob)
+  a.download = 'bees-progress.json'
+  a.click()
+  URL.revokeObjectURL(a.href)
+}
+async function onImport(e: Event): Promise<void> {
+  const file = (e.target as HTMLInputElement).files?.[0]
+  if (!file) return
+  try {
+    store.importData(JSON.parse(await file.text()))
+  } catch (err) {
+    alert('Ошибка импорта: ' + (err as Error).message)
+  }
+  if (fileInput.value) fileInput.value.value = ''
+}
+
 const full = computed(() => store.haveCount === TOTAL)
 </script>
 
@@ -234,6 +256,32 @@ const full = computed(() => store.haveCount === TOTAL)
         >
           {{ s.label }}
         </button>
+      </div>
+
+      <div class="inv__data">
+        <button
+          type="button"
+          class="inv__data-btn"
+          title="Экспорт склада и задач"
+          @click="onExport"
+        >
+          <IconBase name="download" />Экспорт
+        </button>
+        <button
+          type="button"
+          class="inv__data-btn"
+          title="Импорт из файла (заменит склад и задачи)"
+          @click="fileInput?.click()"
+        >
+          <IconBase name="upload" />Импорт
+        </button>
+        <input
+          ref="fileInput"
+          type="file"
+          accept="application/json,.json"
+          hidden
+          @change="onImport"
+        />
       </div>
 
       <div class="inv__clear">
@@ -511,8 +559,31 @@ const full = computed(() => store.haveCount === TOTAL)
   outline-offset: 1px;
 }
 
-.inv__clear {
+.inv__data {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.inv__data-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink2);
+  background: var(--card);
+  border: 1px solid var(--cardln);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.inv__data-btn:hover {
+  border-color: var(--honey-dk);
+  color: var(--ink);
+}
+.inv__clear {
   display: flex;
   align-items: center;
   gap: 6px;

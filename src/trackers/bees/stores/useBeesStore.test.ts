@@ -147,3 +147,48 @@ describe('CRUD задач', () => {
     expect(s2.tasks.map((t) => t.name)).toEqual(['A', 'B'])
   })
 })
+
+describe('экспорт/импорт + валидация', () => {
+  it('exportData отдаёт склад и задачи', () => {
+    const s = useBeesStore()
+    s.toggleHave('Развитая')
+    s.addTask('A', ['Медовые соты'])
+    const e = s.exportData()
+    expect(e.v).toBe(1)
+    expect(e.have).toContain('Развитая')
+    expect(e.tasks[0]!.name).toBe('A')
+  })
+  it('importData заменяет склад/задачи и отбрасывает мусор', () => {
+    const s = useBeesStore()
+    s.importData({
+      have: ['Развитая', 'НесуществующаяПчела', 123],
+      tasks: [
+        { id: 'x', name: 'ok', combs: ['Медовые соты', 'НетТакойСоты'] },
+        { id: 'bad', name: 'нет валидных сот', combs: ['НетТакойСоты'] },
+        { nope: true },
+      ],
+    })
+    expect([...s.have]).toEqual(['Развитая']) // мусорные id отброшены
+    expect(s.tasks).toHaveLength(1)
+    expect(s.tasks[0]!.combs).toEqual(['Медовые соты']) // неизвестная сота отброшена
+  })
+  it('битые задачи в localStorage не валят загрузку', () => {
+    storage.set('bees.tasks', [
+      { id: 'x' },
+      'мусор',
+      { id: 'y', name: 'n', combs: ['Медовые соты'] },
+    ])
+    setActivePinia(createPinia())
+    const s = useBeesStore()
+    expect(s.tasks).toHaveLength(1)
+    expect(s.tasks[0]!.id).toBe('y')
+  })
+  it('битые invPrefs откатываются к дефолту', () => {
+    storage.set('bees.invPrefs', { sort: 'ерунда', filter: 'чушь', collapsed: 'нея' })
+    setActivePinia(createPinia())
+    const s = useBeesStore()
+    expect(s.invSort).toBe('name')
+    expect(s.invFilter).toBe('all')
+    expect(s.collapsedSources.size).toBe(0)
+  })
+})

@@ -39,10 +39,48 @@ export interface RankedProducer extends CombProducer {
   depth: number
 }
 
+/** Формат экспорта данных пчёл (склад + задачи). */
+export interface BeeExport {
+  v: 1
+  exported: string
+  have: string[]
+  tasks: BeeTask[]
+}
+
+const COMB_NAMES_SET: ReadonlySet<string> = new Set(Object.keys(COMBS))
+const VALID_SORT: readonly InvSort[] = ['name', 'depth', 'wild']
+const VALID_FILTER: readonly InvFilter[] = ['all', 'missing', 'owned', 'breedable', 'wild']
+
+/** Склад из ненадёжного источника (localStorage/импорт): только известные id. */
+function sanitizeHave(raw: unknown): Set<string> {
+  if (!Array.isArray(raw)) return new Set()
+  return new Set(raw.filter((id): id is string => typeof id === 'string' && id in BEE_BY_ID))
+}
+
+/** Задачи из ненадёжного источника: валидируем форму, отбрасываем мусор. */
+function sanitizeTasks(raw: unknown): BeeTask[] {
+  if (!Array.isArray(raw)) return []
+  const out: BeeTask[] = []
+  for (const t of raw) {
+    if (!t || typeof t !== 'object') continue
+    const o = t as Record<string, unknown>
+    if (typeof o.id !== 'string' || typeof o.name !== 'string' || !Array.isArray(o.combs)) continue
+    const combs = [
+      ...new Set(
+        o.combs.filter((c): c is string => typeof c === 'string' && COMB_NAMES_SET.has(c)),
+      ),
+    ]
+    if (!combs.length) continue
+    const task: BeeTask = { id: o.id, name: o.name, combs }
+    if (typeof o.collapsed === 'boolean') task.collapsed = o.collapsed
+    out.push(task)
+  }
+  return out
+}
+
 export const useBeesStore = defineStore('bees', () => {
   // склад выведенных видов
-  const savedHave = storage.get<string[]>(HAVE_KEY, [])
-  const have = ref<Set<string>>(new Set(savedHave.filter((id) => id in BEE_BY_ID)))
+  const have = ref<Set<string>>(sanitizeHave(storage.get<unknown>(HAVE_KEY, [])))
 
   const invOnly = ref(false)
   /** Выбранный рецепт на пчелу (индекс в parents). */
@@ -56,7 +94,7 @@ export const useBeesStore = defineStore('bees', () => {
   /** Открыта ли модалка задач (независима от view, рисуется поверх). */
   const tasksOpen = ref(false)
   /** Список задач игрока (цель-предмет → требуемые соты). */
-  const tasks = ref<BeeTask[]>(storage.get<BeeTask[]>(TASKS_KEY, []))
+  const tasks = ref<BeeTask[]>(sanitizeTasks(storage.get<unknown>(TASKS_KEY, [])))
 
   // настройки инвентаря (сорт/фильтр/свёрнутые секции) — один сохраняемый ключ
   const savedPrefs = storage.get<InvPrefs>(INV_PREFS_KEY, {
@@ -64,9 +102,17 @@ export const useBeesStore = defineStore('bees', () => {
     filter: 'all',
     collapsed: [],
   })
-  const invSort = ref<InvSort>(savedPrefs.sort)
-  const invFilter = ref<InvFilter>(savedPrefs.filter)
-  const collapsedSources = ref<Set<BeeSource>>(new Set(savedPrefs.collapsed))
+  const invSort = ref<InvSort>(VALID_SORT.includes(savedPrefs.sort) ? savedPrefs.sort : 'name')
+  const invFilter = ref<InvFilter>(
+    VALID_FILTER.includes(savedPrefs.filter) ? savedPrefs.filter : 'all',
+  )
+  const collapsedSources = ref<Set<BeeSource>>(
+    new Set(
+      (Array.isArray(savedPrefs.collapsed) ? savedPrefs.collapsed : []).filter(
+        (s): s is BeeSource => s === 'F' || s === 'E' || s === 'M',
+      ),
+    ),
+  )
 
   function persist(): void {
     storage.set(HAVE_KEY, [...have.value])
@@ -224,6 +270,24 @@ export const useBeesStore = defineStore('bees', () => {
     persistTasks()
   }
 
+  /** Бэкап данных пчёл (склад + задачи) в сериализуемый объект. */
+  function exportData(): BeeExport {
+    return { v: 1, exported: new Date().toISOString(), have: [...have.value], tasks: tasks.value }
+  }
+  /** Импорт бэкапа: валидируем форму, заменяем склад/задачи. */
+  function importData(payload: unknown): void {
+    if (!payload || typeof payload !== 'object') return
+    const o = payload as Record<string, unknown>
+    if ('have' in o) {
+      have.value = sanitizeHave(o.have)
+      persist()
+    }
+    if ('tasks' in o) {
+      tasks.value = sanitizeTasks(o.tasks)
+      persistTasks()
+    }
+  }
+
   // Единый источник статусов сот задачи (сота → проще всего вывести/есть на складе).
   // Используют и карточка задачи, и бейдж незакрытых — чтобы логика не двоилась.
   function statusesOf(task: BeeTask): CombStatus[] {
@@ -276,5 +340,7 @@ export const useBeesStore = defineStore('bees', () => {
     toggleTaskCollapsed,
     statusesOf,
     openTaskCount,
+    exportData,
+    importData,
   }
 })
