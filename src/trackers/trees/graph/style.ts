@@ -49,6 +49,19 @@ export const GRAPH_STYLE: StylesheetStyle[] = [
   },
   { selector: 'edge.show', style: { opacity: 0.5 } },
   { selector: 'edge.dim', style: { opacity: 0.03 } },
-  { selector: 'edge.hl', style: { opacity: 1, width: 2.6 } },
+  {
+    selector: 'edge.hl',
+    style: {
+      opacity: 1,
+      width: 2.6,
+      // «поток»: подсвеченные рёбра пунктирные, line-dash-offset гонит rAF-цикл
+      // (см. startEdgeFlow) — даёт ощущение движения по направлению выведения.
+      // Длинный штрих + маленький промежуток (почти сплошная линия): там, где
+      // taxi-рёбра сливаются в общий сегмент, два пунктира с разной фазой конфликтуют
+      // визуально меньше, чем при коротких штрихах.
+      'line-style': 'dashed',
+      'line-dash-pattern': [22, 6],
+    },
+  },
   { selector: 'edge.hidden', style: { display: 'none' } },
 ] as StylesheetStyle[]

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onActivated, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { onActivated, onBeforeUnmount, onDeactivated, onMounted, ref, watch } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
 import { BY_ID, TREES } from '../data/trees.data'
 import { isAvailable, unlockScore } from '../domain/graph'
@@ -141,8 +141,14 @@ onMounted(() => {
   window.addEventListener('resize', onResize)
 })
 
-// Возврат на вкладку (KeepAlive): ресинхронизировать размер, сохранив пан/зум.
-onActivated(() => graph.revalidateSize())
+// Возврат на вкладку (KeepAlive): ресинхронизировать размер; возобновить поток рёбер,
+// если есть активная подсветка.
+onActivated(() => {
+  graph.revalidateSize()
+  graph.resumeEdgeFlow()
+})
+// Уход с вкладки: остановить rAF потока, чтобы не крутился на скрытом графе.
+onDeactivated(() => graph.pauseEdgeFlow())
 onBeforeUnmount(() => {
   window.removeEventListener('resize', onResize)
   if (resizeTimer) clearTimeout(resizeTimer)

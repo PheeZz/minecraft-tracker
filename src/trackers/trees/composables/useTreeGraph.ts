@@ -208,13 +208,44 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     })
   }
 
+  // ---------- «поток» по рёбрам родословной (marching ants) ----------
+  // Гоним line-dash-offset у .hl-рёбер через rAF — пунктир «течёт» к потомку.
+  // Цикл живёт ТОЛЬКО пока есть подсветка: сам останавливается, когда .hl пусто
+  // (снятие выбора), и не запускается при prefers-reduced-motion.
+  let flowRaf = 0
+  let flowOffset = 0
+  const motionOk = (): boolean => !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+  function startEdgeFlow(): void {
+    if (flowRaf || !cy || !motionOk()) return
+    const tick = (): void => {
+      if (!cy) {
+        flowRaf = 0
+        return
+      }
+      const hl = cy.edges('.hl')
+      if (hl.empty()) {
+        flowRaf = 0
+        return
+      }
+      flowOffset -= 0.55
+      hl.style('line-dash-offset', flowOffset)
+      flowRaf = requestAnimationFrame(tick)
+    }
+    flowRaf = requestAnimationFrame(tick)
+  }
+  function stopEdgeFlow(): void {
+    if (flowRaf) cancelAnimationFrame(flowRaf)
+    flowRaf = 0
+  }
+
   // ---------- подсветка родословной ----------
   function clearHighlight(): void {
     if (!cy) return
+    stopEdgeFlow()
     cy.batch(() => {
       cy!.nodes().forEach((n) => setData(n, 'faded', false))
       cy!.edges().removeClass('dim hl')
-      cy!.edges().removeStyle('line-color target-arrow-color width opacity')
+      cy!.edges().removeStyle('line-color target-arrow-color width opacity line-dash-offset')
     })
   }
   function highlightLineage(id: string, dir: LineageDir): void {
@@ -232,6 +263,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
         e.style({ 'line-color': c, 'target-arrow-color': c, width: 3, opacity: 1 })
       })
     })
+    startEdgeFlow()
   }
 
   function selectNode(id: string | null): void {
@@ -439,6 +471,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     if (introTimer) clearTimeout(introTimer)
     if (filterAnimTimer) clearTimeout(filterAnimTimer)
     if (iconFlushTimer) clearTimeout(iconFlushTimer)
+    stopEdgeFlow()
     if (invHandler) {
       document.removeEventListener('click', invHandler)
       invHandler = null
@@ -465,6 +498,10 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     focus,
     fit,
     flash,
+    // пауза/возобновление «потока» рёбер — чтобы rAF не крутился, пока вкладка
+    // деактивирована KeepAlive (граф не виден). На возврате стартует, если есть подсветка.
+    pauseEdgeFlow: stopEdgeFlow,
+    resumeEdgeFlow: startEdgeFlow,
     toggleAllEdges,
     search,
     applyFilters,
