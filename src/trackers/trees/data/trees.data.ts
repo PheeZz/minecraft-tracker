@@ -304,7 +304,6 @@ export const FRUITS: Readonly<Record<string, string>> = {
 export const PLANT: Readonly<Record<string, number>> = {
   'Обычное ореховое дерево': 4,
   'Дуб черешчатый': 4,
-  Гинкго: 4,
   'Орех серый': 4,
   'Каштан посевной': 4, // 2×2
   Венге: 4, // 2×2

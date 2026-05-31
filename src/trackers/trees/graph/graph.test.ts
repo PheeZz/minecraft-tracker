@@ -25,7 +25,9 @@ describe('labelFor', () => {
     )
   })
   it('добавляет пометку посадки 2×2', () => {
-    expect(labelFor({ id: 'Гинкго', tier: 8, plant: 4, fruit: 'Семена гинкго' })).toContain('⊞2×2')
+    expect(labelFor({ id: 'Каштан посевной', tier: 6, plant: 4, fruit: 'Каштан' })).toContain(
+      '⊞2×2',
+    )
   })
 })
 
