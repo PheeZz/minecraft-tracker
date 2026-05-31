@@ -1,0 +1,15 @@
+# Сборка и запуск приложения за внутренним nginx.
+# Домен и TLS — на внешнем reverse-proxy/ingress; здесь только http на :80.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # base='/' — раздаём из корня (для GitHub Pages в CI используется другой base)
+        BASE_PATH: /
+    image: minecraft-tracker:latest
+    container_name: minecraft-tracker
+    ports:
+      - '8080:80' # host:container — наружу http, проксируется внешним слоем
+    restart: unless-stopped

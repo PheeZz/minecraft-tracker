@@ -1,0 +1,24 @@
+# Сборке нужны только: package*.json, конфиги, src/, public/, index.html.
+# Остальное исключаем — меньше контекст, быстрее билд.
+.git
+.github
+node_modules
+dist
+dist-ssr
+docs
+screenshots
+scripts
+# корневые источники генераторов данных (в сборку не входят — данные уже в src/)
+trees
+bees
+# докер-обвязка и прочее
+Dockerfile
+docker-compose.yml
+.dockerignore
+*.log
+.DS_Store
+.vscode
+.idea
+README.md
+eslint.config.js
+.prettierrc.json
