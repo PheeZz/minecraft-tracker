@@ -96,3 +96,16 @@ export function paintTreeCanvas(cv: HTMLCanvasElement): void {
 export function paintTreeIcons(root: ParentNode = document): void {
   root.querySelectorAll<HTMLCanvasElement>('canvas.tic').forEach(paintTreeCanvas)
 }
+
+/**
+ * Перерисовать иконки только указанных нод (по data-id карточки .node).
+ * Нужно, чтобы изменение одной ноды не перерисовывало иконки всех остальных —
+ * node-html-label пересоздаёт DOM (и обнуляет canvas) лишь у изменившихся нод.
+ */
+export function paintTreeIconsFor(root: ParentNode, ids: ReadonlySet<string>): void {
+  if (!ids.size) return
+  root.querySelectorAll<HTMLCanvasElement>('canvas.tic').forEach((cv) => {
+    const id = cv.closest<HTMLElement>('.node')?.dataset.id
+    if (id && ids.has(id)) paintTreeCanvas(cv)
+  })
+}

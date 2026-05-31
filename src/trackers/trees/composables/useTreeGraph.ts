@@ -9,7 +9,7 @@ import { buildEdges, buildNodes } from '../graph/elements'
 import { computeTiersLayout, LAYOUTS, type LayoutKey } from '../graph/layouts'
 import { nodeTemplate, type NodeRenderData } from '../graph/nodeLabel'
 import { GRAPH_STYLE } from '../graph/style'
-import { ensureTreeTextures, paintTreeIcons } from './useTreeTextures'
+import { ensureTreeTextures, paintTreeIcons, paintTreeIconsFor } from './useTreeTextures'
 
 /** Сигнатура метода, добавляемого расширением node-html-label. */
 interface NodeHtmlLabelConfig {
@@ -76,6 +76,10 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   let filterAnimTimer: ReturnType<typeof setTimeout> | null = null
   let invHandler: ((e: MouseEvent) => void) | null = null
   let iconRaf = 0
+  // иконки перекрашиваем точечно: копим id нод, чьи карточки пересоздались
+  // (флаг allIcons — полная перерисовка, например когда догрузились текстуры).
+  const dirtyIcons = new Set<string>()
+  let allIcons = false
 
   /**
    * Одноразовая анимация появления: проявляем контейнер (is-ready) и запускаем
@@ -89,12 +93,27 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     introTimer = setTimeout(() => containerEl?.classList.remove('cy-intro'), 950)
   }
 
-  function scheduleIconPaint(): void {
+  function flushIconPaint(): void {
+    iconRaf = 0
+    if (!containerEl) return
+    if (allIcons) paintTreeIcons(containerEl)
+    else paintTreeIconsFor(containerEl, dirtyIcons)
+    allIcons = false
+    dirtyIcons.clear()
+  }
+  function scheduleFlush(): void {
     if (iconRaf || !containerEl) return
-    iconRaf = requestAnimationFrame(() => {
-      iconRaf = 0
-      if (containerEl) paintTreeIcons(containerEl)
-    })
+    iconRaf = requestAnimationFrame(flushIconPaint)
+  }
+  /** Иконка одной ноды (её карточка пересоздалась) — перекрасить точечно. */
+  function scheduleNodeIcon(id: string): void {
+    dirtyIcons.add(id)
+    scheduleFlush()
+  }
+  /** Полная перерисовка всех иконок (текстуры догрузились / первичная отрисовка). */
+  function repaintAllIcons(): void {
+    allIcons = true
+    scheduleFlush()
   }
 
   const setData = (n: NodeSingular, key: string, val: unknown): void => {
@@ -295,16 +314,20 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
         let visible = !!t && opts.visibleTiers.has(t.tier)
         if (opts.onlyFruit) visible = visible && FRUIT_CHAIN.has(id)
         if (opts.onlyAvail) visible = visible && (availKeep!.has(id) || n.data('st') === 2)
-        // нода поменяла видимость → пометить для плавного входа/выхода карточки
+        // Меняем данные/класс ТОЛЬКО при фактической смене видимости. Иначе на первом
+        // вызове hide идёт undefined→false у всех нод, что шлёт 'data' по всем 131 →
+        // node-html-label пересоздаёт все карточки и перекрашивает все иконки.
+        // (!! приводит undefined к false.)
         if (!!n.data('hide') !== !visible) {
-          setData(n, 'anim', visible ? 'in' : 'out')
+          setData(n, 'anim', visible ? 'in' : 'out') // плавный вход/выход карточки
+          setData(n, 'hide', !visible)
           flipped = true
         }
-        n.toggleClass('filtered', !visible)
-        setData(n, 'hide', !visible)
+        if (n.hasClass('filtered') !== !visible) n.toggleClass('filtered', !visible)
       })
       cy!.edges().forEach((e) => {
-        e.toggleClass('hidden', e.source().hasClass('filtered') || e.target().hasClass('filtered'))
+        const hide = e.source().hasClass('filtered') || e.target().hasClass('filtered')
+        if (e.hasClass('hidden') !== hide) e.toggleClass('hidden', hide)
       })
     })
     // снять транзиентные anim-флаги после окна анимации (карточки перерисуются в
@@ -374,10 +397,11 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
       if (panTimer) clearTimeout(panTimer)
       panTimer = setTimeout(() => document.body.classList.remove('is-panning'), 160)
     })
-    // node-html-label пересоздаёт canvas-иконки (заново гоняет tpl) ТОЛЬКО на add/data/style;
-    // на pan/zoom/render он лишь двигает CSS-transform обёртки и иконки не трогает. Поэтому
-    // перекрашиваем именно на этих событиях, а не на каждом кадре панорамы (rAF-throttle).
-    cy.on('add data style', scheduleIconPaint)
+    // node-html-label пересоздаёт canvas-иконку (заново гоняет tpl) ТОЛЬКО на add/data/style,
+    // и только у изменившейся ноды (на pan/zoom лишь двигает CSS-transform обёртки). Поэтому
+    // перекрашиваем точечно иконку этой ноды, а не все 131 — иначе изменение одной ноды
+    // дёргало бы перерисовку иконок у всех (включая нетронутые).
+    cy.on('add data style', 'node', (e) => scheduleNodeIcon(e.target.id()))
   }
 
   function onReady(cb: () => void): void {
@@ -439,7 +463,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     search,
     applyFilters,
     updateTierHeaders,
-    repaintIcons: scheduleIconPaint,
+    repaintIcons: repaintAllIcons,
     get currentLayout() {
       return currentLayout
     },
