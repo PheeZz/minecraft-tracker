@@ -12,6 +12,9 @@ RUN npm ci
 # reverse-proxy, внутренний образ о них ничего не знает.
 COPY . .
 ARG BASE_PATH=/
+# Потолок кучи Node: в memory-ограниченных контейнерах V8 авто-занижает old-space
+# (~0.5GB) и vite падает с OOM на рендере тяжёлых чанков. Это ceiling, а не резерв.
+ENV NODE_OPTIONS=--max-old-space-size=4096
 RUN BASE_PATH=${BASE_PATH} npm run build
 
 # ===== Stage 2: раздача статики через nginx =====
