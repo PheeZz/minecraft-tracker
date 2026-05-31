@@ -190,7 +190,7 @@ const full = computed(() => store.haveCount === TOTAL)
         готово к выведению: {{ store.breedableCount }}
       </button>
 
-      <button class="inv__close" type="button" title="Закрыть" @click="store.toggleInventory()">
+      <button class="inv__close" type="button" title="Закрыть" @click="store.setView('graph')">
         ✕ Закрыть
       </button>
     </header>

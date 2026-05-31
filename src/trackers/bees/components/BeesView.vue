@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import { BEE_BY_ID } from '../data/bees.data'
 import { COMBS } from '../domain/combs'
 import { combColor } from '../domain/colors'
+import { combStatus, taskProgress } from '../domain/tasks'
 import { useBeesStore } from '../stores/useBeesStore'
 import BeeRail from './BeeRail.vue'
 import BeeChainGraph from './BeeChainGraph.vue'
@@ -20,90 +21,203 @@ const combPct = computed(() => {
 const recipeCount = computed(() =>
   store.curTarget ? (BEE_BY_ID[store.curTarget]?.parents.length ?? 0) : 0,
 )
+
+// Бейдж на кнопке «Задачи»: число незакрытых задач (done < total).
+const openTaskCount = computed(
+  () =>
+    store.tasks.filter((t) => {
+      const st = t.combs.map((c) => combStatus(c, store.producersOf(c), store.have))
+      return !taskProgress(st).ready
+    }).length,
+)
 </script>
 
 <template>
-  <!-- Инвентарь — режим управления складом: разворачивается на всю ширину области
-       пчёл (рейл выбора цепочки и панель плана при этом не нужны), что даёт куда
-       больше колонок для 257 видов. Граф-режим — обычная 3-колоночная раскладка. -->
-  <Transition name="inv" mode="out-in">
-    <BeeInventory v-if="store.inventoryOpen" key="inv" class="bees-inv" />
-    <div v-else key="layout" class="bees">
-      <BeeRail />
+  <div class="beeswrap">
+    <!-- Полоса-переключатель режимов: видна всегда, чинит спрятанную кнопку инвентаря. -->
+    <div class="modebar">
+      <div class="modebar__seg" role="group" aria-label="Режим">
+        <button
+          type="button"
+          :aria-pressed="store.view === 'graph'"
+          :class="{ on: store.view === 'graph' }"
+          @click="store.setView('graph')"
+        >
+          🌿 Граф
+        </button>
+        <button
+          type="button"
+          :aria-pressed="store.view === 'inventory'"
+          :class="{ on: store.view === 'inventory' }"
+          @click="store.setView('inventory')"
+        >
+          📦 Инвентарь
+        </button>
+      </div>
+      <button type="button" class="modebar__tasks" @click="store.openTasks()">
+        ✅ Задачи
+        <span v-if="openTaskCount" class="modebar__badge">{{ openTaskCount }}</span>
+      </button>
+    </div>
 
-      <div class="stage">
-        <div key="graph" class="stagewrap">
-          <div class="crumb">
-            <template v-if="store.curTarget">
-              <template v-if="store.curComb">
-                <span class="goal">
-                  <CombIcon v-if="combColor(store.curComb)" :name="store.curComb" big />
-                  <span v-else class="goal__hex">⬡</span>
-                  {{ store.curComb }}
+    <Transition name="inv" mode="out-in">
+      <BeeInventory v-if="store.view === 'inventory'" key="inv" class="bees-inv" />
+      <div v-else key="layout" class="bees">
+        <BeeRail />
+
+        <div class="stage">
+          <div key="graph" class="stagewrap">
+            <div class="crumb">
+              <template v-if="store.curTarget">
+                <template v-if="store.curComb">
+                  <span class="goal">
+                    <CombIcon v-if="combColor(store.curComb)" :name="store.curComb" big />
+                    <span v-else class="goal__hex">⬡</span>
+                    {{ store.curComb }}
+                  </span>
+                  <span class="arrow">→</span>
+                  <span class="muted">вывести</span> <span class="pick">{{ store.curTarget }}</span>
+                  <span v-if="combPct != null" class="muted">(сота @{{ combPct }}%)</span>
+                </template>
+                <template v-else>
+                  <span class="goal">{{ store.curTarget }}</span>
+                  <span class="muted">дерево выведения</span>
+                </template>
+                <span v-if="recipeCount > 1" class="muted">· {{ recipeCount }} рецепта</span>
+                <span class="tools">
+                  <button class="tbtn" type="button" @click="graphRef?.fit()">Вписать</button>
                 </span>
-                <span class="arrow">→</span>
-                <span class="muted">вывести</span> <span class="pick">{{ store.curTarget }}</span>
-                <span v-if="combPct != null" class="muted">(сота @{{ combPct }}%)</span>
               </template>
-              <template v-else>
-                <span class="goal">{{ store.curTarget }}</span>
-                <span class="muted">дерево выведения</span>
-              </template>
-              <span v-if="recipeCount > 1" class="muted">· {{ recipeCount }} рецепта</span>
-              <span class="tools">
-                <button class="tbtn" type="button" @click="graphRef?.fit()">Вписать</button>
-              </span>
-            </template>
-            <span v-else class="muted">Выбери соту слева →</span>
-          </div>
+              <span v-else class="muted">Выбери соту слева →</span>
+            </div>
 
-          <BeeChainGraph v-if="store.curTarget" ref="graphRef" class="cy" />
-          <div v-else class="welcome">
-            <div class="o">⬡</div>
-            <h2>Что вывести ради соты?</h2>
-            <div>
-              Выбери соту слева. Покажу пчёл-производителей (сначала самых лёгких)<br />
-              и компактное дерево «что с чем скрестить». Где есть <b>альтернативные рецепты</b> —
-              переключишь.
+            <BeeChainGraph v-if="store.curTarget" ref="graphRef" class="cy" />
+            <div v-else class="welcome">
+              <div class="o">⬡</div>
+              <h2>Что вывести ради соты?</h2>
+              <div>
+                Выбери соту слева. Покажу пчёл-производителей (сначала самых лёгких)<br />
+                и компактное дерево «что с чем скрестить». Где есть <b>альтернативные рецепты</b> —
+                переключишь.
+              </div>
+            </div>
+
+            <div v-if="store.curTarget" class="legend">
+              <span><i style="background: var(--honey)" />цель</span>
+              <span
+                ><i
+                  style="background: var(--card); border: 1.5px solid var(--src-f)"
+                />вывести</span
+              >
+              <span
+                ><i style="background: var(--bg2); border: 1.5px dashed var(--muted)" />дикая</span
+              >
+              <span
+                ><i style="background: var(--card); border: 2px double var(--alt)" />есть ⇄ альт.
+                рецепты</span
+              >
+              <span
+                ><i
+                  style="background: #f4c452; transform: rotate(45deg); width: 9px; height: 9px"
+                />ромб = рецепт, шанс %</span
+              >
             </div>
           </div>
-
-          <div v-if="store.curTarget" class="legend">
-            <span><i style="background: var(--honey)" />цель</span>
-            <span
-              ><i style="background: var(--card); border: 1.5px solid var(--src-f)" />вывести</span
-            >
-            <span
-              ><i style="background: var(--bg2); border: 1.5px dashed var(--muted)" />дикая</span
-            >
-            <span
-              ><i style="background: var(--card); border: 2px double var(--alt)" />есть ⇄ альт.
-              рецепты</span
-            >
-            <span
-              ><i
-                style="background: #f4c452; transform: rotate(45deg); width: 9px; height: 9px"
-              />ромб = рецепт, шанс %</span
-            >
-          </div>
         </div>
-      </div>
 
-      <BeePanel />
-    </div>
-  </Transition>
+        <BeePanel />
+      </div>
+    </Transition>
+  </div>
 </template>
 
 <style scoped>
-.bees {
-  display: grid;
-  grid-template-columns: 296px 1fr 348px;
+.beeswrap {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   min-height: 0;
 }
+.modebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--line);
+  flex: none;
+}
+.modebar__seg {
+  display: inline-flex;
+  background: var(--bg2);
+  border: 1px solid var(--cardln);
+  border-radius: 10px;
+  padding: 3px;
+  gap: 3px;
+}
+.modebar__seg button {
+  font: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.13s;
+}
+.modebar__seg button:hover {
+  color: var(--ink);
+}
+.modebar__seg button.on {
+  background: var(--solid);
+  color: var(--solid-ink);
+}
+.modebar__seg button:focus-visible,
+.modebar__tasks:focus-visible {
+  outline: 2px solid var(--honey-dk);
+  outline-offset: 1px;
+}
+.modebar__tasks {
+  margin-left: auto;
+  position: relative;
+  font: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--cardln);
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.13s;
+}
+.modebar__tasks:hover {
+  border-color: var(--honey-dk);
+}
+.modebar__badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  margin-left: 6px;
+  border-radius: 9px;
+  background: var(--honey);
+  color: var(--solid-ink);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+.bees {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 296px 1fr 348px;
+}
 /* инвентарь во весь размер области пчёл */
 .bees-inv {
-  height: 100%;
+  flex: 1;
   min-height: 0;
 }
 .stage {
