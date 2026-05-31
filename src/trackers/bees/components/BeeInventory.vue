@@ -270,7 +270,7 @@ const full = computed(() => store.haveCount === TOTAL)
         <button
           type="button"
           class="inv__data-btn"
-          title="Импорт из файла (заменит склад и задачи)"
+          title="Импорт из файла (склад и задачи)"
           @click="fileInput?.click()"
         >
           <IconBase name="upload" />Импорт

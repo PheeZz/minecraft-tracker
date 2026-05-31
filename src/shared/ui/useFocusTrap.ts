@@ -22,10 +22,12 @@ export function useFocusTrap(
   opts: FocusTrapOptions = {},
 ): void {
   let prevFocus: HTMLElement | null = null
+  let trapped = false // защита от двойной активации / гонки watcher↔unmount
 
   function focusables(): HTMLElement[] {
     const el = container.value
     if (!el) return []
+    // намеренно только настоящие фокусируемые: anchor с href + не-disabled контролы.
     return Array.from(
       el.querySelectorAll<HTMLElement>(
         'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
@@ -57,11 +59,17 @@ export function useFocusTrap(
   }
 
   function activate(): void {
+    if (trapped) return // не перетираем prevFocus и не вешаем слушатель повторно
+    trapped = true
+    // NB: на WebKit клик по кнопке не переводит на неё фокус, поэтому при открытии
+    // мышью prevFocus может быть body — возврат фокуса корректен для клавиатуры.
     prevFocus = document.activeElement as HTMLElement | null
     document.addEventListener('keydown', onKey)
     void nextTick(() => focusables()[0]?.focus())
   }
   function deactivate(): void {
+    if (!trapped) return
+    trapped = false
     document.removeEventListener('keydown', onKey)
     prevFocus?.focus?.()
     prevFocus = null
@@ -76,9 +84,8 @@ export function useFocusTrap(
     onMounted(() => {
       if (activeRef.value) activate()
     })
-    onBeforeUnmount(() => {
-      if (activeRef.value) deactivate()
-    })
+    // по trapped, а не activeRef: watcher асинхронен, флаг — источник правды.
+    onBeforeUnmount(deactivate)
   } else {
     onMounted(activate)
     onBeforeUnmount(deactivate)

@@ -65,13 +65,15 @@ function sanitizeTasks(raw: unknown): BeeTask[] {
     if (!t || typeof t !== 'object') continue
     const o = t as Record<string, unknown>
     if (typeof o.id !== 'string' || typeof o.name !== 'string' || !Array.isArray(o.combs)) continue
+    const name = o.name.trim()
+    if (!name) continue
     const combs = [
       ...new Set(
         o.combs.filter((c): c is string => typeof c === 'string' && COMB_NAMES_SET.has(c)),
       ),
     ]
     if (!combs.length) continue
-    const task: BeeTask = { id: o.id, name: o.name, combs }
+    const task: BeeTask = { id: o.id, name, combs }
     if (typeof o.collapsed === 'boolean') task.collapsed = o.collapsed
     out.push(task)
   }
@@ -272,7 +274,13 @@ export const useBeesStore = defineStore('bees', () => {
 
   /** Бэкап данных пчёл (склад + задачи) в сериализуемый объект. */
   function exportData(): BeeExport {
-    return { v: 1, exported: new Date().toISOString(), have: [...have.value], tasks: tasks.value }
+    return {
+      v: 1,
+      exported: new Date().toISOString(),
+      have: [...have.value],
+      // глубокая копия — не отдаём наружу живые ссылки на состояние стора
+      tasks: tasks.value.map((t) => ({ ...t, combs: [...t.combs] })),
+    }
   }
   /** Импорт бэкапа: валидируем форму, заменяем склад/задачи. */
   function importData(payload: unknown): void {
