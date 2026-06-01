@@ -5,6 +5,7 @@ import { BY_ID, STARTING_SAPLINGS, TREES } from '../data/trees.data'
 import { isAvailable, type ProgressMap } from '../domain/graph'
 import { FRUIT_CHAIN, UNIQUE_FRUITS, computeUsage, fruitUnlocked, invTotal } from '../domain/plan'
 import type { Inventory, TreeState } from '../domain/types'
+import { parseTreesImport } from '../domain/migrate'
 
 const PROGRESS_KEY = 'trees.progress'
 const INVENTORY_KEY = 'trees.inventory'
@@ -180,23 +181,23 @@ export const useTreesStore = defineStore('trees', () => {
       inventory: cloneInventory(inventory.value),
     }
   }
-  /** Импорт. Без legacy-форматов: ожидаем { progress, inventory }. Неизвестные id игнорируются. */
+  /** Импорт с версионной проверкой. Неизвестные id игнорируются. */
   function importData(payload: unknown): void {
-    if (typeof payload !== 'object' || payload === null) return
-    const obj = payload as Partial<ExportPayload>
-    pushHistory()
-    if (obj.progress) {
-      for (const id of Object.keys(obj.progress)) {
-        const v = obj.progress[id]
-        if (id in BY_ID && (v === 0 || v === 2)) progress.value[id] = v
-      }
+    const parsed = parseTreesImport(payload)
+    if (!parsed.ok) {
+      console.warn('[trees] импорт отклонён:', parsed.reason)
+      return
     }
-    if (obj.inventory) {
-      for (const id of Object.keys(obj.inventory)) {
-        if (!(id in BY_ID)) continue
-        const v = obj.inventory[id] ?? { sap: 0, pol: 0 }
-        inventory.value[id] = { sap: Math.max(0, v.sap ?? 0), pol: Math.max(0, v.pol ?? 0) }
-      }
+    const { progress: pIn, inventory: iIn } = parsed.data
+    pushHistory()
+    for (const id of Object.keys(pIn)) {
+      const v = pIn[id]
+      if (id in BY_ID && (v === 0 || v === 2)) progress.value[id] = v as TreeState
+    }
+    for (const id of Object.keys(iIn)) {
+      if (!(id in BY_ID)) continue
+      const v = (iIn[id] as Partial<Inventory>) ?? { sap: 0, pol: 0 }
+      inventory.value[id] = { sap: Math.max(0, v.sap ?? 0), pol: Math.max(0, v.pol ?? 0) }
     }
     persist()
   }
