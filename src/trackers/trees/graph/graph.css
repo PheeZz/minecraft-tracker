@@ -143,6 +143,9 @@
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
   font-family: var(--font-mono);
   font-size: 9px;
   font-weight: 700;
@@ -152,6 +155,10 @@
   background: #2c4334;
   border: 1px solid var(--leaf-dim);
   white-space: nowrap;
+}
+[data-tracker='trees'] .node__plant .icon {
+  width: 10px;
+  height: 10px;
 }
 [data-tracker='trees'] .node__inv {
   position: absolute;

@@ -31,6 +31,7 @@ import redo from '@/assets/icons/redo.svg?raw'
 import trash from '@/assets/icons/trash.svg?raw'
 import pencil from '@/assets/icons/pencil.svg?raw'
 import bee from '@/assets/icons/bee.svg?raw'
+import grid from '@/assets/icons/grid.svg?raw'
 
 export const ICONS = {
   leaf,
@@ -59,6 +60,7 @@ export const ICONS = {
   trash,
   pencil,
   bee,
+  grid,
 } as const
 
 export type IconName = keyof typeof ICONS

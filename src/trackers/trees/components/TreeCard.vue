@@ -83,7 +83,8 @@ function stepMod(id: string): string {
         <FruitIcon :fruit="tree.fruit" :size="18" /> <b>{{ tree.fruit }}</b>
       </div>
       <div v-if="tree.plant > 1" class="card__cond">
-        ⊞ Сажать {{ plantGrid(tree.plant) }} — нужно {{ tree.plant }} саженцев рядом
+        <IconBase name="grid" /> Сажать {{ plantGrid(tree.plant) }} — нужно
+        {{ tree.plant }} саженцев рядом
       </div>
       <div v-if="tree.cond" class="card__cond"><IconBase name="warn" /> {{ tree.cond }}</div>
       <div v-if="avail && unlock" class="hint card__unlock">

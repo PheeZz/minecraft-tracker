@@ -53,7 +53,7 @@ export function nodeTemplate(d: NodeRenderData): string {
     : ''
   const plant =
     d.plant && d.plant > 1
-      ? `<span class="node__plant" title="Посадка ${plantGrid(d.plant)} (${d.plant} саженцев)">⊞${plantGrid(d.plant)}</span>`
+      ? `<span class="node__plant" title="Посадка ${plantGrid(d.plant)} (${d.plant} саженцев)"><span class="icon">${ICONS.grid}</span>${plantGrid(d.plant)}</span>`
       : ''
 
   return `<div class="${cls}" data-id="${escapeHtml(d.id)}">
