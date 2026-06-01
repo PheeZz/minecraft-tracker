@@ -6,5 +6,5 @@ defineProps<{ name: IconName }>()
 
 <template>
   <!-- eslint-disable-next-line vue/no-v-html — доверенный набор собственных inline-SVG -->
-  <span class="icon" v-html="ICONS[name]" />
+  <span class="icon" aria-hidden="true" v-html="ICONS[name]" />
 </template>
