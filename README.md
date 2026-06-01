@@ -22,10 +22,12 @@ npm run preview      # предпросмотр сборки
 npm run typecheck    # vue-tsc -b (проверяет проект целиком)
 npm run lint         # ESLint --fix
 npm test             # Vitest
-npm run verify:trees # сверка данных деревьев с trees/recipes_output (Python)
+npm run verify:trees # сверка данных деревьев с trees/recipes_output (Vitest)
 npm run verify:bees  # проверка целостности данных пчёл (ссылки/соты/глубина)
-npm run gen:bees       # регенерация данных пчёл из bees/mockups/*.js
-npm run gen:tree-icons # регенерация данных иконок деревьев из trees/tree-icons-export
+npm run gen:bees        # регенерация данных пчёл из bees/mockups/*.js
+npm run gen:tree-icons  # регенерация данных иконок деревьев из trees/tree-icons-export
+npm run gen:fruit-icons # регенерация данных иконок плодов из trees/fruit-assets/fruits.json
+npm run gen:assets      # копирование PNG-ассетов из bees/ и trees/ в public/ (авто в prebuild)
 npm run screenshot   # визуальная проверка (Playwright; нужен запущенный preview)
 ```
 
@@ -50,6 +52,19 @@ src/
   `trees/recipes_output/` (`npm run verify:trees`, покрытие 132/132 рецептов).
 - **Пчёлы**: `src/trackers/bees/data/*.ts` — **генерируются** из `bees/mockups/*.js`
   (`npm run gen:bees`); вручную не редактировать.
+
+### Конвейер данных и ассетов
+
+Source-of-truth — каталоги `bees/` и `trees/` в корне (исходные `.js`/`.json` и PNG).
+Из них производятся два вида артефактов:
+
+- **Данные** (`src/trackers/*/data/*.ts`) — генерируются и коммитятся:
+  `gen:bees` (из `bees/mockups/`), `gen:tree-icons` и `gen:fruit-icons` (из `trees/`).
+  Файлы помечены «АВТОГЕНЕРАЦИЯ» — править надо source, не их.
+- **Картинки** (`public/bees/`, `public/trees/`) — рантайм грузит их по
+  `import.meta.env.BASE_URL`. Копируются из source через `gen:assets` (автоматически в
+  `prebuild`). Эти копии **не хранятся в git** (`.gitignore`) — единственный источник
+  правды остаётся в `bees/`/`trees/`.
 
 ## Хранилище
 
