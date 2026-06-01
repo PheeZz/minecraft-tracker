@@ -82,9 +82,13 @@
     0 6px 20px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
   pointer-events: none;
+  /* box-shadow анимируем: класс body.is-panning теперь держится ровно один жест
+     (см. useTreeGraph: tapstart/tapend + dragging-флаг), поэтому тень снимается и
+     восстанавливается по одному разу за жест — плавный переход желателен вместо
+     мгновенного «попа» в конце панорамы. */
   transition:
-    box-shadow 0.15s,
     border-color 0.15s,
+    box-shadow 0.15s,
     opacity 0.15s;
   contain: layout style;
   border-color: var(--tc, #3a4d40);

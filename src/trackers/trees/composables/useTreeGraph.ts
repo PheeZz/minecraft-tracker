@@ -52,6 +52,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   let headersEl: HTMLElement | null = null
   let containerEl: HTMLElement | null = null
   let panTimer: ReturnType<typeof setTimeout> | null = null
+  let dragging = false
   let introTimer: ReturnType<typeof setTimeout> | null = null
   let filterAnimTimer: ReturnType<typeof setTimeout> | null = null
   let invHandler: ((e: MouseEvent) => void) | null = null
@@ -437,13 +438,39 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     }
     document.addEventListener('click', invHandler)
 
-    // лёгкий рендер при панораме/зуме + синхронизация заголовков
+    // лёгкий рендер при панораме/зуме + синхронизация заголовков.
+    // Класс is-panning держим ровно один жест: добавляем в начале, снимаем в конце.
+    // Раньше таймер снятия (160мс) перезапускался на каждом событии pan, и при
+    // прерывистой панораме (паузы между событиями > порога) класс мигал вкл/выкл —
+    // дочерние бейджи (.node__check/.node__inv/.node__dot) дискретно прятались/показывались,
+    // что и давало моргание нод. tapstart/tapend фиксируют жест мышью; таймер остаётся
+    // только для зума колесом (где нет tap-событий) и снимает класс лишь когда жест завершён.
+    const beginPan = (): void => {
+      if (panTimer) {
+        clearTimeout(panTimer)
+        panTimer = null
+      }
+      if (!document.body.classList.contains('is-panning')) document.body.classList.add('is-panning')
+    }
+    const schedulePanEnd = (): void => {
+      if (panTimer) clearTimeout(panTimer)
+      panTimer = setTimeout(() => {
+        if (!dragging) document.body.classList.remove('is-panning')
+      }, 160)
+    }
+    cy.on('tapstart', () => {
+      dragging = true
+      beginPan()
+    })
+    cy.on('tapend', () => {
+      dragging = false
+      schedulePanEnd()
+    })
     cy.on('pan zoom', () => {
       updateTierHeaders()
       callbacks.onHover?.(null)
-      if (!document.body.classList.contains('is-panning')) document.body.classList.add('is-panning')
-      if (panTimer) clearTimeout(panTimer)
-      panTimer = setTimeout(() => document.body.classList.remove('is-panning'), 160)
+      beginPan()
+      if (!dragging) schedulePanEnd()
     })
     // node-html-label пересоздаёт canvas-иконку (заново гоняет tpl) ТОЛЬКО на add/data/style,
     // и только у изменившейся ноды (на pan/zoom лишь двигает CSS-transform обёртки). Поэтому
@@ -478,6 +505,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
 
   function destroy(): void {
     if (panTimer) clearTimeout(panTimer)
+    dragging = false
     if (introTimer) clearTimeout(introTimer)
     if (filterAnimTimer) clearTimeout(filterAnimTimer)
     if (iconFlushTimer) clearTimeout(iconFlushTimer)
