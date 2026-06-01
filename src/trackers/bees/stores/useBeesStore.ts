@@ -100,6 +100,8 @@ export const useBeesStore = defineStore('bees', () => {
   const invOnly = ref(false)
   /** Выбранный рецепт на пчелу (индекс в parents). */
   const rc = reactive<Record<string, number>>({})
+  /** Версия выбора рецептов: инкремент при смене rc — дешёвый триггер для watch. */
+  const rcVersion = ref(0)
 
   const mode = ref<BeeMode>('comb')
   const curComb = ref<string | null>(null)
@@ -213,11 +215,13 @@ export const useBeesStore = defineStore('bees', () => {
   // не пересчитает план. depth от rc не зависит (углубляется по всем рецептам).
   function setRecipe(id: string, idx: number): void {
     rc[id] = idx
+    rcVersion.value++
   }
   function cycleRecipe(id: string): void {
     const b = BEE_BY_ID[id]
     if (!b || b.parents.length <= 1) return
     rc[id] = ((rc[id] ?? 0) + 1) % b.parents.length
+    rcVersion.value++
   }
 
   /** Производители соты, отсортированные «проще всего» (глубина ↑, затем шанс ↓). */
@@ -323,6 +327,7 @@ export const useBeesStore = defineStore('bees', () => {
     have,
     invOnly,
     rc,
+    rcVersion,
     mode,
     curComb,
     curTarget,

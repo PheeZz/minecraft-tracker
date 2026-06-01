@@ -35,8 +35,9 @@ function rebuild() {
   graph.rebuild(buildSubgraph(store.curTarget, store.have, store.rc))
 }
 
-// have — ref<Set> (заменяется целиком → триггер по ссылке), rc сериализуем.
-watch(() => [store.curTarget, store.have, JSON.stringify(store.rc)] as const, rebuild)
+// have — ref<Set> (заменяется целиком → триггер по ссылке); смену рецептов
+// отслеживаем через rcVersion (инкремент в setRecipe/cycleRecipe).
+watch(() => [store.curTarget, store.have, store.rcVersion] as const, rebuild)
 
 onMounted(() => {
   if (cyEl.value) {
