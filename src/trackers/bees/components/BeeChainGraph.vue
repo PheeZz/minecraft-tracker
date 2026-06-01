@@ -47,6 +47,8 @@ onMounted(() => {
 })
 onBeforeUnmount(() => graph.destroy())
 // возврат на вкладку (KeepAlive): контейнер был detached → вернуть размер
+// onDeactivated не нужен: граф пчёл не держит постоянных rAF-анимаций (в отличие
+// от потока рёбер графа деревьев). Если такая анимация появится — добавить паузу здесь.
 onActivated(() => graph.resize())
 
 defineExpose({ fit: () => graph.fit() })
