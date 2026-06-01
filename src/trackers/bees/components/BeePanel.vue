@@ -70,7 +70,7 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
         <div class="hint-line">нажми пчелу — построю дерево под неё (проще = меньше глубина).</div>
         <div
           v-for="(p, i) in producers"
-          :key="p.bee"
+          :key="`${p.bee}|${i}`"
           class="prod"
           :class="{ on: p.bee === target, owned: store.isHave(p.bee) }"
           role="button"
