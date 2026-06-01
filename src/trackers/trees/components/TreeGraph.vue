@@ -10,6 +10,7 @@ import { useTreesUiStore } from '../stores/useTreesUiStore'
 import { useTreeActions } from '../composables/useTreeActions'
 import { useTreeGraph } from '../composables/useTreeGraph'
 import { treeTexturesReady } from '../composables/useTreeTextures'
+import '../graph/graph.css'
 
 const store = useTreesStore()
 const ui = useTreesUiStore()

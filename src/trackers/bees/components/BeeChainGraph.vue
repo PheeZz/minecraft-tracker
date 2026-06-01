@@ -6,6 +6,7 @@ import { useBeesStore } from '../stores/useBeesStore'
 import { useBeesUiStore } from '../stores/useBeesUiStore'
 import { useBeeChainGraph } from '../composables/useBeeChainGraph'
 import { buildSubgraph } from '../graph/subgraph'
+import '../graph/graph.css'
 
 const store = useBeesStore()
 const ui = useBeesUiStore()

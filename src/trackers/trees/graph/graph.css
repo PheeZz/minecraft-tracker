@@ -1,66 +1,59 @@
 /* Глобальные стили графа деревьев: HTML-метки нод (node-html-label рендерит
-   их в контейнер cy, вне scoped-стилей Vue) и tier-заголовки. Перенос из ragu.html. */
+   их в контейнер cy, вне scoped-стилей Vue) и tier-заголовки. Перенос из ragu.html.
+
+   Все классы здесь — generic-короткие (.node, .tier, .t--N…), поэтому обёрнуты
+   в [data-tracker='trees'] (атрибут на <html>, ставит App.vue), чтобы не течь
+   глобально и не коллизировать с другими трекерами. Базовый .icon вынесен в
+   глобальный style.css, т.к. нужен shared-UI вне трекера деревьев. */
 
 /* цвет тира как переменная --tc */
-.t--0 {
+[data-tracker='trees'] .t--0 {
   --tc: var(--t0);
 }
-.t--1 {
+[data-tracker='trees'] .t--1 {
   --tc: var(--t1);
 }
-.t--2 {
+[data-tracker='trees'] .t--2 {
   --tc: var(--t2);
 }
-.t--3 {
+[data-tracker='trees'] .t--3 {
   --tc: var(--t3);
 }
-.t--4 {
+[data-tracker='trees'] .t--4 {
   --tc: var(--t4);
 }
-.t--5 {
+[data-tracker='trees'] .t--5 {
   --tc: var(--t5);
 }
-.t--6 {
+[data-tracker='trees'] .t--6 {
   --tc: var(--t6);
 }
-.t--7 {
+[data-tracker='trees'] .t--7 {
   --tc: var(--t7);
 }
-.t--8 {
+[data-tracker='trees'] .t--8 {
   --tc: var(--t8);
 }
-.t--9 {
+[data-tracker='trees'] .t--9 {
   --tc: var(--t9);
 }
-.t--10 {
+[data-tracker='trees'] .t--10 {
   --tc: var(--t10);
 }
 
-.icon {
-  width: 1.05em;
-  height: 1.05em;
-  display: inline-block;
-  vertical-align: -0.16em;
-  flex: none;
-}
-.node .tic {
+[data-tracker='trees'] .node .tic {
   width: 18px;
   height: 18px;
   image-rendering: pixelated;
   flex: none;
 }
-.node .fic {
+[data-tracker='trees'] .node .fic {
   image-rendering: pixelated;
   flex: none;
 }
-.icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 
 /* tier-заголовки над сценой */
-.tier-tab {
+[data-tracker='trees'] .tier-tab {
   position: absolute;
   top: 8px;
   transform: translateX(-50%);
@@ -76,7 +69,7 @@
 }
 
 /* нода графа (HTML-метка) */
-.node {
+[data-tracker='trees'] .node {
   position: relative;
   min-width: 116px;
   padding: 9px 12px;
@@ -96,12 +89,12 @@
   contain: layout style;
   border-color: var(--tc, #3a4d40);
 }
-.node__head {
+[data-tracker='trees'] .node__head {
   display: flex;
   align-items: center;
   gap: 7px;
 }
-.node__dot {
+[data-tracker='trees'] .node__dot {
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -109,13 +102,13 @@
   box-shadow: 0 0 8px var(--tc);
   flex: none;
 }
-.node__name {
+[data-tracker='trees'] .node__name {
   font-weight: 700;
   font-size: 13px;
   letter-spacing: -0.1px;
   line-height: 1.2;
 }
-.node__fruit {
+[data-tracker='trees'] .node__fruit {
   margin-top: 6px;
   padding-top: 6px;
   border-top: 1px dashed rgba(255, 255, 255, 0.14);
@@ -125,11 +118,11 @@
   align-items: center;
   gap: 5px;
 }
-.node__fruit .icon {
+[data-tracker='trees'] .node__fruit .icon {
   width: 13px;
   height: 13px;
 }
-.node__badge {
+[data-tracker='trees'] .node__badge {
   position: absolute;
   top: -9px;
   right: -7px;
@@ -141,7 +134,7 @@
   color: var(--dark-ink);
   background: var(--tc);
 }
-.node__plant {
+[data-tracker='trees'] .node__plant {
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -156,7 +149,7 @@
   border: 1px solid var(--leaf-dim);
   white-space: nowrap;
 }
-.node__inv {
+[data-tracker='trees'] .node__inv {
   position: absolute;
   bottom: -9px;
   right: -7px;
@@ -174,26 +167,26 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   transition: 0.13s;
 }
-.node__inv:hover {
+[data-tracker='trees'] .node__inv:hover {
   color: var(--leaf);
   border-color: var(--leaf-dim);
   transform: scale(1.12);
 }
-.node__inv .icon {
+[data-tracker='trees'] .node__inv .icon {
   width: 12px;
   height: 12px;
 }
-.node__check {
+[data-tracker='trees'] .node__check {
   display: none;
 }
-.node--have {
+[data-tracker='trees'] .node--have {
   border-color: var(--leaf);
   box-shadow:
     0 6px 22px rgba(0, 0, 0, 0.45),
     0 0 0 1px rgba(143, 209, 79, 0.25),
     0 0 18px rgba(143, 209, 79, 0.22);
 }
-.node--have .node__check {
+[data-tracker='trees'] .node--have .node__check {
   display: flex;
   position: absolute;
   top: -9px;
@@ -207,25 +200,25 @@
   justify-content: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
-.node--have .node__check .icon {
+[data-tracker='trees'] .node--have .node__check .icon {
   width: 12px;
   height: 12px;
 }
-.node--avail {
+[data-tracker='trees'] .node--avail {
   border-style: dashed;
   border-color: var(--avail);
   box-shadow:
     0 6px 22px rgba(0, 0, 0, 0.45),
     0 0 16px rgba(201, 167, 240, 0.3);
 }
-.node--sel {
+[data-tracker='trees'] .node--sel {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
-.node--faded {
+[data-tracker='trees'] .node--faded {
   opacity: 0.1;
 }
-.node--flash {
+[data-tracker='trees'] .node--flash {
   border-color: #fff7c2 !important;
   box-shadow:
     0 0 0 2px #fff7c2,
@@ -233,20 +226,20 @@
 }
 
 /* «лёгкий рендер» при панораме/зуме */
-body.is-panning .node {
+[data-tracker='trees'] body.is-panning .node {
   box-shadow: none !important;
   transition: none !important;
   background: #16221b !important;
 }
-body.is-panning .node--have {
+[data-tracker='trees'] body.is-panning .node--have {
   box-shadow: inset 0 0 0 1px rgba(143, 209, 79, 0.4) !important;
 }
-body.is-panning .node__check,
-body.is-panning .node__inv,
-body.is-panning .node__dot {
+[data-tracker='trees'] body.is-panning .node__check,
+[data-tracker='trees'] body.is-panning .node__inv,
+[data-tracker='trees'] body.is-panning .node__dot {
   display: none !important;
 }
-body.is-panning .node__fruit {
+[data-tracker='trees'] body.is-panning .node__fruit {
   border-top-color: transparent !important;
 }
 
@@ -266,7 +259,7 @@ body.is-panning .node__fruit {
     transform: translateY(0) scale(1);
   }
 }
-.cy-intro .node {
+[data-tracker='trees'] .cy-intro .node {
   animation: treeNodeIn 0.4s cubic-bezier(0.2, 0.7, 0.3, 1) both;
 }
 
@@ -294,40 +287,40 @@ body.is-panning .node__fruit {
     transform: translateY(5px) scale(0.96);
   }
 }
-.node--in {
+[data-tracker='trees'] .node--in {
   animation: nodeFilterIn 0.24s ease both;
 }
-.node--out {
+[data-tracker='trees'] .node--out {
   animation: nodeFilterOut 0.24s ease forwards;
   pointer-events: none;
 }
-.cy-intro .node.t--1 {
+[data-tracker='trees'] .cy-intro .node.t--1 {
   animation-delay: 0.05s;
 }
-.cy-intro .node.t--2 {
+[data-tracker='trees'] .cy-intro .node.t--2 {
   animation-delay: 0.1s;
 }
-.cy-intro .node.t--3 {
+[data-tracker='trees'] .cy-intro .node.t--3 {
   animation-delay: 0.15s;
 }
-.cy-intro .node.t--4 {
+[data-tracker='trees'] .cy-intro .node.t--4 {
   animation-delay: 0.2s;
 }
-.cy-intro .node.t--5 {
+[data-tracker='trees'] .cy-intro .node.t--5 {
   animation-delay: 0.25s;
 }
-.cy-intro .node.t--6 {
+[data-tracker='trees'] .cy-intro .node.t--6 {
   animation-delay: 0.3s;
 }
-.cy-intro .node.t--7 {
+[data-tracker='trees'] .cy-intro .node.t--7 {
   animation-delay: 0.35s;
 }
-.cy-intro .node.t--8 {
+[data-tracker='trees'] .cy-intro .node.t--8 {
   animation-delay: 0.4s;
 }
-.cy-intro .node.t--9 {
+[data-tracker='trees'] .cy-intro .node.t--9 {
   animation-delay: 0.45s;
 }
-.cy-intro .node.t--10 {
+[data-tracker='trees'] .cy-intro .node.t--10 {
   animation-delay: 0.5s;
 }

@@ -36,6 +36,21 @@ a {
   color: inherit;
 }
 
+/* Базовый размер inline-SVG иконок (IconBase) — общий для всех трекеров и
+   shared-UI, поэтому живёт глобально, а не в графовых чанках трекеров. */
+.icon {
+  width: 1.05em;
+  height: 1.05em;
+  display: inline-block;
+  vertical-align: -0.16em;
+  flex: none;
+}
+.icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 /* ============================================================
    Анимации переключения вкладок (классы применяются к корню
    routed-компонента, поэтому живут глобально, не в scoped App.vue).

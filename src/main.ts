@@ -6,9 +6,7 @@ import { router } from './router'
 import './reset.css'
 import './style.css'
 import './trackers/trees/theme.css'
-import './trackers/trees/graph/graph.css'
 import './trackers/bees/theme.css'
-import './trackers/bees/graph/graph.css'
 
 const app = createApp(App)
 
