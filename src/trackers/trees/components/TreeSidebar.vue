@@ -8,6 +8,7 @@ import TreeCard from './TreeCard.vue'
 import PlanPanel from './PlanPanel.vue'
 import TierFilter from './TierFilter.vue'
 import HintSpot from '@/shared/ui/HintSpot.vue'
+import { downloadJson, parseJsonFileText } from '@/shared/persistence/importExport'
 
 const store = useTreesStore()
 const ui = useTreesUiStore()
@@ -21,21 +22,14 @@ const LAYOUT_OPTIONS: { value: LayoutKey; label: string }[] = [
 ]
 
 function exportData() {
-  const blob = new Blob([JSON.stringify(store.exportData(), null, 2)], { type: 'application/json' })
-  const a = document.createElement('a')
-  a.href = URL.createObjectURL(blob)
-  a.download = 'ragu-progress.json'
-  a.click()
-  URL.revokeObjectURL(a.href)
+  downloadJson(store.exportData(), 'ragu-progress.json')
 }
 async function onImport(e: Event) {
   const file = (e.target as HTMLInputElement).files?.[0]
   if (!file) return
-  try {
-    store.importData(JSON.parse(await file.text()))
-  } catch (err) {
-    alert('Ошибка импорта: ' + (err as Error).message)
-  }
+  const r = parseJsonFileText(await file.text())
+  if (r.ok) store.importData(r.data)
+  else alert('Ошибка импорта: ' + r.error)
   if (fileInput.value) fileInput.value.value = ''
 }
 function reset() {

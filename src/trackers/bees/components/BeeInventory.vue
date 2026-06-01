@@ -5,6 +5,7 @@ import type { Bee, BeeSource } from '../domain/types'
 import { useBeesStore, type InvFilter, type InvSort } from '../stores/useBeesStore'
 import BeeIcon from './BeeIcon.vue'
 import IconBase from '@/shared/ui/IconBase.vue'
+import { downloadJson, parseJsonFileText } from '@/shared/persistence/importExport'
 
 const store = useBeesStore()
 const query = ref('')
@@ -157,23 +158,14 @@ function doClear(): void {
 }
 
 function onExport(): void {
-  const blob = new Blob([JSON.stringify(store.exportData(), null, 2)], {
-    type: 'application/json',
-  })
-  const a = document.createElement('a')
-  a.href = URL.createObjectURL(blob)
-  a.download = 'bees-progress.json'
-  a.click()
-  URL.revokeObjectURL(a.href)
+  downloadJson(store.exportData(), 'bees-progress.json')
 }
 async function onImport(e: Event): Promise<void> {
   const file = (e.target as HTMLInputElement).files?.[0]
   if (!file) return
-  try {
-    store.importData(JSON.parse(await file.text()))
-  } catch (err) {
-    alert('Ошибка импорта: ' + (err as Error).message)
-  }
+  const r = parseJsonFileText(await file.text())
+  if (r.ok) store.importData(r.data)
+  else alert('Ошибка импорта: ' + r.error)
   if (fileInput.value) fileInput.value.value = ''
 }
 
