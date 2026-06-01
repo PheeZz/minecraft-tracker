@@ -1,28 +1,12 @@
 import cytoscape, { type Core } from 'cytoscape'
-import dagre from 'cytoscape-dagre'
-import nodeHtmlLabel from 'cytoscape-node-html-label'
 import { BEE_BY_ID } from '../data/bees.data'
 import { beeColor } from '../domain/colors'
 import { beeIconHtml, combIconHtml } from '../graph/iconHtml'
 import { paintIcons } from './useBeeTextures'
-
-let extReady = false
-function registerExtensions(): void {
-  if (extReady) return
-  cytoscape.use(dagre as Parameters<typeof cytoscape.use>[0])
-  ;(nodeHtmlLabel as (cy: typeof cytoscape) => void)(cytoscape)
-  extReady = true
-}
-
-interface NodeHtmlConfig {
-  query: string
-  halign?: string
-  valign?: string
-  halignBox?: string
-  valignBox?: string
-  tpl: (data: Record<string, unknown>) => string
-}
-type CoreWithHtmlLabel = Core & { nodeHtmlLabel(c: NodeHtmlConfig[]): void }
+import {
+  registerCytoscapeBase,
+  type CoreWithHtmlLabel,
+} from '@/shared/cytoscape/registerExtensions'
 
 export interface BeeChainCallbacks {
   /** Текущая выбранная сота (для иконки-продукта на ноде). */
@@ -58,7 +42,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
   }
 
   function mount(el: HTMLElement): void {
-    registerExtensions()
+    registerCytoscapeBase()
     container = el
   }
 

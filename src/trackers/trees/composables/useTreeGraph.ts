@@ -1,6 +1,4 @@
 import cytoscape, { type Core, type LayoutOptions, type NodeSingular } from 'cytoscape'
-import dagre from 'cytoscape-dagre'
-import nodeHtmlLabel from 'cytoscape-node-html-label'
 import { BY_ID, TIERS } from '../data/trees.data'
 import { isAvailable, type ProgressMap } from '../domain/graph'
 import { FRUIT_CHAIN } from '../domain/plan'
@@ -9,27 +7,10 @@ import { computeTiersLayout, LAYOUTS, type LayoutKey } from '../graph/layouts'
 import { nodeTemplate, type NodeRenderData } from '../graph/nodeLabel'
 import { GRAPH_STYLE } from '../graph/style'
 import { ensureTreeTextures, paintTreeIcons, paintTreeIconsFor } from './useTreeTextures'
-
-/** Сигнатура метода, добавляемого расширением node-html-label. */
-interface NodeHtmlLabelConfig {
-  query: string
-  halign?: 'left' | 'center' | 'right'
-  valign?: 'top' | 'center' | 'bottom'
-  halignBox?: 'left' | 'center' | 'right'
-  valignBox?: 'top' | 'center' | 'bottom'
-  tpl: (data: Record<string, unknown>) => string
-}
-type CoreWithHtmlLabel = Core & { nodeHtmlLabel(configs: NodeHtmlLabelConfig[]): void }
-type CytoscapeExt = Parameters<typeof cytoscape.use>[0]
-
-// Расширения регистрируются один раз на модуль.
-let extensionsRegistered = false
-function registerExtensions(): void {
-  if (extensionsRegistered) return
-  cytoscape.use(dagre as CytoscapeExt)
-  ;(nodeHtmlLabel as (cy: typeof cytoscape) => void)(cytoscape)
-  extensionsRegistered = true
-}
+import {
+  registerCytoscapeBase,
+  type CoreWithHtmlLabel,
+} from '@/shared/cytoscape/registerExtensions'
 
 export type LineageDir = 'ancestors' | 'descendants'
 
@@ -406,7 +387,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
 
   // ---------- инициализация ----------
   function mount(container: HTMLElement, tierHeaders: HTMLElement): void {
-    registerExtensions()
+    registerCytoscapeBase()
     ensureTreeTextures()
     headersEl = tierHeaders
     containerEl = container
