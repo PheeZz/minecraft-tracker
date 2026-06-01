@@ -1,6 +1,19 @@
 import { describe, it, expect } from 'vitest'
-import { makeDepth, planSteps, recipeOf } from './graph'
+import { makeDepth, planSteps, recipeIndexOf, recipeOf } from './graph'
 import { COMBS, REAL } from './combs'
+
+describe('recipeIndexOf', () => {
+  it('дефолт 0 без выбора и у диких', () => {
+    expect(recipeIndexOf('Развитая', {})).toBe(0)
+    expect(recipeIndexOf('Лесная', {})).toBe(0) // дикая, parents пуст
+    expect(recipeIndexOf('Бережливая', {})).toBe(0)
+  })
+  it('клэмпит индекс к последнему рецепту', () => {
+    // у «Бережливая» два рецепта → максимум индекс 1
+    expect(recipeIndexOf('Бережливая', { Бережливая: 1 })).toBe(1)
+    expect(recipeIndexOf('Бережливая', { Бережливая: 99 })).toBe(1)
+  })
+})
 
 describe('recipeOf', () => {
   it('возвращает первый рецепт по умолчанию, null у диких', () => {

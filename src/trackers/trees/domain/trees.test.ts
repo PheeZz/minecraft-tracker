@@ -170,4 +170,24 @@ describe('план плодов', () => {
     expect(need).toBeGreaterThanOrEqual(needRem)
     expect(needRem).toBeGreaterThanOrEqual(0)
   })
+
+  it('parentDemand считает спрос только по ОСНОВНОМУ рецепту потребителя', () => {
+    // «Каштан посевной» использует «Сакуру» лишь в альтернативном рецепте (parents[0] — без неё),
+    // поэтому в спрос на «Сакуру» он входить не должен. Считаем эталон по parents[0].
+    const id = 'Сакура'
+    const state: ProgressMap = {}
+    let expectedNeed = 0
+    for (const t of TREES) {
+      const pair = t.parents?.[0]
+      if (!pair || !FRUIT_CHAIN.has(t.id)) continue
+      expectedNeed += (pair[0] === id ? 1 : 0) + (pair[1] === id ? 1 : 0)
+    }
+    const kashtan = BY_ID['Каштан посевной']!
+    expect(kashtan.parents?.[0]?.includes(id)).toBe(false) // только в альтернативном
+    expect(kashtan.parents?.some((p) => p.includes(id))).toBe(true)
+
+    const { need, needRem } = parentDemand(state, id)
+    expect(need).toBe(expectedNeed)
+    expect(needRem).toBe(expectedNeed) // пустое состояние → все потребители ещё не получены
+  })
 })

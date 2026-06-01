@@ -48,6 +48,32 @@ describe('празднование 100%', () => {
     expect(c2.current).toBeNull() // seen=true → праздника нет
   })
 
+  it('двойной 100% за один тик показывает каждый праздник ровно один раз', async () => {
+    const s = useTreesStore()
+    const c = useTreesCelebration()
+    // готовим состояние, где сразу завершаются и плоды, и саженцы
+    const progress: Record<string, 0 | 2> = {}
+    for (const t of TREES) if (t.fruit) progress[t.id] = 2
+    const inventory: Record<string, { sap: number; pol: number }> = {}
+    for (const t of TREES) inventory[t.id] = { sap: 999, pol: 999 }
+    s.importData({ progress, inventory })
+    await nextTick()
+    expect(s.hero.fruitPct).toBe(100)
+    expect(s.hero.haveSap).toBeGreaterThanOrEqual(s.hero.planSap)
+    expect(s.hero.planSap).toBeGreaterThan(0)
+
+    // прокручиваем всю очередь и собираем показанные id — каждый ровно один раз
+    const shown: string[] = []
+    let guard = 0
+    while (c.current && guard++ < 10) {
+      shown.push(c.current.id)
+      c.dismiss()
+    }
+    expect(shown).toContain('fruits')
+    expect(shown).toContain('saplings')
+    expect(new Set(shown).size).toBe(shown.length) // без дублей
+  })
+
   it('импорт конфига со 100% плодов запускает тот же хук', async () => {
     const s = useTreesStore()
     const c = useTreesCelebration()

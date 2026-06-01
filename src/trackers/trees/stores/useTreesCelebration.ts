@@ -53,6 +53,7 @@ export const useTreesCelebration = defineStore('trees-celebration', () => {
     storage.set(SEEN_KEY, seen.value)
   }
   function enqueue(id: MilestoneId): void {
+    if (current.value?.id === id || queue.value.includes(id)) return // уже показывается/в очереди
     if (current.value) queue.value.push(id)
     else current.value = { id, ...MILESTONES[id] }
   }

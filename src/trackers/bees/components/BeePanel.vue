@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { BEE_BY_ID } from '../data/bees.data'
 import { isComb, shortComb } from '../domain/combs'
-import { planSteps } from '../domain/graph'
+import { planSteps, recipeIndexOf } from '../domain/graph'
 import { useBeesStore } from '../stores/useBeesStore'
 import { useBeesUiStore } from '../stores/useBeesUiStore'
 import BeeIcon from './BeeIcon.vue'
@@ -37,7 +37,7 @@ interface StepView {
 const steps = computed<StepView[]>(() =>
   plan.value.bred.map((id) => {
     const b = BEE_BY_ID[id]!
-    const idx = Math.min(store.rc[id] ?? 0, b.parents.length - 1)
+    const idx = recipeIndexOf(id, store.rc)
     const r = b.parents[idx]!
     return {
       id,

@@ -5,12 +5,18 @@ import type { BeeRecipe } from './types'
 /** Карта выбранного рецепта на пчелу (индекс в parents). */
 export type RecipeChoice = Readonly<Record<string, number>>
 
+/** Индекс выбранного рецепта в parents с клэмпом в границы (дефолт 0). */
+export function recipeIndexOf(id: string, rc: RecipeChoice): number {
+  const b = BEE_BY_ID[id]
+  if (!b || !b.parents.length) return 0
+  return Math.min(rc[id] ?? 0, b.parents.length - 1)
+}
+
 /** Выбранный рецепт пчелы (с учётом RecipeChoice); null у диких. */
 export function recipeOf(id: string, rc: RecipeChoice): BeeRecipe | null {
   const b = BEE_BY_ID[id]
   if (!b || !b.parents.length) return null
-  const idx = Math.min(rc[id] ?? 0, b.parents.length - 1)
-  return b.parents[idx] ?? null
+  return b.parents[recipeIndexOf(id, rc)] ?? null
 }
 
 /**

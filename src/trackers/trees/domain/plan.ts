@@ -73,13 +73,11 @@ export function computeUsage(needTrees: readonly Tree[]): Record<string, number>
  * need — всего по плану, needRem — осталось (для ещё не полученных потомков).
  */
 export function parentDemand(state: ProgressMap, id: string): { need: number; needRem: number } {
-  const users = TREES.filter((x) => x.parents?.some((pair) => pair.includes(id)))
+  const users = TREES.filter((x) => FRUIT_CHAIN.has(x.id) && x.parents?.[0]?.includes(id))
   let need = 0
   let needRem = 0
   for (const u of users) {
-    const pair = u.parents?.[0]
-    if (!FRUIT_CHAIN.has(u.id) || !pair) continue
-    const [a, b] = pair
+    const [a, b] = u.parents![0]!
     const k = (a === id ? 1 : 0) + (b === id ? 1 : 0)
     need += k
     if (state[u.id] !== 2) needRem += k
