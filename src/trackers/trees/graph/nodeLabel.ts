@@ -2,6 +2,7 @@ import { ICONS } from '@/shared/icons/icons'
 import type { Tree } from '../domain/types'
 import { plantGrid } from './format'
 import { fruitIconHtml, treeIconHtml } from './iconHtml'
+import { escapeHtml } from '@/shared/ui/escapeHtml'
 
 /**
  * Невидимая многострочная метка для canvas-ноды — служит ТОЛЬКО для расчёта
@@ -47,18 +48,20 @@ export function nodeTemplate(d: NodeRenderData): string {
   if (d.anim === 'in') cls += ' node--in'
   else if (d.anim === 'out') cls += ' node--out'
 
-  const fruit = d.frt ? `<div class="node__fruit">${fruitIconHtml(d.frt)}${d.frt}</div>` : ''
+  const fruit = d.frt
+    ? `<div class="node__fruit">${fruitIconHtml(d.frt)}${escapeHtml(d.frt)}</div>`
+    : ''
   const plant =
     d.plant && d.plant > 1
       ? `<span class="node__plant" title="Посадка ${plantGrid(d.plant)} (${d.plant} саженцев)">⊞${plantGrid(d.plant)}</span>`
       : ''
 
-  return `<div class="${cls}" data-id="${d.id}">
+  return `<div class="${cls}" data-id="${escapeHtml(d.id)}">
       <span class="node__badge">T${d.tier}</span>
       ${plant}
       <span class="node__check"><span class="icon">${ICONS.checkPlain}</span></span>
-      <div class="node__head">${treeIconHtml(d.id) || '<span class="node__dot"></span>'}<span class="node__name">${d.id}</span></div>
+      <div class="node__head">${treeIconHtml(d.id) || '<span class="node__dot"></span>'}<span class="node__name">${escapeHtml(d.id)}</span></div>
       ${fruit}
-      <span class="node__inv" data-invk="${d.id}" title="Инвентарь саженцев/пыльцы"><span class="icon">${ICONS.box}</span></span>
+      <span class="node__inv" data-invk="${escapeHtml(d.id)}" title="Инвентарь саженцев/пыльцы"><span class="icon">${ICONS.box}</span></span>
     </div>`
 }

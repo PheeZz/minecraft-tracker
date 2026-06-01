@@ -3,6 +3,7 @@ import { BEE_BY_ID } from '../data/bees.data'
 import { beeColor } from '../domain/colors'
 import { beeIconHtml, combIconHtml } from '../graph/iconHtml'
 import { paintIcons } from './useBeeTextures'
+import { escapeHtml } from '@/shared/ui/escapeHtml'
 import {
   registerCytoscapeBase,
   type CoreWithHtmlLabel,
@@ -178,11 +179,11 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
     if (d.id === target) cls.push('g-target')
     const ci =
       comb && b && b.products.some((p) => p.name === comb)
-        ? `<span class="gcomb" title="${comb}">${combIconHtml(comb)}</span>`
+        ? `<span class="gcomb" title="${escapeHtml(comb)}">${combIconHtml(comb)}</span>`
         : ''
     const pc = has ? '#2f7d5e' : (beeColor(d.id)?.p ?? '#cdbb95')
     const hv = has && d.id !== target ? '<span class="ghav" title="есть на складе">✓</span>' : ''
-    return `<div class="${cls.join(' ')}" data-id="${d.id}" style="--pc:${pc}">${beeIconHtml(d.id)}<span class="gn">${d.id}</span>${hv}${d.alt ? '<span class="gflag">⇄</span>' : ''}${ci}</div>`
+    return `<div class="${cls.join(' ')}" data-id="${escapeHtml(d.id)}" style="--pc:${pc}">${beeIconHtml(d.id)}<span class="gn">${escapeHtml(d.id)}</span>${hv}${d.alt ? '<span class="gflag">⇄</span>' : ''}${ci}</div>`
   }
 
   // склад выставляется снаружи перед rebuild (используется в шаблоне ноды)
