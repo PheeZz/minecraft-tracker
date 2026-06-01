@@ -110,3 +110,12 @@ a {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* Единый видимый фокус для клавиатурной навигации (WCAG 2.4.7).
+   :where() даёт нулевую специфичность — собственные :focus-visible трекеров
+   (напр. в трекере пчёл) при необходимости переопределяют это правило. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--leaf, var(--honey, #6cc7a1));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
