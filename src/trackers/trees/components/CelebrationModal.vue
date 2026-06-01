@@ -30,7 +30,7 @@ watch(
       <div class="celebrate__badge"><IconBase name="fruit" /></div>
       <div id="celebrate-title" class="modal__title">{{ celebration.current.title }}</div>
       <p class="celebrate__text">{{ celebration.current.text }}</p>
-      <button class="btn celebrate__btn" type="button" autofocus @click="celebration.dismiss()">
+      <button class="btn celebrate__btn" type="button" @click="celebration.dismiss()">
         Ура! 🎉
       </button>
     </div>
