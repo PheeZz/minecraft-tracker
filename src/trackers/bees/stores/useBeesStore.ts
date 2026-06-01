@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { computed, reactive, ref } from 'vue'
 import { storage } from '@/shared/persistence/storage'
+import { announce } from '@/shared/ui/useAnnouncer'
 import { BEES, BEE_BY_ID } from '../data/bees.data'
 import { type BeeSource } from '../domain/types'
 import { COMBS, type CombProducer } from '../domain/combs'
@@ -104,10 +105,12 @@ export const useBeesStore = defineStore('bees', () => {
 
   function toggleHave(id: string): void {
     const next = new Set(have.value)
-    if (next.has(id)) next.delete(id)
-    else next.add(id)
+    const added = !next.has(id)
+    if (added) next.add(id)
+    else next.delete(id)
     have.value = next
     persist()
+    announce(added ? `${id} отмечена` : `${id} снята`)
   }
   function clearHave(): void {
     have.value = new Set()
@@ -159,6 +162,7 @@ export const useBeesStore = defineStore('bees', () => {
     if (!b || b.parents.length <= 1) return
     rc[id] = ((rc[id] ?? 0) + 1) % b.parents.length
     rcVersion.value++
+    announce('Рецепт изменён')
   }
 
   /** Производители соты, отсортированные «проще всего» (глубина ↑, затем шанс ↓). */

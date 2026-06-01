@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import { storage } from '@/shared/persistence/storage'
+import { announce } from '@/shared/ui/useAnnouncer'
 import { safeKeys } from '@/shared/persistence/importExport'
 import { BY_ID, STARTING_SAPLINGS, TREES } from '../data/trees.data'
 import { isAvailable, type ProgressMap } from '../domain/graph'
@@ -100,12 +101,14 @@ export const useTreesStore = defineStore('trees', () => {
     if (!prev) return
     redoStack.value.push(snapshot())
     applySnapshot(prev)
+    announce('Отменено')
   }
   function redo(): void {
     const next = redoStack.value.pop()
     if (!next) return
     undoStack.value.push(snapshot())
     applySnapshot(next)
+    announce('Повторено')
   }
   const canUndo = computed(() => undoStack.value.length > 0)
   const canRedo = computed(() => redoStack.value.length > 0)
@@ -168,6 +171,7 @@ export const useTreesStore = defineStore('trees', () => {
     progress.value[id] = 2
     ensureOwnSapling(id)
     persist()
+    announce(`${id} выведено`)
     return true
   }
 

@@ -5,6 +5,7 @@ import { storage } from '@/shared/persistence/storage'
 import { TRACKER_MODULES, type TrackerId } from '@/shared/registry/trackers'
 import IconBase from '@/shared/ui/IconBase.vue'
 import ErrorBoundary from '@/shared/ui/ErrorBoundary.vue'
+import { message as liveMessage } from '@/shared/ui/useAnnouncer'
 
 const route = useRoute()
 const router = useRouter()
@@ -78,10 +79,24 @@ function switchTo(id: TrackerId) {
         </RouterView>
       </ErrorBoundary>
     </main>
+    <div class="sr-live" aria-live="polite" role="status" aria-atomic="true">{{ liveMessage }}</div>
   </div>
 </template>
 
 <style scoped>
+.sr-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
 .shell {
   display: grid;
   grid-template-rows: auto 1fr;
