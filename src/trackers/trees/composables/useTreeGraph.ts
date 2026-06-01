@@ -56,6 +56,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   let filterAnimTimer: ReturnType<typeof setTimeout> | null = null
   let invHandler: ((e: MouseEvent) => void) | null = null
   let iconFlushTimer: ReturnType<typeof setTimeout> | null = null
+  let flashTimer: ReturnType<typeof setTimeout> | null = null
   // иконки перекрашиваем точечно: копим id нод, чьи карточки пересоздались
   // (флаг allIcons — полная перерисовка, например когда догрузились текстуры).
   const dirtyIcons = new Set<string>()
@@ -296,7 +297,9 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
   function flash(ids: string[], ms = 1300): void {
     if (!cy || !ids.length) return
     ids.forEach((id) => setData(cy!.getElementById(id), 'flash', true))
-    setTimeout(() => {
+    if (flashTimer) clearTimeout(flashTimer)
+    flashTimer = setTimeout(() => {
+      flashTimer = null
       if (!cy) return
       ids.forEach((id) => setData(cy!.getElementById(id), 'flash', false))
     }, ms)
@@ -478,6 +481,7 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
     if (introTimer) clearTimeout(introTimer)
     if (filterAnimTimer) clearTimeout(filterAnimTimer)
     if (iconFlushTimer) clearTimeout(iconFlushTimer)
+    if (flashTimer) clearTimeout(flashTimer)
     stopEdgeFlow()
     if (invHandler) {
       document.removeEventListener('click', invHandler)
