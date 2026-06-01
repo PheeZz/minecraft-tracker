@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { computed, reactive, ref, watch } from 'vue'
 import { storage } from '@/shared/persistence/storage'
 import { BY_ID, TIERS } from '../data/trees.data'
-import type { LayoutKey } from '../graph/layouts'
+import { LAYOUT_KEYS, type LayoutKey } from '../graph/layouts'
 
 const UI_KEY = 'trees.ui'
 
@@ -25,7 +25,9 @@ const ALL_TIERS = TIERS.map((t) => t.id)
 export const useTreesUiStore = defineStore('trees-ui', () => {
   const saved = storage.get<Partial<UiSnapshot>>(UI_KEY, {})
 
-  const layout = ref<LayoutKey>(saved.layout ?? 'tiers')
+  const layout = ref<LayoutKey>(
+    (LAYOUT_KEYS as readonly string[]).includes(saved.layout ?? '') ? saved.layout! : 'tiers',
+  )
   const onlyAvail = ref(saved.onlyAvail ?? false)
   const onlyFruit = ref(saved.onlyFruit ?? false)
   const onlyFruitful = ref(saved.onlyFruitful ?? false)
