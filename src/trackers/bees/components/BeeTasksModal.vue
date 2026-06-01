@@ -53,7 +53,13 @@ useFocusTrap(winEl, { onEscape: store.closeTasks })
     >
       <header class="modal__head">
         <h2 id="tasks-title" class="modal__title">Задачи</h2>
-        <button type="button" class="modal__close" title="Закрыть" @click="store.closeTasks()">
+        <button
+          type="button"
+          class="modal__close"
+          aria-label="Закрыть"
+          title="Закрыть"
+          @click="store.closeTasks()"
+        >
           <IconBase name="close" />
         </button>
       </header>

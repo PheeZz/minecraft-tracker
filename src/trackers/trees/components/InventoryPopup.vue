@@ -39,7 +39,7 @@ onUnmounted(() => document.removeEventListener('mousedown', onDown))
       <div class="popup__title">{{ tree.id }}</div>
       <div class="popup__tools">
         <span class="pill pill--tier" :class="`t--${tree.tier}`">T{{ tree.tier }}</span>
-        <button class="counter__btn" type="button" @click="actions.closeInv()">
+        <button class="counter__btn" type="button" aria-label="Закрыть" @click="actions.closeInv()">
           <IconBase name="close" />
         </button>
       </div>
