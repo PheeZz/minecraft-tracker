@@ -1,3 +1,6 @@
+// Празднование достижений — намеренно фича ТОЛЬКО деревьев (механика «100% плодов/
+// саженцев»). У пчёл явных milestone нет; обобщать в shared не нужно (YAGNI). Общий
+// shared/ui/confetti переиспользуем, если празднование появится у пчёл.
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 import { storage } from '@/shared/persistence/storage'
