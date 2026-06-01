@@ -17,6 +17,16 @@ export default defineConfig(({ command }) => ({
   build: {
     // cytoscape — основной вес граф-движка; для локального инструмента приемлемо.
     chunkSizeWarningLimit: 1200,
+    rollupOptions: {
+      output: {
+        // Выделяем cytoscape и его расширения в отдельный vendor-чанк, чтобы
+        // код приложения и тур не тянули его в свои чанки (elk удалён — ограничение
+        // web-worker, мешавшее manualChunks, снято).
+        manualChunks: {
+          cytoscape: ['cytoscape', 'cytoscape-dagre', 'cytoscape-node-html-label', 'dagre'],
+        },
+      },
+    },
   },
   test: {
     environment: 'jsdom',
