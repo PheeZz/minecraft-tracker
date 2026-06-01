@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "typecheck": "vue-tsc -b && vue-tsc -p tsconfig.vitest.json",
     "lint": "eslint . --fix",
+    "lint:check": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,vue,css}\"",
     "test": "vitest run",
     "test:watch": "vitest",

@@ -25,6 +25,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run lint:check
+      - run: npm test
       - run: npm run build
       - name: SPA fallback (deep-links на Pages)
         run: cp dist/index.html dist/404.html
