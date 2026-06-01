@@ -28,12 +28,14 @@ function createTreeActions(graph: () => GraphHandle | undefined) {
   const invPopup = ref<InvPopupState | null>(null)
 
   /** Выполнить мутацию выведения и подсветить ставшие доступными деревья. */
-  function withFlash(mutate: () => void): void {
+  function withFlash(mutate: () => boolean): boolean {
     const before = availableSet(store.progress)
-    mutate()
+    const success = mutate()
+    if (!success) return false
     const after = availableSet(store.progress)
     const fresh = [...after].filter((x) => !before.has(x))
     if (fresh.length) graph()?.flash(fresh)
+    return true
   }
 
   function select(id: string | null): void {
@@ -64,7 +66,8 @@ function createTreeActions(graph: () => GraphHandle | undefined) {
 
   // --- breed-модалка ---
   function breedConfirm(id: string, sapTree: string, polTree: string): void {
-    withFlash(() => store.breed(id, sapTree, polTree))
+    const success = withFlash(() => store.breed(id, sapTree, polTree))
+    if (!success) return
     breedModalId.value = null
   }
   function breedSkip(id: string): void {

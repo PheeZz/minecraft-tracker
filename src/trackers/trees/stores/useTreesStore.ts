@@ -144,25 +144,30 @@ export const useTreesStore = defineStore('trees', () => {
    * Решение «спросить списание» (askBreed) принимает UI-слой: для выведения
    * с рецептом он вызывает breed(), иначе — setState().
    */
-  function setState(id: string, state: TreeState): void {
-    if (!(id in BY_ID)) return
+  function setState(id: string, state: TreeState): boolean {
+    if (!(id in BY_ID)) return false
     pushHistory()
     progress.value[id] = state
     if (state === 2) ensureOwnSapling(id)
     persist()
+    return true
   }
   /**
-   * Отметить дерево выведенным со списанием 1 ед. саженца у sapTree
-   * и 1 ед. пыльцы у polTree (саженцы/пыльца взаимозаменяемы при выборе пары).
+   * Отметить дерево выведенным со списанием 1 саженца у sapTree и 1 пыльцы у polTree.
+   * Возвращает false без изменений, если ресурса не хватает.
    */
-  function breed(id: string, sapTree: string, polTree: string): void {
-    if (!(id in BY_ID)) return
+  function breed(id: string, sapTree: string, polTree: string): boolean {
+    if (!(id in BY_ID)) return false
+    const haveSap = inventory.value[sapTree]?.sap ?? 0
+    const havePol = inventory.value[polTree]?.pol ?? 0
+    if (haveSap < 1 || havePol < 1) return false
     pushHistory()
-    setInvRaw(sapTree, 'sap', (inventory.value[sapTree]?.sap ?? 0) - 1)
-    setInvRaw(polTree, 'pol', (inventory.value[polTree]?.pol ?? 0) - 1)
+    setInvRaw(sapTree, 'sap', haveSap - 1)
+    setInvRaw(polTree, 'pol', havePol - 1)
     progress.value[id] = 2
     ensureOwnSapling(id)
     persist()
+    return true
   }
 
   // ---------- сброс / экспорт / импорт ----------

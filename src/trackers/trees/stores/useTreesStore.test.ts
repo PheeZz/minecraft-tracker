@@ -46,22 +46,33 @@ describe('инвентарь', () => {
 })
 
 describe('breed со списанием', () => {
-  it('списывает 1 саженец и 1 пыльцу и отмечает выведенным', () => {
+  it('возвращает true и списывает 1 саженец и 1 пыльцу, отмечает выведенным', () => {
     const s = useTreesStore()
     s.adjustInv('Яблочный дуб', 'sap', 2)
     s.adjustInv('Белая берёза', 'pol', 2)
-    s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    const result = s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    expect(result).toBe(true)
     expect(s.progress['Бук европейский']).toBe(2)
     expect(s.inv('Яблочный дуб').sap).toBe(1)
     expect(s.inv('Белая берёза').pol).toBe(1)
   })
 
-  it('не уходит в минус при нулевом инвентаре', () => {
+  it('возвращает false и не меняет прогресс, если саженца не хватает', () => {
     const s = useTreesStore()
-    s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    const result = s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    expect(result).toBe(false)
+    expect(s.progress['Бук европейский']).toBe(0)
     expect(s.inv('Яблочный дуб').sap).toBe(0)
     expect(s.inv('Белая берёза').pol).toBe(0)
-    expect(s.progress['Бук европейский']).toBe(2)
+  })
+
+  it('возвращает false и не меняет прогресс, если пыльцы не хватает', () => {
+    const s = useTreesStore()
+    s.adjustInv('Яблочный дуб', 'sap', 1)
+    const result = s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    expect(result).toBe(false)
+    expect(s.progress['Бук европейский']).toBe(0)
+    expect(s.inv('Яблочный дуб').sap).toBe(1) // не изменился
   })
 })
 
@@ -77,7 +88,8 @@ describe('авто-саженец при получении', () => {
     const s = useTreesStore()
     s.adjustInv('Яблочный дуб', 'sap', 1)
     s.adjustInv('Белая берёза', 'pol', 1)
-    s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    const result = s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    expect(result).toBe(true)
     expect(s.inv('Бук европейский').sap).toBe(1)
   })
 
@@ -131,7 +143,8 @@ describe('undo / redo', () => {
     const s = useTreesStore()
     s.adjustInv('Яблочный дуб', 'sap', 1)
     s.adjustInv('Белая берёза', 'pol', 1)
-    s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    const result = s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    expect(result).toBe(true)
     s.undo()
     expect(s.inv('Яблочный дуб').sap).toBe(1)
     expect(s.inv('Белая берёза').pol).toBe(1)
@@ -142,19 +155,23 @@ describe('undo / redo', () => {
     const s = useTreesStore()
     s.adjustInv('Яблочный дуб', 'sap', 1)
     s.adjustInv('Белая берёза', 'pol', 1)
-    s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    const result = s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    expect(result).toBe(true)
     s.undo() // должен откатить всё списание+статус разом
     expect(s.progress['Бук европейский']).toBe(0)
     expect(s.inv('Яблочный дуб').sap).toBe(1)
     expect(s.inv('Белая берёза').pol).toBe(1)
   })
 
-  it('breed сбрасывает redo-стек', () => {
+  it('breed сбрасывает redo-стек (если ресурс достаточен)', () => {
     const s = useTreesStore()
     s.setState('Сакура', 2)
     s.undo()
     expect(s.canRedo).toBe(true)
-    s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    s.adjustInv('Яблочный дуб', 'sap', 1)
+    s.adjustInv('Белая берёза', 'pol', 1)
+    const result = s.breed('Бук европейский', 'Яблочный дуб', 'Белая берёза')
+    expect(result).toBe(true)
     expect(s.canRedo).toBe(false)
   })
 
