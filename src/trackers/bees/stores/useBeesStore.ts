@@ -7,6 +7,9 @@ import { COMBS, type CombProducer } from '../domain/combs'
 import { makeDepth } from '../domain/graph'
 import { combStatus, taskProgress, type BeeTask, type CombStatus } from '../domain/tasks'
 
+// bees.have — плоский string[] (схема v1). Версия не хранится: формат — множество
+// известных id, sanitizeHave отбрасывает неизвестное, поэтому изменения каталога
+// безопасны без миграции. При смене СТРУКТУРЫ (напр. количества) ввести envelope { v, ids }.
 const HAVE_KEY = 'bees.have'
 const TASKS_KEY = 'bees.tasks'
 
