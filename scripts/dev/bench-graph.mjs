@@ -24,10 +24,10 @@ const nodes = await page.locator('.node').count()
 await page.evaluate(() => {
   const proto = CanvasRenderingContext2D.prototype
   const orig = proto.drawImage
-  // @ts-ignore
+  // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
   window.__draw = 0
   proto.drawImage = function (...a) {
-    // @ts-ignore
+    // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
     window.__draw++
     return orig.apply(this, a)
   }
@@ -35,17 +35,17 @@ await page.evaluate(() => {
 
 async function burst() {
   await page.evaluate(() => {
-    // @ts-ignore
+    // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
     window.__frames = []
-    // @ts-ignore
+    // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
     window.__rec = true
-    // @ts-ignore
+    // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
     window.__draw = 0
     let last = performance.now()
     function loop(t) {
-      // @ts-ignore
+      // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
       if (!window.__rec) return
-      // @ts-ignore
+      // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
       window.__frames.push(t - last)
       last = t
       requestAnimationFrame(loop)
@@ -63,14 +63,14 @@ async function burst() {
   }
 
   return await page.evaluate(() => {
-    // @ts-ignore
+    // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
     window.__rec = false
-    // @ts-ignore
+    // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
     const f = window.__frames.filter((d) => d > 0).sort((a, b) => a - b)
     const sum = f.reduce((s, d) => s + d, 0)
     const q = (x) => f[Math.min(f.length - 1, Math.floor(x * f.length))]
     return {
-      // @ts-ignore
+      // @ts-expect-error бенч-скрипт: окружение браузера/cytoscape без типов
       draws: window.__draw,
       frames: f.length,
       avgMs: +(sum / f.length).toFixed(2),
