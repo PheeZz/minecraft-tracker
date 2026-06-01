@@ -24,8 +24,17 @@ function onDown(e: MouseEvent) {
     actions.closeInv()
   }
 }
-onMounted(() => document.addEventListener('mousedown', onDown))
-onUnmounted(() => document.removeEventListener('mousedown', onDown))
+function onKey(e: KeyboardEvent) {
+  if (e.key === 'Escape' && popup.value) actions.closeInv()
+}
+onMounted(() => {
+  document.addEventListener('mousedown', onDown)
+  document.addEventListener('keydown', onKey)
+})
+onUnmounted(() => {
+  document.removeEventListener('mousedown', onDown)
+  document.removeEventListener('keydown', onKey)
+})
 </script>
 
 <template>
@@ -33,6 +42,8 @@ onUnmounted(() => document.removeEventListener('mousedown', onDown))
     v-if="popup && tree"
     ref="root"
     class="popup is-open"
+    role="dialog"
+    aria-label="Инвентарь дерева"
     :style="{ left: `${popup.x}px`, top: `${popup.y}px` }"
   >
     <div class="popup__head">
