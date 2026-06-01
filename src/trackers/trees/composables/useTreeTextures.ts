@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 import { TREE_ICON } from '../data/treeIcons.data'
+import { loadImage, paintCanvasIcons, type Img } from '@/shared/textures'
 
 /**
  * Текстуры иконок деревьев. Forestry — готовый PNG (рисуется как есть);
@@ -8,22 +9,12 @@ import { TREE_ICON } from '../data/treeIcons.data'
  */
 const BASE = `${import.meta.env.BASE_URL}trees`
 
-type Img = HTMLImageElement | null
 const forestryImg = new Map<string, Img>() // file → img
 const trunkImg = new Map<string, Img>() // tpl → img
 const leavesImg = new Map<string, Img>() // tpl → img
 
 export const treeTexturesReady = ref(false)
 let loadStarted = false
-
-function loadImage(src: string): Promise<Img> {
-  return new Promise((resolve) => {
-    const img = new Image()
-    img.onload = () => resolve(img)
-    img.onerror = () => resolve(null)
-    img.src = src
-  })
-}
 
 /** Запускает загрузку всех нужных текстур (идемпотентно). */
 export async function ensureTreeTextures(): Promise<void> {
@@ -94,7 +85,7 @@ export function paintTreeCanvas(cv: HTMLCanvasElement): void {
 
 /** Перерисовать все .tic-иконки внутри root (для HTML-меток графа). */
 export function paintTreeIcons(root: ParentNode = document): void {
-  root.querySelectorAll<HTMLCanvasElement>('canvas.tic').forEach(paintTreeCanvas)
+  paintCanvasIcons(root, 'canvas.tic', paintTreeCanvas)
 }
 
 /**

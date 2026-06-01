@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+import { loadImage, paintCanvasIcons, type Img } from '@/shared/textures'
 
 /**
  * Загрузка и тинтинг 16×16 пиксельных текстур Minecraft (соты/тела пчёл).
@@ -7,7 +8,6 @@ import { ref } from 'vue'
  */
 const BASE = `${import.meta.env.BASE_URL}bees`
 
-type Img = HTMLImageElement | null
 type BodySet = [Img, Img, Img] // [body1, drone.body2, drone.outline]
 
 let combPrimary: Img = null
@@ -17,15 +17,6 @@ const bodies: Record<string, BodySet> = {}
 /** Готовность текстур (реактивно — компоненты перерисуются и покрасятся). */
 export const texturesReady = ref(false)
 let loadStarted = false
-
-function loadImage(src: string): Promise<Img> {
-  return new Promise((resolve) => {
-    const img = new Image()
-    img.onload = () => resolve(img)
-    img.onerror = () => resolve(null)
-    img.src = src
-  })
-}
 
 async function loadBodySet(dir: string): Promise<BodySet> {
   return Promise.all([
@@ -99,5 +90,5 @@ export function paintCanvas(cv: HTMLCanvasElement): void {
 
 /** Перерисовать все canvas-иконки внутри root (для HTML-меток графа, Этап 8). */
 export function paintIcons(root: ParentNode = document): void {
-  root.querySelectorAll<HTMLCanvasElement>('canvas.cic, canvas.bic').forEach(paintCanvas)
+  paintCanvasIcons(root, 'canvas.cic, canvas.bic', paintCanvas)
 }
