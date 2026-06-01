@@ -179,8 +179,8 @@ onUnmounted(() => {
         <IconBase name="reset" />{{ confirmReset ? 'Точно?' : 'Сброс' }}
       </button>
     </div>
-    <p v-if="importError" class="hint" role="alert">Ошибка импорта: {{ importError }}</p>
-    <p v-if="importOk" class="hint hint--ok" role="status">Импортировано</p>
+    <p v-if="importError" class="import-msg" role="alert">Ошибка импорта: {{ importError }}</p>
+    <p v-if="importOk" class="import-msg import-msg--ok" role="status">Импортировано</p>
 
     <h2 class="sidebar__title">Фильтр по тирам</h2>
     <div data-tour="trees-tiers"><TierFilter /></div>
@@ -350,7 +350,7 @@ onUnmounted(() => {
 .legend__check {
   color: var(--leaf);
 }
-.hint {
+.import-msg {
   font-size: 12px;
   color: #e07070;
   margin: 8px 0 0;
@@ -359,7 +359,7 @@ onUnmounted(() => {
   border: 1px solid rgba(224, 112, 112, 0.3);
   border-radius: 8px;
 }
-.hint--ok {
+.import-msg--ok {
   color: var(--leaf);
   background: rgba(143, 209, 79, 0.1);
   border-color: rgba(143, 209, 79, 0.3);

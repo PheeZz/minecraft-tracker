@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
-defineProps<{ text: string; title?: string; side?: 'top' | 'bottom' | 'left' | 'right' }>()
+defineProps<{
+  text: string
+  title?: string
+  side?: 'top' | 'bottom' | 'bottom-end' | 'left' | 'right'
+}>()
 
 const open = ref(false)
 const root = ref<HTMLElement>()
@@ -94,6 +98,12 @@ onBeforeUnmount(() => {
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
+}
+/* правый край popover привязан к триггеру — растёт влево, не переполняя вьюпорт справа
+   (для «?»-хинтов у правого края панелей/тулбаров) */
+.hint__pop--bottom-end {
+  top: calc(100% + 8px);
+  right: 0;
 }
 .hint__pop--top {
   bottom: calc(100% + 8px);

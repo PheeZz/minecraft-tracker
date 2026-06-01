@@ -80,7 +80,7 @@ onUnmounted(() => document.removeEventListener('keydown', onKey))
       </div>
       <HeroStats />
       <button class="topbar__tour" type="button" title="Запустить обзор" @click="tour.start()">
-        ? Обзор
+        Обзор
       </button>
     </header>
 

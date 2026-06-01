@@ -71,10 +71,10 @@ const recipeCount = computed(() =>
       </button>
       <HintSpot
         text="Инвентарь — отмечаешь выведенных пчёл (склад). Задачи — список крафтов с нужными сотами и прогрессом."
-        side="bottom"
+        side="bottom-end"
       />
       <button class="modebar__tour" type="button" title="Запустить обзор" @click="tour.start()">
-        ? Обзор
+        Обзор
       </button>
     </div>
 
