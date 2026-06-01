@@ -23,11 +23,9 @@
     "canvas-confetti": "^1.9.4",
     "cytoscape": "^3.33.4",
     "cytoscape-dagre": "^2.5.0",
-    "cytoscape-elk": "^2.3.0",
     "cytoscape-node-html-label": "^1.2.2",
     "dagre": "^0.8.5",
     "driver.js": "^1.4.0",
-    "elkjs": "^0.9.3",
     "pinia": "^2.2.6",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5"

@@ -15,8 +15,6 @@ const fileInput = ref<HTMLInputElement>()
 
 const LAYOUT_OPTIONS: { value: LayoutKey; label: string }[] = [
   { value: 'tiers', label: 'Раскладка: по тирам' },
-  { value: 'elk-layered', label: 'ELK layered ▸ LR' },
-  { value: 'elk-layered-tb', label: 'ELK layered ▾ TB' },
   { value: 'dagre-lr', label: 'dagre ▸ LR' },
   { value: 'dagre-tb', label: 'dagre ▾ TB' },
   { value: 'breadthfirst', label: 'breadthfirst' },

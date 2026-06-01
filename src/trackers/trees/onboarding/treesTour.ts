@@ -36,7 +36,7 @@ export function buildTreesTour(graph: TreesTourGraph): TourStep[] {
     {
       element: '[data-tour="trees-layout"]',
       title: 'Раскладка',
-      text: 'Меняй раскладку графа: по тирам, ELK или dagre.',
+      text: 'Меняй раскладку графа: по тирам или dagre.',
       side: 'left',
     },
     {

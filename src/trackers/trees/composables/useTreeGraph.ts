@@ -22,24 +22,13 @@ interface NodeHtmlLabelConfig {
 type CoreWithHtmlLabel = Core & { nodeHtmlLabel(configs: NodeHtmlLabelConfig[]): void }
 type CytoscapeExt = Parameters<typeof cytoscape.use>[0]
 
-// Расширения регистрируются один раз на модуль. ELK сюда НЕ входит — он тяжёлый
-// (~1 МБ elkjs) и нужен только для elk-раскладок, поэтому грузится ленирно (ensureElk).
+// Расширения регистрируются один раз на модуль.
 let extensionsRegistered = false
 function registerExtensions(): void {
   if (extensionsRegistered) return
   cytoscape.use(dagre as CytoscapeExt)
   ;(nodeHtmlLabel as (cy: typeof cytoscape) => void)(cytoscape)
   extensionsRegistered = true
-}
-
-// Ленивая регистрация ELK: динамический import выносит elkjs в отдельный чанк,
-// который качается только при первом выборе elk-раскладки. cytoscape.use идемпотентен.
-let elkRegistered = false
-async function ensureElk(): Promise<void> {
-  if (elkRegistered) return
-  const elk = (await import('cytoscape-elk')).default
-  cytoscape.use(elk as CytoscapeExt)
-  elkRegistered = true
 }
 
 export type LineageDir = 'ancestors' | 'descendants'
@@ -194,18 +183,12 @@ export function useTreeGraph(callbacks: TreeGraphCallbacks = {}) {
       tiersLayout()
       return
     }
-    // elk грузится лениво; для остальных раскладок запускаем сразу
-    if (currentLayout === 'elk-layered' || currentLayout === 'elk-layered-tb') {
-      void ensureElk().then(runCyLayout)
-      return
-    }
     runCyLayout()
   }
 
-  /** Запуск cytoscape-раскладки по currentLayout (после возможной догрузки elk). */
+  /** Запуск cytoscape-раскладки по currentLayout. */
   function runCyLayout(): void {
     if (!cy) return
-    // мог смениться, пока грузился elk; tiers — отдельной веткой
     if (currentLayout === 'tiers') {
       tiersLayout()
       return

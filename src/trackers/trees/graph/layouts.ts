@@ -1,38 +1,13 @@
 import type { LayoutOptions } from 'cytoscape'
 import { TREES } from '../data/trees.data'
 
-export type LayoutKey =
-  | 'tiers'
-  | 'elk-layered'
-  | 'elk-layered-tb'
-  | 'dagre-lr'
-  | 'dagre-tb'
-  | 'breadthfirst'
+export type LayoutKey = 'tiers' | 'dagre-lr' | 'dagre-tb' | 'breadthfirst'
+
+/** Все валидные ключи раскладок (для валидации persisted-значений и UI). */
+export const LAYOUT_KEYS: readonly LayoutKey[] = ['tiers', 'dagre-lr', 'dagre-tb', 'breadthfirst']
 
 /** Конфиги раскладок (кроме 'tiers' — она считается вручную). Перенос из ragu.html. */
 export const LAYOUTS: Record<Exclude<LayoutKey, 'tiers'>, LayoutOptions> = {
-  'elk-layered': {
-    name: 'elk',
-    elk: {
-      algorithm: 'layered',
-      'elk.direction': 'RIGHT',
-      'elk.layered.spacing.nodeNodeBetweenLayers': 140,
-      'elk.spacing.nodeNode': 28,
-      'elk.edgeRouting': 'ORTHOGONAL',
-      'elk.layered.crossingMinimization.strategy': 'LAYER_SWEEP',
-      'elk.layered.nodePlacement.strategy': 'NETWORK_SIMPLEX',
-    },
-  } as LayoutOptions,
-  'elk-layered-tb': {
-    name: 'elk',
-    elk: {
-      algorithm: 'layered',
-      'elk.direction': 'DOWN',
-      'elk.layered.spacing.nodeNodeBetweenLayers': 140,
-      'elk.spacing.nodeNode': 28,
-      'elk.edgeRouting': 'ORTHOGONAL',
-    },
-  } as LayoutOptions,
   'dagre-lr': {
     name: 'dagre',
     rankDir: 'LR',

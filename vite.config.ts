@@ -15,10 +15,8 @@ export default defineConfig(({ command }) => ({
     },
   },
   build: {
-    // cytoscape + elk вместе ~2МБ — неизбежно для граф-движка; для локального
-    // инструмента приемлемо. Ручной manualChunks не используем: он ломает резолв
-    // зависимости elkjs ('web-worker'). Только поднимаем порог предупреждения.
-    chunkSizeWarningLimit: 2600,
+    // cytoscape — основной вес граф-движка; для локального инструмента приемлемо.
+    chunkSizeWarningLimit: 1200,
   },
   test: {
     environment: 'jsdom',

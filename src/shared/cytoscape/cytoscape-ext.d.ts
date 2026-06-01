@@ -5,10 +5,6 @@ declare module 'cytoscape-dagre' {
   const ext: unknown
   export default ext
 }
-declare module 'cytoscape-elk' {
-  const ext: unknown
-  export default ext
-}
 declare module 'cytoscape-node-html-label' {
   const ext: unknown
   export default ext
