@@ -35,6 +35,7 @@ function switchTo(id: TrackerId) {
 
 <template>
   <div class="shell">
+    <a class="skip-link" href="#main-content">К основному содержимому</a>
     <nav class="switcher" aria-label="Переключатель трекеров">
       <button
         v-for="t in TRACKER_MODULES"
@@ -61,7 +62,7 @@ function switchTo(id: TrackerId) {
       </a>
     </nav>
 
-    <main class="shell__body">
+    <main id="main-content" tabindex="-1" class="shell__body">
       <!-- KeepAlive: вьюхи (и их Cytoscape-инстансы) не пересоздаются при переключении.
            Transition: настоящий crossfade (без out-in, чтобы не было провала в пустоту) —
            уходящая вьюха кладётся absolute поверх, обе плавно меняют opacity. -->
@@ -176,5 +177,24 @@ function switchTo(id: TrackerId) {
 .shell__body {
   min-height: 0;
   position: relative; /* якорь для absolute-позиционирования уходящей вьюхи в crossfade */
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -48px;
+  z-index: 1000;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--card, #222);
+  color: var(--ink, #fff);
+  border: 1px solid var(--line);
+  font: inherit;
+  text-decoration: none;
+  transition: top 0.15s;
+}
+.skip-link:focus-visible {
+  top: 8px;
+  outline: 2px solid var(--honey, #e8a72c);
 }
 </style>

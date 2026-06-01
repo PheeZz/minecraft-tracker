@@ -42,7 +42,7 @@ const beeRows = computed(() =>
 </script>
 
 <template>
-  <nav class="rail">
+  <nav class="rail" aria-label="Цепочка выведения">
     <div class="rail__h">
       <div class="t">Цепочка выведения</div>
       <div class="s">соты → пчела → план</div>
@@ -58,7 +58,13 @@ const beeRows = computed(() =>
     </div>
 
     <label class="search">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
         <circle cx="11" cy="11" r="7" />
         <path d="m20 20-3.5-3.5" />
       </svg>
