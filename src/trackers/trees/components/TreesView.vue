@@ -10,7 +10,7 @@ import BreedModal from './BreedModal.vue'
 import CelebrationModal from './CelebrationModal.vue'
 import InventoryPopup from './InventoryPopup.vue'
 import { useTreesCelebration } from '../stores/useTreesCelebration'
-import { storage } from '@/shared/persistence/storage'
+import { useOnboardingSeen } from '@/shared/composables/useOnboardingSeen'
 import { useTour } from '@/shared/ui/useTour'
 import { buildTreesTour } from '../onboarding/treesTour'
 
@@ -19,13 +19,15 @@ const graphRef = ref<InstanceType<typeof TreeGraph>>()
 // инстанцируем стор празднования: его вотчеры ловят 100% (живой переход / импорт / загрузку)
 useTreesCelebration()
 
+const onboarding = useOnboardingSeen('trees')
+
 const tour = useTour(
   () =>
     buildTreesTour({
       tourBestId: () => graphRef.value?.tourBestId() ?? null,
       tourSpotlight: (id) => graphRef.value?.tourSpotlight(id) ?? Promise.resolve(),
     }),
-  { onDone: () => storage.set('onboard.trees', true) },
+  { onDone: () => onboarding.markSeen() },
 )
 
 // авто-старт один раз, когда граф готов (ноды отрисованы → можно якориться)
@@ -33,7 +35,7 @@ let autoStarted = false
 watch(
   () => graphRef.value?.isReady?.(),
   (ready) => {
-    if (ready && !autoStarted && !storage.get('onboard.trees', false)) {
+    if (ready && !autoStarted && !onboarding.seen()) {
       autoStarted = true
       void tour.start()
     }

@@ -11,18 +11,20 @@ import BeeInventory from './BeeInventory.vue'
 import CombIcon from './CombIcon.vue'
 import BeeTasksModal from './BeeTasksModal.vue'
 import IconBase from '@/shared/ui/IconBase.vue'
-import { storage } from '@/shared/persistence/storage'
+import { useOnboardingSeen } from '@/shared/composables/useOnboardingSeen'
 import { useTour } from '@/shared/ui/useTour'
 import HintSpot from '@/shared/ui/HintSpot.vue'
 import { buildBeesTour } from '../onboarding/beesTour'
 
 const store = useBeesStore()
+const onboarding = useOnboardingSeen('bees')
+
 const tour = useTour(() => buildBeesTour({ selectComb: (n) => store.selectComb(n) }), {
-  onDone: () => storage.set('onboard.bees', true),
+  onDone: () => onboarding.markSeen(),
 })
 let autoStartTimer: ReturnType<typeof setTimeout> | undefined
 onMounted(() => {
-  if (!storage.get('onboard.bees', false)) {
+  if (!onboarding.seen()) {
     // даём модбару/рейлу отрисоваться; граф появится по демо-выбору внутри тура
     autoStartTimer = setTimeout(() => void tour.start(), 500)
   }
