@@ -214,7 +214,14 @@ describe('reset', () => {
     const raw = storage.get<Record<string, number>>('trees.progress', {})
     expect(raw['Бук европейский']).toBe(0)
     expect(raw['Яблочный дуб']).toBe(2)
-    expect(storage.get('trees.inventory', null)).toEqual({})
+  })
+
+  it('восстанавливает 1 саженец у стартовых деревьев', () => {
+    const s = useTreesStore()
+    s.reset()
+    for (const id of STARTING_SAPLINGS) {
+      expect(s.inv(id).sap).toBeGreaterThanOrEqual(1)
+    }
   })
 })
 

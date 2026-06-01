@@ -175,6 +175,7 @@ export const useTreesStore = defineStore('trees', () => {
     pushHistory()
     progress.value = defaultProgress()
     inventory.value = {}
+    for (const id of STARTING_SAPLINGS) ensureOwnSapling(id)
     persist()
   }
 
