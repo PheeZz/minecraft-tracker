@@ -108,19 +108,30 @@ function sortFn(a: Bee, b: Bee): number {
   }
 }
 
+interface CardRow {
+  bee: Bee
+  have: boolean
+  wild: boolean
+  breedable: boolean
+}
 interface Section {
   src: BeeSource
   owned: number
   total: number
-  rows: Bee[]
+  rows: CardRow[]
 }
 
 /** Секции F→E→M с отфильтрованными+отсортированными внутри карточками. */
 const sections = computed<Section[]>(() =>
   SRC_ORDER.map((src) => {
-    const rows = BEES.filter((b) => b.source === src && matchesQuery(b) && matchesFilter(b)).sort(
-      sortFn,
-    )
+    const rows = BEES.filter((b) => b.source === src && matchesQuery(b) && matchesFilter(b))
+      .sort(sortFn)
+      .map((bee) => ({
+        bee,
+        have: store.isHave(bee.id),
+        wild: isWild(bee),
+        breedable: isBreedable(bee),
+      }))
     return {
       src,
       owned: store.ownedBySource[src],
@@ -149,11 +160,11 @@ function clearSearchAndFilter(): void {
   ui.setInvFilter('all')
 }
 
-function bulkMark(rows: Bee[]): void {
-  store.markAll(rows.map((b) => b.id))
+function bulkMark(rows: CardRow[]): void {
+  store.markAll(rows.map((r) => r.bee.id))
 }
-function bulkUnmark(rows: Bee[]): void {
-  store.unmarkAll(rows.map((b) => b.id))
+function bulkUnmark(rows: CardRow[]): void {
+  store.unmarkAll(rows.map((r) => r.bee.id))
 }
 
 function doClear(): void {
@@ -363,34 +374,34 @@ const full = computed(() => store.haveCount === TOTAL)
             <div class="sect__inner">
               <div class="grid">
                 <div
-                  v-for="b in sec.rows"
-                  :key="b.id"
+                  v-for="r in sec.rows"
+                  :key="r.bee.id"
                   class="card"
-                  :class="[srcClass(b.source), { owned: store.isHave(b.id) }]"
+                  :class="[srcClass(r.bee.source), { owned: r.have }]"
                   role="checkbox"
-                  :aria-checked="store.isHave(b.id)"
-                  :aria-label="`${b.id}, ${b.en}, ${store.isHave(b.id) ? 'есть' : 'нет'}`"
-                  :title="productTitle(b)"
+                  :aria-checked="r.have"
+                  :aria-label="`${r.bee.id}, ${r.bee.en}, ${r.have ? 'есть' : 'нет'}`"
+                  :title="productTitle(r.bee)"
                   tabindex="0"
-                  @click="store.toggleHave(b.id)"
-                  @keydown.enter.prevent="store.toggleHave(b.id)"
-                  @keydown.space.prevent="store.toggleHave(b.id)"
+                  @click="store.toggleHave(r.bee.id)"
+                  @keydown.enter.prevent="store.toggleHave(r.bee.id)"
+                  @keydown.space.prevent="store.toggleHave(r.bee.id)"
                 >
-                  <span class="card__chk" :class="{ on: store.isHave(b.id) }">✓</span>
-                  <BeeIcon :name="b.id" big />
+                  <span class="card__chk" :class="{ on: r.have }">✓</span>
+                  <BeeIcon :name="r.bee.id" big />
                   <div class="card__body">
-                    <div class="card__name">{{ b.id }}</div>
-                    <div class="card__sub">{{ b.en }}</div>
+                    <div class="card__name">{{ r.bee.id }}</div>
+                    <div class="card__sub">{{ r.bee.en }}</div>
                   </div>
 
-                  <span v-if="!store.isHave(b.id)" class="card__chip">
-                    <span v-if="isWild(b)" class="chip chip--wild">дикая</span>
-                    <span v-else-if="isBreedable(b)" class="chip chip--ready">готова</span>
-                    <span v-else class="chip chip--depth">d{{ store.depthOf(b.id) }}</span>
+                  <span v-if="!r.have" class="card__chip">
+                    <span v-if="r.wild" class="chip chip--wild">дикая</span>
+                    <span v-else-if="r.breedable" class="chip chip--ready">готова</span>
+                    <span v-else class="chip chip--depth">d{{ store.depthOf(r.bee.id) }}</span>
                   </span>
 
-                  <span class="card__src" :class="srcClass(b.source)">{{
-                    SRC_LABEL[b.source]
+                  <span class="card__src" :class="srcClass(r.bee.source)">{{
+                    SRC_LABEL[r.bee.source]
                   }}</span>
                 </div>
               </div>
