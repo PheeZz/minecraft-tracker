@@ -51,6 +51,21 @@ a {
   display: block;
 }
 
+/* Визуально скрыто, но доступно скринридеру и клавиатуре (НЕ display:none).
+   Для текстовых альтернатив графа и описаний. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
 /* ============================================================
    Анимации переключения вкладок (классы применяются к корню
    routed-компонента, поэтому живут глобально, не в scoped App.vue).

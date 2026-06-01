@@ -2,6 +2,8 @@
 import { onActivated, onBeforeUnmount, onDeactivated, onMounted, ref, watch } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
 import AppLoader from '@/shared/ui/AppLoader.vue'
+import TreeGraphA11y from './TreeGraphA11y.vue'
+import { announce } from '@/shared/ui/useAnnouncer'
 import { BY_ID, TREES } from '../data/trees.data'
 import { isAvailable, unlockScore } from '../domain/graph'
 import { FRUIT_CHAIN } from '../domain/plan'
@@ -43,6 +45,14 @@ const graph = useTreeGraph({
     }
   },
 })
+
+// Клавиатурный выбор из доступной альтернативы: тот же эффект, что tap по ноде.
+// focus() сам делает selectNode + highlightLineage(ancestors) + панораму к узлу.
+function selectFromA11y(id: string) {
+  ui.selectedId = id
+  graph.focus(id)
+  announce(`Выбрано: ${id}`)
+}
 
 const filterOpts = () => ({
   visibleTiers: ui.visibleTiers,
@@ -219,7 +229,18 @@ defineExpose({
       </button>
     </div>
     <div ref="headersEl" class="stage__tiers" />
-    <div ref="cyEl" class="stage__cy" />
+    <p id="trees-graph-desc" class="sr-only">
+      Интерактивный граф селекции деревьев. Доступный список узлов ниже — выберите узел, чтобы
+      подсветить его родословную.
+    </p>
+    <div
+      ref="cyEl"
+      class="stage__cy"
+      role="application"
+      aria-label="Граф селекции деревьев"
+      aria-describedby="trees-graph-desc"
+    />
+    <TreeGraphA11y @select="selectFromA11y" />
 
     <Transition name="stage-load">
       <div v-if="!graphReady" class="stage__loading">
