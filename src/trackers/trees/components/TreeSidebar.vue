@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onUnmounted } from 'vue'
 import IconBase from '@/shared/ui/IconBase.vue'
 import { useTreesStore } from '../stores/useTreesStore'
 import { useTreesUiStore } from '../stores/useTreesUiStore'
@@ -13,6 +13,9 @@ import { downloadJson, parseJsonFileText } from '@/shared/persistence/importExpo
 const store = useTreesStore()
 const ui = useTreesUiStore()
 const fileInput = ref<HTMLInputElement>()
+const confirmReset = ref(false)
+const importError = ref<string | null>(null)
+let resetTimer: ReturnType<typeof setTimeout> | null = null
 
 const LAYOUT_OPTIONS: { value: LayoutKey; label: string }[] = [
   { value: 'tiers', label: 'Раскладка: по тирам' },
@@ -29,12 +32,26 @@ async function onImport(e: Event) {
   if (!file) return
   const r = parseJsonFileText(await file.text())
   if (r.ok) store.importData(r.data)
-  else alert('Ошибка импорта: ' + r.error)
+  else {
+    importError.value = r.error
+    setTimeout(() => (importError.value = null), 4000)
+  }
   if (fileInput.value) fileInput.value.value = ''
 }
 function reset() {
-  if (confirm('Сбросить весь прогресс? Останутся только стартовые саженцы.')) store.reset()
+  if (!confirmReset.value) {
+    confirmReset.value = true
+    resetTimer = setTimeout(() => (confirmReset.value = false), 3000)
+    return
+  }
+  if (resetTimer) clearTimeout(resetTimer)
+  confirmReset.value = false
+  store.reset()
 }
+
+onUnmounted(() => {
+  if (resetTimer) clearTimeout(resetTimer)
+})
 </script>
 
 <template>
@@ -142,10 +159,17 @@ function reset() {
         accept="application/json"
         @change="onImport"
       />
-      <button class="btn" type="button" title="Сбросить весь прогресс" @click="reset">
-        <IconBase name="reset" />Сброс
+      <button
+        class="btn"
+        :class="{ 'btn--amber': confirmReset }"
+        type="button"
+        title="Сбросить весь прогресс"
+        @click="reset"
+      >
+        <IconBase name="reset" />{{ confirmReset ? 'Точно?' : 'Сброс' }}
       </button>
     </div>
+    <p v-if="importError" class="hint" role="alert">Ошибка импорта: {{ importError }}</p>
 
     <h2 class="sidebar__title">Фильтр по тирам</h2>
     <div data-tour="trees-tiers"><TierFilter /></div>
@@ -314,5 +338,14 @@ function reset() {
 }
 .legend__check {
   color: var(--leaf);
+}
+.hint {
+  font-size: 12px;
+  color: #e07070;
+  margin: 8px 0 0;
+  padding: 8px 12px;
+  background: rgba(224, 112, 112, 0.1);
+  border: 1px solid rgba(224, 112, 112, 0.3);
+  border-radius: 8px;
 }
 </style>
