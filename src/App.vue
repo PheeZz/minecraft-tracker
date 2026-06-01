@@ -2,14 +2,14 @@
 import { computed, onMounted, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { storage } from '@/shared/persistence/storage'
-import { TRACKERS, type TrackerId } from '@/shared/types'
+import { TRACKER_MODULES, type TrackerId } from '@/shared/registry/trackers'
 import IconBase from '@/shared/ui/IconBase.vue'
 import ErrorBoundary from '@/shared/ui/ErrorBoundary.vue'
 
 const route = useRoute()
 const router = useRouter()
 
-const activeTracker = computed<TrackerId>(() => (route.meta.tracker as TrackerId) ?? 'trees')
+const activeTracker = computed<TrackerId>(() => (route.meta.tracker ?? 'trees') as TrackerId)
 const year = new Date().getFullYear()
 
 // Тема трекера активируется атрибутом на корне документа; запоминаем последний.
@@ -18,12 +18,11 @@ watchEffect(() => {
   storage.set('app.tracker', activeTracker.value)
 })
 
-// Префетч чанков обоих трекеров в простое — чтобы первое переключение не ждало
+// Префетч чанков всех трекеров в простое — чтобы первое переключение не ждало
 // загрузку/парс тяжёлого кода (cytoscape). Те же спецификаторы, что в роутере → dedupe.
 onMounted(() => {
   const warm = () => {
-    void import('@/trackers/trees/components/TreesView.vue')
-    void import('@/trackers/bees/components/BeesView.vue')
+    for (const m of TRACKER_MODULES) void m.view()
   }
   if ('requestIdleCallback' in window) requestIdleCallback(warm)
   else setTimeout(warm, 1000)
@@ -38,7 +37,7 @@ function switchTo(id: TrackerId) {
   <div class="shell">
     <nav class="switcher" aria-label="Переключатель трекеров">
       <button
-        v-for="t in TRACKERS"
+        v-for="t in TRACKER_MODULES"
         :key="t.id"
         class="switcher__btn"
         :class="{ 'is-active': t.id === activeTracker }"

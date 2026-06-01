@@ -1,0 +1,39 @@
+import type { IconName } from '@/shared/icons/icons'
+
+export interface TrackerModule {
+  id: string
+  title: string
+  kicker: string
+  mark: IconName
+  path: string
+  /** Ленивый импорт View-компонента трекера. */
+  view: () => Promise<unknown>
+}
+
+export const TRACKER_MODULES = [
+  {
+    id: 'trees',
+    title: 'Деревья',
+    kicker: 'Forestry · Селекция',
+    mark: 'sprout',
+    path: '/trees',
+    view: () => import('@/trackers/trees/components/TreesView.vue'),
+  },
+  {
+    id: 'bees',
+    title: 'Пчёлы',
+    kicker: 'Forestry · ExtraBees',
+    mark: 'bee',
+    path: '/bees',
+    view: () => import('@/trackers/bees/components/BeesView.vue'),
+  },
+] as const satisfies readonly TrackerModule[]
+
+export type TrackerId = (typeof TRACKER_MODULES)[number]['id']
+
+import 'vue-router'
+declare module 'vue-router' {
+  interface RouteMeta {
+    tracker?: TrackerId
+  }
+}

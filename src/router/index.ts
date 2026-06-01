@@ -1,10 +1,10 @@
 import { defineAsyncComponent } from 'vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import { storage } from '@/shared/persistence/storage'
-import { TRACKERS, type TrackerId } from '@/shared/types'
+import { TRACKER_MODULES, type TrackerId } from '@/shared/registry/trackers'
 import AppLoader from '@/shared/ui/AppLoader.vue'
 
-const TRACKER_IDS = new Set<string>(TRACKERS.map((t) => t.id))
+const TRACKER_IDS = new Set<string>(TRACKER_MODULES.map((m) => m.id))
 /** Последний активный трекер из storage, с валидацией (битое значение → trees). */
 function lastTrackerPath(): string {
   const saved = storage.get<unknown>('app.tracker', 'trees')
@@ -22,21 +22,17 @@ function lazyTracker(loader: () => Promise<unknown>) {
   })
 }
 
+const trackerRoutes: RouteRecordRaw[] = TRACKER_MODULES.map((m) => ({
+  path: m.path,
+  name: m.id,
+  component: lazyTracker(m.view),
+  meta: { tracker: m.id as TrackerId },
+}))
+
 const routes: RouteRecordRaw[] = [
   // редирект на последний активный трекер
   { path: '/', redirect: lastTrackerPath },
-  {
-    path: '/trees',
-    name: 'trees',
-    component: lazyTracker(() => import('@/trackers/trees/components/TreesView.vue')),
-    meta: { tracker: 'trees' },
-  },
-  {
-    path: '/bees',
-    name: 'bees',
-    component: lazyTracker(() => import('@/trackers/bees/components/BeesView.vue')),
-    meta: { tracker: 'bees' },
-  },
+  ...trackerRoutes,
   // неизвестные пути → на последний активный трекер
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
