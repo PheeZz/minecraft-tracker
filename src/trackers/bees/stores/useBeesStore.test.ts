@@ -2,6 +2,7 @@ import { beforeEach, describe, it, expect } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
 import { storage } from '@/shared/persistence/storage'
 import { useBeesStore } from './useBeesStore'
+import { useBeesUiStore } from './useBeesUiStore'
 
 beforeEach(() => {
   storage.clear()
@@ -62,42 +63,44 @@ describe('producersOf / выбор', () => {
   })
   it('selectComb выбирает самого простого производителя как цель', () => {
     const s = useBeesStore()
-    s.selectComb('Медовые соты')
-    expect(s.mode).toBe('comb')
-    expect(s.curComb).toBe('Медовые соты')
-    expect(s.curTarget).toBe(s.producersOf('Медовые соты')[0]!.bee)
+    const ui = useBeesUiStore()
+    ui.selectComb('Медовые соты')
+    expect(ui.mode).toBe('comb')
+    expect(ui.curComb).toBe('Медовые соты')
+    expect(ui.curTarget).toBe(s.producersOf('Медовые соты')[0]!.bee)
   })
   it('producersOf несуществующей соты — пустой массив, selectComb → curTarget null', () => {
     const s = useBeesStore()
+    const ui = useBeesUiStore()
     expect(s.producersOf('нет такой соты')).toEqual([])
-    s.selectComb('нет такой соты')
-    expect(s.curTarget).toBeNull()
+    ui.selectComb('нет такой соты')
+    expect(ui.curTarget).toBeNull()
   })
   it('selectBee переключает режим', () => {
-    const s = useBeesStore()
-    s.selectBee('Знатная')
-    expect(s.mode).toBe('bee')
-    expect(s.curComb).toBeNull()
-    expect(s.curTarget).toBe('Знатная')
+    const ui = useBeesUiStore()
+    ui.selectBee('Знатная')
+    expect(ui.mode).toBe('bee')
+    expect(ui.curComb).toBeNull()
+    expect(ui.curTarget).toBe('Знатная')
   })
 })
 
 describe('навигация view/tasksOpen', () => {
   it('view по умолчанию graph, setView переключает', () => {
-    const s = useBeesStore()
-    expect(s.view).toBe('graph')
-    s.setView('inventory')
-    expect(s.view).toBe('inventory')
+    const ui = useBeesUiStore()
+    expect(ui.view).toBe('graph')
+    ui.setView('inventory')
+    expect(ui.view).toBe('inventory')
   })
   it('tasksOpen независим, open/close/toggle', () => {
-    const s = useBeesStore()
-    expect(s.tasksOpen).toBe(false)
-    s.openTasks()
-    expect(s.tasksOpen).toBe(true)
-    s.closeTasks()
-    expect(s.tasksOpen).toBe(false)
-    s.toggleTasks()
-    expect(s.tasksOpen).toBe(true)
+    const ui = useBeesUiStore()
+    expect(ui.tasksOpen).toBe(false)
+    ui.openTasks()
+    expect(ui.tasksOpen).toBe(true)
+    ui.closeTasks()
+    expect(ui.tasksOpen).toBe(false)
+    ui.toggleTasks()
+    expect(ui.tasksOpen).toBe(true)
   })
 })
 
@@ -186,9 +189,9 @@ describe('экспорт/импорт + валидация', () => {
   it('битые invPrefs откатываются к дефолту', () => {
     storage.set('bees.invPrefs', { sort: 'ерунда', filter: 'чушь', collapsed: 'нея' })
     setActivePinia(createPinia())
-    const s = useBeesStore()
-    expect(s.invSort).toBe('name')
-    expect(s.invFilter).toBe('all')
-    expect(s.collapsedSources.size).toBe(0)
+    const ui = useBeesUiStore()
+    expect(ui.invSort).toBe('name')
+    expect(ui.invFilter).toBe('all')
+    expect(ui.collapsedSources.size).toBe(0)
   })
 })

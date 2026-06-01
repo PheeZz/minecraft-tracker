@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useBeesStore } from '../stores/useBeesStore'
+import { useBeesUiStore } from '../stores/useBeesUiStore'
 import type { BeeTask } from '../domain/tasks'
 import BeeTaskCard from './BeeTaskCard.vue'
 import BeeTaskEditor from './BeeTaskEditor.vue'
@@ -8,6 +9,7 @@ import IconBase from '@/shared/ui/IconBase.vue'
 import { useFocusTrap } from '@/shared/ui/useFocusTrap'
 
 const store = useBeesStore()
+const ui = useBeesUiStore()
 
 // null = форма закрыта; 'new' = создание; иначе редактируем задачу с этим id.
 const editing = ref<'new' | string | null>(null)
@@ -32,18 +34,18 @@ function onCancel(): void {
   editingTask.value = undefined
 }
 function jumpToGraph(bee: string): void {
-  store.closeTasks()
-  store.setView('graph')
-  store.selectBee(bee)
+  ui.closeTasks()
+  ui.setView('graph')
+  ui.selectBee(bee)
 }
 
 // Фокус-трап + Escape + возврат фокуса (общий хук).
 const winEl = ref<HTMLElement>()
-useFocusTrap(winEl, { onEscape: store.closeTasks })
+useFocusTrap(winEl, { onEscape: ui.closeTasks })
 </script>
 
 <template>
-  <div class="modal" @click.self="store.closeTasks()">
+  <div class="modal" @click.self="ui.closeTasks()">
     <div
       ref="winEl"
       class="modal__win"
@@ -58,7 +60,7 @@ useFocusTrap(winEl, { onEscape: store.closeTasks })
           class="modal__close"
           aria-label="Закрыть"
           title="Закрыть"
-          @click="store.closeTasks()"
+          @click="ui.closeTasks()"
         >
           <IconBase name="close" />
         </button>

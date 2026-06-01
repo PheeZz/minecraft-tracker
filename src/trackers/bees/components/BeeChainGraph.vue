@@ -3,23 +3,21 @@ import { onActivated, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { BEE_BY_ID } from '../data/bees.data'
 import { COMBS } from '../domain/combs'
 import { useBeesStore } from '../stores/useBeesStore'
+import { useBeesUiStore } from '../stores/useBeesUiStore'
 import { useBeeChainGraph } from '../composables/useBeeChainGraph'
 import { buildSubgraph } from '../graph/subgraph'
 
 const store = useBeesStore()
+const ui = useBeesUiStore()
 const cyEl = ref<HTMLElement>()
 
 const graph = useBeeChainGraph({
-  curComb: () => store.curComb,
-  curTarget: () => store.curTarget,
+  curComb: () => ui.curComb,
+  curTarget: () => ui.curTarget,
   onTapBee: (id) => {
     // производитель текущей соты → сделать целью; иначе многорецептурную — циклить
-    if (
-      store.curComb &&
-      COMBS[store.curComb]?.some((p) => p.bee === id) &&
-      id !== store.curTarget
-    ) {
-      store.setTarget(id)
+    if (ui.curComb && COMBS[ui.curComb]?.some((p) => p.bee === id) && id !== ui.curTarget) {
+      ui.setTarget(id)
       return
     }
     if ((BEE_BY_ID[id]?.parents.length ?? 0) > 1) store.cycleRecipe(id)
@@ -30,14 +28,14 @@ const graph = useBeeChainGraph({
 })
 
 function rebuild() {
-  if (!store.curTarget) return
+  if (!ui.curTarget) return
   graph.setHave(store.have)
-  graph.rebuild(buildSubgraph(store.curTarget, store.have, store.rc))
+  graph.rebuild(buildSubgraph(ui.curTarget, store.have, store.rc))
 }
 
 // have — ref<Set> (заменяется целиком → триггер по ссылке); смену рецептов
 // отслеживаем через rcVersion (инкремент в setRecipe/cycleRecipe).
-watch(() => [store.curTarget, store.have, store.rcVersion] as const, rebuild)
+watch(() => [ui.curTarget, store.have, store.rcVersion] as const, rebuild)
 
 onMounted(() => {
   if (cyEl.value) {

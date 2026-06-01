@@ -8,22 +8,7 @@ import { makeDepth } from '../domain/graph'
 import { combStatus, taskProgress, type BeeTask, type CombStatus } from '../domain/tasks'
 
 const HAVE_KEY = 'bees.have'
-const INV_PREFS_KEY = 'bees.invPrefs'
 const TASKS_KEY = 'bees.tasks'
-
-export type BeeMode = 'comb' | 'bee'
-
-/** Сортировка инвентаря: имя / глубина выведения / сначала дикие. */
-export type InvSort = 'name' | 'depth' | 'wild'
-/** Фильтр инвентаря: все / нет / есть / готовы к выведению / дикие. */
-export type InvFilter = 'all' | 'missing' | 'owned' | 'breedable' | 'wild'
-
-/** Сохраняемые настройки экрана инвентаря. */
-interface InvPrefs {
-  sort: InvSort
-  filter: InvFilter
-  collapsed: BeeSource[]
-}
 
 /** Суммарное число видов по источникам (фиксировано данными). */
 const TOTAL_BY_SOURCE: Record<BeeSource, number> = BEES.reduce(
@@ -48,8 +33,6 @@ export interface BeeExport {
 }
 
 const COMB_NAMES_SET: ReadonlySet<string> = new Set(Object.keys(COMBS))
-const VALID_SORT: readonly InvSort[] = ['name', 'depth', 'wild']
-const VALID_FILTER: readonly InvFilter[] = ['all', 'missing', 'owned', 'breedable', 'wild']
 
 /** Уникальный id задачи. crypto.randomUUID есть только в secure context (https/
    localhost); на проде по http его нет → используем getRandomValues, иначе time+random. */
@@ -103,43 +86,11 @@ export const useBeesStore = defineStore('bees', () => {
   /** Версия выбора рецептов: инкремент при смене rc — дешёвый триггер для watch. */
   const rcVersion = ref(0)
 
-  const mode = ref<BeeMode>('comb')
-  const curComb = ref<string | null>(null)
-  const curTarget = ref<string | null>(null)
-  /** Текущий основной экран области пчёл. */
-  const view = ref<'graph' | 'inventory'>('graph')
-  /** Открыта ли модалка задач (независима от view, рисуется поверх). */
-  const tasksOpen = ref(false)
   /** Список задач игрока (цель-предмет → требуемые соты). */
   const tasks = ref<BeeTask[]>(sanitizeTasks(storage.get<unknown>(TASKS_KEY, [])))
 
-  // настройки инвентаря (сорт/фильтр/свёрнутые секции) — один сохраняемый ключ
-  const savedPrefs = storage.get<InvPrefs>(INV_PREFS_KEY, {
-    sort: 'name',
-    filter: 'all',
-    collapsed: [],
-  })
-  const invSort = ref<InvSort>(VALID_SORT.includes(savedPrefs.sort) ? savedPrefs.sort : 'name')
-  const invFilter = ref<InvFilter>(
-    VALID_FILTER.includes(savedPrefs.filter) ? savedPrefs.filter : 'all',
-  )
-  const collapsedSources = ref<Set<BeeSource>>(
-    new Set(
-      (Array.isArray(savedPrefs.collapsed) ? savedPrefs.collapsed : []).filter(
-        (s): s is BeeSource => s === 'F' || s === 'E' || s === 'M',
-      ),
-    ),
-  )
-
   function persist(): void {
     storage.set(HAVE_KEY, [...have.value])
-  }
-  function persistPrefs(): void {
-    storage.set(INV_PREFS_KEY, {
-      sort: invSort.value,
-      filter: invFilter.value,
-      collapsed: [...collapsedSources.value],
-    } satisfies InvPrefs)
   }
 
   /** Мемоизированная глубина, пересоздаётся при изменении склада. */
@@ -172,23 +123,6 @@ export const useBeesStore = defineStore('bees', () => {
     for (const id of ids) next.delete(id)
     have.value = next
     persist()
-  }
-
-  // ── настройки инвентаря ──
-  function setInvSort(sort: InvSort): void {
-    invSort.value = sort
-    persistPrefs()
-  }
-  function setInvFilter(filter: InvFilter): void {
-    invFilter.value = filter
-    persistPrefs()
-  }
-  function toggleCollapsed(src: BeeSource): void {
-    const next = new Set(collapsedSources.value)
-    if (next.has(src)) next.delete(src)
-    else next.add(src)
-    collapsedSources.value = next
-    persistPrefs()
   }
 
   /** Кол-во имеющихся видов по источникам. */
@@ -230,32 +164,6 @@ export const useBeesStore = defineStore('bees', () => {
     return (COMBS[comb] ?? [])
       .map((p) => ({ ...p, depth: depth(p.bee) }))
       .sort((a, b) => a.depth - b.depth || b.pct - a.pct)
-  }
-
-  function selectComb(name: string): void {
-    mode.value = 'comb'
-    curComb.value = name
-    curTarget.value = producersOf(name)[0]?.bee ?? null
-  }
-  function selectBee(id: string): void {
-    mode.value = 'bee'
-    curComb.value = null
-    curTarget.value = id
-  }
-  function setTarget(id: string): void {
-    curTarget.value = id
-  }
-  function setView(v: 'graph' | 'inventory'): void {
-    view.value = v
-  }
-  function openTasks(): void {
-    tasksOpen.value = true
-  }
-  function closeTasks(): void {
-    tasksOpen.value = false
-  }
-  function toggleTasks(): void {
-    tasksOpen.value = !tasksOpen.value
   }
 
   function persistTasks(): void {
@@ -328,15 +236,7 @@ export const useBeesStore = defineStore('bees', () => {
     invOnly,
     rc,
     rcVersion,
-    mode,
-    curComb,
-    curTarget,
-    view,
-    tasksOpen,
     tasks,
-    invSort,
-    invFilter,
-    collapsedSources,
     TOTAL_BY_SOURCE,
     ownedBySource,
     breedableCount,
@@ -347,19 +247,9 @@ export const useBeesStore = defineStore('bees', () => {
     clearHave,
     markAll,
     unmarkAll,
-    setInvSort,
-    setInvFilter,
-    toggleCollapsed,
     setRecipe,
     cycleRecipe,
     producersOf,
-    selectComb,
-    selectBee,
-    setTarget,
-    setView,
-    openTasks,
-    closeTasks,
-    toggleTasks,
     addTask,
     updateTask,
     removeTask,

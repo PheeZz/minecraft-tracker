@@ -2,12 +2,14 @@
 import { computed, ref, watch } from 'vue'
 import { BEES } from '../data/bees.data'
 import type { Bee, BeeSource } from '../domain/types'
-import { useBeesStore, type InvFilter, type InvSort } from '../stores/useBeesStore'
+import { useBeesStore } from '../stores/useBeesStore'
+import { useBeesUiStore, type InvFilter, type InvSort } from '../stores/useBeesUiStore'
 import BeeIcon from './BeeIcon.vue'
 import IconBase from '@/shared/ui/IconBase.vue'
 import { downloadJson, parseJsonFileText } from '@/shared/persistence/importExport'
 
 const store = useBeesStore()
+const ui = useBeesUiStore()
 const query = ref('')
 const confirmClear = ref(false)
 const fileInput = ref<HTMLInputElement>()
@@ -55,7 +57,7 @@ function isBreedable(b: Bee): boolean {
 // Деструктивное «Очистить склад» подтверждается инлайном (точно? да/нет). Снимаем
 // взведённое подтверждение при любом переключении фильтра/сортировки/поиска, чтобы
 // случайный поздний клик по «да» не стёр весь склад без отмены.
-watch([q, () => store.invFilter, () => store.invSort], () => {
+watch([q, () => ui.invFilter, () => ui.invSort], () => {
   confirmClear.value = false
 })
 
@@ -67,7 +69,7 @@ function matchesQuery(b: Bee): boolean {
 
 /** Совпадение по активному фильтру. */
 function matchesFilter(b: Bee): boolean {
-  switch (store.invFilter) {
+  switch (ui.invFilter) {
     case 'owned':
       return store.isHave(b.id)
     case 'missing':
@@ -91,7 +93,7 @@ function productTitle(b: Bee): string {
 
 function sortFn(a: Bee, b: Bee): number {
   const depth = store.depthOf
-  switch (store.invSort) {
+  switch (ui.invSort) {
     case 'depth':
       return depth(a.id) - depth(b.id) || a.id.localeCompare(b.id, 'ru')
     case 'wild': {
@@ -132,7 +134,7 @@ const noResults = computed(() => sections.value.every((s) => s.rows.length === 0
 /** Видна ли карточная сетка секции (свёрнутость игнорируется при поиске). */
 function isExpanded(src: BeeSource): boolean {
   if (searching.value) return true
-  return !store.collapsedSources.has(src)
+  return !ui.collapsedSources.has(src)
 }
 
 /** Класс источника owned-карточки и т.п. */
@@ -142,7 +144,7 @@ function srcClass(src: BeeSource): string {
 
 function clearSearchAndFilter(): void {
   query.value = ''
-  store.setInvFilter('all')
+  ui.setInvFilter('all')
 }
 
 function bulkMark(rows: Bee[]): void {
@@ -197,15 +199,15 @@ const full = computed(() => store.haveCount === TOTAL)
         v-if="full"
         type="button"
         class="inv__breed inv__breed--full"
-        @click="store.setInvFilter('owned')"
+        @click="ui.setInvFilter('owned')"
       >
         склад полон <IconBase name="bee" /> {{ TOTAL }}/{{ TOTAL }}
       </button>
-      <button v-else type="button" class="inv__breed" @click="store.setInvFilter('breedable')">
+      <button v-else type="button" class="inv__breed" @click="ui.setInvFilter('breedable')">
         готово к выведению: {{ store.breedableCount }}
       </button>
 
-      <button class="inv__close" type="button" title="Закрыть" @click="store.setView('graph')">
+      <button class="inv__close" type="button" title="Закрыть" @click="ui.setView('graph')">
         <IconBase name="close" />Закрыть
       </button>
     </header>
@@ -228,9 +230,9 @@ const full = computed(() => store.haveCount === TOTAL)
           :key="f.value"
           type="button"
           class="seg__btn"
-          :aria-pressed="store.invFilter === f.value"
-          :class="{ on: store.invFilter === f.value }"
-          @click="store.setInvFilter(f.value)"
+          :aria-pressed="ui.invFilter === f.value"
+          :class="{ on: ui.invFilter === f.value }"
+          @click="ui.setInvFilter(f.value)"
         >
           {{ f.label }}
         </button>
@@ -242,9 +244,9 @@ const full = computed(() => store.haveCount === TOTAL)
           :key="s.value"
           type="button"
           class="seg__btn"
-          :aria-pressed="store.invSort === s.value"
-          :class="{ on: store.invSort === s.value }"
-          @click="store.setInvSort(s.value)"
+          :aria-pressed="ui.invSort === s.value"
+          :class="{ on: ui.invSort === s.value }"
+          @click="ui.setInvSort(s.value)"
         >
           {{ s.label }}
         </button>
@@ -317,7 +319,7 @@ const full = computed(() => store.haveCount === TOTAL)
               :disabled="searching"
               :class="{ open: isExpanded(sec.src) }"
               :title="isExpanded(sec.src) ? 'Свернуть' : 'Развернуть'"
-              @click="store.toggleCollapsed(sec.src)"
+              @click="ui.toggleCollapsed(sec.src)"
             >
               ▸
             </button>

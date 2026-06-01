@@ -3,10 +3,12 @@ import { computed, ref } from 'vue'
 import { BEES } from '../data/bees.data'
 import { COMBS, COMB_NAMES, shortComb } from '../domain/combs'
 import { useBeesStore } from '../stores/useBeesStore'
+import { useBeesUiStore } from '../stores/useBeesUiStore'
 import BeeIcon from './BeeIcon.vue'
 import CombIcon from './CombIcon.vue'
 
 const store = useBeesStore()
+const ui = useBeesUiStore()
 const query = ref('')
 
 const q = computed(() => query.value.trim().toLowerCase())
@@ -47,10 +49,10 @@ const beeRows = computed(() =>
     </div>
 
     <div class="seg">
-      <button :class="{ on: store.mode === 'comb' }" type="button" @click="store.mode = 'comb'">
+      <button :class="{ on: ui.mode === 'comb' }" type="button" @click="ui.mode = 'comb'">
         Соты
       </button>
-      <button :class="{ on: store.mode === 'bee' }" type="button" @click="store.mode = 'bee'">
+      <button :class="{ on: ui.mode === 'bee' }" type="button" @click="ui.mode = 'bee'">
         Пчёлы
       </button>
     </div>
@@ -73,17 +75,17 @@ const beeRows = computed(() =>
     </div>
 
     <div class="list">
-      <template v-if="store.mode === 'comb'">
+      <template v-if="ui.mode === 'comb'">
         <div
           v-for="row in combRows"
           :key="row.name"
           class="row"
-          :class="{ rare: row.rare, on: row.name === store.curComb, owned: row.own > 0 }"
+          :class="{ rare: row.rare, on: row.name === ui.curComb, owned: row.own > 0 }"
           role="button"
           tabindex="0"
-          @click="store.selectComb(row.name)"
-          @keydown.enter.prevent="store.selectComb(row.name)"
-          @keydown.space.prevent="store.selectComb(row.name)"
+          @click="ui.selectComb(row.name)"
+          @keydown.enter.prevent="ui.selectComb(row.name)"
+          @keydown.space.prevent="ui.selectComb(row.name)"
         >
           <CombIcon :name="row.name" />
           <span class="nm">{{ shortComb(row.name) }}</span>
@@ -95,12 +97,12 @@ const beeRows = computed(() =>
           v-for="row in beeRows"
           :key="row.id"
           class="row"
-          :class="{ on: row.id === store.curTarget, owned: store.isHave(row.id) }"
+          :class="{ on: row.id === ui.curTarget, owned: store.isHave(row.id) }"
           role="button"
           tabindex="0"
-          @click="store.selectBee(row.id)"
-          @keydown.enter.prevent="store.selectBee(row.id)"
-          @keydown.space.prevent="store.selectBee(row.id)"
+          @click="ui.selectBee(row.id)"
+          @keydown.enter.prevent="ui.selectBee(row.id)"
+          @keydown.space.prevent="ui.selectBee(row.id)"
         >
           <!-- только индикатор «выведена» (read-only); менять статус — в инвентаре -->
           <span
@@ -116,10 +118,7 @@ const beeRows = computed(() =>
           >
         </div>
       </template>
-      <div
-        v-if="(store.mode === 'comb' ? combRows.length : beeRows.length) === 0"
-        class="empty-row"
-      >
+      <div v-if="(ui.mode === 'comb' ? combRows.length : beeRows.length) === 0" class="empty-row">
         Ничего не найдено
       </div>
     </div>

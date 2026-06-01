@@ -4,19 +4,21 @@ import { BEE_BY_ID } from '../data/bees.data'
 import { isComb, shortComb } from '../domain/combs'
 import { planSteps } from '../domain/graph'
 import { useBeesStore } from '../stores/useBeesStore'
+import { useBeesUiStore } from '../stores/useBeesUiStore'
 import BeeIcon from './BeeIcon.vue'
 import CombIcon from './CombIcon.vue'
 import IconBase from '@/shared/ui/IconBase.vue'
 
 const store = useBeesStore()
+const ui = useBeesUiStore()
 
 const SRC_LABEL: Record<string, string> = { F: 'FOR', E: 'EXB', M: 'MAG' }
 const SRC_FULL: Record<string, string> = { F: 'Forestry', E: 'ExtraBees', M: 'MagicBees' }
 
-const target = computed(() => store.curTarget)
+const target = computed(() => ui.curTarget)
 const targetBee = computed(() => (target.value ? BEE_BY_ID[target.value] : undefined))
 
-const producers = computed(() => (store.curComb ? store.producersOf(store.curComb) : []))
+const producers = computed(() => (ui.curComb ? store.producersOf(ui.curComb) : []))
 
 const plan = computed(() =>
   target.value ? planSteps(target.value, store.have, store.rc) : { bred: [], wild: [], have: [] },
@@ -46,7 +48,7 @@ const steps = computed<StepView[]>(() =>
       recipeCount: b.parents.length,
       yields: b.products
         .filter((p) => isComb(p.name))
-        .map((p) => ({ name: p.name, pct: p.pct, hl: p.name === store.curComb })),
+        .map((p) => ({ name: p.name, pct: p.pct, hl: p.name === ui.curComb })),
       alts: b.parents
         .map((rec, ri) => ({ idx: ri, label: `${rec.p1} × ${rec.p2} @${rec.chance}%` }))
         .filter((_, ri) => ri !== idx),
@@ -65,7 +67,7 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
 
     <template v-else>
       <!-- режим соты: список производителей -->
-      <template v-if="store.mode === 'comb' && store.curComb">
+      <template v-if="ui.mode === 'comb' && ui.curComb">
         <div class="sect">соту дают ({{ producers.length }})</div>
         <div class="hint-line">нажми пчелу — построю дерево под неё (проще = меньше глубина).</div>
         <div
@@ -75,9 +77,9 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
           :class="{ on: p.bee === target, owned: store.isHave(p.bee) }"
           role="button"
           tabindex="0"
-          @click="store.setTarget(p.bee)"
-          @keydown.enter.prevent="store.setTarget(p.bee)"
-          @keydown.space.prevent="store.setTarget(p.bee)"
+          @click="ui.setTarget(p.bee)"
+          @keydown.enter.prevent="ui.setTarget(p.bee)"
+          @keydown.space.prevent="ui.setTarget(p.bee)"
         >
           <span
             class="havchk"
@@ -95,7 +97,7 @@ const beeProducts = computed(() => targetBee.value?.products ?? [])
       </template>
 
       <!-- режим пчелы: карточка -->
-      <template v-else-if="store.mode === 'bee' && targetBee">
+      <template v-else-if="ui.mode === 'bee' && targetBee">
         <div class="sect">пчела</div>
         <div class="bee-title"><BeeIcon :name="targetBee.id" big />{{ targetBee.id }}</div>
         <div class="bee-meta">

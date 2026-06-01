@@ -4,6 +4,7 @@ import { BEE_BY_ID } from '../data/bees.data'
 import { COMBS } from '../domain/combs'
 import { combColor } from '../domain/colors'
 import { useBeesStore } from '../stores/useBeesStore'
+import { useBeesUiStore } from '../stores/useBeesUiStore'
 import BeeRail from './BeeRail.vue'
 import BeeChainGraph from './BeeChainGraph.vue'
 import BeePanel from './BeePanel.vue'
@@ -17,9 +18,10 @@ import HintSpot from '@/shared/ui/HintSpot.vue'
 import { buildBeesTour } from '../onboarding/beesTour'
 
 const store = useBeesStore()
+const ui = useBeesUiStore()
 const onboarding = useOnboardingSeen('bees')
 
-const tour = useTour(() => buildBeesTour({ selectComb: (n) => store.selectComb(n) }), {
+const tour = useTour(() => buildBeesTour({ selectComb: (n) => ui.selectComb(n) }), {
   onDone: () => onboarding.markSeen(),
 })
 let autoStartTimer: ReturnType<typeof setTimeout> | undefined
@@ -33,11 +35,11 @@ onBeforeUnmount(() => clearTimeout(autoStartTimer))
 const graphRef = ref<InstanceType<typeof BeeChainGraph>>()
 
 const combPct = computed(() => {
-  if (!store.curComb || !store.curTarget) return null
-  return COMBS[store.curComb]?.find((p) => p.bee === store.curTarget)?.pct ?? null
+  if (!ui.curComb || !ui.curTarget) return null
+  return COMBS[ui.curComb]?.find((p) => p.bee === ui.curTarget)?.pct ?? null
 })
 const recipeCount = computed(() =>
-  store.curTarget ? (BEE_BY_ID[store.curTarget]?.parents.length ?? 0) : 0,
+  ui.curTarget ? (BEE_BY_ID[ui.curTarget]?.parents.length ?? 0) : 0,
 )
 </script>
 
@@ -48,27 +50,22 @@ const recipeCount = computed(() =>
       <div class="modebar__seg" role="group" aria-label="Режим">
         <button
           type="button"
-          :aria-pressed="store.view === 'graph'"
-          :class="{ on: store.view === 'graph' }"
-          @click="store.setView('graph')"
+          :aria-pressed="ui.view === 'graph'"
+          :class="{ on: ui.view === 'graph' }"
+          @click="ui.setView('graph')"
         >
           <IconBase name="leaf" />Граф
         </button>
         <button
           type="button"
-          :aria-pressed="store.view === 'inventory'"
-          :class="{ on: store.view === 'inventory' }"
-          @click="store.setView('inventory')"
+          :aria-pressed="ui.view === 'inventory'"
+          :class="{ on: ui.view === 'inventory' }"
+          @click="ui.setView('inventory')"
         >
           <IconBase name="box" />Инвентарь
         </button>
       </div>
-      <button
-        type="button"
-        class="modebar__tasks"
-        data-tour="bees-tasks"
-        @click="store.openTasks()"
-      >
+      <button type="button" class="modebar__tasks" data-tour="bees-tasks" @click="ui.openTasks()">
         <IconBase name="list" />Задачи
         <span v-if="store.openTaskCount" class="modebar__badge">{{ store.openTaskCount }}</span>
       </button>
@@ -82,26 +79,26 @@ const recipeCount = computed(() =>
     </div>
 
     <Transition name="inv" mode="out-in">
-      <BeeInventory v-if="store.view === 'inventory'" key="inv" class="bees-inv" />
+      <BeeInventory v-if="ui.view === 'inventory'" key="inv" class="bees-inv" />
       <div v-else key="layout" class="bees">
         <BeeRail data-tour="bees-rail" />
 
         <div class="stage" data-tour="bees-graph">
           <div key="graph" class="stagewrap">
             <div class="crumb">
-              <template v-if="store.curTarget">
-                <template v-if="store.curComb">
+              <template v-if="ui.curTarget">
+                <template v-if="ui.curComb">
                   <span class="goal">
-                    <CombIcon v-if="combColor(store.curComb)" :name="store.curComb" big />
+                    <CombIcon v-if="combColor(ui.curComb)" :name="ui.curComb" big />
                     <span v-else class="goal__hex">⬡</span>
-                    {{ store.curComb }}
+                    {{ ui.curComb }}
                   </span>
                   <span class="arrow">→</span>
-                  <span class="muted">вывести</span> <span class="pick">{{ store.curTarget }}</span>
+                  <span class="muted">вывести</span> <span class="pick">{{ ui.curTarget }}</span>
                   <span v-if="combPct != null" class="muted">(сота @{{ combPct }}%)</span>
                 </template>
                 <template v-else>
-                  <span class="goal">{{ store.curTarget }}</span>
+                  <span class="goal">{{ ui.curTarget }}</span>
                   <span class="muted">дерево выведения</span>
                 </template>
                 <span v-if="recipeCount > 1" class="muted">· {{ recipeCount }} рецепта</span>
@@ -112,7 +109,7 @@ const recipeCount = computed(() =>
               <span v-else class="muted">Выбери соту слева →</span>
             </div>
 
-            <BeeChainGraph v-if="store.curTarget" ref="graphRef" class="cy" />
+            <BeeChainGraph v-if="ui.curTarget" ref="graphRef" class="cy" />
             <div v-else class="welcome">
               <div class="o">⬡</div>
               <h2>Что вывести ради соты?</h2>
@@ -123,7 +120,7 @@ const recipeCount = computed(() =>
               </div>
             </div>
 
-            <div v-if="store.curTarget" class="legend">
+            <div v-if="ui.curTarget" class="legend">
               <span><i style="background: var(--honey)" />цель</span>
               <span
                 ><i
@@ -150,7 +147,7 @@ const recipeCount = computed(() =>
       </div>
     </Transition>
 
-    <BeeTasksModal v-if="store.tasksOpen" />
+    <BeeTasksModal v-if="ui.tasksOpen" />
   </div>
 </template>
 
