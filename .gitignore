@@ -29,3 +29,6 @@ public/trees/tree-icons/
 public/trees/tree-templates/
 public/trees/fruits/extratrees-food/
 public/trees/fruits/forestry-fruits/
+
+# Артефакты playwright-проверок
+.playwright-mcp/
