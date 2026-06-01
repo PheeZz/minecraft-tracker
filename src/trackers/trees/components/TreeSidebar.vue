@@ -63,6 +63,7 @@ onUnmounted(() => {
         class="search__input"
         type="search"
         placeholder="Поиск дерева или плода…"
+        aria-label="Поиск дерева или плода"
       />
     </div>
 
@@ -130,7 +131,12 @@ onUnmounted(() => {
       </button>
     </div>
     <div class="row">
-      <select v-model="ui.layout" class="select" data-tour="trees-layout">
+      <select
+        v-model="ui.layout"
+        class="select"
+        data-tour="trees-layout"
+        aria-label="Раскладка графа"
+      >
         <option v-for="o in LAYOUT_OPTIONS" :key="o.value" :value="o.value">{{ o.label }}</option>
       </select>
     </div>

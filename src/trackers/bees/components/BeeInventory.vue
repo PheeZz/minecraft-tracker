@@ -219,7 +219,7 @@ const full = computed(() => store.haveCount === TOTAL)
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" />
         </svg>
-        <input v-model="query" placeholder="найти пчелу…" />
+        <input v-model="query" placeholder="найти пчелу…" aria-label="Поиск пчелы" />
       </label>
 
       <!-- панель-тумблеры: role=group + aria-pressed честнее, чем radiogroup,

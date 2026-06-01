@@ -62,7 +62,7 @@ const beeRows = computed(() =>
         <circle cx="11" cy="11" r="7" />
         <path d="m20 20-3.5-3.5" />
       </svg>
-      <input v-model="query" placeholder="что ищем…" />
+      <input v-model="query" placeholder="что ищем…" aria-label="Поиск пчелы или соты" />
     </label>
 
     <div class="invbar">
