@@ -9,7 +9,7 @@
     "prebuild": "node scripts/copy-assets.mjs",
     "gen:assets": "node scripts/copy-assets.mjs",
     "preview": "vite preview",
-    "typecheck": "vue-tsc -b",
+    "typecheck": "vue-tsc -b && vue-tsc -p tsconfig.vitest.json",
     "lint": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{ts,vue,css}\"",
     "test": "vitest run",
