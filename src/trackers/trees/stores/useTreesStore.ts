@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import { storage } from '@/shared/persistence/storage'
+import { safeKeys } from '@/shared/persistence/importExport'
 import { BY_ID, STARTING_SAPLINGS, TREES } from '../data/trees.data'
 import { isAvailable, type ProgressMap } from '../domain/graph'
 import { FRUIT_CHAIN, UNIQUE_FRUITS, computeUsage, fruitUnlocked, invTotal } from '../domain/plan'
@@ -196,11 +197,13 @@ export const useTreesStore = defineStore('trees', () => {
     }
     const { progress: pIn, inventory: iIn } = parsed.data
     pushHistory()
-    for (const id of Object.keys(pIn)) {
+    // safeKeys отбрасывает __proto__/constructor/prototype — defense-in-depth от
+    // prototype pollution при слиянии ключей из импортируемого файла.
+    for (const id of safeKeys(pIn)) {
       const v = pIn[id]
       if (id in BY_ID && (v === 0 || v === 2)) progress.value[id] = v as TreeState
     }
-    for (const id of Object.keys(iIn)) {
+    for (const id of safeKeys(iIn)) {
       if (!(id in BY_ID)) continue
       const v = (iIn[id] as Partial<Inventory>) ?? { sap: 0, pol: 0 }
       inventory.value[id] = { sap: Math.max(0, v.sap ?? 0), pol: Math.max(0, v.pol ?? 0) }

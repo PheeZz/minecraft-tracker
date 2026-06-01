@@ -251,6 +251,26 @@ describe('export / import', () => {
     expect(s.progress['Сакура']).toBe(2)
     expect(s.inv('Сакура')).toEqual({ sap: 0, pol: 3 })
   })
+
+  it('импорт не записывает опасные ключи как собственные (constructor/prototype/__proto__)', () => {
+    const s = useTreesStore()
+    // __proto__/constructor/prototype есть в цепочке Object.prototype, поэтому без
+    // safeKeys guard `id in BY_ID` их пропустит и они станут собственными ключами
+    // progress (а __proto__ способен загрязнить сам Object.prototype).
+    s.importData(
+      JSON.parse(
+        '{"progress":{"__proto__":2,"constructor":2,"prototype":2,"Сакура":2},"inventory":{}}',
+      ),
+    )
+    const own = (o: object, k: string) => Object.prototype.hasOwnProperty.call(o, k)
+    // без safeKeys стали бы true — guard `id in BY_ID` пропускает наследуемые ключи
+    expect(own(s.progress, 'constructor')).toBe(false)
+    expect(own(s.progress, 'prototype')).toBe(false)
+    // общая проверка отсутствия загрязнения прототипа
+    expect(own(Object.prototype, 'polluted')).toBe(false)
+    // валидный id по-прежнему импортируется корректно
+    expect(s.progress['Сакура']).toBe(2)
+  })
 })
 
 describe('hero-метрики', () => {

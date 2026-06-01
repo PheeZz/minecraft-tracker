@@ -8,4 +8,7 @@ describe('escapeHtml', () => {
   it('пропускает обычный текст', () => {
     expect(escapeHtml('Дуб 2×2')).toBe('Дуб 2×2')
   })
+  it('экранирует backtick', () => {
+    expect(escapeHtml('a`b')).toBe('a&#96;b')
+  })
 })

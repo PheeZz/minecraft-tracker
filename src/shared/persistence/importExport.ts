@@ -8,6 +8,16 @@ export function downloadJson(data: unknown, filename: string): void {
   URL.revokeObjectURL(a.href)
 }
 
+const DANGEROUS_KEYS = new Set(['__proto__', 'constructor', 'prototype'])
+
+/**
+ * Собственные ключи объекта без опасных (`__proto__`/`constructor`/`prototype`).
+ * Защита от prototype pollution при слиянии данных из импортируемого файла.
+ */
+export function safeKeys(obj: Record<string, unknown>): string[] {
+  return Object.keys(obj).filter((k) => !DANGEROUS_KEYS.has(k))
+}
+
 export type ParseResult = { ok: true; data: unknown } | { ok: false; error: string }
 
 /** Безопасный парс текста файла в JSON (без исключений наружу). */

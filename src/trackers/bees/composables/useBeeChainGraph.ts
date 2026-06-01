@@ -127,7 +127,9 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
       comb && b && b.products.some((p) => p.name === comb)
         ? `<span class="gcomb" title="${escapeHtml(comb)}">${combIconHtml(comb)}</span>`
         : ''
-    const pc = has ? '#2f7d5e' : (beeColor(d.id)?.p ?? '#cdbb95')
+    // источник цвета — статичная таблица beeColor; escapeHtml = defense-in-depth
+    // для значения, попадающего в inline-style.
+    const pc = escapeHtml(has ? '#2f7d5e' : (beeColor(d.id)?.p ?? '#cdbb95'))
     const hv = has && d.id !== target ? '<span class="ghav" title="есть на складе">✓</span>' : ''
     return `<div class="${cls.join(' ')}" data-id="${escapeHtml(d.id)}" style="--pc:${pc}">${beeIconHtml(d.id)}<span class="gn">${escapeHtml(d.id)}</span>${hv}${d.alt ? '<span class="gflag">⇄</span>' : ''}${ci}</div>`
   }
