@@ -1,11 +1,15 @@
 /** Скачать данные как JSON-файл (Blob + клик по временной ссылке). */
 export function downloadJson(data: unknown, filename: string): void {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
-  const a = document.createElement('a')
-  a.href = URL.createObjectURL(blob)
-  a.download = filename
-  a.click()
-  URL.revokeObjectURL(a.href)
+  const url = URL.createObjectURL(blob)
+  try {
+    const a = document.createElement('a')
+    a.href = url
+    a.download = filename
+    a.click()
+  } finally {
+    URL.revokeObjectURL(url)
+  }
 }
 
 const DANGEROUS_KEYS = new Set(['__proto__', 'constructor', 'prototype'])

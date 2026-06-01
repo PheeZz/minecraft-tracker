@@ -109,6 +109,33 @@ for (const tree of TREES) {
 }
 
 describe('целостность данных деревьев', () => {
+  // --- Страж формата: регексы gen-скриптов матчат текущий формат trees.data.ts ---
+  describe('формат trees.data.ts совместим с gen-скриптами', () => {
+    const treesDataText = readFileSync('src/trackers/trees/data/trees.data.ts', 'utf8')
+
+    it('регекс gen-tree-icons находит ID деревьев', () => {
+      // из gen-tree-icons.mjs:85: /\{ id: '([^']+)'/g
+      const treeIdRegex = /\{ id: '([^']+)'/g
+      const matches = [...treesDataText.matchAll(treeIdRegex)]
+      expect(matches.length, 'должно быть найдено > 100 деревьев').toBeGreaterThan(100)
+    })
+
+    it('регекс gen-fruit-icons находит плоды в FRUITS', () => {
+      // из gen-fruit-icons.mjs:38-41: блок FRUITS и его парсинг
+      const fruitsStart = treesDataText.indexOf('export const FRUITS')
+      expect(fruitsStart, 'FRUITS должна быть определена в файле').toBeGreaterThan(-1)
+
+      const block = treesDataText.slice(fruitsStart)
+      const blockEnd = block.indexOf('}')
+      const body = block.slice(block.indexOf('{') + 1, blockEnd)
+
+      // из gen-fruit-icons.mjs:41: /'?([^':,{}]+?)'?\s*:\s*'([^']+)'/g
+      const fruitsRegex = /'?([^':,{}]+?)'?\s*:\s*'([^']+)'/g
+      const fruitMatches = [...body.matchAll(fruitsRegex)]
+      expect(fruitMatches.length, 'должно быть > 60 плодов в FRUITS').toBeGreaterThan(60)
+    })
+  })
+
   it('нет недостающих деревьев (есть в каноне, нет у меня)', () => {
     const missing = [...canon.keys()].filter((t) => !(t in mineTier)).sort()
     expect(missing.length, `В каноне есть, у меня НЕТ дерева: [${missing.join(', ')}]`).toBe(0)
