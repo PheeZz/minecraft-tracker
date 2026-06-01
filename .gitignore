@@ -18,3 +18,14 @@ screenshots/
 
 # Рабочие планы/спеки процесса разработки — не для репозитория
 docs/superpowers/
+
+# Сгенерированные копии ассетов (источник — bees/ и trees/; создаются gen:assets)
+public/bees/beebody/
+public/bees/beebody-skulking/
+public/bees/beebody-doctoral/
+public/bees/beeCombs.0.png
+public/bees/beeCombs.1.png
+public/trees/tree-icons/
+public/trees/tree-templates/
+public/trees/fruits/extratrees-food/
+public/trees/fruits/forestry-fruits/
