@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeUnmount, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 defineProps<{ text: string; title?: string; side?: 'top' | 'bottom' | 'left' | 'right' }>()
 
@@ -15,8 +15,10 @@ function onDocClick(e: MouseEvent): void {
 function onKey(e: KeyboardEvent): void {
   if (e.key === 'Escape') open.value = false
 }
-document.addEventListener('click', onDocClick)
-document.addEventListener('keydown', onKey)
+onMounted(() => {
+  document.addEventListener('click', onDocClick)
+  document.addEventListener('keydown', onKey)
+})
 onBeforeUnmount(() => {
   document.removeEventListener('click', onDocClick)
   document.removeEventListener('keydown', onKey)

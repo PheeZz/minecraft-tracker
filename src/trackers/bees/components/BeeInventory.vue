@@ -13,6 +13,8 @@ const ui = useBeesUiStore()
 const query = ref('')
 const confirmClear = ref(false)
 const fileInput = ref<HTMLInputElement>()
+const importError = ref<string | null>(null)
+const importOk = ref(false)
 
 const TOTAL = BEES.length
 
@@ -166,8 +168,14 @@ async function onImport(e: Event): Promise<void> {
   const file = (e.target as HTMLInputElement).files?.[0]
   if (!file) return
   const r = parseJsonFileText(await file.text())
-  if (r.ok) store.importData(r.data)
-  else alert('Ошибка импорта: ' + r.error)
+  if (r.ok) {
+    store.importData(r.data)
+    importOk.value = true
+    setTimeout(() => (importOk.value = false), 4000)
+  } else {
+    importError.value = r.error
+    setTimeout(() => (importError.value = null), 4000)
+  }
   if (fileInput.value) fileInput.value.value = ''
 }
 
@@ -295,6 +303,11 @@ const full = computed(() => store.haveCount === TOTAL)
         </button>
       </div>
     </div>
+
+    <p v-if="importError" class="inv__msg inv__msg--err" role="alert">
+      Ошибка импорта: {{ importError }}
+    </p>
+    <p v-if="importOk" class="inv__msg inv__msg--ok" role="status">Импортировано</p>
 
     <!-- ── Контент ── -->
     <div class="inv__scroll">
@@ -617,6 +630,25 @@ const full = computed(() => store.haveCount === TOTAL)
 .inv__clear-no {
   color: var(--ink2);
   border-color: var(--cardln);
+}
+
+.inv__msg {
+  margin: 8px 20px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  border: 1px solid;
+  line-height: 1.4;
+}
+.inv__msg--err {
+  color: #e07070;
+  background: rgba(224, 112, 112, 0.1);
+  border-color: rgba(224, 112, 112, 0.3);
+}
+.inv__msg--ok {
+  color: var(--src-f);
+  background: var(--src-f-soft);
+  border-color: var(--src-f);
 }
 
 /* ── Контент ── */

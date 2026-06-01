@@ -15,6 +15,7 @@ const ui = useTreesUiStore()
 const fileInput = ref<HTMLInputElement>()
 const confirmReset = ref(false)
 const importError = ref<string | null>(null)
+const importOk = ref(false)
 let resetTimer: ReturnType<typeof setTimeout> | null = null
 
 const LAYOUT_OPTIONS: { value: LayoutKey; label: string }[] = [
@@ -31,8 +32,11 @@ async function onImport(e: Event) {
   const file = (e.target as HTMLInputElement).files?.[0]
   if (!file) return
   const r = parseJsonFileText(await file.text())
-  if (r.ok) store.importData(r.data)
-  else {
+  if (r.ok) {
+    store.importData(r.data)
+    importOk.value = true
+    setTimeout(() => (importOk.value = false), 4000)
+  } else {
     importError.value = r.error
     setTimeout(() => (importError.value = null), 4000)
   }
@@ -176,6 +180,7 @@ onUnmounted(() => {
       </button>
     </div>
     <p v-if="importError" class="hint" role="alert">Ошибка импорта: {{ importError }}</p>
+    <p v-if="importOk" class="hint hint--ok" role="status">Импортировано</p>
 
     <h2 class="sidebar__title">Фильтр по тирам</h2>
     <div data-tour="trees-tiers"><TierFilter /></div>
@@ -353,5 +358,10 @@ onUnmounted(() => {
   background: rgba(224, 112, 112, 0.1);
   border: 1px solid rgba(224, 112, 112, 0.3);
   border-radius: 8px;
+}
+.hint--ok {
+  color: var(--leaf);
+  background: rgba(143, 209, 79, 0.1);
+  border-color: rgba(143, 209, 79, 0.3);
 }
 </style>
