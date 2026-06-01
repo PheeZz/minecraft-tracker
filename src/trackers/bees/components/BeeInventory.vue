@@ -866,6 +866,10 @@ const full = computed(() => store.haveCount === TOTAL)
   cursor: pointer;
   min-height: 58px;
   transition: 0.13s;
+  /* Прокрутка инвентаря (сотни canvas-иконок): браузер пропускает отрисовку
+     карточек вне вьюпорта. intrinsic-size держит геометрию скролла стабильной. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 78px;
 }
 .card:hover {
   border-color: var(--honey);
