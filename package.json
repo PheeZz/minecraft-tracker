@@ -14,7 +14,7 @@
     "format": "prettier --write \"src/**/*.{ts,vue,css}\"",
     "test": "vitest run",
     "test:watch": "vitest",
-    "verify:trees": "python3 scripts/verify-trees-data.py",
+    "verify:trees": "vitest run src/trackers/trees/domain/integrity.test.ts",
     "verify:bees": "vitest run src/trackers/bees/domain/integrity.test.ts",
     "gen:bees": "node scripts/gen-bees.mjs",
     "gen:tree-icons": "node scripts/gen-tree-icons.mjs",
