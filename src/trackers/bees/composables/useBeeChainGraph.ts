@@ -91,6 +91,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
             label: 'data(label)',
             'font-family': 'JetBrains Mono, monospace',
             'font-size': 10,
+            'min-zoomed-font-size': 8,
             'font-weight': 700,
             color: '#3a2a08',
             'text-valign': 'center',
@@ -101,7 +102,7 @@ export function useBeeChainGraph(cb: BeeChainCallbacks) {
         },
         {
           selector: 'edge',
-          style: { width: 1.8, 'line-color': '#cbb78f', 'curve-style': 'bezier' },
+          style: { width: 1.8, 'line-color': '#cbb78f', 'curve-style': 'straight' },
         },
         {
           selector: 'edge[kind="out"]',
