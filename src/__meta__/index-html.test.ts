@@ -18,8 +18,8 @@ describe('index.html мета-теги', () => {
     expect(html).toContain('name="twitter:card" content="summary_large_image"')
   })
   it('favicon — svg + apple-touch, без старого emoji', () => {
-    expect(html).toContain('rel="icon" href="/favicon.svg"')
-    expect(html).toContain('rel="apple-touch-icon" href="/apple-touch-icon.png"')
+    expect(html).toContain('rel="icon" href="%BASE_URL%favicon.svg"')
+    expect(html).toContain('rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png"')
     expect(html).not.toContain("text y='.9em'")
   })
 })
