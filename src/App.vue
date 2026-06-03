@@ -209,7 +209,6 @@ function switchTo(id: TrackerId) {
 
 .shell__body {
   min-height: 0;
-  position: relative; /* якорь для absolute-позиционирования уходящей вьюхи в crossfade */
 }
 
 .skip-link {
