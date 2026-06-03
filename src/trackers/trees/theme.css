@@ -10,6 +10,7 @@
   --muted: #8aa394;
   --leaf: #8fd14f;
   --leaf-dim: #5d8a3a;
+  --accent: var(--leaf); /* акцент для бренд-элементов (донат и т.п.) */
   --amber: #e6b864;
   --sap: #bcd9f5;
   --avail: #c9a7f0;
