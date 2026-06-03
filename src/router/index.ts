@@ -41,3 +41,18 @@ export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 })
+
+const BRAND = 'Катализатор бесконечности'
+const titleById = new Map<string, string>(TRACKER_MODULES.map((m) => [m.id, m.title]))
+
+/** Заголовок вкладки для трекера (ключевик впереди, бренд в хвосте). */
+export function titleFor(tracker?: TrackerId): string {
+  const name = tracker ? titleById.get(tracker) : undefined
+  return name
+    ? `${name} Forestry — схемы скрещивания · ${BRAND}`
+    : `Селекция Forestry: пчёлы и деревья · ${BRAND}`
+}
+
+router.afterEach((to) => {
+  document.title = titleFor(to.meta.tracker)
+})
