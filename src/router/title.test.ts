@@ -8,9 +8,7 @@ describe('titleFor', () => {
     )
   })
   it('пчёлы', () => {
-    expect(titleFor('bees')).toBe(
-      'Пчёлы Forestry — схемы скрещивания · Катализатор бесконечности',
-    )
+    expect(titleFor('bees')).toBe('Пчёлы Forestry — схемы скрещивания · Катализатор бесконечности')
   })
   it('без трекера — общий фолбэк', () => {
     expect(titleFor(undefined)).toBe(

@@ -12,8 +12,12 @@ describe('index.html мета-теги', () => {
     expect(html).toContain('Forestry')
   })
   it('canonical и OG с абсолютным прод-URL', () => {
-    expect(html).toContain('<link rel="canonical" href="https://pheezz.github.io/minecraft-tracker/"')
-    expect(html).toContain('property="og:image" content="https://pheezz.github.io/minecraft-tracker/og-cover.png"')
+    expect(html).toContain(
+      '<link rel="canonical" href="https://pheezz.github.io/minecraft-tracker/"',
+    )
+    expect(html).toContain(
+      'property="og:image" content="https://pheezz.github.io/minecraft-tracker/og-cover.png"',
+    )
     expect(html).toContain('property="og:title"')
     expect(html).toContain('name="twitter:card" content="summary_large_image"')
   })
