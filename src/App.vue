@@ -5,6 +5,7 @@ import { storage } from '@/shared/persistence/storage'
 import { TRACKER_MODULES, type TrackerId } from '@/shared/registry/trackers'
 import IconBase from '@/shared/ui/IconBase.vue'
 import ErrorBoundary from '@/shared/ui/ErrorBoundary.vue'
+import SupportLink from '@/shared/ui/SupportLink.vue'
 import { message as liveMessage } from '@/shared/ui/useAnnouncer'
 
 const route = useRoute()
@@ -52,6 +53,8 @@ function switchTo(id: TrackerId) {
           <span class="switcher__kicker">{{ t.kicker }}</span>
         </span>
       </button>
+
+      <SupportLink class="switcher__support" />
 
       <a
         class="copyright"
@@ -111,8 +114,12 @@ function switchTo(id: TrackerId) {
   border-bottom: 1px solid var(--line);
 }
 
-.copyright {
+.switcher__support {
   margin-left: auto;
+}
+.copyright {
+  padding-left: 12px;
+  border-left: 1px solid var(--line);
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.04em;
