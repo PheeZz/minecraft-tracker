@@ -75,7 +75,7 @@ onUnmounted(() => document.removeEventListener('keydown', onKey))
         <IconBase name="leaf" class="brand__mark" />
         <div>
           <h1 class="brand__title">Селекция деревьев</h1>
-          <div class="brand__sub">Forestry · Вселенское рагу</div>
+          <div class="brand__sub">Forestry · Катализатор бесконечности</div>
         </div>
       </div>
       <HeroStats />
