@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, watchEffect } from 'vue'
+import { computed, nextTick, onMounted, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { storage } from '@/shared/persistence/storage'
 import { TRACKER_MODULES, type TrackerId } from '@/shared/registry/trackers'
@@ -31,7 +31,16 @@ onMounted(() => {
 })
 
 function switchTo(id: TrackerId) {
-  if (id !== activeTracker.value) router.push(`/${id}`)
+  if (id === activeTracker.value) return
+  // Браузеры без View Transitions (Firefox без флага) — мгновенный свап.
+  if (!document.startViewTransition) {
+    router.push(`/${id}`)
+    return
+  }
+  document.startViewTransition(async () => {
+    router.push(`/${id}`)
+    await nextTick() // дождаться смены вьюхи и watchEffect темы — снимок «нового» уже финальный
+  })
 }
 </script>
 
@@ -66,19 +75,21 @@ function switchTo(id: TrackerId) {
       </a>
     </nav>
 
-    <main id="main-content" tabindex="-1" class="shell__body">
-      <!-- KeepAlive: вьюхи (и их Cytoscape-инстансы) не пересоздаются при переключении.
-           Transition: настоящий crossfade (без out-in, чтобы не было провала в пустоту) —
-           уходящая вьюха кладётся absolute поверх, обе плавно меняют opacity. -->
+    <main
+      id="main-content"
+      tabindex="-1"
+      class="shell__body"
+      style="view-transition-name: tracker-body"
+    >
+      <!-- Переход между трекерами — через View Transitions API (см. switchTo).
+           KeepAlive: вьюхи и их Cytoscape-инстансы не пересоздаются. -->
       <!-- ErrorBoundary снаружи RouterView, чтобы не вмешиваться в кеширование
            KeepAlive (он должен видеть сами вьюхи как прямых детей). -->
       <ErrorBoundary>
         <RouterView v-slot="{ Component }">
-          <Transition name="tab">
-            <KeepAlive>
-              <component :is="Component" />
-            </KeepAlive>
-          </Transition>
+          <KeepAlive>
+            <component :is="Component" />
+          </KeepAlive>
         </RouterView>
       </ErrorBoundary>
     </main>

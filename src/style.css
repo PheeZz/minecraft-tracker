@@ -67,24 +67,22 @@ a {
 }
 
 /* ============================================================
-   Анимации переключения вкладок (классы применяются к корню
-   routed-компонента, поэтому живут глобально, не в scoped App.vue).
-   Только opacity: transform на предке cytoscape-контейнера сместил бы
-   DOM-слой меток нод (node-html-label) и сбил бы расчёт cy.resize().
+   Переход между трекерами — View Transitions API.
+   Анимируется снимок области контента (tracker-body); шапка (root)
+   статична. Снимок обходит ограничение cytoscape (transform не на
+   живом DOM) и неинтерполируемый градиент темы.
    ============================================================ */
-.tab-enter-active,
-.tab-leave-active {
-  transition: opacity 0.28s ease;
+@keyframes vtOldOut { to { opacity: 0; transform: translateY(-10px); } }
+@keyframes vtNewIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+::view-transition-old(root),
+::view-transition-new(root) { animation: none; }
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(tracker-body) { animation: vtOldOut 0.34s ease both; }
+  ::view-transition-new(tracker-body) { animation: vtNewIn 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
 }
-/* уходящую вьюху выносим из потока и накладываем поверх — обе живут одновременно,
-   получается мягкий crossfade без провала в пустой фон. */
-.tab-leave-active {
-  position: absolute;
-  inset: 0;
-}
-.tab-enter-from,
-.tab-leave-to {
-  opacity: 0;
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(tracker-body),
+  ::view-transition-new(tracker-body) { animation-duration: 0.2s; }
 }
 
 /* Свап «инвентарь ⇄ граф» в трекере пчёл (корень одного из вариантов —
