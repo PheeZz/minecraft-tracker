@@ -1,6 +1,8 @@
 // Генерация бренд-растров через playwright:
 //   npm run gen:brand
 // Вход:  public/favicon.svg (марка), scripts/og/catalyst-star.png (звезда катализатора)
+// catalyst-star.png — иконка предмета Infinity Catalyst из мода Avaritia,
+//   фон срезан по альфе (порог 55 → прозрачный). gitignored; пере-получить из ассетов мода.
 // Выход: public/apple-touch-icon.png (180×180), public/og-cover.png (1200×630)
 import { chromium } from 'playwright'
 import { readFileSync } from 'node:fs'
