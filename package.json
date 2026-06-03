@@ -20,7 +20,8 @@
     "gen:bees": "node scripts/gen-bees.mjs",
     "gen:tree-icons": "node scripts/gen-tree-icons.mjs",
     "gen:fruit-icons": "node scripts/gen-fruit-icons.mjs",
-    "screenshot": "node scripts/screenshot.mjs"
+    "screenshot": "node scripts/screenshot.mjs",
+    "gen:brand": "node scripts/gen-brand-assets.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pheezz.github.io/minecraft-tracker/sitemap.xml
