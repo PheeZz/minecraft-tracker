@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import GeneticsDashboard from './GeneticsDashboard.vue'
 import GeneCollection from './GeneCollection.vue'
 import GeneCard from './GeneCard.vue'
@@ -9,6 +9,9 @@ import type { AlleleDef, TraitDef } from '../domain/genetics'
 import { useGenesStore } from '../stores/useGenesStore'
 import { useGeneTargetsStore } from '../stores/useGeneTargetsStore'
 import { downloadJson, parseJsonFileText } from '@/shared/persistence/importExport'
+import { useTour } from '@/shared/ui/useTour'
+import { useOnboardingSeen } from '@/shared/composables/useOnboardingSeen'
+import { buildGeneticsTour } from '../onboarding/geneticsTour'
 
 type Panel = 'dashboard' | 'collection' | 'builder' | 'pipeline'
 const PANELS: { id: Panel; label: string }[] = [
@@ -23,6 +26,20 @@ const card = ref<{ trait: TraitDef; allele: AlleleDef } | null>(null)
 function pick(trait: TraitDef, allele: AlleleDef): void {
   card.value = { trait, allele }
 }
+
+// ── Обучение (как в пчёлах/деревьях): авто-старт при первом визите ──
+const onboarding = useOnboardingSeen('genetics')
+const tour = useTour(() => buildGeneticsTour({ setPanel: (p) => (panel.value = p) }), {
+  onDone: () => onboarding.markSeen(),
+})
+let autoStartTimer: ReturnType<typeof setTimeout> | undefined
+onMounted(() => {
+  if (!onboarding.seen()) autoStartTimer = setTimeout(() => void tour.start(), 500)
+})
+onBeforeUnmount(() => {
+  clearTimeout(autoStartTimer)
+  tour.destroy()
+})
 
 // ── Экспорт/импорт прогресса генетики (собранные гены + цели) ──
 const genes = useGenesStore()
@@ -59,7 +76,7 @@ async function onImport(e: Event): Promise<void> {
 
 <template>
   <div class="genetics">
-    <nav class="genetics__nav" aria-label="Разделы генетики">
+    <nav class="genetics__nav" data-tour="genetics-nav" aria-label="Разделы генетики">
       <div class="genetics__tabs" role="group">
         <button
           v-for="p in PANELS"
@@ -73,7 +90,15 @@ async function onImport(e: Event): Promise<void> {
           {{ p.label }}
         </button>
       </div>
-      <div class="genetics__data">
+      <div class="genetics__data" data-tour="genetics-data">
+        <button
+          type="button"
+          class="genetics__databtn"
+          title="Запустить обучение по разделу"
+          @click="tour.start()"
+        >
+          Обзор
+        </button>
         <button type="button" class="genetics__databtn" title="Экспорт прогресса" @click="onExport">
           Экспорт
         </button>
@@ -99,7 +124,7 @@ async function onImport(e: Event): Promise<void> {
       {{ msg.text }}
     </p>
 
-    <div class="genetics__body">
+    <div class="genetics__body" data-tour="genetics-body">
       <Transition name="gpanel" mode="out-in">
         <GeneticsDashboard v-if="panel === 'dashboard'" key="dashboard" @goto="panel = $event" />
         <GeneCollection v-else-if="panel === 'collection'" key="collection" @pick="pick" />
