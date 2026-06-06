@@ -16,7 +16,12 @@ function machTex(en: string): string | null {
   return f ? `${BASE}genetics/blocks/${f}` : null
 }
 
-const active = ref<'binnie' | 'gendustry'>('binnie')
+// Порядок вкладок: Gendustry первой.
+const TAB_ORDER = ['gendustry', 'binnie'] as const
+const tabs = computed(() =>
+  TAB_ORDER.map((id) => PIPELINES.find((p) => p.id === id)).filter((p) => p != null),
+)
+const active = ref<'binnie' | 'gendustry'>('gendustry')
 const openStep = ref(0)
 const pipeline = computed(() => PIPELINES.find((p) => p.id === active.value) ?? PIPELINES[0]!)
 
@@ -32,7 +37,7 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
       <h2 class="pipe__title">Пайплайн машин</h2>
       <div class="seg" role="group" aria-label="Набор машин">
         <button
-          v-for="p in PIPELINES"
+          v-for="p in tabs"
           :key="p.id"
           type="button"
           class="seg__btn"
