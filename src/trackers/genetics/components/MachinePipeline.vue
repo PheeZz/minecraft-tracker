@@ -5,12 +5,10 @@ import { ITEM_TEX, MACHINE_TEX } from '../data/textures.data'
 import EnTip from './EnTip.vue'
 
 const BASE = import.meta.env.BASE_URL
-/** URL иконки предмета по EN входа (или null, если текстуры нет). */
 function texFor(en: string): string | null {
   const f = ITEM_TEX[en.toLowerCase()]
   return f ? `${BASE}genetics/items/${f}` : null
 }
-/** URL грани-иконки машины по EN (или null). */
 function machTex(en: string): string | null {
   const f = MACHINE_TEX[en]
   return f ? `${BASE}genetics/blocks/${f}` : null
@@ -22,13 +20,7 @@ const tabs = computed(() =>
   TAB_ORDER.map((id) => PIPELINES.find((p) => p.id === id)).filter((p) => p != null),
 )
 const active = ref<'binnie' | 'gendustry'>('gendustry')
-const openStep = ref(0)
 const pipeline = computed(() => PIPELINES.find((p) => p.id === active.value) ?? PIPELINES[0]!)
-
-function selectChain(id: 'binnie' | 'gendustry'): void {
-  active.value = id
-  openStep.value = 0
-}
 </script>
 
 <template>
@@ -43,7 +35,7 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
           class="seg__btn"
           :class="{ on: active === p.id }"
           :aria-pressed="active === p.id"
-          @click="selectChain(p.id)"
+          @click="active = p.id"
         >
           {{ p.label }}
         </button>
@@ -52,8 +44,23 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
 
     <ol class="flow">
       <li v-for="(s, i) in pipeline.steps" :key="s.machine.en" class="step">
+        <div class="step__hd">
+          <span class="step__num">{{ i + 1 }}</span>
+          <img
+            v-if="machTex(s.machine.en)"
+            class="mtex"
+            :src="machTex(s.machine.en)!"
+            alt=""
+            aria-hidden="true"
+          />
+          <span class="step__mac"
+            ><EnTip :en="s.machine.en">{{ s.machine.ru }}</EnTip></span
+          >
+        </div>
+        <p class="step__guide">{{ s.guide }}</p>
         <div class="step__io">
-          <div class="step__in">
+          <div class="io">
+            <span class="io__lab">нужно</span>
             <span v-for="inp in s.inputs" :key="inp.en" class="res">
               <img
                 v-if="texFor(inp.en)"
@@ -65,31 +72,12 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
               <EnTip :en="inp.en">{{ inp.ru }}</EnTip>
             </span>
           </div>
-          <button
-            type="button"
-            class="mac"
-            :class="{ open: openStep === i }"
-            :aria-expanded="openStep === i"
-            :aria-controls="`gstep-${i}`"
-            :title="s.machine.en"
-            @click="openStep = openStep === i ? -1 : i"
-          >
-            <img
-              v-if="machTex(s.machine.en)"
-              class="tex"
-              :src="machTex(s.machine.en)!"
-              alt=""
-              aria-hidden="true"
-            />
-            <span class="mac__n">{{ s.machine.ru }}</span>
-            <span class="mac__chev" aria-hidden="true">▾</span>
-          </button>
-          <div class="step__out">
+          <div class="io io--out">
+            <span class="io__lab">даёт</span>
             <span class="out">{{ s.outMain }}</span>
-            <span v-if="s.outNote" class="out out--note">{{ s.outNote }}</span>
+            <span v-if="s.outNote" class="out__note">{{ s.outNote }}</span>
           </div>
         </div>
-        <p v-if="openStep === i" :id="`gstep-${i}`" class="step__guide">{{ s.guide }}</p>
       </li>
     </ol>
 
@@ -156,46 +144,81 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 .step {
   background: var(--card);
   border: 1px solid var(--cardln);
   border-radius: 12px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   position: relative;
 }
 .step:not(:last-child)::after {
   content: '↓';
   position: absolute;
-  left: 50%;
-  bottom: -13px;
-  transform: translateX(-50%);
+  left: 26px;
+  bottom: -15px;
   color: var(--honey-dk);
-  font-size: 13px;
+  font-size: 14px;
+}
+.step__hd {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 6px;
+}
+.step__num {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  border-radius: 6px;
+  background: var(--solid);
+  color: var(--solid-ink);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+.mtex {
+  width: 22px;
+  height: 22px;
+  image-rendering: pixelated;
+  flex: none;
+}
+.step__mac {
+  font-weight: 700;
+  font-size: 14px;
+}
+.step__guide {
+  margin: 0 0 9px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink2);
 }
 .step__io {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 12px;
-  align-items: center;
-}
-@media (max-width: 720px) {
-  .step__io {
-    grid-template-columns: 1fr;
-  }
-}
-.step__in {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  justify-content: flex-end;
+  gap: 8px 18px;
+  font-size: 11.5px;
+}
+.io {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.io__lab {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 .res {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 11.5px;
   background: var(--bg2);
   border: 1px solid var(--cardln);
   padding: 3px 8px;
@@ -208,56 +231,15 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
   image-rendering: pixelated;
   flex: none;
 }
-.mac {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font: inherit;
-  background: var(--bg2);
-  border: 1px solid var(--honey-dk);
-  border-radius: 9px;
-  padding: 8px 12px;
-  cursor: pointer;
-  color: var(--ink);
-}
-.mac__n {
-  font-weight: 700;
-  font-size: 13px;
-}
-.mac__chev {
-  font-size: 10px;
-  color: var(--muted);
-  transition: transform 0.2s ease;
-}
-.mac.open .mac__chev {
-  transform: rotate(180deg);
-}
-.mac:focus-visible {
-  outline: 2px solid var(--honey-dk);
-  outline-offset: 1px;
-}
-.step__out {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  font-size: 11.5px;
-}
 .out {
   color: var(--src-f);
+  font-weight: 600;
 }
-.out--note {
+.out__note {
   color: var(--muted);
 }
-.step__guide {
-  margin: 10px 0 0;
-  font-size: 12.5px;
-  line-height: 1.5;
-  color: var(--ink2);
-  border-top: 1px solid var(--line);
-  padding-top: 8px;
-}
 .aux {
-  margin-top: 22px;
+  margin-top: 24px;
 }
 .aux__lab {
   font-family: var(--font-mono);
