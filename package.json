@@ -23,7 +23,8 @@
     "gen:fruit-icons": "node scripts/gen-fruit-icons.mjs",
     "screenshot": "node scripts/screenshot.mjs",
     "gen:brand": "node scripts/gen-brand-assets.mjs",
-    "gen:genomes": "node scripts/gen-genomes.mjs"
+    "gen:genomes": "node scripts/gen-genomes.mjs",
+    "gen:textures": "node scripts/gen-textures.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

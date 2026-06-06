@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { PIPELINES } from '../data/pipelines'
+import { ITEM_TEX } from '../data/textures.data'
 import EnTip from './EnTip.vue'
+
+const BASE = import.meta.env.BASE_URL
+/** URL иконки предмета по EN входа (или null, если текстуры нет). */
+function texFor(en: string): string | null {
+  const f = ITEM_TEX[en.toLowerCase()]
+  return f ? `${BASE}genetics/items/${f}` : null
+}
 
 const active = ref<'binnie' | 'gendustry'>('binnie')
 const openStep = ref(0)
@@ -37,6 +45,13 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
         <div class="step__io">
           <div class="step__in">
             <span v-for="inp in s.inputs" :key="inp.en" class="res">
+              <img
+                v-if="texFor(inp.en)"
+                class="tex"
+                :src="texFor(inp.en)!"
+                alt=""
+                aria-hidden="true"
+              />
               <EnTip :en="inp.en">{{ inp.ru }}</EnTip>
             </span>
           </div>
@@ -160,12 +175,21 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
   justify-content: flex-end;
 }
 .res {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 11.5px;
   background: var(--bg2);
   border: 1px solid var(--cardln);
   padding: 3px 8px;
   border-radius: 6px;
   color: var(--ink2);
+}
+.tex {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  flex: none;
 }
 .mac {
   display: inline-flex;

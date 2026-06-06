@@ -11,6 +11,8 @@ const DIRS = [
   ['trees/tree-icons-export/tree-templates', 'public/trees/tree-templates'],
   ['trees/fruit-assets/extratrees-food', 'public/trees/fruits/extratrees-food'],
   ['trees/fruit-assets/forestry-fruits', 'public/trees/fruits/forestry-fruits'],
+  ['genetics/textures/items', 'public/genetics/items'],
+  ['genetics/textures/blocks', 'public/genetics/blocks'],
 ]
 const FILES = [
   ['bees/mockups/beeCombs.0.png', 'public/bees/beeCombs.0.png'],
