@@ -2,12 +2,14 @@
 import { ref } from 'vue'
 import GeneCollection from './GeneCollection.vue'
 import GeneCard from './GeneCard.vue'
+import GenomeBuilder from './GenomeBuilder.vue'
 import MachinePipeline from './MachinePipeline.vue'
 import type { AlleleDef, TraitDef } from '../domain/genetics'
 
-type Panel = 'collection' | 'pipeline'
+type Panel = 'collection' | 'builder' | 'pipeline'
 const PANELS: { id: Panel; label: string }[] = [
   { id: 'collection', label: 'Коллекция' },
+  { id: 'builder', label: 'Сборка' },
   { id: 'pipeline', label: 'Пайплайн' },
 ]
 const panel = ref<Panel>('collection')
@@ -36,6 +38,7 @@ function pick(trait: TraitDef, allele: AlleleDef): void {
 
     <div class="genetics__body">
       <GeneCollection v-if="panel === 'collection'" @pick="pick" />
+      <GenomeBuilder v-else-if="panel === 'builder'" />
       <MachinePipeline v-else-if="panel === 'pipeline'" />
     </div>
 

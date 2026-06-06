@@ -1,5 +1,12 @@
 import { describe, it, expect } from 'vitest'
-import { geneKey, geneUniverse, traitCompletion, collectionTotals } from './genetics'
+import {
+  geneKey,
+  geneUniverse,
+  traitCompletion,
+  collectionTotals,
+  targetGeneState,
+  targetSummary,
+} from './genetics'
 import type { TraitDef } from './genetics'
 
 const TRAITS: TraitDef[] = [
@@ -55,5 +62,38 @@ describe('collectionTotals', () => {
   it('суммирует по универсуму', () => {
     const have = new Set([geneKey('speed', 'Fast'), geneKey('nocturnal', 'Yes')])
     expect(collectionTotals(TRAITS, have)).toEqual({ have: 2, total: 5 })
+  })
+})
+
+describe('targetGeneState', () => {
+  const have = new Set([geneKey('speed', 'Fast')])
+  it('unset когда значение не выбрано', () => {
+    expect(targetGeneState('speed', undefined, have)).toBe('unset')
+  })
+  it('have когда выбранный аллель собран', () => {
+    expect(targetGeneState('speed', 'Fast', have)).toBe('have')
+  })
+  it('need когда выбран, но не собран', () => {
+    expect(targetGeneState('speed', 'Slow', have)).toBe('need')
+  })
+})
+
+describe('targetSummary', () => {
+  it('считает заполнено/собрано и собирает список «нужно»', () => {
+    const have = new Set([geneKey('speed', 'Fast')])
+    const target = { speed: 'Fast', nocturnal: 'Yes' } // species не задан
+    const r = targetSummary(TRAITS, target, have)
+    expect(r.filled).toBe(2)
+    expect(r.have).toBe(1)
+    expect(r.need).toEqual([{ trait: 'nocturnal', en: 'Yes', ru: 'Да' }])
+  })
+  it('сохраняет mod в need для аддонных аллелей', () => {
+    const r = targetSummary(TRAITS, { speed: 'Blinding' }, new Set())
+    expect(r.need[0]).toEqual({
+      trait: 'speed',
+      en: 'Blinding',
+      ru: 'Молниеносная',
+      mod: 'MagicBees',
+    })
   })
 })

@@ -70,3 +70,50 @@ export function collectionTotals(
   for (const g of uni) if (have.has(geneKey(g.trait, g.en))) h++
   return { have: h, total: uni.length }
 }
+
+/** Целевой геном: признак → выбранное значение аллеля (en). Признак без записи = «не важно». */
+export type TargetAlleles = Record<string, string>
+
+/** Статус гена цели: выбран и собран / выбран и нужен / не задан. */
+export type TargetGeneState = 'have' | 'need' | 'unset'
+
+/** Статус одного признака в цели относительно собранного. */
+export function targetGeneState(
+  traitKey: string,
+  chosenEn: string | undefined,
+  have: ReadonlySet<string>,
+): TargetGeneState {
+  if (!chosenEn) return 'unset'
+  return have.has(geneKey(traitKey, chosenEn)) ? 'have' : 'need'
+}
+
+/**
+ * Сводка по целевому геному: сколько признаков задано, сколько из них уже собрано,
+ * и список генов, которые ещё нужно изолировать (need).
+ */
+export function targetSummary(
+  traits: readonly TraitDef[],
+  target: TargetAlleles,
+  have: ReadonlySet<string>,
+): { filled: number; have: number; need: Gene[] } {
+  let filled = 0
+  let h = 0
+  const need: Gene[] = []
+  for (const t of traits) {
+    const chosen = target[t.key]
+    if (!chosen) continue
+    filled++
+    if (have.has(geneKey(t.key, chosen))) {
+      h++
+    } else {
+      const a = t.alleles.find((x) => x.en === chosen)
+      need.push({
+        trait: t.key,
+        en: chosen,
+        ru: a?.ru ?? chosen,
+        ...(a?.mod ? { mod: a.mod } : {}),
+      })
+    }
+  }
+  return { filled, have: h, need }
+}
