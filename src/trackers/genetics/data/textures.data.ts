@@ -17,3 +17,17 @@ export const ITEM_TEX: Readonly<Record<string, string>> = {
   'genetic samples': 'genesample.png',
   'gene from gene database': 'geneDatabase.png',
 }
+
+/** Имя файла грани-иконки машины по EN. Путь: BASE_URL + 'genetics/blocks/<file>'. */
+export const MACHINE_TEX: Readonly<Record<string, string>> = {
+  'Genetic Sampler': 'sampler_side.png',
+  'Genetic Imprinter': 'imprinter_side.png',
+  'Genetic Transposer': 'transposer_side.png',
+  'Genetic Replicator': 'replicator_side.png',
+  Mutatron: 'mutatron_side.png',
+  'Mutatron Advanced': 'mutatron_adv_side.png',
+  'Mutagen Producer': 'mutagen_producer_side.png',
+  'Industrial Apiary': 'apiary_side.png',
+  Liquifier: 'liquifier_side.png',
+  Extractor: 'extractor_side.png',
+}

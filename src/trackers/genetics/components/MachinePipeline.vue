@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { PIPELINES } from '../data/pipelines'
-import { ITEM_TEX } from '../data/textures.data'
+import { ITEM_TEX, MACHINE_TEX } from '../data/textures.data'
 import EnTip from './EnTip.vue'
 
 const BASE = import.meta.env.BASE_URL
@@ -9,6 +9,11 @@ const BASE = import.meta.env.BASE_URL
 function texFor(en: string): string | null {
   const f = ITEM_TEX[en.toLowerCase()]
   return f ? `${BASE}genetics/items/${f}` : null
+}
+/** URL грани-иконки машины по EN (или null). */
+function machTex(en: string): string | null {
+  const f = MACHINE_TEX[en]
+  return f ? `${BASE}genetics/blocks/${f}` : null
 }
 
 const active = ref<'binnie' | 'gendustry'>('binnie')
@@ -64,6 +69,13 @@ function selectChain(id: 'binnie' | 'gendustry'): void {
             :title="s.machine.en"
             @click="openStep = openStep === i ? -1 : i"
           >
+            <img
+              v-if="machTex(s.machine.en)"
+              class="tex"
+              :src="machTex(s.machine.en)!"
+              alt=""
+              aria-hidden="true"
+            />
             <span class="mac__n">{{ s.machine.ru }}</span>
             <span class="mac__chev" aria-hidden="true">▾</span>
           </button>
