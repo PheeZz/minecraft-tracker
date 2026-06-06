@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "source": "binnie-mods-2.0.22.7, gendustry-1.6.4.135",
+    "generated": "2026-06-06",
+    "notes": "Item PNGs flattened under items/ (original filenames). Layered Binnie serum/genome icons from items/machines/ kept with their dotted names (serum.*.png, genome.*.png). Gendustry machines are flat-textured cubes: each has top/side/bottom faces under blocks/<machine>/, extracted and renamed <machine>_<face>.png to avoid collisions (apiary has only top+side). Binnie machines are NOT cubes with per-face textures: each is rendered from a single tile texture-atlas at assets/genetics/textures/tile/<Machine>.png that the custom tile model UV-maps onto a multi-part 3D model. There is no separate casing+panel split — the whole machine model uses one atlas sheet (e.g. Isolator.png). Generic frames GeneticMachine/AdvGeneticMachine/MasterGeneticMachine/LabMachine atlases are also included as shared base casings. needsIsoRender is set true on all machine entries (they are 3D and benefit from isometric rendering)."
+  },
+  "items": {
+    "Serum": "items/serumEmpty.png",
+    "Serum Array": "items/serumSpray.png",
+    "Blank Sequence": "items/sequencerEmpty.png",
+    "Gene Database": "items/geneDatabase.png",
+    "Genetic Template": "items/genetemplate.png",
+    "Genetic Sample": "items/genesample.png",
+    "Protein": "items/protein.png",
+    "Enzyme": "items/enzyme.png",
+    "Fluorescent Dye": "items/dyeFluor.png",
+    "Liquid Growth Medium": "items/growthMedium.png",
+    "Genetics Labware": "items/labware.png",
+    "Bacteria Vector": "items/bacteriaDNA.png"
+  },
+  "items_extra": {
+    "_note": "Supporting/related item textures not 1:1 with an i18n English key but useful for the tracker.",
+    "sequencer": "items/sequencer.png",
+    "genomeEmpty": "items/genomeEmpty.png",
+    "dnaDye": "items/dnaDye.png",
+    "dna": "items/dna.png",
+    "bacteriaEnzyme": "items/bacteriaEnzyme.png",
+    "masterGeneDatabase": "items/masterGeneDatabase.png",
+    "fieldKit": "items/fieldKit.png",
+    "fieldGlass": "items/fieldGlass.png",
+    "analyst": "items/analyst.png",
+    "dish": "items/dish.png",
+    "sterilisedDish": "items/sterilisedDish.png",
+    "genesampleblank": "items/genesampleblank.png",
+    "beereceptacle": "items/beereceptacle.png",
+    "grafter": "items/grafter.png",
+    "serum_layers": ["items/serum.empty.png", "items/serum.dna.png", "items/serum.glass.png", "items/serum.cap.png", "items/serum.edges.png"],
+    "genome_layers": ["items/genome.empty.png", "items/genome.dna.png", "items/genome.glass.png", "items/genome.cap.png", "items/genome.edges.png"]
+  },
+  "machines": {
+    "Genetic Sampler": {"faces": ["blocks/sampler_top.png", "blocks/sampler_side.png", "blocks/sampler_bottom.png"], "needsIsoRender": true},
+    "Genetic Imprinter": {"faces": ["blocks/imprinter_top.png", "blocks/imprinter_side.png", "blocks/imprinter_bottom.png"], "needsIsoRender": true},
+    "Genetic Transposer": {"faces": ["blocks/transposer_top.png", "blocks/transposer_side.png", "blocks/transposer_bottom.png"], "needsIsoRender": true},
+    "Genetic Replicator": {"faces": ["blocks/replicator_top.png", "blocks/replicator_side.png", "blocks/replicator_bottom.png"], "needsIsoRender": true},
+    "Mutatron": {"faces": ["blocks/mutatron_top.png", "blocks/mutatron_side.png", "blocks/mutatron_bottom.png"], "needsIsoRender": true},
+    "Mutatron Advanced": {"faces": ["blocks/mutatron_adv_top.png", "blocks/mutatron_adv_side.png", "blocks/mutatron_adv_bottom.png"], "needsIsoRender": true},
+    "Mutagen Producer": {"faces": ["blocks/mutagen_producer_top.png", "blocks/mutagen_producer_side.png", "blocks/mutagen_producer_bottom.png"], "needsIsoRender": true},
+    "Industrial Apiary": {"faces": ["blocks/apiary_top.png", "blocks/apiary_side.png"], "needsIsoRender": true, "_note": "no dedicated bottom.png; side reused for bottom"},
+    "Liquifier": {"faces": ["blocks/liquifier_top.png", "blocks/liquifier_side.png", "blocks/liquifier_bottom.png"], "needsIsoRender": true},
+    "Extractor": {"faces": ["blocks/extractor_top.png", "blocks/extractor_side.png", "blocks/extractor_bottom.png"], "needsIsoRender": true},
+
+    "Isolator": {"atlas": "blocks/Isolator.png", "needsIsoRender": true, "_note": "Binnie tile texture-atlas, UV-mapped onto custom 3D model"},
+    "Sequencer": {"atlas": "blocks/Sequencer.png", "needsIsoRender": true, "_note": "Binnie tile texture-atlas"},
+    "Polymerizer": {"atlas": "blocks/Polymeriser.png", "needsIsoRender": true, "_note": "Binnie tile texture-atlas (file spelled Polymeriser)"},
+    "Inoculator": {"atlas": "blocks/Inoculator.png", "needsIsoRender": true, "_note": "Binnie tile texture-atlas"},
+    "Splicer": {"atlas": "blocks/Splicer.png", "needsIsoRender": true, "_note": "Binnie tile texture-atlas"},
+    "Incubator": {"atlas": "blocks/Incubator.png", "needsIsoRender": true, "_note": "Binnie tile texture-atlas"},
+    "Genepool": {"atlas": "blocks/Genepool.png", "needsIsoRender": true, "_note": "Binnie tile texture-atlas (DNA Genebank / Сборщик ДНК)"},
+    "Analyser": {"atlas": "blocks/Analyser.png", "needsIsoRender": true, "_note": "Binnie tile texture-atlas"}
+  },
+  "machines_shared_atlases": {
+    "_note": "Generic Binnie casing atlases shared by lab machines + the database tile, included for completeness.",
+    "GeneticMachine": "blocks/GeneticMachine.png",
+    "AdvGeneticMachine": "blocks/AdvGeneticMachine.png",
+    "MasterGeneticMachine": "blocks/MasterGeneticMachine.png",
+    "LabMachine": "blocks/LabMachine.png",
+    "ApiaristDatabase": "blocks/ApiaristDatabase.png"
+  },
+  "_missing": [
+    "Acclimatiser (machines.binnie): no dedicated tile or block texture found in assets/genetics or assets/binniecore; rendered from the shared GeneticMachine atlas at runtime, no per-machine sheet exists.",
+    "Lab Stand (machines.binnie): no dedicated block/tile texture found; the Lab Stand is a thin housing rendered procedurally from a shared casing atlas (no Standalone <name>.png in the jar).",
+    "Ethanol (resources): no item/fluid texture matched in either jar (genetics has no ethanol icon; gendustry fluids are liquiddna/mutagen/protein only).",
+    "Bacteria Vector exact icon (resources): mapped to items/bacteriaDNA.png as the closest polymerised-bacteria icon; no texture literally named 'vector' exists."
+  ]
+}

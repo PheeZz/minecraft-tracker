@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { geneKey, type AlleleDef, type TraitDef } from '../domain/genetics'
+import { carriersOf, geneKey, type AlleleDef, type TraitDef } from '../domain/genetics'
 import { useGenesStore } from '../stores/useGenesStore'
+import { useBeesStore } from '@/trackers/bees/stores/useBeesStore'
+import { CARRIERS } from '../data/carriers'
 import EnTip from './EnTip.vue'
 
 const props = defineProps<{ trait: TraitDef; allele: AlleleDef }>()
 const emit = defineEmits<{ close: [] }>()
 const genes = useGenesStore()
+const bees = useBeesStore()
 const have = computed(() => genes.has(props.trait.key, props.allele.en))
+/** Виды-носители этого аллеля (откуда взять ген). */
+const carriers = computed(() => carriersOf(CARRIERS, props.trait.key, props.allele.en))
 
 // Немодальная панель: при открытии переводим фокус на неё, Escape — закрытие.
 const root = ref<HTMLElement>()
@@ -51,6 +56,19 @@ onMounted(() => root.value?.focus())
           <EnTip :en="a.en">{{ a.ru }}</EnTip>
         </span>
       </div>
+    </div>
+
+    <div v-if="carriers.length" class="gcard__sec">
+      <div class="gcard__lab">Виды-носители · откуда взять</div>
+      <ul class="gcard__carriers">
+        <li v-for="c in carriers.slice(0, 8)" :key="c.mod + '|' + c.en">
+          <EnTip :en="c.en">{{ c.ru }}</EnTip>
+          <span class="gcard__own" :class="{ yes: bees.isHave(c.ru) }">
+            {{ bees.isHave(c.ru) ? '✓ в складе' : 'нет' }}
+          </span>
+        </li>
+      </ul>
+      <div v-if="carriers.length > 8" class="gcard__more">…ещё {{ carriers.length - 8 }}</div>
     </div>
 
     <div class="gcard__sec gcard__sec--last">
@@ -172,5 +190,29 @@ onMounted(() => root.value?.focus())
   background: var(--bg2);
   color: var(--ink);
   cursor: pointer;
+}
+.gcard__carriers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12.5px;
+}
+.gcard__carriers li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 3px 0;
+}
+.gcard__own {
+  color: var(--muted);
+  font-size: 11px;
+}
+.gcard__own.yes {
+  color: var(--src-f);
+}
+.gcard__more {
+  font-size: 11px;
+  color: var(--dim);
+  margin-top: 4px;
 }
 </style>

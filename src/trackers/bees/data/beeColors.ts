@@ -1433,8 +1433,13 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     src: 'M',
   },
   Arcane: {
-    p: '#d242df',
-    s: '#ff9d60',
+    p: '#76184d',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Арканная: {
+    p: '#76184d',
+    s: '#e3a55b',
     src: 'M',
   },
   Заколдованная: {
@@ -1497,7 +1502,12 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     s: '#313c5e',
     src: 'M',
   },
-  Earthy: {
+  Земляная: {
+    p: '#78822d',
+    s: '#78822d',
+    src: 'M',
+  },
+  Earthen: {
     p: '#78822d',
     s: '#78822d',
     src: 'M',
@@ -1676,24 +1686,49 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     s: '#ea8344',
     src: 'M',
   },
-  Bigbad: {
+  Злющая: {
     p: '#a9344b',
     s: '#453536',
     src: 'M',
   },
-  Chicken: {
+  'Big Bad': {
+    p: '#a9344b',
+    s: '#453536',
+    src: 'M',
+  },
+  Куриные: {
     p: '#ff0000',
     s: '#d3d3d3',
     src: 'M',
   },
-  Beef: {
+  Poultry: {
+    p: '#ff0000',
+    s: '#d3d3d3',
+    src: 'M',
+  },
+  Мясистые: {
     p: '#b7b7b7',
     s: '#3f3024',
     src: 'M',
   },
-  Pork: {
+  Beefy: {
+    p: '#b7b7b7',
+    s: '#3f3024',
+    src: 'M',
+  },
+  Свиные: {
     p: '#f1aeac',
     s: '#df847b',
+    src: 'M',
+  },
+  Porcine: {
+    p: '#f1aeac',
+    s: '#df847b',
+    src: 'M',
+  },
+  Овечья: {
+    p: '#f7f7f7',
+    s: '#cacaca',
     src: 'M',
   },
   Sheepish: {
@@ -1701,9 +1736,19 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     s: '#cacaca',
     src: 'M',
   },
+  Лошадиная: {
+    p: '#906330',
+    s: '#7b4e1b',
+    src: 'M',
+  },
   Neighsayer: {
     p: '#906330',
     s: '#7b4e1b',
+    src: 'M',
+  },
+  Кошачья: {
+    p: '#ece684',
+    s: '#563c24',
     src: 'M',
   },
   Catty: {
@@ -1711,9 +1756,19 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     s: '#563c24',
     src: 'M',
   },
+  Сумасшедшие: {
+    p: '#5b482b',
+    s: '#271b0f',
+    src: 'M',
+  },
   Batty: {
     p: '#5b482b',
     s: '#271b0f',
+    src: 'M',
+  },
+  Умные: {
+    p: '#83ff70',
+    s: '#e15236',
     src: 'M',
   },
   Brainy: {
@@ -1901,243 +1956,478 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     s: '#001d51',
     src: 'M',
   },
-  TcAir: {
+  Аура: {
     p: '#d9d636',
     s: '#999999',
     src: 'M',
   },
-  TcFire: {
+  Aer: {
+    p: '#d9d636',
+    s: '#999999',
+    src: 'M',
+  },
+  Игнис: {
     p: '#e50b0b',
     s: '#999999',
     src: 'M',
   },
-  TcWater: {
+  Ignis: {
+    p: '#e50b0b',
+    s: '#999999',
+    src: 'M',
+  },
+  Аква: {
     p: '#36cfd9',
     s: '#999999',
     src: 'M',
   },
-  TcEarth: {
+  Aqua: {
+    p: '#36cfd9',
+    s: '#999999',
+    src: 'M',
+  },
+  Солим: {
     p: '#005100',
     s: '#999999',
     src: 'M',
   },
-  TcOrder: {
+  Solum: {
+    p: '#005100',
+    s: '#999999',
+    src: 'M',
+  },
+  Праекантатио: {
     p: '#aa32fc',
     s: '#999999',
     src: 'M',
   },
-  TcChaos: {
+  Ordered: {
+    p: '#aa32fc',
+    s: '#999999',
+    src: 'M',
+  },
+  Абсолютные: {
     p: '#cccccc',
     s: '#999999',
     src: 'M',
   },
-  TcVis: {
+  Chaotic: {
+    p: '#cccccc',
+    s: '#999999',
+    src: 'M',
+  },
+  Вис: {
     p: '#004c99',
     s: '#675ed1',
     src: 'M',
   },
-  TcRejuvenating: {
+  Vis: {
+    p: '#004c99',
+    s: '#675ed1',
+    src: 'M',
+  },
+  Омолаживающая: {
     p: '#91d0d9',
     s: '#675ed1',
     src: 'M',
   },
-  TcEmpowering: {
+  Rejuvenating: {
+    p: '#91d0d9',
+    s: '#675ed1',
+    src: 'M',
+  },
+  Усиливающая: {
     p: '#96ffbc',
     s: '#675ed1',
     src: 'M',
   },
-  TcNexus: {
+  Empowering: {
+    p: '#96ffbc',
+    s: '#675ed1',
+    src: 'M',
+  },
+  Нексус: {
     p: '#15afaf',
     s: '#675ed1',
     src: 'M',
   },
-  TcTaint: {
+  Nexus: {
+    p: '#15afaf',
+    s: '#675ed1',
+    src: 'M',
+  },
+  Льняные: {
     p: '#91376a',
     s: '#675ed1',
     src: 'M',
   },
-  TcPure: {
+  Flux: {
+    p: '#91376a',
+    s: '#675ed1',
+    src: 'M',
+  },
+  Чистые: {
     p: '#e23f65',
     s: '#675ed1',
     src: 'M',
   },
-  TcHungry: {
+  Pure: {
+    p: '#e23f65',
+    s: '#675ed1',
+    src: 'M',
+  },
+  Алчная: {
     p: '#dca5e2',
     s: '#675ed1',
     src: 'M',
   },
-  TcWispy: {
+  Ravening: {
+    p: '#dca5e2',
+    s: '#675ed1',
+    src: 'M',
+  },
+  Виспи: {
     p: '#9cb8d5',
     s: '#e15236',
     src: 'M',
   },
-  TcVoid: {
+  Wispy: {
+    p: '#9cb8d5',
+    s: '#e15236',
+    src: 'M',
+  },
+  Пустотная: {
     p: '#180a29',
     s: '#4b2a74',
     src: 'M',
   },
-  AmEssence: {
+  Void: {
+    p: '#180a29',
+    s: '#4b2a74',
+    src: 'M',
+  },
+  Эссенция: {
     p: '#86bbc5',
     s: '#e3a55b',
     src: 'M',
   },
-  AmQuintessence: {
+  Essence: {
+    p: '#86bbc5',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Квинтэссенция: {
     p: '#e3a45b',
     s: '#e3a55b',
     src: 'M',
   },
-  AmAir: {
+  Quintessential: {
+    p: '#e3a45b',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Эолова: {
     p: '#d5eb9d',
     s: '#e3a55b',
     src: 'M',
   },
-  AmEarth: {
+  Aiolic: {
+    p: '#d5eb9d',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Земная: {
     p: '#aa875e',
     s: '#e3a55b',
     src: 'M',
   },
-  AmFire: {
+  Terrestric: {
+    p: '#aa875e',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Магматическая: {
     p: '#93451e',
     s: '#e3a55b',
     src: 'M',
   },
-  AmWater: {
+  Igneous: {
+    p: '#93451e',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Водянистая: {
     p: '#3b7d8c',
     s: '#e3a55b',
     src: 'M',
   },
-  AmArcane: {
-    p: '#76184d',
+  Aqueous: {
+    p: '#3b7d8c',
     s: '#e3a55b',
     src: 'M',
   },
-  AmLightning: {
+  Молниевая: {
     p: '#ebefa1',
     s: '#e3a55b',
     src: 'M',
   },
-  AmPlant: {
+  Fulguric: {
+    p: '#ebefa1',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Кустарниковая: {
     p: '#49b549',
     s: '#e3a55b',
     src: 'M',
   },
-  AmIce: {
+  Fruticic: {
+    p: '#49b549',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Гляциальная: {
     p: '#86bac6',
     s: '#e3a55b',
     src: 'M',
   },
-  AmVortex: {
+  Glacic: {
+    p: '#86bac6',
+    s: '#e3a55b',
+    src: 'M',
+  },
+  Вихревые: {
     p: '#71bbe2',
     s: '#0b35a8',
     src: 'M',
   },
-  AmWight: {
+  Vortex: {
+    p: '#71bbe2',
+    s: '#0b35a8',
+    src: 'M',
+  },
+  Умертвие: {
     p: '#b50000',
     s: '#4c4837',
     src: 'M',
   },
-  EeMinium: {
+  Wight: {
+    p: '#b50000',
+    s: '#4c4837',
+    src: 'M',
+  },
+  Алхимические: {
     p: '#ac0921',
     s: '#3a030b',
     src: 'M',
   },
-  RsaFluxed: {
+  Minium: {
+    p: '#ac0921',
+    s: '#3a030b',
+    src: 'M',
+  },
+  Флюксовая: {
     p: '#9e060d',
     s: '#9e060d',
     src: 'M',
   },
-  TeBronze: {
+  Fluxed: {
+    p: '#9e060d',
+    s: '#9e060d',
+    src: 'M',
+  },
+  Бронзовая: {
     p: '#b56d07',
     s: '#b56d07',
     src: 'M',
   },
-  TeElectrum: {
+  Bronzed: {
+    p: '#b56d07',
+    s: '#b56d07',
+    src: 'M',
+  },
+  Электрумовая: {
     p: '#eaf79e',
     s: '#eaf79e',
     src: 'M',
   },
-  TeNickel: {
+  Electrum: {
+    p: '#eaf79e',
+    s: '#eaf79e',
+    src: 'M',
+  },
+  Никелевая: {
     p: '#b4c989',
     s: '#b4c989',
     src: 'M',
   },
-  TeInvar: {
+  Nickel: {
+    p: '#b4c989',
+    s: '#b4c989',
+    src: 'M',
+  },
+  Инваровая: {
     p: '#cde3a1',
     s: '#cde3a1',
     src: 'M',
   },
-  TePlatinum: {
+  Invar: {
+    p: '#cde3a1',
+    s: '#cde3a1',
+    src: 'M',
+  },
+  Платиновая: {
     p: '#9ee7f7',
     s: '#9ee7f7',
     src: 'M',
   },
-  TeCoal: {
+  Platinum: {
+    p: '#9ee7f7',
+    s: '#9ee7f7',
+    src: 'M',
+  },
+  Углеродная: {
     p: '#2e2d2d',
     s: '#2e2d2d',
     src: 'M',
   },
-  TeDestabilized: {
+  Carbon: {
+    p: '#2e2d2d',
+    s: '#2e2d2d',
+    src: 'M',
+  },
+  Дестабилизированная: {
     p: '#5e0203',
     s: '#5e0203',
     src: 'M',
   },
-  TeLux: {
+  Destabilized: {
+    p: '#5e0203',
+    s: '#5e0203',
+    src: 'M',
+  },
+  Световая: {
     p: '#f1fa89',
     s: '#f1fa89',
     src: 'M',
   },
-  TeDante: {
+  Lux: {
+    p: '#f1fa89',
+    s: '#f1fa89',
+    src: 'M',
+  },
+  Дантова: {
     p: '#f7ac4a',
     s: '#f7ac4a',
     src: 'M',
   },
-  TePyro: {
+  Dante: {
+    p: '#f7ac4a',
+    s: '#f7ac4a',
+    src: 'M',
+  },
+  Пирокластическая: {
     p: '#fa930c',
     s: '#fa930c',
     src: 'M',
   },
-  TeBlizzy: {
+  Pyro: {
+    p: '#fa930c',
+    s: '#fa930c',
+    src: 'M',
+  },
+  Метельная: {
     p: '#0073c4',
     s: '#0073c4',
     src: 'M',
   },
-  TeGelid: {
+  Blizzy: {
+    p: '#0073c4',
+    s: '#0073c4',
+    src: 'M',
+  },
+  Стылая: {
     p: '#4aaff7',
     s: '#4aaff7',
     src: 'M',
   },
-  TeShocking: {
+  Gelid: {
+    p: '#4aaff7',
+    s: '#4aaff7',
+    src: 'M',
+  },
+  Шокирующая: {
     p: '#c5ff26',
     s: '#f8ee00',
     src: 'M',
   },
-  TeAmped: {
+  Shocking: {
+    p: '#c5ff26',
+    s: '#f8ee00',
+    src: 'M',
+  },
+  Заряженная: {
     p: '#8affff',
     s: '#ece670',
     src: 'M',
   },
-  TeGrounded: {
+  Amped: {
+    p: '#8affff',
+    s: '#ece670',
+    src: 'M',
+  },
+  Заземлённая: {
     p: '#cec1c1',
     s: '#826767',
     src: 'M',
   },
-  TeRocking: {
+  Grounded: {
+    p: '#cec1c1',
+    s: '#826767',
+    src: 'M',
+  },
+  Рокерская: {
     p: '#980000',
     s: '#ab9d9b',
     src: 'M',
   },
-  TeWinsome: {
+  "Rockin'": {
+    p: '#980000',
+    s: '#ab9d9b',
+    src: 'M',
+  },
+  Обаятельная: {
     p: '#096b67',
     s: '#096b67',
     src: 'M',
   },
-  TeEndearing: {
+  Winsome: {
+    p: '#096b67',
+    s: '#096b67',
+    src: 'M',
+  },
+  Милая: {
     p: '#069e97',
     s: '#069e97',
     src: 'M',
   },
+  Endearing: {
+    p: '#069e97',
+    s: '#069e97',
+    src: 'M',
+  },
+  Укоренённая: {
+    p: '#00a800',
+    s: '#ffb2bb',
+    src: 'M',
+  },
   Rooted: {
     p: '#00a800',
+    s: '#ffb2bb',
+    src: 'M',
+  },
+  Дремотная: {
+    p: '#2978c6',
     s: '#ffb2bb',
     src: 'M',
   },
@@ -2146,8 +2436,18 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     s: '#ffb2bb',
     src: 'M',
   },
+  Сновидческая: {
+    p: '#123456',
+    s: '#ffb2bb',
+    src: 'M',
+  },
   Dreaming: {
     p: '#123456',
+    s: '#ffb2bb',
+    src: 'M',
+  },
+  Цветущая: {
+    p: '#a4c193',
     s: '#ffb2bb',
     src: 'M',
   },
@@ -2156,12 +2456,22 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     s: '#ffb2bb',
     src: 'M',
   },
+  Цветочная: {
+    p: '#29d81a',
+    s: '#ffb2bb',
+    src: 'M',
+  },
   Floral: {
     p: '#29d81a',
     s: '#ffb2bb',
     src: 'M',
   },
-  AeSkystone: {
+  Небокаменная: {
+    p: '#4b8381',
+    s: '#252929',
+    src: 'M',
+  },
+  Skystone: {
     p: '#4b8381',
     s: '#252929',
     src: 'M',
@@ -2226,8 +2536,18 @@ export const BEE_COLOR: Readonly<Record<string, TintColor>> = {
     s: '#f696ff',
     src: 'M',
   },
+  Ботаническая: {
+    p: '#94c661',
+    s: '#ffb2bb',
+    src: 'M',
+  },
   Botanic: {
     p: '#94c661',
+    s: '#ffb2bb',
+    src: 'M',
+  },
+  Вазби: {
+    p: '#ff6b9c',
     s: '#ffb2bb',
     src: 'M',
   },

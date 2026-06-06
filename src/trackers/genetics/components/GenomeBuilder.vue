@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { TRAITS } from '../data/genetics.data'
-import { targetGeneState, targetSummary, type TargetGeneState } from '../domain/genetics'
+import {
+  carriersOf,
+  targetGeneState,
+  targetSummary,
+  type TargetGeneState,
+} from '../domain/genetics'
+import { CARRIERS } from '../data/carriers'
 import { useGenesStore } from '../stores/useGenesStore'
 import { useGeneTargetsStore } from '../stores/useGeneTargetsStore'
 import EnTip from './EnTip.vue'
@@ -25,6 +31,10 @@ const statuses = computed<Record<string, TargetGeneState>>(() => {
 function onSelect(trait: string, e: Event): void {
   const v = (e.target as HTMLSelectElement).value
   if (targets.active) targets.setAllele(targets.active.id, trait, v || null)
+}
+/** Первый вид-носитель гена (подсказка «откуда взять»). */
+function carrierRu(trait: string, en: string): string | null {
+  return carriersOf(CARRIERS, trait, en)[0]?.ru ?? null
 }
 </script>
 
@@ -119,6 +129,9 @@ function onSelect(trait: string, e: Event): void {
           <ul v-if="summary.need.length" class="need">
             <li v-for="g in summary.need" :key="g.trait">
               <EnTip :en="g.en">{{ g.ru }}</EnTip>
+              <span v-if="carrierRu(g.trait, g.en)" class="need__from"
+                >← {{ carrierRu(g.trait, g.en) }}</span
+              >
             </li>
           </ul>
           <p v-else class="need__done">Всё нужное собрано ✓</p>
@@ -316,5 +329,10 @@ function onSelect(trait: string, e: Event): void {
   margin: 0;
   font-size: 12.5px;
   color: var(--src-f);
+}
+.need__from {
+  color: var(--muted);
+  font-size: 11px;
+  margin-left: 4px;
 }
 </style>

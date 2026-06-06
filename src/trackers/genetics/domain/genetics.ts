@@ -117,3 +117,43 @@ export function targetSummary(
   }
   return { filled, have: h, need }
 }
+
+/** Ссылка на вид-носитель гена. */
+export interface SpeciesRef {
+  en: string
+  ru: string
+  mod: GeneMod
+}
+
+/** Вид с дефолтным геномом (признак → значение аллеля EN). */
+export interface SpeciesGenomeLike {
+  en: string
+  ru: string
+  mod: GeneMod
+  genome: Record<string, string>
+}
+
+/** Индекс «ген → виды-носители»: ключ geneKey(trait, allele) → список видов. */
+export function buildCarrierIndex(
+  genomes: readonly SpeciesGenomeLike[],
+): Map<string, SpeciesRef[]> {
+  const idx = new Map<string, SpeciesRef[]>()
+  for (const s of genomes) {
+    for (const [trait, allele] of Object.entries(s.genome)) {
+      const k = geneKey(trait, allele)
+      const arr = idx.get(k)
+      if (arr) arr.push({ en: s.en, ru: s.ru, mod: s.mod })
+      else idx.set(k, [{ en: s.en, ru: s.ru, mod: s.mod }])
+    }
+  }
+  return idx
+}
+
+/** Виды-носители заданного гена (пусто, если никто не несёт). */
+export function carriersOf(
+  index: ReadonlyMap<string, SpeciesRef[]>,
+  trait: string,
+  allele: string,
+): SpeciesRef[] {
+  return index.get(geneKey(trait, allele)) ?? []
+}

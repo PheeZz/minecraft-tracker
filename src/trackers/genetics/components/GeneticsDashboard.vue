@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { TRAITS } from '../data/genetics.data'
-import { collectionTotals, targetSummary, traitCompletion } from '../domain/genetics'
+import { carriersOf, collectionTotals, targetSummary, traitCompletion } from '../domain/genetics'
+import { CARRIERS } from '../data/carriers'
 import { useGenesStore } from '../stores/useGenesStore'
 import { useGeneTargetsStore } from '../stores/useGeneTargetsStore'
 import EnTip from './EnTip.vue'
@@ -29,6 +30,11 @@ const targetCards = computed(() =>
 const nextStep = computed(() => {
   const activeCard = targetCards.value.find((c) => c.id === targets.activeId)
   return activeCard?.next ?? targetCards.value.find((c) => c.next)?.next ?? null
+})
+/** Вид-носитель для гена «следующего шага». */
+const nextCarrierRu = computed(() => {
+  const n = nextStep.value
+  return n ? (carriersOf(CARRIERS, n.trait, n.en)[0]?.ru ?? null) : null
 })
 
 /** Прогресс по признакам со шкалой (species без аллелей скрыт). */
@@ -90,6 +96,8 @@ const traitBars = computed(() =>
             Изолировать
             <b
               ><EnTip :en="nextStep.en">{{ nextStep.ru }}</EnTip></b
+            ><template v-if="nextCarrierRu">
+              из вида <b>{{ nextCarrierRu }}</b></template
             >
           </div>
           <button type="button" class="link" @click="emit('goto', 'pipeline')">
