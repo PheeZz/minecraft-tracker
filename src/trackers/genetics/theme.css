@@ -1,0 +1,40 @@
+/* Тема трекера генетики — тёмная «лабораторная» (сине-бирюзовый + фиолет, ДНК-вайб). */
+[data-tracker='genetics'] {
+  color-scheme: dark;
+  --bg: #0c1518;
+  --bg2: #091013;
+  --card: #122029;
+  --cardln: #263a42;
+  --panel: rgba(14, 26, 30, 0.62); /* фон боковых панелей (фростед поверх фона) */
+  --ink: #e7f1f2;
+  --ink2: #bcd0d2;
+  --muted: #80999d;
+  --dim: #8aa0a3;
+  --honey: #29b8c2; /* базовый акцент (бирюза) — имя токена общее с другими темами */
+  --honey-dk: #4fd6df; /* акцентный текст на тёмном — светлая бирюза */
+  --accent: var(--honey-dk); /* акцент для бренд-элементов */
+  --amber: #e6c15a;
+  --rust: #e0813c;
+  --src-f: #3fc98e; /* зелёный «собрано» — читаем как текст и как фон бейджа */
+  --src-f-soft: rgba(63, 201, 142, 0.16);
+  --src-e: #d8743a;
+  --src-e-soft: rgba(216, 116, 58, 0.16);
+  --src-m: #a98cf0; /* фиолет аддонов — читаемый как текст */
+  --src-m-soft: rgba(169, 140, 240, 0.18);
+  --line: rgba(79, 214, 223, 0.14);
+  --alt: #b79bf0; /* светлый фиолет для аддонных аллелей */
+  --scroll-thumb: #2a3f44;
+
+  /* «сплошная» заливка для активной пилюли / кружка шага и текст на ней */
+  --solid: #29b8c2;
+  --solid-ink: #04181b;
+
+  --font-display: 'Unbounded', sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  background:
+    radial-gradient(70% 55% at 80% -10%, rgba(41, 184, 194, 0.12), transparent 60%),
+    radial-gradient(55% 50% at 0% 100%, rgba(155, 122, 214, 0.1), transparent 55%),
+    linear-gradient(160deg, var(--bg), var(--bg2));
+}

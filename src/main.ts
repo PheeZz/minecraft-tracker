@@ -7,6 +7,7 @@ import './reset.css'
 import './style.css'
 import './trackers/trees/theme.css'
 import './trackers/bees/theme.css'
+import './trackers/genetics/theme.css'
 
 const app = createApp(App)
 

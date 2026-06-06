@@ -33,4 +33,7 @@ public/trees/fruits/forestry-fruits/
 # Артефакты playwright-проверок
 .playwright-mcp/
 
+# Визуальный брейншторм-компаньон (мокапы)
+.superpowers/
+
 scripts/og/

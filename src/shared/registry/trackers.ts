@@ -27,6 +27,14 @@ export const TRACKER_MODULES = [
     path: '/bees',
     view: () => import('@/trackers/bees/components/BeesView.vue'),
   },
+  {
+    id: 'genetics',
+    title: 'Генетика',
+    kicker: 'Binnie · Gendustry',
+    mark: 'pollen',
+    path: '/genetics',
+    view: () => import('@/trackers/genetics/components/GeneticsView.vue'),
+  },
 ] as const satisfies readonly TrackerModule[]
 
 export type TrackerId = (typeof TRACKER_MODULES)[number]['id']

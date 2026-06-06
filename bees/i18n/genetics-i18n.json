@@ -1,0 +1,1644 @@
+{
+  "_meta": {
+    "purpose": "Русская локализация генетики пчёл (1.7.10). Источник для будущего трекера/гайда генетики.",
+    "species_source": "Извлечено из src/trackers/bees/data/bees.data.ts (id=RU, en=EN) — выверено в рамках проекта, считается авторитетным.",
+    "glossary_status": "machines/resources — сверены с ru.minecraft.wiki (канон). serum/ethanol/bacteria — спорные, см. _notes. alleles/traits — черновик, ещё не сверены.",
+    "convention": "TBD: русский основной; показ EN (в скобках/тултипе) — выбирается отдельно.",
+    "generated": "2026-06-06 (deep-research + извлечение из данных)",
+    "canonical_source": "ru.minecraft.wiki (Forestry/Пчеловодство, Binnie's mods/Genetics, Gendustry)"
+  },
+  "machines": {
+    "binnie": {
+      "Incubator": "Инкубатор",
+      "Genepool": "Сборщик ДНК",
+      "Isolator": "Изолятор",
+      "Analyser": "Анализатор",
+      "Polymerizer": "Полимеризатор",
+      "Sequencer": "Секвенсор",
+      "Inoculator": "Инокулятор",
+      "Splicer": "Сплайсер",
+      "Acclimatiser": "Акклиматизатор",
+      "Lab Stand": "Лабораторная стойка"
+    },
+    "binnie_items": {
+      "Gene Database": "база данных генов",
+      "Blank Sequence": "Бланк секвенсора",
+      "Serum": "Серум / Генетическая посуда",
+      "Serum Array": "Объединённая генетическая посуда"
+    },
+    "gendustry": {
+      "Genetic Sampler": "Генетический пробоотборник",
+      "Genetic Imprinter": "Генетический импринтер",
+      "Genetic Transposer": "Генетический транспозер",
+      "Genetic Replicator": "Генетический репликатор",
+      "Genetic Template": "Генетический шаблон",
+      "Genetic Sample": "Образец гена",
+      "Mutatron": "Мутатрон",
+      "Mutagen Producer": "Мутагенный производитель",
+      "Industrial Apiary": "Промышленная пасека",
+      "Protein": "Протеин"
+    }
+  },
+  "resources": {
+    "Enzyme": "Бактериальный фермент",
+    "Fluorescent Dye": "Светящийся краситель",
+    "Ethanol": "Этанол (не найдено на вики — проверить)",
+    "Bacteria Vector": "полимеризированная бактерия (вики) — проверить",
+    "Liquid Growth Medium": "Питательная среда (проверить)",
+    "Genetics Labware": "Лабораторная посуда (проверить)"
+  },
+  "traits": {
+    "Species": "Вид",
+    "Speed": "Скорость",
+    "Lifespan": "Продолжительность жизни",
+    "Fertility": "Плодовитость",
+    "Temperature Tolerance": "Адаптация к температуре",
+    "Humidity Tolerance": "Адаптация к влажности",
+    "Nocturnal": "Ночная активность",
+    "Tolerant Flyer": "Полёт в дождь",
+    "Cave Dwelling": "Пещерная активность",
+    "Flowering": "Опыление",
+    "Territory": "Территория",
+    "Effect": "Эффект",
+    "Flower Provider": "Опыляемые цветы"
+  },
+  "alleles": {
+    "_source": "speed/lifespan/flowering — комьюнити-перевод (гайд TechnoMagic Sky, ru-minecraft). fertility — ru.minecraft.wiki. effect/flowers — наш перевод (в гайдах обычно оставляют EN), en в тултипе. Числа требуют in-game выверки.",
+    "speed": [
+      {
+        "en": "Slowest",
+        "ru": "Очень медленная",
+        "val": 0.3
+      },
+      {
+        "en": "Slower",
+        "ru": "Медленная",
+        "val": 0.6
+      },
+      {
+        "en": "Slow",
+        "ru": "Неторопливая",
+        "val": 0.8
+      },
+      {
+        "en": "Normal",
+        "ru": "Обычная",
+        "val": 1
+      },
+      {
+        "en": "Fast",
+        "ru": "Быстрая",
+        "val": 1.2
+      },
+      {
+        "en": "Faster",
+        "ru": "Очень быстрая",
+        "val": 1.4
+      },
+      {
+        "en": "Fastest",
+        "ru": "Наибыстрейшая",
+        "val": 1.7
+      },
+      {
+        "en": "Blinding",
+        "ru": "Молниеносная",
+        "val": 2,
+        "mod": "MagicBees"
+      }
+    ],
+    "lifespan": [
+      {
+        "en": "Shortest",
+        "ru": "Наикратчайший",
+        "val": 10
+      },
+      {
+        "en": "Shorter",
+        "ru": "Кратчайший",
+        "val": 20
+      },
+      {
+        "en": "Short",
+        "ru": "Краткий",
+        "val": 30
+      },
+      {
+        "en": "Shortened",
+        "ru": "Короткий",
+        "val": 35
+      },
+      {
+        "en": "Normal",
+        "ru": "Обычный",
+        "val": 40
+      },
+      {
+        "en": "Elongated",
+        "ru": "Продлённый",
+        "val": 45
+      },
+      {
+        "en": "Long",
+        "ru": "Длинный",
+        "val": 50
+      },
+      {
+        "en": "Longer",
+        "ru": "Очень длинный",
+        "val": 60
+      },
+      {
+        "en": "Longest",
+        "ru": "Длиннейший",
+        "val": 70
+      },
+      {
+        "en": "Eon",
+        "ru": "Вечный",
+        "val": 600,
+        "mod": "MagicBees"
+      }
+    ],
+    "flowering": [
+      {
+        "en": "Slowest",
+        "ru": "Очень медленная"
+      },
+      {
+        "en": "Slower",
+        "ru": "Медленная"
+      },
+      {
+        "en": "Slow",
+        "ru": "Неторопливая"
+      },
+      {
+        "en": "Average",
+        "ru": "Средняя"
+      },
+      {
+        "en": "Fast",
+        "ru": "Быстрая"
+      },
+      {
+        "en": "Faster",
+        "ru": "Очень быстрая"
+      },
+      {
+        "en": "Fastest",
+        "ru": "Наибыстрейшая"
+      }
+    ],
+    "fertility": [
+      {
+        "en": "1",
+        "ru": "1 трутень"
+      },
+      {
+        "en": "2",
+        "ru": "2 трутня"
+      },
+      {
+        "en": "3",
+        "ru": "3 трутня"
+      },
+      {
+        "en": "4",
+        "ru": "4 трутня"
+      }
+    ],
+    "tolerance": [
+      "None",
+      "Up 1",
+      "Up 2",
+      "Up 3",
+      "Down 1",
+      "Down 2",
+      "Down 3",
+      "Both 1",
+      "Both 2",
+      "Both 3",
+      "Both 5"
+    ],
+    "territory": [
+      {
+        "en": "Average",
+        "ru": "Средняя",
+        "size": "9×6×9"
+      },
+      {
+        "en": "Large",
+        "ru": "Большая",
+        "size": "11×8×11"
+      },
+      {
+        "en": "Larger",
+        "ru": "Очень большая",
+        "size": "13×12×13"
+      },
+      {
+        "en": "Largest",
+        "ru": "Наибольшая",
+        "size": "15×13×15"
+      }
+    ],
+    "effect": [
+      {
+        "en": "None",
+        "ru": "Нет"
+      },
+      {
+        "en": "Aggressive",
+        "ru": "Агрессивный"
+      },
+      {
+        "en": "Beatific",
+        "ru": "Благостный"
+      },
+      {
+        "en": "Creeper",
+        "ru": "Крипер"
+      },
+      {
+        "en": "Explorer",
+        "ru": "Исследователь"
+      },
+      {
+        "en": "Freezing",
+        "ru": "Замораживающий"
+      },
+      {
+        "en": "Heroic",
+        "ru": "Героический"
+      },
+      {
+        "en": "Flammable",
+        "ru": "Воспламеняющий"
+      },
+      {
+        "en": "Poison",
+        "ru": "Ядовитый"
+      },
+      {
+        "en": "Ends",
+        "ru": "Иссушающий"
+      },
+      {
+        "en": "Radioactive",
+        "ru": "Радиоактивный"
+      },
+      {
+        "en": "Drunkard",
+        "ru": "Опьяняющий"
+      },
+      {
+        "en": "Repulsion",
+        "ru": "Отталкивающий"
+      },
+      {
+        "en": "Reanimation",
+        "ru": "Реанимирующий"
+      }
+    ],
+    "flowers": [
+      {
+        "en": "Flowers",
+        "ru": "Цветы"
+      },
+      {
+        "en": "Nether",
+        "ru": "Адские"
+      },
+      {
+        "en": "Cacti",
+        "ru": "Кактусы"
+      },
+      {
+        "en": "Jungle",
+        "ru": "Джунгли"
+      },
+      {
+        "en": "End",
+        "ru": "Энд"
+      },
+      {
+        "en": "Wheat",
+        "ru": "Пшеница"
+      },
+      {
+        "en": "Mushrooms",
+        "ru": "Грибы"
+      },
+      {
+        "en": "Gourds",
+        "ru": "Тыквы"
+      }
+    ],
+    "temperature_axis": [
+      "Icy",
+      "Cold",
+      "Normal",
+      "Warm",
+      "Hot",
+      "Hellish"
+    ],
+    "humidity_axis": [
+      "Arid",
+      "Normal",
+      "Damp"
+    ]
+  },
+  "species": [
+    {
+      "en": "Common",
+      "ru": "Обычная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Cultivated",
+      "ru": "Развитая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Noble",
+      "ru": "Знатная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Majestic",
+      "ru": "Величавая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Imperial",
+      "ru": "Имперская",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Diligent",
+      "ru": "Прилежная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Unweary",
+      "ru": "Неутомимая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Industrious",
+      "ru": "Трудолюбивая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Heroic",
+      "ru": "Героическая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Sinister",
+      "ru": "Зловещая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Fiendish",
+      "ru": "Жестокая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Demonic",
+      "ru": "Одержимая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Frugal",
+      "ru": "Бережливая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Austere",
+      "ru": "Суровая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Exotic",
+      "ru": "Редкая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Edenic",
+      "ru": "Райская",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Spectral",
+      "ru": "Призрачная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Phantasmal",
+      "ru": "Воображаемая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Icy",
+      "ru": "Ледяная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Glacial",
+      "ru": "Ледниковая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Vindictive",
+      "ru": "Карательная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Vengeful",
+      "ru": "Мстительная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Avenging",
+      "ru": "Мстящая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Leporine",
+      "ru": "Заячья",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Merry",
+      "ru": "Весёлая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Tipsy",
+      "ru": "Пьяная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Tricky",
+      "ru": "Хитрая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Rural",
+      "ru": "Сельская",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Farmerly",
+      "ru": "Прошлая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Agrarian",
+      "ru": "Земельная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Miry",
+      "ru": "Топкая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Boggy",
+      "ru": "Болотистая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Secluded",
+      "ru": "Укромная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Hermitic",
+      "ru": "Уединённая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Arid",
+      "ru": "Засушливая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Barren",
+      "ru": "Бесплодная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Desolate",
+      "ru": "Заброшенная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Decomposing",
+      "ru": "Разлагающаяся",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Gnawing",
+      "ru": "Мучительная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Decaying",
+      "ru": "Гнилая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Skeletal",
+      "ru": "Скелетная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Creepy",
+      "ru": "Криперная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Tolerant",
+      "ru": "Толерантная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Robust",
+      "ru": "Выносливая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Resilient",
+      "ru": "Устойчивая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Corroded",
+      "ru": "Коррозийная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Tarnished",
+      "ru": "Потускневшая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Rusty",
+      "ru": "Ржавая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Leaden",
+      "ru": "Свинцовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Galvanized",
+      "ru": "Оцинкованная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Impregnable",
+      "ru": "Неприступная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Invincible",
+      "ru": "Непобедимая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Lustered",
+      "ru": "Взволнованная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Glittering",
+      "ru": "Сверкающая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Shining",
+      "ru": "Сияющая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Valuable",
+      "ru": "Ценная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Lapis",
+      "ru": "Лазуритовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Emerald",
+      "ru": "Изумрудная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Ruby",
+      "ru": "Рубиновая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Sapphire",
+      "ru": "Сапфировая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Diamond",
+      "ru": "Алмазная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Unstable",
+      "ru": "Нестабильная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Nuclear",
+      "ru": "Ядерная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Radioactive",
+      "ru": "Радиоактивная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Yellorium",
+      "ru": "Йеллориумовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Cyanite",
+      "ru": "Цианитовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Blutonium",
+      "ru": "Блутониевая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Ancient",
+      "ru": "Древняя",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Primeval",
+      "ru": "Первобытная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Prehistoric",
+      "ru": "Доисторическая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Relic",
+      "ru": "Реликтовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Fossilised",
+      "ru": "Окаменелая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Resinous",
+      "ru": "Смолистая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Oily",
+      "ru": "Нефтяная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Distilled",
+      "ru": "Дистиллированная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Refined",
+      "ru": "Изысканная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Tarry",
+      "ru": "Медлительная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Elastic",
+      "ru": "Эластичная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "River",
+      "ru": "Речная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Ocean",
+      "ru": "Океаническая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Stained",
+      "ru": "Испачканная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Sweetened",
+      "ru": "Сладкая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Sugary",
+      "ru": "Сахарная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Ripening",
+      "ru": "Созревающая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Fruity",
+      "ru": "Фруктовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Fermented",
+      "ru": "Ферментная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Bovine",
+      "ru": "Коровья",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Caffeinated",
+      "ru": "Кофейная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Furious",
+      "ru": "Яростная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Volcanic",
+      "ru": "Огнедышащая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Glowering",
+      "ru": "Сердитая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Malicious",
+      "ru": "Вредоносная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Infectious",
+      "ru": "Заразная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Virulent",
+      "ru": "Ядовитая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Viscous",
+      "ru": "Вязкая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Glutinous",
+      "ru": "Клейкая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Sticky",
+      "ru": "Липкая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Corrosive",
+      "ru": "Едкая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Caustic",
+      "ru": "Едко-щелочная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Acidic",
+      "ru": "Едко-кислотная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Excited",
+      "ru": "Возбуждённая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Energetic",
+      "ru": "Энергетическая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Ecstatic",
+      "ru": "Исступлённая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Shadowed",
+      "ru": "Омрачённая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Darkened",
+      "ru": "Потемневшая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Abyssal",
+      "ru": "Глубинная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Maroon",
+      "ru": "Тёмно-бордовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Saffron",
+      "ru": "Шафрановая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Prussian",
+      "ru": "Прусская",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Natural",
+      "ru": "Зелёная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Ebony",
+      "ru": "Черномазая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Bleached",
+      "ru": "Отбелённая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Sepia",
+      "ru": "Коричневая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Amber",
+      "ru": "Оранжевая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Turquoise",
+      "ru": "Бирюзовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Indigo",
+      "ru": "Фиолетовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Slate",
+      "ru": "Серая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Azure",
+      "ru": "Голубая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Lavender",
+      "ru": "Розовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Lime",
+      "ru": "Лаймовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Fuchsia",
+      "ru": "Пурпурная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Ashen",
+      "ru": "Светло-серая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Jaded",
+      "ru": "Изнурённая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Quantum",
+      "ru": "Квантовая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Abnormal",
+      "ru": "Аномальная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Spatial",
+      "ru": "Пространственная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Mystical",
+      "ru": "Мистическая",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Forest",
+      "ru": "Лесная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Meadows",
+      "ru": "Луговая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Steadfast",
+      "ru": "Стойкая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Valiant",
+      "ru": "Доблестная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Modest",
+      "ru": "Скромная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Tropical",
+      "ru": "Тропическая",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Ender",
+      "ru": "Драконья",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Wintry",
+      "ru": "Зимняя",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Marshy",
+      "ru": "Болотная",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Monastic",
+      "ru": "Монашья",
+      "mod": "Forestry"
+    },
+    {
+      "en": "Rocky",
+      "ru": "Каменная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Water",
+      "ru": "Водная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Embittered",
+      "ru": "Озлобленная",
+      "mod": "ExtraBees"
+    },
+    {
+      "en": "Esoteric",
+      "ru": "Тайная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Mysterious",
+      "ru": "Таинственная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Arcane",
+      "ru": "Магическая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Charmed",
+      "ru": "Заколдованная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Enchanted",
+      "ru": "Зачарованная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Supernatural",
+      "ru": "Сверхъестественная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Ethereal",
+      "ru": "Эфирная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Windy",
+      "ru": "Ветряная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Watery",
+      "ru": "Водная ✦",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Earthy",
+      "ru": "Earthy",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Firey",
+      "ru": "Огненная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Aware",
+      "ru": "Памятная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Spirit",
+      "ru": "Духовная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Soul",
+      "ru": "Душевная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Pupil",
+      "ru": "Подопечная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Scholarly",
+      "ru": "Учёная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Savant",
+      "ru": "Сведущая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Timely",
+      "ru": "Временная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Lordly",
+      "ru": "Роскошная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Doctoral",
+      "ru": "Докторская",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Hateful",
+      "ru": "Ненавистная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Spiteful",
+      "ru": "Злопамятная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Withering",
+      "ru": "Иссушающая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Skulking",
+      "ru": "Прячущиеся",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Spidery",
+      "ru": "Паучая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Ghastly",
+      "ru": "Ужасная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Smouldering",
+      "ru": "Тлеющая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Bigbad",
+      "ru": "Bigbad",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Chicken",
+      "ru": "Chicken",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Beef",
+      "ru": "Beef",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Pork",
+      "ru": "Pork",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Sheepish",
+      "ru": "Sheepish",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Neighsayer",
+      "ru": "Neighsayer",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Catty",
+      "ru": "Catty",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Batty",
+      "ru": "Batty",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Brainy",
+      "ru": "Brainy",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Nameless",
+      "ru": "Безымянная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Abandoned",
+      "ru": "Брошенная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Forlorn",
+      "ru": "Одинокая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Draconic",
+      "ru": "Драконья ✦",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Mutable",
+      "ru": "Изменчивая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Transmuting",
+      "ru": "Трансмутирующая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Crumbling",
+      "ru": "Разрушающая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Invisible",
+      "ru": "Невидимая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Cuprum",
+      "ru": "Медная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Stannum",
+      "ru": "Оловянная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Ferrous",
+      "ru": "Железистая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Argentum",
+      "ru": "Серебряная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Aluminum",
+      "ru": "Алюминиевая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Ardite",
+      "ru": "Ардитовая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Cobalt",
+      "ru": "Кобальтовая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Manyullyn",
+      "ru": "Мануллиновая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Diamandi",
+      "ru": "Алмазная ✦",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Apatine",
+      "ru": "Апатитовая",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcAir",
+      "ru": "TcAir",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcFire",
+      "ru": "TcFire",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcWater",
+      "ru": "TcWater",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcEarth",
+      "ru": "TcEarth",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcOrder",
+      "ru": "TcOrder",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcChaos",
+      "ru": "TcChaos",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcVis",
+      "ru": "TcVis",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcRejuvenating",
+      "ru": "TcRejuvenating",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcEmpowering",
+      "ru": "TcEmpowering",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcNexus",
+      "ru": "TcNexus",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcTaint",
+      "ru": "TcTaint",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcPure",
+      "ru": "TcPure",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcHungry",
+      "ru": "TcHungry",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcWispy",
+      "ru": "TcWispy",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TcVoid",
+      "ru": "TcVoid",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmEssence",
+      "ru": "AmEssence",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmQuintessence",
+      "ru": "AmQuintessence",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmAir",
+      "ru": "AmAir",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmEarth",
+      "ru": "AmEarth",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmFire",
+      "ru": "AmFire",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmWater",
+      "ru": "AmWater",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmArcane",
+      "ru": "AmArcane",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmLightning",
+      "ru": "AmLightning",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmPlant",
+      "ru": "AmPlant",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmIce",
+      "ru": "AmIce",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmVortex",
+      "ru": "AmVortex",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AmWight",
+      "ru": "AmWight",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "EeMinium",
+      "ru": "EeMinium",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "RsaFluxed",
+      "ru": "RsaFluxed",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeBronze",
+      "ru": "TeBronze",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeElectrum",
+      "ru": "TeElectrum",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeNickel",
+      "ru": "TeNickel",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeInvar",
+      "ru": "TeInvar",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TePlatinum",
+      "ru": "TePlatinum",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeCoal",
+      "ru": "TeCoal",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeDestabilized",
+      "ru": "TeDestabilized",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeLux",
+      "ru": "TeLux",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeDante",
+      "ru": "TeDante",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TePyro",
+      "ru": "TePyro",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeBlizzy",
+      "ru": "TeBlizzy",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeGelid",
+      "ru": "TeGelid",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeShocking",
+      "ru": "TeShocking",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeAmped",
+      "ru": "TeAmped",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeGrounded",
+      "ru": "TeGrounded",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeRocking",
+      "ru": "TeRocking",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeWinsome",
+      "ru": "TeWinsome",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "TeEndearing",
+      "ru": "TeEndearing",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Rooted",
+      "ru": "Rooted",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Somnolent",
+      "ru": "Somnolent",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Dreaming",
+      "ru": "Dreaming",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Blossom",
+      "ru": "Blossom",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Floral",
+      "ru": "Floral",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "AeSkystone",
+      "ru": "AeSkystone",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Mystical",
+      "ru": "Мистическая ✦",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Sorcerous",
+      "ru": "Волшебная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Unusual",
+      "ru": "Необычная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Attuned",
+      "ru": "Приученная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Eldritch",
+      "ru": "Древняя ✦",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Infernal",
+      "ru": "Адская",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Oblivion",
+      "ru": "Забвенная",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Botanic",
+      "ru": "Botanic",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Vazbee",
+      "ru": "Vazbee",
+      "mod": "MagicBees"
+    },
+    {
+      "en": "Alfheim",
+      "ru": "Alfheim",
+      "mod": "MagicBees"
+    }
+  ],
+  "_notes": {
+    "alleles_terms": "«аллель» (м.р.: аллеля/аллелю/аллели) каноничен — ru.minecraft.wiki Forestry/Пчеловодство, наравне с ген/признак/хромосома/доминантный/рецессивный.",
+    "serum": "РЕШЕНО: показывать оба названия через слеш/сноску — основной «Серум», альт. «Генетическая посуда» (термин вики). Inline: «Серум / Генетическая посуда»; в гайд-тексте — сноска.",
+    "todo": "Сверить названия признаков (traits) и аллелей со страницей ru.minecraft.wiki Forestry/Пчеловодство."
+  }
+}

@@ -18,6 +18,7 @@
     "verify:trees": "vitest run src/trackers/trees/domain/integrity.test.ts",
     "verify:bees": "vitest run src/trackers/bees/domain/integrity.test.ts",
     "gen:bees": "node scripts/gen-bees.mjs",
+    "gen:genetics": "node scripts/gen-genetics.mjs",
     "gen:tree-icons": "node scripts/gen-tree-icons.mjs",
     "gen:fruit-icons": "node scripts/gen-fruit-icons.mjs",
     "screenshot": "node scripts/screenshot.mjs",
