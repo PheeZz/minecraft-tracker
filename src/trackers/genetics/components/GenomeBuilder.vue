@@ -11,6 +11,7 @@ import {
 import { CARRIERS } from '../data/carriers'
 import { useGenesStore } from '../stores/useGenesStore'
 import { useGeneTargetsStore } from '../stores/useGeneTargetsStore'
+import IconBase from '@/shared/ui/IconBase.vue'
 import { useBeesStore } from '@/trackers/bees/stores/useBeesStore'
 import { useBeesUiStore } from '@/trackers/bees/stores/useBeesUiStore'
 import EnTip from './EnTip.vue'
@@ -104,9 +105,8 @@ function breed(ru: string): void {
               ><EnTip :en="t.en">{{ t.ru }}</EnTip></span
             >
             <span class="row__st" :class="statuses[t.key]">
-              {{
-                statuses[t.key] === 'have' ? '✓ есть' : statuses[t.key] === 'need' ? 'нужен' : ''
-              }}
+              <template v-if="statuses[t.key] === 'have'"><IconBase name="check" /> есть</template>
+              <template v-else-if="statuses[t.key] === 'need'">нужен</template>
             </span>
           </div>
           <div class="chips" role="group" :aria-label="t.ru">
@@ -162,7 +162,7 @@ function breed(ru: string): void {
               >
               <template v-if="carrier(g.trait, g.en)">
                 <span v-if="bees.isHave(carrier(g.trait, g.en)!.ru)" class="need__own">
-                  ← {{ carrier(g.trait, g.en)!.ru }} ✓
+                  ← {{ carrier(g.trait, g.en)!.ru }} <IconBase name="check" />
                 </span>
                 <button
                   v-else
@@ -175,7 +175,7 @@ function breed(ru: string): void {
               </template>
             </li>
           </ul>
-          <p v-else class="need__done">Всё нужное собрано ✓</p>
+          <p v-else class="need__done">Всё нужное собрано <IconBase name="check" /></p>
         </div>
       </aside>
     </div>

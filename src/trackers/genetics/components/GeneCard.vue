@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import IconBase from '@/shared/ui/IconBase.vue'
 import { carriersOf, geneKey, type AlleleDef, type TraitDef } from '../domain/genetics'
 import { useGenesStore } from '../stores/useGenesStore'
 import { useBeesStore } from '@/trackers/bees/stores/useBeesStore'
@@ -48,7 +49,9 @@ onMounted(() => root.value?.focus())
         <div class="gcard__t2">{{ trait.en }} · {{ allele.en }}</div>
       </div>
       <span v-if="allele.mod" class="gcard__mod">{{ allele.mod }}</span>
-      <button type="button" class="gcard__x" aria-label="Закрыть" @click="emit('close')">✕</button>
+      <button type="button" class="gcard__x" aria-label="Закрыть" @click="emit('close')">
+        <IconBase name="close" />
+      </button>
     </header>
 
     <div class="gcard__sec">
@@ -76,7 +79,9 @@ onMounted(() => root.value?.focus())
         <li v-for="c in carriers.slice(0, 8)" :key="c.mod + '|' + c.en">
           <EnTip :en="c.en">{{ c.ru }}</EnTip>
           <span class="gcard__cright">
-            <span v-if="bees.isHave(c.ru)" class="gcard__own yes">✓ в складе</span>
+            <span v-if="bees.isHave(c.ru)" class="gcard__own yes"
+              ><IconBase name="check" /> в складе</span
+            >
             <button
               v-else
               type="button"
@@ -95,7 +100,8 @@ onMounted(() => root.value?.focus())
     <div class="gcard__sec gcard__sec--last">
       <div class="gcard__lab">МОЙ СТАТУС</div>
       <div class="gcard__status" :class="{ yes: have }">
-        {{ have ? '✓ Ген собран' : 'Ещё не собран' }}
+        <template v-if="have"><IconBase name="check" /> Ген собран</template>
+        <template v-else>Ещё не собран</template>
       </div>
       <button type="button" class="gcard__toggle" @click="genes.toggle(trait.key, allele.en)">
         {{ have ? 'Снять отметку' : 'Отметить собранным' }}

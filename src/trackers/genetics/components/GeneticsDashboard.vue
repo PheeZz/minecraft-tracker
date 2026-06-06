@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { TRAITS } from '../data/genetics.data'
 import { carriersOf, collectionTotals, targetSummary, traitCompletion } from '../domain/genetics'
 import { CARRIERS } from '../data/carriers'
+import IconBase from '@/shared/ui/IconBase.vue'
 import { useGenesStore } from '../stores/useGenesStore'
 import { useGeneTargetsStore } from '../stores/useGeneTargetsStore'
 import EnTip from './EnTip.vue'
@@ -80,7 +81,7 @@ const traitBars = computed(() =>
             <div v-if="c.next" class="tgt__next">
               дальше: изолировать <EnTip :en="c.next.en">{{ c.next.ru }}</EnTip>
             </div>
-            <div v-else class="tgt__done">готова ✓</div>
+            <div v-else class="tgt__done">готова <IconBase name="check" /></div>
           </div>
         </template>
         <p v-else class="muted">
@@ -101,7 +102,7 @@ const traitBars = computed(() =>
             >
           </div>
           <button type="button" class="link" @click="emit('goto', 'pipeline')">
-            ⚙️ Открыть пайплайн →
+            <IconBase name="branch" /> Открыть пайплайн →
           </button>
         </template>
         <p v-else class="muted">Всё нужное для целей собрано — или цели ещё не заданы.</p>
