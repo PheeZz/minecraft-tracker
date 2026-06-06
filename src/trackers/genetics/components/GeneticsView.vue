@@ -100,10 +100,12 @@ async function onImport(e: Event): Promise<void> {
     </p>
 
     <div class="genetics__body">
-      <GeneticsDashboard v-if="panel === 'dashboard'" @goto="panel = $event" />
-      <GeneCollection v-else-if="panel === 'collection'" @pick="pick" />
-      <GenomeBuilder v-else-if="panel === 'builder'" />
-      <MachinePipeline v-else-if="panel === 'pipeline'" />
+      <Transition name="gpanel" mode="out-in">
+        <GeneticsDashboard v-if="panel === 'dashboard'" key="dashboard" @goto="panel = $event" />
+        <GeneCollection v-else-if="panel === 'collection'" key="collection" @pick="pick" />
+        <GenomeBuilder v-else-if="panel === 'builder'" key="builder" />
+        <MachinePipeline v-else-if="panel === 'pipeline'" key="pipeline" />
+      </Transition>
     </div>
 
     <GeneCard v-if="card" :trait="card.trait" :allele="card.allele" @close="card = null" />
@@ -193,5 +195,23 @@ async function onImport(e: Event): Promise<void> {
   flex: 1;
   min-height: 0;
   overflow: auto;
+}
+
+/* Переход между внутренними вкладками раздела (в духе inv-перехода пчёл).
+   Длительности гасятся глобальным prefers-reduced-motion фолбэком. */
+.gpanel-enter-active {
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+.gpanel-leave-active {
+  transition: opacity 0.12s ease;
+}
+.gpanel-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.gpanel-leave-to {
+  opacity: 0;
 }
 </style>
