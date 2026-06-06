@@ -328,7 +328,14 @@ function breed(ru: string): void {
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
+}
+.row__st.have,
+.row__st.need {
+  padding: 4px 11px;
   border-radius: 20px;
 }
 .row__st.have {
