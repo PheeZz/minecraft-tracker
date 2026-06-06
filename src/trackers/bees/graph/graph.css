@@ -8,7 +8,6 @@
   vertical-align: -4px;
   margin-right: 6px;
   flex: none;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.28));
 }
 [data-tracker='bees'] .bic {
   width: 20px;
@@ -17,7 +16,6 @@
   vertical-align: -5px;
   margin-right: 6px;
   flex: none;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
 }
 
 .gnode {
@@ -92,17 +90,13 @@
   margin-right: 0;
 }
 
-/* «лёгкий рендер» при панораме/зуме: тени слоёв и drop-shadow иконок — самое дорогое
-   в компоновке DOM-карточек; на время движения снимаем их (восстанавливаются через 160мс). */
+/* «лёгкий рендер» при панораме/зуме: тени слоёв DOM-карточек — самое дорогое
+   в компоновке; на время движения снимаем их (восстанавливаются через 160мс). */
 body.is-panning .gnode,
 body.is-panning .gnode.g-M,
 body.is-panning .gnode.g-have,
 body.is-panning .gnode.g-target {
   box-shadow: none !important;
-}
-body.is-panning .bic,
-body.is-panning .cic {
-  filter: none !important;
 }
 
 /* ---- вход нод пчёл (cy-intro на контейнере, снимается через ~600мс) ----

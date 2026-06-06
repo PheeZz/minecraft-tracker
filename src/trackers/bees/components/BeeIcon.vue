@@ -40,7 +40,6 @@ watch(color, paint)
   vertical-align: -5px;
   margin-right: 6px;
   flex: none;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
 }
 .bic.big {
   width: 30px;

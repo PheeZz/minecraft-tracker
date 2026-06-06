@@ -39,7 +39,6 @@ watch(color, paint)
   vertical-align: -4px;
   margin-right: 6px;
   flex: none;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.28));
 }
 .cic.big {
   width: 26px;
