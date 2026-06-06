@@ -1,0 +1,5361 @@
+{
+  "_meta": {
+    "source": "decompiled (CFR 0.152): forestry-4.2.16.64, binnie-mods-2.0.22.7 (extrabees), magicbees-2.4.4; lang from same JARs",
+    "generated": "2026-06-06",
+    "model": "genome = defaultTemplate -> branch overrides -> species overrides (Forestry/ExtraBees); modBase -> base-chain -> species (MagicBees)",
+    "counts": {
+      "extracted": 275,
+      "fullGenome13": 192,
+      "whitelistTotal": 256,
+      "matchedWhitelist": 256
+    },
+    "coverageGaps": [
+      "Abnormal (ExtraBees): effect=Gravity (no canonical value)",
+      "Absolute (ExtraBees): flowers=Snow (no canonical value)",
+      "Abyssal (ExtraBees): effect=Wither (no canonical value)",
+      "Acidic (ExtraBees): effect=Acidic (no canonical value)",
+      "Aer (MagicBees): flowering=Maximum (no canonical value)",
+      "Agrarian (Forestry): effect=Fertile (no canonical value)",
+      "Arid (ExtraBees): flowers=Dead Bushes (no canonical value)",
+      "Barren (ExtraBees): flowers=Dead Bushes (no canonical value)",
+      "Blizzy (MagicBees): flowers=Snow (no canonical value)",
+      "Blooming (ExtraBees): effect=Growth (no canonical value)",
+      "Blooming (ExtraBees): flowers=Saplings (no canonical value)",
+      "Blutonium (ExtraBees): effect=Unstable (no canonical value)",
+      "Blutonium (ExtraBees): flowers=Rocks (no canonical value)",
+      "Boggy (Forestry): effect=Mycophilic (no canonical value)",
+      "Caustic (ExtraBees): effect=Acidic (no canonical value)",
+      "Celebratory (ExtraBees): effect=Fireworks (no canonical value)",
+      "Corroded (ExtraBees): flowers=Rocks (no canonical value)",
+      "Corrosive (ExtraBees): effect=Acidic (no canonical value)",
+      "Creepy (ExtraBees): effect=Creepers (no canonical value)",
+      "Creepy (ExtraBees): flowers=Dead Bushes (no canonical value)",
+      "Cyanite (ExtraBees): effect=Unstable (no canonical value)",
+      "Cyanite (ExtraBees): flowers=Rocks (no canonical value)",
+      "Damp (ExtraBees): effect=Slowness (no canonical value)",
+      "Darkened (ExtraBees): effect=Darkness (no canonical value)",
+      "Decaying (ExtraBees): effect=Zombies (no canonical value)",
+      "Decaying (ExtraBees): flowers=Dead Bushes (no canonical value)",
+      "Decomposing (ExtraBees): flowers=Dead Bushes (no canonical value)",
+      "Desolate (ExtraBees): effect=Hunger (no canonical value)",
+      "Desolate (ExtraBees): flowers=Dead Bushes (no canonical value)",
+      "Diamond (ExtraBees): flowers=Rocks (no canonical value)",
+      "Ecstatic (ExtraBees): effect=Power (no canonical value)",
+      "Ecstatic (ExtraBees): flowers=Redstone (no canonical value)",
+      "Emerald (ExtraBees): flowers=Rocks (no canonical value)",
+      "Energetic (ExtraBees): effect=Lightning (no canonical value)",
+      "Energetic (ExtraBees): flowers=Redstone (no canonical value)",
+      "Excited (ExtraBees): effect=Lightning (no canonical value)",
+      "Excited (ExtraBees): flowers=Redstone (no canonical value)",
+      "Floral (MagicBees): flowering=Maximum (no canonical value)",
+      "Frigid (ExtraBees): flowers=Snow (no canonical value)",
+      "Fruity (ExtraBees): effect=Ripening (no canonical value)",
+      "Fruity (ExtraBees): flowers=Reeds (no canonical value)",
+      "Fungal (ExtraBees): effect=Mushroom (no canonical value)",
+      "Furious (ExtraBees): effect=Meteor (no canonical value)",
+      "Galvanized (ExtraBees): flowers=Rocks (no canonical value)",
+      "Gelid (MagicBees): flowers=Snow (no canonical value)",
+      "Glacial (Forestry): flowers=Snow (no canonical value)",
+      "Glittering (ExtraBees): flowers=Rocks (no canonical value)",
+      "Glutinous (ExtraBees): effect=Ectoplasm (no canonical value)",
+      "Gnawing (ExtraBees): flowers=Wood (no canonical value)",
+      "Growing (ExtraBees): flowers=Leaves (no canonical value)",
+      "Icy (Forestry): flowers=Snow (no canonical value)",
+      "Impregnable (ExtraBees): flowers=Rocks (no canonical value)",
+      "Invincible (ExtraBees): flowers=Rocks (no canonical value)",
+      "Jaded (ExtraBees): flowering=Maximum (no canonical value)",
+      "Lapis (ExtraBees): flowers=Rocks (no canonical value)",
+      "Leaden (ExtraBees): flowers=Rocks (no canonical value)",
+      "Leporine (Forestry): effect=Festive (no canonical value)",
+      "Lustered (ExtraBees): flowers=Rocks (no canonical value)",
+      "Merry (Forestry): effect=Snow (no canonical value)",
+      "Mystical (ExtraBees): flowers=Mystical (no canonical value)",
+      "Nuclear (ExtraBees): effect=Unstable (no canonical value)",
+      "Nuclear (ExtraBees): flowers=Rocks (no canonical value)",
+      "Ocean (ExtraBees): effect=Water (no canonical value)",
+      "Ocean (ExtraBees): flowers=Lily Pads (no canonical value)",
+      "Phantasmal (Forestry): effect=Resurrection (no canonical value)",
+      "Radioactive (ExtraBees): effect=Unstable (no canonical value)",
+      "Radioactive (ExtraBees): flowers=Rocks (no canonical value)",
+      "Resilient (ExtraBees): flowers=Rocks (no canonical value)",
+      "Ripening (ExtraBees): flowers=Fruit (no canonical value)",
+      "River (ExtraBees): effect=Water (no canonical value)",
+      "River (ExtraBees): flowers=Lily Pads (no canonical value)",
+      "Robust (ExtraBees): flowers=Rocks (no canonical value)",
+      "Rocky (ExtraBees): flowers=Rocks (no canonical value)",
+      "Ruby (ExtraBees): flowers=Rocks (no canonical value)",
+      "Rusty (ExtraBees): flowers=Rocks (no canonical value)",
+      "Sapphire (ExtraBees): flowers=Rocks (no canonical value)",
+      "Shadowed (ExtraBees): effect=Darkness (no canonical value)",
+      "Shining (ExtraBees): flowers=Rocks (no canonical value)",
+      "Skeletal (ExtraBees): effect=Skeletons (no canonical value)",
+      "Skeletal (ExtraBees): flowers=Dead Bushes (no canonical value)",
+      "Sodden (ExtraBees): effect=Slowness (no canonical value)",
+      "Spatial (ExtraBees): effect=Gravity (no canonical value)",
+      "Stained (ExtraBees): effect=Water (no canonical value)",
+      "Stained (ExtraBees): flowers=Lily Pads (no canonical value)",
+      "Sticky (ExtraBees): effect=Ectoplasm (no canonical value)",
+      "Sugary (ExtraBees): flowers=Reeds (no canonical value)",
+      "Sweetened (ExtraBees): flowers=Reeds (no canonical value)",
+      "Tarnished (ExtraBees): flowers=Rocks (no canonical value)",
+      "Thriving (ExtraBees): flowers=Leaves (no canonical value)",
+      "Tolerant (ExtraBees): flowers=Rocks (no canonical value)",
+      "Unstable (ExtraBees): effect=Unstable (no canonical value)",
+      "Unstable (ExtraBees): flowers=Rocks (no canonical value)",
+      "Valuable (ExtraBees): flowers=Rocks (no canonical value)",
+      "Vazbee (MagicBees): flowering=Maximum (no canonical value)",
+      "Viscous (ExtraBees): effect=Ectoplasm (no canonical value)",
+      "Volcanic (ExtraBees): effect=Meteor (no canonical value)",
+      "Water (ExtraBees): effect=Water (no canonical value)",
+      "Water (ExtraBees): flowers=Lily Pads (no canonical value)",
+      "Watery (MagicBees): flowers=Snow (no canonical value)",
+      "Wintry (Forestry): flowers=Snow (no canonical value)",
+      "Yellorium (ExtraBees): effect=Unstable (no canonical value)",
+      "Yellorium (ExtraBees): flowers=Rocks (no canonical value)"
+    ],
+    "nonCanonicalAlleles": {
+      "effect": [
+        "Acidic",
+        "Creepers",
+        "Darkness",
+        "Ectoplasm",
+        "Fertile",
+        "Festive",
+        "Fireworks",
+        "Gravity",
+        "Growth",
+        "Hunger",
+        "Lightning",
+        "Meteor",
+        "Mushroom",
+        "Mycophilic",
+        "Power",
+        "Resurrection",
+        "Ripening",
+        "Skeletons",
+        "Slowness",
+        "Snow",
+        "Unstable",
+        "Water",
+        "Wither",
+        "Zombies"
+      ],
+      "flowering": [
+        "Maximum"
+      ],
+      "flowers": [
+        "Dead Bushes",
+        "Fruit",
+        "Leaves",
+        "Lily Pads",
+        "Mystical",
+        "Redstone",
+        "Reeds",
+        "Rocks",
+        "Saplings",
+        "Snow",
+        "Wood"
+      ]
+    },
+    "whitelistNotExtracted": [],
+    "extractedNotInWhitelist": [
+      "Absolute",
+      "Auric",
+      "Blooming",
+      "Celebratory",
+      "Certus",
+      "Damp",
+      "Esmeraldi",
+      "Farmed",
+      "Fluix",
+      "Frigid",
+      "Fungal",
+      "Growing",
+      "Hazardous",
+      "Mystical",
+      "Osmium",
+      "Plumbum",
+      "Silicon",
+      "Sodden",
+      "Thriving"
+    ]
+  },
+  "species": [
+    {
+      "en": "Abnormal",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Abnormal",
+        "speed": "Slower",
+        "lifespan": "Longer",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Large",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Absolute",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Absolute",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "4",
+        "tempTol": "Up 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing"
+      }
+    },
+    {
+      "en": "Abyssal",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Abyssal",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Acidic",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Acidic",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Amber",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Amber",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ancient",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Ancient",
+        "speed": "Slower",
+        "lifespan": "Elongated",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Arid",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Arid",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Ashen",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Ashen",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Azure",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Azure",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Barren",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Barren",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Bleached",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Bleached",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Blooming",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Blooming",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Fastest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Blutonium",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Blutonium",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Bovine",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Bovine",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Caffeinated",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Caffeinated",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Caustic",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Caustic",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Celebratory",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Celebratory",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Corroded",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Corroded",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Corrosive",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Corrosive",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Creepy",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Creepy",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Cyanite",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Cyanite",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Damp",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Damp",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Average",
+        "flowers": "Mushrooms"
+      }
+    },
+    {
+      "en": "Darkened",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Darkened",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Decaying",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Decaying",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Decomposing",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Decomposing",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Desolate",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Desolate",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Diamond",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Diamond",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Distilled",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Distilled",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ebony",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Ebony",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ecstatic",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Ecstatic",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Elastic",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Elastic",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Embittered",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Embittered",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Aggressive",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Emerald",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Emerald",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Energetic",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Energetic",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Excited",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Excited",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Farmed",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Farmed",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Wheat"
+      }
+    },
+    {
+      "en": "Fermented",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Fermented",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Drunkard",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Fossilised",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Fossilised",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Frigid",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Frigid",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "4",
+        "tempTol": "Up 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing"
+      }
+    },
+    {
+      "en": "Fruity",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Fruity",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Fuchsia",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Fuchsia",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Fungal",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Fungal",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Average",
+        "flowers": "Mushrooms"
+      }
+    },
+    {
+      "en": "Furious",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Furious",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Galvanized",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Galvanized",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Glittering",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Glittering",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Glowering",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Glowering",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Aggressive",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Glutinous",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Glutinous",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Gnawing",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Gnawing",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Growing",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Growing",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Hazardous",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Hazardous",
+        "speed": "Slowest",
+        "lifespan": "Longer",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Creeper",
+        "flowers": "Cacti"
+      }
+    },
+    {
+      "en": "Impregnable",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Impregnable",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Indigo",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Indigo",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Infectious",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Infectious",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "Poison",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Invincible",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Invincible",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Jaded",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Jaded",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "4",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "territory": "Largest",
+        "effect": "Beatific",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Lapis",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Lapis",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Lavender",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Lavender",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Leaden",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Leaden",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Lime",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Lime",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Lustered",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Lustered",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Malicious",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Malicious",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Poison",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Maroon",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Maroon",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Mystical",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Mystical",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Natural",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Natural",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Nuclear",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Nuclear",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Ocean",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Ocean",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Oily",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Oily",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Prehistoric",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Prehistoric",
+        "speed": "Slower",
+        "lifespan": "Longer",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Primeval",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Primeval",
+        "speed": "Slower",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Prussian",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Prussian",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Quantum",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Quantum",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Radioactive",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Radioactive",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Refined",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Refined",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Relic",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Relic",
+        "speed": "Slower",
+        "lifespan": "Longest",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Resilient",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Resilient",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Resinous",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Resinous",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ripening",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Ripening",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "River",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "River",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Robust",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Robust",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Rocky",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Rocky",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Ruby",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Ruby",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Rusty",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Rusty",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Saffron",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Saffron",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Sapphire",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Sapphire",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Sepia",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Sepia",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Shadowed",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Shadowed",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Shining",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Shining",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Skeletal",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Skeletal",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Slate",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Slate",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Sodden",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Sodden",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Average",
+        "flowers": "Mushrooms"
+      }
+    },
+    {
+      "en": "Spatial",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Spatial",
+        "speed": "Slower",
+        "lifespan": "Longer",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Large",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Stained",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Stained",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Sticky",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Sticky",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Sugary",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Sugary",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Sweetened",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Sweetened",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Tarnished",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Tarnished",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Tarry",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Tarry",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Thriving",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Thriving",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Fast",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Tolerant",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Tolerant",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Turquoise",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Turquoise",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Unstable",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Unstable",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Valuable",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Valuable",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Virulent",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Virulent",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "Poison",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Viscous",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Viscous",
+        "speed": "Slow",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Volcanic",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Volcanic",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Water",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Water",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Yellorium",
+      "mod": "ExtraBees",
+      "genome": {
+        "species": "Yellorium",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average"
+      }
+    },
+    {
+      "en": "Agrarian",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Agrarian",
+        "speed": "Slow",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 2",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Large",
+        "flowers": "Wheat"
+      }
+    },
+    {
+      "en": "Austere",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Austere",
+        "speed": "Slowest",
+        "lifespan": "Longer",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Creeper",
+        "flowers": "Cacti"
+      }
+    },
+    {
+      "en": "Avenging",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Avenging",
+        "speed": "Slowest",
+        "lifespan": "Longest",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Largest",
+        "effect": "Radioactive",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Boggy",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Boggy",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Larger",
+        "flowers": "Mushrooms"
+      }
+    },
+    {
+      "en": "Common",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Common",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Cultivated",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Cultivated",
+        "speed": "Fast",
+        "lifespan": "Shortest",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Demonic",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Demonic",
+        "speed": "Slower",
+        "lifespan": "Longer",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Diligent",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Diligent",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Edenic",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Edenic",
+        "speed": "Slowest",
+        "lifespan": "Longer",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Explorer",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Ender",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Ender",
+        "speed": "Slower",
+        "lifespan": "Longer",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Large",
+        "effect": "Ends",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Exotic",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Exotic",
+        "speed": "Normal",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Poison",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Farmerly",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Farmerly",
+        "speed": "Slow",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Large",
+        "effect": "None",
+        "flowers": "Wheat"
+      }
+    },
+    {
+      "en": "Fiendish",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Fiendish",
+        "speed": "Normal",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "Aggressive",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Forest",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Forest",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Frugal",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Frugal",
+        "speed": "Normal",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Cacti"
+      }
+    },
+    {
+      "en": "Glacial",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Glacial",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing"
+      }
+    },
+    {
+      "en": "Hermitic",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Hermitic",
+        "speed": "Slower",
+        "lifespan": "Long",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Fastest",
+        "territory": "Average",
+        "effect": "Repulsion",
+        "flowers": "Wheat"
+      }
+    },
+    {
+      "en": "Heroic",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Heroic",
+        "speed": "Slow",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Heroic",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Icy",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Icy",
+        "speed": "Slow",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing"
+      }
+    },
+    {
+      "en": "Imperial",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Imperial",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Beatific",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Industrious",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Industrious",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Fast",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Leporine",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Leporine",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Majestic",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Majestic",
+        "speed": "Normal",
+        "lifespan": "Shortened",
+        "fertility": "4",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Marshy",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Marshy",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Mushrooms"
+      }
+    },
+    {
+      "en": "Meadows",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Meadows",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Merry",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Merry",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Miry",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Miry",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "4",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Mushrooms"
+      }
+    },
+    {
+      "en": "Modest",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Modest",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "Down 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Cacti"
+      }
+    },
+    {
+      "en": "Monastic",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Monastic",
+        "speed": "Slower",
+        "lifespan": "Long",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Wheat"
+      }
+    },
+    {
+      "en": "Noble",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Noble",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Phantasmal",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Phantasmal",
+        "speed": "Slowest",
+        "lifespan": "Longest",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Large",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Rural",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Rural",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Wheat"
+      }
+    },
+    {
+      "en": "Secluded",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Secluded",
+        "speed": "Slower",
+        "lifespan": "Long",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Fastest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Wheat"
+      }
+    },
+    {
+      "en": "Sinister",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Sinister",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "Aggressive",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Spectral",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Spectral",
+        "speed": "Slower",
+        "lifespan": "Longer",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Large",
+        "effect": "Reanimation",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Steadfast",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Steadfast",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Tipsy",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Tipsy",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Drunkard",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Tricky",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Tricky",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Gourds"
+      }
+    },
+    {
+      "en": "Tropical",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Tropical",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Up 1",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Poison",
+        "flowers": "Jungle"
+      }
+    },
+    {
+      "en": "Unweary",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Unweary",
+        "speed": "Normal",
+        "lifespan": "Shortened",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Valiant",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Valiant",
+        "speed": "Slow",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Vengeful",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Vengeful",
+        "speed": "Normal",
+        "lifespan": "Longer",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Largest",
+        "effect": "Radioactive",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Vindictive",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Vindictive",
+        "speed": "Slower",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Largest",
+        "effect": "Radioactive",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Wintry",
+      "mod": "Forestry",
+      "genome": {
+        "species": "Wintry",
+        "speed": "Slower",
+        "lifespan": "Short",
+        "fertility": "4",
+        "tempTol": "Up 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing"
+      }
+    },
+    {
+      "en": "Abandoned",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Abandoned",
+        "speed": "Slow",
+        "lifespan": "Elongated",
+        "fertility": "2",
+        "tempTol": "Up 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Repulsion",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Aer",
+      "mod": "MagicBees",
+      "whitelistEn": "TcAir",
+      "genome": {
+        "species": "Aer",
+        "speed": "Fastest",
+        "lifespan": "Shortened",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "territory": "Largest",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Aiolic",
+      "mod": "MagicBees",
+      "whitelistEn": "AmAir",
+      "genome": {
+        "species": "Aiolic",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Largest",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Alfheim",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Alfheim",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Larger",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Aluminum",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Aluminum",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Amped",
+      "mod": "MagicBees",
+      "whitelistEn": "TeAmped",
+      "genome": {
+        "species": "Amped",
+        "speed": "Fast",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Apatine",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Apatine",
+        "speed": "Normal",
+        "lifespan": "Normal",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Aqua",
+      "mod": "MagicBees",
+      "whitelistEn": "TcWater",
+      "genome": {
+        "species": "Aqua",
+        "speed": "Fast",
+        "lifespan": "Long",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "Down 2",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Large",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Aqueous",
+      "mod": "MagicBees",
+      "whitelistEn": "AmWater",
+      "genome": {
+        "species": "Aqueous",
+        "speed": "Slowest",
+        "lifespan": "Elongated",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Down 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Arcane",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Arcane",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Arcane",
+      "mod": "MagicBees",
+      "whitelistEn": "AmArcane",
+      "genome": {
+        "species": "Arcane",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "Both 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ardite",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Ardite",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Argentum",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Argentum",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Attuned",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Attuned",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Auric",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Auric",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Aware",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Aware",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Batty",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Batty",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Large",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Beefy",
+      "mod": "MagicBees",
+      "whitelistEn": "Beef",
+      "genome": {
+        "species": "Beefy",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Big Bad",
+      "mod": "MagicBees",
+      "whitelistEn": "Bigbad",
+      "genome": {
+        "species": "Big Bad",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Blizzy",
+      "mod": "MagicBees",
+      "whitelistEn": "TeBlizzy",
+      "genome": {
+        "species": "Blizzy",
+        "speed": "Fastest",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing"
+      }
+    },
+    {
+      "en": "Blossom",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Blossom",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "4",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Botanic",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Botanic",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Brainy",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Brainy",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Bronzed",
+      "mod": "MagicBees",
+      "whitelistEn": "TeBronze",
+      "genome": {
+        "species": "Bronzed",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Carbon",
+      "mod": "MagicBees",
+      "whitelistEn": "TeCoal",
+      "genome": {
+        "species": "Carbon",
+        "speed": "Fast",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Catty",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Catty",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 3",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Certus",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Certus",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Chaotic",
+      "mod": "MagicBees",
+      "whitelistEn": "TcChaos",
+      "genome": {
+        "species": "Chaotic",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Charmed",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Charmed",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Cobalt",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Cobalt",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Crumbling",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Crumbling",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Cuprum",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Cuprum",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Dante",
+      "mod": "MagicBees",
+      "whitelistEn": "TeDante",
+      "genome": {
+        "species": "Dante",
+        "speed": "Slow",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Destabilized",
+      "mod": "MagicBees",
+      "whitelistEn": "TeDestabilized",
+      "genome": {
+        "species": "Destabilized",
+        "speed": "Fast",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Diamandi",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Diamandi",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Doctoral",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Doctoral",
+        "speed": "Normal",
+        "lifespan": "Longest",
+        "fertility": "2",
+        "tempTol": "Both 3",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Large",
+        "effect": "Heroic",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Draconic",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Draconic",
+        "speed": "Slowest",
+        "lifespan": "Longest",
+        "fertility": "1",
+        "tempTol": "Up 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Ends",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Dreaming",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Dreaming",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Larger",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Earthen",
+      "mod": "MagicBees",
+      "whitelistEn": "Earthy",
+      "genome": {
+        "species": "Earthen",
+        "speed": "Normal",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Eldritch",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Eldritch",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Electrum",
+      "mod": "MagicBees",
+      "whitelistEn": "TeElectrum",
+      "genome": {
+        "species": "Electrum",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Empowering",
+      "mod": "MagicBees",
+      "whitelistEn": "TcEmpowering",
+      "genome": {
+        "species": "Empowering",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Enchanted",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Enchanted",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Endearing",
+      "mod": "MagicBees",
+      "whitelistEn": "TeEndearing",
+      "genome": {
+        "species": "Endearing",
+        "speed": "Fastest",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Esmeraldi",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Esmeraldi",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Esoteric",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Esoteric",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Essence",
+      "mod": "MagicBees",
+      "whitelistEn": "AmEssence",
+      "genome": {
+        "species": "Essence",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ethereal",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Ethereal",
+        "speed": "Normal",
+        "lifespan": "Shortened",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ferrous",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Ferrous",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Firey",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Firey",
+        "speed": "Normal",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Up 2",
+        "humidTol": "Down 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Cacti"
+      }
+    },
+    {
+      "en": "Floral",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Floral",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Fluix",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Fluix",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Flux",
+      "mod": "MagicBees",
+      "whitelistEn": "TcTaint",
+      "genome": {
+        "species": "Flux",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Fluxed",
+      "mod": "MagicBees",
+      "whitelistEn": "RsaFluxed",
+      "genome": {
+        "species": "Fluxed",
+        "speed": "Slow",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Forlorn",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Forlorn",
+        "speed": "Slow",
+        "lifespan": "Longest",
+        "fertility": "1",
+        "tempTol": "Up 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Repulsion",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Fruticic",
+      "mod": "MagicBees",
+      "whitelistEn": "AmPlant",
+      "genome": {
+        "species": "Fruticic",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Fastest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Fulguric",
+      "mod": "MagicBees",
+      "whitelistEn": "AmLightning",
+      "genome": {
+        "species": "Fulguric",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Largest",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Gelid",
+      "mod": "MagicBees",
+      "whitelistEn": "TeGelid",
+      "genome": {
+        "species": "Gelid",
+        "speed": "Fastest",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing"
+      }
+    },
+    {
+      "en": "Ghastly",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Ghastly",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Glacic",
+      "mod": "MagicBees",
+      "whitelistEn": "AmIce",
+      "genome": {
+        "species": "Glacic",
+        "speed": "Slowest",
+        "lifespan": "Longest",
+        "fertility": "2",
+        "tempTol": "Up 2",
+        "humidTol": "Down 2",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Grounded",
+      "mod": "MagicBees",
+      "whitelistEn": "TeGrounded",
+      "genome": {
+        "species": "Grounded",
+        "speed": "Fastest",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Hateful",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Hateful",
+        "speed": "Slow",
+        "lifespan": "Elongated",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Larger",
+        "effect": "Ends",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Igneous",
+      "mod": "MagicBees",
+      "whitelistEn": "AmFire",
+      "genome": {
+        "species": "Igneous",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Fast",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ignis",
+      "mod": "MagicBees",
+      "whitelistEn": "TcFire",
+      "genome": {
+        "species": "Ignis",
+        "speed": "Faster",
+        "lifespan": "Normal",
+        "fertility": "1",
+        "tempTol": "Down 3",
+        "humidTol": "Up 2",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Infernal",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Infernal",
+        "speed": "Slow",
+        "lifespan": "Short",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Aggressive",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Invar",
+      "mod": "MagicBees",
+      "whitelistEn": "TeInvar",
+      "genome": {
+        "species": "Invar",
+        "speed": "Slow",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Invisible",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Invisible",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Lordly",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Lordly",
+        "speed": "Normal",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Drunkard",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Lux",
+      "mod": "MagicBees",
+      "whitelistEn": "TeLux",
+      "genome": {
+        "species": "Lux",
+        "speed": "Slow",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Manyullyn",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Manyullyn",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Minium",
+      "mod": "MagicBees",
+      "whitelistEn": "EeMinium",
+      "genome": {
+        "species": "Minium",
+        "speed": "Slow",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Large",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Mutable",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Mutable",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Mysterious",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Mysterious",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slow",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Mystical",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Mystical",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Nameless",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Nameless",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "Up 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Aggressive",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Neighsayer",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Neighsayer",
+        "speed": "Fastest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Nexus",
+      "mod": "MagicBees",
+      "whitelistEn": "TcNexus",
+      "genome": {
+        "species": "Nexus",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Nickel",
+      "mod": "MagicBees",
+      "whitelistEn": "TeNickel",
+      "genome": {
+        "species": "Nickel",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Oblivion",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Oblivion",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "4",
+        "tempTol": "Up 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Aggressive",
+        "flowers": "End"
+      }
+    },
+    {
+      "en": "Ordered",
+      "mod": "MagicBees",
+      "whitelistEn": "TcOrder",
+      "genome": {
+        "species": "Ordered",
+        "speed": "Normal",
+        "lifespan": "Normal",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Osmium",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Osmium",
+        "speed": "Slowest",
+        "lifespan": "Longer",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Platinum",
+      "mod": "MagicBees",
+      "whitelistEn": "TePlatinum",
+      "genome": {
+        "species": "Platinum",
+        "speed": "Slow",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Plumbum",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Plumbum",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Porcine",
+      "mod": "MagicBees",
+      "whitelistEn": "Pork",
+      "genome": {
+        "species": "Porcine",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Poultry",
+      "mod": "MagicBees",
+      "whitelistEn": "Chicken",
+      "genome": {
+        "species": "Poultry",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Pupil",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Pupil",
+        "speed": "Slower",
+        "lifespan": "Elongated",
+        "fertility": "2",
+        "tempTol": "Up 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Pure",
+      "mod": "MagicBees",
+      "whitelistEn": "TcPure",
+      "genome": {
+        "species": "Pure",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Pyro",
+      "mod": "MagicBees",
+      "whitelistEn": "TePyro",
+      "genome": {
+        "species": "Pyro",
+        "speed": "Fastest",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Quintessential",
+      "mod": "MagicBees",
+      "whitelistEn": "AmQuintessence",
+      "genome": {
+        "species": "Quintessential",
+        "speed": "Normal",
+        "lifespan": "Elongated",
+        "fertility": "3",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Average",
+        "territory": "Average",
+        "effect": "Ends",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Ravening",
+      "mod": "MagicBees",
+      "whitelistEn": "TcHungry",
+      "genome": {
+        "species": "Ravening",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Largest",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Rejuvenating",
+      "mod": "MagicBees",
+      "whitelistEn": "TcRejuvenating",
+      "genome": {
+        "species": "Rejuvenating",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Rockin'",
+      "mod": "MagicBees",
+      "whitelistEn": "TeRocking",
+      "genome": {
+        "species": "Rockin'",
+        "speed": "Faster",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Rooted",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Rooted",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Savant",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Savant",
+        "speed": "Normal",
+        "lifespan": "Elongated",
+        "fertility": "1",
+        "tempTol": "Up 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Scholarly",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Scholarly",
+        "speed": "Slow",
+        "lifespan": "Elongated",
+        "fertility": "1",
+        "tempTol": "Up 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Sheepish",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Sheepish",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Shocking",
+      "mod": "MagicBees",
+      "whitelistEn": "TeShocking",
+      "genome": {
+        "species": "Shocking",
+        "speed": "Fast",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Silicon",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Silicon",
+        "speed": "Slow",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Larger",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Skulking",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Skulking",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Skystone",
+      "mod": "MagicBees",
+      "whitelistEn": "AeSkystone",
+      "genome": {
+        "species": "Skystone",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Flammable",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Smouldering",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Smouldering",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Solum",
+      "mod": "MagicBees",
+      "whitelistEn": "TcEarth",
+      "genome": {
+        "species": "Solum",
+        "speed": "Slow",
+        "lifespan": "Longer",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "Down 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "Yes",
+        "flowering": "Fastest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Somnolent",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Somnolent",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Up 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Sorcerous",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Sorcerous",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "3",
+        "tempTol": "Down 2",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Soul",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Soul",
+        "speed": "Slowest",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Spidery",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Spidery",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Larger",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Spirit",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Spirit",
+        "speed": "Slowest",
+        "lifespan": "Shortened",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Spiteful",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Spiteful",
+        "speed": "Normal",
+        "lifespan": "Long",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Larger",
+        "effect": "Ends",
+        "flowers": "Nether"
+      }
+    },
+    {
+      "en": "Stannum",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Stannum",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Supernatural",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Supernatural",
+        "speed": "Normal",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "Both 1",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Terrestric",
+      "mod": "MagicBees",
+      "whitelistEn": "AmEarth",
+      "genome": {
+        "species": "Terrestric",
+        "speed": "Slowest",
+        "lifespan": "Longest",
+        "fertility": "3",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Timely",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Timely",
+        "speed": "Normal",
+        "lifespan": "Elongated",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Transmuting",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Transmuting",
+        "speed": "Slowest",
+        "lifespan": "Shortest",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Unusual",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Unusual",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Vazbee",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Vazbee",
+        "speed": "Slower",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Vis",
+      "mod": "MagicBees",
+      "whitelistEn": "TcVis",
+      "genome": {
+        "species": "Vis",
+        "speed": "Slow",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "Both 1",
+        "humidTol": "Both 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slower",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Void",
+      "mod": "MagicBees",
+      "whitelistEn": "TcVoid",
+      "genome": {
+        "species": "Void",
+        "speed": "Slowest",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "Up 1",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "Freezing",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Vortex",
+      "mod": "MagicBees",
+      "whitelistEn": "AmVortex",
+      "genome": {
+        "species": "Vortex",
+        "speed": "Slowest",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Larger",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Watery",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Watery",
+        "speed": "Normal",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Down 2",
+        "humidTol": "Up 1",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None"
+      }
+    },
+    {
+      "en": "Wight",
+      "mod": "MagicBees",
+      "whitelistEn": "AmWight",
+      "genome": {
+        "species": "Wight",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "2",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Windy",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Windy",
+        "speed": "Faster",
+        "lifespan": "Normal",
+        "fertility": "2",
+        "tempTol": "Both 2",
+        "humidTol": "None",
+        "nocturnal": "No",
+        "flyer": "No",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Winsome",
+      "mod": "MagicBees",
+      "whitelistEn": "TeWinsome",
+      "genome": {
+        "species": "Winsome",
+        "speed": "Fast",
+        "lifespan": "Longer",
+        "fertility": "3",
+        "tempTol": "Both 2",
+        "humidTol": "Both 2",
+        "nocturnal": "No",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Slowest",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Wispy",
+      "mod": "MagicBees",
+      "whitelistEn": "TcWispy",
+      "genome": {
+        "species": "Wispy",
+        "speed": "Fast",
+        "lifespan": "Shorter",
+        "fertility": "1",
+        "tempTol": "None",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "Yes",
+        "cave": "No",
+        "flowering": "Faster",
+        "territory": "Average",
+        "effect": "None",
+        "flowers": "Flowers"
+      }
+    },
+    {
+      "en": "Withering",
+      "mod": "MagicBees",
+      "genome": {
+        "species": "Withering",
+        "speed": "Slowest",
+        "lifespan": "Short",
+        "fertility": "1",
+        "tempTol": "Down 2",
+        "humidTol": "None",
+        "nocturnal": "Yes",
+        "flyer": "No",
+        "cave": "Yes",
+        "flowering": "Slowest",
+        "territory": "Largest",
+        "effect": "Aggressive",
+        "flowers": "Nether"
+      }
+    }
+  ]
+}
