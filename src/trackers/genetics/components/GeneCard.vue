@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { carriersOf, geneKey, type AlleleDef, type TraitDef } from '../domain/genetics'
 import { useGenesStore } from '../stores/useGenesStore'
 import { useBeesStore } from '@/trackers/bees/stores/useBeesStore'
+import { useBeesUiStore } from '@/trackers/bees/stores/useBeesUiStore'
 import { CARRIERS } from '../data/carriers'
 import EnTip from './EnTip.vue'
 
@@ -10,6 +12,16 @@ const props = defineProps<{ trait: TraitDef; allele: AlleleDef }>()
 const emit = defineEmits<{ close: [] }>()
 const genes = useGenesStore()
 const bees = useBeesStore()
+const beesUi = useBeesUiStore()
+const router = useRouter()
+
+/** Открыть вид-носитель в графе скрещивания трекера пчёл. */
+function openInGraph(ru: string): void {
+  beesUi.selectBee(ru)
+  beesUi.setView('graph')
+  emit('close')
+  router.push('/bees')
+}
 const have = computed(() => genes.has(props.trait.key, props.allele.en))
 /** Виды-носители этого аллеля (откуда взять ген). */
 const carriers = computed(() => carriersOf(CARRIERS, props.trait.key, props.allele.en))
@@ -63,8 +75,17 @@ onMounted(() => root.value?.focus())
       <ul class="gcard__carriers">
         <li v-for="c in carriers.slice(0, 8)" :key="c.mod + '|' + c.en">
           <EnTip :en="c.en">{{ c.ru }}</EnTip>
-          <span class="gcard__own" :class="{ yes: bees.isHave(c.ru) }">
-            {{ bees.isHave(c.ru) ? '✓ в складе' : 'нет' }}
+          <span class="gcard__cright">
+            <span v-if="bees.isHave(c.ru)" class="gcard__own yes">✓ в складе</span>
+            <button
+              v-else
+              type="button"
+              class="gcard__graph"
+              :title="`Открыть «${c.ru}» в графе скрещивания`"
+              @click="openInGraph(c.ru)"
+            >
+              → вывести
+            </button>
           </span>
         </li>
       </ul>
@@ -209,6 +230,19 @@ onMounted(() => root.value?.focus())
 }
 .gcard__own.yes {
   color: var(--src-f);
+}
+.gcard__graph {
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  background: none;
+  border: 0;
+  color: var(--honey-dk);
+  cursor: pointer;
+  padding: 0;
+}
+.gcard__graph:hover {
+  text-decoration: underline;
 }
 .gcard__more {
   font-size: 11px;
