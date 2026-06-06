@@ -141,26 +141,47 @@ const traitBars = computed(() =>
   gap: 12px;
 }
 .stat {
-  background: var(--card);
+  position: relative;
+  background:
+    radial-gradient(120% 100% at 50% -20%, rgba(44, 197, 208, 0.1), transparent 70%),
+    linear-gradient(180deg, var(--card2), var(--card));
   border: 1px solid var(--cardln);
-  border-radius: 12px;
-  padding: 14px;
+  border-radius: 14px;
+  padding: 16px 14px;
   text-align: center;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.stat::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ring-cyan), transparent);
 }
 .stat__n {
-  font-size: 26px;
+  font-family: var(--font-display);
+  font-size: 30px;
   font-weight: 800;
   color: var(--src-f);
+  text-shadow: 0 0 18px var(--glow-green);
 }
 .stat__d {
+  font-family: var(--font-body);
   font-size: 15px;
+  font-weight: 600;
   color: var(--muted);
   margin-left: 4px;
+  text-shadow: none;
 }
 .stat__c {
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--muted);
-  margin-top: 2px;
+  margin-top: 4px;
 }
 .two {
   display: grid;
@@ -174,10 +195,26 @@ const traitBars = computed(() =>
   }
 }
 .card {
-  background: var(--card);
+  background: linear-gradient(180deg, var(--card2), var(--card));
   border: 1px solid var(--cardln);
-  border-radius: 12px;
-  padding: 13px;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--shadow-card);
+}
+.next {
+  position: relative;
+  overflow: hidden;
+}
+.next::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(90% 120% at 100% 0%, var(--glow-cyan), transparent 60%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.next > * {
+  position: relative;
 }
 .lab {
   display: flex;
@@ -185,10 +222,10 @@ const traitBars = computed(() =>
   gap: 8px;
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 10px;
+  color: var(--honey-dk);
+  margin-bottom: 11px;
 }
 .tgt {
   padding: 8px 0;
@@ -221,7 +258,7 @@ const traitBars = computed(() =>
 }
 .tgt__next {
   font-size: 11.5px;
-  color: var(--muted);
+  color: var(--ink2);
   margin-top: 4px;
 }
 .tgt__done {
@@ -231,24 +268,32 @@ const traitBars = computed(() =>
 }
 .bar {
   display: block;
-  height: 6px;
-  background: var(--bg2);
-  border-radius: 3px;
+  height: 7px;
+  background: rgba(6, 13, 18, 0.7);
+  border: 1px solid var(--cardln);
+  border-radius: 4px;
   overflow: hidden;
 }
 .bar i {
   display: block;
   height: 100%;
-  background: var(--src-f);
+  background: var(--bar-grad);
+  box-shadow: 0 0 10px var(--glow-green);
+  transition: width 0.4s ease;
 }
 .next--idle {
   opacity: 0.85;
 }
 .next__big {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--ink2);
   margin: 6px 0 10px;
-  line-height: 1.4;
+  line-height: 1.45;
+}
+.next__big b {
+  color: var(--ink);
+  font-weight: 800;
 }
 .link {
   font: inherit;
@@ -288,6 +333,7 @@ const traitBars = computed(() =>
   width: 110px;
   flex: none;
   color: var(--ink2);
+  font-weight: 500;
 }
 .tb .bar {
   flex: 1;

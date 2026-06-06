@@ -109,14 +109,15 @@ const pipeline = computed(() => PIPELINES.find((p) => p.id === active.value) ?? 
 .pipe__title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 18px;
+  font-size: 19px;
+  letter-spacing: -0.01em;
 }
 .seg {
   display: inline-flex;
-  background: var(--bg2);
+  background: rgba(6, 13, 18, 0.55);
   border: 1px solid var(--cardln);
-  border-radius: 9px;
-  padding: 2px;
+  border-radius: 10px;
+  padding: 3px;
   gap: 2px;
 }
 .seg__btn {
@@ -126,13 +127,24 @@ const pipeline = computed(() => PIPELINES.find((p) => p.id === active.value) ?? 
   color: var(--muted);
   background: none;
   border: 0;
-  padding: 6px 12px;
+  padding: 6px 13px;
   border-radius: 7px;
   cursor: pointer;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.seg__btn:hover:not(.on) {
+  color: var(--ink);
+  background: rgba(95, 224, 234, 0.08);
 }
 .seg__btn.on {
-  background: var(--solid);
+  background: linear-gradient(180deg, #38d4de, var(--solid));
   color: var(--solid-ink);
+  box-shadow:
+    0 0 0 1px rgba(95, 224, 234, 0.5),
+    0 3px 12px var(--glow-cyan);
 }
 .seg__btn:focus-visible {
   outline: 2px solid var(--honey-dk);
@@ -147,38 +159,55 @@ const pipeline = computed(() => PIPELINES.find((p) => p.id === active.value) ?? 
   gap: 10px;
 }
 .step {
-  background: var(--card);
+  background: linear-gradient(180deg, var(--card2), var(--card));
   border: 1px solid var(--cardln);
-  border-radius: 12px;
-  padding: 12px 14px;
+  border-radius: 14px;
+  padding: 13px 15px 13px 16px;
   position: relative;
+  box-shadow: var(--shadow-card);
+}
+/* Бирюзовая «ДНК-нить» вдоль левого края шага. */
+.step::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--accent-grad);
+  opacity: 0.7;
 }
 .step:not(:last-child)::after {
   content: '↓';
   position: absolute;
-  left: 26px;
+  left: 27px;
   bottom: -15px;
   color: var(--honey-dk);
   font-size: 14px;
+  text-shadow: 0 0 10px var(--glow-cyan);
 }
 .step__hd {
   display: flex;
   align-items: center;
-  gap: 9px;
-  margin-bottom: 6px;
+  gap: 10px;
+  margin-bottom: 7px;
 }
 .step__num {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   flex: none;
-  border-radius: 6px;
-  background: var(--solid);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #38d4de, var(--solid));
   color: var(--solid-ink);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   display: grid;
   place-items: center;
+  box-shadow:
+    0 0 0 1px rgba(95, 224, 234, 0.4),
+    0 2px 10px var(--glow-cyan);
 }
 .mtex {
   width: 22px;
@@ -211,18 +240,21 @@ const pipeline = computed(() => PIPELINES.find((p) => p.id === active.value) ?? 
 .io__lab {
   font-family: var(--font-mono);
   font-size: 9.5px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--muted);
+}
+.io--out .io__lab {
+  color: var(--src-f);
 }
 .res {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  background: var(--bg2);
+  gap: 5px;
+  background: rgba(6, 13, 18, 0.6);
   border: 1px solid var(--cardln);
-  padding: 3px 8px;
-  border-radius: 6px;
+  padding: 4px 9px;
+  border-radius: 7px;
   color: var(--ink2);
 }
 .tex {
@@ -232,8 +264,14 @@ const pipeline = computed(() => PIPELINES.find((p) => p.id === active.value) ?? 
   flex: none;
 }
 .out {
+  display: inline-flex;
+  align-items: center;
   color: var(--src-f);
-  font-weight: 600;
+  font-weight: 700;
+  background: var(--src-f-soft);
+  border: 1px solid rgba(70, 215, 155, 0.32);
+  padding: 4px 9px;
+  border-radius: 7px;
 }
 .out__note {
   color: var(--muted);
@@ -244,9 +282,9 @@ const pipeline = computed(() => PIPELINES.find((p) => p.id === active.value) ?? 
 .aux__lab {
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--honey-dk);
   margin-bottom: 6px;
 }
 .aux__list {

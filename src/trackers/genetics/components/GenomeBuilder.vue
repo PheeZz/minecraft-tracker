@@ -196,7 +196,8 @@ function breed(ru: string): void {
 .bld__title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 18px;
+  font-size: 19px;
+  letter-spacing: -0.01em;
 }
 .bld__targets {
   display: flex;
@@ -207,21 +208,35 @@ function breed(ru: string): void {
   font: inherit;
   font-size: 12.5px;
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background: var(--card);
+  padding: 6px 13px;
+  border-radius: 9px;
+  background: linear-gradient(180deg, var(--card2), var(--card));
   border: 1px solid var(--cardln);
   color: var(--ink2);
   cursor: pointer;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.tg:hover:not(.on) {
+  color: var(--ink);
+  border-color: var(--honey-dk);
 }
 .tg.on {
-  background: var(--solid);
+  background: linear-gradient(180deg, #38d4de, var(--solid));
   color: var(--solid-ink);
   border-color: transparent;
+  box-shadow:
+    0 0 0 1px rgba(95, 224, 234, 0.5),
+    0 4px 14px var(--glow-cyan);
 }
 .tg--add {
   border-style: dashed;
   color: var(--muted);
+}
+.tg--add:hover {
+  color: var(--honey-dk);
 }
 .tg:focus-visible {
   outline: 2px solid var(--honey-dk);
@@ -240,13 +255,22 @@ function breed(ru: string): void {
   padding: 8px 14px;
   border-radius: 9px;
   border: 1px solid var(--cardln);
-  background: var(--bg2);
+  background: rgba(6, 13, 18, 0.5);
   color: var(--ink);
   cursor: pointer;
+  transition:
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
 }
 .bld__create {
-  margin-top: 10px;
-  border-color: var(--honey-dk);
+  margin-top: 12px;
+  border-color: transparent;
+  background: linear-gradient(180deg, #38d4de, var(--solid));
+  color: var(--solid-ink);
+  box-shadow: 0 4px 16px var(--glow-cyan);
+}
+.bld__create:hover {
+  box-shadow: 0 6px 22px var(--glow-cyan);
 }
 .bld__wrap {
   display: flex;
@@ -268,11 +292,16 @@ function breed(ru: string): void {
   font: inherit;
   font-size: 14px;
   font-weight: 700;
-  background: var(--bg2);
+  background: rgba(6, 13, 18, 0.6);
   border: 1px solid var(--cardln);
   border-radius: 8px;
-  padding: 7px 11px;
+  padding: 8px 11px;
   color: var(--ink);
+}
+.bld__name:focus-visible {
+  outline: none;
+  border-color: var(--honey-dk);
+  box-shadow: 0 0 0 3px rgba(95, 224, 234, 0.18);
 }
 .bld__del {
   color: var(--muted);
@@ -292,16 +321,25 @@ function breed(ru: string): void {
 }
 .row__name {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--ink);
 }
 .row__st {
-  font-size: 11px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 2px 8px;
+  border-radius: 20px;
 }
 .row__st.have {
   color: var(--src-f);
+  background: var(--src-f-soft);
+  border: 1px solid rgba(70, 215, 155, 0.35);
 }
 .row__st.need {
   color: var(--amber);
+  background: rgba(240, 203, 99, 0.12);
+  border: 1px solid rgba(240, 203, 99, 0.32);
 }
 .chips {
   display: flex;
@@ -309,24 +347,56 @@ function breed(ru: string): void {
   gap: 5px;
 }
 .chip {
+  position: relative;
   font: inherit;
   font-size: 11.5px;
-  padding: 4px 9px;
-  border-radius: 7px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 8px;
   border: 1px solid var(--cardln);
-  background: var(--card);
-  color: var(--muted);
+  background: linear-gradient(180deg, var(--card2), var(--card));
+  color: var(--ink2);
   cursor: pointer;
+  transition:
+    color 0.14s ease,
+    border-color 0.14s ease,
+    box-shadow 0.14s ease;
+}
+.chip:hover:not(.on) {
+  border-color: var(--honey-dk);
+  color: var(--ink);
 }
 .chip.got {
-  color: var(--ink2);
-  border-color: color-mix(in srgb, var(--src-f) 45%, var(--cardln));
+  color: var(--ink);
+  border-color: rgba(70, 215, 155, 0.5);
+}
+/* Маркер «ген уже собран» — зелёная точка слева. */
+.chip.got::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--src-f);
+  box-shadow: 0 0 6px var(--glow-green);
+}
+.chip.got {
+  padding-left: 14px;
 }
 .chip.on {
-  background: var(--solid);
+  background: linear-gradient(180deg, #38d4de, var(--solid));
   color: var(--solid-ink);
   border-color: transparent;
   font-weight: 700;
+  box-shadow:
+    0 0 0 1px rgba(95, 224, 234, 0.5),
+    0 3px 12px var(--glow-cyan);
+}
+.chip.on.got::before {
+  background: var(--solid-ink);
+  box-shadow: none;
 }
 .chip--any {
   font-style: italic;
@@ -337,9 +407,11 @@ function breed(ru: string): void {
 .chip__star {
   color: var(--alt);
   margin-left: 3px;
+  text-shadow: 0 0 8px var(--glow-violet);
 }
 .chip.on .chip__star {
   color: var(--solid-ink);
+  text-shadow: none;
 }
 .chip:focus-visible {
   outline: 2px solid var(--honey-dk);
@@ -353,39 +425,46 @@ function breed(ru: string): void {
   gap: 12px;
 }
 .card {
-  background: var(--card);
+  background: linear-gradient(180deg, var(--card2), var(--card));
   border: 1px solid var(--cardln);
-  border-radius: 12px;
-  padding: 13px;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--shadow-card);
 }
 .lab {
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 7px;
+  color: var(--honey-dk);
+  margin-bottom: 8px;
 }
 .big__n {
-  font-size: 24px;
+  font-family: var(--font-display);
+  font-size: 26px;
   font-weight: 800;
   color: var(--src-f);
+  text-shadow: 0 0 16px var(--glow-green);
 }
 .big__t {
   font-size: 14px;
+  font-weight: 600;
   color: var(--muted);
 }
 .bar {
-  height: 6px;
-  background: var(--bg2);
-  border-radius: 3px;
+  height: 7px;
+  background: rgba(6, 13, 18, 0.7);
+  border: 1px solid var(--cardln);
+  border-radius: 4px;
   overflow: hidden;
-  margin-top: 7px;
+  margin-top: 9px;
 }
 .bar i {
   display: block;
   height: 100%;
-  background: var(--src-f);
+  background: var(--bar-grad);
+  box-shadow: 0 0 10px var(--glow-green);
+  transition: width 0.4s ease;
 }
 .muted {
   margin: 0;
@@ -397,13 +476,18 @@ function breed(ru: string): void {
   padding: 0;
   list-style: none;
   font-size: 12.5px;
+  color: var(--ink2);
 }
 .need li {
   display: flex;
   justify-content: space-between;
   gap: 8px;
   align-items: center;
-  padding: 3px 0;
+  padding: 4px 0;
+  border-top: 1px solid var(--line);
+}
+.need li:first-child {
+  border-top: 0;
 }
 .need__own {
   color: var(--src-f);

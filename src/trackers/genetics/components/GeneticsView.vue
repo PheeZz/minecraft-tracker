@@ -123,31 +123,44 @@ async function onImport(e: Event): Promise<void> {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 18px;
+  padding: 9px 18px;
   border-bottom: 1px solid var(--line);
   flex: none;
 }
 .genetics__tabs {
   display: flex;
   gap: 4px;
+  padding: 3px;
+  background: rgba(6, 13, 18, 0.55);
+  border: 1px solid var(--cardln);
+  border-radius: 11px;
 }
 .genetics__tab {
+  position: relative;
   font: inherit;
   font-size: 13px;
   font-weight: 600;
   color: var(--muted);
   background: none;
   border: 0;
-  padding: 7px 14px;
+  padding: 7px 15px;
   border-radius: 8px;
   cursor: pointer;
+  transition:
+    color 0.16s ease,
+    background 0.16s ease,
+    box-shadow 0.16s ease;
 }
 .genetics__tab.on {
-  background: var(--solid);
+  background: linear-gradient(180deg, #38d4de, var(--solid));
   color: var(--solid-ink);
+  box-shadow:
+    0 0 0 1px rgba(95, 224, 234, 0.5),
+    0 4px 14px var(--glow-cyan);
 }
 .genetics__tab:hover:not(.on) {
   color: var(--ink);
+  background: rgba(95, 224, 234, 0.08);
 }
 .genetics__tab:focus-visible,
 .genetics__databtn:focus-visible {
@@ -164,15 +177,20 @@ async function onImport(e: Event): Promise<void> {
   font-size: 12px;
   font-weight: 600;
   color: var(--ink2);
-  background: var(--card);
+  background: linear-gradient(180deg, var(--card2), var(--card));
   border: 1px solid var(--cardln);
   border-radius: 8px;
-  padding: 6px 10px;
+  padding: 6px 11px;
   cursor: pointer;
+  transition:
+    border-color 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease;
 }
 .genetics__databtn:hover {
   border-color: var(--honey-dk);
   color: var(--ink);
+  box-shadow: 0 0 0 1px var(--ring-cyan);
 }
 .genetics__msg {
   margin: 8px 18px 0;

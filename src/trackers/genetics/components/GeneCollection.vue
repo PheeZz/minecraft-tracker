@@ -78,12 +78,17 @@ const totals = computed(() => collectionTotals(TRAITS, genes.genes))
 .gcol__title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 18px;
+  font-size: 19px;
+  letter-spacing: -0.01em;
 }
 .gcol__count {
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--honey-dk);
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(95, 224, 234, 0.1);
+  border: 1px solid rgba(95, 224, 234, 0.22);
 }
 .gcol__rows {
   display: flex;
@@ -98,26 +103,30 @@ const totals = computed(() => collectionTotals(TRAITS, genes.genes))
   border-top: 1px solid var(--line);
 }
 .grow__name {
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--ink);
 }
 .grow__desc {
   font-size: 11px;
   color: var(--muted);
-  margin-top: 2px;
-  line-height: 1.35;
+  margin-top: 3px;
+  line-height: 1.4;
 }
 .grow__bar {
-  height: 5px;
-  border-radius: 3px;
-  background: var(--bg2);
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(6, 13, 18, 0.7);
+  border: 1px solid var(--cardln);
   overflow: hidden;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 .grow__bar i {
   display: block;
   height: 100%;
-  background: var(--src-f);
+  background: var(--bar-grad);
+  box-shadow: 0 0 8px var(--glow-green);
+  transition: width 0.4s ease;
 }
 .grow__cells {
   display: flex;
@@ -131,18 +140,33 @@ const totals = computed(() => collectionTotals(TRAITS, genes.genes))
 .cell {
   font: inherit;
   font-size: 11.5px;
-  padding: 4px 8px;
-  border-radius: 6px 0 0 6px;
+  font-weight: 500;
+  padding: 5px 9px;
+  border-radius: 7px 0 0 7px;
   border: 1px solid var(--cardln);
   border-right: 0;
-  background: var(--card);
-  color: var(--muted);
+  background: linear-gradient(180deg, var(--card2), var(--card));
+  color: var(--ink2);
   cursor: pointer;
+  transition:
+    border-color 0.14s ease,
+    color 0.14s ease,
+    box-shadow 0.14s ease,
+    background 0.14s ease;
+}
+.cell:hover:not(.on) {
+  border-color: var(--honey-dk);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ring-cyan);
 }
 .cell.on {
-  background: var(--src-f-soft);
+  background: linear-gradient(180deg, rgba(70, 215, 155, 0.22), var(--src-f-soft));
   border-color: var(--src-f);
   color: var(--ink);
+  font-weight: 700;
+  box-shadow:
+    inset 0 0 0 1px rgba(70, 215, 155, 0.4),
+    0 0 12px var(--glow-green);
 }
 .cell.add {
   border-style: dashed;
@@ -151,19 +175,24 @@ const totals = computed(() => collectionTotals(TRAITS, genes.genes))
 .cell__star {
   color: var(--alt);
   margin-left: 4px;
+  text-shadow: 0 0 8px var(--glow-violet);
 }
 .cellinfo {
   font: inherit;
   font-size: 10px;
-  padding: 0 6px;
-  border-radius: 0 6px 6px 0;
+  padding: 0 7px;
+  border-radius: 0 7px 7px 0;
   border: 1px solid var(--cardln);
-  background: var(--bg2);
+  background: rgba(6, 13, 18, 0.6);
   color: var(--muted);
   cursor: pointer;
+  transition:
+    color 0.14s ease,
+    border-color 0.14s ease;
 }
 .cellinfo:hover {
   color: var(--honey-dk);
+  border-color: var(--honey-dk);
 }
 .cell:focus-visible,
 .cellinfo:focus-visible {
@@ -173,8 +202,8 @@ const totals = computed(() => collectionTotals(TRAITS, genes.genes))
   z-index: 1;
 }
 .gcol__hint {
-  margin-top: 12px;
+  margin-top: 14px;
   font-size: 11.5px;
-  color: var(--dim);
+  color: var(--muted);
 }
 </style>
