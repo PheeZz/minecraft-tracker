@@ -22,7 +22,8 @@
       "Alfheim": 10
     },
     "outputsNamed": 283,
-    "notes": "aspects = essentia/vis cost (null value = computed at runtime, see aspectsComputed). output/input/central/components/inputs resolved to EN/RU names where the item ref maps to a lang key; otherwise {ref,meta} (ConfigItems/ConfigBlocks field) or {vanilla:srgName} or {oredict}. research = linked research key. infusion has instability + central + components."
+    "warpItems": 15,
+    "notes": "aspects = essentia/vis cost (null value = computed at runtime, see aspectsComputed). output/input/central/components/inputs/key resolved to EN/RU names where the item ref maps to a lang key; otherwise {ref,meta} or {vanilla:srgName} or {oredict}. research = linked research key. arcane has shape[] (grid rows) + key{char:ingredient}. infusion has instability + central + components[]. warpItems = sanity (warp) gained from holding/crafting items."
   },
   "recipes": [
     {
@@ -1126,20 +1127,25 @@
         "aqua": 5,
         "terra": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "WS",
+        "WS",
+        "WB"
+      ],
+      "key": {
+        "W": {
           "vanilla": "field_150325_L",
           "reg": "wool",
           "name_en": "Wool",
           "name_ru": "Шерсть"
         },
-        {
+        "S": {
           "oredict": "stickWood"
         },
-        {
+        "B": {
           "oredict": "slabWood"
         }
-      ]
+      }
     },
     {
       "research": "BASICARTIFACE",
@@ -1159,50 +1165,61 @@
         "ordo": 25,
         "perditio": 25
       },
-      "inputs": [
-        {
+      "shape": [
+        "123",
+        "ISI",
+        "456"
+      ],
+      "key": {
+        "S": {
           "ref": "itemShard",
           "meta": 6,
           "name_en": "Balanced Shard",
           "name_ru": "Сбалансированный кристалл"
         },
-        {
+        "I": {
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "1": {
           "ref": "itemShard",
           "meta": 0,
           "name_en": "Air Shard",
           "name_ru": "Грозовой кристалл"
         },
-        {
+        "2": {
           "ref": "itemShard",
           "meta": 1,
           "name_en": "Fire Shard",
           "name_ru": "Огненный кристалл"
         },
-        {
+        "3": {
           "ref": "itemShard",
           "meta": 2,
           "name_en": "Water Shard",
           "name_ru": "Ледяной кристалл"
         },
-        {
+        "4": {
           "ref": "itemShard",
           "meta": 3,
           "name_en": "Earth Shard",
           "name_ru": "Земляной кристалл"
         },
-        {
+        "5": {
           "ref": "itemShard",
           "meta": 4,
           "name_en": "Order Shard",
           "name_ru": "Кристалл порядка"
         },
-        {
+        "6": {
           "ref": "itemShard",
           "meta": 5,
           "name_en": "Entropy Shard",
           "name_ru": "Энтропийный кристалл"
         }
-      ]
+      }
     },
     {
       "research": "WARDEDARCANA",
@@ -1220,23 +1237,28 @@
         "terra": 10,
         "ignis": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "TDT",
+        "DBD",
+        "TDT"
+      ],
+      "key": {
+        "T": {
           "oredict": "ingotThaumium"
         },
-        {
+        "B": {
           "ref": "itemZombieBrain",
           "meta": null,
           "name_en": "Zombie Brain",
           "name_ru": "Мозг зомби"
         },
-        {
+        "D": {
           "ref": "blockWoodenDevice",
           "meta": 6,
           "name_en": "Greatwood Planks",
           "name_ru": "Доски великого дерева"
         }
-      ]
+      }
     },
     {
       "research": "WARDEDARCANA",
@@ -1254,26 +1276,31 @@
         "terra": 5,
         "ignis": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "GGG",
+        "WBW",
+        "GGG"
+      ],
+      "key": {
+        "B": {
           "ref": "itemZombieBrain",
           "meta": null,
           "name_en": "Zombie Brain",
           "name_ru": "Мозг зомби"
         },
-        {
+        "G": {
           "vanilla": "field_150359_w",
           "reg": "glass",
           "name_en": "Glass",
           "name_ru": "Стекло"
         },
-        {
+        "W": {
           "ref": "blockWoodenDevice",
           "meta": 6,
           "name_en": "Greatwood Planks",
           "name_ru": "Доски великого дерева"
         }
-      ]
+      }
     },
     {
       "research": "WARDEDARCANA",
@@ -1289,11 +1316,21 @@
         "aqua": 5,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "NNI",
+        "N  "
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "N": {
           "oredict": "nuggetIron"
         }
-      ]
+      }
     },
     {
       "research": "FLUXSCRUB",
@@ -1310,34 +1347,39 @@
         "ordo": 16,
         "aer": 8
       },
-      "inputs": [
-        {
+      "shape": [
+        " B ",
+        "GOG",
+        "STS"
+      ],
+      "key": {
+        "B": {
           "ref": "blockWoodenDevice",
           "meta": null
         },
-        {
+        "G": {
           "vanilla": "field_150411_aY",
           "reg": "iron_bars",
           "name_en": "Iron Bars",
           "name_ru": "Железные прутья"
         },
-        {
+        "T": {
           "ref": "blockTube",
           "meta": null
         },
-        {
+        "O": {
           "ref": "itemResource",
           "meta": 8,
           "name_en": "Vis Filter",
           "name_ru": "Фильтр"
         },
-        {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 7,
           "name_en": "Arcane Stone Bricks",
           "name_ru": "Магический кирпич"
         }
-      ]
+      }
     },
     {
       "research": "WARDEDARCANA",
@@ -1352,6 +1394,24 @@
       "aspects": {
         "aqua": 5,
         "ordo": 5
+      },
+      "shape": [
+        "NNI",
+        "N  "
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "N": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        }
       }
     },
     {
@@ -1370,26 +1430,30 @@
         "ignis": 5,
         "terra": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        " B ",
+        "TDT"
+      ],
+      "key": {
+        "T": {
           "ref": "itemResource",
           "meta": 2,
           "name_en": "Thaumium Ingot",
           "name_ru": "Таум-слиток"
         },
-        {
+        "B": {
           "ref": "itemZombieBrain",
           "meta": null,
           "name_en": "Zombie Brain",
           "name_ru": "Мозг зомби"
         },
-        {
+        "D": {
           "ref": "blockWoodenDevice",
           "meta": 6,
           "name_en": "Greatwood Planks",
           "name_ru": "Доски великого дерева"
         }
-      ]
+      }
     },
     {
       "research": "NODESTABILIZER",
@@ -1406,29 +1470,40 @@
         "terra": 32,
         "ordo": 32
       },
-      "inputs": [
-        {
+      "shape": [
+        " G ",
+        "QPQ",
+        "SNS"
+      ],
+      "key": {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 7,
           "name_en": "Arcane Stone Bricks",
           "name_ru": "Магический кирпич"
         },
-        {
+        "G": {
           "vanilla": "field_151043_k",
           "reg": "gold_ingot",
           "name_en": "Gold Ingot",
           "name_ru": "Золотой слиток"
         },
-        {
-          "raw": "new ItemStack((Block)"
+        "P": {
+          "vanilla": "field_150331_J",
+          "reg": "piston",
+          "name_en": "Piston",
+          "name_ru": "Поршень"
         },
-        {
+        "Q": {
+          "raw": "quartzBlock"
+        },
+        "N": {
           "ref": "itemResource",
           "meta": 1,
           "name_en": "Nitor",
           "name_ru": "Нитор"
         }
-      ]
+      }
     },
     {
       "research": "VISPOWER",
@@ -1445,38 +1520,43 @@
         "aer": 32,
         "perditio": 32
       },
-      "inputs": [
-        {
+      "shape": [
+        "RCR",
+        "ISI",
+        "RAR"
+      ],
+      "key": {
+        "S": {
           "ref": "blockStoneDevice",
           "meta": 9,
           "name_en": "Node Stabilizer",
           "name_ru": "Узел-стабилизатор"
         },
-        {
+        "C": {
           "vanilla": "field_151132_bS",
           "reg": "comparator",
           "name_en": "Redstone Comparator",
           "name_ru": "Компаратор"
         },
-        {
+        "I": {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
           "name_ru": "Железный слиток"
         },
-        {
+        "R": {
           "vanilla": "field_150451_bX",
           "reg": "redstone_block",
           "name_en": "Redstone Block",
           "name_ru": "Redstone Block"
         },
-        {
+        "A": {
           "ref": "itemResource",
           "meta": 1,
           "name_en": "Nitor",
           "name_ru": "Нитор"
         }
-      ]
+      }
     },
     {
       "research": "VISPOWER",
@@ -1492,20 +1572,25 @@
         "ignis": 8,
         "ordo": 8
       },
-      "inputs": [
-        {
+      "shape": [
+        " I ",
+        "ISI",
+        " I "
+      ],
+      "key": {
+        "I": {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
           "name_ru": "Железный слиток"
         },
-        {
+        "S": {
           "ref": "itemShard",
           "meta": 6,
           "name_en": "Balanced Shard",
           "name_ru": "Сбалансированный кристалл"
         }
-      ]
+      }
     },
     {
       "research": "VISCHARGERELAY",
@@ -1522,26 +1607,31 @@
         "ordo": 16,
         "aer": 16
       },
-      "inputs": [
-        {
+      "shape": [
+        " R ",
+        "W W",
+        "I I"
+      ],
+      "key": {
+        "I": {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
           "name_ru": "Железный слиток"
         },
-        {
+        "R": {
           "ref": "blockMetalDevice",
           "meta": 14,
           "name_en": "Vis Relay",
           "name_ru": "Вис-канал"
         },
-        {
+        "W": {
           "ref": "itemWandRod",
           "meta": 0,
           "name_en": "Greatwood Rod",
           "name_ru": "Великодревесный стержень"
         }
-      ]
+      }
     },
     {
       "research": "FOCALMANIPULATION",
@@ -1561,40 +1651,45 @@
         "aqua": 32,
         "ordo": 32
       },
-      "inputs": [
-        {
+      "shape": [
+        "IQI",
+        "SPS",
+        "GTG"
+      ],
+      "key": {
+        "Q": {
           "ref": "blockSlabStone",
           "meta": 0
         },
-        {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 6,
           "name_en": "Arcane Stone Block",
           "name_ru": "Магический камень"
         },
-        {
+        "T": {
           "ref": "blockTable",
           "meta": null
         },
-        {
+        "I": {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
           "name_ru": "Железный слиток"
         },
-        {
+        "G": {
           "vanilla": "field_151043_k",
           "reg": "gold_ingot",
           "name_en": "Gold Ingot",
           "name_ru": "Золотой слиток"
         },
-        {
+        "P": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         }
-      ]
+      }
     },
     {
       "research": "GOLEMFETTER",
@@ -1610,32 +1705,37 @@
         "terra": 5,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "SSS",
+        "IRI",
+        "BBB"
+      ],
+      "key": {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 6,
           "name_en": "Arcane Stone Block",
           "name_ru": "Магический камень"
         },
-        {
+        "I": {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
           "name_ru": "Железный слиток"
         },
-        {
+        "B": {
           "ref": "blockCosmeticSolid",
           "meta": 7,
           "name_en": "Arcane Stone Bricks",
           "name_ru": "Магический кирпич"
         },
-        {
+        "R": {
           "vanilla": "field_150451_bX",
           "reg": "redstone_block",
           "name_en": "Redstone Block",
           "name_ru": "Redstone Block"
         }
-      ]
+      }
     },
     {
       "research": "ARCANESTONE",
@@ -1651,15 +1751,20 @@
         "terra": 1,
         "ignis": 1
       },
-      "inputs": [
-        {
+      "shape": [
+        "SSS",
+        "SCS",
+        "SSS"
+      ],
+      "key": {
+        "S": {
           "oredict": "stone"
         },
-        {
+        "C": {
           "ref": "itemShard",
           "meta": null
         }
-      ]
+      }
     },
     {
       "research": "PAVETRAVEL",
@@ -1675,26 +1780,30 @@
         "terra": 10,
         "aer": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "SAS",
+        "SBS"
+      ],
+      "key": {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 7,
           "name_en": "Arcane Stone Bricks",
           "name_ru": "Магический кирпич"
         },
-        {
+        "A": {
           "ref": "itemShard",
           "meta": 0,
           "name_en": "Air Shard",
           "name_ru": "Грозовой кристалл"
         },
-        {
+        "B": {
           "ref": "itemShard",
           "meta": 3,
           "name_en": "Earth Shard",
           "name_ru": "Земляной кристалл"
         }
-      ]
+      }
     },
     {
       "research": "ARCANELAMP",
@@ -1712,29 +1821,37 @@
         "aqua": 4,
         "perditio": 4
       },
-      "inputs": [
-        {
+      "shape": [
+        " S ",
+        "IAI",
+        " N "
+      ],
+      "key": {
+        "A": {
           "ref": "blockCosmeticOpaque",
           "meta": 0,
           "name_en": "Amber Block",
           "name_ru": "Янтарный блок"
         },
-        {
-          "raw": "new ItemStack((Block)"
+        "S": {
+          "vanilla": "field_150453_bW",
+          "reg": "daylight_detector",
+          "name_en": "Daylight Detector",
+          "name_ru": "Daylight Detector"
         },
-        {
+        "N": {
           "ref": "itemResource",
           "meta": 1,
           "name_en": "Nitor",
           "name_ru": "Нитор"
         },
-        {
+        "I": {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
           "name_ru": "Железный слиток"
         }
-      ]
+      }
     },
     {
       "research": "ARCANESPA",
@@ -1751,27 +1868,38 @@
         "ordo": 8,
         "terra": 4
       },
-      "inputs": [
-        {
-          "raw": "new ItemStack((Block)"
+      "shape": [
+        "QIQ",
+        "SJS",
+        "SPS"
+      ],
+      "key": {
+        "P": {
+          "vanilla": "field_150331_J",
+          "reg": "piston",
+          "name_en": "Piston",
+          "name_ru": "Поршень"
         },
-        {
+        "J": {
           "ref": "blockJar",
           "meta": null
         },
-        {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 6,
           "name_en": "Arcane Stone Block",
           "name_ru": "Магический камень"
         },
-        {
+        "Q": {
+          "raw": "quartzBlock"
+        },
+        "I": {
           "vanilla": "field_150411_aY",
           "reg": "iron_bars",
           "name_en": "Iron Bars",
           "name_ru": "Железные прутья"
         }
-      ]
+      }
     },
     {
       "research": "PAVEWARD",
@@ -1787,26 +1915,30 @@
         "ignis": 10,
         "ordo": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "SAS",
+        "SBS"
+      ],
+      "key": {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 7,
           "name_en": "Arcane Stone Bricks",
           "name_ru": "Магический кирпич"
         },
-        {
+        "A": {
           "ref": "itemShard",
           "meta": 1,
           "name_en": "Fire Shard",
           "name_ru": "Огненный кристалл"
         },
-        {
+        "B": {
           "ref": "itemShard",
           "meta": 4,
           "name_en": "Order Shard",
           "name_ru": "Кристалл порядка"
         }
-      ]
+      }
     },
     {
       "research": "LEVITATOR",
@@ -1822,32 +1954,43 @@
         "aer": 10,
         "terra": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "WEW",
+        "BNB",
+        "WAW"
+      ],
+      "key": {
+        "W": {
           "ref": "blockWoodenDevice",
           "meta": 6,
           "name_en": "Greatwood Planks",
           "name_ru": "Доски великого дерева"
         },
-        {
+        "E": {
           "ref": "itemShard",
           "meta": 3,
           "name_en": "Earth Shard",
           "name_ru": "Земляной кристалл"
         },
-        {
+        "A": {
           "ref": "itemShard",
           "meta": 0,
           "name_en": "Air Shard",
           "name_ru": "Грозовой кристалл"
         },
-        {
+        "N": {
           "ref": "itemResource",
           "meta": 1,
           "name_en": "Nitor",
           "name_ru": "Нитор"
+        },
+        "B": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
-      ]
+      }
     },
     {
       "research": "ARCANEEAR",
@@ -1863,20 +2006,43 @@
         "aer": 10,
         "ordo": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "GIG",
+        "GBG",
+        "WRW"
+      ],
+      "key": {
+        "W": {
           "ref": "blockWoodenDevice",
           "meta": 6,
           "name_en": "Greatwood Planks",
           "name_ru": "Доски великого дерева"
         },
-        {
+        "R": {
+          "vanilla": "field_151137_ax",
+          "reg": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "G": {
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "B": {
           "ref": "itemZombieBrain",
           "meta": null,
           "name_en": "Zombie Brain",
           "name_ru": "Мозг зомби"
         }
-      ]
+      }
     },
     {
       "research": "BONEBOW",
@@ -1892,14 +2058,31 @@
         "aer": 16,
         "perditio": 32
       },
-      "inputs": [
-        {
+      "shape": [
+        "SB ",
+        "SEB",
+        "SB "
+      ],
+      "key": {
+        "E": {
           "ref": "itemShard",
           "meta": 5,
           "name_en": "Entropy Shard",
           "name_ru": "Энтропийный кристалл"
+        },
+        "B": {
+          "vanilla": "field_151103_aS",
+          "reg": "bone",
+          "name_en": "Bone",
+          "name_ru": "Кость"
+        },
+        "S": {
+          "vanilla": "field_151007_F",
+          "reg": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
         }
-      ]
+      }
     },
     {
       "research": "PRIMALARROW",
@@ -1910,12 +2093,23 @@
         "meta": null
       },
       "aspects": {},
-      "inputs": [
-        {
+      "shape": [
+        "AAA",
+        "ASA",
+        "AAA"
+      ],
+      "key": {
+        "A": {
+          "vanilla": "field_151032_g",
+          "reg": "arrow",
+          "name_en": "Arrow",
+          "name_ru": "Стрела"
+        },
+        "S": {
           "ref": "itemShard",
           "meta": null
         }
-      ]
+      }
     },
     {
       "research": "INFUSION",
@@ -1930,18 +2124,29 @@
       "aspects": {
         "ordo": 40
       },
-      "inputs": [
-        {
+      "shape": [
+        "SBS",
+        "BEB",
+        "SBS"
+      ],
+      "key": {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 6,
           "name_en": "Arcane Stone Block",
           "name_ru": "Магический камень"
         },
-        {
+        "E": {
+          "vanilla": "field_151079_bi",
+          "reg": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
+        },
+        "B": {
           "ref": "itemShard",
           "meta": null
         }
-      ]
+      }
     },
     {
       "research": "INFUSION",
@@ -1956,14 +2161,19 @@
       "aspects": {
         "aer": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "SSS",
+        " S ",
+        "SSS"
+      ],
+      "key": {
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 6,
           "name_en": "Arcane Stone Block",
           "name_ru": "Магический камень"
         }
-      ]
+      }
     },
     {
       "research": "DISTILESSENTIA",
@@ -1978,11 +2188,22 @@
       "aspects": {
         "aqua": 1
       },
-      "inputs": [
-        {
+      "shape": [
+        "GWG",
+        "G G",
+        "GGG"
+      ],
+      "key": {
+        "W": {
           "oredict": "slabWood"
+        },
+        "G": {
+          "vanilla": "field_150410_aZ",
+          "reg": "glass_pane",
+          "name_en": "Glass Pane",
+          "name_ru": "Стеклянная панель"
         }
-      ]
+      }
     },
     {
       "research": "JARVOID",
@@ -1998,14 +2219,25 @@
         "aqua": 5,
         "perditio": 15
       },
-      "inputs": [
-        {
+      "shape": [
+        "O",
+        "J",
+        "P"
+      ],
+      "key": {
+        "O": {
+          "raw": "obsidian"
+        },
+        "P": {
+          "raw": "blazePowder"
+        },
+        "J": {
           "ref": "blockJar",
           "meta": 0,
           "name_en": "Warded Jar",
           "name_ru": "Банка"
         }
-      ]
+      }
     },
     {
       "research": "CAP_gold",
@@ -2022,7 +2254,19 @@
         "ignis": null,
         "aer": null
       },
-      "aspectsComputed": true
+      "aspectsComputed": true,
+      "shape": [
+        "NNN",
+        "N N"
+      ],
+      "key": {
+        "N": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        }
+      }
     },
     {
       "research": "CAP_copper",
@@ -2040,11 +2284,15 @@
         "aer": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "N N"
+      ],
+      "key": {
+        "N": {
           "oredict": "nuggetCopper"
         }
-      ]
+      }
     },
     {
       "research": "CAP_silver",
@@ -2062,11 +2310,15 @@
         "aer": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "N N"
+      ],
+      "key": {
+        "N": {
           "oredict": "nuggetSilver"
         }
-      ]
+      }
     },
     {
       "research": "CAP_thaumium",
@@ -2084,11 +2336,15 @@
         "aer": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "N N"
+      ],
+      "key": {
+        "N": {
           "oredict": "nuggetThaumium"
         }
-      ]
+      }
     },
     {
       "research": "CAP_void",
@@ -2107,11 +2363,15 @@
         "aer": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "N N"
+      ],
+      "key": {
+        "N": {
           "oredict": "nuggetVoid"
         }
-      ]
+      }
     },
     {
       "research": "ROD_greatwood",
@@ -2127,12 +2387,16 @@
         "perditio": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        " G",
+        "G "
+      ],
+      "key": {
+        "G": {
           "ref": "blockMagicalLog",
           "meta": 0
         }
-      ]
+      }
     },
     {
       "research": "ROD_greatwood_staff",
@@ -2148,20 +2412,25 @@
         "ordo": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "  S",
+        " G ",
+        "G  "
+      ],
+      "key": {
+        "S": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         },
-        {
+        "G": {
           "ref": "itemWandRod",
           "meta": 0,
           "name_en": "Greatwood Rod",
           "name_ru": "Великодревесный стержень"
         }
-      ]
+      }
     },
     {
       "research": "ROD_obsidian_staff",
@@ -2177,20 +2446,25 @@
         "ordo": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "  S",
+        " G ",
+        "G  "
+      ],
+      "key": {
+        "S": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         },
-        {
+        "G": {
           "ref": "itemWandRod",
           "meta": 1,
           "name_en": "Obsidian Rod",
           "name_ru": "Обсидиановый стержень"
         }
-      ]
+      }
     },
     {
       "research": "ROD_silverwood_staff",
@@ -2206,20 +2480,25 @@
         "ordo": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "  S",
+        " G ",
+        "G  "
+      ],
+      "key": {
+        "S": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         },
-        {
+        "G": {
           "ref": "itemWandRod",
           "meta": 2,
           "name_en": "Silverwood Rod",
           "name_ru": "Серебрянодревесный стержень"
         }
-      ]
+      }
     },
     {
       "research": "ROD_ice_staff",
@@ -2235,20 +2514,25 @@
         "ordo": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "  S",
+        " G ",
+        "G  "
+      ],
+      "key": {
+        "S": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         },
-        {
+        "G": {
           "ref": "itemWandRod",
           "meta": 3,
           "name_en": "Icy Rod",
           "name_ru": "Ледяной стержень"
         }
-      ]
+      }
     },
     {
       "research": "ROD_quartz_staff",
@@ -2264,20 +2548,25 @@
         "ordo": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "  S",
+        " G ",
+        "G  "
+      ],
+      "key": {
+        "S": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         },
-        {
+        "G": {
           "ref": "itemWandRod",
           "meta": 4,
           "name_en": "Quartz Rod",
           "name_ru": "Кварцевый стержень"
         }
-      ]
+      }
     },
     {
       "research": "ROD_reed_staff",
@@ -2293,20 +2582,25 @@
         "ordo": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "  S",
+        " G ",
+        "G  "
+      ],
+      "key": {
+        "S": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         },
-        {
+        "G": {
           "ref": "itemWandRod",
           "meta": 5,
           "name_en": "Reed Rod",
           "name_ru": "Тростниковый стержень"
         }
-      ]
+      }
     },
     {
       "research": "ROD_blaze_staff",
@@ -2322,20 +2616,25 @@
         "ordo": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "  S",
+        " G ",
+        "G  "
+      ],
+      "key": {
+        "S": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         },
-        {
+        "G": {
           "ref": "itemWandRod",
           "meta": 6,
           "name_en": "Blazing Rod",
           "name_ru": "Огненный стержень"
         }
-      ]
+      }
     },
     {
       "research": "ROD_bone_staff",
@@ -2351,20 +2650,25 @@
         "ordo": null
       },
       "aspectsComputed": true,
-      "inputs": [
-        {
+      "shape": [
+        "  S",
+        " G ",
+        "G  "
+      ],
+      "key": {
+        "S": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
         },
-        {
+        "G": {
           "ref": "itemWandRod",
           "meta": 7,
           "name_en": "Bone Rod",
           "name_ru": "Костяной стержень"
         }
-      ]
+      }
     },
     {
       "research": "FOCUSFIRE",
@@ -2380,14 +2684,26 @@
         "ignis": 20,
         "perditio": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "CQC"
+      ],
+      "key": {
+        "#": {
+          "vanilla": "field_151059_bz",
+          "reg": "fire_charge",
+          "name_en": "Fire Charge",
+          "name_ru": "Огненный шар"
+        },
+        "Q": {
+          "raw": "quartz"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 1,
           "name_en": "Fire Shard",
           "name_ru": "Огненный кристалл"
         }
-      ]
+      }
     },
     {
       "research": "FOCUSFROST",
@@ -2404,14 +2720,26 @@
         "ordo": 10,
         "perditio": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "CQC"
+      ],
+      "key": {
+        "#": {
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "Q": {
+          "raw": "quartz"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 2,
           "name_en": "Water Shard",
           "name_ru": "Ледяной кристалл"
         }
-      ]
+      }
     },
     {
       "research": "FOCUSSHOCK",
@@ -2428,14 +2756,26 @@
         "ordo": 10,
         "perditio": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "CQC"
+      ],
+      "key": {
+        "#": {
+          "vanilla": "field_151174_bG",
+          "reg": "potato",
+          "name_en": "Potato",
+          "name_ru": "Картофель"
+        },
+        "Q": {
+          "raw": "quartz"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 0,
           "name_en": "Air Shard",
           "name_ru": "Грозовой кристалл"
         }
-      ]
+      }
     },
     {
       "research": "FOCUSTRADE",
@@ -2452,20 +2792,32 @@
         "perditio": 15,
         "terra": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "CQE"
+      ],
+      "key": {
+        "#": {
           "ref": "itemResource",
           "meta": 3,
           "name_en": "Quicksilver",
           "name_ru": "Ртуть"
         },
-        {
+        "Q": {
+          "raw": "quartz"
+        },
+        "C": {
+          "ref": "itemShard",
+          "meta": 6,
+          "name_en": "Balanced Shard",
+          "name_ru": "Сбалансированный кристалл"
+        },
+        "E": {
           "ref": "itemShard",
           "meta": 6,
           "name_en": "Balanced Shard",
           "name_ru": "Сбалансированный кристалл"
         }
-      ]
+      }
     },
     {
       "research": "FOCUSEXCAVATION",
@@ -2482,17 +2834,23 @@
         "perditio": 5,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "CQC"
+      ],
+      "key": {
+        "#": {
           "oredict": "gemEmerald"
         },
-        {
+        "Q": {
+          "raw": "quartz"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 3,
           "name_en": "Earth Shard",
           "name_ru": "Земляной кристалл"
         }
-      ]
+      }
     },
     {
       "research": "FOCUSPRIMAL",
@@ -2512,14 +2870,26 @@
         "ignis": 25,
         "aqua": 25
       },
-      "inputs": [
-        {
+      "shape": [
+        "CQC"
+      ],
+      "key": {
+        "#": {
           "ref": "itemResource",
           "meta": 15,
           "name_en": "Primal Charm",
           "name_ru": "Сингулярный амулет"
+        },
+        "Q": {
+          "raw": "quartz"
+        },
+        "C": {
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         }
-      ]
+      }
     },
     {
       "research": "FOCUSPOUCH",
@@ -2536,14 +2906,31 @@
         "ordo": 10,
         "perditio": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "LGL",
+        "LBL",
+        "LLL"
+      ],
+      "key": {
+        "B": {
           "ref": "itemBaubleBlanks",
           "meta": 2,
           "name_en": "Mundane Belt",
           "name_ru": "Обычный пояс"
+        },
+        "L": {
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
+        },
+        "G": {
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         }
-      ]
+      }
     },
     {
       "research": "DECONSTRUCTOR",
@@ -2558,32 +2945,36 @@
       "aspects": {
         "perditio": 20
       },
-      "inputs": [
-        {
+      "shape": [
+        " S ",
+        "ATP"
+      ],
+      "key": {
+        "T": {
           "ref": "blockTable",
           "meta": 0,
           "name_en": "Table",
           "name_ru": "Стол"
         },
-        {
+        "S": {
           "ref": "itemThaumometer",
           "meta": null,
           "name_en": "Thaumometer",
           "name_ru": "Таумометр"
         },
-        {
+        "P": {
           "vanilla": "field_151005_D",
           "reg": "golden_pickaxe",
           "name_en": "Golden Pickaxe",
           "name_ru": "Золотая кирка"
         },
-        {
+        "A": {
           "vanilla": "field_151006_E",
           "reg": "golden_axe",
           "name_en": "Golden Axe",
           "name_ru": "Золотой топор"
         }
-      ]
+      }
     },
     {
       "research": "ARCANEBORE",
@@ -2599,14 +2990,31 @@
         "aer": 10,
         "ordo": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "WIW",
+        "IDI",
+        "WIW"
+      ],
+      "key": {
+        "W": {
           "ref": "blockWoodenDevice",
           "meta": 6,
           "name_en": "Greatwood Planks",
           "name_ru": "Доски великого дерева"
+        },
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "D": {
+          "vanilla": "field_150367_z",
+          "reg": "dispenser",
+          "name_en": "Dispenser",
+          "name_ru": "Раздатчик"
         }
-      ]
+      }
     },
     {
       "research": "ENCHFABRIC",
@@ -2626,20 +3034,25 @@
         "ordo": 1,
         "perditio": 1
       },
-      "inputs": [
-        {
+      "shape": [
+        " S ",
+        "SCS",
+        " S "
+      ],
+      "key": {
+        "S": {
           "vanilla": "field_151007_F",
           "reg": "string",
           "name_en": "String",
           "name_ru": "Нить"
         },
-        {
+        "C": {
           "vanilla": "field_150325_L",
           "reg": "wool",
           "name_en": "Wool",
           "name_ru": "Шерсть"
         }
-      ]
+      }
     },
     {
       "research": "ENCHFABRIC",
@@ -2654,14 +3067,19 @@
       "aspects": {
         "aer": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "I I",
+        "III",
+        "III"
+      ],
+      "key": {
+        "I": {
           "ref": "itemResource",
           "meta": 7,
           "name_en": "Enchanted Fabric",
           "name_ru": "Зачарованная ткань"
         }
-      ]
+      }
     },
     {
       "research": "ENCHFABRIC",
@@ -2676,14 +3094,19 @@
       "aspects": {
         "aqua": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "III",
+        "I I",
+        "I I"
+      ],
+      "key": {
+        "I": {
           "ref": "itemResource",
           "meta": 7,
           "name_en": "Enchanted Fabric",
           "name_ru": "Зачарованная ткань"
         }
-      ]
+      }
     },
     {
       "research": "ENCHFABRIC",
@@ -2698,14 +3121,18 @@
       "aspects": {
         "terra": 3
       },
-      "inputs": [
-        {
+      "shape": [
+        "I I",
+        "I I"
+      ],
+      "key": {
+        "I": {
           "ref": "itemResource",
           "meta": 7,
           "name_en": "Enchanted Fabric",
           "name_ru": "Зачарованная ткань"
         }
-      ]
+      }
     },
     {
       "research": "GOGGLES",
@@ -2724,6 +3151,31 @@
         "terra": 5,
         "perditio": 3,
         "ordo": 3
+      },
+      "shape": [
+        "LGL",
+        "L L",
+        "TGT"
+      ],
+      "key": {
+        "T": {
+          "ref": "itemThaumometer",
+          "meta": null,
+          "name_en": "Thaumometer",
+          "name_ru": "Таумометр"
+        },
+        "G": {
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "L": {
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
+        }
       }
     },
     {
@@ -2741,11 +3193,22 @@
         "ordo": 3,
         "perditio": 3
       },
-      "inputs": [
-        {
+      "shape": [
+        "WTW",
+        "W W",
+        "WWW"
+      ],
+      "key": {
+        "W": {
           "oredict": "plankWood"
+        },
+        "T": {
+          "vanilla": "field_150415_aT",
+          "reg": "trapdoor",
+          "name_en": "Trapdoor",
+          "name_ru": "Люк"
         }
-      ]
+      }
     },
     {
       "research": "GOLEMBELL",
@@ -2760,11 +3223,19 @@
       "aspects": {
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        " QQ",
+        " QQ",
+        "S  "
+      ],
+      "key": {
+        "S": {
           "oredict": "stickWood"
+        },
+        "Q": {
+          "raw": "quartz"
         }
-      ]
+      }
     },
     {
       "research": "COREGATHER",
@@ -2780,14 +3251,25 @@
         "ordo": 5,
         "ignis": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        " C ",
+        "CNC",
+        " C "
+      ],
+      "key": {
+        "C": {
+          "vanilla": "field_151118_aC",
+          "reg": "brick",
+          "name_en": "Brick",
+          "name_ru": "Кирпич"
+        },
+        "N": {
           "ref": "itemResource",
           "meta": 1,
           "name_en": "Nitor",
           "name_ru": "Нитор"
         }
-      ]
+      }
     },
     {
       "research": "UPGRADEAIR",
@@ -2802,14 +3284,25 @@
       "aspects": {
         "aer": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "NCN",
+        "NNN"
+      ],
+      "key": {
+        "N": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 0,
           "name_en": "Air Shard",
           "name_ru": "Грозовой кристалл"
         }
-      ]
+      }
     },
     {
       "research": "UPGRADEEARTH",
@@ -2824,14 +3317,25 @@
       "aspects": {
         "terra": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "NCN",
+        "NNN"
+      ],
+      "key": {
+        "N": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 3,
           "name_en": "Earth Shard",
           "name_ru": "Земляной кристалл"
         }
-      ]
+      }
     },
     {
       "research": "UPGRADEFIRE",
@@ -2846,14 +3350,25 @@
       "aspects": {
         "ignis": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "NCN",
+        "NNN"
+      ],
+      "key": {
+        "N": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 1,
           "name_en": "Fire Shard",
           "name_ru": "Огненный кристалл"
         }
-      ]
+      }
     },
     {
       "research": "UPGRADEWATER",
@@ -2868,14 +3383,25 @@
       "aspects": {
         "aqua": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "NCN",
+        "NNN"
+      ],
+      "key": {
+        "N": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 2,
           "name_en": "Water Shard",
           "name_ru": "Ледяной кристалл"
         }
-      ]
+      }
     },
     {
       "research": "UPGRADEORDER",
@@ -2890,14 +3416,25 @@
       "aspects": {
         "ordo": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "NCN",
+        "NNN"
+      ],
+      "key": {
+        "N": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 4,
           "name_en": "Order Shard",
           "name_ru": "Кристалл порядка"
         }
-      ]
+      }
     },
     {
       "research": "UPGRADEENTROPY",
@@ -2912,14 +3449,25 @@
       "aspects": {
         "perditio": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "NNN",
+        "NCN",
+        "NNN"
+      ],
+      "key": {
+        "N": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        },
+        "C": {
           "ref": "itemShard",
           "meta": 5,
           "name_en": "Entropy Shard",
           "name_ru": "Энтропийный кристалл"
         }
-      ]
+      }
     },
     {
       "research": "TINYHAT",
@@ -2935,14 +3483,25 @@
         "ordo": 8,
         "ignis": 8
       },
-      "inputs": [
-        {
+      "shape": [
+        " C ",
+        " G ",
+        "CCC"
+      ],
+      "key": {
+        "C": {
           "vanilla": "field_150325_L",
           "reg": "wool",
           "name_en": "Wool",
           "name_ru": "Шерсть"
+        },
+        "G": {
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         }
-      ]
+      }
     },
     {
       "research": "TINYFEZ",
@@ -2958,14 +3517,25 @@
         "aqua": 4,
         "terra": 4
       },
-      "inputs": [
-        {
+      "shape": [
+        "CCS",
+        "CCS",
+        "  S"
+      ],
+      "key": {
+        "C": {
           "vanilla": "field_150325_L",
           "reg": "wool",
           "name_en": "Wool",
           "name_ru": "Шерсть"
+        },
+        "S": {
+          "vanilla": "field_151007_F",
+          "reg": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
         }
-      ]
+      }
     },
     {
       "research": "TINYBOWTIE",
@@ -2981,14 +3551,24 @@
         "aer": 4,
         "ordo": 4
       },
-      "inputs": [
-        {
+      "shape": [
+        "CSC",
+        "C C"
+      ],
+      "key": {
+        "C": {
           "vanilla": "field_150325_L",
           "reg": "wool",
           "name_en": "Wool",
           "name_ru": "Шерсть"
+        },
+        "S": {
+          "vanilla": "field_151007_F",
+          "reg": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
         }
-      ]
+      }
     },
     {
       "research": "TINYGLASSES",
@@ -3003,6 +3583,23 @@
       "aspects": {
         "aer": 4,
         "aqua": 4
+      },
+      "shape": [
+        "GIG"
+      ],
+      "key": {
+        "G": {
+          "vanilla": "field_150359_w",
+          "reg": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        }
       }
     },
     {
@@ -3018,6 +3615,31 @@
       "aspects": {
         "aer": 4,
         "ignis": 4
+      },
+      "shape": [
+        "AIA",
+        "ADA",
+        "AIA"
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "D": {
+          "vanilla": "field_150367_z",
+          "reg": "dispenser",
+          "name_en": "Dispenser",
+          "name_ru": "Раздатчик"
+        },
+        "A": {
+          "vanilla": "field_151032_g",
+          "reg": "arrow",
+          "name_en": "Arrow",
+          "name_ru": "Стрела"
+        }
       }
     },
     {
@@ -3034,11 +3656,23 @@
         "terra": 4,
         "aqua": 4
       },
-      "inputs": [
-        {
-          "raw": "new ItemStack((Item)"
+      "shape": [
+        "IHI"
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "H": {
+          "vanilla": "field_151028_Y",
+          "reg": "iron_helmet",
+          "name_en": "Iron Helmet",
+          "name_ru": "Железный шлем"
         }
-      ]
+      }
     },
     {
       "research": "TINYARMOR",
@@ -3053,11 +3687,24 @@
       "aspects": {
         "terra": 8
       },
-      "inputs": [
-        {
-          "raw": "new ItemStack((Item)"
+      "shape": [
+        "I I",
+        "IAI"
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "A": {
+          "vanilla": "field_151030_Z",
+          "reg": "iron_chestplate",
+          "name_en": "Iron Chestplate",
+          "name_ru": "Железный нагрудник"
         }
-      ]
+      }
     },
     {
       "research": "TINYHAMMER",
@@ -3072,6 +3719,19 @@
       "aspects": {
         "terra": 4,
         "ignis": 4
+      },
+      "shape": [
+        "III",
+        "III",
+        " I "
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        }
       }
     },
     {
@@ -3088,14 +3748,23 @@
         "ordo": 5,
         "aqua": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "GWG"
+      ],
+      "key": {
+        "G": {
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "W": {
           "ref": "blockWoodenDevice",
           "meta": 7,
           "name_en": "Silverwood Planks",
           "name_ru": "Доски серебряного дерева"
         }
-      ]
+      }
     },
     {
       "research": "DISTILESSENTIA",
@@ -3111,20 +3780,31 @@
         "ignis": 5,
         "aqua": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "SCS",
+        "SFS",
+        "SSS"
+      ],
+      "key": {
+        "C": {
           "ref": "blockMetalDevice",
           "meta": 0,
           "name_en": "Crucible",
           "name_ru": "Тигель"
         },
-        {
+        "F": {
+          "vanilla": "field_150460_al",
+          "reg": "furnace",
+          "name_en": "Furnace",
+          "name_ru": "Печь"
+        },
+        "S": {
           "ref": "blockCosmeticSolid",
           "meta": 6,
           "name_en": "Arcane Stone Block",
           "name_ru": "Магический камень"
         }
-      ]
+      }
     },
     {
       "research": "DISTILESSENTIA",
@@ -3140,18 +3820,41 @@
         "aer": 5,
         "aqua": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "FIG",
+        "IBI",
+        "I I"
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "B": {
+          "vanilla": "field_151133_ar",
+          "reg": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        },
+        "G": {
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "F": {
           "ref": "itemResource",
           "meta": 8,
           "name_en": "Vis Filter",
           "name_ru": "Фильтр"
         },
-        {
+        "L": {
           "ref": "blockMagicalLeaves",
           "meta": 1
         }
-      ]
+      }
     },
     {
       "research": "BELLOWS",
@@ -3167,17 +3870,34 @@
         "aer": 10,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "WW ",
+        "LCI",
+        "WW "
+      ],
+      "key": {
+        "W": {
           "oredict": "plankWood"
         },
-        {
+        "C": {
           "ref": "itemShard",
           "meta": 0,
           "name_en": "Air Shard",
           "name_ru": "Грозовой кристалл"
+        },
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "L": {
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
-      ]
+      }
     },
     {
       "research": "TUBES",
@@ -3193,14 +3913,37 @@
         "aqua": 5,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        " Q ",
+        "IGI",
+        " B "
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "B": {
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        },
+        "G": {
+          "vanilla": "field_150359_w",
+          "reg": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "Q": {
           "ref": "itemNugget",
           "meta": 5,
           "name_en": "Quicksilver Drop",
           "name_ru": "Капля ртути"
         }
-      ]
+      }
     },
     {
       "research": "TUBES",
@@ -3216,11 +3959,25 @@
         "aqua": 5,
         "aer": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "I I",
+        "INI",
+        " S "
+      ],
+      "key": {
+        "I": {
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "N": {
+          "raw": "quartz"
+        },
+        "S": {
           "oredict": "stickWood"
         }
-      ]
+      }
     },
     {
       "research": "CENTRIFUGE",
@@ -3236,32 +3993,37 @@
         "aqua": 5,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "PVP",
+        "T T",
+        "PRP"
+      ],
+      "key": {
+        "T": {
           "ref": "blockTube",
           "meta": 0,
           "name_en": "Essentia Tube",
           "name_ru": "Труба для эссенции"
         },
-        {
+        "V": {
           "ref": "blockTube",
           "meta": 1,
           "name_en": "Essentia Valve",
           "name_ru": "Клапан для эссенции"
         },
-        {
+        "R": {
           "ref": "blockTube",
           "meta": 5,
           "name_en": "Restricted Essentia Tube",
           "name_ru": "Ограничивающая труба для эссенции"
         },
-        {
+        "P": {
           "ref": "itemEssence",
           "meta": 0,
           "name_en": "Glass Phial",
           "name_ru": "Стеклянный пузырёк"
         }
-      ]
+      }
     },
     {
       "research": "DISTILESSENTIA",
@@ -3277,32 +4039,37 @@
         "aqua": 5,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "VTF",
+        "TWT",
+        "FTV"
+      ],
+      "key": {
+        "W": {
           "ref": "blockWoodenDevice",
           "meta": 6,
           "name_en": "Greatwood Planks",
           "name_ru": "Доски великого дерева"
         },
-        {
+        "V": {
           "ref": "blockTube",
           "meta": 1,
           "name_en": "Essentia Valve",
           "name_ru": "Клапан для эссенции"
         },
-        {
+        "T": {
           "ref": "blockTube",
           "meta": 0,
           "name_en": "Essentia Tube",
           "name_ru": "Труба для эссенции"
         },
-        {
+        "F": {
           "ref": "itemResource",
           "meta": 8,
           "name_en": "Vis Filter",
           "name_ru": "Фильтр"
         }
-      ]
+      }
     },
     {
       "research": "ADVALCHEMYFURNACE",
@@ -3319,26 +4086,31 @@
         "ordo": 30,
         "terra": 10
       },
-      "inputs": [
-        {
+      "shape": [
+        "VAV",
+        "APA",
+        "VAV"
+      ],
+      "key": {
+        "A": {
           "ref": "blockMetalDevice",
           "meta": 9,
           "name_en": "Alchemical Construct",
           "name_ru": "Алхимическая конструкция"
         },
-        {
+        "V": {
           "ref": "itemResource",
           "meta": 16,
           "name_en": "Void metal Ingot",
           "name_ru": "Слиток пустотного металла"
         },
-        {
+        "P": {
           "ref": "itemEldritchObject",
           "meta": 3,
           "name_en": "Primordial Pearl",
           "name_ru": "Сингулярная жемчужина"
         }
-      ]
+      }
     },
     {
       "research": "CENTRIFUGE",
@@ -3355,29 +4127,37 @@
         "ordo": 5,
         "perditio": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        " T ",
+        "ACP",
+        " T "
+      ],
+      "key": {
+        "T": {
           "ref": "blockTube",
           "meta": 0,
           "name_en": "Essentia Tube",
           "name_ru": "Труба для эссенции"
         },
-        {
-          "raw": "new ItemStack((Block)"
+        "P": {
+          "vanilla": "field_150331_J",
+          "reg": "piston",
+          "name_en": "Piston",
+          "name_ru": "Поршень"
         },
-        {
+        "A": {
           "ref": "blockMetalDevice",
           "meta": 1,
           "name_en": "Arcane Alembic",
           "name_ru": "Перегонный куб"
         },
-        {
+        "C": {
           "ref": "blockMetalDevice",
           "meta": 9,
           "name_en": "Alchemical Construct",
           "name_ru": "Алхимическая конструкция"
         }
-      ]
+      }
     },
     {
       "research": "ESSENTIACRYSTAL",
@@ -3394,38 +4174,43 @@
         "terra": 15,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "IDI",
+        "QCQ",
+        "WTW"
+      ],
+      "key": {
+        "T": {
           "ref": "blockTube",
           "meta": 0,
           "name_en": "Essentia Tube",
           "name_ru": "Труба для эссенции"
         },
-        {
+        "D": {
           "vanilla": "field_150367_z",
           "reg": "dispenser",
           "name_en": "Dispenser",
           "name_ru": "Раздатчик"
         },
-        {
+        "Q": {
           "ref": "itemShard",
           "meta": 6,
           "name_en": "Balanced Shard",
           "name_ru": "Сбалансированный кристалл"
         },
-        {
+        "I": {
           "oredict": "ingotIron"
         },
-        {
+        "W": {
           "oredict": "plankWood"
         },
-        {
+        "C": {
           "ref": "blockMetalDevice",
           "meta": 9,
           "name_en": "Alchemical Construct",
           "name_ru": "Алхимическая конструкция"
         }
-      ]
+      }
     },
     {
       "research": "THAUMATORIUM",
@@ -3442,26 +4227,31 @@
         "aqua": 5,
         "ordo": 5
       },
-      "inputs": [
-        {
+      "shape": [
+        "IAI",
+        "ABA",
+        "IAI"
+      ],
+      "key": {
+        "B": {
           "ref": "itemZombieBrain",
           "meta": null,
           "name_en": "Zombie Brain",
           "name_ru": "Мозг зомби"
         },
-        {
+        "A": {
           "ref": "itemResource",
           "meta": 6,
           "name_en": "Amber",
           "name_ru": "Янтарь"
         },
-        {
+        "I": {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
           "name_ru": "Железный слиток"
         }
-      ]
+      }
     },
     {
       "research": "BASICARTIFACE",
@@ -7526,19 +8316,7 @@
       },
       "aspects": {
         "ordo": 2
-      },
-      "inputs": [
-        {
-          "oredict": "sWs"
-        },
-        {
-          "oredict": "sTs"
-        },
-        {
-          "ref": "miscResource",
-          "meta": null
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"MB_Grafter",
@@ -7552,13 +8330,7 @@
       },
       "aspects": {
         "ordo": 5
-      },
-      "inputs": [
-        {
-          "ref": "miscResource",
-          "meta": null
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"MB_FrameMagic",
@@ -7571,19 +8343,7 @@
         "ordo": 5,
         "aer": 2,
         "terra": 2
-      },
-      "inputs": [
-        {
-          "oredict": "sss"
-        },
-        {
-          "oredict": "sCs"
-        },
-        {
-          "ref": "miscResource",
-          "meta": null
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"MB_VisAuraProvider",
@@ -7597,26 +8357,7 @@
         "aer": 60,
         "perditio": 60,
         "aqua": 60
-      },
-      "inputs": [
-        {
-          "oredict": "ngn"
-        },
-        {
-          "oredict": "gvg"
-        },
-        {
-          "oredict": "npn"
-        },
-        {
-          "ref": "wooden",
-          "meta": null
-        },
-        {
-          "ref": "metal",
-          "meta": null
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"MB_EssenceOblivion",
@@ -7757,18 +8498,7 @@
       "aspects": {
         "perditio": 2,
         "ordo": 1
-      },
-      "inputs": [
-        {
-          "vanilla": "field_150348_b",
-          "reg": "stone",
-          "name_en": "Stone",
-          "name_ru": "Камень"
-        },
-        {
-          "oredict": "resourceTaint"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"RINGFOOD",
@@ -7784,27 +8514,7 @@
         "perditio": 10,
         "aqua": 20,
         "terra": 20
-      },
-      "inputs": [
-        {
-          "ref": "ForbiddenItems.gluttonyShard",
-          "meta": null,
-          "name_en": "Gluttony Shard",
-          "name_ru": "Осколок прожорливости"
-        },
-        {
-          "ref": "itemBaubleBlanks",
-          "meta": 1,
-          "name_en": "Mundane Ring",
-          "name_ru": "Обычное кольцо"
-        },
-        {
-          "vanilla": "field_151045_i",
-          "reg": "diamond",
-          "name_en": "Diamond",
-          "name_ru": "Алмаз"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"RINGFOOD",
@@ -7820,27 +8530,7 @@
         "perditio": 10,
         "aqua": 20,
         "terra": 20
-      },
-      "inputs": [
-        {
-          "ref": "ForbiddenItems.gluttonyShard",
-          "meta": null,
-          "name_en": "Gluttony Shard",
-          "name_ru": "Осколок прожорливости"
-        },
-        {
-          "ref": "itemBaubleBlanks",
-          "meta": 1,
-          "name_en": "Mundane Ring",
-          "name_ru": "Обычное кольцо"
-        },
-        {
-          "ref": "ForbiddenBlocks.starBlock",
-          "meta": null,
-          "name_en": "Nether Star Block",
-          "name_ru": "Блок звезды Нижнего мира"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CRYSTALWELL",
@@ -8780,17 +9470,7 @@
         "aer": 26,
         "terra": 26,
         "ordo": 26
-      },
-      "inputs": [
-        {
-          "ref": "ForbiddenItems.wandCore",
-          "meta": 3
-        },
-        {
-          "ref": "demonShard",
-          "meta": null
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"BLOODWELL",
@@ -9062,17 +9742,7 @@
         "aer": 26,
         "terra": 26,
         "ordo": 26
-      },
-      "inputs": [
-        {
-          "ref": "ForbiddenItems.wandCore",
-          "meta": 4
-        },
-        {
-          "ref": "essence",
-          "meta": 10
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"ROD_witchwood",
@@ -9183,12 +9853,7 @@
         "aer": 6,
         "terra": 6,
         "ordo": 6
-      },
-      "inputs": [
-        {
-          "oredict": "nuggetManasteel"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"ROD_dreamwood_staff",
@@ -9205,17 +9870,7 @@
         "aer": 26,
         "terra": 26,
         "ordo": 26
-      },
-      "inputs": [
-        {
-          "ref": "ForbiddenItems.wandCore",
-          "meta": 11
-        },
-        {
-          "ref": "resource",
-          "meta": 9
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CAP_elementium",
@@ -9234,12 +9889,7 @@
         "aer": 27,
         "terra": 27,
         "ordo": 27
-      },
-      "inputs": [
-        {
-          "oredict": "nuggetElvenElementium"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"WHISPERWEED",
@@ -9684,21 +10334,7 @@
       "aspects": {
         "ordo": 50,
         "perditio": 50
-      },
-      "inputs": [
-        {
-          "ref": "itemResource",
-          "meta": 2,
-          "name_en": "Thaumium Ingot",
-          "name_ru": "Таум-слиток"
-        },
-        {
-          "ref": "itemResource",
-          "meta": 16,
-          "name_en": "Void metal Ingot",
-          "name_ru": "Слиток пустотного металла"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CRIMSONROBES",
@@ -9713,15 +10349,7 @@
       "aspects": {
         "ignis": 5,
         "perditio": 5
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 2,
-          "name_en": "Crimson-stained Cloth",
-          "name_ru": ""
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CRIMSONROBES",
@@ -9736,27 +10364,7 @@
       "aspects": {
         "ignis": 10,
         "perditio": 10
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 2,
-          "name_en": "Crimson-stained Cloth",
-          "name_ru": ""
-        },
-        {
-          "vanilla": "field_151043_k",
-          "reg": "gold_ingot",
-          "name_en": "Gold Ingot",
-          "name_ru": "Золотой слиток"
-        },
-        {
-          "vanilla": "field_151042_j",
-          "reg": "iron_ingot",
-          "name_en": "Iron Ingot",
-          "name_ru": "Железный слиток"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CRIMSONROBES",
@@ -9771,27 +10379,7 @@
       "aspects": {
         "ignis": 8,
         "perditio": 8
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 2,
-          "name_en": "Crimson-stained Cloth",
-          "name_ru": ""
-        },
-        {
-          "vanilla": "field_151043_k",
-          "reg": "gold_ingot",
-          "name_en": "Gold Ingot",
-          "name_ru": "Золотой слиток"
-        },
-        {
-          "vanilla": "field_151042_j",
-          "reg": "iron_ingot",
-          "name_en": "Iron Ingot",
-          "name_ru": "Железный слиток"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CRIMSONROBES",
@@ -9806,15 +10394,7 @@
       "aspects": {
         "ignis": 5,
         "perditio": 5
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 2,
-          "name_en": "Crimson-stained Cloth",
-          "name_ru": ""
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"ROD_warpwood_staff",
@@ -9826,21 +10406,7 @@
         "name_en": "Warpwood Staff Core",
         "name_ru": ""
       },
-      "aspects": {},
-      "inputs": [
-        {
-          "ref": "itemEldritchObject",
-          "meta": 3,
-          "name_en": "Primordial Pearl",
-          "name_ru": "Сингулярная жемчужина"
-        },
-        {
-          "ref": "ItemRegistry.ItemWandRod",
-          "meta": 0,
-          "name_en": "Warpwood Rod",
-          "name_ru": ""
-        }
-      ]
+      "aspects": {}
     },
     {
       "research": "(String)\"KNIGHTROBES",
@@ -9856,27 +10422,7 @@
         "terra": 5,
         "ignis": 5,
         "perditio": 5
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 7,
-          "name_en": "Crimson Plating",
-          "name_ru": ""
-        },
-        {
-          "vanilla": "field_151043_k",
-          "reg": "gold_ingot",
-          "name_en": "Gold Ingot",
-          "name_ru": "Золотой слиток"
-        },
-        {
-          "vanilla": "field_151042_j",
-          "reg": "iron_ingot",
-          "name_en": "Iron Ingot",
-          "name_ru": "Железный слиток"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"KNIGHTROBES",
@@ -9892,21 +10438,7 @@
         "terra": 10,
         "ignis": 10,
         "perditio": 10
-      },
-      "inputs": [
-        {
-          "vanilla": "field_151042_j",
-          "reg": "iron_ingot",
-          "name_en": "Iron Ingot",
-          "name_ru": "Железный слиток"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 7,
-          "name_en": "Crimson Plating",
-          "name_ru": ""
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"KNIGHTROBES",
@@ -9922,27 +10454,7 @@
         "terra": 8,
         "ignis": 8,
         "perditio": 8
-      },
-      "inputs": [
-        {
-          "vanilla": "field_151042_j",
-          "reg": "iron_ingot",
-          "name_en": "Iron Ingot",
-          "name_ru": "Железный слиток"
-        },
-        {
-          "vanilla": "field_151043_k",
-          "reg": "gold_ingot",
-          "name_en": "Gold Ingot",
-          "name_ru": "Золотой слиток"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 7,
-          "name_en": "Crimson Plating",
-          "name_ru": ""
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"PRAETORARMOR",
@@ -9958,33 +10470,7 @@
         "ordo": 15,
         "perditio": 15,
         "ignis": 15
-      },
-      "inputs": [
-        {
-          "ref": "itemHelmetCultistPlate",
-          "meta": null,
-          "name_en": "Crimson Cult Helm",
-          "name_ru": "Шлем культиста"
-        },
-        {
-          "vanilla": "field_151042_j",
-          "reg": "iron_ingot",
-          "name_en": "Iron Ingot",
-          "name_ru": "Железный слиток"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 7,
-          "name_en": "Crimson Plating",
-          "name_ru": ""
-        },
-        {
-          "vanilla": "field_151043_k",
-          "reg": "gold_ingot",
-          "name_en": "Gold Ingot",
-          "name_ru": "Золотой слиток"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"PRAETORARMOR",
@@ -10000,33 +10486,7 @@
         "ordo": 25,
         "perditio": 25,
         "ignis": 25
-      },
-      "inputs": [
-        {
-          "ref": "itemChestCultistPlate",
-          "meta": null,
-          "name_en": "Crimson Cult Chestplate",
-          "name_ru": "Кираса культиста"
-        },
-        {
-          "vanilla": "field_151042_j",
-          "reg": "iron_ingot",
-          "name_en": "Iron Ingot",
-          "name_ru": "Железный слиток"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 7,
-          "name_en": "Crimson Plating",
-          "name_ru": ""
-        },
-        {
-          "vanilla": "field_151043_k",
-          "reg": "gold_ingot",
-          "name_en": "Gold Ingot",
-          "name_ru": "Золотой слиток"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"PRAETORARMOR",
@@ -10042,33 +10502,7 @@
         "ordo": 20,
         "perditio": 20,
         "ignis": 20
-      },
-      "inputs": [
-        {
-          "ref": "itemLegsCultistPlate",
-          "meta": null,
-          "name_en": "Crimson Cult Greaves",
-          "name_ru": "Поножи культиста"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 7,
-          "name_en": "Crimson Plating",
-          "name_ru": ""
-        },
-        {
-          "vanilla": "field_151042_j",
-          "reg": "iron_ingot",
-          "name_en": "Iron Ingot",
-          "name_ru": "Железный слиток"
-        },
-        {
-          "vanilla": "field_151043_k",
-          "reg": "gold_ingot",
-          "name_en": "Gold Ingot",
-          "name_ru": "Золотой слиток"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"SHADOWMETAL",
@@ -10083,21 +10517,7 @@
       "aspects": {
         "ordo": 10,
         "perditio": 10
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 8,
-          "name_en": "Shadow Metal Nugget",
-          "name_ru": ""
-        },
-        {
-          "ref": "itemResource",
-          "meta": 7,
-          "name_en": "Enchanted Fabric",
-          "name_ru": "Зачарованная ткань"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"HOLLOWDAGGER",
@@ -10111,22 +10531,7 @@
       },
       "aspects": {
         "perditio": 85
-      },
-      "inputs": [
-        {
-          "ref": "itemWandRod",
-          "meta": 7,
-          "name_en": "Bone Rod",
-          "name_ru": "Костяной стержень"
-        },
-        {
-          "ref": "blockMagicalLog",
-          "meta": 0
-        },
-        {
-          "oredict": "nuggetIron"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CAP_cloth",
@@ -10143,15 +10548,7 @@
         "ignis": 10,
         "perditio": 10,
         "ordo": 10
-      },
-      "inputs": [
-        {
-          "ref": "itemResource",
-          "meta": 7,
-          "name_en": "Enchanted Fabric",
-          "name_ru": "Зачарованная ткань"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CAP_crimsoncloth",
@@ -10167,21 +10564,7 @@
         "ignis": 25,
         "perditio": 25,
         "ordo": 25
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 2,
-          "name_en": "Crimson-stained Cloth",
-          "name_ru": ""
-        },
-        {
-          "ref": "itemResource",
-          "meta": 14,
-          "name_en": "Salis Mundus",
-          "name_ru": "Salis Mundus"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CAP_shadowcloth",
@@ -10198,21 +10581,7 @@
         "ignis": 55,
         "perditio": 55,
         "ordo": 55
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 1,
-          "name_en": "Shadow-imbued Cloth",
-          "name_ru": ""
-        },
-        {
-          "ref": "itemResource",
-          "meta": 14,
-          "name_en": "Salis Mundus",
-          "name_ru": "Salis Mundus"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"FOCUSSHARD",
@@ -10228,33 +10597,7 @@
         "aer": 46,
         "perditio": 38,
         "ordo": 22
-      },
-      "inputs": [
-        {
-          "ref": "itemResource",
-          "meta": 3,
-          "name_en": "Quicksilver",
-          "name_ru": "Ртуть"
-        },
-        {
-          "ref": "itemShard",
-          "meta": 6,
-          "name_en": "Balanced Shard",
-          "name_ru": "Сбалансированный кристалл"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 4,
-          "name_en": "Tainted Unbalanced Shard",
-          "name_ru": ""
-        },
-        {
-          "ref": "itemWispEssence",
-          "meta": null,
-          "name_en": "Ethereal Essence",
-          "name_ru": "Эфирная эссенция"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"FOCUSLUMOS",
@@ -10270,27 +10613,7 @@
         "aer": 52,
         "ignis": 56,
         "ordo": 28
-      },
-      "inputs": [
-        {
-          "ref": "itemResource",
-          "meta": 3,
-          "name_en": "Quicksilver",
-          "name_ru": "Ртуть"
-        },
-        {
-          "ref": "itemResource",
-          "meta": 1,
-          "name_en": "Nitor",
-          "name_ru": "Нитор"
-        },
-        {
-          "ref": "itemShard",
-          "meta": 6,
-          "name_en": "Balanced Shard",
-          "name_ru": "Сбалансированный кристалл"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"VOIDBLOOD",
@@ -10305,33 +10628,7 @@
       "aspects": {
         "ordo": 35,
         "perditio": 25
-      },
-      "inputs": [
-        {
-          "ref": "ItemRegistry.ItemCrimsonBlood",
-          "meta": null,
-          "name_en": "Phial of Crimson Blood",
-          "name_ru": ""
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 10,
-          "name_en": "Primordial Mote",
-          "name_ru": ""
-        },
-        {
-          "ref": "itemResource",
-          "meta": 17,
-          "name_en": "Void Seed",
-          "name_ru": "Семя пустоты"
-        },
-        {
-          "ref": "itemWispEssence",
-          "meta": null,
-          "name_en": "Ethereal Essence",
-          "name_ru": "Эфирная эссенция"
-        }
-      ]
+      }
     },
     {
       "research": "(String)\"CRIMSONROBES",
@@ -13744,6 +14041,152 @@
         "perditio": null
       },
       "aspectsComputed": true
+    }
+  ],
+  "warpItems": [
+    {
+      "item": {
+        "ref": "itemFocusHellbat",
+        "meta": null,
+        "name_en": "Wand Focus: Nine Hells",
+        "name_ru": "Набалдашник: 9 кругов ада"
+      },
+      "warp": 1,
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemCompassStone",
+        "meta": null,
+        "name_en": "Sinister Lodestone",
+        "name_ru": "Зловещий камень"
+      },
+      "warp": 1,
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "blockJar",
+        "meta": 1,
+        "name_en": "Brain in a Jar",
+        "name_ru": "Мозг в банке"
+      },
+      "warp": 1,
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemBucketDeath",
+        "meta": null,
+        "name_en": "Bucket of Liquid Death",
+        "name_ru": "Ведро жидкой смерти"
+      },
+      "warp": 1,
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemBottleTaint",
+        "meta": null,
+        "name_en": "Bottled Taint",
+        "name_ru": "Порча в бутылке"
+      },
+      "warp": 1,
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemGolemPlacer",
+        "meta": 4,
+        "name_en": "Flesh Golem",
+        "name_ru": "Голем из плоти"
+      },
+      "warp": 1,
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemFocusPrimal",
+        "meta": null,
+        "name_en": "Wand Focus: Primal",
+        "name_ru": "Набалдашник: Сингулярность"
+      },
+      "warp": 1,
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemWandRod",
+        "meta": 100,
+        "name_en": "Staff Core of the Primal",
+        "name_ru": "Сингулярное ядро посоха"
+      },
+      "warp": 1,
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "ForbiddenBlocks.wrathCage",
+        "meta": null,
+        "name_en": "Wrath Cage",
+        "name_ru": "Клетка гнева"
+      },
+      "warp": 5,
+      "mod": "ForbiddenMagic"
+    },
+    {
+      "item": {
+        "ref": "ForbiddenBlocks.taintSapling",
+        "meta": 0,
+        "name_en": "Tainted Sapling",
+        "name_ru": ""
+      },
+      "warp": 1,
+      "mod": "ForbiddenMagic"
+    },
+    {
+      "item": {
+        "ref": "ForbiddenItems.bloodRapier",
+        "meta": null,
+        "name_en": "Rapier of the Strix",
+        "name_ru": "Рапира неясыти"
+      },
+      "warp": 2,
+      "mod": "ForbiddenMagic"
+    },
+    {
+      "item": {
+        "ref": "ForbiddenItems.bloodOrb",
+        "meta": null,
+        "name_en": "Eldritch Blood Orb",
+        "name_ru": "Древний шар крови"
+      },
+      "warp": 5,
+      "mod": "ForbiddenMagic"
+    },
+    {
+      "item": {
+        "ref": "ModItems.wandCore",
+        "meta": 0
+      },
+      "warp": 2,
+      "mod": "BloodArsenal"
+    },
+    {
+      "item": {
+        "ref": "ModItems.wandCap",
+        "meta": null
+      },
+      "warp": 1,
+      "mod": "BloodArsenal"
+    },
+    {
+      "item": {
+        "ref": "ModItems.wandCore",
+        "meta": 1
+      },
+      "warp": 4,
+      "mod": "BloodArsenal"
     }
   ]
 }

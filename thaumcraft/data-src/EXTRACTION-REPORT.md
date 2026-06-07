@@ -42,7 +42,9 @@ Avaritia `1.13`, Alfheim `BETA-38`, LoliMagically.
 Поля: `key`, `mod`, `category`, `aspects` (теги аспектов для покупки свитка),
 `displayColumn/Row`, `complexity`, `parents` (предпосылки в дереве), `flags`
 (autoUnlock/stub/virtual/round/concealed/secondary/special/hidden/lost), `icon`,
-`pages` (страницы Таумономикона: lang-ключ + EN/RU текст), а также **`description`**.
+`pages` (страницы Таумономикона: lang-ключ + EN/RU текст), а также **`description`** и
+**`warp`** — варп/sanity-цена изучения (`addWarpToResearch`): **37** записей (Thaumcraft 20,
+ForbiddenMagic 13, BloodArsenal 3, LoliMagically 1).
 
 ### Описания — приоритет русского ✅
 - `description_ru` — склейка текстовых страниц из ru_RU.lang (очищено от `<BR>`/`§`-кодов).
@@ -80,10 +82,14 @@ Avaritia `1.13`, Alfheim `BETA-38`, LoliMagically.
 infusion 142, infusion_enchantment 32. По мод: Thaumcraft 231, TaintedMagic 74, ForbiddenMagic 51,
 AE2 15, MagicBees 13, Alfheim 10, ThaumicTinkerer 3, BloodArsenal 3, Avaritia 2.
 Поля: `research` (ссылка на исследование), `type`, **`aspects`** (стоимость эссенции/вис — главная
-ценность; `null` + `aspectsComputed` если считается в рантайме), `output`, `input`/`inputs`,
-для infusion — `instability`, `central`, `components`. Предметы разрешены в EN/RU названия там, где
-ссылка маппится на lang-ключ (**145 выходов с именами**); иначе `{ref,meta}` (поле
-ConfigItems/ConfigBlocks), `{vanilla:srg}` или `{oredict}`.
+ценность; `null` + `aspectsComputed` если считается в рантайме), `output`.
+Полная структура рецепта:
+- **arcane**: `shape` (строки сетки, напр. `["WS","WS","WB"]`) + `key` (символ → ингредиент с именем);
+- **arcane_shapeless**: `inputs` (плоский список);
+- **crucible**: `input`;
+- **infusion/enchantment**: `central`, `instability`, упорядоченный `components[]`.
+Предметы разрешены в EN/RU названия (см. «Итоговое покрытие»).
+Доп.: **`warpItems`** (15) — варп (искажение/sanity) от предметов; `addWarpToItem`.
 
 ### Источники аспектов  →  `aspect-sources.json`
 Теги сканирования: **375 object-тегов** + **69 entity-тегов** (Thaumcraft/MagicBees/ForbiddenMagic/Avaritia).

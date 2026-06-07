@@ -313,6 +313,19 @@ for lang, name_idx in ((EN, NAME_EN), (RU, NAME_RU)):
         res_order.append(tail)
         captured.add(bare); captured.add(tail)
 
+# ---- warp: addWarpToResearch("KEY", n) across all mods -> research sanity cost
+warp_map = {}
+for _, dec, _ in MODS:
+    for jf in glob.glob(os.path.join(DEC, dec, "**", "*.java"), recursive=True):
+        try: txt = open(jf, encoding="utf-8", errors="replace").read()
+        except: continue
+        if "addWarpToResearch" not in txt: continue
+        for wm in re.finditer(r'addWarpToResearch\(\s*(?:\(String\)\s*)?"([^"]+)"\s*,\s*(?:\(int\)\s*)?(\d+)', txt):
+            warp_map[wm.group(1)] = warp_map.get(wm.group(1), 0) + int(wm.group(2))
+for k, w in warp_map.items():
+    if k in research:
+        research[k]["warp"] = w
+
 res_list = [research[k] for k in res_order]
 by_mod = {}
 for r in res_list: by_mod[r["mod"]] = by_mod.get(r["mod"], 0) + 1
@@ -327,6 +340,7 @@ json.dump({
         "byMod": by_mod,
         "withDescription": with_desc,
         "withRussianDescription": with_ru,
+        "withWarp": sum(1 for r in res_list if r.get("warp")),
         "notes": "description = thaumonomicon text pages joined (RU priority, EN fallback), cleaned of <BR>/§ codes. pages[] keep raw EN/RU + lang key. aspects = aspect tags needed to unlock the research scroll. parents = prerequisite research keys. Non-text pages (recipes) are omitted.",
     },
     "research": res_list,

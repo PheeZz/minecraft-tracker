@@ -167,8 +167,23 @@ for dec in DECDIRS:
                             for it in re.findall(r'new ItemStack\([^)]*\)|"[a-zA-Z][\w]*"',a):
                                 comps.append(resolve_item(it))
                         if comps: rec["components"]=comps
+                elif rtype=="arcane":
+                    # shaped: rows (1-3 short strings) then Character/ingredient pairs
+                    spec=args[(al_idx+1):] if al_idx is not None else args[2:]
+                    rows=[]; i=0
+                    while i<len(spec) and re.fullmatch(r'"[A-Za-z0-9 ._]{1,3}"', spec[i].strip()):
+                        rows.append(spec[i].strip().strip('"')); i+=1
+                    key={}
+                    while i<len(spec):
+                        cm=re.search(r"Character\.valueOf\('(.)'\)|^'(.)'$", spec[i].strip())
+                        if cm and i+1<len(spec):
+                            ch=cm.group(1) or cm.group(2)
+                            key[ch]=resolve_item(spec[i+1]); i+=2
+                        else: i+=1
+                    if rows: rec["shape"]=rows
+                    if key: rec["key"]=key
                 else:
-                    # crafting inputs: item/oredict tokens after aspectList (skip layout chars)
+                    # shapeless arcane: flat ingredient list
                     ins=[]
                     tail=args[(al_idx+1):] if al_idx is not None else args[2:]
                     for a in tail:
@@ -178,14 +193,24 @@ for dec in DECDIRS:
                     if ins: rec["inputs"]=ins
                 recipes.append(rec)
 
+# ---- item warp: addWarpToItem(itemstack, n)
+warp_items=[]
+for dec in DECDIRS:
+    for jf in glob.glob(os.path.join(DEC,dec,"**","*.java"),recursive=True):
+        try: t=open(jf,encoding="utf-8",errors="replace").read()
+        except: continue
+        if "addWarpToItem" not in t: continue
+        for m in re.finditer(r'addWarpToItem\(\s*(?:\(ItemStack\)\s*)?(new ItemStack\([^;]*?\)|\w[\w.]*)\s*,\s*(?:\(int\)\s*)?(\d+)\s*\)',t):
+            warp_items.append({"item":resolve_item(m.group(1)),"warp":int(m.group(2)),"mod":MODNAME[dec]})
+
 by_type=collections.Counter(r["type"] for r in recipes)
 by_mod=collections.Counter(r["mod"] for r in recipes)
 named=sum(1 for r in recipes if r.get("output",{}) and ("name_en" in (r["output"] or {})))
 json.dump({"_meta":{"server":"LoliLand","generated":"2026-06-07","count":len(recipes),
                     "byType":dict(by_type),"byMod":dict(by_mod),
-                    "outputsNamed":named,
-                    "notes":"aspects = essentia/vis cost (null value = computed at runtime, see aspectsComputed). output/input/central/components/inputs resolved to EN/RU names where the item ref maps to a lang key; otherwise {ref,meta} (ConfigItems/ConfigBlocks field) or {vanilla:srgName} or {oredict}. research = linked research key. infusion has instability + central + components."},
-           "recipes":recipes},
+                    "outputsNamed":named,"warpItems":len(warp_items),
+                    "notes":"aspects = essentia/vis cost (null value = computed at runtime, see aspectsComputed). output/input/central/components/inputs/key resolved to EN/RU names where the item ref maps to a lang key; otherwise {ref,meta} or {vanilla:srgName} or {oredict}. research = linked research key. arcane has shape[] (grid rows) + key{char:ingredient}. infusion has instability + central + components[]. warpItems = sanity (warp) gained from holding/crafting items."},
+           "recipes":recipes,"warpItems":warp_items},
           open(OUT,"w",encoding="utf-8"),ensure_ascii=False,indent=2)
 print("recipes:",len(recipes),"| byType:",dict(by_type))
 print("byMod:",dict(by_mod),"| outputs named:",named)
