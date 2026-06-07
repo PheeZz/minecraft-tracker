@@ -170,11 +170,7 @@ export const LOOT: readonly LootBag[] = [
     mod: 'Thaumcraft',
   },
   {
-    item: {
-      ru: 'Сингулярная жемчужина',
-      en: 'Primordial Pearl',
-      icon: 'items/thaumcraft/eldritch_object_2.png',
-    },
+    item: { ru: 'Сингулярная жемчужина', en: 'Primordial Pearl' },
     weight: 1,
     rarities: ['rare'],
     mod: 'Thaumcraft',

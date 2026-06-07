@@ -1699,13 +1699,7 @@ export const ASPECT_SOURCES: readonly AspectSource[] = [
     aspects: { praecantatio: 1, perditio: 2, vitreus: 1 },
     icon: 'items/thaumcraft/shard_entropy.png',
   },
-  {
-    name: 'Salis Mundus',
-    mod: 'Thaumcraft',
-    kind: 'object',
-    aspects: { praecantatio: 2 },
-    icon: 'items/thaumcraft/bath_salts.png',
-  },
+  { name: 'Salis Mundus', mod: 'Thaumcraft', kind: 'object', aspects: { praecantatio: 2 } },
   {
     name: 'ConfigBlocks.blockMetalDevice',
     mod: 'Thaumcraft',
@@ -1862,7 +1856,6 @@ export const ASPECT_SOURCES: readonly AspectSource[] = [
     mod: 'Thaumcraft',
     kind: 'object',
     aspects: { aer: 16, terra: 16, ignis: 16, aqua: 16, ordo: 16, perditio: 16 },
-    icon: 'items/thaumcraft/eldritch_object_2.png',
   },
   {
     name: 'ConfigBlocks.blockEldritch',

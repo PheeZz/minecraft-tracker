@@ -447,7 +447,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Очищающая соль', en: 'Purifying Bath Salts' },
     aspects: { cognitio: 6, auram: 6, ordo: 6, sano: 6 },
-    input: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    input: { ru: 'Salis Mundus', en: 'Salis Mundus' },
   },
   {
     research: 'SANESOAP',
@@ -1845,11 +1845,7 @@ export const RECIPES: readonly Recipe[] = [
         en: 'Void metal Ingot',
         icon: 'items/thaumcraft/voidingot.png',
       },
-      P: {
-        ru: 'Сингулярная жемчужина',
-        en: 'Primordial Pearl',
-        icon: 'items/thaumcraft/eldritch_object_2.png',
-      },
+      P: { ru: 'Сингулярная жемчужина', en: 'Primordial Pearl' },
     },
   },
   {
@@ -1998,8 +1994,8 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'items/thaumcraft/wand_cap_silver_inert.png',
     },
     components: [
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
     ],
     instability: 4,
   },
@@ -2019,9 +2015,9 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'items/thaumcraft/wand_cap_thaumium_inert.png',
     },
     components: [
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
     ],
     instability: 5,
   },
@@ -2041,10 +2037,10 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'items/thaumcraft/wand_cap_void_inert.png',
     },
     components: [
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
     ],
     instability: 8,
   },
@@ -3129,7 +3125,7 @@ export const RECIPES: readonly Recipe[] = [
       },
       { ru: 'Зачарованная ткань', en: 'Enchanted Fabric', icon: 'items/thaumcraft/cloth.png' },
       { ru: 'Зачарованная ткань', en: 'Enchanted Fabric', icon: 'items/thaumcraft/cloth.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       { ru: 'Зачарованная ткань', en: 'Enchanted Fabric', icon: 'items/thaumcraft/cloth.png' },
       { ru: 'Зачарованная ткань', en: 'Enchanted Fabric', icon: 'items/thaumcraft/cloth.png' },
     ],
@@ -3162,7 +3158,7 @@ export const RECIPES: readonly Recipe[] = [
         icon: 'items/thaumcraft/voidingot.png',
       },
       { ru: 'Таум-слиток', en: 'Thaumium Ingot', icon: 'items/thaumcraft/thaumiumingot.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       { ru: 'Зачарованная ткань', en: 'Enchanted Fabric', icon: 'items/thaumcraft/cloth.png' },
       { ru: 'Кожа', en: 'Leather', icon: 'vanilla/items/leather.png' },
     ],
@@ -3191,7 +3187,7 @@ export const RECIPES: readonly Recipe[] = [
         icon: 'items/thaumcraft/voidingot.png',
       },
       { ru: 'Таум-слиток', en: 'Thaumium Ingot', icon: 'items/thaumcraft/thaumiumingot.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       { ru: 'Зачарованная ткань', en: 'Enchanted Fabric', icon: 'items/thaumcraft/cloth.png' },
       { ru: 'Кожа', en: 'Leather', icon: 'vanilla/items/leather.png' },
     ],
@@ -3381,11 +3377,7 @@ export const RECIPES: readonly Recipe[] = [
       alienis: 16,
       lucrum: 16,
     },
-    central: {
-      ru: 'Сингулярная жемчужина',
-      en: 'Primordial Pearl',
-      icon: 'items/thaumcraft/eldritch_object_2.png',
-    },
+    central: { ru: 'Сингулярная жемчужина', en: 'Primordial Pearl' },
     components: [
       { ru: 'Сингулярный амулет', en: 'Primal Charm', icon: 'items/thaumcraft/charm.png' },
       { ru: 'Пустотная кирка', en: 'Void Pickaxe', icon: 'items/thaumcraft/voidpick.png' },
@@ -3419,7 +3411,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: '?', en: 'Enchantment.field_77331_b[ThaumcraftApi.enchantRepair]' },
     aspects: { praecantatio: 8, fabrico: 10, ordo: 10 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 4,
   },
   {
@@ -3437,7 +3429,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77332_c', en: 'Enchantment.field_77332_c' },
     aspects: { praecantatio: 4, tutamen: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 1,
   },
   {
@@ -3446,7 +3438,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77329_d', en: 'Enchantment.field_77329_d' },
     aspects: { praecantatio: 4, tutamen: 4, ignis: 4 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 1,
   },
   {
@@ -3455,7 +3447,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77327_f', en: 'Enchantment.field_77327_f' },
     aspects: { praecantatio: 4, tutamen: 4, perditio: 4 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 1,
   },
   {
@@ -3464,7 +3456,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77328_g', en: 'Enchantment.field_77328_g' },
     aspects: { praecantatio: 4, tutamen: 4, volatus: 4 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 1,
   },
   {
@@ -3473,7 +3465,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77330_e', en: 'Enchantment.field_77330_e' },
     aspects: { praecantatio: 4, aer: 4, volatus: 4 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 1,
   },
   {
@@ -3482,7 +3474,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77340_h', en: 'Enchantment.field_77340_h' },
     aspects: { praecantatio: 4, aer: 8, aqua: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3491,7 +3483,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77341_i', en: 'Enchantment.field_77341_i' },
     aspects: { praecantatio: 4, motus: 8, aqua: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3500,7 +3492,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_92091_k', en: 'Enchantment.field_92091_k' },
     aspects: { praecantatio: 4, telum: 8, herba: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3509,7 +3501,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77338_j', en: 'Enchantment.field_77338_j' },
     aspects: { praecantatio: 4, telum: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3518,7 +3510,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77339_k', en: 'Enchantment.field_77339_k' },
     aspects: { praecantatio: 4, telum: 4, exanimis: 4 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3536,7 +3528,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77337_m', en: 'Enchantment.field_77337_m' },
     aspects: { praecantatio: 4, telum: 3, motus: 3 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 1,
   },
   {
@@ -3545,7 +3537,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77334_n', en: 'Enchantment.field_77334_n' },
     aspects: { praecantatio: 4, telum: 4, ignis: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 3,
   },
   {
@@ -3554,7 +3546,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77335_o', en: 'Enchantment.field_77335_o' },
     aspects: { praecantatio: 4, telum: 4, lucrum: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 3,
   },
   {
@@ -3563,7 +3555,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77349_p', en: 'Enchantment.field_77349_p' },
     aspects: { praecantatio: 4, instrumentum: 4, ordo: 4 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3572,7 +3564,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77348_q', en: 'Enchantment.field_77348_q' },
     aspects: { praecantatio: 16, instrumentum: 16, ordo: 16, meto: 16, perfodio: 16 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 5,
   },
   {
@@ -3581,7 +3573,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77347_r', en: 'Enchantment.field_77347_r' },
     aspects: { praecantatio: 4, instrumentum: 4, ordo: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3590,7 +3582,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77346_s', en: 'Enchantment.field_77346_s' },
     aspects: { praecantatio: 4, instrumentum: 4, lucrum: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 3,
   },
   {
@@ -3599,7 +3591,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77345_t', en: 'Enchantment.field_77345_t' },
     aspects: { praecantatio: 4, telum: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3608,7 +3600,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77344_u', en: 'Enchantment.field_77344_u' },
     aspects: { praecantatio: 4, telum: 3, motus: 3 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 2,
   },
   {
@@ -3617,7 +3609,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77343_v', en: 'Enchantment.field_77343_v' },
     aspects: { praecantatio: 4, telum: 4, ignis: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 3,
   },
   {
@@ -3626,7 +3618,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'Thaumcraft',
     output: { ru: 'Enchantment.field_77342_w', en: 'Enchantment.field_77342_w' },
     aspects: { praecantatio: 8, telum: 16, vacuos: 16, permutatio: 16 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 5,
   },
   {
@@ -3881,11 +3873,7 @@ export const RECIPES: readonly Recipe[] = [
     aspects: { aqua: 50, terra: 50, ignis: 50, aer: 50, ordo: 50, perditio: 50 },
     inputs: [
       { ru: 'Перо', en: 'Feather', icon: 'vanilla/items/feather.png' },
-      {
-        ru: 'Сингулярная жемчужина',
-        en: 'Primordial Pearl',
-        icon: 'items/thaumcraft/eldritch_object_2.png',
-      },
+      { ru: 'Сингулярная жемчужина', en: 'Primordial Pearl' },
       { ru: 'Пузырёк', en: 'Glass Bottle', icon: 'vanilla/items/potion_bottle_empty.png' },
     ],
   },
@@ -3955,7 +3943,7 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'items/thaumcraft/taint_tendril.png',
     },
     components: [
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       { ru: 'Осколок заразы', en: 'Taint Shard', icon: 'items/forbidden/taintshard.png' },
       { ru: 'Осколок заразы', en: 'Taint Shard', icon: 'items/forbidden/taintshard.png' },
       { ru: 'Осколок заразы', en: 'Taint Shard', icon: 'items/forbidden/taintshard.png' },
@@ -4012,7 +4000,7 @@ export const RECIPES: readonly Recipe[] = [
     aspects: { gula: 12, fames: 24, fabrico: 24 },
     central: { ru: 'Торт', en: 'Cake', icon: 'vanilla/items/cake.png' },
     components: [
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       { ru: 'Яйцо', en: 'Egg', icon: 'vanilla/items/egg.png' },
       { ru: 'Milk Bucket', en: 'Milk Bucket', icon: 'vanilla/items/bucket_milk.png' },
       { ru: 'Яйцо', en: 'Egg', icon: 'vanilla/items/egg.png' },
@@ -4037,7 +4025,7 @@ export const RECIPES: readonly Recipe[] = [
     aspects: { gula: 12, fames: 24, fabrico: 24 },
     central: { ru: 'Торт', en: 'Cake', icon: 'vanilla/items/cake.png' },
     components: [
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       {
         ru: 'Блок звезды Нижнего мира',
         en: 'Nether Star Block',
@@ -4183,7 +4171,7 @@ export const RECIPES: readonly Recipe[] = [
     aspects: { infernus: 32, praecantatio: 12, superbia: 12 },
     central: { ru: 'Стержень ифрита', en: 'Blaze Rod', icon: 'vanilla/items/blaze_rod.png' },
     components: [
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       { ru: 'Осколок гордости', en: 'Pride Shard', icon: 'items/forbidden/prideshard.png' },
       { ru: 'Осколок гордости', en: 'Pride Shard', icon: 'items/forbidden/prideshard.png' },
       { ru: 'Песок душ', en: 'Soul Sand', icon: 'vanilla/blocks/soul_sand.png' },
@@ -4249,7 +4237,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'ForbiddenMagic',
     output: { ru: 'DarkEnchantments.consuming', en: 'DarkEnchantments.consuming' },
     aspects: { vacuos: 8, instrumentum: 8, fames: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 3,
   },
   {
@@ -4276,7 +4264,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'ForbiddenMagic',
     output: { ru: 'DarkEnchantments.corrupting', en: 'DarkEnchantments.corrupting' },
     aspects: { infernus: 16, permutatio: 16, vitreus: 8 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     instability: 4,
   },
   {
@@ -4423,11 +4411,7 @@ export const RECIPES: readonly Recipe[] = [
     aspects: { victus: 64, alienis: 48, tenebrae: 32, vacuos: 64 },
     central: { ru: 'AWWayofTime', en: 'AWWayofTime' },
     components: [
-      {
-        ru: 'Сингулярная жемчужина',
-        en: 'Primordial Pearl',
-        icon: 'items/thaumcraft/eldritch_object_2.png',
-      },
+      { ru: 'Сингулярная жемчужина', en: 'Primordial Pearl' },
       { ru: 'Глаз Древних', en: 'Eldritch Eye', icon: 'items/thaumcraft/eldritch_object.png' },
       {
         ru: 'Сбалансированный кристалл',
@@ -4666,7 +4650,7 @@ export const RECIPES: readonly Recipe[] = [
     aspects: { auram: 8, alienis: 10, praecantatio: 8 },
     central: { ru: 'Botania', en: 'Botania' },
     components: [
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       { ru: 'Теневые чернила', en: 'Shadow Ink' },
       { ru: 'Botania', en: 'Botania' },
       { ru: 'Botania', en: 'Botania' },
@@ -5000,13 +4984,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'TaintedMagic',
     output: { ru: 'Primordial Nodule', en: 'Primordial Nodule' },
     aspects: { perditio: 25 },
-    inputs: [
-      {
-        ru: 'Сингулярная жемчужина',
-        en: 'Primordial Pearl',
-        icon: 'items/thaumcraft/eldritch_object_2.png',
-      },
-    ],
+    inputs: [{ ru: 'Сингулярная жемчужина', en: 'Primordial Pearl' }],
   },
   {
     research: '(String)"BREAKPEARL',
@@ -5188,11 +5166,7 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'items/thaumcraft/shard_balanced.png',
     },
     components: [
-      {
-        ru: 'Сингулярная жемчужина',
-        en: 'Primordial Pearl',
-        icon: 'items/thaumcraft/eldritch_object_2.png',
-      },
+      { ru: 'Сингулярная жемчужина', en: 'Primordial Pearl' },
       { ru: 'Грозовой кристалл', en: 'Air Shard', icon: 'items/thaumcraft/shard_air.png' },
       { ru: 'Огненный кристалл', en: 'Fire Shard', icon: 'items/thaumcraft/shard_fire.png' },
       { ru: 'Ледяной кристалл', en: 'Water Shard', icon: 'items/thaumcraft/shard_water.png' },
@@ -5518,11 +5492,7 @@ export const RECIPES: readonly Recipe[] = [
     aspects: { alienis: 64, tenebrae: 32, praecantatio: 32, mortuus: 32, vacuos: 32 },
     central: { ru: 'Набалдашник: Червоточина', en: 'Wand Focus: Portable Hole' },
     components: [
-      {
-        ru: 'Сингулярная жемчужина',
-        en: 'Primordial Pearl',
-        icon: 'items/thaumcraft/eldritch_object_2.png',
-      },
+      { ru: 'Сингулярная жемчужина', en: 'Primordial Pearl' },
       { ru: 'Warped Unbalanced Shard', en: 'Warped Unbalanced Shard' },
       { ru: 'Shadow Metal Ingot', en: 'Shadow Metal Ingot' },
       { ru: 'Золотой слиток', en: 'Gold Ingot', icon: 'vanilla/items/gold_ingot.png' },
@@ -5633,7 +5603,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'TaintedMagic',
     output: { ru: 'Salis Tempestas', en: 'Salis Tempestas' },
     aspects: { auram: 20, tempestas: 30, aqua: 30 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     components: [
       { ru: 'Creation Fragment', en: 'Creation Fragment' },
       { ru: 'Капля ртути', en: 'Quicksilver Drop', icon: 'items/thaumcraft/quicksilver.png' },
@@ -5646,7 +5616,7 @@ export const RECIPES: readonly Recipe[] = [
     mod: 'TaintedMagic',
     output: { ru: 'Salis Aevum', en: 'Salis Aevum' },
     aspects: { auram: 20, lux: 30, tenebrae: 30 },
-    central: { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+    central: { ru: 'Salis Mundus', en: 'Salis Mundus' },
     components: [
       { ru: 'Creation Fragment', en: 'Creation Fragment' },
       { ru: 'Золотой самородок', en: 'Gold Nugget', icon: 'vanilla/items/gold_nugget.png' },
@@ -6012,7 +5982,7 @@ export const RECIPES: readonly Recipe[] = [
       },
       { ru: 'Янтарь', en: 'Amber', icon: 'items/thaumcraft/amber.png' },
       { ru: 'Золотой слиток', en: 'Gold Ingot', icon: 'vanilla/items/gold_ingot.png' },
-      { ru: 'Salis Mundus', en: 'Salis Mundus', icon: 'items/thaumcraft/bath_salts.png' },
+      { ru: 'Salis Mundus', en: 'Salis Mundus' },
       { ru: 'Янтарь', en: 'Amber', icon: 'items/thaumcraft/amber.png' },
       { ru: 'Золотой слиток', en: 'Gold Ingot', icon: 'vanilla/items/gold_ingot.png' },
     ],
