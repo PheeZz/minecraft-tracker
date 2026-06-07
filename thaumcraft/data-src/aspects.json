@@ -1,0 +1,1470 @@
+{
+  "_meta": {
+    "source": "decompiled (CFR 0.152) Thaumcraft 4.2.3.5 + addons; lang from same JARs",
+    "generated": "2026-06-07",
+    "count": 58,
+    "byMod": {
+      "MagicBees": 1,
+      "Avaritia": 1,
+      "Thaumcraft": 48,
+      "Alfheim": 1,
+      "ForbiddenMagic": 7
+    },
+    "primals": [
+      "aer",
+      "terra",
+      "ignis",
+      "aqua",
+      "ordo",
+      "perditio"
+    ],
+    "missingTextures": [],
+    "notes": "color #RRGGBB (null for rainbow/Alfheim). components = parent aspects (empty for 6 primals). texture = path under thaumcraft/textures/. imageNs/imagePath = original location inside the mod assets."
+  },
+  "aspects": [
+    {
+      "tag": "aer",
+      "mod": "Thaumcraft",
+      "name_en": "Air",
+      "name_ru": "Воздух",
+      "synonyms_en": [
+        "Air"
+      ],
+      "synonyms_ru": [
+        "Воздух"
+      ],
+      "color": "#FFFF7E",
+      "primal": true,
+      "rainbow": false,
+      "components": [],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/aer.png",
+      "texture": "aspects/aer.png"
+    },
+    {
+      "tag": "terra",
+      "mod": "Thaumcraft",
+      "name_en": "Earth",
+      "name_ru": "Земля",
+      "synonyms_en": [
+        "Earth"
+      ],
+      "synonyms_ru": [
+        "Земля"
+      ],
+      "color": "#56C000",
+      "primal": true,
+      "rainbow": false,
+      "components": [],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/terra.png",
+      "texture": "aspects/terra.png"
+    },
+    {
+      "tag": "ignis",
+      "mod": "Thaumcraft",
+      "name_en": "Fire",
+      "name_ru": "Огонь",
+      "synonyms_en": [
+        "Fire"
+      ],
+      "synonyms_ru": [
+        "Огонь"
+      ],
+      "color": "#FF5A01",
+      "primal": true,
+      "rainbow": false,
+      "components": [],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/ignis.png",
+      "texture": "aspects/ignis.png"
+    },
+    {
+      "tag": "aqua",
+      "mod": "Thaumcraft",
+      "name_en": "Water",
+      "name_ru": "Вода",
+      "synonyms_en": [
+        "Water"
+      ],
+      "synonyms_ru": [
+        "Вода"
+      ],
+      "color": "#3CD4FC",
+      "primal": true,
+      "rainbow": false,
+      "components": [],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/aqua.png",
+      "texture": "aspects/aqua.png"
+    },
+    {
+      "tag": "ordo",
+      "mod": "Thaumcraft",
+      "name_en": "Order",
+      "name_ru": "Порядок",
+      "synonyms_en": [
+        "Order",
+        "Regularity",
+        "Purity"
+      ],
+      "synonyms_ru": [
+        "Порядок",
+        "Организованность"
+      ],
+      "color": "#D5D4EC",
+      "primal": true,
+      "rainbow": false,
+      "components": [],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/ordo.png",
+      "texture": "aspects/ordo.png"
+    },
+    {
+      "tag": "perditio",
+      "mod": "Thaumcraft",
+      "name_en": "Entropy",
+      "name_ru": "Хаос",
+      "synonyms_en": [
+        "Entropy",
+        "Chaos",
+        "Destruction"
+      ],
+      "synonyms_ru": [
+        "Хаос",
+        "Разрушение"
+      ],
+      "color": "#404040",
+      "primal": true,
+      "rainbow": false,
+      "components": [],
+      "blend": 771,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/perditio.png",
+      "texture": "aspects/perditio.png"
+    },
+    {
+      "tag": "vacuos",
+      "mod": "Thaumcraft",
+      "name_en": "Void",
+      "name_ru": "Пустота",
+      "synonyms_en": [
+        "Void"
+      ],
+      "synonyms_ru": [
+        "Пустота",
+        "Неизвестность",
+        "Скрытность"
+      ],
+      "color": "#888888",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aer",
+        "perditio"
+      ],
+      "blend": 771,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/vacuos.png",
+      "texture": "aspects/vacuos.png"
+    },
+    {
+      "tag": "lux",
+      "mod": "Thaumcraft",
+      "name_en": "Light",
+      "name_ru": "Свет",
+      "synonyms_en": [
+        "Light"
+      ],
+      "synonyms_ru": [
+        "Свет",
+        "Яркость",
+        "День"
+      ],
+      "color": "#FFF663",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aer",
+        "ignis"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/lux.png",
+      "texture": "aspects/lux.png"
+    },
+    {
+      "tag": "tempestas",
+      "mod": "Thaumcraft",
+      "name_en": "Weather",
+      "name_ru": "Погода",
+      "synonyms_en": [
+        "Weather"
+      ],
+      "synonyms_ru": [
+        "Погода",
+        "Климат"
+      ],
+      "color": "#FFFFFF",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aer",
+        "aqua"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/tempestas.png",
+      "texture": "aspects/tempestas.png"
+    },
+    {
+      "tag": "motus",
+      "mod": "Thaumcraft",
+      "name_en": "Motion",
+      "name_ru": "Движение",
+      "synonyms_en": [
+        "Motion",
+        "Animation"
+      ],
+      "synonyms_ru": [
+        "Движение",
+        "Оживление"
+      ],
+      "color": "#CDCCF4",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aer",
+        "ordo"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/motus.png",
+      "texture": "aspects/motus.png"
+    },
+    {
+      "tag": "gelum",
+      "mod": "Thaumcraft",
+      "name_en": "Ice",
+      "name_ru": "Лёд",
+      "synonyms_en": [
+        "Ice",
+        "Frost",
+        "Cold"
+      ],
+      "synonyms_ru": [
+        "Лёд",
+        "Мороз",
+        "Холод"
+      ],
+      "color": "#E1FFFF",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "ignis",
+        "perditio"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/gelum.png",
+      "texture": "aspects/gelum.png"
+    },
+    {
+      "tag": "vitreus",
+      "mod": "Thaumcraft",
+      "name_en": "Crystal",
+      "name_ru": "Стекло",
+      "synonyms_en": [
+        "Crystal",
+        "Glass",
+        "Clear"
+      ],
+      "synonyms_ru": [
+        "Стекло",
+        "Кристалл",
+        "Прозрачность"
+      ],
+      "color": "#80FFFF",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "terra",
+        "ordo"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/vitreus.png",
+      "texture": "aspects/vitreus.png"
+    },
+    {
+      "tag": "victus",
+      "mod": "Thaumcraft",
+      "name_en": "Life",
+      "name_ru": "Жизнь",
+      "synonyms_en": [
+        "Life"
+      ],
+      "synonyms_ru": [
+        "Жизнь",
+        "Еда",
+        "Питание"
+      ],
+      "color": "#DE0005",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aqua",
+        "terra"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/victus.png",
+      "texture": "aspects/victus.png"
+    },
+    {
+      "tag": "venenum",
+      "mod": "Thaumcraft",
+      "name_en": "Poison",
+      "name_ru": "Яд",
+      "synonyms_en": [
+        "Poison"
+      ],
+      "synonyms_ru": [
+        "Яд",
+        "Наркотик",
+        "Грязь"
+      ],
+      "color": "#89F000",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aqua",
+        "perditio"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/venenum.png",
+      "texture": "aspects/venenum.png"
+    },
+    {
+      "tag": "potentia",
+      "mod": "Thaumcraft",
+      "name_en": "Energy",
+      "name_ru": "Сила",
+      "synonyms_en": [
+        "Energy"
+      ],
+      "synonyms_ru": [
+        "Сила",
+        "Энергия",
+        "Мощь"
+      ],
+      "color": "#C0FFFF",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "ordo",
+        "ignis"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/potentia.png",
+      "texture": "aspects/potentia.png"
+    },
+    {
+      "tag": "permutatio",
+      "mod": "Thaumcraft",
+      "name_en": "Exchange",
+      "name_ru": "Круговорот",
+      "synonyms_en": [
+        "Exchange",
+        "Barter"
+      ],
+      "synonyms_ru": [
+        "Круговорот",
+        "Обмен",
+        "Бартер"
+      ],
+      "color": "#578357",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "perditio",
+        "ordo"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/permutatio.png",
+      "texture": "aspects/permutatio.png"
+    },
+    {
+      "tag": "metallum",
+      "mod": "Thaumcraft",
+      "name_en": "Metal",
+      "name_ru": "Металл",
+      "synonyms_en": [
+        "Metal"
+      ],
+      "synonyms_ru": [
+        "Металл",
+        "Прочность",
+        "Руда"
+      ],
+      "color": "#B5B5CD",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "terra",
+        "vitreus"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/metallum.png",
+      "texture": "aspects/metallum.png"
+    },
+    {
+      "tag": "mortuus",
+      "mod": "Thaumcraft",
+      "name_en": "Death",
+      "name_ru": "Смерть",
+      "synonyms_en": [
+        "Death"
+      ],
+      "synonyms_ru": [
+        "Смерть",
+        "Распад",
+        "Нежить"
+      ],
+      "color": "#887788",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "victus",
+        "perditio"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/mortuus.png",
+      "texture": "aspects/mortuus.png"
+    },
+    {
+      "tag": "volatus",
+      "mod": "Thaumcraft",
+      "name_en": "Flight",
+      "name_ru": "Полет",
+      "synonyms_en": [
+        "Flight"
+      ],
+      "synonyms_ru": [
+        "Полет",
+        "Прыжок"
+      ],
+      "color": "#E7E7D7",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aer",
+        "motus"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/volatus.png",
+      "texture": "aspects/volatus.png"
+    },
+    {
+      "tag": "tenebrae",
+      "mod": "Thaumcraft",
+      "name_en": "Darkness",
+      "name_ru": "Тьма",
+      "synonyms_en": [
+        "Darkness"
+      ],
+      "synonyms_ru": [
+        "Тьма",
+        "Ночь",
+        "Слепота"
+      ],
+      "color": "#222222",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "vacuos",
+        "lux"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/tenebrae.png",
+      "texture": "aspects/tenebrae.png"
+    },
+    {
+      "tag": "spiritus",
+      "mod": "Thaumcraft",
+      "name_en": "Soul",
+      "name_ru": "Душа",
+      "synonyms_en": [
+        "Soul"
+      ],
+      "synonyms_ru": [
+        "Душа",
+        "Трансцендентность"
+      ],
+      "color": "#EBEBFB",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "victus",
+        "mortuus"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/spiritus.png",
+      "texture": "aspects/spiritus.png"
+    },
+    {
+      "tag": "sano",
+      "mod": "Thaumcraft",
+      "name_en": "Heal",
+      "name_ru": "Лечение",
+      "synonyms_en": [
+        "Heal",
+        "Cure"
+      ],
+      "synonyms_ru": [
+        "Лечение",
+        "Починка",
+        "Восстановление"
+      ],
+      "color": "#FF2F34",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "victus",
+        "ordo"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/sano.png",
+      "texture": "aspects/sano.png"
+    },
+    {
+      "tag": "iter",
+      "mod": "Thaumcraft",
+      "name_en": "Travel",
+      "name_ru": "Путешествие",
+      "synonyms_en": [
+        "Travel",
+        "Journey"
+      ],
+      "synonyms_ru": [
+        "Путешествие",
+        "Странствие",
+        "Поход"
+      ],
+      "color": "#E0585B",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "motus",
+        "terra"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/iter.png",
+      "texture": "aspects/iter.png"
+    },
+    {
+      "tag": "alienis",
+      "mod": "Thaumcraft",
+      "name_en": "Alien",
+      "name_ru": "Чужой",
+      "synonyms_en": [
+        "Alien",
+        "Strange",
+        "The Eldritch"
+      ],
+      "synonyms_ru": [
+        "Чужой",
+        "Неестественный",
+        "Жуткий"
+      ],
+      "color": "#805080",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "vacuos",
+        "tenebrae"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/alienis.png",
+      "texture": "aspects/alienis.png"
+    },
+    {
+      "tag": "praecantatio",
+      "mod": "Thaumcraft",
+      "name_en": "Magic",
+      "name_ru": "Магия",
+      "synonyms_en": [
+        "Magic"
+      ],
+      "synonyms_ru": [
+        "Магия",
+        "Чары",
+        "Колдовство"
+      ],
+      "color": "#9700C0",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "vacuos",
+        "potentia"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/praecantatio.png",
+      "texture": "aspects/praecantatio.png"
+    },
+    {
+      "tag": "auram",
+      "mod": "Thaumcraft",
+      "name_en": "Aura",
+      "name_ru": "Аура",
+      "synonyms_en": [
+        "Aura"
+      ],
+      "synonyms_ru": [
+        "Аура",
+        "Эфир",
+        "Чистота"
+      ],
+      "color": "#FFC0FF",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "praecantatio",
+        "aer"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/auram.png",
+      "texture": "aspects/auram.png"
+    },
+    {
+      "tag": "vitium",
+      "mod": "Thaumcraft",
+      "name_en": "Taint",
+      "name_ru": "Зараза",
+      "synonyms_en": [
+        "Taint"
+      ],
+      "synonyms_ru": [
+        "Зараза",
+        "Инфекция"
+      ],
+      "color": "#800080",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "praecantatio",
+        "perditio"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/vitium.png",
+      "texture": "aspects/vitium.png"
+    },
+    {
+      "tag": "limus",
+      "mod": "Thaumcraft",
+      "name_en": "Slime",
+      "name_ru": "Слизь",
+      "synonyms_en": [
+        "Slime",
+        "Sticky"
+      ],
+      "synonyms_ru": [
+        "Слизь",
+        "Вязкость"
+      ],
+      "color": "#01F800",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "victus",
+        "aqua"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/limus.png",
+      "texture": "aspects/limus.png"
+    },
+    {
+      "tag": "herba",
+      "mod": "Thaumcraft",
+      "name_en": "Plant",
+      "name_ru": "Рост",
+      "synonyms_en": [
+        "Plant"
+      ],
+      "synonyms_ru": [
+        "Рост",
+        "Трава",
+        "Растение"
+      ],
+      "color": "#01AC00",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "victus",
+        "terra"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/herba.png",
+      "texture": "aspects/herba.png"
+    },
+    {
+      "tag": "arbor",
+      "mod": "Thaumcraft",
+      "name_en": "Tree",
+      "name_ru": "Дерево",
+      "synonyms_en": [
+        "Tree",
+        "Wood"
+      ],
+      "synonyms_ru": [
+        "Дерево",
+        "Древесина"
+      ],
+      "color": "#876531",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aer",
+        "herba"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/arbor.png",
+      "texture": "aspects/arbor.png"
+    },
+    {
+      "tag": "bestia",
+      "mod": "Thaumcraft",
+      "name_en": "Beast",
+      "name_ru": "Животное",
+      "synonyms_en": [
+        "Beast"
+      ],
+      "synonyms_ru": [
+        "Животное",
+        "Зверь"
+      ],
+      "color": "#9F6409",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "motus",
+        "victus"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/bestia.png",
+      "texture": "aspects/bestia.png"
+    },
+    {
+      "tag": "corpus",
+      "mod": "Thaumcraft",
+      "name_en": "Flesh",
+      "name_ru": "Плоть",
+      "synonyms_en": [
+        "Flesh"
+      ],
+      "synonyms_ru": [
+        "Плоть",
+        "Тело"
+      ],
+      "color": "#EE478D",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "mortuus",
+        "bestia"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/corpus.png",
+      "texture": "aspects/corpus.png"
+    },
+    {
+      "tag": "exanimis",
+      "mod": "Thaumcraft",
+      "name_en": "Undead",
+      "name_ru": "Нежить",
+      "synonyms_en": [
+        "Undead"
+      ],
+      "synonyms_ru": [
+        "Нежить"
+      ],
+      "color": "#3A4000",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "motus",
+        "mortuus"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/exanimis.png",
+      "texture": "aspects/exanimis.png"
+    },
+    {
+      "tag": "cognitio",
+      "mod": "Thaumcraft",
+      "name_en": "Mind",
+      "name_ru": "Разум",
+      "synonyms_en": [
+        "Mind",
+        "Memory",
+        "Cognition"
+      ],
+      "synonyms_ru": [
+        "Разум",
+        "Память",
+        "Познание"
+      ],
+      "color": "#FFC2B3",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "ignis",
+        "spiritus"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/cognitio.png",
+      "texture": "aspects/cognitio.png"
+    },
+    {
+      "tag": "sensus",
+      "mod": "Thaumcraft",
+      "name_en": "Senses",
+      "name_ru": "Чувство",
+      "synonyms_en": [
+        "Senses"
+      ],
+      "synonyms_ru": [
+        "Чувство",
+        "Осязание",
+        "Видение"
+      ],
+      "color": "#0FD9FF",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "aer",
+        "spiritus"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/sensus.png",
+      "texture": "aspects/sensus.png"
+    },
+    {
+      "tag": "humanus",
+      "mod": "Thaumcraft",
+      "name_en": "Man",
+      "name_ru": "Человек",
+      "synonyms_en": [
+        "Man"
+      ],
+      "synonyms_ru": [
+        "Человек"
+      ],
+      "color": "#FFD7C0",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "bestia",
+        "cognitio"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/humanus.png",
+      "texture": "aspects/humanus.png"
+    },
+    {
+      "tag": "messis",
+      "mod": "Thaumcraft",
+      "name_en": "Crop",
+      "name_ru": "Урожай",
+      "synonyms_en": [
+        "Crop"
+      ],
+      "synonyms_ru": [
+        "Урожай"
+      ],
+      "color": "#E1B371",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "herba",
+        "humanus"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/messis.png",
+      "texture": "aspects/messis.png"
+    },
+    {
+      "tag": "perfodio",
+      "mod": "Thaumcraft",
+      "name_en": "Mine",
+      "name_ru": "Раскопка",
+      "synonyms_en": [
+        "Mine"
+      ],
+      "synonyms_ru": [
+        "Раскопка",
+        "Копание",
+        "Добыча"
+      ],
+      "color": "#DCD2D8",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "humanus",
+        "terra"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/perfodio.png",
+      "texture": "aspects/perfodio.png"
+    },
+    {
+      "tag": "instrumentum",
+      "mod": "Thaumcraft",
+      "name_en": "Tool",
+      "name_ru": "Инструмент",
+      "synonyms_en": [
+        "Tool",
+        "Instrument"
+      ],
+      "synonyms_ru": [
+        "Инструмент",
+        "Прибор",
+        "Орудие"
+      ],
+      "color": "#4040EE",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "humanus",
+        "ordo"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/instrumentum.png",
+      "texture": "aspects/instrumentum.png"
+    },
+    {
+      "tag": "meto",
+      "mod": "Thaumcraft",
+      "name_en": "Harvest",
+      "name_ru": "Жатва",
+      "synonyms_en": [
+        "Harvest"
+      ],
+      "synonyms_ru": [
+        "Жатва",
+        "Сбор"
+      ],
+      "color": "#EEAD82",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "messis",
+        "instrumentum"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/meto.png",
+      "texture": "aspects/meto.png"
+    },
+    {
+      "tag": "telum",
+      "mod": "Thaumcraft",
+      "name_en": "Weapon",
+      "name_ru": "Стрела",
+      "synonyms_en": [
+        "Weapon",
+        "Attack",
+        "Harm"
+      ],
+      "synonyms_ru": [
+        "Стрела",
+        "Меч",
+        "Оружие"
+      ],
+      "color": "#C05050",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "instrumentum",
+        "ignis"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/telum.png",
+      "texture": "aspects/telum.png"
+    },
+    {
+      "tag": "tutamen",
+      "mod": "Thaumcraft",
+      "name_en": "Armor",
+      "name_ru": "Оборона",
+      "synonyms_en": [
+        "Armor",
+        "Protection"
+      ],
+      "synonyms_ru": [
+        "Оборона",
+        "Защита",
+        "Безопасность"
+      ],
+      "color": "#00C0C0",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "instrumentum",
+        "terra"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/tutamen.png",
+      "texture": "aspects/tutamen.png"
+    },
+    {
+      "tag": "fames",
+      "mod": "Thaumcraft",
+      "name_en": "Hunger",
+      "name_ru": "Голод",
+      "synonyms_en": [
+        "Hunger"
+      ],
+      "synonyms_ru": [
+        "Голод",
+        "Вожделение"
+      ],
+      "color": "#9A0305",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "victus",
+        "vacuos"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/fames.png",
+      "texture": "aspects/fames.png"
+    },
+    {
+      "tag": "lucrum",
+      "mod": "Thaumcraft",
+      "name_en": "Greed",
+      "name_ru": "Жадность",
+      "synonyms_en": [
+        "Greed",
+        "Avarice"
+      ],
+      "synonyms_ru": [
+        "Жадность",
+        "Ценность",
+        "Богатство"
+      ],
+      "color": "#E6BE44",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "humanus",
+        "fames"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/lucrum.png",
+      "texture": "aspects/lucrum.png"
+    },
+    {
+      "tag": "fabrico",
+      "mod": "Thaumcraft",
+      "name_en": "Craft",
+      "name_ru": "Создание",
+      "synonyms_en": [
+        "Craft"
+      ],
+      "synonyms_ru": [
+        "Создание",
+        "Ремесло"
+      ],
+      "color": "#809D80",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "humanus",
+        "instrumentum"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/fabrico.png",
+      "texture": "aspects/fabrico.png"
+    },
+    {
+      "tag": "pannus",
+      "mod": "Thaumcraft",
+      "name_en": "Cloth",
+      "name_ru": "Ткань",
+      "synonyms_en": [
+        "Cloth",
+        "Material",
+        "Covering"
+      ],
+      "synonyms_ru": [
+        "Ткань",
+        "Одежда"
+      ],
+      "color": "#EAEAC2",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "instrumentum",
+        "bestia"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/pannus.png",
+      "texture": "aspects/pannus.png"
+    },
+    {
+      "tag": "machina",
+      "mod": "Thaumcraft",
+      "name_en": "Mechanism",
+      "name_ru": "Механизм",
+      "synonyms_en": [
+        "Mechanism",
+        "Machine"
+      ],
+      "synonyms_ru": [
+        "Механизм",
+        "Машина",
+        "Устройство"
+      ],
+      "color": "#8080A0",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "motus",
+        "instrumentum"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/machina.png",
+      "texture": "aspects/machina.png"
+    },
+    {
+      "tag": "vinculum",
+      "mod": "Thaumcraft",
+      "name_en": "Trap",
+      "name_ru": "Ловушка",
+      "synonyms_en": [
+        "Trap",
+        "Imprison"
+      ],
+      "synonyms_ru": [
+        "Ловушка",
+        "Тюрьма"
+      ],
+      "color": "#9A8080",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "motus",
+        "perditio"
+      ],
+      "blend": 1,
+      "imageNs": "thaumcraft",
+      "imagePath": "textures/aspects/vinculum.png",
+      "texture": "aspects/vinculum.png"
+    },
+    {
+      "tag": "tempus",
+      "mod": "MagicBees",
+      "name_en": "Time",
+      "name_ru": "Time",
+      "synonyms_en": [
+        "Time",
+        "Moment",
+        "Eternity"
+      ],
+      "synonyms_ru": [
+        "Time",
+        "Moment",
+        "Eternity"
+      ],
+      "color": "#B68CFF",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "vacuos",
+        "ordo"
+      ],
+      "blend": 1,
+      "imageNs": "magicbees",
+      "imagePath": "textures/aspects/tempus.png",
+      "texture": "aspects/tempus.png"
+    },
+    {
+      "tag": "luxuria",
+      "mod": "ForbiddenMagic",
+      "name_en": "Lust",
+      "name_ru": "Страсть",
+      "synonyms_en": [
+        "Lust",
+        "Desire",
+        "Excess"
+      ],
+      "synonyms_ru": [
+        "Страсть",
+        "Желание",
+        "Избыток"
+      ],
+      "color": "#FFC1CE",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "corpus",
+        "fames"
+      ],
+      "blend": 1,
+      "imageNs": "forbidden",
+      "imagePath": "textures/aspects/luxuria.png",
+      "texture": "aspects/luxuria.png"
+    },
+    {
+      "tag": "infernus",
+      "mod": "ForbiddenMagic",
+      "name_en": "The Nether",
+      "name_ru": "Нижний мир",
+      "synonyms_en": [
+        "The Nether",
+        "Demons",
+        "Hellfire"
+      ],
+      "synonyms_ru": [
+        "Нижний мир",
+        "Демоны",
+        "Адский огонь"
+      ],
+      "color": "#FF0000",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "ignis",
+        "praecantatio"
+      ],
+      "blend": 771,
+      "imageNs": "forbidden",
+      "imagePath": "textures/aspects/infernus.png",
+      "texture": "aspects/infernus.png"
+    },
+    {
+      "tag": "superbia",
+      "mod": "ForbiddenMagic",
+      "name_en": "Pride",
+      "name_ru": "Гордость",
+      "synonyms_en": [
+        "Pride",
+        "Arrogance",
+        "Disdain"
+      ],
+      "synonyms_ru": [
+        "Гордость",
+        "Высокомерие",
+        "Презрение"
+      ],
+      "color": "#9639FF",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "volatus",
+        "vacuos"
+      ],
+      "blend": 1,
+      "imageNs": "forbidden",
+      "imagePath": "textures/aspects/superbia.png",
+      "texture": "aspects/superbia.png"
+    },
+    {
+      "tag": "gula",
+      "mod": "ForbiddenMagic",
+      "name_en": "Gluttony",
+      "name_ru": "Прожорливость",
+      "synonyms_en": [
+        "Gluttony",
+        "Consumption",
+        "Indulgence"
+      ],
+      "synonyms_ru": [
+        "Прожорливость",
+        "Потребление",
+        "Наслаждение"
+      ],
+      "color": "#D59C46",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "fames",
+        "vacuos"
+      ],
+      "blend": 1,
+      "imageNs": "forbidden",
+      "imagePath": "textures/aspects/gula.png",
+      "texture": "aspects/gula.png"
+    },
+    {
+      "tag": "invidia",
+      "mod": "ForbiddenMagic",
+      "name_en": "Envy",
+      "name_ru": "Зависть",
+      "synonyms_en": [
+        "Envy",
+        "Jealousy",
+        "Insecurity"
+      ],
+      "synonyms_ru": [
+        "Зависть",
+        "Ревность",
+        "Ненадежность"
+      ],
+      "color": "#00BA00",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "sensus",
+        "fames"
+      ],
+      "blend": 1,
+      "imageNs": "forbidden",
+      "imagePath": "textures/aspects/invidia.png",
+      "texture": "aspects/invidia.png"
+    },
+    {
+      "tag": "desidia",
+      "mod": "ForbiddenMagic",
+      "name_en": "Sloth",
+      "name_ru": "Лень",
+      "synonyms_en": [
+        "Sloth",
+        "Laziness",
+        "Procrastination"
+      ],
+      "synonyms_ru": [
+        "Лень",
+        "Леность",
+        "Промедление"
+      ],
+      "color": "#6E6E6E",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "vinculum",
+        "spiritus"
+      ],
+      "blend": 771,
+      "imageNs": "forbidden",
+      "imagePath": "textures/aspects/desidia.png",
+      "texture": "aspects/desidia.png"
+    },
+    {
+      "tag": "ira",
+      "mod": "ForbiddenMagic",
+      "name_en": "Wrath",
+      "name_ru": "Гнев",
+      "synonyms_en": [
+        "Wrath",
+        "Anger",
+        "Rage"
+      ],
+      "synonyms_ru": [
+        "Гнев",
+        "Злость",
+        "Ярость"
+      ],
+      "color": "#870404",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "telum",
+        "ignis"
+      ],
+      "blend": 771,
+      "imageNs": "forbidden",
+      "imagePath": "textures/aspects/ira.png",
+      "texture": "aspects/ira.png"
+    },
+    {
+      "tag": "terminus",
+      "mod": "Avaritia",
+      "name_en": "The End of Games",
+      "name_ru": "Конец игры",
+      "synonyms_en": [
+        "The End of Games",
+        "Apocalypse",
+        "Grindstones"
+      ],
+      "synonyms_ru": [
+        "Конец игры",
+        "Хаос",
+        "Бойня"
+      ],
+      "color": "#B90000",
+      "primal": false,
+      "rainbow": false,
+      "components": [
+        "lucrum",
+        "alienis"
+      ],
+      "blend": 771,
+      "imageNs": "avaritia",
+      "imagePath": "textures/misc/terminus.png",
+      "texture": "aspects/terminus.png"
+    },
+    {
+      "tag": "tincturem",
+      "mod": "Alfheim",
+      "name_en": "Color",
+      "name_ru": "Цвет",
+      "synonyms_en": [
+        "Color",
+        "Iridescence"
+      ],
+      "synonyms_ru": [
+        "Цвет",
+        "Радужность"
+      ],
+      "color": null,
+      "primal": false,
+      "rainbow": true,
+      "components": [],
+      "blend": 771,
+      "imageNs": "alfheim",
+      "imagePath": "textures/misc/tincturem.png",
+      "texture": "aspects/tincturem.png"
+    }
+  ]
+}
