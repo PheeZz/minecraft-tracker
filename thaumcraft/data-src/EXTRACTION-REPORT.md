@@ -100,6 +100,27 @@ LoliMagically 37, MagicBees 27). Используется как словарь 
 **842 item + 649 block PNG** из 8 модов (см. `textures/textures-manifest.json`). Плюс **60** иконок
 аспектов в `textures/aspects/`.
 
+## Привязка к серверу
+
+Все экспортируемые датасеты (`aspects/research/recipes/item-names/aspect-sources.json`,
+оба texture-манифеста, а также `genetics/.../species-genomes.json` и `genetics/textures/manifest.json`)
+несут машиночитаемый флаг **`_meta.server = "LoliLand"`** (отдельное поле, не в описании). Данные
+специфичны для сборки/версий модов этого сервера; под другой сервер — перегенерировать тем же
+генератором на его JAR. Файл `bees/i18n/genetics-i18n.json` намеренно не трогался. В UI флаг пока
+не используется.
+
+## Проверка Loli-модов (специфичных для сервера)
+
+Просканированы все 13 `Loli*`/`loli*` JAR на регистрацию контента Thaumcraft
+(`registerObjectTag`/`registerComplexObjectTag`/`registerEntityTag`/`add*Recipe`/`registerResearchItem`/`new Aspect`).
+**Вывод: ничего, что закрывает пробелы.** Loli-моды только *читают* данные Thaumcraft
+(`ThaumcraftCraftingManager.getAspects` ×100, `getCraftingRecipes`) для своих GUI/механик и **не
+регистрируют** ни аспектов, ни тегов сканирования, ни рецептов, ни исследований. Единственное
+исключение — LoliMagically с предметом `research_scroll` (его 1 research и сам предмет авто-изучения
+уже извлечены ранее). Поэтому декомпиляция остальных Loli-модов для пополнения исследования смысла
+не имеет; пробелы закрываются только из «родных» источников (TC `ConfigAspects`, AE2 Feature-классы,
+MCP-маппинг ванильных SRG-имён).
+
 ## Нерешённое / ограничения
 
 1. **AppliedEnergistics2 (11)** — регистрирует research через свой enum-реестр

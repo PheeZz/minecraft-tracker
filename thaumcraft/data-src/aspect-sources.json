@@ -1,5 +1,6 @@
 {
   "_meta": {
+    "server": "LoliLand",
     "generated": "2026-06-07",
     "objectTags": 375,
     "entityTags": 69,
@@ -209,7 +210,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150486_ae",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -335,7 +336,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Items.field_151112_aM",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -513,7 +514,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150331_J",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -526,7 +527,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150320_F",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -628,7 +629,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150461_bJ",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -705,7 +706,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150438_bZ",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -747,7 +748,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150453_bW",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -798,7 +799,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemGoggles",
-        "meta": null
+        "meta": null,
+        "name_en": "Goggles of Revealing",
+        "name_ru": "Очки откровения"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -810,7 +813,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockWoodenDevice",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Arcane Ear",
+        "name_ru": "Магическое ухо"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1245,7 +1250,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 17
+        "meta": 17,
+        "name_en": "Native Copper Cluster",
+        "name_ru": "Меднорудный кластер"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1309,7 +1316,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 18
+        "meta": 18,
+        "name_en": "Native Tin Cluster",
+        "name_ru": "Оловяннорудный кластер"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1373,7 +1382,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 19
+        "meta": 19,
+        "name_en": "Native Silver Cluster",
+        "name_ru": "Серебрянорудный кластер"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1437,7 +1448,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 20
+        "meta": 20,
+        "name_en": "Native Lead Cluster",
+        "name_ru": "Свинцоворудный кластер"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1503,7 +1516,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150354_m",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1516,7 +1529,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150349_c",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1567,7 +1580,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150391_bh",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1657,7 +1670,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150399_cn",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1769,7 +1782,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150329_H",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1782,7 +1795,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150398_cm",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1808,7 +1821,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150330_I",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1881,7 +1894,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150328_O",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1895,7 +1908,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150327_N",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1923,7 +1936,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150338_P",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -1937,7 +1950,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150337_Q",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -2137,7 +2150,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150480_ab",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -2223,7 +2236,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Items.field_151068_bn",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -2782,7 +2795,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Items.field_151020_U",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -2794,7 +2807,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Items.field_151023_V",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -2806,7 +2819,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Items.field_151022_W",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -2818,7 +2831,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Items.field_151029_X",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -2844,7 +2857,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150427_aO",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -2991,7 +3004,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Block",
+        "ref": "Blocks.field_150479_bC",
         "meta": null
       },
       "mod": "Thaumcraft",
@@ -3006,7 +3019,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockTable",
-        "meta": 15
+        "meta": 15,
+        "name_en": "Arcane Worktable",
+        "name_ru": "Магический верстак"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3030,7 +3045,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 16
+        "meta": 16,
+        "name_en": "Native Iron Cluster",
+        "name_ru": "Железорудный кластер"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3044,7 +3061,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 31
+        "meta": 31,
+        "name_en": "Native Gold Cluster",
+        "name_ru": "Золоторудный кластер"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3059,7 +3078,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 21
+        "meta": 21,
+        "name_en": "Native Cinnabar Cluster",
+        "name_ru": "Киноварный кластер"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3075,7 +3096,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Quicksilver Drop",
+        "name_ru": "Капля ртути"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3087,7 +3110,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNugget",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Thaumium Nugget",
+        "name_ru": "Самородок таум-металла"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3099,7 +3124,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomOre",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Cinnabar Ore",
+        "name_ru": "Киноварь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3114,7 +3141,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomOre",
-        "meta": 7
+        "meta": 7,
+        "name_en": "Amber Bearing Stone",
+        "name_ru": "Янтарная руда"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3128,7 +3157,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomOre",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Air Infused Stone",
+        "name_ru": "Грозовая руда"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3142,7 +3173,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomOre",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Fire Infused Stone",
+        "name_ru": "Огненная руда"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3156,7 +3189,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomOre",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Water Infused Stone",
+        "name_ru": "Ледяная руда"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3170,7 +3205,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomOre",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Earth Infused Stone",
+        "name_ru": "Руда земляного кристалла"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3183,7 +3220,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomOre",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Order Infused Stone",
+        "name_ru": "Руда кристалла порядка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3197,7 +3236,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomOre",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Entropy Infused Stone",
+        "name_ru": "Энтропийная руда"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3211,7 +3252,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockTaint",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Crusted Taint",
+        "name_ru": "Заражённый камень"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3224,7 +3267,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockTaint",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Tainted Soil",
+        "name_ru": "Заражённая земля"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3237,7 +3282,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockTaintFibres",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Fibrous Taint",
+        "name_ru": "Заражённое волокно"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3250,7 +3297,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockTaintFibres",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Tainted Grass",
+        "name_ru": "Заражённая трава"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3263,7 +3312,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockTaintFibres",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Tainted Plant",
+        "name_ru": "Заражённое растение"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3276,7 +3327,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockTaintFibres",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Spore Stalk",
+        "name_ru": "Спороцвет"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3290,7 +3343,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockTaintFibres",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Mature Spore Stalk",
+        "name_ru": "Крупный спороцвет"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3369,7 +3424,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomPlant",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Greatwood Sapling",
+        "name_ru": "Саженец великого дерева"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3383,7 +3440,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomPlant",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Silverwood Sapling",
+        "name_ru": "Саженец серебрянного дерева"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3397,7 +3456,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomPlant",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Shimmerleaf",
+        "name_ru": "Сребролист"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3411,7 +3472,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomPlant",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Cinderpearl",
+        "name_ru": "Огненный жемчуг"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3425,7 +3488,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCustomPlant",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Vishroom",
+        "name_ru": "Висомор"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3439,7 +3504,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCosmeticSolid",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Arcane Stone Block",
+        "name_ru": "Магический камень"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3452,7 +3519,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCosmeticSolid",
-        "meta": 7
+        "meta": 7,
+        "name_en": "Arcane Stone Bricks",
+        "name_ru": "Магический кирпич"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3465,7 +3534,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemResource",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Quicksilver",
+        "name_ru": "Ртуть"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3479,7 +3550,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemZombieBrain",
-        "meta": null
+        "meta": null,
+        "name_en": "Zombie Brain",
+        "name_ru": "Мозг зомби"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3493,7 +3566,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemResource",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Amber",
+        "name_ru": "Янтарь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3506,7 +3581,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemResource",
-        "meta": 9
+        "meta": 9,
+        "name_en": "Knowledge Fragment",
+        "name_ru": "Фрагмент знаний"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3518,7 +3595,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemResource",
-        "meta": 11
+        "meta": 11,
+        "name_en": "Tainted Goo",
+        "name_ru": "Заражённая слизь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3531,7 +3610,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemResource",
-        "meta": 12
+        "meta": 12,
+        "name_en": "Taint Tendril",
+        "name_ru": "Заражённое щупальце"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3545,7 +3626,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemResource",
-        "meta": 18
+        "meta": 18,
+        "name_en": "Gold Coin",
+        "name_ru": "Золотая монета"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3593,7 +3676,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNuggetBeef",
-        "meta": null
+        "meta": null,
+        "name_en": "Beef Nugget",
+        "name_ru": "Кусочек говядины"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3605,7 +3690,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNuggetChicken",
-        "meta": null
+        "meta": null,
+        "name_en": "Chicken Nugget",
+        "name_ru": "Кусочек курятины"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3617,7 +3704,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNuggetPork",
-        "meta": null
+        "meta": null,
+        "name_en": "Pork Nugget",
+        "name_ru": "Кусочек свинины"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3629,7 +3718,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemNuggetFish",
-        "meta": null
+        "meta": null,
+        "name_en": "Fish Nugget",
+        "name_ru": "Кусочек рыбки"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3641,7 +3732,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemShard",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Air Shard",
+        "name_ru": "Грозовой кристалл"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3655,7 +3748,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemShard",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Fire Shard",
+        "name_ru": "Огненный кристалл"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3669,7 +3764,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemShard",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Water Shard",
+        "name_ru": "Ледяной кристалл"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3683,7 +3780,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemShard",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Earth Shard",
+        "name_ru": "Земляной кристалл"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3697,7 +3796,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemShard",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Order Shard",
+        "name_ru": "Кристалл порядка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3711,7 +3812,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemShard",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Entropy Shard",
+        "name_ru": "Энтропийный кристалл"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3725,7 +3828,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemResource",
-        "meta": 14
+        "meta": 14,
+        "name_en": "Salis Mundus",
+        "name_ru": "Salis Mundus"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3764,7 +3869,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockAiry",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Glimmer of Light",
+        "name_ru": "Мерцающий эфир"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3776,7 +3883,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockAiry",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Glimmer of Light",
+        "name_ru": "Мерцающий эфир"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3788,7 +3897,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemThaumonomicon",
-        "meta": null
+        "meta": null,
+        "name_en": "Thaumonomicon",
+        "name_ru": "Таумономикон"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3801,7 +3912,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockAlchemyFurnace",
-        "meta": null
+        "meta": null,
+        "name_en": "Advanced Alchemical Furnace",
+        "name_ru": "Улучшенная алхимическая печь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3815,7 +3928,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemEssence",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Glass Phial",
+        "name_ru": "Стеклянный пузырёк"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3827,7 +3942,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemWispEssence",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Ethereal Essence",
+        "name_ru": "Эфирная эссенция"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3839,7 +3956,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemBaubleBlanks",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Apprentices Ring of %TYPE",
+        "name_ru": "Кольцо подмастерья - %TYPE"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3947,7 +4066,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemHelmetCultistPlate",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Cult Helm",
+        "name_ru": "Шлем культиста"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3960,7 +4081,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemHelmetCultistLeaderPlate",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Praetor Helm",
+        "name_ru": "Шлем Претора культистов"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3973,7 +4096,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemHelmetCultistRobe",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Cult Hood",
+        "name_ru": "Капюшон культиста"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3987,7 +4112,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemBootsCultist",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Cult Boots",
+        "name_ru": "Ботинки культиста"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4000,7 +4127,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockWoodenDevice",
-        "meta": 8
+        "meta": 8,
+        "name_en": "Crimson Cult Banner",
+        "name_ru": "Вымпел"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4014,7 +4143,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemEldritchObject",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Eldritch Eye",
+        "name_ru": "Глаз Древних"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4030,7 +4161,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemEldritchObject",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Crimson Rites",
+        "name_ru": "Багровые ритуалы"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4045,7 +4178,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemEldritchObject",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Runed Tablet",
+        "name_ru": "Рунная скрижаль"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4059,7 +4194,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemEldritchObject",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Primordial Pearl",
+        "name_ru": "Сингулярная жемчужина"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4104,7 +4241,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockEldritch",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Eldritch Capstone",
+        "name_ru": "Пьедестал древних"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4117,7 +4256,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockEldritch",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Glowing Crusted Stone",
+        "name_ru": "Светящийся заросший камень"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4131,7 +4272,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockEldritch",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Glyphed Stone",
+        "name_ru": "Исписанный камень"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4159,7 +4302,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCosmeticSolid",
-        "meta": 11
+        "meta": 11,
+        "name_en": "Ancient Stone",
+        "name_ru": "Древний камень"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4172,7 +4317,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockCosmeticSolid",
-        "meta": 12
+        "meta": 12,
+        "name_en": "Ancient Rock",
+        "name_ru": "Древняя скала"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4220,7 +4367,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.propolis",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4233,7 +4380,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.propolis",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4245,7 +4392,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.propolis",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4257,7 +4404,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.propolis",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4269,7 +4416,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.propolis",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4281,7 +4428,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.propolis",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4293,7 +4440,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.propolis",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4305,7 +4452,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.pollen",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4328,7 +4475,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.wax",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4340,7 +4487,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.wax",
         "meta": null
       },
       "mod": "MagicBees",
@@ -4352,7 +4499,7 @@
     {
       "subject": {
         "type": "item",
-        "ref": "(Item",
+        "ref": "Config.wax",
         "meta": null
       },
       "mod": "MagicBees",

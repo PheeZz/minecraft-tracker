@@ -155,7 +155,7 @@ for dec in DECDIRS:
 by_type=collections.Counter(r["type"] for r in recipes)
 by_mod=collections.Counter(r["mod"] for r in recipes)
 named=sum(1 for r in recipes if r.get("output",{}) and ("name_en" in (r["output"] or {})))
-json.dump({"_meta":{"generated":"2026-06-07","count":len(recipes),
+json.dump({"_meta":{"server":"LoliLand","generated":"2026-06-07","count":len(recipes),
                     "byType":dict(by_type),"byMod":dict(by_mod),
                     "outputsNamed":named,
                     "notes":"aspects = essentia/vis cost (null value = computed at runtime, see aspectsComputed). output/input/central/components/inputs resolved to EN/RU names where the item ref maps to a lang key; otherwise {ref,meta} (ConfigItems/ConfigBlocks field) or {vanilla:srgName} or {oredict}. research = linked research key. infusion has instability + central + components."},

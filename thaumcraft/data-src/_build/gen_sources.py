@@ -25,6 +25,8 @@ MODS = [
     ("LoliMagically","decompLM", os.path.join(ASSETS,"lang_addons","lolimagically")),
 ]
 
+SERVER = "LoliLand"   # data is specific to this server's modpack/versions; re-target by re-running per server
+
 def load_lang(p):
     d={}
     if p and os.path.exists(p):
@@ -46,7 +48,20 @@ for mod,_,langdir in MODS:
             seen.add(k)
             items_out.append({"key":k,"mod":mod,"name_en":v,"name_ru":ru.get(k,"")})
 items_out.sort(key=lambda x:(x["mod"],x["key"]))
-json.dump({"_meta":{"generated":"2026-06-07","count":len(items_out),
+NAME = {i["key"]: i for i in items_out}   # lang-key -> {name_en,name_ru}
+
+def resolve_name(fld, meta):
+    cap = fld[0].upper()+fld[1:]
+    cands=[]
+    for pre,base in (("item",cap),("item",fld),("tile",fld),("tile",cap)):
+        if meta is not None: cands.append("%s.%s.%s.name"%(pre,base,meta))
+        cands.append("%s.%s.name"%(pre,base))
+    for c in cands:
+        if c in NAME:
+            return NAME[c]["name_en"], NAME[c]["name_ru"]
+    return "", ""
+
+json.dump({"_meta":{"server":SERVER,"generated":"2026-06-07","count":len(items_out),
                     "byMod":dict(collections.Counter(i["mod"] for i in items_out)),
                     "notes":"display names (EN/RU) for every item/block/tile lang key across the Thaumcraft ecosystem. key = vanilla unlocalized name + .name"},
            "items":items_out},
@@ -99,11 +114,18 @@ def subject(arg):
     arg=arg.strip()
     if arg.startswith('"'):
         return {"type":"oredict","id":arg.strip('"')}
+    arg=re.sub(r'new ItemStack\(\s*\((?:Block|Item)\)\s*','new ItemStack(',arg)  # strip casts
     m=re.search(r'new ItemStack\(([^,)]+)(?:,\s*\d+\s*,\s*(\d+|Short\.MAX_VALUE))?',arg)
     if m:
         ref=m.group(1).strip()
         meta=m.group(2)
-        return {"type":"item","ref":ref,"meta":(None if meta in (None,"Short.MAX_VALUE") else int(meta))}
+        meta=(None if meta in (None,"Short.MAX_VALUE") else int(meta))
+        out={"type":"item","ref":ref,"meta":meta}
+        fm=re.match(r'(?:ConfigItems|ConfigBlocks)\.(\w+)',ref)
+        if fm:
+            en,ru=resolve_name(fm.group(1),meta)
+            if en: out["name_en"]=en; out["name_ru"]=ru
+        return out
     return {"type":"raw","ref":arg[:80]}
 
 sources=[]
@@ -141,7 +163,7 @@ for s in sources:
             gives[tag].append(s["subject"]["id"])
 gives={k:sorted(set(v)) for k,v in sorted(gives.items())}
 
-json.dump({"_meta":{"generated":"2026-06-07",
+json.dump({"_meta":{"server":SERVER,"generated":"2026-06-07",
                     "objectTags":len(sources),"entityTags":len(entities),
                     "byMod":dict(src_counts),
                     "notes":"object/entity scanning tags. subject.type: oredict (ore-dictionary id, directly usable) | item (ConfigItems/ConfigBlocks/Items/Blocks field ref + meta) | raw. 'aspectGivers' indexes aspect->oredict sources (item-ref sources omitted there since names need resolution)."},

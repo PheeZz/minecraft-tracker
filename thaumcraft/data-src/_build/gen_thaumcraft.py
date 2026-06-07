@@ -135,6 +135,7 @@ TEXDIR = os.path.join(PROJ, "thaumcraft", "textures")
 missing_tex = [a["tag"] for a in aspect_list if not os.path.exists(os.path.join(TEXDIR, a["texture"]))]
 json.dump({
     "_meta": {
+        "server": "LoliLand",
         "source": "decompiled (CFR 0.152) Thaumcraft 4.2.3.5 + addons; lang from same JARs",
         "generated": "2026-06-07",
         "count": len(aspect_list),
@@ -319,6 +320,7 @@ with_desc = sum(1 for r in res_list if r["description"])
 with_ru = sum(1 for r in res_list if r["description_ru"])
 json.dump({
     "_meta": {
+        "server": "LoliLand",
         "source": "decompiled (CFR 0.152): Thaumcraft 4.2.3.5 + addons (MagicBees, ForbiddenMagic, TaintedMagic, ThaumicTinkerer, AE2, BloodArsenal, Avaritia, Alfheim, LoliMagically); lang from same JARs",
         "generated": "2026-06-07",
         "count": len(res_list),

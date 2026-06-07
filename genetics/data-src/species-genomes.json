@@ -1,13 +1,14 @@
 {
   "_meta": {
+    "server": "LoliLand",
     "source": "decompiled (CFR 0.152): forestry-4.2.16.64, binnie-mods-2.0.22.7 (extrabees), magicbees-2.4.4; lang from same JARs",
     "generated": "2026-06-06",
     "model": "genome = defaultTemplate -> branch overrides -> species overrides (Forestry/ExtraBees); modBase -> base-chain -> species (MagicBees)",
     "counts": {
       "extracted": 275,
       "fullGenome13": 192,
-      "whitelistTotal": 256,
-      "matchedWhitelist": 256
+      "whitelistTotal": 254,
+      "matchedWhitelist": 254
     },
     "coverageGaps": [
       "Abnormal (ExtraBees): effect=Gravity (no canonical value)",
@@ -160,6 +161,7 @@
     "whitelistNotExtracted": [],
     "extractedNotInWhitelist": [
       "Absolute",
+      "Arcane",
       "Auric",
       "Blooming",
       "Celebratory",
@@ -175,6 +177,7 @@
       "Mystical",
       "Osmium",
       "Plumbum",
+      "Rockin'",
       "Silicon",
       "Sodden",
       "Thriving"
@@ -2976,7 +2979,6 @@
     {
       "en": "Aer",
       "mod": "MagicBees",
-      "whitelistEn": "TcAir",
       "genome": {
         "species": "Aer",
         "speed": "Fastest",
@@ -2995,7 +2997,6 @@
     {
       "en": "Aiolic",
       "mod": "MagicBees",
-      "whitelistEn": "AmAir",
       "genome": {
         "species": "Aiolic",
         "speed": "Fast",
@@ -3053,7 +3054,6 @@
     {
       "en": "Amped",
       "mod": "MagicBees",
-      "whitelistEn": "TeAmped",
       "genome": {
         "species": "Amped",
         "speed": "Fast",
@@ -3092,7 +3092,6 @@
     {
       "en": "Aqua",
       "mod": "MagicBees",
-      "whitelistEn": "TcWater",
       "genome": {
         "species": "Aqua",
         "speed": "Fast",
@@ -3112,7 +3111,6 @@
     {
       "en": "Aqueous",
       "mod": "MagicBees",
-      "whitelistEn": "AmWater",
       "genome": {
         "species": "Aqueous",
         "speed": "Slowest",
@@ -3151,7 +3149,6 @@
     {
       "en": "Arcane",
       "mod": "MagicBees",
-      "whitelistEn": "AmArcane",
       "genome": {
         "species": "Arcane",
         "speed": "Slowest",
@@ -3285,7 +3282,6 @@
     {
       "en": "Beefy",
       "mod": "MagicBees",
-      "whitelistEn": "Beef",
       "genome": {
         "species": "Beefy",
         "speed": "Fast",
@@ -3305,7 +3301,6 @@
     {
       "en": "Big Bad",
       "mod": "MagicBees",
-      "whitelistEn": "Bigbad",
       "genome": {
         "species": "Big Bad",
         "speed": "Fast",
@@ -3325,7 +3320,6 @@
     {
       "en": "Blizzy",
       "mod": "MagicBees",
-      "whitelistEn": "TeBlizzy",
       "genome": {
         "species": "Blizzy",
         "speed": "Fastest",
@@ -3401,7 +3395,6 @@
     {
       "en": "Bronzed",
       "mod": "MagicBees",
-      "whitelistEn": "TeBronze",
       "genome": {
         "species": "Bronzed",
         "speed": "Slowest",
@@ -3421,7 +3414,6 @@
     {
       "en": "Carbon",
       "mod": "MagicBees",
-      "whitelistEn": "TeCoal",
       "genome": {
         "species": "Carbon",
         "speed": "Fast",
@@ -3479,7 +3471,6 @@
     {
       "en": "Chaotic",
       "mod": "MagicBees",
-      "whitelistEn": "TcChaos",
       "genome": {
         "species": "Chaotic",
         "speed": "Slowest",
@@ -3575,7 +3566,6 @@
     {
       "en": "Dante",
       "mod": "MagicBees",
-      "whitelistEn": "TeDante",
       "genome": {
         "species": "Dante",
         "speed": "Slow",
@@ -3595,7 +3585,6 @@
     {
       "en": "Destabilized",
       "mod": "MagicBees",
-      "whitelistEn": "TeDestabilized",
       "genome": {
         "species": "Destabilized",
         "speed": "Fast",
@@ -3691,7 +3680,6 @@
     {
       "en": "Earthen",
       "mod": "MagicBees",
-      "whitelistEn": "Earthy",
       "genome": {
         "species": "Earthen",
         "speed": "Normal",
@@ -3730,7 +3718,6 @@
     {
       "en": "Electrum",
       "mod": "MagicBees",
-      "whitelistEn": "TeElectrum",
       "genome": {
         "species": "Electrum",
         "speed": "Slowest",
@@ -3750,7 +3737,6 @@
     {
       "en": "Empowering",
       "mod": "MagicBees",
-      "whitelistEn": "TcEmpowering",
       "genome": {
         "species": "Empowering",
         "speed": "Slowest",
@@ -3789,7 +3775,6 @@
     {
       "en": "Endearing",
       "mod": "MagicBees",
-      "whitelistEn": "TeEndearing",
       "genome": {
         "species": "Endearing",
         "speed": "Fastest",
@@ -3847,7 +3832,6 @@
     {
       "en": "Essence",
       "mod": "MagicBees",
-      "whitelistEn": "AmEssence",
       "genome": {
         "species": "Essence",
         "speed": "Normal",
@@ -3961,7 +3945,6 @@
     {
       "en": "Flux",
       "mod": "MagicBees",
-      "whitelistEn": "TcTaint",
       "genome": {
         "species": "Flux",
         "speed": "Slowest",
@@ -3981,7 +3964,6 @@
     {
       "en": "Fluxed",
       "mod": "MagicBees",
-      "whitelistEn": "RsaFluxed",
       "genome": {
         "species": "Fluxed",
         "speed": "Slow",
@@ -4020,7 +4002,6 @@
     {
       "en": "Fruticic",
       "mod": "MagicBees",
-      "whitelistEn": "AmPlant",
       "genome": {
         "species": "Fruticic",
         "speed": "Normal",
@@ -4040,7 +4021,6 @@
     {
       "en": "Fulguric",
       "mod": "MagicBees",
-      "whitelistEn": "AmLightning",
       "genome": {
         "species": "Fulguric",
         "speed": "Slowest",
@@ -4060,7 +4040,6 @@
     {
       "en": "Gelid",
       "mod": "MagicBees",
-      "whitelistEn": "TeGelid",
       "genome": {
         "species": "Gelid",
         "speed": "Fastest",
@@ -4098,7 +4077,6 @@
     {
       "en": "Glacic",
       "mod": "MagicBees",
-      "whitelistEn": "AmIce",
       "genome": {
         "species": "Glacic",
         "speed": "Slowest",
@@ -4118,7 +4096,6 @@
     {
       "en": "Grounded",
       "mod": "MagicBees",
-      "whitelistEn": "TeGrounded",
       "genome": {
         "species": "Grounded",
         "speed": "Fastest",
@@ -4157,7 +4134,6 @@
     {
       "en": "Igneous",
       "mod": "MagicBees",
-      "whitelistEn": "AmFire",
       "genome": {
         "species": "Igneous",
         "speed": "Normal",
@@ -4177,7 +4153,6 @@
     {
       "en": "Ignis",
       "mod": "MagicBees",
-      "whitelistEn": "TcFire",
       "genome": {
         "species": "Ignis",
         "speed": "Faster",
@@ -4216,7 +4191,6 @@
     {
       "en": "Invar",
       "mod": "MagicBees",
-      "whitelistEn": "TeInvar",
       "genome": {
         "species": "Invar",
         "speed": "Slow",
@@ -4274,7 +4248,6 @@
     {
       "en": "Lux",
       "mod": "MagicBees",
-      "whitelistEn": "TeLux",
       "genome": {
         "species": "Lux",
         "speed": "Slow",
@@ -4313,7 +4286,6 @@
     {
       "en": "Minium",
       "mod": "MagicBees",
-      "whitelistEn": "EeMinium",
       "genome": {
         "species": "Minium",
         "speed": "Slow",
@@ -4428,7 +4400,6 @@
     {
       "en": "Nexus",
       "mod": "MagicBees",
-      "whitelistEn": "TcNexus",
       "genome": {
         "species": "Nexus",
         "speed": "Slowest",
@@ -4448,7 +4419,6 @@
     {
       "en": "Nickel",
       "mod": "MagicBees",
-      "whitelistEn": "TeNickel",
       "genome": {
         "species": "Nickel",
         "speed": "Slowest",
@@ -4487,7 +4457,6 @@
     {
       "en": "Ordered",
       "mod": "MagicBees",
-      "whitelistEn": "TcOrder",
       "genome": {
         "species": "Ordered",
         "speed": "Normal",
@@ -4526,7 +4495,6 @@
     {
       "en": "Platinum",
       "mod": "MagicBees",
-      "whitelistEn": "TePlatinum",
       "genome": {
         "species": "Platinum",
         "speed": "Slow",
@@ -4565,7 +4533,6 @@
     {
       "en": "Porcine",
       "mod": "MagicBees",
-      "whitelistEn": "Pork",
       "genome": {
         "species": "Porcine",
         "speed": "Fast",
@@ -4585,7 +4552,6 @@
     {
       "en": "Poultry",
       "mod": "MagicBees",
-      "whitelistEn": "Chicken",
       "genome": {
         "species": "Poultry",
         "speed": "Fast",
@@ -4624,7 +4590,6 @@
     {
       "en": "Pure",
       "mod": "MagicBees",
-      "whitelistEn": "TcPure",
       "genome": {
         "species": "Pure",
         "speed": "Slowest",
@@ -4644,7 +4609,6 @@
     {
       "en": "Pyro",
       "mod": "MagicBees",
-      "whitelistEn": "TePyro",
       "genome": {
         "species": "Pyro",
         "speed": "Fastest",
@@ -4664,7 +4628,6 @@
     {
       "en": "Quintessential",
       "mod": "MagicBees",
-      "whitelistEn": "AmQuintessence",
       "genome": {
         "species": "Quintessential",
         "speed": "Normal",
@@ -4684,7 +4647,6 @@
     {
       "en": "Ravening",
       "mod": "MagicBees",
-      "whitelistEn": "TcHungry",
       "genome": {
         "species": "Ravening",
         "speed": "Slowest",
@@ -4704,7 +4666,6 @@
     {
       "en": "Rejuvenating",
       "mod": "MagicBees",
-      "whitelistEn": "TcRejuvenating",
       "genome": {
         "species": "Rejuvenating",
         "speed": "Slowest",
@@ -4724,7 +4685,6 @@
     {
       "en": "Rockin'",
       "mod": "MagicBees",
-      "whitelistEn": "TeRocking",
       "genome": {
         "species": "Rockin'",
         "speed": "Faster",
@@ -4820,7 +4780,6 @@
     {
       "en": "Shocking",
       "mod": "MagicBees",
-      "whitelistEn": "TeShocking",
       "genome": {
         "species": "Shocking",
         "speed": "Fast",
@@ -4878,7 +4837,6 @@
     {
       "en": "Skystone",
       "mod": "MagicBees",
-      "whitelistEn": "AeSkystone",
       "genome": {
         "species": "Skystone",
         "speed": "Slowest",
@@ -4917,7 +4875,6 @@
     {
       "en": "Solum",
       "mod": "MagicBees",
-      "whitelistEn": "TcEarth",
       "genome": {
         "species": "Solum",
         "speed": "Slow",
@@ -5089,7 +5046,6 @@
     {
       "en": "Terrestric",
       "mod": "MagicBees",
-      "whitelistEn": "AmEarth",
       "genome": {
         "species": "Terrestric",
         "speed": "Slowest",
@@ -5184,7 +5140,6 @@
     {
       "en": "Vis",
       "mod": "MagicBees",
-      "whitelistEn": "TcVis",
       "genome": {
         "species": "Vis",
         "speed": "Slow",
@@ -5204,7 +5159,6 @@
     {
       "en": "Void",
       "mod": "MagicBees",
-      "whitelistEn": "TcVoid",
       "genome": {
         "species": "Void",
         "speed": "Slowest",
@@ -5224,7 +5178,6 @@
     {
       "en": "Vortex",
       "mod": "MagicBees",
-      "whitelistEn": "AmVortex",
       "genome": {
         "species": "Vortex",
         "speed": "Slowest",
@@ -5262,7 +5215,6 @@
     {
       "en": "Wight",
       "mod": "MagicBees",
-      "whitelistEn": "AmWight",
       "genome": {
         "species": "Wight",
         "speed": "Fast",
@@ -5301,7 +5253,6 @@
     {
       "en": "Winsome",
       "mod": "MagicBees",
-      "whitelistEn": "TeWinsome",
       "genome": {
         "species": "Winsome",
         "speed": "Fast",
@@ -5321,7 +5272,6 @@
     {
       "en": "Wispy",
       "mod": "MagicBees",
-      "whitelistEn": "TcWispy",
       "genome": {
         "species": "Wispy",
         "speed": "Fast",
