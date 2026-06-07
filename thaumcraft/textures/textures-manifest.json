@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "note": "item/block textures for Thaumcraft + addons, namespaced by modid"
+  },
+  "byMod": {
+    "thaumcraft": {
+      "items": 247,
+      "blocks": 248
+    },
+    "forbidden": {
+      "items": 73,
+      "blocks": 28
+    },
+    "taintedmagic": {
+      "items": 57,
+      "blocks": 8
+    },
+    "ttinkerer": {
+      "items": 129,
+      "blocks": 85
+    },
+    "magicbees": {
+      "items": 53,
+      "blocks": 23
+    },
+    "avaritia": {
+      "items": 78,
+      "blocks": 25
+    },
+    "bloodarsenal": {
+      "items": 86,
+      "blocks": 32
+    },
+    "alfheim": {
+      "items": 119,
+      "blocks": 200
+    }
+  },
+  "total": {
+    "items": 842,
+    "blocks": 649
+  }
+}
