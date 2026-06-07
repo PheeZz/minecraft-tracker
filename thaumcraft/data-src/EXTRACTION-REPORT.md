@@ -133,16 +133,25 @@ RU восстановлено даже при несовпадении registry-
 После ванильного + модового разрешения (+ под-типы по числовой мете через `base.<meta>.name`,
 с базами из `field-names.json.bases` — напр. `WandRod.0`→Greatwood Rod, `ItemMaterial.0`→Shadow Metal
 Ingot, инертные/заряженные навершия палочек):
-- **`recipes.json`**: ~**81 %** ссылок на предметы названы, стоимости аспектов — 100 %.
+- **`recipes.json`**: ~**88 %** реальных ссылок на предметы названы (метрика без зачар-выходов и
+  NBT-аргументов), стоимости аспектов — 100 %.
 - **`aspect-sources.json`**: **287/320** item-субъектов названы.
 
-Под-типы предметов закрыты движком `field-names.json.metas`: по `field → класс → func_77667_c`
-разобраны и **строковые** ключи меты (`item.NetherShard.wrath.name` → «Wrath Shard»…) и предметы,
-где каждая «мета» — отдельный предмет (`singularity_iron` → «Iron Singularity»…).
+Дополнительно разрешены: касты `(Item)/(Block)/(ItemStack)`, `ItemApi.getItem/getBlock("name")`,
+MCTags (`Tags.Items.QUARTZ` → ванильный id), локальные переменные (`ItemStack x = …`), а также
+под-типы предметов (`field → класс → func_77667_c`): **строковые** ключи меты
+(`NetherShard.wrath` → «Wrath Shard»), отдельно-регистрируемые меты (`singularity_iron` →
+«Iron Singularity»), числовые (`WandCores.0`). Коллизии одноимённых классов разных модов
+(`ItemWandCores` в FM и BloodArsenal) разведены по моду.
 
-Остаётся не названным только объективный long-tail:
-- ссылки без распарсенного поля — касты `(Item)x`, локальные переменные, выражения (≈155);
-- предметы с **переменной** метой из циклов (мета неизвестна статически).
+Остаётся не названным (~12 %) — принципиально вне досягаемости текущего набора модов:
+- **кросс-мод** ссылки на невытащенные моды: Botania (обфусцировано, `Botania.t`), Blood Magic
+  (`AWWayofTime`), ArsMagica (рефлексия `amItems.getField("…")`), TC4Tweaks
+  (`Config.miscResources.getStackForType(ResourceType.X)`);
+- **динамика**: вызовы методов (`this.getNaturalWandCap()`), предметы с **переменной** метой из циклов
+  (`ItemRegistry.ItemMaterial` без статической меты).
+Чтобы закрыть кросс-мод, нужно отдельно извлекать Botania/BloodMagic/ArsMagica (низкий выход из-за
+обфускации/рефлексии).
 
 ## Привязка к серверу
 

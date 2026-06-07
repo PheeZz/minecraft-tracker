@@ -78,10 +78,10 @@ for dec in DECDIRS:
         except: continue
         for ln in t.splitlines():
             m = re.search(r'\b(\w+)\s*=\s*[^;=]*?\bnew (\w+)\(', ln)
-            if m: field_class.setdefault(m.group(1), []).append(m.group(2))
+            if m: field_class.setdefault(m.group(1), []).append((dec, m.group(2)))  # scope by mod to avoid cross-mod class-name collisions
         cm = re.search(r'\bclass (\w+)\b', t)
         if not cm or "func_77667_c" not in t: continue
-        cls = cm.group(1)
+        cls = (dec, cm.group(1))
         arrays = {}
         for am in re.finditer(r'String\[\]\s+(\w+)\s*=\s*(?:new String\[\]\s*)?\{([^}]*)\}', t):
             arrays[am.group(1)] = [s.strip().strip('"') for s in am.group(2).split(",") if s.strip()]

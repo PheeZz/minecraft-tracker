@@ -20,6 +20,7 @@ names = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","item-names.jso
 NAME = {i["key"]: i for i in names["items"]}
 # ---- vanilla SRG field -> {reg,name_en,name_ru}
 VANILLA = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","vanilla-names.json"),encoding="utf-8"))["fields"]
+REG2NAME = {v["reg"]: v for v in VANILLA.values()}   # vanilla registry id -> names (for MCTags)
 # ---- mod field name -> {name_en,name_ru}
 FIELDNAMES = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","field-names.json"),encoding="utf-8"))["fields"]
 
@@ -61,13 +62,32 @@ def name_for(fld, meta):
 
 def meta_of(tok):
     mm = re.search(r'new ItemStack\([^,)]+,\s*\w+\s*,\s*(\d+)', tok)
+    if mm: return int(mm.group(1))
+    mm = re.search(r'get(?:Item|Block)\(\s*(?:\(String\)\s*)?"[^"]+"\s*,\s*(?:\(int\)\s*)?(\d+)', tok)  # ItemApi.getItem/getBlock("x", meta)
     return int(mm.group(1)) if mm else None
 
-def resolve_item(tok):
+VARMAP = {}   # per-file: local ItemStack/Item var -> defining expression
+
+def resolve_item(tok, _depth=0):
     tok = tok.strip()
     if tok.startswith('"'):
         return {"oredict": tok.strip('"')}
+    # strip leading casts: (Item)/(Block)/(ItemStack)/(Object)
+    tok = re.sub(r'^\((?:Item|Block|ItemStack|Object)\)\s*', '', tok)
     meta = meta_of(tok)
+    # MCTags: Tags.Items.QUARTZ / Tags.Blocks.OBSIDIAN -> vanilla registry id
+    m = re.search(r'Tags\.(?:Items|Blocks)\.([A-Z0-9_]+)', tok)
+    if m:
+        reg = m.group(1).lower(); v = REG2NAME.get(reg)
+        if v: return {"tag": m.group(1), "reg": reg, "name_en": v["name_en"], "name_ru": v["name_ru"]}
+        return {"tag": m.group(1)}
+    # ItemApi.getItem/getBlock("name"[, meta]) -> resolve by field/unloc name
+    m = re.search(r'get(?:Item|Block)\(\s*(?:\(String\)\s*)?"([^"]+)"', tok)
+    if m:
+        fld = m.group(1); out = {"ref": fld, "meta": meta}
+        r = name_for(fld, meta)
+        if r: out["name_en"], out["name_ru"] = r
+        return out
     m = re.search(r'(?:ConfigItems|ConfigBlocks)\.(\w+)', tok)
     if m:
         fld = m.group(1); out = {"ref": fld, "meta": meta}
@@ -79,13 +99,26 @@ def resolve_item(tok):
         fld = m.group(1); v = VANILLA.get(fld)
         if v: return {"vanilla":fld,"reg":v["reg"],"name_en":v["name_en"],"name_ru":v["name_ru"]}
         return {"vanilla": fld}
-    m = re.search(r'new ItemStack\(\s*([\w.]+)', tok)
+    m = re.search(r'new ItemStack\(\s*\((?:Item|Block)\)\s*([\w.]+)|new ItemStack\(\s*([\w.]+)', tok)
     if m:
-        ref = m.group(1); fld = ref.split(".")[-1]; out = {"ref": ref, "meta": meta}
+        ref = m.group(1) or m.group(2); fld = ref.split(".")[-1]; out = {"ref": ref, "meta": meta}
         r = name_for(fld, meta)
         if r: out["name_en"], out["name_ru"] = r
+        if "name_en" in out: return out
+        if ref in VARMAP and _depth < 4:        # ref was a local var holding an ItemStack
+            return resolve_item(VARMAP[ref], _depth+1)
         return out
+    # bare local variable (e.g. quartz, basicWand, itemStack)
+    bare = re.fullmatch(r'[\w]+', tok)
+    if bare and tok in VARMAP and _depth < 4:
+        return resolve_item(VARMAP[tok], _depth+1)
     return {"raw": tok[:60]}
+
+def build_varmap(text):
+    vm = {}
+    for m in re.finditer(r'\b(?:ItemStack|Item|Block)\s+(\w+)\s*=\s*([^;]+);', text):
+        vm.setdefault(m.group(1), m.group(2).strip())
+    return vm
 
 def balanced(s,start):
     depth=0
@@ -139,6 +172,7 @@ for dec in DECDIRS:
         try: t=open(jf,encoding="utf-8",errors="replace").read()
         except: continue
         if "Recipe(" not in t: continue
+        globals()["VARMAP"]=build_varmap(t)
         for meth,rtype in TYPES.items():
             for m in re.finditer(r'ThaumcraftApi\.'+meth+r'\(',t):
                 inner,end=balanced(t,m.end()-1)
@@ -167,8 +201,10 @@ for dec in DECDIRS:
                         rec["central"]=resolve_item(args[al_idx+1])
                         comps=[]
                         for a in args[al_idx+2:]:
-                            for it in re.findall(r'new ItemStack\([^)]*\)|"[a-zA-Z][\w]*"',a):
-                                comps.append(resolve_item(it))
+                            am=re.search(r'new ItemStack\[\]\s*\{(.*)\}\s*$', a, re.S)
+                            parts=split_top(am.group(1)) if am else [a]
+                            for part in parts:
+                                if part.strip(): comps.append(resolve_item(part))
                         if comps: rec["components"]=comps
                 elif rtype=="arcane":
                     # shaped: rows (1-3 short strings) then Character/ingredient pairs
@@ -186,13 +222,14 @@ for dec in DECDIRS:
                     if rows: rec["shape"]=rows
                     if key: rec["key"]=key
                 else:
-                    # shapeless arcane: flat ingredient list
+                    # shapeless arcane: flat ingredient list (each top-level arg = one ingredient)
                     ins=[]
                     tail=args[(al_idx+1):] if al_idx is not None else args[2:]
                     for a in tail:
-                        for it in re.findall(r'new ItemStack\([^)]*\)|"[a-z][\w]*"',a):
-                            r=resolve_item(it)
-                            if r not in ins: ins.append(r)
+                        a=a.strip()
+                        if not a or a.startswith("Character") or re.fullmatch(r"'.'",a): continue
+                        r=resolve_item(a)
+                        if r not in ins: ins.append(r)
                     if ins: rec["inputs"]=ins
                 recipes.append(rec)
 

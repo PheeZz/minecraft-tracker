@@ -7,26 +7,209 @@
     "notes": "fieldName -> resolved display name via the mod's unlocalized/registry id and merged lang. Keyed by the bare field identifier (last segment of e.g. ForbiddenItems.deadlyShards)."
   },
   "fields": {
-    "empowered_self_sacrifice_amulet": {
+    "ItemVoidwalkerBoots": {
       "bases": [
-        "empowered_self_sacrifice_amulet"
+        "ItemVoidwalkerBoots"
       ],
-      "name_en": "Empowered Self Sacrifice Amulet",
+      "name_en": "Boots of the Voidwalker",
       "name_ru": "",
-      "via": "empowered_self_sacrifice_amulet"
+      "via": "ItemVoidwalkerBoots"
     },
-    "itemNugget": {
+    "manaAuraProvider": {
       "bases": [
-        "ItemNugget"
+        "manaAuraProvider"
+      ],
+      "name_en": "Mana Apiary Booster",
+      "name_ru": "",
+      "via": "manaAuraProvider"
+    },
+    "itemKey": {
+      "bases": [
+        "ArcaneDoorKey"
       ]
     },
-    "itemCrystalEssence": {
+    "ItemPrimalBlade": {
       "bases": [
-        "ItemCrystalEssence"
+        "ItemPrimalBlade"
       ],
-      "name_en": "Crystallized Essence",
-      "name_ru": "Кристаллизированная эссенция",
-      "via": "ItemCrystalEssence"
+      "name_en": "Primal Blade",
+      "name_ru": "",
+      "via": "ItemPrimalBlade"
+    },
+    "taintPickaxe": {
+      "bases": [
+        "TaintPickaxe"
+      ],
+      "name_en": "Pickaxe of Distortion",
+      "name_ru": "Кирка искажения",
+      "via": "TaintPickaxe"
+    },
+    "bloodOrb": {
+      "bases": [
+        "EldritchOrb"
+      ],
+      "name_en": "Eldritch Blood Orb",
+      "name_ru": "Древний шар крови",
+      "via": "EldritchOrb"
+    },
+    "itemHelmetThaumium": {
+      "bases": [
+        "ItemHelmetThaumium"
+      ],
+      "name_en": "Thaumium Helm",
+      "name_ru": "Таум-шлем",
+      "via": "ItemHelmetThaumium"
+    },
+    "itemRingRunic": {
+      "bases": [
+        "ItemRingRunic"
+      ]
+    },
+    "ItemGateKey": {
+      "bases": [
+        "ItemGateKey"
+      ],
+      "name_en": "Celestial Gate Key",
+      "name_ru": "",
+      "via": "ItemGateKey"
+    },
+    "ItemSalis": {
+      "bases": [
+        "ItemSalis"
+      ]
+    },
+    "blood_diamond": {
+      "bases": [
+        "blood_diamond"
+      ],
+      "name_en": "Blood Diamond",
+      "name_ru": "",
+      "via": "blood_diamond"
+    },
+    "itemFocusPech": {
+      "bases": [
+        "FocusPech"
+      ],
+      "name_en": "Wand Focus: Pech's Curse",
+      "name_ru": "Набалдашник: Гномье проклятие",
+      "via": "FocusPech"
+    },
+    "itemArcaneDoor": {
+      "bases": [
+        "ItemArcaneDoor"
+      ],
+      "name_en": "Arcane Door",
+      "name_ru": "Магическая дверь",
+      "via": "ItemArcaneDoor"
+    },
+    "itemPickVoid": {
+      "bases": [
+        "ItemPickVoid"
+      ],
+      "name_en": "Void Pickaxe",
+      "name_ru": "Пустотная кирка",
+      "via": "ItemPickVoid"
+    },
+    "ItemThaumicDisassembler": {
+      "bases": [
+        "ItemThaumicDisassembler"
+      ],
+      "name_en": "Thaumic Disassembler",
+      "name_ru": "",
+      "via": "ItemThaumicDisassembler"
+    },
+    "itemBathSalts": {
+      "bases": [
+        "ItemBathSalts"
+      ],
+      "name_en": "Purifying Bath Salts",
+      "name_ru": "Очищающая соль",
+      "via": "ItemBathSalts"
+    },
+    "orange_juice": {
+      "bases": [
+        "orange_juice"
+      ],
+      "name_en": "Orange Juice",
+      "name_ru": "",
+      "via": "orange_juice"
+    },
+    "ItemShadowFortressHelmet": {
+      "bases": [
+        "ItemShadowFortressHelmet"
+      ],
+      "name_en": "Shadow Fortress Helm",
+      "name_ru": "",
+      "via": "ItemShadowFortressHelmet"
+    },
+    "ItemWandRod": {
+      "bases": [
+        "ItemWandRod"
+      ]
+    },
+    "blockLootUrn": {
+      "bases": [
+        "blockLootUrn"
+      ],
+      "name_en": "Old Urn",
+      "name_ru": "Старая ваза",
+      "via": "blockLootUrn"
+    },
+    "mobCrystal": {
+      "bases": [
+        "MobCrystal"
+      ],
+      "name_en": "%s Imprinted Crystal",
+      "name_ru": "Отпечатанный кристалл (%s)",
+      "via": "MobCrystal"
+    },
+    "skullAxe": {
+      "bases": [
+        "SkullAxe"
+      ],
+      "name_en": "Axe of the Skulltaker",
+      "name_ru": "Топор собирателя черепов",
+      "via": "SkullAxe"
+    },
+    "soul_fragment": {
+      "bases": [
+        "soul_fragment"
+      ],
+      "name_en": "Soul Fragment",
+      "name_ru": "",
+      "via": "soul_fragment"
+    },
+    "bloodRapier": {
+      "bases": [
+        "BloodRapier"
+      ],
+      "name_en": "Rapier of the Strix",
+      "name_ru": "Рапира неясыти",
+      "via": "BloodRapier"
+    },
+    "itemSwordVoid": {
+      "bases": [
+        "ItemSwordVoid"
+      ],
+      "name_en": "Void Sword",
+      "name_ru": "Пустотный меч",
+      "via": "ItemSwordVoid"
+    },
+    "itemFocusWarding": {
+      "bases": [
+        "FocusWarding"
+      ],
+      "name_en": "Wand Focus: Warding",
+      "name_ru": "Набалдашник: Укрепление",
+      "via": "FocusWarding"
+    },
+    "magicApiary": {
+      "bases": [
+        "magicApiary"
+      ],
+      "name_en": "Magic Apiary",
+      "name_ru": "",
+      "via": "magicApiary"
     },
     "blinkFocus": {
       "bases": [
@@ -36,25 +219,380 @@
       "name_ru": "",
       "via": "BlinkFocus"
     },
-    "blood_infused_glowstone_dust": {
+    "ItemKatana": {
       "bases": [
-        "blood_infused_glowstone_dust"
+        "ItemKatana"
+      ]
+    },
+    "itemLootbag": {
+      "bases": [
+        "ItemLootBag"
+      ]
+    },
+    "item2": {
+      "bases": [
+        "asgard_upgrade"
+      ]
+    },
+    "blockLifter": {
+      "bases": [
+        "blockLifter"
       ],
-      "name_en": "Blood Infused Glowstone Dust",
+      "name_en": "Arcane Levitator",
+      "name_ru": "Магический подъёмник",
+      "via": "blockLifter"
+    },
+    "blood_infused_planks": {
+      "bases": [
+        "blood_infused_planks"
+      ],
+      "name_en": "Blood Infused Wooden Plank",
       "name_ru": "",
-      "via": "blood_infused_glowstone_dust"
+      "via": "blood_infused_planks"
     },
-    "blockMirror": {
+    "ItemVoidwalkerSash": {
       "bases": [
-        "blockMirror"
+        "ItemVoidwalkerSash"
       ],
-      "name_en": "Magic Mirror",
-      "name_ru": "Магическое зеркало",
-      "via": "blockMirror"
+      "name_en": "Voidwalker's Sash of Runic Shielding",
+      "name_ru": "",
+      "via": "ItemVoidwalkerSash"
     },
-    "itemEldritchObject": {
+    "itemBootsRobe": {
       "bases": [
-        "ItemEldritchObject"
+        "ItemBootsRobe"
+      ],
+      "name_en": "Thaumaturge's Boots",
+      "name_ru": "Сапоги тауматурга",
+      "via": "ItemBootsRobe"
+    },
+    "BlockWarpwoodSapling": {
+      "bases": [
+        "BlockWarpwoodSapling"
+      ],
+      "name_en": "Warpwood Sapling",
+      "name_ru": "",
+      "via": "BlockWarpwoodSapling"
+    },
+    "itemNuggetChicken": {
+      "bases": [
+        "ItemNuggetChicken"
+      ],
+      "name_en": "Chicken Nugget",
+      "name_ru": "Кусочек курятины",
+      "via": "ItemNuggetChicken"
+    },
+    "bloodwell": {
+      "bases": [
+        "Bloodwell"
+      ],
+      "name_en": "Bloody Scrivener's Tools",
+      "name_ru": "Инструменты кровавого писца",
+      "via": "Bloodwell"
+    },
+    "wandCore": {
+      "bases": [
+        "WandCores",
+        "wand_cores"
+      ],
+      "metas": {
+        "0": {
+          "name_en": "Tainted Rod",
+          "name_ru": "Заражённый стержень"
+        },
+        "1": {
+          "name_en": "Infernal Rod",
+          "name_ru": "Адский стержень"
+        },
+        "2": {
+          "name_en": "Eldritch Rod",
+          "name_ru": "Древний стержень"
+        },
+        "3": {
+          "name_en": "Blood Rod",
+          "name_ru": "Кровавый стержень"
+        },
+        "4": {
+          "name_en": "Witchwood Rod",
+          "name_ru": "Стержень из ведьминой древесины"
+        },
+        "5": {
+          "name_en": "Profane Rod",
+          "name_ru": ""
+        },
+        "6": {
+          "name_en": "Inert Blood Rod",
+          "name_ru": "Инертный кровавый стержень"
+        },
+        "7": {
+          "name_en": "Livingwood Rod",
+          "name_ru": "Стержень из живой древесины"
+        },
+        "8": {
+          "name_en": "Dormant Livingwood Rod",
+          "name_ru": "Бездействующий стержень из живой древесины"
+        },
+        "9": {
+          "name_en": "Blood Staff Core",
+          "name_ru": "Кровавое ядро посоха"
+        },
+        "10": {
+          "name_en": "Witchwood Staff Core",
+          "name_ru": "Ядро посоха из ведьминой древесины"
+        },
+        "11": {
+          "name_en": "Dreamwood Rod",
+          "name_ru": "Стержень из древесины мечтаний"
+        },
+        "12": {
+          "name_en": "Silent Dreamwood Rod",
+          "name_ru": "Бездействующий стержень из древесины мечтаний"
+        },
+        "13": {
+          "name_en": "Dreamwood Staff Core",
+          "name_ru": "Ядро посоха из древесины мечтаний"
+        }
+      }
+    },
+    "morphShovel": {
+      "bases": [
+        "MorphShovel"
+      ],
+      "name_en": "Chameleon Shovel",
+      "name_ru": "Хамелеоновая лопата",
+      "via": "MorphShovel"
+    },
+    "itemBottleTaint": {
+      "bases": [
+        "ItemBottleTaint"
+      ],
+      "name_en": "Bottled Taint",
+      "name_ru": "Порча в бутылке",
+      "via": "ItemBottleTaint"
+    },
+    "itemAmuletVis": {
+      "bases": [
+        "ItemAmuletVis"
+      ]
+    },
+    "ItemHollowDagger": {
+      "bases": [
+        "ItemHollowDagger"
+      ],
+      "name_en": "Hollow Dagger",
+      "name_ru": "",
+      "via": "ItemHollowDagger"
+    },
+    "blood_infused_diamond_unactive": {
+      "bases": [
+        "blood_infused_diamond_unactive"
+      ],
+      "name_en": "Blood Infused Diamond (Unactive)",
+      "name_ru": "",
+      "via": "blood_infused_diamond_unactive"
+    },
+    "itemAxeVoid": {
+      "bases": [
+        "ItemAxeVoid"
+      ],
+      "name_en": "Void Axe",
+      "name_ru": "Пустотный топор",
+      "via": "ItemAxeVoid"
+    },
+    "BlockWarpwoodPlanks": {
+      "bases": [
+        "BlockWarpwoodPlanks"
+      ],
+      "name_en": "Warpwood Planks",
+      "name_ru": "",
+      "via": "BlockWarpwoodPlanks"
+    },
+    "itemFocusFire": {
+      "bases": [
+        "FocusFire"
+      ],
+      "name_en": "Wand Focus: Fire",
+      "name_ru": "Набалдашник: Огонь",
+      "via": "FocusFire"
+    },
+    "itemWispEssence": {
+      "bases": [
+        "ItemWispEssence"
+      ],
+      "name_en": "Ethereal Essence",
+      "name_ru": "Эфирная эссенция",
+      "via": "ItemWispEssence"
+    },
+    "blood_cake": {
+      "bases": [
+        "blood_cake"
+      ],
+      "name_en": "Blood Cake",
+      "name_ru": "",
+      "via": "blood_cake"
+    },
+    "itemCrystalEssence": {
+      "bases": [
+        "ItemCrystalEssence"
+      ],
+      "name_en": "Crystallized Essence",
+      "name_ru": "Кристаллизированная эссенция",
+      "via": "ItemCrystalEssence"
+    },
+    "blockDoubleSlabWood": {
+      "bases": [
+        "blockCosmeticDoubleSlabWood"
+      ]
+    },
+    "ItemFocusTaintSwarm": {
+      "bases": [
+        "ItemFocusTaintSwarm"
+      ],
+      "name_en": "Wand Focus: Taint Swarm",
+      "name_ru": "",
+      "via": "ItemFocusTaintSwarm"
+    },
+    "ridingCrop": {
+      "bases": [
+        "RidingCrop"
+      ],
+      "name_en": "Riding Crop",
+      "name_ru": "Хлыст",
+      "via": "RidingCrop"
+    },
+    "itemZombieBrain": {
+      "bases": [
+        "ItemZombieBrain"
+      ],
+      "name_en": "Zombie Brain",
+      "name_ru": "Мозг зомби",
+      "via": "ItemZombieBrain"
+    },
+    "itemHelmetCultistPlate": {
+      "bases": [
+        "ItemHelmetCultistPlate"
+      ],
+      "name_en": "Crimson Cult Helm",
+      "name_ru": "Шлем культиста",
+      "via": "ItemHelmetCultistPlate"
+    },
+    "itemBaubleBlanks": {
+      "bases": [
+        "ItemBaubleBlanks"
+      ]
+    },
+    "ultimate_stew": {
+      "bases": [
+        "Ultimate_Stew"
+      ]
+    },
+    "ItemFocusDarkMatter": {
+      "bases": [
+        "ItemFocusDarkMatter"
+      ],
+      "name_en": "Wand Focus: Dark Matter",
+      "name_ru": "",
+      "via": "ItemFocusDarkMatter"
+    },
+    "blockEldritchNothing": {
+      "bases": [
+        "blockEldritchNothing",
+        "blockPortalNothing"
+      ]
+    },
+    "itemChestCultistRobe": {
+      "bases": [
+        "ItemChestplateCultistRobe"
+      ],
+      "name_en": "Crimson Cult Robe",
+      "name_ru": "Мантия культиста",
+      "via": "ItemChestplateCultistRobe"
+    },
+    "itemWandRod": {
+      "bases": [
+        "WandRod"
+      ]
+    },
+    "itemGolemBell": {
+      "bases": [
+        "GolemBell"
+      ],
+      "name_en": "Golemancer's Bell",
+      "name_ru": "Хрустальный колокольчик",
+      "via": "GolemBell"
+    },
+    "itemNuggetBeef": {
+      "bases": [
+        "ItemNuggetBeef"
+      ],
+      "name_en": "Beef Nugget",
+      "name_ru": "Кусочек говядины",
+      "via": "ItemNuggetBeef"
+    },
+    "wolf_hide": {
+      "bases": [
+        "wolf_hide"
+      ],
+      "name_en": "Wolf Hide",
+      "name_ru": "",
+      "via": "wolf_hide"
+    },
+    "itemShovelVoid": {
+      "bases": [
+        "ItemShovelVoid"
+      ],
+      "name_en": "Void Shovel",
+      "name_ru": "Пустотная лопата",
+      "via": "ItemShovelVoid"
+    },
+    "ItemVoidFortressLeggings": {
+      "bases": [
+        "ItemVoidFortressLeggings"
+      ],
+      "name_en": "Void Fortress Thigh Guards",
+      "name_ru": "",
+      "via": "ItemVoidFortressLeggings"
+    },
+    "blood_lamp": {
+      "bases": [
+        "blood_lamp"
+      ],
+      "name_en": "Blood Lamp",
+      "name_ru": "",
+      "via": "blood_lamp"
+    },
+    "itemChestCultistPlate": {
+      "bases": [
+        "ItemChestplateCultistPlate"
+      ],
+      "name_en": "Crimson Cult Chestplate",
+      "name_ru": "Кираса культиста",
+      "via": "ItemChestplateCultistPlate"
+    },
+    "BlockLumos": {
+      "bases": [
+        "BlockLumos"
+      ],
+      "name_en": "Lumos",
+      "name_ru": "",
+      "via": "BlockLumos"
+    },
+    "fork": {
+      "bases": [
+        "DiabolistFork"
+      ],
+      "name_en": "Diabolist Fork",
+      "name_ru": "Адские вилы",
+      "via": "DiabolistFork"
+    },
+    "itemGolemUpgrade": {
+      "bases": [
+        "ItemGolemUpgrade"
+      ]
+    },
+    "nuggets": {
+      "bases": [
+        "beeNugget"
       ]
     },
     "ringFood": {
@@ -65,148 +603,50 @@
       "name_ru": "Кольцо насыщения",
       "via": "RingNutrition"
     },
-    "arcaneCakeItem": {
+    "BlockWarpwoodLeaves": {
       "bases": [
-        "ArcaneCakeItem",
-        "ArcaneCake"
+        "BlockWarpwoodLeaves"
       ],
-      "name_en": "Thaumic Cake",
-      "name_ru": "Таумический торт",
-      "via": "ArcaneCake"
-    },
-    "boundwell": {
-      "bases": [
-        "Boundwell"
-      ],
-      "name_en": "Bound Scribing Tools",
-      "name_ru": "Связанная чернильница с пером",
-      "via": "Boundwell"
-    },
-    "itemHoeElemental": {
-      "bases": [
-        "ItemHoeElemental"
-      ],
-      "name_en": "Hoe of Growth",
-      "name_ru": "Мотыга Роста",
-      "via": "ItemHoeElemental"
-    },
-    "itemBucketDeath": {
-      "bases": [
-        "ItemBucketDeath"
-      ],
-      "name_en": "Bucket of Liquid Death",
-      "name_ru": "Ведро жидкой смерти",
-      "via": "ItemBucketDeath"
-    },
-    "glass_shard": {
-      "bases": [
-        "glass_shard"
-      ],
-      "name_en": "Glass Shard",
+      "name_en": "Warped Leaves",
       "name_ru": "",
-      "via": "glass_shard"
+      "via": "BlockWarpwoodLeaves"
     },
-    "soul_fragment": {
+    "blockEldritchPortal": {
       "bases": [
-        "soul_fragment"
+        "blockPortalEldritch"
       ],
-      "name_en": "Soul Fragment",
-      "name_ru": "",
-      "via": "soul_fragment"
+      "name_en": "Eldritch Portal",
+      "name_ru": "Древний портал",
+      "via": "blockPortalEldritch"
     },
-    "visAuraProvider": {
+    "itemGolemPlacer": {
       "bases": [
-        "visAuraProvider"
-      ],
-      "name_en": "Vis Apiary Booster",
-      "name_ru": "",
-      "via": "visAuraProvider"
-    },
-    "itemHelmetVoid": {
-      "bases": [
-        "ItemHelmetVoid"
-      ],
-      "name_en": "Void Helm",
-      "name_ru": "Пустотный шлем",
-      "via": "ItemHelmetVoid"
-    },
-    "ItemVoidFortressLeggings": {
-      "bases": [
-        "ItemVoidFortressLeggings"
-      ],
-      "name_en": "Void Fortress Thigh Guards",
-      "name_ru": "",
-      "via": "ItemVoidFortressLeggings"
-    },
-    "itemChestCultistRobe": {
-      "bases": [
-        "ItemChestplateCultistRobe"
-      ],
-      "name_en": "Crimson Cult Robe",
-      "name_ru": "Мантия культиста",
-      "via": "ItemChestplateCultistRobe"
-    },
-    "itemChestRobe": {
-      "bases": [
-        "ItemChestplateRobe"
-      ],
-      "name_en": "Thaumaturge's Robe",
-      "name_ru": "Мантия тауматурга",
-      "via": "ItemChestplateRobe"
-    },
-    "itemSanitySoap": {
-      "bases": [
-        "ItemSanitySoap"
-      ],
-      "name_en": "Sanitizing Soap",
-      "name_ru": "Лечащее мыло",
-      "via": "ItemSanitySoap"
-    },
-    "blockStairsSilverwood": {
-      "bases": [
-        "blockStairsSilverwood"
-      ],
-      "name_en": "Silverwood Stairs",
-      "name_ru": "Лестница из серебряного дерева",
-      "via": "blockStairsSilverwood"
-    },
-    "itemHelmetVoidRobe": {
-      "bases": [
-        "ItemHelmetVoidFortress",
-        "ItemHelmetVoidRobe"
-      ],
-      "name_en": "Void Thaumaturge Hood",
-      "name_ru": "Пустотный капюшон тауматурга",
-      "via": "ItemHelmetVoidRobe"
-    },
-    "itemHelmetCultistLeaderPlate": {
-      "bases": [
-        "ItemHelmetCultistLeaderPlate"
-      ],
-      "name_en": "Crimson Praetor Helm",
-      "name_ru": "Шлем Претора культистов",
-      "via": "ItemHelmetCultistLeaderPlate"
-    },
-    "blood_infused_diamond_unactive": {
-      "bases": [
-        "blood_infused_diamond_unactive"
-      ],
-      "name_en": "Blood Infused Diamond (Unactive)",
-      "name_ru": "",
-      "via": "blood_infused_diamond_unactive"
-    },
-    "itemSwordVoid": {
-      "bases": [
-        "ItemSwordVoid"
-      ],
-      "name_en": "Void Sword",
-      "name_ru": "Пустотный меч",
-      "via": "ItemSwordVoid"
-    },
-    "cosmic_meatballs": {
-      "bases": [
-        "Cosmic_Meatballs"
+        "ItemGolemPlacer"
       ]
+    },
+    "itemThaumonomicon": {
+      "bases": [
+        "ItemThaumonomicon"
+      ],
+      "name_en": "Thaumonomicon",
+      "name_ru": "Таумономикон",
+      "via": "ItemThaumonomicon"
+    },
+    "itemFocusPortableHole": {
+      "bases": [
+        "FocusPortableHole"
+      ],
+      "name_en": "Wand Focus: Portable Hole",
+      "name_ru": "Набалдашник: Червоточина",
+      "via": "FocusPortableHole"
+    },
+    "ItemMagicFunguar": {
+      "bases": [
+        "ItemMagicFunguar"
+      ],
+      "name_en": "Magic Funguar",
+      "name_ru": "",
+      "via": "ItemMagicFunguar"
     },
     "itemLegsVoidRobe": {
       "bases": [
@@ -217,13 +657,390 @@
       "name_ru": "Пустотные шаровары тауматурга",
       "via": "ItemLeggingsVoidRobe"
     },
-    "morphSword": {
+    "itemHelmetCultistRobe": {
       "bases": [
-        "MorphSword"
+        "ItemHelmetCultistRobe"
       ],
-      "name_en": "Chameleon Sword",
-      "name_ru": "Хамелеоновый меч",
-      "via": "MorphSword"
+      "name_en": "Crimson Cult Hood",
+      "name_ru": "Капюшон культиста",
+      "via": "ItemHelmetCultistRobe"
+    },
+    "itemPickThaumium": {
+      "bases": [
+        "ItemPickThaumium"
+      ],
+      "name_en": "Thaumium Pickaxe",
+      "name_ru": "Таум-кирка",
+      "via": "ItemPickThaumium"
+    },
+    "blockCustomPlant": {
+      "bases": [
+        "blockCustomPlant"
+      ]
+    },
+    "itemChestFortress": {
+      "bases": [
+        "ItemChestplateFortress"
+      ],
+      "name_en": "Thaumium Fortress Cuirass",
+      "name_ru": "Боевая таум-кираса",
+      "via": "ItemChestplateFortress"
+    },
+    "itemLegsCultistPlate": {
+      "bases": [
+        "ItemLeggingsCultistPlate"
+      ],
+      "name_en": "Crimson Cult Greaves",
+      "name_ru": "Поножи культиста",
+      "via": "ItemLeggingsCultistPlate"
+    },
+    "itemFocusTrade": {
+      "bases": [
+        "FocusTrade"
+      ],
+      "name_en": "Wand Focus: Equal Trade",
+      "name_ru": "Набалдашник: Равноценный обмен",
+      "via": "FocusTrade"
+    },
+    "itemFocusPouch": {
+      "bases": [
+        "FocusPouch"
+      ],
+      "name_en": "Focus Pouch",
+      "name_ru": "Сумка для набалдашников",
+      "via": "FocusPouch"
+    },
+    "BlockWarpwoodLog": {
+      "bases": [
+        "BlockWarpwoodLog"
+      ],
+      "name_en": "Warpwood Log",
+      "name_ru": "",
+      "via": "BlockWarpwoodLog"
+    },
+    "ItemNightshadeBerries": {
+      "bases": [
+        "ItemNightshadeBerries"
+      ],
+      "name_en": "Nightshade Berries",
+      "name_ru": "",
+      "via": "ItemNightshadeBerries"
+    },
+    "ItemVoidFortressHelmet": {
+      "bases": [
+        "ItemVoidFortressHelmet"
+      ],
+      "name_en": "Void Fortress Helm",
+      "name_ru": "",
+      "via": "ItemVoidFortressHelmet"
+    },
+    "itemWandCap": {
+      "bases": [
+        "WandCap"
+      ]
+    },
+    "itemPrimalArrow": {
+      "bases": [
+        "PrimalArrow",
+        "ItemPrimalArrow"
+      ]
+    },
+    "arcaneCakeItem": {
+      "bases": [
+        "ArcaneCakeItem",
+        "ArcaneCake"
+      ],
+      "name_en": "Thaumic Cake",
+      "name_ru": "Таумический торт",
+      "via": "ArcaneCake"
+    },
+    "blockArcaneDoor": {
+      "bases": [
+        "blockArcaneDoor"
+      ],
+      "name_en": "Arcane Door",
+      "name_ru": "Магическая дверь",
+      "via": "blockArcaneDoor"
+    },
+    "blood_infused_diamond_block": {
+      "bases": [
+        "blood_infused_diamond_block"
+      ],
+      "name_en": "Blood Infused Diamond Block",
+      "name_ru": "",
+      "via": "blood_infused_diamond_block"
+    },
+    "itemLegsVoid": {
+      "bases": [
+        "ItemLeggingsVoid"
+      ],
+      "name_en": "Void Leggings",
+      "name_ru": "Пустотные поножи",
+      "via": "ItemLeggingsVoid"
+    },
+    "blockCustomOre": {
+      "bases": [
+        "blockCustomOre"
+      ]
+    },
+    "blockDoubleSlabStone": {
+      "bases": [
+        "blockCosmeticDoubleSlabStone"
+      ]
+    },
+    "vampire_ring": {
+      "bases": [
+        "vampire_ring"
+      ],
+      "name_en": "Vampire Ring",
+      "name_ru": "",
+      "via": "vampire_ring"
+    },
+    "itemBootsVoid": {
+      "bases": [
+        "ItemBootsVoid"
+      ],
+      "name_en": "Void Boots",
+      "name_ru": "Пустотные ботинки",
+      "via": "ItemBootsVoid"
+    },
+    "crystalwell": {
+      "bases": [
+        "Crystalwell"
+      ],
+      "name_en": "Crystal Scribing Tools",
+      "name_ru": "Кристальная чернильница с пером",
+      "via": "Crystalwell"
+    },
+    "boundwell": {
+      "bases": [
+        "Boundwell"
+      ],
+      "name_en": "Bound Scribing Tools",
+      "name_ru": "Связанная чернильница с пером",
+      "via": "Boundwell"
+    },
+    "primewell": {
+      "bases": [
+        "Primewell"
+      ],
+      "name_en": "Primal Scribing Tools",
+      "name_ru": "",
+      "via": "Primewell"
+    },
+    "itemFocusExcavation": {
+      "bases": [
+        "FocusExcavation"
+      ],
+      "name_en": "Wand Focus: Excavation",
+      "name_ru": "Набалдашник: Копание",
+      "via": "FocusExcavation"
+    },
+    "resource": {
+      "bases": [
+        "FMResource",
+        "Resource"
+      ]
+    },
+    "ItemFlyteCharm": {
+      "bases": [
+        "ItemFlyteCharm"
+      ],
+      "name_en": "Flyte Charm",
+      "name_ru": "",
+      "via": "ItemFlyteCharm"
+    },
+    "blockAlchemyFurnace": {
+      "bases": [
+        "blockAlchemyFurnace"
+      ],
+      "name_en": "Advanced Alchemical Furnace",
+      "name_ru": "Улучшенная алхимическая печь",
+      "via": "blockAlchemyFurnace"
+    },
+    "itemLegsCultistLeaderPlate": {
+      "bases": [
+        "ItemLeggingsCultistLeaderPlate"
+      ],
+      "name_en": "Crimson Praetor Greaves",
+      "name_ru": "Поножи Претора культистов",
+      "via": "ItemLeggingsCultistLeaderPlate"
+    },
+    "ItemWarpFertilizer": {
+      "bases": [
+        "ItemWarpFertilizer"
+      ],
+      "name_en": "Warping Fertilizer",
+      "name_ru": "",
+      "via": "ItemWarpFertilizer"
+    },
+    "itemResource": {
+      "bases": [
+        "ItemResource"
+      ]
+    },
+    "ItemFocusLumos": {
+      "bases": [
+        "ItemFocusLumos"
+      ],
+      "name_en": "Wand Focus: Lumos",
+      "name_ru": "",
+      "via": "ItemFocusLumos"
+    },
+    "itemHandMirror": {
+      "bases": [
+        "HandMirror"
+      ],
+      "name_en": "Magic Hand Mirror",
+      "name_ru": "Магическое зеркало (Ручное)",
+      "via": "HandMirror"
+    },
+    "blockArcaneFurnace": {
+      "bases": [
+        "blockArcaneFurnace"
+      ],
+      "name_en": "Infernal Furnace",
+      "name_ru": "Адская печь",
+      "via": "blockArcaneFurnace"
+    },
+    "blood_infused_diamond_bound": {
+      "bases": [
+        "blood_infused_diamond_bound"
+      ],
+      "name_en": "Bound Diamond",
+      "name_ru": "",
+      "via": "blood_infused_diamond_bound"
+    },
+    "blockFluxGoo": {
+      "bases": [
+        "blockFluxGoo"
+      ],
+      "name_en": "Flux Goo",
+      "name_ru": "Заражённая слизь",
+      "via": "blockFluxGoo"
+    },
+    "enchantedEarth": {
+      "bases": [
+        "magicbees.enchantedEarth"
+      ]
+    },
+    "itemNuggetPork": {
+      "bases": [
+        "ItemNuggetPork"
+      ],
+      "name_en": "Pork Nugget",
+      "name_ru": "Кусочек свинины",
+      "via": "ItemNuggetPork"
+    },
+    "blockLootCrate": {
+      "bases": [
+        "blockLootCrate"
+      ],
+      "name_en": "Abandoned Crate",
+      "name_ru": "Забытый ящик",
+      "via": "blockLootCrate"
+    },
+    "itemBucketPure": {
+      "bases": [
+        "ItemBucketPure"
+      ],
+      "name_en": "Bucket of Purifying Fluid",
+      "name_ru": "Ведро очищающей жидкости",
+      "via": "ItemBucketPure"
+    },
+    "infinity_bow": {
+      "bases": [
+        "Infinity_Bow"
+      ]
+    },
+    "glass_sacrificial_dagger": {
+      "bases": [
+        "glass_sacrificial_dagger"
+      ],
+      "name_en": "Glass Sacrificial Dagger",
+      "name_ru": "",
+      "via": "glass_sacrificial_dagger"
+    },
+    "blood_money": {
+      "bases": [
+        "blood_money"
+      ]
+    },
+    "ItemWandCap": {
+      "bases": [
+        "ItemWandCap"
+      ]
+    },
+    "BlockNightshadeBush": {
+      "bases": [
+        "BlockNightshadeBush"
+      ],
+      "name_en": "Atropa Belladonna",
+      "name_ru": "",
+      "via": "BlockNightshadeBush"
+    },
+    "blockFluxGas": {
+      "bases": [
+        "blockFluxGas"
+      ],
+      "name_en": "Flux Gas",
+      "name_ru": "Заражённый газ",
+      "via": "blockFluxGas"
+    },
+    "itemEldritchObject": {
+      "bases": [
+        "ItemEldritchObject"
+      ]
+    },
+    "blockManaPod": {
+      "bases": [
+        "blockManaPod"
+      ]
+    },
+    "itemTrunkSpawner": {
+      "bases": [
+        "TrunkSpawner"
+      ],
+      "name_en": "Traveling Trunk",
+      "name_ru": "Ходячий сундук",
+      "via": "TrunkSpawner"
+    },
+    "itemGirdleRunic": {
+      "bases": [
+        "ItemGirdleRunic"
+      ]
+    },
+    "blood_infused_glowstone_dust": {
+      "bases": [
+        "blood_infused_glowstone_dust"
+      ],
+      "name_en": "Blood Infused Glowstone Dust",
+      "name_ru": "",
+      "via": "blood_infused_glowstone_dust"
+    },
+    "sacrifice_amulet": {
+      "bases": [
+        "sacrifice_amulet"
+      ],
+      "name_en": "Amulet of Sacrifice",
+      "name_ru": "",
+      "via": "sacrifice_amulet"
+    },
+    "blood_infused_stick": {
+      "bases": [
+        "blood_infused_stick"
+      ],
+      "name_en": "Blood Infused Stick",
+      "name_ru": "",
+      "via": "blood_infused_stick"
+    },
+    "ItemWarpedGoggles": {
+      "bases": [
+        "ItemWarpedGoggles"
+      ],
+      "name_en": "Warped Goggles of Revealing",
+      "name_ru": "",
+      "via": "ItemWarpedGoggles"
     },
     "block36": {
       "bases": [
@@ -240,120 +1057,226 @@
       "name_ru": "Калитка из жизнедерева",
       "via": "LivingwoodBarkFenceGate"
     },
-    "blockFluxGas": {
+    "blood_stained_ice_packed": {
       "bases": [
-        "blockFluxGas"
+        "blood_stained_ice_packed"
       ],
-      "name_en": "Flux Gas",
-      "name_ru": "Заражённый газ",
-      "via": "blockFluxGas"
+      "name_en": "Blood Stained Packed Ice",
+      "name_ru": "",
+      "via": "blood_stained_ice_packed"
     },
-    "morphShovel": {
+    "itemHoeThaumium": {
       "bases": [
-        "MorphShovel"
+        "ItemHoeThaumium"
       ],
-      "name_en": "Chameleon Shovel",
-      "name_ru": "Хамелеоновая лопата",
-      "via": "MorphShovel"
+      "name_en": "Thaumium Hoe",
+      "name_ru": "Таум-мотыга",
+      "via": "ItemHoeThaumium"
     },
-    "itemLegsCultistLeaderPlate": {
+    "blockTaintFibres": {
       "bases": [
-        "ItemLeggingsCultistLeaderPlate"
-      ],
-      "name_en": "Crimson Praetor Greaves",
-      "name_ru": "Поножи Претора культистов",
-      "via": "ItemLeggingsCultistLeaderPlate"
-    },
-    "enchantedEarth": {
-      "bases": [
-        "magicbees.enchantedEarth"
+        "blockTaintFibres"
       ]
     },
-    "blockCosmeticSolid": {
+    "itemLegsFortress": {
       "bases": [
-        "blockCosmeticSolid"
-      ]
-    },
-    "blockLifter": {
-      "bases": [
-        "blockLifter"
+        "ItemLeggingsFortress"
       ],
-      "name_en": "Arcane Levitator",
-      "name_ru": "Магический подъёмник",
-      "via": "blockLifter"
+      "name_en": "Thaumium Fortress Thigh Guards",
+      "name_ru": "Боевые таум-поножи",
+      "via": "ItemLeggingsFortress"
     },
-    "blood_cake": {
+    "bound_diamond_shard": {
       "bases": [
-        "blood_cake"
+        "bound_diamond_shard"
       ],
-      "name_en": "Blood Cake",
-      "name_ru": "",
-      "via": "blood_cake"
+      "metas": {
+        "0": {
+          "name_en": "Bound Diamond Shard",
+          "name_ru": ""
+        },
+        "1": {
+          "name_en": "Bound Diamond Air Shard",
+          "name_ru": ""
+        },
+        "2": {
+          "name_en": "Bound Diamond Earth Shard",
+          "name_ru": ""
+        },
+        "3": {
+          "name_en": "Bound Diamond Fire Shard",
+          "name_ru": ""
+        },
+        "4": {
+          "name_en": "Bound Diamond Water Shard",
+          "name_ru": ""
+        },
+        "5": {
+          "name_en": "Bound Diamond Dusk Shard",
+          "name_ru": ""
+        },
+        "6": {
+          "name_en": "Bound Diamond Dawn Shard",
+          "name_ru": ""
+        }
+      }
     },
-    "ItemPrimalBlade": {
+    "itemLegsCultistRobe": {
       "bases": [
-        "ItemPrimalBlade"
+        "ItemLeggingsCultistRobe"
       ],
-      "name_en": "Primal Blade",
-      "name_ru": "",
-      "via": "ItemPrimalBlade"
+      "name_en": "Crimson Cult Leggings",
+      "name_ru": "Шаровары культиста",
+      "via": "ItemLeggingsCultistRobe"
     },
     "blockMagicalLog": {
       "bases": [
         "blockMagicalLog"
       ]
     },
-    "empowered_sacrifice_amulet": {
+    "itemAmuletRunic": {
       "bases": [
-        "empowered_sacrifice_amulet"
+        "ItemAmuletRunic"
+      ]
+    },
+    "itemFocusShock": {
+      "bases": [
+        "FocusShock"
       ],
-      "name_en": "Empowered Sacrifice Amulet",
+      "name_en": "Wand Focus: Shock",
+      "name_ru": "Набалдашник: Шок",
+      "via": "FocusShock"
+    },
+    "ItemMaterial": {
+      "bases": [
+        "ItemMaterial"
+      ]
+    },
+    "itemPickElemental": {
+      "bases": [
+        "ItemPickaxeElemental"
+      ],
+      "name_en": "Pickaxe of the Core",
+      "name_ru": "Кирка Огня",
+      "via": "ItemPickaxeElemental"
+    },
+    "blockAiry": {
+      "bases": [
+        "blockAiry"
+      ]
+    },
+    "itemFocusPrimal": {
+      "bases": [
+        "FocusPrimal"
+      ],
+      "name_en": "Wand Focus: Primal",
+      "name_ru": "Набалдашник: Сингулярность",
+      "via": "FocusPrimal"
+    },
+    "blockTube": {
+      "bases": [
+        "blockTube"
+      ]
+    },
+    "blockWarded": {
+      "bases": [
+        "blockWarded"
+      ]
+    },
+    "matter_cluster": {
+      "bases": [
+        "Matter_Cluster"
+      ]
+    },
+    "gluttonyShard": {
+      "bases": [
+        "GluttonyShard"
+      ],
+      "name_en": "Gluttony Shard",
+      "name_ru": "Осколок прожорливости",
+      "via": "GluttonyShard"
+    },
+    "ItemShadowmetalPick": {
+      "bases": [
+        "ItemShadowmetalPick"
+      ],
+      "name_en": "Shadow Metal Pickaxe",
       "name_ru": "",
-      "via": "empowered_sacrifice_amulet"
+      "via": "ItemShadowmetalPick"
     },
-    "morphPickaxe": {
+    "blockSlabWood": {
       "bases": [
-        "MorphPickaxe"
-      ],
-      "name_en": "Chameleon Pickaxe",
-      "name_ru": "Хамелеоновая кирка",
-      "via": "MorphPickaxe"
+        "blockCosmeticSlabWood"
+      ]
     },
-    "itemFocusPouch": {
+    "taintCoal": {
       "bases": [
-        "FocusPouch"
+        "TaintCoal"
       ],
-      "name_en": "Focus Pouch",
-      "name_ru": "Сумка для набалдашников",
-      "via": "FocusPouch"
-    },
-    "bloodRapier": {
-      "bases": [
-        "BloodRapier"
-      ],
-      "name_en": "Rapier of the Strix",
-      "name_ru": "Рапира неясыти",
-      "via": "BloodRapier"
-    },
-    "ItemFocusDarkMatter": {
-      "bases": [
-        "ItemFocusDarkMatter"
-      ],
-      "name_en": "Wand Focus: Dark Matter",
+      "name_en": "Hexcoal",
       "name_ru": "",
-      "via": "ItemFocusDarkMatter"
+      "via": "TaintCoal"
     },
-    "itemFocusHellbat": {
+    "itemSpawnerEgg": {
       "bases": [
-        "FocusHellbat"
+        "ItemSpawnerEgg"
+      ]
+    },
+    "itemChestVoid": {
+      "bases": [
+        "ItemChestplateVoid"
       ],
-      "name_en": "Wand Focus: Nine Hells",
-      "name_ru": "Набалдашник: 9 кругов ада",
-      "via": "FocusHellbat"
+      "name_en": "Void Chestplate",
+      "name_ru": "Пустотная кираса",
+      "via": "ItemChestplateVoid"
     },
-    "blockStoneDevice": {
+    "wandCap": {
       "bases": [
-        "blockStoneDevice"
+        "WandCaps",
+        "wand_caps"
+      ],
+      "metas": {
+        "0": {
+          "name_en": "Alchemical Cap",
+          "name_ru": "Алхимический наконечник"
+        },
+        "1": {
+          "name_en": "Vinteum Cap",
+          "name_ru": "Винтеумный наконечник"
+        },
+        "2": {
+          "name_en": "Terrasteel Cap",
+          "name_ru": ""
+        },
+        "3": {
+          "name_en": "Manasteel Cap",
+          "name_ru": "Манастальной наконечник"
+        },
+        "4": {
+          "name_en": "Inert Manasteel Cap",
+          "name_ru": "Инертный манастальной наконечник"
+        },
+        "5": {
+          "name_en": "Elementium Cap",
+          "name_ru": "Элементиевый наконечник"
+        },
+        "6": {
+          "name_en": "Inert Elementium Cap",
+          "name_ru": "Инертный элементиевый наконечник"
+        }
+      }
+    },
+    "blockStairsArcaneStone": {
+      "bases": [
+        "blockStairsArcaneStone"
+      ],
+      "name_en": "Arcane Stone Stairs",
+      "name_ru": "Лестница из магического камня",
+      "via": "blockStairsArcaneStone"
+    },
+    "blockCrystal": {
+      "bases": [
+        "blockCrystal"
       ]
     },
     "singularity": {
@@ -407,23 +1330,31 @@
         }
       }
     },
-    "itemLegsRobe": {
+    "blockStairsGreatwood": {
       "bases": [
-        "ItemLeggingsRobe"
+        "blockStairsGreatwood"
       ],
-      "name_en": "Thaumaturge's Leggings",
-      "name_ru": "Шаровары тауматурга",
-      "via": "ItemLeggingsRobe"
+      "name_en": "Greatwood Stairs",
+      "name_ru": "Лестница из великого дерева",
+      "via": "blockStairsGreatwood"
     },
-    "ItemKatana": {
+    "blockCosmeticOpaque": {
       "bases": [
-        "ItemKatana"
+        "blockCosmeticOpaque"
       ]
     },
-    "itemKey": {
+    "blockMetalDevice": {
       "bases": [
-        "ArcaneDoorKey"
+        "blockMetalDevice"
       ]
+    },
+    "itemNuggetFish": {
+      "bases": [
+        "ItemNuggetFish"
+      ],
+      "name_en": "Fish Nugget",
+      "name_ru": "Кусочек рыбки",
+      "via": "ItemNuggetFish"
     },
     "itemChestCultistLeaderPlate": {
       "bases": [
@@ -433,140 +1364,21 @@
       "name_ru": "Кираса Претора культистов",
       "via": "ItemChestplateCultistLeaderPlate"
     },
-    "blockHole": {
+    "itemThaumometer": {
       "bases": [
-        "blockHole"
+        "ItemThaumometer"
       ],
-      "name_en": "Empty Space",
-      "name_ru": "Пустое место",
-      "via": "blockHole"
+      "name_en": "Thaumometer",
+      "name_ru": "Таумометр",
+      "via": "ItemThaumometer"
     },
-    "self_sacrifice_amulet": {
+    "itemAxeThaumium": {
       "bases": [
-        "self_sacrifice_amulet"
+        "ItemAxeThaumium"
       ],
-      "name_en": "Amulet of Self Sacrifice",
-      "name_ru": "",
-      "via": "self_sacrifice_amulet"
-    },
-    "blockMetalDevice": {
-      "bases": [
-        "blockMetalDevice"
-      ]
-    },
-    "subCollar": {
-      "bases": [
-        "SubCollar"
-      ],
-      "name_en": "Collar of Pain",
-      "name_ru": "Ошейник боли",
-      "via": "SubCollar"
-    },
-    "bloodwell": {
-      "bases": [
-        "Bloodwell"
-      ],
-      "name_en": "Bloody Scrivener's Tools",
-      "name_ru": "Инструменты кровавого писца",
-      "via": "Bloodwell"
-    },
-    "effectJar": {
-      "bases": [
-        "effectJar"
-      ],
-      "name_en": "Bee Collector's Jar",
-      "name_ru": "Банка для сбора пчёл",
-      "via": "effectJar"
-    },
-    "itemFocusPortableHole": {
-      "bases": [
-        "FocusPortableHole"
-      ],
-      "name_en": "Wand Focus: Portable Hole",
-      "name_ru": "Набалдашник: Червоточина",
-      "via": "FocusPortableHole"
-    },
-    "itemJarFilled": {
-      "bases": [
-        "BlockJarFilledItem"
-      ],
-      "name_en": "Jar of Essentia",
-      "name_ru": "Банка с эссенцией",
-      "via": "BlockJarFilledItem"
-    },
-    "itemCompassStone": {
-      "bases": [
-        "ItemCompassStone"
-      ],
-      "name_en": "Sinister Lodestone",
-      "name_ru": "Зловещий камень",
-      "via": "ItemCompassStone"
-    },
-    "itemBottleTaint": {
-      "bases": [
-        "ItemBottleTaint"
-      ],
-      "name_en": "Bottled Taint",
-      "name_ru": "Порча в бутылке",
-      "via": "ItemBottleTaint"
-    },
-    "this": {
-      "bases": [
-        "comb",
-        "drop",
-        "miscResources",
-        "moonDial",
-        "pollen",
-        "propolis",
-        "wax"
-      ],
-      "name_en": "Jade Moon Dial",
-      "name_ru": "Нефритовый набор луны",
-      "via": "moonDial"
-    },
-    "ItemSalis": {
-      "bases": [
-        "ItemSalis"
-      ]
-    },
-    "BlockLumos": {
-      "bases": [
-        "BlockLumos"
-      ],
-      "name_en": "Lumos",
-      "name_ru": "",
-      "via": "BlockLumos"
-    },
-    "ItemShadowFortressChestplate": {
-      "bases": [
-        "ItemShadowFortressChestplate"
-      ],
-      "name_en": "Shadow Fortress Cuirass",
-      "name_ru": "",
-      "via": "ItemShadowFortressChestplate"
-    },
-    "item": {
-      "bases": [
-        "item_upgrade"
-      ]
-    },
-    "itemEssence": {
-      "bases": [
-        "ItemEssence"
-      ]
-    },
-    "soul_nullifier": {
-      "bases": [
-        "soul_nullifier"
-      ],
-      "name_en": "Soul Nullifier",
-      "name_ru": "",
-      "via": "soul_nullifier"
-    },
-    "blockCustomPlant": {
-      "bases": [
-        "blockCustomPlant"
-      ]
+      "name_en": "Thaumium Axe",
+      "name_ru": "Таум-топор",
+      "via": "ItemAxeThaumium"
     },
     "itemSwordCrimson": {
       "bases": [
@@ -576,146 +1388,180 @@
       "name_ru": "Багровый меч",
       "via": "ItemSwordCrimson"
     },
-    "blockArcaneDoor": {
+    "blockStairsEldritch": {
       "bases": [
-        "blockArcaneDoor"
+        "blockStairsEldritch"
       ],
-      "name_en": "Arcane Door",
-      "name_ru": "Магическая дверь",
-      "via": "blockArcaneDoor"
+      "name_en": "Ancient Stone Stairs",
+      "name_ru": "Лестница из древнего камня",
+      "via": "blockStairsEldritch"
     },
-    "itemPickElemental": {
+    "itemLegsThaumium": {
       "bases": [
-        "ItemPickaxeElemental"
+        "ItemLeggingsThaumium"
       ],
-      "name_en": "Pickaxe of the Core",
-      "name_ru": "Кирка Огня",
-      "via": "ItemPickaxeElemental"
+      "name_en": "Thaumium Leggings",
+      "name_ru": "Таум-поножи",
+      "via": "ItemLeggingsThaumium"
     },
-    "ItemFocusMageMace": {
+    "block_burned_string": {
       "bases": [
-        "ItemFocusMageMace"
+        "block_burned_string"
       ],
-      "name_en": "Wand Focus: Mage's Mace",
+      "name_en": "Blood Burned String",
       "name_ru": "",
-      "via": "ItemFocusMageMace"
+      "via": "block_burned_string"
     },
-    "itemGolemBell": {
+    "effectJar": {
       "bases": [
-        "GolemBell"
+        "effectJar"
       ],
-      "name_en": "Golemancer's Bell",
-      "name_ru": "Хрустальный колокольчик",
-      "via": "GolemBell"
+      "name_en": "Bee Collector's Jar",
+      "name_ru": "Банка для сбора пчёл",
+      "via": "effectJar"
     },
-    "nuggets": {
+    "ItemVoidmetalGoggles": {
       "bases": [
-        "beeNugget"
-      ]
-    },
-    "ItemWarpFertilizer": {
-      "bases": [
-        "ItemWarpFertilizer"
+        "ItemVoidmetalGoggles"
       ],
-      "name_en": "Warping Fertilizer",
+      "name_en": "Void Metal Goggles of Revealing",
       "name_ru": "",
-      "via": "ItemWarpFertilizer"
+      "via": "ItemVoidmetalGoggles"
     },
-    "itemChestVoid": {
+    "blood_infused_iron": {
       "bases": [
-        "ItemChestplateVoid"
+        "blood_infused_iron"
       ],
-      "name_en": "Void Chestplate",
-      "name_ru": "Пустотная кираса",
-      "via": "ItemChestplateVoid"
-    },
-    "blood_infused_diamond_active": {
-      "bases": [
-        "blood_infused_diamond_active"
-      ],
-      "name_en": "Blood Infused Diamond (Active)",
+      "name_en": "Blood Infused Iron Ingot",
       "name_ru": "",
-      "via": "blood_infused_diamond_active"
+      "via": "blood_infused_iron"
     },
-    "blockStairsArcaneStone": {
+    "itemSwordThaumium": {
       "bases": [
-        "blockStairsArcaneStone"
+        "ItemSwordThaumium"
       ],
-      "name_en": "Arcane Stone Stairs",
-      "name_ru": "Лестница из магического камня",
-      "via": "blockStairsArcaneStone"
+      "name_en": "Thaumium Sword",
+      "name_ru": "Таум-меч",
+      "via": "ItemSwordThaumium"
     },
-    "itemAmuletVis": {
+    "itemHoeElemental": {
       "bases": [
-        "ItemAmuletVis"
+        "ItemHoeElemental"
+      ],
+      "name_en": "Hoe of Growth",
+      "name_ru": "Мотыга Роста",
+      "via": "ItemHoeElemental"
+    },
+    "bound_igniter": {
+      "bases": [
+        "bound_igniter"
+      ],
+      "name_en": "Bound Igniter",
+      "name_ru": "",
+      "via": "bound_igniter"
+    },
+    "blockStairsSilverwood": {
+      "bases": [
+        "blockStairsSilverwood"
+      ],
+      "name_en": "Silverwood Stairs",
+      "name_ru": "Лестница из серебряного дерева",
+      "via": "blockStairsSilverwood"
+    },
+    "itemBowBone": {
+      "bases": [
+        "ItemBowBone"
+      ],
+      "name_en": "Bow of Bone",
+      "name_ru": "Костяной лук",
+      "via": "ItemBowBone"
+    },
+    "empowered_sacrifice_amulet": {
+      "bases": [
+        "empowered_sacrifice_amulet"
+      ],
+      "name_en": "Empowered Sacrifice Amulet",
+      "name_ru": "",
+      "via": "empowered_sacrifice_amulet"
+    },
+    "ItemLumosRing": {
+      "bases": [
+        "ItemLumosRing"
+      ],
+      "name_en": "Ring of Lumos",
+      "name_ru": "",
+      "via": "ItemLumosRing"
+    },
+    "itemWandCasting": {
+      "bases": [
+        "WandCasting"
       ]
     },
-    "blockEldritchNothing": {
+    "itemFocusFrost": {
       "bases": [
-        "blockEldritchNothing",
-        "blockPortalNothing"
-      ]
+        "FocusFrost"
+      ],
+      "name_en": "Wand Focus: Frost",
+      "name_ru": "Набалдашник: Заморозка",
+      "via": "FocusFrost"
     },
-    "itemPrimalArrow": {
+    "ItemVoidBlood": {
       "bases": [
-        "PrimalArrow",
-        "ItemPrimalArrow"
-      ]
-    },
-    "item3": {
-      "bases": [
-        "magic_stack_upgrade"
-      ]
-    },
-    "matter_cluster": {
-      "bases": [
-        "Matter_Cluster"
-      ]
+        "ItemVoidBlood"
+      ],
+      "name_en": "Phial of Void-infused Blood",
+      "name_ru": "",
+      "via": "ItemVoidBlood"
     },
     "blockMagicalLeaves": {
       "bases": [
         "blockMagicalLeaves"
       ]
     },
-    "ItemCrimsonBlood": {
+    "itemCompassStone": {
       "bases": [
-        "ItemCrimsonBlood"
+        "ItemCompassStone"
       ],
-      "name_en": "Phial of Crimson Blood",
-      "name_ru": "",
-      "via": "ItemCrimsonBlood"
+      "name_en": "Sinister Lodestone",
+      "name_ru": "Зловещий камень",
+      "via": "ItemCompassStone"
     },
-    "blood_lamp": {
+    "taintShovel": {
       "bases": [
-        "blood_lamp"
+        "TaintShovel"
       ],
-      "name_en": "Blood Lamp",
-      "name_ru": "",
-      "via": "blood_lamp"
+      "name_en": "Shovel of the Purifier",
+      "name_ru": "Лопата очистителя",
+      "via": "TaintShovel"
     },
-    "magicApiary": {
+    "itemFocusHellbat": {
       "bases": [
-        "magicApiary"
+        "FocusHellbat"
       ],
-      "name_en": "Magic Apiary",
-      "name_ru": "",
-      "via": "magicApiary"
+      "name_en": "Wand Focus: Nine Hells",
+      "name_ru": "Набалдашник: 9 кругов ада",
+      "via": "FocusHellbat"
     },
-    "ItemWarpedGoggles": {
+    "blockHole": {
       "bases": [
-        "ItemWarpedGoggles"
+        "blockHole"
       ],
-      "name_en": "Warped Goggles of Revealing",
-      "name_ru": "",
-      "via": "ItemWarpedGoggles"
+      "name_en": "Empty Space",
+      "name_ru": "Пустое место",
+      "via": "blockHole"
     },
-    "ItemShadowmetalPick": {
+    "itemGirdleHover": {
       "bases": [
-        "ItemShadowmetalPick"
+        "ItemGirdleHover"
       ],
-      "name_en": "Shadow Metal Pickaxe",
-      "name_ru": "",
-      "via": "ItemShadowmetalPick"
+      "name_en": "Thaumostatic Girdle",
+      "name_ru": "Таумостатический пояс",
+      "via": "ItemGirdleHover"
+    },
+    "itemShard": {
+      "bases": [
+        "ItemShard"
+      ]
     },
     "deadlyShards": {
       "bases": [
@@ -752,323 +1598,118 @@
         }
       }
     },
-    "ItemMaterial": {
+    "soul_nullifier": {
       "bases": [
-        "ItemMaterial"
-      ]
-    },
-    "ItemVoidFortressHelmet": {
-      "bases": [
-        "ItemVoidFortressHelmet"
+        "soul_nullifier"
       ],
-      "name_en": "Void Fortress Helm",
+      "name_en": "Soul Nullifier",
       "name_ru": "",
-      "via": "ItemVoidFortressHelmet"
-    },
-    "blockSlabWood": {
-      "bases": [
-        "blockCosmeticSlabWood"
-      ]
-    },
-    "ItemWandCap": {
-      "bases": [
-        "ItemWandCap"
-      ]
-    },
-    "ItemFlyteCharm": {
-      "bases": [
-        "ItemFlyteCharm"
-      ],
-      "name_en": "Flyte Charm",
-      "name_ru": "",
-      "via": "ItemFlyteCharm"
-    },
-    "itemLegsFortress": {
-      "bases": [
-        "ItemLeggingsFortress"
-      ],
-      "name_en": "Thaumium Fortress Thigh Guards",
-      "name_ru": "Боевые таум-поножи",
-      "via": "ItemLeggingsFortress"
-    },
-    "itemHelmetThaumium": {
-      "bases": [
-        "ItemHelmetThaumium"
-      ],
-      "name_en": "Thaumium Helm",
-      "name_ru": "Таум-шлем",
-      "via": "ItemHelmetThaumium"
-    },
-    "itemAxeElemental": {
-      "bases": [
-        "ItemAxeElemental"
-      ],
-      "name_en": "Axe of the Stream",
-      "name_ru": "Топор Потока",
-      "via": "ItemAxeElemental"
-    },
-    "itemBootsThaumium": {
-      "bases": [
-        "ItemBootsThaumium"
-      ],
-      "name_en": "Thaumium Boots",
-      "name_ru": "Таум-ботинки",
-      "via": "ItemBootsThaumium"
-    },
-    "itemBootsVoid": {
-      "bases": [
-        "ItemBootsVoid"
-      ],
-      "name_en": "Void Boots",
-      "name_ru": "Пустотные ботинки",
-      "via": "ItemBootsVoid"
-    },
-    "taintCoal": {
-      "bases": [
-        "TaintCoal"
-      ],
-      "name_en": "Hexcoal",
-      "name_ru": "",
-      "via": "TaintCoal"
-    },
-    "sacrifice_amulet": {
-      "bases": [
-        "sacrifice_amulet"
-      ],
-      "name_en": "Amulet of Sacrifice",
-      "name_ru": "",
-      "via": "sacrifice_amulet"
-    },
-    "taintShovel": {
-      "bases": [
-        "TaintShovel"
-      ],
-      "name_en": "Shovel of the Purifier",
-      "name_ru": "Лопата очистителя",
-      "via": "TaintShovel"
-    },
-    "blockJar": {
-      "bases": [
-        "blockJar"
-      ]
-    },
-    "wandCore": {
-      "bases": [
-        "WandCores",
-        "wand_cores"
-      ]
-    },
-    "blood_infused_stick": {
-      "bases": [
-        "blood_infused_stick"
-      ],
-      "name_en": "Blood Infused Stick",
-      "name_ru": "",
-      "via": "blood_infused_stick"
-    },
-    "fork": {
-      "bases": [
-        "DiabolistFork"
-      ],
-      "name_en": "Diabolist Fork",
-      "name_ru": "Адские вилы",
-      "via": "DiabolistFork"
-    },
-    "blockEssentiaReservoir": {
-      "bases": [
-        "blockEssentiaReservoir"
-      ],
-      "name_en": "Essentia Reservoir",
-      "name_ru": "Резервуар эссенции",
-      "via": "blockEssentiaReservoir"
-    },
-    "item2": {
-      "bases": [
-        "asgard_upgrade"
-      ]
-    },
-    "vampire_ring": {
-      "bases": [
-        "vampire_ring"
-      ],
-      "name_en": "Vampire Ring",
-      "name_ru": "",
-      "via": "vampire_ring"
-    },
-    "ItemLumosRing": {
-      "bases": [
-        "ItemLumosRing"
-      ],
-      "name_en": "Ring of Lumos",
-      "name_ru": "",
-      "via": "ItemLumosRing"
-    },
-    "resource": {
-      "bases": [
-        "FMResource",
-        "Resource"
-      ]
-    },
-    "blockAlchemyFurnace": {
-      "bases": [
-        "blockAlchemyFurnace"
-      ],
-      "name_en": "Advanced Alchemical Furnace",
-      "name_ru": "Улучшенная алхимическая печь",
-      "via": "blockAlchemyFurnace"
-    },
-    "itemFocusShock": {
-      "bases": [
-        "FocusShock"
-      ],
-      "name_en": "Wand Focus: Shock",
-      "name_ru": "Набалдашник: Шок",
-      "via": "FocusShock"
-    },
-    "blockCandle": {
-      "bases": [
-        "blockCandle"
-      ]
-    },
-    "itemFocusFrost": {
-      "bases": [
-        "FocusFrost"
-      ],
-      "name_en": "Wand Focus: Frost",
-      "name_ru": "Набалдашник: Заморозка",
-      "via": "FocusFrost"
-    },
-    "itemNuggetChicken": {
-      "bases": [
-        "ItemNuggetChicken"
-      ],
-      "name_en": "Chicken Nugget",
-      "name_ru": "Кусочек курятины",
-      "via": "ItemNuggetChicken"
-    },
-    "itemHelmetCultistRobe": {
-      "bases": [
-        "ItemHelmetCultistRobe"
-      ],
-      "name_en": "Crimson Cult Hood",
-      "name_ru": "Капюшон культиста",
-      "via": "ItemHelmetCultistRobe"
-    },
-    "blockDoubleSlabWood": {
-      "bases": [
-        "blockCosmeticDoubleSlabWood"
-      ]
-    },
-    "blockStairsEldritch": {
-      "bases": [
-        "blockStairsEldritch"
-      ],
-      "name_en": "Ancient Stone Stairs",
-      "name_ru": "Лестница из древнего камня",
-      "via": "blockStairsEldritch"
-    },
-    "itemBowBone": {
-      "bases": [
-        "ItemBowBone"
-      ],
-      "name_en": "Bow of Bone",
-      "name_ru": "Костяной лук",
-      "via": "ItemBowBone"
-    },
-    "itemGolemPlacer": {
-      "bases": [
-        "ItemGolemPlacer"
-      ]
-    },
-    "morphAxe": {
-      "bases": [
-        "MorphAxe"
-      ],
-      "name_en": "Chameleon Axe",
-      "name_ru": "Хамелеоновый топор",
-      "via": "MorphAxe"
+      "via": "soul_nullifier"
     },
     "blockSlabStone": {
       "bases": [
         "blockCosmeticSlabStone"
       ]
     },
-    "itemFocusFire": {
+    "ItemShadowmetalHoe": {
       "bases": [
-        "FocusFire"
+        "ItemShadowmetalHoe"
       ],
-      "name_en": "Wand Focus: Fire",
-      "name_ru": "Набалдашник: Огонь",
-      "via": "FocusFire"
+      "name_en": "Shadow Metal Hoe",
+      "name_ru": "",
+      "via": "ItemShadowmetalHoe"
     },
-    "itemSwordThaumium": {
+    "itemShovelThaumium": {
       "bases": [
-        "ItemSwordThaumium"
+        "ItemShovelThaumium"
       ],
-      "name_en": "Thaumium Sword",
-      "name_ru": "Таум-меч",
-      "via": "ItemSwordThaumium"
+      "name_en": "Thaumium Shovel",
+      "name_ru": "Таум-лопата",
+      "via": "ItemShovelThaumium"
     },
-    "blockEldritchPortal": {
+    "itemResearchNotes": {
       "bases": [
-        "blockPortalEldritch"
-      ],
-      "name_en": "Eldritch Portal",
-      "name_ru": "Древний портал",
-      "via": "blockPortalEldritch"
-    },
-    "itemSpawnerEgg": {
-      "bases": [
-        "ItemSpawnerEgg"
+        "ItemResearchNotes"
       ]
     },
-    "blockLootUrn": {
+    "ItemShadowmetalSword": {
       "bases": [
-        "blockLootUrn"
+        "ItemShadowmetalSword"
       ],
-      "name_en": "Old Urn",
-      "name_ru": "Старая ваза",
-      "via": "blockLootUrn"
-    },
-    "itemTrunkSpawner": {
-      "bases": [
-        "TrunkSpawner"
-      ],
-      "name_en": "Traveling Trunk",
-      "name_ru": "Ходячий сундук",
-      "via": "TrunkSpawner"
-    },
-    "ItemVoidwalkerBoots": {
-      "bases": [
-        "ItemVoidwalkerBoots"
-      ],
-      "name_en": "Boots of the Voidwalker",
+      "name_en": "Shadow Metal Blade",
       "name_ru": "",
-      "via": "ItemVoidwalkerBoots"
+      "via": "ItemShadowmetalSword"
     },
-    "ItemThaumicDisassembler": {
+    "blockStoneDevice": {
       "bases": [
-        "ItemThaumicDisassembler"
+        "blockStoneDevice"
+      ]
+    },
+    "costumes": {
+      "bases": [
+        "costumes"
+      ]
+    },
+    "itemGoggles": {
+      "bases": [
+        "ItemGoggles"
       ],
-      "name_en": "Thaumic Disassembler",
+      "name_en": "Goggles of Revealing",
+      "name_ru": "Очки откровения",
+      "via": "ItemGoggles"
+    },
+    "itemResonator": {
+      "bases": [
+        "ItemResonator"
+      ],
+      "name_en": "Essentia Resonator",
+      "name_ru": "Резонатор",
+      "via": "ItemResonator"
+    },
+    "blood_infused_iron_block": {
+      "bases": [
+        "blood_infused_iron_block"
+      ],
+      "name_en": "Blood Infused Iron Block",
       "name_ru": "",
-      "via": "ItemThaumicDisassembler"
+      "via": "blood_infused_iron_block"
     },
-    "amorphic_catalyst": {
+    "itemSanityChecker": {
       "bases": [
-        "amorphic_catalyst"
+        "ItemSanityChecker"
       ],
-      "name_en": "Amorphic Catalyst",
+      "name_en": "Sanity Checker",
+      "name_ru": "Психический детектор",
+      "via": "ItemSanityChecker"
+    },
+    "heart": {
+      "bases": [
+        "heart"
+      ],
+      "name_en": "Heart",
       "name_ru": "",
-      "via": "amorphic_catalyst"
+      "via": "heart"
     },
-    "itemBootsRobe": {
+    "blockMagicBox": {
       "bases": [
-        "ItemBootsRobe"
+        "blockMagicBox"
+      ]
+    },
+    "glass_shard": {
+      "bases": [
+        "glass_shard"
       ],
-      "name_en": "Thaumaturge's Boots",
-      "name_ru": "Сапоги тауматурга",
-      "via": "ItemBootsRobe"
+      "name_en": "Glass Shard",
+      "name_ru": "",
+      "via": "glass_shard"
+    },
+    "itemHelmetVoid": {
+      "bases": [
+        "ItemHelmetVoid"
+      ],
+      "name_en": "Void Helm",
+      "name_ru": "Пустотный шлем",
+      "via": "ItemHelmetVoid"
     },
     "itemChestVoidRobe": {
       "bases": [
@@ -1079,213 +1720,130 @@
       "name_ru": "Пустотная мантия тауматурга",
       "via": "ItemChestplateVoidRobe"
     },
-    "manaAuraProvider": {
-      "bases": [
-        "manaAuraProvider"
-      ],
-      "name_en": "Mana Apiary Booster",
-      "name_ru": "",
-      "via": "manaAuraProvider"
-    },
-    "itemHandMirror": {
-      "bases": [
-        "HandMirror"
-      ],
-      "name_en": "Magic Hand Mirror",
-      "name_ru": "Магическое зеркало (Ручное)",
-      "via": "HandMirror"
-    },
-    "blockWoodenDevice": {
-      "bases": [
-        "blockWoodenDevice"
-      ]
-    },
-    "blockTable": {
-      "bases": [
-        "blockTable"
-      ]
-    },
-    "ItemFocusVisShard": {
-      "bases": [
-        "ItemFocusVisShard"
-      ],
-      "name_en": "Wand Focus: Vis Shard",
-      "name_ru": "",
-      "via": "ItemFocusVisShard"
-    },
-    "itemThaumometer": {
-      "bases": [
-        "ItemThaumometer"
-      ],
-      "name_en": "Thaumometer",
-      "name_ru": "Таумометр",
-      "via": "ItemThaumometer"
-    },
-    "hive": {
-      "bases": [
-        "hive"
-      ]
-    },
-    "taintFruit": {
-      "bases": [
-        "TaintFruit"
-      ],
-      "name_en": "Tainted Fruit",
-      "name_ru": "",
-      "via": "TaintFruit"
-    },
-    "BlockWarpwoodLeaves": {
-      "bases": [
-        "BlockWarpwoodLeaves"
-      ],
-      "name_en": "Warped Leaves",
-      "name_ru": "",
-      "via": "BlockWarpwoodLeaves"
-    },
-    "ItemVoidwalkerSash": {
-      "bases": [
-        "ItemVoidwalkerSash"
-      ],
-      "name_en": "Voidwalker's Sash of Runic Shielding",
-      "name_ru": "",
-      "via": "ItemVoidwalkerSash"
-    },
-    "blood_infused_planks": {
-      "bases": [
-        "blood_infused_planks"
-      ],
-      "name_en": "Blood Infused Wooden Plank",
-      "name_ru": "",
-      "via": "blood_infused_planks"
-    },
-    "heart": {
-      "bases": [
-        "heart"
-      ],
-      "name_en": "Heart",
-      "name_ru": "",
-      "via": "heart"
-    },
-    "itemSwordElemental": {
-      "bases": [
-        "ItemSwordElemental"
-      ],
-      "name_en": "Sword of the Zephyr",
-      "name_ru": "Меч Бури",
-      "via": "ItemSwordElemental"
-    },
-    "mobCrystal": {
-      "bases": [
-        "MobCrystal"
-      ],
-      "name_en": "%s Imprinted Crystal",
-      "name_ru": "Отпечатанный кристалл (%s)",
-      "via": "MobCrystal"
-    },
-    "costumes": {
-      "bases": [
-        "costumes"
-      ]
-    },
-    "BlockWarpwoodLog": {
-      "bases": [
-        "BlockWarpwoodLog"
-      ],
-      "name_en": "Warpwood Log",
-      "name_ru": "",
-      "via": "BlockWarpwoodLog"
-    },
-    "blood_money": {
-      "bases": [
-        "blood_money"
-      ]
-    },
-    "ItemFocusLumos": {
-      "bases": [
-        "ItemFocusLumos"
-      ],
-      "name_en": "Wand Focus: Lumos",
-      "name_ru": "",
-      "via": "ItemFocusLumos"
-    },
-    "itemShard": {
-      "bases": [
-        "ItemShard"
-      ]
-    },
-    "itemShovelThaumium": {
-      "bases": [
-        "ItemShovelThaumium"
-      ],
-      "name_en": "Thaumium Shovel",
-      "name_ru": "Таум-лопата",
-      "via": "ItemShovelThaumium"
-    },
-    "blockDoubleSlabStone": {
-      "bases": [
-        "blockCosmeticDoubleSlabStone"
-      ]
-    },
-    "skullAxe": {
-      "bases": [
-        "SkullAxe"
-      ],
-      "name_en": "Axe of the Skulltaker",
-      "name_ru": "Топор собирателя черепов",
-      "via": "SkullAxe"
-    },
-    "blockCrystal": {
-      "bases": [
-        "blockCrystal"
-      ]
-    },
-    "blockTube": {
-      "bases": [
-        "blockTube"
-      ]
-    },
-    "blockCosmeticOpaque": {
-      "bases": [
-        "blockCosmeticOpaque"
-      ]
-    },
-    "itemFocusTrade": {
-      "bases": [
-        "FocusTrade"
-      ],
-      "name_en": "Wand Focus: Equal Trade",
-      "name_ru": "Набалдашник: Равноценный обмен",
-      "via": "FocusTrade"
-    },
-    "blockAiry": {
-      "bases": [
-        "blockAiry"
-      ]
-    },
-    "itemGirdleHover": {
-      "bases": [
-        "ItemGirdleHover"
-      ],
-      "name_en": "Thaumostatic Girdle",
-      "name_ru": "Таумостатический пояс",
-      "via": "ItemGirdleHover"
-    },
-    "blood_stained_ice_packed": {
-      "bases": [
-        "blood_stained_ice_packed"
-      ],
-      "name_en": "Blood Stained Packed Ice",
-      "name_ru": "",
-      "via": "blood_stained_ice_packed"
-    },
-    "ItemWandRod": {
-      "bases": [
-        "ItemWandRod"
-      ]
-    },
     "blockTaint": {
       "bases": [
         "blockTaint"
+      ]
+    },
+    "ItemShadowFortressLeggings": {
+      "bases": [
+        "ItemShadowFortressLeggings"
+      ],
+      "name_en": "Shadow Fortress Thigh Guards",
+      "name_ru": "",
+      "via": "ItemShadowFortressLeggings"
+    },
+    "ItemShadowmetalSpade": {
+      "bases": [
+        "ItemShadowmetalSpade"
+      ],
+      "name_en": "Shadow Metal Shovel",
+      "name_ru": "",
+      "via": "ItemShadowmetalSpade"
+    },
+    "jellyBaby": {
+      "bases": [
+        "jellyBabies"
+      ]
+    },
+    "itemHelmetFortress": {
+      "bases": [
+        "ItemHelmetFortress"
+      ],
+      "name_en": "Thaumium Fortress Helm",
+      "name_ru": "Боевой таум-шлем",
+      "via": "ItemHelmetFortress"
+    },
+    "amorphic_catalyst": {
+      "bases": [
+        "amorphic_catalyst"
+      ],
+      "name_en": "Amorphic Catalyst",
+      "name_ru": "",
+      "via": "amorphic_catalyst"
+    },
+    "itemEssence": {
+      "bases": [
+        "ItemEssence"
+      ]
+    },
+    "itemTripleMeatTreat": {
+      "bases": [
+        "TripleMeatTreat"
+      ],
+      "name_en": "Triple Meat Treat",
+      "name_ru": "Мясное ассорти",
+      "via": "TripleMeatTreat"
+    },
+    "itemInkwell": {
+      "bases": [
+        "ItemInkwell"
+      ],
+      "name_en": "Scribing Tools",
+      "name_ru": "Чернильница с пером",
+      "via": "ItemInkwell"
+    },
+    "itemHelmetCultistLeaderPlate": {
+      "bases": [
+        "ItemHelmetCultistLeaderPlate"
+      ],
+      "name_en": "Crimson Praetor Helm",
+      "name_ru": "Шлем Претора культистов",
+      "via": "ItemHelmetCultistLeaderPlate"
+    },
+    "self_sacrifice_amulet": {
+      "bases": [
+        "self_sacrifice_amulet"
+      ],
+      "name_en": "Amulet of Self Sacrifice",
+      "name_ru": "",
+      "via": "self_sacrifice_amulet"
+    },
+    "subCollar": {
+      "bases": [
+        "SubCollar"
+      ],
+      "name_en": "Collar of Pain",
+      "name_ru": "Ошейник боли",
+      "via": "SubCollar"
+    },
+    "itemBootsThaumium": {
+      "bases": [
+        "ItemBootsThaumium"
+      ],
+      "name_en": "Thaumium Boots",
+      "name_ru": "Таум-ботинки",
+      "via": "ItemBootsThaumium"
+    },
+    "item": {
+      "bases": [
+        "item_upgrade"
+      ]
+    },
+    "morphSword": {
+      "bases": [
+        "MorphSword"
+      ],
+      "name_en": "Chameleon Sword",
+      "name_ru": "Хамелеоновый меч",
+      "via": "MorphSword"
+    },
+    "itemPrimalCrusher": {
+      "bases": [
+        "ItemPrimalCrusher"
+      ],
+      "name_en": "Primal Crusher",
+      "name_ru": "Сингулярный крушитель",
+      "via": "ItemPrimalCrusher"
+    },
+    "cosmic_meatballs": {
+      "bases": [
+        "Cosmic_Meatballs"
+      ]
+    },
+    "blockCosmeticSolid": {
+      "bases": [
+        "blockCosmeticSolid"
       ]
     },
     "itemGolemDecoration": {
@@ -1296,244 +1854,13 @@
       "name_ru": "Аксессуар",
       "via": "ItemGolemDecoration"
     },
-    "blockStairsGreatwood": {
+    "itemHoeVoid": {
       "bases": [
-        "blockStairsGreatwood"
+        "ItemHoeVoid"
       ],
-      "name_en": "Greatwood Stairs",
-      "name_ru": "Лестница из великого дерева",
-      "via": "blockStairsGreatwood"
-    },
-    "itemBucketPure": {
-      "bases": [
-        "ItemBucketPure"
-      ],
-      "name_en": "Bucket of Purifying Fluid",
-      "name_ru": "Ведро очищающей жидкости",
-      "via": "ItemBucketPure"
-    },
-    "ItemShadowmetalHoe": {
-      "bases": [
-        "ItemShadowmetalHoe"
-      ],
-      "name_en": "Shadow Metal Hoe",
-      "name_ru": "",
-      "via": "ItemShadowmetalHoe"
-    },
-    "itemSanityChecker": {
-      "bases": [
-        "ItemSanityChecker"
-      ],
-      "name_en": "Sanity Checker",
-      "name_ru": "Психический детектор",
-      "via": "ItemSanityChecker"
-    },
-    "itemHoverHarness": {
-      "bases": [
-        "HoverHarness"
-      ],
-      "name_en": "Thaumostatic Harness",
-      "name_ru": "Таумостатический ранец",
-      "via": "HoverHarness"
-    },
-    "orange_juice": {
-      "bases": [
-        "orange_juice"
-      ],
-      "name_en": "Orange Juice",
-      "name_ru": "",
-      "via": "orange_juice"
-    },
-    "blockFluidPure": {
-      "bases": [
-        "blockFluidPure"
-      ],
-      "name_en": "Purifying Fluid",
-      "name_ru": "Очищающая жидкость",
-      "via": "blockFluidPure"
-    },
-    "block_burned_string": {
-      "bases": [
-        "block_burned_string"
-      ],
-      "name_en": "Blood Burned String",
-      "name_ru": "",
-      "via": "block_burned_string"
-    },
-    "itemGolemCore": {
-      "bases": [
-        "ItemGolemCore"
-      ],
-      "name_en": "Golem Animation Core",
-      "name_ru": "Сердце голема",
-      "via": "ItemGolemCore"
-    },
-    "blockChestHungry": {
-      "bases": [
-        "blockChestHungry"
-      ],
-      "name_en": "Hungry Chest",
-      "name_ru": "Голодный сундук",
-      "via": "blockChestHungry"
-    },
-    "bound_diamond_shard": {
-      "bases": [
-        "bound_diamond_shard"
-      ],
-      "metas": {
-        "0": {
-          "name_en": "Bound Diamond Shard",
-          "name_ru": ""
-        },
-        "1": {
-          "name_en": "Bound Diamond Air Shard",
-          "name_ru": ""
-        },
-        "2": {
-          "name_en": "Bound Diamond Earth Shard",
-          "name_ru": ""
-        },
-        "3": {
-          "name_en": "Bound Diamond Fire Shard",
-          "name_ru": ""
-        },
-        "4": {
-          "name_en": "Bound Diamond Water Shard",
-          "name_ru": ""
-        },
-        "5": {
-          "name_en": "Bound Diamond Dusk Shard",
-          "name_ru": ""
-        },
-        "6": {
-          "name_en": "Bound Diamond Dawn Shard",
-          "name_ru": ""
-        }
-      }
-    },
-    "itemNuggetFish": {
-      "bases": [
-        "ItemNuggetFish"
-      ],
-      "name_en": "Fish Nugget",
-      "name_ru": "Кусочек рыбки",
-      "via": "ItemNuggetFish"
-    },
-    "BlockWarpwoodPlanks": {
-      "bases": [
-        "BlockWarpwoodPlanks"
-      ],
-      "name_en": "Warpwood Planks",
-      "name_ru": "",
-      "via": "BlockWarpwoodPlanks"
-    },
-    "ItemShadowFortressHelmet": {
-      "bases": [
-        "ItemShadowFortressHelmet"
-      ],
-      "name_en": "Shadow Fortress Helm",
-      "name_ru": "",
-      "via": "ItemShadowFortressHelmet"
-    },
-    "blood_diamond": {
-      "bases": [
-        "blood_diamond"
-      ],
-      "name_en": "Blood Diamond",
-      "name_ru": "",
-      "via": "blood_diamond"
-    },
-    "itemThaumonomicon": {
-      "bases": [
-        "ItemThaumonomicon"
-      ],
-      "name_en": "Thaumonomicon",
-      "name_ru": "Таумономикон",
-      "via": "ItemThaumonomicon"
-    },
-    "itemInkwell": {
-      "bases": [
-        "ItemInkwell"
-      ],
-      "name_en": "Scribing Tools",
-      "name_ru": "Чернильница с пером",
-      "via": "ItemInkwell"
-    },
-    "itemNuggetPork": {
-      "bases": [
-        "ItemNuggetPork"
-      ],
-      "name_en": "Pork Nugget",
-      "name_ru": "Кусочек свинины",
-      "via": "ItemNuggetPork"
-    },
-    "itemTripleMeatTreat": {
-      "bases": [
-        "TripleMeatTreat"
-      ],
-      "name_en": "Triple Meat Treat",
-      "name_ru": "Мясное ассорти",
-      "via": "TripleMeatTreat"
-    },
-    "primewell": {
-      "bases": [
-        "Primewell"
-      ],
-      "name_en": "Primal Scribing Tools",
-      "name_ru": "",
-      "via": "Primewell"
-    },
-    "ItemNightshadeBerries": {
-      "bases": [
-        "ItemNightshadeBerries"
-      ],
-      "name_en": "Nightshade Berries",
-      "name_ru": "",
-      "via": "ItemNightshadeBerries"
-    },
-    "ItemShadowmetalSword": {
-      "bases": [
-        "ItemShadowmetalSword"
-      ],
-      "name_en": "Shadow Metal Blade",
-      "name_ru": "",
-      "via": "ItemShadowmetalSword"
-    },
-    "blood_stone": {
-      "bases": [
-        "blood_stone"
-      ]
-    },
-    "itemLootbag": {
-      "bases": [
-        "ItemLootBag"
-      ]
-    },
-    "taintPickaxe": {
-      "bases": [
-        "TaintPickaxe"
-      ],
-      "name_en": "Pickaxe of Distortion",
-      "name_ru": "Кирка искажения",
-      "via": "TaintPickaxe"
-    },
-    "itemWandCap": {
-      "bases": [
-        "WandCap"
-      ]
-    },
-    "blockLootCrate": {
-      "bases": [
-        "blockLootCrate"
-      ],
-      "name_en": "Abandoned Crate",
-      "name_ru": "Забытый ящик",
-      "via": "blockLootCrate"
-    },
-    "itemGolemUpgrade": {
-      "bases": [
-        "ItemGolemUpgrade"
-      ]
+      "name_en": "Void Hoe",
+      "name_ru": "Пустотная мотыга",
+      "via": "ItemHoeVoid"
     },
     "itemShovelElemental": {
       "bases": [
@@ -1543,354 +1870,51 @@
       "name_ru": "Лопата Землероя",
       "via": "ItemShovelElemental"
     },
-    "bloodOrb": {
+    "visAuraProvider": {
       "bases": [
-        "EldritchOrb"
+        "visAuraProvider"
       ],
-      "name_en": "Eldritch Blood Orb",
-      "name_ru": "Древний шар крови",
-      "via": "EldritchOrb"
-    },
-    "crystalwell": {
-      "bases": [
-        "Crystalwell"
-      ],
-      "name_en": "Crystal Scribing Tools",
-      "name_ru": "Кристальная чернильница с пером",
-      "via": "Crystalwell"
-    },
-    "glass_sacrificial_dagger": {
-      "bases": [
-        "glass_sacrificial_dagger"
-      ],
-      "name_en": "Glass Sacrificial Dagger",
+      "name_en": "Vis Apiary Booster",
       "name_ru": "",
-      "via": "glass_sacrificial_dagger"
+      "via": "visAuraProvider"
     },
-    "itemHoeThaumium": {
+    "blood_infused_diamond_active": {
       "bases": [
-        "ItemHoeThaumium"
+        "blood_infused_diamond_active"
       ],
-      "name_en": "Thaumium Hoe",
-      "name_ru": "Таум-мотыга",
-      "via": "ItemHoeThaumium"
-    },
-    "itemChestCultistPlate": {
-      "bases": [
-        "ItemChestplateCultistPlate"
-      ],
-      "name_en": "Crimson Cult Chestplate",
-      "name_ru": "Кираса культиста",
-      "via": "ItemChestplateCultistPlate"
-    },
-    "itemJarNode": {
-      "bases": [
-        "BlockJarNodeItem"
-      ],
-      "name_en": "Node in a Jar",
-      "name_ru": "Узел ауры в банке",
-      "via": "BlockJarNodeItem"
-    },
-    "blockMagicBox": {
-      "bases": [
-        "blockMagicBox"
-      ]
-    },
-    "blockFluidDeath": {
-      "bases": [
-        "blockFluidDeath"
-      ],
-      "name_en": "Liquid Death",
-      "name_ru": "Жидкая смерть",
-      "via": "blockFluidDeath"
-    },
-    "itemLegsCultistPlate": {
-      "bases": [
-        "ItemLeggingsCultistPlate"
-      ],
-      "name_en": "Crimson Cult Greaves",
-      "name_ru": "Поножи культиста",
-      "via": "ItemLeggingsCultistPlate"
-    },
-    "soul_booster": {
-      "bases": [
-        "soul_booster"
-      ],
-      "name_en": "Soul Booster",
+      "name_en": "Blood Infused Diamond (Active)",
       "name_ru": "",
-      "via": "soul_booster"
+      "via": "blood_infused_diamond_active"
     },
-    "itemResource": {
+    "blockFluidPure": {
       "bases": [
-        "ItemResource"
-      ]
-    },
-    "itemLegsCultistRobe": {
-      "bases": [
-        "ItemLeggingsCultistRobe"
+        "blockFluidPure"
       ],
-      "name_en": "Crimson Cult Leggings",
-      "name_ru": "Шаровары культиста",
-      "via": "ItemLeggingsCultistRobe"
+      "name_en": "Purifying Fluid",
+      "name_ru": "Очищающая жидкость",
+      "via": "blockFluidPure"
     },
-    "ridingCrop": {
+    "itemChestThaumium": {
       "bases": [
-        "RidingCrop"
+        "ItemChestplateThaumium"
       ],
-      "name_en": "Riding Crop",
-      "name_ru": "Хлыст",
-      "via": "RidingCrop"
+      "name_en": "Thaumium Chestplate",
+      "name_ru": "Таум-кираса",
+      "via": "ItemChestplateThaumium"
     },
-    "blood_infused_diamond_bound": {
+    "this": {
       "bases": [
-        "blood_infused_diamond_bound"
+        "comb",
+        "drop",
+        "miscResources",
+        "moonDial",
+        "pollen",
+        "propolis",
+        "wax"
       ],
-      "name_en": "Bound Diamond",
-      "name_ru": "",
-      "via": "blood_infused_diamond_bound"
-    },
-    "itemHelmetFortress": {
-      "bases": [
-        "ItemHelmetFortress"
-      ],
-      "name_en": "Thaumium Fortress Helm",
-      "name_ru": "Боевой таум-шлем",
-      "via": "ItemHelmetFortress"
-    },
-    "itemPickVoid": {
-      "bases": [
-        "ItemPickVoid"
-      ],
-      "name_en": "Void Pickaxe",
-      "name_ru": "Пустотная кирка",
-      "via": "ItemPickVoid"
-    },
-    "itemFocusPech": {
-      "bases": [
-        "FocusPech"
-      ],
-      "name_en": "Wand Focus: Pech's Curse",
-      "name_ru": "Набалдашник: Гномье проклятие",
-      "via": "FocusPech"
-    },
-    "itemManaBean": {
-      "bases": [
-        "ItemManaBean"
-      ],
-      "name_en": "Mana Bean",
-      "name_ru": "Магический боб",
-      "via": "ItemManaBean"
-    },
-    "ItemGateKey": {
-      "bases": [
-        "ItemGateKey"
-      ],
-      "name_en": "Celestial Gate Key",
-      "name_ru": "",
-      "via": "ItemGateKey"
-    },
-    "itemBootsTraveller": {
-      "bases": [
-        "BootsTraveller"
-      ],
-      "name_en": "Boots of the Traveler",
-      "name_ru": "Сапоги путешественника",
-      "via": "BootsTraveller"
-    },
-    "infinity_bow": {
-      "bases": [
-        "Infinity_Bow"
-      ]
-    },
-    "BlockNightshadeBush": {
-      "bases": [
-        "BlockNightshadeBush"
-      ],
-      "name_en": "Atropa Belladonna",
-      "name_ru": "",
-      "via": "BlockNightshadeBush"
-    },
-    "ItemHollowDagger": {
-      "bases": [
-        "ItemHollowDagger"
-      ],
-      "name_en": "Hollow Dagger",
-      "name_ru": "",
-      "via": "ItemHollowDagger"
-    },
-    "itemPickThaumium": {
-      "bases": [
-        "ItemPickThaumium"
-      ],
-      "name_en": "Thaumium Pickaxe",
-      "name_ru": "Таум-кирка",
-      "via": "ItemPickThaumium"
-    },
-    "itemAmuletRunic": {
-      "bases": [
-        "ItemAmuletRunic"
-      ]
-    },
-    "itemFocusExcavation": {
-      "bases": [
-        "FocusExcavation"
-      ],
-      "name_en": "Wand Focus: Excavation",
-      "name_ru": "Набалдашник: Копание",
-      "via": "FocusExcavation"
-    },
-    "itemZombieBrain": {
-      "bases": [
-        "ItemZombieBrain"
-      ],
-      "name_en": "Zombie Brain",
-      "name_ru": "Мозг зомби",
-      "via": "ItemZombieBrain"
-    },
-    "itemPrimalCrusher": {
-      "bases": [
-        "ItemPrimalCrusher"
-      ],
-      "name_en": "Primal Crusher",
-      "name_ru": "Сингулярный крушитель",
-      "via": "ItemPrimalCrusher"
-    },
-    "itemArcaneDoor": {
-      "bases": [
-        "ItemArcaneDoor"
-      ],
-      "name_en": "Arcane Door",
-      "name_ru": "Магическая дверь",
-      "via": "ItemArcaneDoor"
-    },
-    "itemChestFortress": {
-      "bases": [
-        "ItemChestplateFortress"
-      ],
-      "name_en": "Thaumium Fortress Cuirass",
-      "name_ru": "Боевая таум-кираса",
-      "via": "ItemChestplateFortress"
-    },
-    "itemHoeVoid": {
-      "bases": [
-        "ItemHoeVoid"
-      ],
-      "name_en": "Void Hoe",
-      "name_ru": "Пустотная мотыга",
-      "via": "ItemHoeVoid"
-    },
-    "ItemShadowmetalAxe": {
-      "bases": [
-        "ItemShadowmetalAxe"
-      ],
-      "name_en": "Shadow Metal Axe",
-      "name_ru": "",
-      "via": "ItemShadowmetalAxe"
-    },
-    "itemShovelVoid": {
-      "bases": [
-        "ItemShovelVoid"
-      ],
-      "name_en": "Void Shovel",
-      "name_ru": "Пустотная лопата",
-      "via": "ItemShovelVoid"
-    },
-    "BlockWarpwoodSapling": {
-      "bases": [
-        "BlockWarpwoodSapling"
-      ],
-      "name_en": "Warpwood Sapling",
-      "name_ru": "",
-      "via": "BlockWarpwoodSapling"
-    },
-    "ItemVoidmetalGoggles": {
-      "bases": [
-        "ItemVoidmetalGoggles"
-      ],
-      "name_en": "Void Metal Goggles of Revealing",
-      "name_ru": "",
-      "via": "ItemVoidmetalGoggles"
-    },
-    "fractured_ore": {
-      "bases": [
-        "Fractured_Ore"
-      ]
-    },
-    "ItemVoidBlood": {
-      "bases": [
-        "ItemVoidBlood"
-      ],
-      "name_en": "Phial of Void-infused Blood",
-      "name_ru": "",
-      "via": "ItemVoidBlood"
-    },
-    "itemNuggetBeef": {
-      "bases": [
-        "ItemNuggetBeef"
-      ],
-      "name_en": "Beef Nugget",
-      "name_ru": "Кусочек говядины",
-      "via": "ItemNuggetBeef"
-    },
-    "wolf_hide": {
-      "bases": [
-        "wolf_hide"
-      ],
-      "name_en": "Wolf Hide",
-      "name_ru": "",
-      "via": "wolf_hide"
-    },
-    "ItemMagicFunguar": {
-      "bases": [
-        "ItemMagicFunguar"
-      ],
-      "name_en": "Magic Funguar",
-      "name_ru": "",
-      "via": "ItemMagicFunguar"
-    },
-    "itemWandRod": {
-      "bases": [
-        "WandRod"
-      ]
-    },
-    "blockEldritch": {
-      "bases": [
-        "blockEldritch"
-      ]
-    },
-    "blockManaPod": {
-      "bases": [
-        "blockManaPod"
-      ]
-    },
-    "itemWispEssence": {
-      "bases": [
-        "ItemWispEssence"
-      ],
-      "name_en": "Ethereal Essence",
-      "name_ru": "Эфирная эссенция",
-      "via": "ItemWispEssence"
-    },
-    "itemResearchNotes": {
-      "bases": [
-        "ItemResearchNotes"
-      ]
-    },
-    "itemResonator": {
-      "bases": [
-        "ItemResonator"
-      ],
-      "name_en": "Essentia Resonator",
-      "name_ru": "Резонатор",
-      "via": "ItemResonator"
-    },
-    "gluttonyShard": {
-      "bases": [
-        "GluttonyShard"
-      ],
-      "name_en": "Gluttony Shard",
-      "name_ru": "Осколок прожорливости",
-      "via": "GluttonyShard"
+      "name_en": "Jade Moon Dial",
+      "name_ru": "Нефритовый набор луны",
+      "via": "moonDial"
     },
     "itemBootsCultist": {
       "bases": [
@@ -1900,62 +1924,14 @@
       "name_ru": "Ботинки культиста",
       "via": "ItemBootsCultist"
     },
-    "itemFocusWarding": {
+    "blockEldritch": {
       "bases": [
-        "FocusWarding"
-      ],
-      "name_en": "Wand Focus: Warding",
-      "name_ru": "Набалдашник: Укрепление",
-      "via": "FocusWarding"
-    },
-    "itemHelmetCultistPlate": {
-      "bases": [
-        "ItemHelmetCultistPlate"
-      ],
-      "name_en": "Crimson Cult Helm",
-      "name_ru": "Шлем культиста",
-      "via": "ItemHelmetCultistPlate"
-    },
-    "ItemShadowmetalSpade": {
-      "bases": [
-        "ItemShadowmetalSpade"
-      ],
-      "name_en": "Shadow Metal Shovel",
-      "name_ru": "",
-      "via": "ItemShadowmetalSpade"
-    },
-    "blood_infused_iron": {
-      "bases": [
-        "blood_infused_iron"
-      ],
-      "name_en": "Blood Infused Iron Ingot",
-      "name_ru": "",
-      "via": "blood_infused_iron"
-    },
-    "ultimate_stew": {
-      "bases": [
-        "Ultimate_Stew"
+        "blockEldritch"
       ]
     },
-    "bound_igniter": {
+    "hive": {
       "bases": [
-        "bound_igniter"
-      ],
-      "name_en": "Bound Igniter",
-      "name_ru": "",
-      "via": "bound_igniter"
-    },
-    "itemAxeVoid": {
-      "bases": [
-        "ItemAxeVoid"
-      ],
-      "name_en": "Void Axe",
-      "name_ru": "Пустотный топор",
-      "via": "ItemAxeVoid"
-    },
-    "itemRingRunic": {
-      "bases": [
-        "ItemRingRunic"
+        "hive"
       ]
     },
     "ItemVoidFortressChestplate": {
@@ -1966,98 +1942,61 @@
       "name_ru": "",
       "via": "ItemVoidFortressChestplate"
     },
-    "itemAxeThaumium": {
+    "itemChestRobe": {
       "bases": [
-        "ItemAxeThaumium"
+        "ItemChestplateRobe"
       ],
-      "name_en": "Thaumium Axe",
-      "name_ru": "Таум-топор",
-      "via": "ItemAxeThaumium"
+      "name_en": "Thaumaturge's Robe",
+      "name_ru": "Мантия тауматурга",
+      "via": "ItemChestplateRobe"
     },
-    "blockCustomOre": {
+    "blockMirror": {
       "bases": [
-        "blockCustomOre"
-      ]
-    },
-    "blood_infused_iron_block": {
-      "bases": [
-        "blood_infused_iron_block"
+        "blockMirror"
       ],
-      "name_en": "Blood Infused Iron Block",
+      "name_en": "Magic Mirror",
+      "name_ru": "Магическое зеркало",
+      "via": "blockMirror"
+    },
+    "itemLegsRobe": {
+      "bases": [
+        "ItemLeggingsRobe"
+      ],
+      "name_en": "Thaumaturge's Leggings",
+      "name_ru": "Шаровары тауматурга",
+      "via": "ItemLeggingsRobe"
+    },
+    "itemHoverHarness": {
+      "bases": [
+        "HoverHarness"
+      ],
+      "name_en": "Thaumostatic Harness",
+      "name_ru": "Таумостатический ранец",
+      "via": "HoverHarness"
+    },
+    "soul_booster": {
+      "bases": [
+        "soul_booster"
+      ],
+      "name_en": "Soul Booster",
       "name_ru": "",
-      "via": "blood_infused_iron_block"
+      "via": "soul_booster"
     },
-    "jellyBaby": {
+    "ItemShadowFortressChestplate": {
       "bases": [
-        "jellyBabies"
-      ]
-    },
-    "itemLegsVoid": {
-      "bases": [
-        "ItemLeggingsVoid"
+        "ItemShadowFortressChestplate"
       ],
-      "name_en": "Void Leggings",
-      "name_ru": "Пустотные поножи",
-      "via": "ItemLeggingsVoid"
-    },
-    "blood_infused_diamond_block": {
-      "bases": [
-        "blood_infused_diamond_block"
-      ],
-      "name_en": "Blood Infused Diamond Block",
+      "name_en": "Shadow Fortress Cuirass",
       "name_ru": "",
-      "via": "blood_infused_diamond_block"
+      "via": "ItemShadowFortressChestplate"
     },
-    "itemLegsThaumium": {
+    "itemAxeElemental": {
       "bases": [
-        "ItemLeggingsThaumium"
+        "ItemAxeElemental"
       ],
-      "name_en": "Thaumium Leggings",
-      "name_ru": "Таум-поножи",
-      "via": "ItemLeggingsThaumium"
-    },
-    "itemGoggles": {
-      "bases": [
-        "ItemGoggles"
-      ],
-      "name_en": "Goggles of Revealing",
-      "name_ru": "Очки откровения",
-      "via": "ItemGoggles"
-    },
-    "blockArcaneFurnace": {
-      "bases": [
-        "blockArcaneFurnace"
-      ],
-      "name_en": "Infernal Furnace",
-      "name_ru": "Адская печь",
-      "via": "blockArcaneFurnace"
-    },
-    "wandCap": {
-      "bases": [
-        "WandCaps",
-        "wand_caps"
-      ]
-    },
-    "itemGirdleRunic": {
-      "bases": [
-        "ItemGirdleRunic"
-      ]
-    },
-    "itemFocusPrimal": {
-      "bases": [
-        "FocusPrimal"
-      ],
-      "name_en": "Wand Focus: Primal",
-      "name_ru": "Набалдашник: Сингулярность",
-      "via": "FocusPrimal"
-    },
-    "ItemFocusTaintSwarm": {
-      "bases": [
-        "ItemFocusTaintSwarm"
-      ],
-      "name_en": "Wand Focus: Taint Swarm",
-      "name_ru": "",
-      "via": "ItemFocusTaintSwarm"
+      "name_en": "Axe of the Stream",
+      "name_ru": "Топор Потока",
+      "via": "ItemAxeElemental"
     },
     "ItemFocusShockwave": {
       "bases": [
@@ -2067,57 +2006,206 @@
       "name_ru": "",
       "via": "ItemFocusShockwave"
     },
-    "blockWarded": {
+    "blockTable": {
       "bases": [
-        "blockWarded"
+        "blockTable"
       ]
     },
-    "itemBaubleBlanks": {
+    "item3": {
       "bases": [
-        "ItemBaubleBlanks"
+        "magic_stack_upgrade"
       ]
     },
-    "itemWandCasting": {
+    "itemBootsTraveller": {
       "bases": [
-        "WandCasting"
+        "BootsTraveller"
+      ],
+      "name_en": "Boots of the Traveler",
+      "name_ru": "Сапоги путешественника",
+      "via": "BootsTraveller"
+    },
+    "blockJar": {
+      "bases": [
+        "blockJar"
       ]
     },
-    "itemBathSalts": {
+    "blockChestHungry": {
       "bases": [
-        "ItemBathSalts"
+        "blockChestHungry"
       ],
-      "name_en": "Purifying Bath Salts",
-      "name_ru": "Очищающая соль",
-      "via": "ItemBathSalts"
+      "name_en": "Hungry Chest",
+      "name_ru": "Голодный сундук",
+      "via": "blockChestHungry"
     },
-    "itemChestThaumium": {
+    "itemHelmetVoidRobe": {
       "bases": [
-        "ItemChestplateThaumium"
+        "ItemHelmetVoidFortress",
+        "ItemHelmetVoidRobe"
       ],
-      "name_en": "Thaumium Chestplate",
-      "name_ru": "Таум-кираса",
-      "via": "ItemChestplateThaumium"
+      "name_en": "Void Thaumaturge Hood",
+      "name_ru": "Пустотный капюшон тауматурга",
+      "via": "ItemHelmetVoidRobe"
     },
-    "blockFluxGoo": {
+    "taintFruit": {
       "bases": [
-        "blockFluxGoo"
+        "TaintFruit"
       ],
-      "name_en": "Flux Goo",
-      "name_ru": "Заражённая слизь",
-      "via": "blockFluxGoo"
-    },
-    "blockTaintFibres": {
-      "bases": [
-        "blockTaintFibres"
-      ]
-    },
-    "ItemShadowFortressLeggings": {
-      "bases": [
-        "ItemShadowFortressLeggings"
-      ],
-      "name_en": "Shadow Fortress Thigh Guards",
+      "name_en": "Tainted Fruit",
       "name_ru": "",
-      "via": "ItemShadowFortressLeggings"
+      "via": "TaintFruit"
+    },
+    "empowered_self_sacrifice_amulet": {
+      "bases": [
+        "empowered_self_sacrifice_amulet"
+      ],
+      "name_en": "Empowered Self Sacrifice Amulet",
+      "name_ru": "",
+      "via": "empowered_self_sacrifice_amulet"
+    },
+    "blockEssentiaReservoir": {
+      "bases": [
+        "blockEssentiaReservoir"
+      ],
+      "name_en": "Essentia Reservoir",
+      "name_ru": "Резервуар эссенции",
+      "via": "blockEssentiaReservoir"
+    },
+    "ItemCrimsonBlood": {
+      "bases": [
+        "ItemCrimsonBlood"
+      ],
+      "name_en": "Phial of Crimson Blood",
+      "name_ru": "",
+      "via": "ItemCrimsonBlood"
+    },
+    "itemJarFilled": {
+      "bases": [
+        "BlockJarFilledItem"
+      ],
+      "name_en": "Jar of Essentia",
+      "name_ru": "Банка с эссенцией",
+      "via": "BlockJarFilledItem"
+    },
+    "blood_stone": {
+      "bases": [
+        "blood_stone"
+      ]
+    },
+    "morphPickaxe": {
+      "bases": [
+        "MorphPickaxe"
+      ],
+      "name_en": "Chameleon Pickaxe",
+      "name_ru": "Хамелеоновая кирка",
+      "via": "MorphPickaxe"
+    },
+    "itemSanitySoap": {
+      "bases": [
+        "ItemSanitySoap"
+      ],
+      "name_en": "Sanitizing Soap",
+      "name_ru": "Лечащее мыло",
+      "via": "ItemSanitySoap"
+    },
+    "itemManaBean": {
+      "bases": [
+        "ItemManaBean"
+      ],
+      "name_en": "Mana Bean",
+      "name_ru": "Магический боб",
+      "via": "ItemManaBean"
+    },
+    "itemSwordElemental": {
+      "bases": [
+        "ItemSwordElemental"
+      ],
+      "name_en": "Sword of the Zephyr",
+      "name_ru": "Меч Бури",
+      "via": "ItemSwordElemental"
+    },
+    "itemBucketDeath": {
+      "bases": [
+        "ItemBucketDeath"
+      ],
+      "name_en": "Bucket of Liquid Death",
+      "name_ru": "Ведро жидкой смерти",
+      "via": "ItemBucketDeath"
+    },
+    "morphAxe": {
+      "bases": [
+        "MorphAxe"
+      ],
+      "name_en": "Chameleon Axe",
+      "name_ru": "Хамелеоновый топор",
+      "via": "MorphAxe"
+    },
+    "ItemShadowmetalAxe": {
+      "bases": [
+        "ItemShadowmetalAxe"
+      ],
+      "name_en": "Shadow Metal Axe",
+      "name_ru": "",
+      "via": "ItemShadowmetalAxe"
+    },
+    "itemNugget": {
+      "bases": [
+        "ItemNugget"
+      ]
+    },
+    "ItemFocusVisShard": {
+      "bases": [
+        "ItemFocusVisShard"
+      ],
+      "name_en": "Wand Focus: Vis Shard",
+      "name_ru": "",
+      "via": "ItemFocusVisShard"
+    },
+    "blockFluidDeath": {
+      "bases": [
+        "blockFluidDeath"
+      ],
+      "name_en": "Liquid Death",
+      "name_ru": "Жидкая смерть",
+      "via": "blockFluidDeath"
+    },
+    "blockCandle": {
+      "bases": [
+        "blockCandle"
+      ]
+    },
+    "fractured_ore": {
+      "bases": [
+        "Fractured_Ore"
+      ]
+    },
+    "itemJarNode": {
+      "bases": [
+        "BlockJarNodeItem"
+      ],
+      "name_en": "Node in a Jar",
+      "name_ru": "Узел ауры в банке",
+      "via": "BlockJarNodeItem"
+    },
+    "ItemFocusMageMace": {
+      "bases": [
+        "ItemFocusMageMace"
+      ],
+      "name_en": "Wand Focus: Mage's Mace",
+      "name_ru": "",
+      "via": "ItemFocusMageMace"
+    },
+    "blockWoodenDevice": {
+      "bases": [
+        "blockWoodenDevice"
+      ]
+    },
+    "itemGolemCore": {
+      "bases": [
+        "ItemGolemCore"
+      ],
+      "name_en": "Golem Animation Core",
+      "name_ru": "Сердце голема",
+      "via": "ItemGolemCore"
     }
   }
 }

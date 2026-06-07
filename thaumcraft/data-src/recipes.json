@@ -21,7 +21,7 @@
       "Avaritia": 2,
       "Alfheim": 10
     },
-    "outputsNamed": 283,
+    "outputsNamed": 299,
     "warpItems": 15,
     "notes": "aspects = essentia/vis cost (null value = computed at runtime, see aspectsComputed). output/input/central/components/inputs/key resolved to EN/RU names where the item ref maps to a lang key; otherwise {ref,meta} or {vanilla:srgName} or {oredict}. research = linked research key. arcane has shape[] (grid rows) + key{char:ingredient}. infusion has instability + central + components[]. warpItems = sanity (warp) gained from holding/crafting items."
   },
@@ -45,6 +45,9 @@
         {
           "ref": "itemShard",
           "meta": null
+        },
+        {
+          "raw": "al"
         }
       ]
     },
@@ -239,7 +242,10 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "raw": "glowstoneDustX2"
+        "tag": "GLOWSTONE_DUST",
+        "reg": "glowstone_dust",
+        "name_en": "Glowstone Dust",
+        "name_ru": "Светящаяся пыль"
       },
       "aspects": {
         "lux": 3,
@@ -651,7 +657,10 @@
         "praecantatio": 8
       },
       "input": {
-        "raw": "bt"
+        "ref": "itemEssence",
+        "meta": 1,
+        "name_en": "Phial of Essentia",
+        "name_ru": "Пузырёк с эссенцией"
       }
     },
     {
@@ -1121,7 +1130,10 @@
       "type": "arcane",
       "mod": "Thaumcraft",
       "output": {
-        "raw": "banner"
+        "ref": "blockWoodenDevice",
+        "meta": 8,
+        "name_en": "Crimson Cult Banner",
+        "name_ru": "Вымпел"
       },
       "aspects": {
         "aqua": 5,
@@ -1495,7 +1507,10 @@
           "name_ru": "Поршень"
         },
         "Q": {
-          "raw": "quartzBlock"
+          "tag": "QUARTZ_BLOCK",
+          "reg": "quartz_block",
+          "name_en": "Quartz Block",
+          "name_ru": "Quartz Block"
         },
         "N": {
           "ref": "itemResource",
@@ -1891,7 +1906,10 @@
           "name_ru": "Магический камень"
         },
         "Q": {
-          "raw": "quartzBlock"
+          "tag": "QUARTZ_BLOCK",
+          "reg": "quartz_block",
+          "name_en": "Quartz Block",
+          "name_ru": "Quartz Block"
         },
         "I": {
           "vanilla": "field_150411_aY",
@@ -2226,10 +2244,13 @@
       ],
       "key": {
         "O": {
-          "raw": "obsidian"
+          "raw": "obsidianEntry.makeStack()"
         },
         "P": {
-          "raw": "blazePowder"
+          "tag": "BLAZE_POWDER",
+          "reg": "blaze_powder",
+          "name_en": "Blaze Powder",
+          "name_ru": "Огненный порошок"
         },
         "J": {
           "ref": "blockJar",
@@ -2695,7 +2716,10 @@
           "name_ru": "Огненный шар"
         },
         "Q": {
-          "raw": "quartz"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         "C": {
           "ref": "itemShard",
@@ -2731,7 +2755,10 @@
           "name_ru": "Алмаз"
         },
         "Q": {
-          "raw": "quartz"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         "C": {
           "ref": "itemShard",
@@ -2767,7 +2794,10 @@
           "name_ru": "Картофель"
         },
         "Q": {
-          "raw": "quartz"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         "C": {
           "ref": "itemShard",
@@ -2803,7 +2833,10 @@
           "name_ru": "Ртуть"
         },
         "Q": {
-          "raw": "quartz"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         "C": {
           "ref": "itemShard",
@@ -2842,7 +2875,10 @@
           "oredict": "gemEmerald"
         },
         "Q": {
-          "raw": "quartz"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         "C": {
           "ref": "itemShard",
@@ -2881,7 +2917,10 @@
           "name_ru": "Сингулярный амулет"
         },
         "Q": {
-          "raw": "quartz"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         "C": {
           "vanilla": "field_151045_i",
@@ -3233,7 +3272,10 @@
           "oredict": "stickWood"
         },
         "Q": {
-          "raw": "quartz"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         }
       }
     },
@@ -3972,7 +4014,10 @@
           "name_ru": "Железный слиток"
         },
         "N": {
-          "raw": "quartz"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         "S": {
           "oredict": "stickWood"
@@ -4273,6 +4318,12 @@
           "meta": 3,
           "name_en": "Quicksilver",
           "name_ru": "Ртуть"
+        },
+        {
+          "vanilla": "field_150410_aZ",
+          "reg": "glass_pane",
+          "name_en": "Glass Pane",
+          "name_ru": "Стеклянная панель"
         }
       ]
     },
@@ -4536,7 +4587,7 @@
       "aspectsComputed": true,
       "instability": 3,
       "central": {
-        "raw": "obsidian"
+        "raw": "obsidianEntry.makeStack()"
       },
       "components": [
         {
@@ -4609,7 +4660,10 @@
       "aspectsComputed": true,
       "instability": 3,
       "central": {
-        "raw": "quartzBlock"
+        "tag": "QUARTZ_BLOCK",
+        "reg": "quartz_block",
+        "name_en": "Quartz Block",
+        "name_ru": "Quartz Block"
       },
       "components": [
         {
@@ -4682,7 +4736,10 @@
       "aspectsComputed": true,
       "instability": 3,
       "central": {
-        "raw": "blazeRod"
+        "tag": "BLAZE_ROD",
+        "reg": "blaze_rod",
+        "name_en": "Blaze Rod",
+        "name_ru": "Стержень ифрита"
       },
       "components": [
         {
@@ -4903,9 +4960,18 @@
       },
       "instability": 3,
       "central": {
-        "raw": "magmaCream"
+        "tag": "MAGMA_CREAM",
+        "reg": "magma_cream",
+        "name_en": "Magma Cream",
+        "name_ru": "Сгусток магмы"
       },
       "components": [
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
         {
           "ref": "itemShard",
           "meta": 1,
@@ -4913,10 +4979,22 @@
           "name_ru": "Огненный кристалл"
         },
         {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
           "ref": "itemShard",
           "meta": 0,
           "name_en": "Air Shard",
           "name_ru": "Грозовой кристалл"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         {
           "ref": "itemShard",
@@ -4951,16 +5029,34 @@
       },
       "components": [
         {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
           "ref": "itemShard",
           "meta": 3,
           "name_en": "Earth Shard",
           "name_ru": "Земляной кристалл"
         },
         {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
           "ref": "itemShard",
           "meta": 0,
           "name_en": "Air Shard",
           "name_ru": "Грозовой кристалл"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         {
           "ref": "itemShard",
@@ -4988,7 +5084,10 @@
       },
       "instability": 4,
       "central": {
-        "raw": "netherStar"
+        "tag": "NETHER_STAR",
+        "reg": "nether_star",
+        "name_en": "Nether Star",
+        "name_ru": "Адская звезда"
       },
       "components": [
         {
@@ -5002,6 +5101,12 @@
           "meta": 3,
           "name_en": "Earth Shard",
           "name_ru": "Земляной кристалл"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         {
           "ref": "itemShard",
@@ -5020,6 +5125,12 @@
           "meta": 3,
           "name_en": "Earth Shard",
           "name_ru": "Земляной кристалл"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         {
           "ref": "itemShard",
@@ -5297,6 +5408,12 @@
           "reg": "redstone",
           "name_en": "Redstone",
           "name_ru": "Красная пыль"
+        },
+        {
+          "tag": "GLOWSTONE_DUST",
+          "reg": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
         },
         {
           "vanilla": "field_151016_H",
@@ -5626,7 +5743,10 @@
           "name_ru": "Земляной кристалл"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151068_bn",
+          "reg": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
         },
         {
           "ref": "itemShard",
@@ -5739,7 +5859,10 @@
           "name_ru": "Огненный кристалл"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151068_bn",
+          "reg": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
         },
         {
           "ref": "itemShard",
@@ -5798,7 +5921,10 @@
           "name_ru": "Ледяной кристалл"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151068_bn",
+          "reg": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
         },
         {
           "ref": "itemShard",
@@ -5923,7 +6049,10 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151068_bn",
+          "reg": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
         },
         {
           "ref": "itemShard",
@@ -5981,7 +6110,10 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151068_bn",
+          "reg": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
         },
         {
           "ref": "itemShard",
@@ -6081,7 +6213,10 @@
           "name_ru": "Компас"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151148_bJ",
+          "reg": "map",
+          "name_en": "Map",
+          "name_ru": "Карта"
         }
       ]
     },
@@ -6457,13 +6592,22 @@
           "name_ru": "Банка"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151068_bn",
+          "reg": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151068_bn",
+          "reg": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151068_bn",
+          "reg": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
         }
       ]
     },
@@ -6590,7 +6734,10 @@
       },
       "components": [
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151112_aM",
+          "reg": "fishing_rod",
+          "name_en": "Fishing Rod",
+          "name_ru": "Удочка"
         },
         {
           "vanilla": "field_151115_aP",
@@ -6648,7 +6795,10 @@
           "name_ru": "Flint And Steel"
         },
         {
-          "raw": "new ItemStack((Item)"
+          "vanilla": "field_151097_aZ",
+          "reg": "shears",
+          "name_en": "Shears",
+          "name_ru": "Ножницы"
         },
         {
           "vanilla": "field_150442_at",
@@ -7406,6 +7556,9 @@
           "name_ru": "Ядовитый картофель"
         },
         {
+          "tag": "WITHER_SKELETON_SKULL"
+        },
+        {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
@@ -7450,6 +7603,12 @@
           "reg": "leather",
           "name_en": "Leather",
           "name_ru": "Кожа"
+        },
+        {
+          "tag": "GHAST_TEAR",
+          "reg": "ghast_tear",
+          "name_en": "Ghast Tear",
+          "name_ru": "Слеза Гаста"
         },
         {
           "vanilla": "field_151117_aB",
@@ -8206,7 +8365,7 @@
       "type": "crucible",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)Config.miscResources.getStackForType(ResourceType"
+        "raw": "Config.miscResources.getStackForType(ResourceType.ESSENCE_FA"
       },
       "aspects": {
         "permutatio": 4,
@@ -8224,7 +8383,7 @@
       "type": "crucible",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)Config.miscResources.getStackForType(ResourceType"
+        "raw": "Config.miscResources.getStackForType(ResourceType.ESSENCE_SH"
       },
       "aspects": {
         "mortuus": 4,
@@ -8242,7 +8401,7 @@
       "type": "crucible",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)Config.miscResources.getStackForType(ResourceType"
+        "raw": "Config.miscResources.getStackForType(ResourceType.ESSENCE_EV"
       },
       "aspects": {
         "tutamen": 4,
@@ -8260,14 +8419,15 @@
       "type": "crucible",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)output"
+        "ref": "shard",
+        "meta": null
       },
       "aspects": {
         "perditio": 2,
         "permutatio": 1
       },
       "input": {
-        "raw": "(Object)Config.propolis.getStackForType(PropolisType.UNSTABL"
+        "raw": "Config.propolis.getStackForType(PropolisType.UNSTABLE)"
       }
     },
     {
@@ -8275,14 +8435,15 @@
       "type": "crucible",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)output"
+        "ref": "shard",
+        "meta": null
       },
       "aspects": {
         "perditio": 8,
         "permutatio": 5
       },
       "input": {
-        "raw": "(Object)netherrack"
+        "tag": "NETHER_RACK"
       }
     },
     {
@@ -8290,7 +8451,7 @@
       "type": "crucible",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)Config.miscResources.getStackForType(ResourceType"
+        "raw": "Config.miscResources.getStackForType(ResourceType.ESSENCE_LO"
       },
       "aspects": {
         "ordo": 10,
@@ -8337,7 +8498,8 @@
       "type": "arcane",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)new ItemStack((Item)Config.hiveFrameMagic)"
+        "ref": "Config.hiveFrameMagic",
+        "meta": null
       },
       "aspects": {
         "ordo": 5,
@@ -8350,7 +8512,10 @@
       "type": "arcane",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)new ItemStack((Block)Config.visAuraProvider)"
+        "ref": "Config.visAuraProvider",
+        "meta": null,
+        "name_en": "Vis Apiary Booster",
+        "name_ru": ""
       },
       "aspects": {
         "ordo": 60,
@@ -8364,20 +8529,28 @@
       "type": "arcane_shapeless",
       "mod": "MagicBees",
       "output": {
-        "raw": "(ItemStack)Config.miscResources.getStackForType(ResourceType"
+        "raw": "Config.miscResources.getStackForType(ResourceType.ESSENCE_SC"
       },
       "aspects": {
         "perditio": 25,
         "aer": 40,
         "ordo": 15
-      }
+      },
+      "inputs": [
+        {
+          "vanilla": "field_150380_bt",
+          "reg": "dragon_egg",
+          "name_en": "Dragon Egg",
+          "name_ru": "Яйцо дракона"
+        }
+      ]
     },
     {
       "research": "(String)\"MB_DimensionalSingularity",
       "type": "infusion",
       "mod": "MagicBees",
       "output": {
-        "raw": "(Object)Config.miscResources.getStackForType(ResourceType.DI"
+        "raw": "Config.miscResources.getStackForType(ResourceType.DIMENSIONA"
       },
       "aspects": {
         "alienis": 10,
@@ -8389,14 +8562,22 @@
         "reg": "gold_block",
         "name_en": "Gold Block",
         "name_ru": "Gold Block"
-      }
+      },
+      "components": [
+        {
+          "raw": "Config.miscResources.getStackForType(ResourceType.TC_DUST_AI"
+        },
+        {
+          "raw": "Config.miscResources.getStackForType(ResourceType.TC_DUST_AI"
+        }
+      ]
     },
     {
       "research": "(String)\"MB_DimensionalSingularity",
       "type": "infusion",
       "mod": "MagicBees",
       "output": {
-        "raw": "(Object)Config.miscResources.getStackForType(ResourceType.DI"
+        "raw": "Config.miscResources.getStackForType(ResourceType.DIMENSIONA"
       },
       "aspects": {
         "alienis": 10,
@@ -8405,8 +8586,22 @@
       },
       "instability": 6,
       "central": {
-        "raw": "(ItemStack)Config.propolis.getStackForType(PropolisType.UNST"
-      }
+        "raw": "Config.propolis.getStackForType(PropolisType.UNSTABLE)"
+      },
+      "components": [
+        {
+          "raw": "Config.miscResources.getStackForType(ResourceType.TC_DUST_AI"
+        },
+        {
+          "raw": "Config.miscResources.getStackForType(ResourceType.TC_DUST_AI"
+        },
+        {
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        }
+      ]
     },
     {
       "research": "(String)\"TAINTTREE",
@@ -8465,7 +8660,7 @@
         "lucrum": 2
       },
       "input": {
-        "raw": "(Object)\"nuggetEmerald\""
+        "raw": "\"nuggetEmerald\""
       }
     },
     {
@@ -8552,13 +8747,6 @@
           "meta": null,
           "name_en": "Scribing Tools",
           "name_ru": "Чернильница с пером"
-        },
-        {
-          "oredict": "dyeBlack"
-        },
-        {
-          "ref": "itemShard",
-          "meta": null
         }
       ]
     },
@@ -8579,24 +8767,9 @@
       "inputs": [
         {
           "ref": "itemInkwell",
-          "meta": null,
+          "meta": 6,
           "name_en": "Scribing Tools",
           "name_ru": "Чернильница с пером"
-        },
-        {
-          "oredict": "dyeBlack"
-        },
-        {
-          "ref": "blockCrystal",
-          "meta": 6,
-          "name_en": "Mixed Crystal Cluster",
-          "name_ru": "Смешанный кристальный кластер"
-        },
-        {
-          "ref": "itemShard",
-          "meta": 6,
-          "name_en": "Balanced Shard",
-          "name_ru": "Сбалансированный кристалл"
         }
       ]
     },
@@ -8620,22 +8793,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_151008_G",
-          "reg": "feather",
-          "name_en": "Feather",
-          "name_ru": "Перо"
-        },
-        {
           "ref": "itemEldritchObject",
-          "meta": 3,
-          "name_en": "Primordial Pearl",
-          "name_ru": "Сингулярная жемчужина"
-        },
-        {
-          "vanilla": "field_151069_bo",
-          "reg": "glass_bottle",
-          "name_en": "Glass Bottle",
-          "name_ru": "Пузырёк"
+          "meta": 0,
+          "name_en": "Eldritch Eye",
+          "name_ru": "Глаз Древних"
         }
       ]
     },
@@ -8656,11 +8817,17 @@
       },
       "instability": 5,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemShovelThaumium\", (in"
+        "ref": "itemShovelThaumium",
+        "meta": 0,
+        "name_en": "Thaumium Shovel",
+        "name_ru": "Таум-лопата"
       },
       "components": [
         {
-          "oredict": "itemShard"
+          "ref": "itemShard",
+          "meta": 4,
+          "name_en": "Order Shard",
+          "name_ru": "Кристалл порядка"
         },
         {
           "ref": "itemResource",
@@ -8675,7 +8842,8 @@
           "name_ru": "Алмаз"
         },
         {
-          "oredict": "blockMagicalLog"
+          "ref": "blockMagicalLog",
+          "meta": 1
         }
       ]
     },
@@ -8696,11 +8864,17 @@
       },
       "instability": 1,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemPickThaumium\", (int)"
+        "ref": "itemPickThaumium",
+        "meta": 0,
+        "name_en": "Thaumium Pickaxe",
+        "name_ru": "Таум-кирка"
       },
       "components": [
         {
-          "oredict": "itemShard"
+          "ref": "itemShard",
+          "meta": 5,
+          "name_en": "Entropy Shard",
+          "name_ru": "Энтропийный кристалл"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
@@ -8715,7 +8889,8 @@
           "name_ru": "Алмаз"
         },
         {
-          "oredict": "blockMagicalLog"
+          "ref": "blockMagicalLog",
+          "meta": 0
         }
       ]
     },
@@ -8725,7 +8900,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Tainted Rod",
+        "name_ru": "Заражённый стержень"
       },
       "aspects": {
         "vitium": 24,
@@ -8734,11 +8911,17 @@
       },
       "instability": 5,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemResource\", (int)12)"
+        "ref": "itemResource",
+        "meta": 12,
+        "name_en": "Taint Tendril",
+        "name_ru": "Заражённое щупальце"
       },
       "components": [
         {
-          "oredict": "itemResource"
+          "ref": "itemResource",
+          "meta": 14,
+          "name_en": "Salis Mundus",
+          "name_ru": "Salis Mundus"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
@@ -8795,7 +8978,10 @@
       },
       "instability": 1,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemAxeThaumium\", (int)0"
+        "ref": "itemAxeThaumium",
+        "meta": 0,
+        "name_en": "Thaumium Axe",
+        "name_ru": "Таум-топор"
       },
       "components": [
         {
@@ -8815,6 +9001,9 @@
           "reg": "diamond",
           "name_en": "Diamond",
           "name_ru": "Алмаз"
+        },
+        {
+          "tag": "WITHER_SKELETON_SKULL"
         }
       ]
     },
@@ -8898,7 +9087,10 @@
       },
       "components": [
         {
-          "oredict": "itemResource"
+          "ref": "itemResource",
+          "meta": 14,
+          "name_en": "Salis Mundus",
+          "name_ru": "Salis Mundus"
         },
         {
           "vanilla": "field_151110_aK",
@@ -8956,7 +9148,10 @@
       },
       "components": [
         {
-          "oredict": "itemResource"
+          "ref": "itemResource",
+          "meta": 14,
+          "name_en": "Salis Mundus",
+          "name_ru": "Salis Mundus"
         },
         {
           "ref": "ForbiddenBlocks.starBlock",
@@ -9015,16 +9210,34 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards",
-          "meta": 5,
-          "name_en": "Sloth Shard",
-          "name_ru": "Осколок лени"
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
           "meta": 5,
           "name_en": "Sloth Shard",
           "name_ru": "Осколок лени"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 5,
+          "name_en": "Sloth Shard",
+          "name_ru": "Осколок лени"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
@@ -9051,7 +9264,10 @@
       },
       "instability": 6,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemPickThaumium\", (int)"
+        "ref": "itemPickThaumium",
+        "meta": 0,
+        "name_en": "Thaumium Pickaxe",
+        "name_ru": "Таум-кирка"
       },
       "components": [
         {
@@ -9073,10 +9289,14 @@
           "name_ru": "Алмаз"
         },
         {
-          "oredict": "itemResource"
+          "ref": "itemResource",
+          "meta": 3,
+          "name_en": "Quicksilver",
+          "name_ru": "Ртуть"
         },
         {
-          "oredict": "blockMagicalLog"
+          "ref": "blockMagicalLog",
+          "meta": 1
         }
       ]
     },
@@ -9097,7 +9317,10 @@
       },
       "instability": 6,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemSwordThaumium\", (int"
+        "ref": "itemSwordThaumium",
+        "meta": 0,
+        "name_en": "Thaumium Sword",
+        "name_ru": "Таум-меч"
       },
       "components": [
         {
@@ -9119,10 +9342,14 @@
           "name_ru": "Алмаз"
         },
         {
-          "oredict": "itemResource"
+          "ref": "itemResource",
+          "meta": 3,
+          "name_en": "Quicksilver",
+          "name_ru": "Ртуть"
         },
         {
-          "oredict": "blockMagicalLog"
+          "ref": "blockMagicalLog",
+          "meta": 1
         }
       ]
     },
@@ -9143,7 +9370,10 @@
       },
       "instability": 6,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemShovelThaumium\", (in"
+        "ref": "itemShovelThaumium",
+        "meta": 0,
+        "name_en": "Thaumium Shovel",
+        "name_ru": "Таум-лопата"
       },
       "components": [
         {
@@ -9165,10 +9395,14 @@
           "name_ru": "Алмаз"
         },
         {
-          "oredict": "itemResource"
+          "ref": "itemResource",
+          "meta": 3,
+          "name_en": "Quicksilver",
+          "name_ru": "Ртуть"
         },
         {
-          "oredict": "blockMagicalLog"
+          "ref": "blockMagicalLog",
+          "meta": 1
         }
       ]
     },
@@ -9189,7 +9423,10 @@
       },
       "instability": 6,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemAxeThaumium\", (int)0"
+        "ref": "itemAxeThaumium",
+        "meta": 0,
+        "name_en": "Thaumium Axe",
+        "name_ru": "Таум-топор"
       },
       "components": [
         {
@@ -9211,10 +9448,14 @@
           "name_ru": "Алмаз"
         },
         {
-          "oredict": "itemResource"
+          "ref": "itemResource",
+          "meta": 3,
+          "name_en": "Quicksilver",
+          "name_ru": "Ртуть"
         },
         {
-          "oredict": "blockMagicalLog"
+          "ref": "blockMagicalLog",
+          "meta": 1
         }
       ]
     },
@@ -9224,7 +9465,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Infernal Rod",
+        "name_ru": "Адский стержень"
       },
       "aspects": {
         "infernus": 32,
@@ -9233,11 +9476,17 @@
       },
       "instability": 5,
       "central": {
-        "raw": "(ItemStack)blazeRod"
+        "tag": "BLAZE_ROD",
+        "reg": "blaze_rod",
+        "name_en": "Blaze Rod",
+        "name_ru": "Стержень ифрита"
       },
       "components": [
         {
-          "oredict": "itemResource"
+          "ref": "itemResource",
+          "meta": 14,
+          "name_en": "Salis Mundus",
+          "name_ru": "Salis Mundus"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
@@ -9250,6 +9499,27 @@
           "meta": 3,
           "name_en": "Pride Shard",
           "name_ru": "Осколок гордости"
+        },
+        {
+          "tag": "SOUL_SAND",
+          "reg": "soul_sand",
+          "name_en": "Soul Sand",
+          "name_ru": "Песок душ"
+        },
+        {
+          "tag": "WITHER_SKELETON_SKULL"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
+          "tag": "BLAZE_POWDER",
+          "reg": "blaze_powder",
+          "name_en": "Blaze Powder",
+          "name_ru": "Огненный порошок"
         }
       ]
     },
@@ -9271,7 +9541,10 @@
       },
       "instability": 10,
       "central": {
-        "raw": "(ItemStack)ItemApi.getBlock((String)\"blockCosmeticSolid\", (i"
+        "ref": "blockCosmeticSolid",
+        "meta": 4,
+        "name_en": "Thaumium Block",
+        "name_ru": "Блок таум-металла"
       },
       "components": [
         {
@@ -9323,13 +9596,22 @@
           "name_ru": "Алмаз"
         },
         {
-          "oredict": "blockJar"
+          "ref": "blockJar",
+          "meta": 0,
+          "name_en": "Warded Jar",
+          "name_ru": "Банка"
         },
         {
-          "oredict": "blockJar"
+          "ref": "blockJar",
+          "meta": 0,
+          "name_en": "Warded Jar",
+          "name_ru": "Банка"
         },
         {
-          "oredict": "blockJar"
+          "ref": "blockJar",
+          "meta": 0,
+          "name_en": "Warded Jar",
+          "name_ru": "Банка"
         }
       ]
     },
@@ -9350,9 +9632,30 @@
       },
       "instability": 1,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemSwordThaumium\", (int"
+        "ref": "itemSwordThaumium",
+        "meta": 0,
+        "name_en": "Thaumium Sword",
+        "name_ru": "Таум-меч"
       },
       "components": [
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
         {
           "vanilla": "field_151137_ax",
           "reg": "redstone",
@@ -9395,10 +9698,10 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_151035_b",
-        "reg": "iron_pickaxe",
-        "name_en": "Iron Pickaxe",
-        "name_ru": "Железная кирка"
+        "ref": "itemResource",
+        "meta": 14,
+        "name_en": "Salis Mundus",
+        "name_ru": "Salis Mundus"
       }
     },
     {
@@ -9415,10 +9718,10 @@
       },
       "instability": 8,
       "central": {
-        "vanilla": "field_151048_u",
-        "reg": "diamond_sword",
-        "name_en": "Diamond Sword",
-        "name_ru": "Алмазный меч"
+        "ref": "itemResource",
+        "meta": 0,
+        "name_en": "Alumentum",
+        "name_ru": "Алюментум"
       }
     },
     {
@@ -9435,10 +9738,10 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_151122_aG",
-        "reg": "book",
-        "name_en": "Book",
-        "name_ru": "Книга"
+        "ref": "itemZombieBrain",
+        "meta": 0,
+        "name_en": "Zombie Brain",
+        "name_ru": "Мозг зомби"
       }
     },
     {
@@ -9455,7 +9758,10 @@
       },
       "instability": 4,
       "central": {
-        "raw": "(ItemStack[])new ItemStack[]{netherWart, souldSand, ItemApi."
+        "ref": "itemResource",
+        "meta": 14,
+        "name_en": "Salis Mundus",
+        "name_ru": "Salis Mundus"
       }
     },
     {
@@ -9472,7 +9778,10 @@
       },
       "instability": 3,
       "central": {
-        "raw": "(ItemStack[])new ItemStack[]{ItemApi.getItem((String)\"itemPi"
+        "ref": "itemPickElemental",
+        "meta": 0,
+        "name_en": "Pickaxe of the Core",
+        "name_ru": "Кирка Огня"
       }
     },
     {
@@ -9488,10 +9797,10 @@
       },
       "instability": 4,
       "central": {
-        "ref": "itemShovelElemental",
+        "ref": "itemResource",
         "meta": 1,
-        "name_en": "Shovel of the Earthmover",
-        "name_ru": "Лопата Землероя"
+        "name_en": "Nitor",
+        "name_ru": "Нитор"
       }
     },
     {
@@ -9509,10 +9818,10 @@
       },
       "instability": 8,
       "central": {
-        "ref": "ForbiddenItems.deadlyShards",
+        "ref": "itemResource",
         "meta": 1,
-        "name_en": "Envy Shard",
-        "name_ru": "Осколок зависти"
+        "name_en": "Nitor",
+        "name_ru": "Нитор"
       }
     },
     {
@@ -9521,7 +9830,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 9
+        "meta": 9,
+        "name_en": "Blood Staff Core",
+        "name_ru": "Кровавое ядро посоха"
       },
       "aspects": {
         "perditio": 26,
@@ -9552,20 +9863,6 @@
           "reg": "feather",
           "name_en": "Feather",
           "name_ru": "Перо"
-        },
-        {
-          "ref": "bloodBucket",
-          "meta": 0
-        },
-        {
-          "vanilla": "field_151069_bo",
-          "reg": "glass_bottle",
-          "name_en": "Glass Bottle",
-          "name_ru": "Пузырёк"
-        },
-        {
-          "ref": "crapOrb",
-          "meta": 0
         }
       ]
     },
@@ -9575,7 +9872,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Inert Blood Rod",
+        "name_ru": "Инертный кровавый стержень"
       },
       "aspects": {
         "victus": 32,
@@ -9584,44 +9883,44 @@
       },
       "instability": 2,
       "central": {
-        "ref": "masterOrb",
+        "ref": "AWWayofTime",
         "meta": null
       },
       "components": [
         {
-          "ref": "magicales",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "imbuedSlate",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "imbuedSlate",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "tennebrae",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "sanctus",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "aquasalus",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "incendium",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "terrae",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "aether",
+          "ref": "AWWayofTime",
           "meta": null
         }
       ]
@@ -9633,8 +9932,8 @@
       "output": {
         "ref": "ForbiddenItems.wandCap",
         "meta": 0,
-        "name_en": "Iron Cap",
-        "name_ru": "Железный наконечник"
+        "name_en": "Alchemical Cap",
+        "name_ru": "Алхимический наконечник"
       },
       "aspects": {
         "victus": 12,
@@ -9642,19 +9941,22 @@
       },
       "instability": 3,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemWandCap\", (int)1)"
+        "ref": "itemWandCap",
+        "meta": 1,
+        "name_en": "Gold Cap",
+        "name_ru": "Золотой наконечник"
       },
       "components": [
         {
-          "ref": "magicales",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "magicales",
+          "ref": "AWWayofTime",
           "meta": null
         },
         {
-          "ref": "magicales",
+          "ref": "AWWayofTime",
           "meta": null
         }
       ]
@@ -9676,7 +9978,10 @@
       },
       "instability": 8,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemSwordVoid\", (int)0)"
+        "ref": "itemSwordVoid",
+        "meta": 0,
+        "name_en": "Void Sword",
+        "name_ru": "Пустотный меч"
       },
       "components": [
         {
@@ -9729,7 +10034,7 @@
       },
       "instability": 2,
       "central": {
-        "ref": "kamiOrb",
+        "ref": "AWWayofTime",
         "meta": null
       },
       "components": [
@@ -9764,6 +10069,12 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
+          "tag": "NETHER_STAR",
+          "reg": "nether_star",
+          "name_en": "Nether Star",
+          "name_ru": "Адская звезда"
+        },
+        {
           "ref": "itemResource",
           "meta": 16,
           "name_en": "Void metal Ingot",
@@ -9795,7 +10106,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 10
+        "meta": 10,
+        "name_en": "Witchwood Staff Core",
+        "name_ru": "Ядро посоха из ведьминой древесины"
       },
       "aspects": {
         "perditio": 26,
@@ -9812,7 +10125,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Witchwood Rod",
+        "name_ru": "Стержень из ведьминой древесины"
       },
       "aspects": {
         "praecantatio": 16,
@@ -9823,45 +10138,35 @@
       },
       "instability": 5,
       "central": {
-        "ref": "witchwood",
-        "meta": null
+        "raw": "amBlocks.getField(\"witchwoodLog\").get(null)"
       },
       "components": [
         {
-          "ref": "essence",
-          "meta": 0
+          "raw": "amItems.getField(\"essence\").get(null)"
         },
         {
-          "ref": "amOre",
-          "meta": 3
+          "raw": "amItems.getField(\"itemOre\").get(null)"
         },
         {
-          "ref": "essence",
-          "meta": 1
+          "raw": "amItems.getField(\"essence\").get(null)"
         },
         {
-          "ref": "essence",
-          "meta": 2
+          "raw": "amItems.getField(\"essence\").get(null)"
         },
         {
-          "ref": "essence",
-          "meta": 3
+          "raw": "amItems.getField(\"essence\").get(null)"
         },
         {
-          "ref": "essence",
-          "meta": 4
+          "raw": "amItems.getField(\"essence\").get(null)"
         },
         {
-          "ref": "amOre",
-          "meta": 6
+          "raw": "amItems.getField(\"itemOre\").get(null)"
         },
         {
-          "ref": "amOre",
-          "meta": 7
+          "raw": "amItems.getField(\"itemOre\").get(null)"
         },
         {
-          "ref": "amOre",
-          "meta": 2
+          "raw": "amItems.getField(\"itemOre\").get(null)"
         }
       ]
     },
@@ -9872,8 +10177,8 @@
       "output": {
         "ref": "ForbiddenItems.wandCap",
         "meta": 1,
-        "name_en": "Gold Cap",
-        "name_ru": "Золотой наконечник"
+        "name_en": "Vinteum Cap",
+        "name_ru": "Винтеумный наконечник"
       },
       "aspects": {
         "potentia": 12,
@@ -9881,20 +10186,20 @@
       },
       "instability": 5,
       "central": {
-        "raw": "(ItemStack)ItemApi.getItem((String)\"itemWandCap\", (int)6)"
+        "ref": "itemWandCap",
+        "meta": 6,
+        "name_en": "Inert Thaumium Cap",
+        "name_ru": "Инертный таум-наконечник"
       },
       "components": [
         {
-          "ref": "amOre",
-          "meta": 0
+          "raw": "amItems.getField(\"itemOre\").get(null)"
         },
         {
-          "ref": "amOre",
-          "meta": 0
+          "raw": "amItems.getField(\"itemOre\").get(null)"
         },
         {
-          "ref": "amOre",
-          "meta": 0
+          "raw": "amItems.getField(\"itemOre\").get(null)"
         }
       ]
     },
@@ -9905,8 +10210,8 @@
       "output": {
         "ref": "ForbiddenItems.wandCap",
         "meta": 4,
-        "name_en": "Charged Silver Cap",
-        "name_ru": "Заряженный серебряный наконечник"
+        "name_en": "Inert Manasteel Cap",
+        "name_ru": "Инертный манастальной наконечник"
       },
       "aspects": {
         "perditio": 6,
@@ -9923,7 +10228,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 13
+        "meta": 13,
+        "name_en": "Dreamwood Staff Core",
+        "name_ru": "Ядро посоха из древесины мечтаний"
       },
       "aspects": {
         "perditio": 26,
@@ -9941,8 +10248,8 @@
       "output": {
         "ref": "ForbiddenItems.wandCap",
         "meta": 6,
-        "name_en": "Inert Thaumium Cap",
-        "name_ru": "Инертный таум-наконечник"
+        "name_en": "Inert Elementium Cap",
+        "name_ru": "Инертный элементиевый наконечник"
       },
       "aspects": {
         "perditio": 27,
@@ -9958,7 +10265,7 @@
       "type": "arcane_shapeless",
       "mod": "ForbiddenMagic",
       "output": {
-        "raw": "(ItemStack)whisperweed"
+        "raw": "ForbiddenBotany.getFlower(\"whisperweed\")"
       },
       "aspects": {
         "ignis": 10,
@@ -9970,41 +10277,10 @@
       },
       "inputs": [
         {
-          "raw": "new ItemStack((Block)"
-        },
-        {
-          "ref": "resource",
+          "ref": "itemResource",
           "meta": 2,
-          "name_en": "Manasteel Nugget",
-          "name_ru": "Самородок манастали"
-        },
-        {
-          "ref": "resource",
-          "meta": 6
-        },
-        {
-          "ref": "itemResource",
-          "meta": 9,
-          "name_en": "Knowledge Fragment",
-          "name_ru": "Фрагмент знаний"
-        },
-        {
-          "ref": "petal",
-          "meta": 7
-        },
-        {
-          "ref": "petal",
-          "meta": 10
-        },
-        {
-          "ref": "rune",
-          "meta": 14
-        },
-        {
-          "ref": "itemResource",
-          "meta": 6,
-          "name_en": "Amber",
-          "name_ru": "Янтарь"
+          "name_en": "Thaumium Ingot",
+          "name_ru": "Таум-слиток"
         }
       ]
     },
@@ -10014,7 +10290,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 8
+        "meta": 8,
+        "name_en": "Dormant Livingwood Rod",
+        "name_ru": "Бездействующий стержень из живой древесины"
       },
       "aspects": {
         "praecantatio": 16,
@@ -10025,8 +10303,7 @@
       },
       "instability": 3,
       "central": {
-        "ref": "livingLog",
-        "meta": null
+        "raw": "GameRegistry.findBlock((String)\"Botania\", (String)\"livingwoo"
       },
       "components": [
         {
@@ -10036,40 +10313,40 @@
           "name_ru": "Самородок манастали"
         },
         {
-          "ref": "rune",
-          "meta": 8
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 0
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 1
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 2
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 3
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 4
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 5
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 6
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 7
+          "ref": "Botania",
+          "meta": null
         }
       ]
     },
@@ -10079,7 +10356,9 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.wandCore",
-        "meta": 12
+        "meta": 12,
+        "name_en": "Silent Dreamwood Rod",
+        "name_ru": "Бездействующий стержень из древесины мечтаний"
       },
       "aspects": {
         "praecantatio": 16,
@@ -10090,8 +10369,7 @@
       },
       "instability": 3,
       "central": {
-        "ref": "dreamwood",
-        "meta": null
+        "raw": "GameRegistry.findBlock((String)\"Botania\", (String)\"dreamwood"
       },
       "components": [
         {
@@ -10101,40 +10379,40 @@
           "name_ru": "Самородок манастали"
         },
         {
-          "ref": "rune",
-          "meta": 8
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 0
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 1
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 2
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 3
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 4
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 5
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 6
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 7
+          "ref": "Botania",
+          "meta": null
         }
       ]
     },
@@ -10145,8 +10423,8 @@
       "output": {
         "ref": "ForbiddenItems.wandCap",
         "meta": 5,
-        "name_en": "Inert Silver Cap",
-        "name_ru": "Инертный серебряный наконечник"
+        "name_en": "Elementium Cap",
+        "name_ru": "Элементиевый наконечник"
       },
       "aspects": {
         "terra": 18,
@@ -10158,29 +10436,29 @@
       "central": {
         "ref": "ForbiddenItems.wandCap",
         "meta": 6,
-        "name_en": "Inert Thaumium Cap",
-        "name_ru": "Инертный таум-наконечник"
+        "name_en": "Inert Elementium Cap",
+        "name_ru": "Инертный элементиевый наконечник"
       },
       "components": [
         {
-          "ref": "resource",
-          "meta": 5
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 0
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 1
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 2
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 3
+          "ref": "Botania",
+          "meta": null
         }
       ]
     },
@@ -10189,7 +10467,7 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "raw": "(Object)euclidaisy"
+        "raw": "ForbiddenBotany.getFlower(\"euclidaisy\")"
       },
       "aspects": {
         "auram": 8,
@@ -10198,8 +10476,8 @@
       },
       "instability": 8,
       "central": {
-        "ref": "flower",
-        "meta": 6
+        "ref": "Botania",
+        "meta": null
       },
       "components": [
         {
@@ -10215,24 +10493,24 @@
           "name_ru": "Теневые чернила"
         },
         {
-          "ref": "resource",
-          "meta": 6
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "petal",
-          "meta": 6
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "petal",
-          "meta": 6
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 12
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 11
+          "ref": "Botania",
+          "meta": null
         }
       ]
     },
@@ -10241,7 +10519,7 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "raw": "(Object)tainthistle"
+        "raw": "ForbiddenBotany.getFlower(\"tainthistle\")"
       },
       "aspects": {
         "vitium": 8,
@@ -10258,24 +10536,24 @@
       },
       "components": [
         {
-          "ref": "petal",
-          "meta": 10
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "petal",
-          "meta": 10
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "petal",
-          "meta": 10
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 10
+          "ref": "Botania",
+          "meta": null
         },
         {
-          "ref": "rune",
-          "meta": 8
+          "ref": "Botania",
+          "meta": null
         }
       ]
     },
@@ -10708,22 +10986,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemCrimsonBlood",
-          "meta": null,
-          "name_en": "Phial of Crimson Blood",
-          "name_ru": ""
-        },
-        {
           "ref": "itemResource",
           "meta": 7,
           "name_en": "Enchanted Fabric",
           "name_ru": "Зачарованная ткань"
-        },
-        {
-          "vanilla": "field_151074_bl",
-          "reg": "gold_nugget",
-          "name_en": "Gold Nugget",
-          "name_ru": "Золотой самородок"
         }
       ]
     },
@@ -10743,27 +11009,9 @@
       "inputs": [
         {
           "ref": "itemZombieBrain",
-          "meta": null,
+          "meta": 3,
           "name_en": "Zombie Brain",
           "name_ru": "Мозг зомби"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial",
-          "meta": 3,
-          "name_en": "Warped Unbalanced Shard",
-          "name_ru": ""
-        },
-        {
-          "ref": "itemWispEssence",
-          "meta": null,
-          "name_en": "Ethereal Essence",
-          "name_ru": "Эфирная эссенция"
-        },
-        {
-          "vanilla": "field_151100_aR",
-          "reg": "dye",
-          "name_en": "Dye",
-          "name_ru": "Dye"
         }
       ]
     },
@@ -10784,10 +11032,6 @@
           "meta": 5,
           "name_en": "Vishroom",
           "name_ru": "Висомор"
-        },
-        {
-          "ref": "itemShard",
-          "meta": null
         }
       ]
     },
@@ -10924,7 +11168,10 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new ItemStack((Item)ItemRegistry.ItemPrimalBlade)"
+        "ref": "ItemRegistry.ItemPrimalBlade",
+        "meta": null,
+        "name_en": "Primal Blade",
+        "name_ru": ""
       },
       "aspects": {
         "telum": 65,
@@ -11022,10 +11269,22 @@
           "name_ru": "Железный меч"
         },
         {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
           "ref": "itemShard",
           "meta": 5,
           "name_en": "Entropy Shard",
           "name_ru": "Энтропийный кристалл"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         },
         {
           "vanilla": "field_151040_l",
@@ -11034,10 +11293,22 @@
           "name_ru": "Железный меч"
         },
         {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        },
+        {
           "ref": "itemShard",
           "meta": 5,
           "name_en": "Entropy Shard",
           "name_ru": "Энтропийный кристалл"
+        },
+        {
+          "tag": "QUARTZ",
+          "reg": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
         }
       ]
     },
@@ -11232,6 +11503,12 @@
           "name_ru": "Ледяной кристалл"
         },
         {
+          "tag": "NETHER_STAR",
+          "reg": "nether_star",
+          "name_en": "Nether Star",
+          "name_ru": "Адская звезда"
+        },
+        {
           "ref": "itemShard",
           "meta": 3,
           "name_en": "Earth Shard",
@@ -11325,7 +11602,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"goggles\", new NBTTagByte(1)}"
+        "raw": "new Object[]{\"goggles\", new NBTTagByte(1)}"
       },
       "aspects": {
         "sensus": 32,
@@ -11359,7 +11636,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"mask\", new NBTTagInt(0)}"
+        "raw": "new Object[]{\"mask\", new NBTTagInt(0)}"
       },
       "aspects": {
         "cognitio": 64,
@@ -11417,7 +11694,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"mask\", new NBTTagInt(1)}"
+        "raw": "new Object[]{\"mask\", new NBTTagInt(1)}"
       },
       "aspects": {
         "perditio": 64,
@@ -11457,6 +11734,9 @@
           "name_ru": "Ядовитый картофель"
         },
         {
+          "tag": "WITHER_SKELETON_SKULL"
+        },
+        {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
@@ -11469,7 +11749,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"mask\", new NBTTagInt(2)}"
+        "raw": "new Object[]{\"mask\", new NBTTagInt(2)}"
       },
       "aspects": {
         "exanimis": 64,
@@ -11501,6 +11781,12 @@
           "reg": "leather",
           "name_en": "Leather",
           "name_ru": "Кожа"
+        },
+        {
+          "tag": "GHAST_TEAR",
+          "reg": "ghast_tear",
+          "name_en": "Ghast Tear",
+          "name_ru": "Слеза Гаста"
         },
         {
           "vanilla": "field_151117_aB",
@@ -12289,7 +12575,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"goggles\", new NBTTagByte(1)}"
+        "raw": "new Object[]{\"goggles\", new NBTTagByte(1)}"
       },
       "aspects": {
         "sensus": 32,
@@ -12323,7 +12609,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"mask\", new NBTTagInt(0)}"
+        "raw": "new Object[]{\"mask\", new NBTTagInt(0)}"
       },
       "aspects": {
         "cognitio": 64,
@@ -12381,7 +12667,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"mask\", new NBTTagInt(1)}"
+        "raw": "new Object[]{\"mask\", new NBTTagInt(1)}"
       },
       "aspects": {
         "perditio": 64,
@@ -12421,6 +12707,9 @@
           "name_ru": "Ядовитый картофель"
         },
         {
+          "tag": "WITHER_SKELETON_SKULL"
+        },
+        {
           "vanilla": "field_151042_j",
           "reg": "iron_ingot",
           "name_en": "Iron Ingot",
@@ -12433,7 +12722,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"mask\", new NBTTagInt(2)}"
+        "raw": "new Object[]{\"mask\", new NBTTagInt(2)}"
       },
       "aspects": {
         "exanimis": 64,
@@ -12465,6 +12754,12 @@
           "reg": "leather",
           "name_en": "Leather",
           "name_ru": "Кожа"
+        },
+        {
+          "tag": "GHAST_TEAR",
+          "reg": "ghast_tear",
+          "name_en": "Ghast Tear",
+          "name_ru": "Слеза Гаста"
         },
         {
           "vanilla": "field_151117_aB",
@@ -12681,6 +12976,12 @@
       },
       "components": [
         {
+          "tag": "OBSIDIAN",
+          "reg": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        {
           "ref": "itemResource",
           "meta": 2,
           "name_en": "Thaumium Ingot",
@@ -12709,6 +13010,12 @@
           "meta": 2,
           "name_en": "Thaumium Ingot",
           "name_ru": "Таум-слиток"
+        },
+        {
+          "tag": "OBSIDIAN",
+          "reg": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
         },
         {
           "ref": "itemResource",
@@ -12768,6 +13075,12 @@
       },
       "components": [
         {
+          "tag": "OBSIDIAN",
+          "reg": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        {
           "ref": "itemResource",
           "meta": 16,
           "name_en": "Void metal Ingot",
@@ -12796,6 +13109,12 @@
           "meta": 16,
           "name_en": "Void metal Ingot",
           "name_ru": "Слиток пустотного металла"
+        },
+        {
+          "tag": "OBSIDIAN",
+          "reg": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
         },
         {
           "ref": "itemResource",
@@ -12848,9 +13167,18 @@
       },
       "instability": 7,
       "central": {
-        "raw": "(ItemStack)new ItemStack((Item)ItemRegistry.ItemShadowmetalS"
+        "ref": "ItemRegistry.ItemShadowmetalSword",
+        "meta": null,
+        "name_en": "Shadow Metal Blade",
+        "name_ru": ""
       },
       "components": [
+        {
+          "tag": "OBSIDIAN",
+          "reg": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
         {
           "ref": "ItemRegistry.ItemMaterial",
           "meta": 0,
@@ -12880,6 +13208,12 @@
           "meta": 0,
           "name_en": "Shadow Metal Ingot",
           "name_ru": ""
+        },
+        {
+          "tag": "OBSIDIAN",
+          "reg": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
         },
         {
           "ref": "ItemRegistry.ItemMaterial",
@@ -13165,7 +13499,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"inscription\", new NBTTagInt(0)}"
+        "raw": "new Object[]{\"inscription\", new NBTTagInt(0)}"
       },
       "aspects": {
         "ignis": 64,
@@ -13193,10 +13527,19 @@
           "name_ru": "Уголь"
         },
         {
+          "tag": "NETHER_RACK"
+        },
+        {
           "vanilla": "field_151059_bz",
           "reg": "fire_charge",
           "name_en": "Fire Charge",
           "name_ru": "Огненный шар"
+        },
+        {
+          "tag": "BLAZE_POWDER",
+          "reg": "blaze_powder",
+          "name_en": "Blaze Powder",
+          "name_ru": "Огненный порошок"
         },
         {
           "ref": "itemResource",
@@ -13211,7 +13554,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"inscription\", new NBTTagInt(1)}"
+        "raw": "new Object[]{\"inscription\", new NBTTagInt(1)}"
       },
       "aspects": {
         "aer": 64,
@@ -13269,7 +13612,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"inscription\", new NBTTagInt(2)}"
+        "raw": "new Object[]{\"inscription\", new NBTTagInt(2)}"
       },
       "aspects": {
         "sano": 64,
@@ -13327,7 +13670,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"inscription\", new NBTTagInt(0)}"
+        "raw": "new Object[]{\"inscription\", new NBTTagInt(0)}"
       },
       "aspects": {
         "ignis": 64,
@@ -13353,10 +13696,19 @@
           "name_ru": "Уголь"
         },
         {
+          "tag": "NETHER_RACK"
+        },
+        {
           "vanilla": "field_151059_bz",
           "reg": "fire_charge",
           "name_en": "Fire Charge",
           "name_ru": "Огненный шар"
+        },
+        {
+          "tag": "BLAZE_POWDER",
+          "reg": "blaze_powder",
+          "name_en": "Blaze Powder",
+          "name_ru": "Огненный порошок"
         },
         {
           "ref": "itemResource",
@@ -13371,7 +13723,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"inscription\", new NBTTagInt(1)}"
+        "raw": "new Object[]{\"inscription\", new NBTTagInt(1)}"
       },
       "aspects": {
         "aer": 64,
@@ -13427,7 +13779,7 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "raw": "(Object)new Object[]{\"inscription\", new NBTTagInt(2)}"
+        "raw": "new Object[]{\"inscription\", new NBTTagInt(2)}"
       },
       "aspects": {
         "sano": 64,
@@ -13483,7 +13835,7 @@
       "type": "arcane",
       "mod": "ThaumicTinkerer",
       "output": {
-        "raw": "(ItemStack)this.output"
+        "raw": "this.output"
       },
       "aspects": {}
     },
@@ -13492,11 +13844,11 @@
       "type": "crucible",
       "mod": "ThaumicTinkerer",
       "output": {
-        "raw": "(ItemStack)this.output"
+        "raw": "this.output"
       },
       "aspects": {},
       "input": {
-        "raw": "(Object)this.input"
+        "raw": "this.input"
       }
     },
     {
@@ -13504,20 +13856,39 @@
       "type": "infusion",
       "mod": "ThaumicTinkerer",
       "output": {
-        "raw": "(Object)this.output"
+        "raw": "this.output"
       },
       "aspects": {},
       "instability": null,
       "central": {
-        "raw": "(ItemStack)this.input"
-      }
+        "raw": "this.input"
+      },
+      "components": [
+        {
+          "raw": "(ItemStack[])this.stuff"
+        }
+      ]
     },
     {
       "research": "(String)this.researchKey",
       "type": "arcane_shapeless",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack"
+        "raw": "AEApi.instance().definitions().parts().arcaneCraftingTermina"
+      },
+      "aspects": {},
+      "inputs": [
+        {
+          "raw": "(Object[])objectArray"
+        }
+      ]
+    },
+    {
+      "research": "(String)this.researchKey",
+      "type": "arcane",
+      "mod": "AppliedEnergistics2",
+      "output": {
+        "raw": "iDefinitions.items().knowledgeCore().maybeStack(1).get()"
       },
       "aspects": {}
     },
@@ -13526,16 +13897,7 @@
       "type": "arcane",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack2"
-      },
-      "aspects": {}
-    },
-    {
-      "research": "(String)this.researchKey",
-      "type": "arcane",
-      "mod": "AppliedEnergistics2",
-      "output": {
-        "raw": "(ItemStack)itemStack3"
+        "raw": "iDefinitions.blocks().knowledgeInscriber().maybeStack(1).get"
       },
       "aspects": {}
     },
@@ -13544,20 +13906,25 @@
       "type": "infusion",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(Object)itemStack4"
+        "raw": "iDefinitions.blocks().arcaneAssembler().maybeStack(1).get()"
       },
       "aspects": {},
       "instability": 7,
       "central": {
-        "raw": "(ItemStack)commonDependantItems.MolecularAssembler"
-      }
+        "raw": "commonDependantItems.MolecularAssembler"
+      },
+      "components": [
+        {
+          "raw": "(ItemStack[])itemStackArray"
+        }
+      ]
     },
     {
       "research": "(String)this.researchKey",
       "type": "arcane",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack"
+        "raw": "AEApi.instance().definitions().blocks().distillationEncoder("
       },
       "aspects": {}
     },
@@ -13566,7 +13933,7 @@
       "type": "arcane",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack"
+        "raw": "iMaterials.aspectCell1kPart().maybeStack(1).get()"
       },
       "aspects": {}
     },
@@ -13575,7 +13942,7 @@
       "type": "arcane",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack2"
+        "raw": "iMaterials.aspectCell4kPart().maybeStack(1).get()"
       },
       "aspects": {}
     },
@@ -13584,7 +13951,7 @@
       "type": "arcane",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack3"
+        "raw": "iMaterials.aspectCell16kPart().maybeStack(1).get()"
       },
       "aspects": {}
     },
@@ -13593,7 +13960,7 @@
       "type": "arcane",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack4"
+        "raw": "iMaterials.aspectCell64kPart().maybeStack(1).get()"
       },
       "aspects": {}
     },
@@ -13602,30 +13969,57 @@
       "type": "arcane_shapeless",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack2"
+        "raw": "AEApi.instance().definitions().materials().coalescenceCore()"
       },
-      "aspects": {}
+      "aspects": {},
+      "inputs": [
+        {
+          "raw": "(Object[])new Object[]{commonDependantItems.QuickSilverDrop,"
+        }
+      ]
     },
     {
       "research": "(String)this.researchKey",
       "type": "arcane_shapeless",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack"
+        "raw": "AEApi.instance().definitions().materials().diffusionCore().m"
       },
-      "aspects": {}
+      "aspects": {},
+      "inputs": [
+        {
+          "raw": "(Object[])new Object[]{commonDependantItems.QuickSilverDrop,"
+        }
+      ]
     },
     {
       "research": "(String)this.researchKey",
       "type": "infusion",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(Object)itemStack2"
+        "raw": "iDefinitions.blocks().infusionProvider().maybeStack(1).get()"
       },
       "aspects": {},
       "instability": 4,
       "central": {
-        "raw": "(ItemStack)commonDependantItems.MEInterface"
+        "raw": "commonDependantItems.MEInterface"
+      },
+      "components": [
+        {
+          "raw": "(ItemStack[])itemStackArray"
+        }
+      ]
+    },
+    {
+      "research": "(String)ResearchRegistry.ResearchTypes.CERTUS_DUPE.getKey()",
+      "type": "crucible",
+      "mod": "AppliedEnergistics2",
+      "output": {
+        "raw": "((ItemStack)OreDictionary.getOres((String)string).get(0)).fu"
+      },
+      "aspects": {},
+      "input": {
+        "raw": "string"
       }
     },
     {
@@ -13633,23 +14027,14 @@
       "type": "crucible",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack"
+        "tag": "QUARTZ",
+        "reg": "quartz",
+        "name_en": "Quartz",
+        "name_ru": "Quartz"
       },
       "aspects": {},
       "input": {
-        "raw": "(Object)string"
-      }
-    },
-    {
-      "research": "(String)ResearchRegistry.ResearchTypes.CERTUS_DUPE.getKey()",
-      "type": "crucible",
-      "mod": "AppliedEnergistics2",
-      "output": {
-        "raw": "(ItemStack)itemStack2"
-      },
-      "aspects": {},
-      "input": {
-        "raw": "(Object)string2"
+        "raw": "string2"
       }
     },
     {
@@ -13657,9 +14042,14 @@
       "type": "arcane_shapeless",
       "mod": "AppliedEnergistics2",
       "output": {
-        "raw": "(ItemStack)itemStack"
+        "raw": "AEApi.instance().definitions().parts().visInterface().maybeS"
       },
-      "aspects": {}
+      "aspects": {},
+      "inputs": [
+        {
+          "raw": "(Object[])new Object[]{commonDependantItems.BallanceShard, c"
+        }
+      ]
     },
     {
       "research": "(String)\"ROD_blood_wood",
@@ -13667,7 +14057,9 @@
       "mod": "BloodArsenal",
       "output": {
         "ref": "ModItems.wandCore",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Tainted Rod",
+        "name_ru": "Заражённый стержень"
       },
       "aspects": {
         "victus": 32,
@@ -13676,7 +14068,7 @@
       },
       "instability": 3,
       "central": {
-        "raw": "(ItemStack)bloodRod.getItem()"
+        "raw": "bloodRod.getItem()"
       },
       "components": [
         {
@@ -13724,8 +14116,8 @@
       "output": {
         "ref": "ModItems.wandCap",
         "meta": 0,
-        "name_en": "Iron Cap",
-        "name_ru": "Железный наконечник"
+        "name_en": "Alchemical Cap",
+        "name_ru": "Алхимический наконечник"
       },
       "aspects": {
         "victus": 24,
@@ -13734,7 +14126,7 @@
       },
       "instability": 3,
       "central": {
-        "raw": "(ItemStack)alchemicalCap.getItem()"
+        "raw": "alchemicalCap.getItem()"
       },
       "components": [
         {
@@ -13787,7 +14179,9 @@
       "mod": "BloodArsenal",
       "output": {
         "ref": "ModItems.wandCore",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Infernal Rod",
+        "name_ru": "Адский стержень"
       },
       "aspects": {
         "victus": 64,
@@ -13797,12 +14191,14 @@
       },
       "instability": 6,
       "central": {
-        "raw": "(ItemStack)bloodStaff.getItem()"
+        "raw": "bloodStaff.getItem()"
       },
       "components": [
         {
           "ref": "ModItems.wandCore",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Tainted Rod",
+          "name_ru": "Заражённый стержень"
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
@@ -13842,7 +14238,9 @@
         },
         {
           "ref": "ModItems.wandCore",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Tainted Rod",
+          "name_ru": "Заражённый стержень"
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
@@ -13903,37 +14301,37 @@
       },
       "instability": 12,
       "central": {
-        "ref": "eldritch",
-        "meta": 3
+        "ref": "Thaumcraft",
+        "meta": null
       },
       "components": [
         {
-          "ref": "eldritch",
-          "meta": 3
+          "ref": "Thaumcraft",
+          "meta": null
         },
         {
-          "ref": "eldritch",
-          "meta": 3
+          "ref": "Thaumcraft",
+          "meta": null
         },
         {
-          "ref": "eldritch",
-          "meta": 3
+          "ref": "Thaumcraft",
+          "meta": null
         },
         {
-          "ref": "eldritch",
-          "meta": 3
+          "ref": "Thaumcraft",
+          "meta": null
         },
         {
-          "ref": "eldritch",
-          "meta": 3
+          "ref": "Thaumcraft",
+          "meta": null
         },
         {
-          "ref": "eldritch",
-          "meta": 3
+          "ref": "Thaumcraft",
+          "meta": null
         },
         {
-          "ref": "eldritch",
-          "meta": 3
+          "ref": "Thaumcraft",
+          "meta": null
         }
       ]
     },
@@ -13954,8 +14352,8 @@
       },
       "instability": 12,
       "central": {
-        "ref": "resource",
-        "meta": 9
+        "ref": "Thaumcraft",
+        "meta": null
       },
       "components": [
         {
@@ -13989,7 +14387,7 @@
         "ordo": 1
       },
       "input": {
-        "raw": "(Object)\"oreElementium\""
+        "raw": "\"oreElementium\""
       }
     },
     {
@@ -14005,7 +14403,7 @@
         "praecantatio": 2
       },
       "input": {
-        "raw": "(Object)\"nuggetElvenElementium\""
+        "raw": "\"nuggetElvenElementium\""
       }
     },
     {
@@ -14013,7 +14411,8 @@
       "type": "arcane",
       "mod": "Alfheim",
       "output": {
-        "raw": "(ItemStack)itemStack"
+        "ref": "this.getNaturalWandCap",
+        "meta": null
       },
       "aspects": {
         "ordo": null
@@ -14025,7 +14424,8 @@
       "type": "arcane",
       "mod": "Alfheim",
       "output": {
-        "raw": "(ItemStack)itemStack2"
+        "ref": "this.getNaturalWandCap",
+        "meta": null
       },
       "aspects": {
         "ordo": null
@@ -14037,7 +14437,8 @@
       "type": "arcane",
       "mod": "Alfheim",
       "output": {
-        "raw": "(ItemStack)itemStack3"
+        "ref": "this.getNaturalWandCap",
+        "meta": null
       },
       "aspects": {
         "ordo": null
@@ -14049,7 +14450,8 @@
       "type": "arcane",
       "mod": "Alfheim",
       "output": {
-        "raw": "(ItemStack)itemStack4"
+        "ref": "this.getNaturalWandCap",
+        "meta": null
       },
       "aspects": {
         "ordo": null
@@ -14061,7 +14463,8 @@
       "type": "arcane",
       "mod": "Alfheim",
       "output": {
-        "raw": "(ItemStack)itemStack5"
+        "ref": "this.getNaturalWandCap",
+        "meta": null
       },
       "aspects": {
         "perditio": null
@@ -14073,7 +14476,8 @@
       "type": "arcane",
       "mod": "Alfheim",
       "output": {
-        "raw": "(ItemStack)itemStack6"
+        "ref": "this.getNaturalWandRod",
+        "meta": null
       },
       "aspects": {
         "terra": null
@@ -14085,7 +14489,8 @@
       "type": "arcane",
       "mod": "Alfheim",
       "output": {
-        "raw": "(ItemStack)itemStack7"
+        "ref": "this.getNaturalWandRod",
+        "meta": null
       },
       "aspects": {
         "ordo": null
@@ -14097,7 +14502,8 @@
       "type": "arcane",
       "mod": "Alfheim",
       "output": {
-        "raw": "(ItemStack)itemStack8"
+        "ref": "this.getNaturalWandRod",
+        "meta": null
       },
       "aspects": {
         "perditio": null
@@ -14229,7 +14635,9 @@
     {
       "item": {
         "ref": "ModItems.wandCore",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Tainted Rod",
+        "name_ru": "Заражённый стержень"
       },
       "warp": 2,
       "mod": "BloodArsenal"
@@ -14245,7 +14653,9 @@
     {
       "item": {
         "ref": "ModItems.wandCore",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Infernal Rod",
+        "name_ru": "Адский стержень"
       },
       "warp": 4,
       "mod": "BloodArsenal"
