@@ -1,0 +1,5593 @@
+{
+  "_meta": {
+    "generated": "2026-06-07",
+    "objectTags": 375,
+    "entityTags": 69,
+    "byMod": {
+      "Thaumcraft": 389,
+      "MagicBees": 19,
+      "ForbiddenMagic": 21,
+      "Avaritia": 15
+    },
+    "notes": "object/entity scanning tags. subject.type: oredict (ore-dictionary id, directly usable) | item (ConfigItems/ConfigBlocks/Items/Blocks field ref + meta) | raw. 'aspectGivers' indexes aspect->oredict sources (item-ref sources omitted there since names need resolution)."
+  },
+  "objectTags": [
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 3,
+        "instrumentum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "motus": 2,
+        "instrumentum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 1,
+        "potentia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "venenum": 2,
+        "potentia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "instrumentum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "instrumentum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 2,
+        "lucrum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150322_A",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150440_ba",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151121_aF",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151122_aG",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 3
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150342_X",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 8
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151061_bv",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151032_g",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "telum": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151069_bo",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151153_ao",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 2,
+        "sano": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151153_ao",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 4,
+        "sano": 8
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151054_z",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151009_A",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151143_au",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "iter": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151139_aw",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "motus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151135_aq",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "motus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151124_az",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 4,
+        "iter": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151033_d",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 1,
+        "instrumentum": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151067_bt",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 2,
+        "aqua": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150430_aB",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150448_aq",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1,
+        "iter": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150319_E",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150318_D",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "potentia": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150408_cc",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150396_be",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "iter": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150452_aw",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150456_au",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150445_bS",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150443_bT",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150442_at",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150429_aA",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "motus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "motus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150421_aI",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "machina": 2,
+        "aer": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150323_B",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "machina": 1,
+        "aer": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150415_aT",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "motus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150470_am",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150460_al",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150381_bn",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 8,
+        "fabrico": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151113_aN",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "auram": 2,
+        "praecantatio": 2,
+        "permutatio": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150471_bO",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151146_bM",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "iter": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151162_bE",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 1,
+        "herba": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151150_bK",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150477_bB",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "permutatio": 2,
+        "iter": 2,
+        "vacuos": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "permutatio": 1,
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150409_cd",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "permutatio": 1,
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150367_z",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "permutatio": 1,
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 2,
+        "lux": 3,
+        "machina": 3
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTable",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "instrumentum": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemTripleMeatTreat",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sano": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemPrimalArrow",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "telum": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemGoggles",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockWoodenDevice",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "stone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "cobblestone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "logWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "plankWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "slabWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "stairWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "stickWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "treeSapling"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1,
+        "herba": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "treeLeaves"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "dyes[i]"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreLapis"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "sensus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreDiamond"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "lucrum": 3,
+        "vitreus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "gemDiamond"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreRedstone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "potentia": 2,
+        "machina": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150439_ay",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "potentia": 3,
+        "machina": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreEmerald"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "lucrum": 4,
+        "vitreus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "gemEmerald"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 4,
+        "lucrum": 5
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreQuartz"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "vitreus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151074_bl",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetIron"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreIron"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "metallum": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustIron"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151042_j",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreGold"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "metallum": 2,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustGold"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151043_k",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "lucrum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150365_q",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "potentia": 2,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151044_h",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "potentia": 2,
+        "ignis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustRedstone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "potentia": 2,
+        "machina": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustGlowstone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 1,
+        "lux": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "glowstone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 3,
+        "lux": 10
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetCopper"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "ingotCopper"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "permutatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustCopper"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "permutatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreCopper"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "terra": 1,
+        "permutatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 17
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 5,
+        "terra": 1,
+        "permutatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetTin"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "ingotTin"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustTin"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreTin"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "perditio": 1,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 18
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 5,
+        "terra": 1,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetSilver"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "ingotSilver"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustSilver"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreSilver"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "perditio": 1,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 19
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 5,
+        "terra": 1,
+        "lucrum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetLead"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "ingotLead"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustLead"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreLead"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "perditio": 1,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 20
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 2,
+        "metallum": 5,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150357_h",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 16,
+        "perditio": 16,
+        "terra": 16,
+        "tenebrae": 16
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150346_d",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150346_d",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150458_ak",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "meto": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151119_aD",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 1,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150377_bs",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "tenebrae": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150351_n",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150435_aG",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 3,
+        "aqua": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150405_ch",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 4,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150406_ce",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 3,
+        "ignis": 1,
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151118_aC",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151130_bT",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150359_w",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150341_Y",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "herba": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150418_aU",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 2,
+        "bestia": 1,
+        "vinculum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150417_aV",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150417_aV",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150417_aV",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150417_aV",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150322_A",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150322_A",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "aer": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "aer": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150392_bi",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "aqua": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150395_bd",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151014_N",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151081_bc",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151080_bb",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151127_ba",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "victus": 1,
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "victus": 1,
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150434_aF",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 3,
+        "aqua": 1,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "tenebrae": 1,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "tenebrae": 1,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150420_aW",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "tenebrae": 1,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150419_aX",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "tenebrae": 1,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151120_aE",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "aqua": 1,
+        "aer": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151015_O",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 2,
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151034_e",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 2,
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151172_bF",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 1,
+        "fames": 1,
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151174_bG",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 1,
+        "fames": 1,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151168_bH",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 1,
+        "fames": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151170_bI",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 1,
+        "venenum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150423_aK",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151057_cb",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 2,
+        "bestia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151138_bX",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "tutamen": 2,
+        "bestia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151136_bY",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "tutamen": 4,
+        "bestia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151125_bZ",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "tutamen": 6,
+        "bestia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150355_j",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150353_l",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 3,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150432_aD",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "gelum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150403_cj",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "gelum": 3,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151126_ay",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "gelum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151106_aX",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 1,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150478_aa",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150321_G",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vinculum": 2,
+        "pannus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151145_ak",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "instrumentum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151007_F",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "pannus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151123_aH",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151116_aA",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "pannus": 2,
+        "bestia": 1,
+        "tutamen": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151078_bh",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 1,
+        "corpus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151008_G",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "volatus": 2,
+        "aer": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151103_aS",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 2,
+        "corpus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151110_aK",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 1,
+        "victus": 1,
+        "bestia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151070_bp",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 2,
+        "bestia": 2,
+        "venenum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151016_H",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4,
+        "perditio": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150325_L",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "pannus": 4,
+        "fabrico": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151115_aP",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 3,
+        "victus": 1,
+        "aqua": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151101_aQ",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 1,
+        "corpus": 4,
+        "fames": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151076_bf",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 3,
+        "victus": 2,
+        "bestia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151077_bg",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 1,
+        "corpus": 4,
+        "fames": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151147_al",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 3,
+        "victus": 1,
+        "bestia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151157_am",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 1,
+        "corpus": 3,
+        "fames": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151082_bd",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 4,
+        "victus": 2,
+        "bestia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151083_be",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 1,
+        "corpus": 4,
+        "fames": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151141_av",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "pannus": 3,
+        "iter": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151079_bi",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "praecantatio": 2,
+        "iter": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151144_bL",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 4,
+        "spiritus": 4,
+        "exanimis": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151144_bL",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 4,
+        "spiritus": 4,
+        "corpus": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151144_bL",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 4,
+        "spiritus": 4,
+        "humanus": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151144_bL",
+        "meta": 4
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 4,
+        "spiritus": 4,
+        "perditio": 2,
+        "ignis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151086_cn",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151096_cd",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "aqua": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151093_ce",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "bestia": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151091_cg",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "terra": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151092_ch",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "alienis": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151089_ci",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "humanus": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151090_cj",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "fabrico": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151087_ck",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "tenebrae": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151088_cl",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "machina": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151085_cm",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "praecantatio": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151094_cf",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "instrumentum": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151084_co",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "vinculum": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 12
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 11
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 7
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150380_bt",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 8,
+        "bestia": 8,
+        "praecantatio": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4,
+        "iter": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150384_bq",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "iter": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150378_br",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "machina": 4,
+        "iter": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150474_ac",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 4,
+        "iter": 4,
+        "exanimis": 4,
+        "praecantatio": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151133_ar",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 8,
+        "vacuos": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151131_as",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151129_at",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151117_aB",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 2,
+        "sano": 2,
+        "aqua": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151105_aU",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 4,
+        "fames": 4,
+        "victus": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150462_ai",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150467_bQ",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 64,
+        "fabrico": 2,
+        "instrumentum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Block",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 1,
+        "machina": 1,
+        "vinculum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTable",
+        "meta": 15
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTable",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 16
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 6,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 31
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 4,
+        "terra": 1,
+        "lucrum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 21
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 4,
+        "terra": 1,
+        "permutatio": 4,
+        "venenum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 5
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 6
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "metallum": 2,
+        "permutatio": 2,
+        "venenum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 7
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "vinculum": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "aer": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "ignis": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "aqua": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 4
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 5
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "ordo": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 6
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "perditio": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaint",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1,
+        "vitium": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaint",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "vitium": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "victus": 1,
+        "vitium": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "vitium": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "vitium": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "herba": 1,
+        "vitium": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 4
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "herba": 1,
+        "vitium": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 4,
+        "tenebrae": 2,
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMagicalLog",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 3,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMagicalLog",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 3,
+        "praecantatio": 1,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMagicalLeaves",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMagicalLeaves",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "arbor": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "arbor": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "permutatio": 2,
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "ignis": 2,
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 5
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "venenum": 1,
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": 6
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": 7
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "venenum": 1,
+        "permutatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemZombieBrain",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 2,
+        "cognitio": 4,
+        "exanimis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 6
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vinculum": 2,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 9
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 11
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "limus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 12
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "lucrum": 1,
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 18
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLootbag",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lucrum": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLootbag",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lucrum": 16
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLootbag",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lucrum": 32
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNuggetBeef",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNuggetChicken",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNuggetPork",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNuggetFish",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "aer": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "ignis": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "aqua": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "terra": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 4
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "ordo": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 5
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "perditio": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 14
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMetalDevice",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 4,
+        "praecantatio": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCandle",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 2,
+        "corpus": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockAiry",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockAiry",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemThaumonomicon",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 2,
+        "cognitio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockAlchemyFurnace",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 8,
+        "aqua": 8,
+        "fabrico": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEssence",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemWispEssence",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "auram": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemBaubleBlanks",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 5
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemFocusPech",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 5,
+        "venenum": 5,
+        "perditio": 5,
+        "alienis": 5,
+        "telum": 5
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemChestCultistPlate",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemChestCultistRobe",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "pannus": 2,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemChestCultistLeaderPlate",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLegsCultistPlate",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLegsCultistLeaderPlate",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLegsCultistRobe",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "pannus": 2,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemHelmetCultistPlate",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemHelmetCultistLeaderPlate",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemHelmetCultistRobe",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "pannus": 2,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemBootsCultist",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 4,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockWoodenDevice",
+        "meta": 8
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 1,
+        "arbor": 2,
+        "pannus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEldritchObject",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 5,
+        "auram": 3,
+        "praecantatio": 3,
+        "sensus": 3,
+        "spiritus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEldritchObject",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 5,
+        "praecantatio": 3,
+        "alienis": 3,
+        "spiritus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEldritchObject",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vinculum": 4,
+        "cognitio": 4,
+        "machina": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEldritchObject",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aer": 16,
+        "terra": 16,
+        "ignis": 16,
+        "aqua": 16,
+        "ordo": 16,
+        "perditio": 16
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 8,
+        "alienis": 8,
+        "sensus": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritchPortal",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 8,
+        "alienis": 8,
+        "iter": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": 3
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 4,
+        "alienis": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": 4
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 1,
+        "terra": 1,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": 5
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 2,
+        "terra": 1,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": 6
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "machina": 2,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": 11
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": 12
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "item2.func_77973_b(",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "item2.func_77973_b(",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "limus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "item2.func_77973_b(",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "perditio": 1,
+        "permutatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "aer": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "aqua": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "ignis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "terra": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "ordo": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "perditio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "ordo": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "spiritus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "(Item",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "cognitio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "victus": 6
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "mortuus": 6
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "tutamen": 6
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "vacuos": 6
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(String)\"oreQuartz\""
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitreus": 3,
+        "infernus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 0
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "ira": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 1
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "invidia": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 2
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 3,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 3
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "superbia": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 4
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "luxuria": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 4
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vacuos": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.gluttonyShard",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "gula": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 5
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "desidia": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 6
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "lucrum": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.resource",
+        "meta": 0
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.resource",
+        "meta": 1
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "tenebrae": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.blackFlower",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "herba": 1,
+        "victus": 1,
+        "sensus": 1,
+        "tenebrae": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.ridingCrop",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "arbor": 2,
+        "pannus": 2,
+        "bestia": 1,
+        "luxuria": 1,
+        "telum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.taintFruit",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 2,
+        "venenum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.taintCoal",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 2,
+        "perditio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.taintLeaves",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 1,
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.taintLog",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 1,
+        "arbor": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.taintPlanks",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.taintStone",
+        "meta": 1
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Compat.getItem(\"Botania\"",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "herba": 4,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.skull_sword",
+        "meta": null
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 1,
+        "ignis": 2,
+        "vitreus": 16,
+        "mortuus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.resource",
+        "meta": 1
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 1,
+        "potentia": 8,
+        "vitreus": 32
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.resource",
+        "meta": 4
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 2,
+        "metallum": 12,
+        "potentia": 12
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.resource",
+        "meta": 5
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 5,
+        "permutatio": 12
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.resource",
+        "meta": 6
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 16,
+        "alienis": 64
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 0
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 1
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100,
+        "lucrum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 2
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "sensus": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 3
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "machina": 100,
+        "potentia": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 4
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "vitreus": 100,
+        "ordo": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 5
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 6
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 7
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 8
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.infinity_sword",
+        "meta": null
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 60,
+        "telum": 999,
+        "mortuus": 999,
+        "alienis": 100
+      },
+      "complex": false
+    }
+  ],
+  "entityTags": [
+    {
+      "entity": "Zombie",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 2,
+        "humanus": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Giant",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 4,
+        "humanus": 3,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "Skeleton",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 3,
+        "humanus": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Skeleton",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 4,
+        "humanus": 1,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Creeper",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Creeper",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 3,
+        "ignis": 3,
+        "potentia": 3
+      }
+    },
+    {
+      "entity": "EntityHorse",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 4,
+        "terra": 1,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Pig",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "XPOrb",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 5
+      }
+    },
+    {
+      "entity": "Sheep",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "Cow",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "MushroomCow",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "herba": 1,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "SnowMan",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "gelum": 3,
+        "aqua": 1
+      }
+    },
+    {
+      "entity": "Ozelot",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "perditio": 3
+      }
+    },
+    {
+      "entity": "Chicken",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "volatus": 2,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Squid",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "aqua": 2
+      }
+    },
+    {
+      "entity": "Wolf",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "Bat",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "volatus": 1,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Boat",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "aqua": 2
+      }
+    },
+    {
+      "entity": "Spider",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "perditio": 2
+      }
+    },
+    {
+      "entity": "Slime",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 2,
+        "aqua": 2
+      }
+    },
+    {
+      "entity": "Ghast",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 3,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "PigZombie",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 4,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Enderman",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "iter": 2,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "CaveSpider",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "venenum": 2,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Silverfish",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Blaze",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "ignis": 1
+      }
+    },
+    {
+      "entity": "LavaSlime",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 3,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "EnderDragon",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 20,
+        "bestia": 20,
+        "perditio": 20
+      }
+    },
+    {
+      "entity": "WitherBoss",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 20,
+        "perditio": 20,
+        "ignis": 15
+      }
+    },
+    {
+      "entity": "Witch",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 3,
+        "praecantatio": 2,
+        "ignis": 1
+      }
+    },
+    {
+      "entity": "Villager",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 3,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "VillagerGolem",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 4,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "MinecartRideable",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "MinecartChest",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "vacuos": 1
+      }
+    },
+    {
+      "entity": "MinecartFurnace",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "ignis": 1
+      }
+    },
+    {
+      "entity": "MinecartTNT",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "ignis": 1
+      }
+    },
+    {
+      "entity": "MinecartHopper",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "permutatio": 1
+      }
+    },
+    {
+      "entity": "MinecartSpawner",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "praecantatio": 1
+      }
+    },
+    {
+      "entity": "EnderCrystal",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 3,
+        "praecantatio": 3,
+        "sano": 3
+      }
+    },
+    {
+      "entity": "ItemFrame",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 3,
+        "pannus": 1
+      }
+    },
+    {
+      "entity": "Painting",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 5,
+        "pannus": 3
+      }
+    },
+    {
+      "entity": "Thaumcraft.PrimalOrb",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aer": 5,
+        "perditio": 10,
+        "praecantatio": 10,
+        "potentia": 10
+      }
+    },
+    {
+      "entity": "Thaumcraft.Firebat",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "volatus": 1,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.Pech",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 2,
+        "praecantatio": 2,
+        "permutatio": 2,
+        "lucrum": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.Pech",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 2,
+        "praecantatio": 2,
+        "permutatio": 2,
+        "telum": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.Pech",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 2,
+        "praecantatio": 4,
+        "permutatio": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.ThaumSlime",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 2,
+        "praecantatio": 1,
+        "aqua": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.BrainyZombie",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 3,
+        "humanus": 1,
+        "cognitio": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.GiantBrainyZombie",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 4,
+        "humanus": 2,
+        "cognitio": 1,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.Taintacle",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "aqua": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintacleTiny",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 1,
+        "aqua": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintSpider",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintSpore",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintSwarmer",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintSwarm",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "aer": 3
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedPig",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedSheep",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedCow",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedChicken",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "volatus": 2,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedVillager",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedCreeper",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.MindSpider",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.EldritchGuardian",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "mortuus": 2,
+        "exanimis": 4
+      }
+    },
+    {
+      "entity": "Thaumcraft.EldritchOrb",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 2,
+        "mortuus": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.CultistKnight",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 1,
+        "humanus": 2,
+        "perditio": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.CultistCleric",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 1,
+        "humanus": 2,
+        "perditio": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.Wisp",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "tag": 2,
+        "praecantatio": 1,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.Golem",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aer": 2,
+        "terra": 2,
+        "praecantatio": 2
+      }
+    }
+  ],
+  "aspectGivers": {
+    "arbor": [
+      "logWood",
+      "plankWood",
+      "slabWood",
+      "stairWood",
+      "stickWood",
+      "treeSapling"
+    ],
+    "herba": [
+      "treeLeaves",
+      "treeSapling"
+    ],
+    "lucrum": [
+      "dustGold",
+      "dustSilver",
+      "gemDiamond",
+      "gemEmerald",
+      "ingotSilver",
+      "oreDiamond",
+      "oreEmerald",
+      "oreGold",
+      "oreSilver"
+    ],
+    "lux": [
+      "dustGlowstone",
+      "glowstone"
+    ],
+    "machina": [
+      "dustRedstone",
+      "oreRedstone"
+    ],
+    "metallum": [
+      "dustCopper",
+      "dustGold",
+      "dustIron",
+      "dustLead",
+      "dustSilver",
+      "dustTin",
+      "ingotCopper",
+      "ingotLead",
+      "ingotSilver",
+      "ingotTin",
+      "nuggetCopper",
+      "nuggetIron",
+      "nuggetLead",
+      "nuggetSilver",
+      "nuggetTin",
+      "oreCopper",
+      "oreGold",
+      "oreIron",
+      "oreLead",
+      "oreSilver",
+      "oreTin"
+    ],
+    "ordo": [
+      "dustLead",
+      "ingotLead",
+      "oreLead"
+    ],
+    "perditio": [
+      "cobblestone",
+      "dustCopper",
+      "dustGold",
+      "dustIron",
+      "dustLead",
+      "dustSilver",
+      "dustTin",
+      "oreLead",
+      "oreSilver",
+      "oreTin"
+    ],
+    "permutatio": [
+      "dustCopper",
+      "ingotCopper",
+      "oreCopper"
+    ],
+    "potentia": [
+      "dustRedstone",
+      "oreRedstone"
+    ],
+    "sensus": [
+      "dustGlowstone",
+      "glowstone",
+      "oreLapis"
+    ],
+    "terra": [
+      "cobblestone",
+      "oreCopper",
+      "oreDiamond",
+      "oreEmerald",
+      "oreGold",
+      "oreIron",
+      "oreLapis",
+      "oreQuartz",
+      "oreRedstone",
+      "stone"
+    ],
+    "vitreus": [
+      "dustTin",
+      "gemDiamond",
+      "gemEmerald",
+      "ingotTin",
+      "oreDiamond",
+      "oreEmerald",
+      "oreQuartz",
+      "oreTin"
+    ]
+  }
+}

@@ -269,6 +269,15 @@ for mod, dec, _ in MODS:
             research[key] = entry
             res_order.append(key)
 
+# ---- AE2 enrichment: ResearchTypes enum -> internalName(TE+x) -> (col,row)
+ae2_pos = {}
+ae2_reg = os.path.join(DEC, "decompAE2", "appeng", "integration", "modules", "thaumcraft",
+                       "common", "registries", "ResearchRegistry.java")
+if os.path.exists(ae2_reg):
+    rs = open(ae2_reg, encoding="utf-8", errors="replace").read()
+    for em in re.finditer(r'\b[A-Z_]+\("(\w+)",\s*(-?\d+),\s*(-?\d+)\)', rs):
+        ae2_pos["TE" + em.group(1)] = (int(em.group(2)), int(em.group(3)))
+
 # ---- lang-only sweep: capture research that has lang entries but wasn't code-parsed
 def guess_mod(full_key):
     if full_key.startswith("appliedenergistics2"): return "AppliedEnergistics2"
@@ -298,6 +307,8 @@ for lang, name_idx in ((EN, NAME_EN), (RU, NAME_RU)):
             "description": ru_desc or en_desc,
             "_langOnly": True,
         }
+        if bare in ae2_pos:
+            research[tail]["displayColumn"], research[tail]["displayRow"] = ae2_pos[bare]
         res_order.append(tail)
         captured.add(bare); captured.add(tail)
 

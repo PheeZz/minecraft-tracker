@@ -71,6 +71,35 @@ Avaritia `1.13`, Alfheim `BETA-38`, LoliMagically.
 Прочие `completeResearch` в модах (ForbiddenMagic, TaintedMagic, сам Thaumcraft) — точечные
 (завершают конкретное исследование при крафте/событии), не массовые.
 
+## Задача 4 — рецепты, источники аспектов, локализация, текстуры предметов
+
+Расширенное автономное извлечение «по максимуму» (генераторы `gen_sources.py`, `gen_recipes.py`).
+
+### Рецепты  →  `recipes.json` (**402**)
+`ThaumcraftApi.add*Recipe(...)` по всем модам: crucible 75, arcane 132, arcane_shapeless 21,
+infusion 142, infusion_enchantment 32. По мод: Thaumcraft 231, TaintedMagic 74, ForbiddenMagic 51,
+AE2 15, MagicBees 13, Alfheim 10, ThaumicTinkerer 3, BloodArsenal 3, Avaritia 2.
+Поля: `research` (ссылка на исследование), `type`, **`aspects`** (стоимость эссенции/вис — главная
+ценность; `null` + `aspectsComputed` если считается в рантайме), `output`, `input`/`inputs`,
+для infusion — `instability`, `central`, `components`. Предметы разрешены в EN/RU названия там, где
+ссылка маппится на lang-ключ (**145 выходов с именами**); иначе `{ref,meta}` (поле
+ConfigItems/ConfigBlocks), `{vanilla:srg}` или `{oredict}`.
+
+### Источники аспектов  →  `aspect-sources.json`
+Теги сканирования: **375 object-тегов** + **69 entity-тегов** (Thaumcraft/MagicBees/ForbiddenMagic/Avaritia).
+`subject.type`: `oredict` ( id ore-dictionary, готов к использованию) | `item` (ref + meta) | `raw`.
+`aspectGivers` — обратный индекс «аспект → ore-dict источники» (item-ref источники там опущены, т.к.
+требуют разрешения имён). `entityTags` — аспекты всех мобов.
+
+### Локализация предметов  →  `item-names.json` (**1570**)
+EN/RU названия всех `item.*.name` / `tile.*.name` по всем 10 модам (Thaumcraft 411, Alfheim 529,
+AE2 169, BloodArsenal 100, ThaumicTinkerer 96, ForbiddenMagic 78, Avaritia 62, TaintedMagic 61,
+LoliMagically 37, MagicBees 27). Используется как словарь для разрешения ссылок в рецептах.
+
+### Текстуры предметов/блоков  →  `textures/items/<mod>/`, `textures/blocks/<mod>/`
+**842 item + 649 block PNG** из 8 модов (см. `textures/textures-manifest.json`). Плюс **60** иконок
+аспектов в `textures/aspects/`.
+
 ## Нерешённое / ограничения
 
 1. **AppliedEnergistics2 (11)** — регистрирует research через свой enum-реестр
@@ -82,5 +111,11 @@ Avaritia `1.13`, Alfheim `BETA-38`, LoliMagically.
    здесь — предмет авто-изучения (см. выше).
 4. **ThaumicTinkerer** — часть research имеет нестандартную структуру (Kami и пр.); базовые поля
    извлечены, отдельные сложные записи могут быть неполными.
-5. Страницы-рецепты (крафт/арканный/инфузия) в `pages` опущены — оставлены только текстовые
-   страницы (для описаний). При необходимости можно добавить разбор рецептов.
+5. Страницы-рецепты в `research.json/pages` опущены, но сами рецепты извлечены отдельно в
+   `recipes.json` и связаны полем `research` → можно сджойнить.
+6. В `recipes.json` часть предметов не разрешена в имена: ванильные (`{vanilla:field_xxx}` —
+   SRG-имена 1.7.10) и предметы с мета-переменной из циклов. Стоимости аспектов извлечены полностью.
+7. `aspect-sources.json`: часть object-тегов Thaumcraft задаётся в циклах по подтипам предмета
+   (`subject.type:"raw"`, ref вроде `is`) — аспекты есть, но конкретный предмет не разрешён.
+8. AE2: позиции в дереве добавлены из enum (`displayColumn/Row`), но аспекты исследований по-прежнему
+   не распарсены (строятся динамически в Feature-классах).
