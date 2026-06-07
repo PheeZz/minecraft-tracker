@@ -189,7 +189,16 @@ watch(selectedKey, () => (descOpen.value = false))
 </template>
 
 <style scoped>
+/* панель заполняет область контента и распределяет высоту: шапка фикс,
+   список/граф растягиваются и скроллятся внутри — низ не обрезается */
+.sp {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
 .sp__top {
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -236,7 +245,7 @@ watch(selectedKey, () => (descOpen.value = false))
   outline-offset: 1px;
 }
 .sp__view-wrap {
-  height: 78vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -246,9 +255,10 @@ watch(selectedKey, () => (descOpen.value = false))
   grid-template-columns: 230px 1fr 250px;
   gap: 0;
   align-items: stretch;
-  /* фиксируем высоту: список скроллится внутри своей колонки, стол центрируется,
-     правая панель помещается без прокрутки (а не растягивает строку под 420 items) */
-  height: 78vh;
+  /* заполняем доступную высоту области (а не магические 78vh): список скроллится
+     внутри своей колонки, правая панель помещается без прокрутки — низ не обрезается */
+  flex: 1;
+  min-height: 0;
 }
 @media (max-width: 900px) {
   .sp__grid {

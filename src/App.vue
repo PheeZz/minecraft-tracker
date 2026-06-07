@@ -112,9 +112,29 @@ function switchTo(id: TrackerId) {
 }
 
 .shell {
+  /* Адаптивный масштаб интерфейса: на больших мониторах (2K/4K) фиксированные px
+     выглядят мелко — увеличиваем весь UI через zoom. Высоту компенсируем
+     (100vh / scale), чтобы оболочка ровно занимала экран без переполнения. */
+  --app-scale: 1;
+  zoom: var(--app-scale);
   display: grid;
   grid-template-rows: auto 1fr;
-  height: 100vh;
+  height: calc(100dvh / var(--app-scale));
+}
+@media (min-width: 1680px) {
+  .shell {
+    --app-scale: 1.12;
+  }
+}
+@media (min-width: 2100px) {
+  .shell {
+    --app-scale: 1.22;
+  }
+}
+@media (min-width: 2560px) {
+  .shell {
+    --app-scale: 1.32;
+  }
 }
 
 .switcher {

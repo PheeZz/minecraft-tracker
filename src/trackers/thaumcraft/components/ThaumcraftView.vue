@@ -89,7 +89,8 @@ onBeforeUnmount(() => {
 .thaum {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  height: 100%;
+  min-height: 0;
 }
 .thaum__nav {
   display: flex;
@@ -156,6 +157,8 @@ onBeforeUnmount(() => {
 }
 .thaum__body {
   flex: 1;
+  min-height: 0;
+  overflow: auto;
 }
 .thaum__placeholder {
   padding: 60px 20px;
