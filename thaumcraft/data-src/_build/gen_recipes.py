@@ -33,43 +33,56 @@ for dec in DECDIRS:
         for m in re.finditer(r'(\w+)\s*=\s*new (?:Rainbow)?Aspect\("(\w+)"',t):
             field_tag.setdefault(m.group(1),m.group(2))
 
+def name_bases(fld):
+    bases = list(FIELDNAMES.get(fld, {}).get("bases", []))   # raw unloc/registry ids (e.g. WandRod)
+    for b in (fld, fld[0].upper()+fld[1:] if fld else fld):
+        if b not in bases: bases.append(b)
+    for pre in ("item", "Item", "block", "Block"):           # itemWandRod -> WandRod
+        if fld.startswith(pre) and len(fld) > len(pre):
+            b = fld[len(pre):]
+            if b not in bases: bases.append(b)
+    return bases
+
+def name_for(fld, meta):
+    bases = name_bases(fld)
+    if meta is not None:
+        for b in bases:
+            for k in ("item.%s.%s.name"%(b,meta), "tile.%s.%s.name"%(b,meta)):
+                if k in NAME: return NAME[k]["name_en"], NAME[k]["name_ru"]
+    for b in bases:
+        for k in ("item.%s.name"%b, "tile.%s.name"%b):
+            if k in NAME: return NAME[k]["name_en"], NAME[k]["name_ru"]
+    fn = FIELDNAMES.get(fld)
+    if fn and "name_en" in fn: return fn["name_en"], fn["name_ru"]
+    return None
+
+def meta_of(tok):
+    mm = re.search(r'new ItemStack\([^,)]+,\s*\w+\s*,\s*(\d+)', tok)
+    return int(mm.group(1)) if mm else None
+
 def resolve_item(tok):
     tok = tok.strip()
     if tok.startswith('"'):
         return {"oredict": tok.strip('"')}
+    meta = meta_of(tok)
     m = re.search(r'(?:ConfigItems|ConfigBlocks)\.(\w+)', tok)
     if m:
-        fld = m.group(1)
-        # meta = the 3rd positional int in new ItemStack(field, count, meta)
-        mm = re.search(r'(?:ConfigItems|ConfigBlocks)\.\w+\s*,\s*\w+\s*,\s*(\d+)', tok)
-        meta = mm.group(1) if mm else None
-        cands = []
-        cap = fld[0].upper()+fld[1:]
-        for pre,base in (("item",cap),("item",fld),("tile",fld),("tile",cap)):
-            if meta is not None:
-                cands.append("%s.%s.%s.name"%(pre,base,meta))
-            cands.append("%s.%s.name"%(pre,base))
-        for c in cands:
-            if c in NAME:
-                return {"ref":fld,"meta":(int(meta) if meta else None),
-                        "name_en":NAME[c]["name_en"],"name_ru":NAME[c]["name_ru"]}
-        fn=FIELDNAMES.get(fld)
-        if fn:
-            return {"ref":fld,"meta":(int(meta) if meta else None),
-                    "name_en":fn["name_en"],"name_ru":fn["name_ru"]}
-        return {"ref":fld,"meta":(int(meta) if meta else None)}
+        fld = m.group(1); out = {"ref": fld, "meta": meta}
+        r = name_for(fld, meta)
+        if r: out["name_en"], out["name_ru"] = r
+        return out
     m = re.search(r'(?<![A-Za-z])(?:Items|Blocks)\.(\w+)', tok)
     if m:
-        fld=m.group(1); v=VANILLA.get(fld)
+        fld = m.group(1); v = VANILLA.get(fld)
         if v: return {"vanilla":fld,"reg":v["reg"],"name_en":v["name_en"],"name_ru":v["name_ru"]}
-        return {"vanilla":fld}
+        return {"vanilla": fld}
     m = re.search(r'new ItemStack\(\s*([\w.]+)', tok)
     if m:
-        ref=m.group(1); fld=ref.split(".")[-1]
-        fn=FIELDNAMES.get(fld)
-        if fn: return {"ref":ref,"name_en":fn["name_en"],"name_ru":fn["name_ru"]}
-        return {"ref":ref}
-    return {"raw":tok[:60]}
+        ref = m.group(1); fld = ref.split(".")[-1]; out = {"ref": ref, "meta": meta}
+        r = name_for(fld, meta)
+        if r: out["name_en"], out["name_ru"] = r
+        return out
+    return {"raw": tok[:60]}
 
 def balanced(s,start):
     depth=0

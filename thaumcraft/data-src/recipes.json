@@ -21,7 +21,7 @@
       "Avaritia": 2,
       "Alfheim": 10
     },
-    "outputsNamed": 229,
+    "outputsNamed": 283,
     "notes": "aspects = essentia/vis cost (null value = computed at runtime, see aspectsComputed). output/input/central/components/inputs resolved to EN/RU names where the item ref maps to a lang key; otherwise {ref,meta} (ConfigItems/ConfigBlocks field) or {vanilla:srgName} or {oredict}. research = linked research key. infusion has instability + central + components."
   },
   "recipes": [
@@ -1281,7 +1281,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemKey",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Iron Arcane Key",
+        "name_ru": "Железный магический ключ"
       },
       "aspects": {
         "aqua": 5,
@@ -1343,7 +1345,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemKey",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Gold Arcane Key",
+        "name_ru": "Золотой магический ключ"
       },
       "aspects": {
         "aqua": 5,
@@ -1534,8 +1538,8 @@
         {
           "ref": "itemWandRod",
           "meta": 0,
-          "name_en": "Warpwood Rod",
-          "name_ru": ""
+          "name_en": "Greatwood Rod",
+          "name_ru": "Великодревесный стержень"
         }
       ]
     },
@@ -2010,8 +2014,8 @@
       "output": {
         "ref": "itemWandCap",
         "meta": 1,
-        "name_en": "Enchanted Cloth Cap",
-        "name_ru": ""
+        "name_en": "Gold Cap",
+        "name_ru": "Золотой наконечник"
       },
       "aspects": {
         "ordo": null,
@@ -2027,8 +2031,8 @@
       "output": {
         "ref": "itemWandCap",
         "meta": 3,
-        "name_en": "Shadow-imbued Cloth Cap",
-        "name_ru": ""
+        "name_en": "Copper Cap",
+        "name_ru": "Медный наконечник"
       },
       "aspects": {
         "ordo": null,
@@ -2048,7 +2052,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandCap",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Inert Silver Cap",
+        "name_ru": "Инертный серебряный наконечник"
       },
       "aspects": {
         "ordo": null,
@@ -2068,7 +2074,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandCap",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Inert Thaumium Cap",
+        "name_ru": "Инертный таум-наконечник"
       },
       "aspects": {
         "ordo": null,
@@ -2088,7 +2096,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandCap",
-        "meta": 8
+        "meta": 8,
+        "name_en": "Inert Void metal Cap",
+        "name_ru": "Инертный пустотный наконечник"
       },
       "aspects": {
         "perditio": null,
@@ -2110,8 +2120,8 @@
       "output": {
         "ref": "itemWandRod",
         "meta": 0,
-        "name_en": "Warpwood Rod",
-        "name_ru": ""
+        "name_en": "Greatwood Rod",
+        "name_ru": "Великодревесный стержень"
       },
       "aspects": {
         "perditio": null
@@ -2130,7 +2140,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 50
+        "meta": 50,
+        "name_en": "Greatwood Staff Core",
+        "name_ru": "Великодревесное ядро посоха"
       },
       "aspects": {
         "ordo": null
@@ -2146,8 +2158,8 @@
         {
           "ref": "itemWandRod",
           "meta": 0,
-          "name_en": "Warpwood Rod",
-          "name_ru": ""
+          "name_en": "Greatwood Rod",
+          "name_ru": "Великодревесный стержень"
         }
       ]
     },
@@ -2157,7 +2169,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 51
+        "meta": 51,
+        "name_en": "Obsidian Staff Core",
+        "name_ru": "Обсидиановое ядро посоха"
       },
       "aspects": {
         "ordo": null
@@ -2173,8 +2187,8 @@
         {
           "ref": "itemWandRod",
           "meta": 1,
-          "name_en": "Warpwood Staff Core",
-          "name_ru": ""
+          "name_en": "Obsidian Rod",
+          "name_ru": "Обсидиановый стержень"
         }
       ]
     },
@@ -2184,7 +2198,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 52
+        "meta": 52,
+        "name_en": "Silverwood Staff Core",
+        "name_ru": "Серебрянодревесное ядро посоха"
       },
       "aspects": {
         "ordo": null
@@ -2199,7 +2215,9 @@
         },
         {
           "ref": "itemWandRod",
-          "meta": 2
+          "meta": 2,
+          "name_en": "Silverwood Rod",
+          "name_ru": "Серебрянодревесный стержень"
         }
       ]
     },
@@ -2209,7 +2227,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 53
+        "meta": 53,
+        "name_en": "Icy Staff Core",
+        "name_ru": "Ледяное ядро посоха"
       },
       "aspects": {
         "ordo": null
@@ -2224,7 +2244,9 @@
         },
         {
           "ref": "itemWandRod",
-          "meta": 3
+          "meta": 3,
+          "name_en": "Icy Rod",
+          "name_ru": "Ледяной стержень"
         }
       ]
     },
@@ -2234,7 +2256,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 54
+        "meta": 54,
+        "name_en": "Quartz Staff Core",
+        "name_ru": "Кварцевое ядро посоха"
       },
       "aspects": {
         "ordo": null
@@ -2249,7 +2273,9 @@
         },
         {
           "ref": "itemWandRod",
-          "meta": 4
+          "meta": 4,
+          "name_en": "Quartz Rod",
+          "name_ru": "Кварцевый стержень"
         }
       ]
     },
@@ -2259,7 +2285,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 55
+        "meta": 55,
+        "name_en": "Reed Staff Core",
+        "name_ru": "Тростниковое ядро посоха"
       },
       "aspects": {
         "ordo": null
@@ -2274,7 +2302,9 @@
         },
         {
           "ref": "itemWandRod",
-          "meta": 5
+          "meta": 5,
+          "name_en": "Reed Rod",
+          "name_ru": "Тростниковый стержень"
         }
       ]
     },
@@ -2284,7 +2314,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 56
+        "meta": 56,
+        "name_en": "Blazing Staff Core",
+        "name_ru": "Огненное ядро посоха"
       },
       "aspects": {
         "ordo": null
@@ -2299,7 +2331,9 @@
         },
         {
           "ref": "itemWandRod",
-          "meta": 6
+          "meta": 6,
+          "name_en": "Blazing Rod",
+          "name_ru": "Огненный стержень"
         }
       ]
     },
@@ -2309,7 +2343,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 57
+        "meta": 57,
+        "name_en": "Bone Staff Core",
+        "name_ru": "Костяное ядро посоха"
       },
       "aspects": {
         "ordo": null
@@ -2324,7 +2360,9 @@
         },
         {
           "ref": "itemWandRod",
-          "meta": 7
+          "meta": 7,
+          "name_en": "Bone Rod",
+          "name_ru": "Костяной стержень"
         }
       ]
     },
@@ -3565,7 +3603,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandCap",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Charged Silver Cap",
+        "name_ru": "Заряженный серебряный наконечник"
       },
       "aspects": {
         "potentia": null,
@@ -3575,7 +3615,9 @@
       "instability": 4,
       "central": {
         "ref": "itemWandCap",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Inert Silver Cap",
+        "name_ru": "Инертный серебряный наконечник"
       },
       "components": [
         {
@@ -3599,8 +3641,8 @@
       "output": {
         "ref": "itemWandCap",
         "meta": 2,
-        "name_en": "Crimson-stained Cloth Cap",
-        "name_ru": ""
+        "name_en": "Charged Thaumium Cap",
+        "name_ru": "Заряженный таум-наконечник"
       },
       "aspects": {
         "potentia": null,
@@ -3610,7 +3652,9 @@
       "instability": 5,
       "central": {
         "ref": "itemWandCap",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Inert Thaumium Cap",
+        "name_ru": "Инертный таум-наконечник"
       },
       "components": [
         {
@@ -3639,7 +3683,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandCap",
-        "meta": 7
+        "meta": 7,
+        "name_en": "Charged Void metal Cap",
+        "name_ru": "Заряженный пустотный наконечник"
       },
       "aspects": {
         "potentia": null,
@@ -3651,7 +3697,9 @@
       "instability": 8,
       "central": {
         "ref": "itemWandCap",
-        "meta": 8
+        "meta": 8,
+        "name_en": "Inert Void metal Cap",
+        "name_ru": "Инертный пустотный наконечник"
       },
       "components": [
         {
@@ -3687,8 +3735,8 @@
       "output": {
         "ref": "itemWandRod",
         "meta": 1,
-        "name_en": "Warpwood Staff Core",
-        "name_ru": ""
+        "name_en": "Obsidian Rod",
+        "name_ru": "Обсидиановый стержень"
       },
       "aspects": {
         "terra": null,
@@ -3721,7 +3769,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Icy Rod",
+        "name_ru": "Ледяной стержень"
       },
       "aspects": {
         "aqua": null,
@@ -3757,7 +3807,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Quartz Rod",
+        "name_ru": "Кварцевый стержень"
       },
       "aspects": {
         "ordo": null,
@@ -3790,7 +3842,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Reed Rod",
+        "name_ru": "Тростниковый стержень"
       },
       "aspects": {
         "aer": null,
@@ -3826,7 +3880,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Blazing Rod",
+        "name_ru": "Огненный стержень"
       },
       "aspects": {
         "ignis": null,
@@ -3859,7 +3915,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 7
+        "meta": 7,
+        "name_en": "Bone Rod",
+        "name_ru": "Костяной стержень"
       },
       "aspects": {
         "perditio": null,
@@ -3895,7 +3953,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Silverwood Rod",
+        "name_ru": "Серебрянодревесный стержень"
       },
       "aspects": {
         "aer": null,
@@ -3963,7 +4023,9 @@
       "mod": "Thaumcraft",
       "output": {
         "ref": "itemWandRod",
-        "meta": 100
+        "meta": 100,
+        "name_en": "Staff Core of the Primal",
+        "name_ru": "Сингулярное ядро посоха"
       },
       "aspects": {
         "aer": null,
@@ -3978,7 +4040,9 @@
       "instability": 8,
       "central": {
         "ref": "itemWandRod",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Silverwood Rod",
+        "name_ru": "Серебрянодревесный стержень"
       },
       "components": [
         {
@@ -3990,16 +4054,20 @@
         {
           "ref": "itemWandRod",
           "meta": 1,
-          "name_en": "Warpwood Staff Core",
-          "name_ru": ""
+          "name_en": "Obsidian Rod",
+          "name_ru": "Обсидиановый стержень"
         },
         {
           "ref": "itemWandRod",
-          "meta": 3
+          "meta": 3,
+          "name_en": "Icy Rod",
+          "name_ru": "Ледяной стержень"
         },
         {
           "ref": "itemWandRod",
-          "meta": 4
+          "meta": 4,
+          "name_en": "Quartz Rod",
+          "name_ru": "Кварцевый стержень"
         },
         {
           "ref": "itemResource",
@@ -4009,15 +4077,21 @@
         },
         {
           "ref": "itemWandRod",
-          "meta": 5
+          "meta": 5,
+          "name_en": "Reed Rod",
+          "name_ru": "Тростниковый стержень"
         },
         {
           "ref": "itemWandRod",
-          "meta": 6
+          "meta": 6,
+          "name_en": "Blazing Rod",
+          "name_ru": "Огненный стержень"
         },
         {
           "ref": "itemWandRod",
-          "meta": 7
+          "meta": 7,
+          "name_en": "Bone Rod",
+          "name_ru": "Костяной стержень"
         }
       ]
     },
@@ -7445,7 +7519,10 @@
       "type": "arcane",
       "mod": "MagicBees",
       "output": {
-        "ref": "Config.thaumiumScoop"
+        "ref": "Config.thaumiumScoop",
+        "meta": null,
+        "name_en": "Thaumium Scoop",
+        "name_ru": "Таумический сачок"
       },
       "aspects": {
         "ordo": 2
@@ -7458,7 +7535,8 @@
           "oredict": "sTs"
         },
         {
-          "ref": "miscResource"
+          "ref": "miscResource",
+          "meta": null
         }
       ]
     },
@@ -7467,14 +7545,18 @@
       "type": "arcane",
       "mod": "MagicBees",
       "output": {
-        "ref": "Config.thaumiumGrafter"
+        "ref": "Config.thaumiumGrafter",
+        "meta": null,
+        "name_en": "Thaumium Grafter",
+        "name_ru": "Таумический садовый нож"
       },
       "aspects": {
         "ordo": 5
       },
       "inputs": [
         {
-          "ref": "miscResource"
+          "ref": "miscResource",
+          "meta": null
         }
       ]
     },
@@ -7498,7 +7580,8 @@
           "oredict": "sCs"
         },
         {
-          "ref": "miscResource"
+          "ref": "miscResource",
+          "meta": null
         }
       ]
     },
@@ -7526,10 +7609,12 @@
           "oredict": "npn"
         },
         {
-          "ref": "wooden"
+          "ref": "wooden",
+          "meta": null
         },
         {
-          "ref": "metal"
+          "ref": "metal",
+          "meta": null
         }
       ]
     },
@@ -7587,7 +7672,10 @@
       "type": "crucible",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenBlocks.taintSapling"
+        "ref": "ForbiddenBlocks.taintSapling",
+        "meta": 0,
+        "name_en": "Tainted Sapling",
+        "name_ru": ""
       },
       "aspects": {
         "vitium": 10,
@@ -7606,6 +7694,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.mobCrystal",
+        "meta": 0,
         "name_en": "%s Imprinted Crystal",
         "name_ru": "Отпечатанный кристалл (%s)"
       },
@@ -7625,7 +7714,10 @@
       "type": "crucible",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.resource"
+        "ref": "ForbiddenItems.resource",
+        "meta": 0,
+        "name_en": "Emerald Fragment",
+        "name_ru": "Изумрудный фрагмент"
       },
       "aspects": {
         "vitreus": 2,
@@ -7640,7 +7732,8 @@
       "type": "crucible",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenBlocks.roseBush"
+        "ref": "ForbiddenBlocks.roseBush",
+        "meta": 0
       },
       "aspects": {
         "tenebrae": 8,
@@ -7658,7 +7751,8 @@
       "type": "arcane",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenBlocks.taintStone"
+        "ref": "ForbiddenBlocks.taintStone",
+        "meta": 0
       },
       "aspects": {
         "perditio": 2,
@@ -7682,6 +7776,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.ringFood",
+        "meta": null,
         "name_en": "Ring of Nutrition",
         "name_ru": "Кольцо насыщения"
       },
@@ -7693,6 +7788,7 @@
       "inputs": [
         {
           "ref": "ForbiddenItems.gluttonyShard",
+          "meta": null,
           "name_en": "Gluttony Shard",
           "name_ru": "Осколок прожорливости"
         },
@@ -7716,6 +7812,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.ringFood",
+        "meta": null,
         "name_en": "Ring of Nutrition",
         "name_ru": "Кольцо насыщения"
       },
@@ -7727,6 +7824,7 @@
       "inputs": [
         {
           "ref": "ForbiddenItems.gluttonyShard",
+          "meta": null,
           "name_en": "Gluttony Shard",
           "name_ru": "Осколок прожорливости"
         },
@@ -7737,7 +7835,10 @@
           "name_ru": "Обычное кольцо"
         },
         {
-          "ref": "ForbiddenBlocks.starBlock"
+          "ref": "ForbiddenBlocks.starBlock",
+          "meta": null,
+          "name_en": "Nether Star Block",
+          "name_ru": "Блок звезды Нижнего мира"
         }
       ]
     },
@@ -7747,6 +7848,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.crystalwell",
+        "meta": 0,
         "name_en": "Crystal Scribing Tools",
         "name_ru": "Кристальная чернильница с пером"
       },
@@ -7776,6 +7878,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.crystalwell",
+        "meta": 0,
         "name_en": "Crystal Scribing Tools",
         "name_ru": "Кристальная чернильница с пером"
       },
@@ -7813,6 +7916,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.primewell",
+        "meta": 0,
         "name_en": "Primal Scribing Tools",
         "name_ru": ""
       },
@@ -7851,6 +7955,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.taintShovel",
+        "meta": null,
         "name_en": "Shovel of the Purifier",
         "name_ru": "Лопата очистителя"
       },
@@ -7890,6 +7995,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.taintPickaxe",
+        "meta": null,
         "name_en": "Pickaxe of Distortion",
         "name_ru": "Кирка искажения"
       },
@@ -7907,7 +8013,8 @@
           "oredict": "itemShard"
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 2
         },
         {
           "vanilla": "field_151045_i",
@@ -7925,7 +8032,8 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 0
       },
       "aspects": {
         "vitium": 24,
@@ -7941,22 +8049,28 @@
           "oredict": "itemResource"
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 2
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 2
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 2
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 2
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 2
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 2
         }
       ]
     },
@@ -7966,6 +8080,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.skullAxe",
+        "meta": null,
         "name_en": "Axe of the Skulltaker",
         "name_ru": "Топор собирателя черепов"
       },
@@ -7980,10 +8095,12 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 0
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 0
         },
         {
           "vanilla": "field_151045_i",
@@ -7999,6 +8116,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.subCollar",
+        "meta": null,
         "name_en": "Collar of Pain",
         "name_ru": "Ошейник боли"
       },
@@ -8017,13 +8135,16 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 4
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 4
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 4
         },
         {
           "vanilla": "field_151058_ca",
@@ -8045,6 +8166,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.arcaneCakeItem",
+        "meta": null,
         "name_en": "Thaumic Cake",
         "name_ru": "Таумический торт"
       },
@@ -8084,11 +8206,13 @@
         },
         {
           "ref": "ForbiddenItems.gluttonyShard",
+          "meta": null,
           "name_en": "Gluttony Shard",
           "name_ru": "Осколок прожорливости"
         },
         {
           "ref": "ForbiddenItems.gluttonyShard",
+          "meta": null,
           "name_en": "Gluttony Shard",
           "name_ru": "Осколок прожорливости"
         }
@@ -8100,6 +8224,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.arcaneCakeItem",
+        "meta": null,
         "name_en": "Thaumic Cake",
         "name_ru": "Таумический торт"
       },
@@ -8120,10 +8245,16 @@
           "oredict": "itemResource"
         },
         {
-          "ref": "ForbiddenBlocks.starBlock"
+          "ref": "ForbiddenBlocks.starBlock",
+          "meta": null,
+          "name_en": "Nether Star Block",
+          "name_ru": "Блок звезды Нижнего мира"
         },
         {
-          "ref": "ForbiddenBlocks.starBlock"
+          "ref": "ForbiddenBlocks.starBlock",
+          "meta": null,
+          "name_en": "Nether Star Block",
+          "name_ru": "Блок звезды Нижнего мира"
         },
         {
           "vanilla": "field_151110_aK",
@@ -8133,11 +8264,13 @@
         },
         {
           "ref": "ForbiddenItems.gluttonyShard",
+          "meta": null,
           "name_en": "Gluttony Shard",
           "name_ru": "Осколок прожорливости"
         },
         {
           "ref": "ForbiddenItems.gluttonyShard",
+          "meta": null,
           "name_en": "Gluttony Shard",
           "name_ru": "Осколок прожорливости"
         }
@@ -8149,6 +8282,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.blinkFocus",
+        "meta": null,
         "name_en": "Wand Focus: Blink",
         "name_ru": ""
       },
@@ -8167,13 +8301,16 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 5
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 5
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 5
         }
       ]
     },
@@ -8183,6 +8320,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.morphPickaxe",
+        "meta": null,
         "name_en": "Chameleon Pickaxe",
         "name_ru": "Хамелеоновая кирка"
       },
@@ -8197,10 +8335,12 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 1
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 1
         },
         {
           "vanilla": "field_151045_i",
@@ -8222,6 +8362,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.morphSword",
+        "meta": null,
         "name_en": "Chameleon Sword",
         "name_ru": "Хамелеоновый меч"
       },
@@ -8236,10 +8377,12 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 1
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 1
         },
         {
           "vanilla": "field_151045_i",
@@ -8261,6 +8404,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.morphShovel",
+        "meta": null,
         "name_en": "Chameleon Shovel",
         "name_ru": "Хамелеоновая лопата"
       },
@@ -8275,10 +8419,12 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 1
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 1
         },
         {
           "vanilla": "field_151045_i",
@@ -8300,6 +8446,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.morphAxe",
+        "meta": null,
         "name_en": "Chameleon Axe",
         "name_ru": "Хамелеоновый топор"
       },
@@ -8314,10 +8461,12 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 1
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 1
         },
         {
           "vanilla": "field_151045_i",
@@ -8338,7 +8487,8 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 1
       },
       "aspects": {
         "infernus": 32,
@@ -8354,10 +8504,12 @@
           "oredict": "itemResource"
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 3
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 3
         }
       ]
     },
@@ -8366,7 +8518,10 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenBlocks.wrathCage"
+        "ref": "ForbiddenBlocks.wrathCage",
+        "meta": 0,
+        "name_en": "Wrath Cage",
+        "name_ru": "Клетка гнева"
       },
       "aspects": {
         "ira": 32,
@@ -8380,16 +8535,20 @@
       },
       "components": [
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 0
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 0
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 0
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 0
         },
         {
           "vanilla": "field_151045_i",
@@ -8432,6 +8591,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.fork",
+        "meta": 0,
         "name_en": "Diabolist Fork",
         "name_ru": "Адские вилы"
       },
@@ -8468,9 +8628,9 @@
       "instability": 4,
       "central": {
         "ref": "itemResource",
-        "meta": 14,
-        "name_en": "Salis Mundus",
-        "name_ru": "Salis Mundus"
+        "meta": 6,
+        "name_en": "Amber",
+        "name_ru": "Янтарь"
       }
     },
     {
@@ -8581,7 +8741,7 @@
       "instability": 4,
       "central": {
         "ref": "itemShovelElemental",
-        "meta": 0,
+        "meta": 1,
         "name_en": "Shovel of the Earthmover",
         "name_ru": "Лопата Землероя"
       }
@@ -8601,7 +8761,8 @@
       },
       "instability": 8,
       "central": {
-        "ref": "ForbiddenItems.deadlyShards"
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 1
       }
     },
     {
@@ -8609,7 +8770,8 @@
       "type": "arcane",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 9
       },
       "aspects": {
         "perditio": 26,
@@ -8621,10 +8783,12 @@
       },
       "inputs": [
         {
-          "ref": "ForbiddenItems.wandCore"
+          "ref": "ForbiddenItems.wandCore",
+          "meta": 3
         },
         {
-          "ref": "demonShard"
+          "ref": "demonShard",
+          "meta": null
         }
       ]
     },
@@ -8634,6 +8798,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.bloodwell",
+        "meta": 0,
         "name_en": "Bloody Scrivener's Tools",
         "name_ru": "Инструменты кровавого писца"
       },
@@ -8649,7 +8814,8 @@
           "name_ru": "Перо"
         },
         {
-          "ref": "bloodBucket"
+          "ref": "bloodBucket",
+          "meta": 0
         },
         {
           "vanilla": "field_151069_bo",
@@ -8658,7 +8824,8 @@
           "name_ru": "Пузырёк"
         },
         {
-          "ref": "crapOrb"
+          "ref": "crapOrb",
+          "meta": 0
         }
       ]
     },
@@ -8667,7 +8834,8 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 6
       },
       "aspects": {
         "victus": 32,
@@ -8676,35 +8844,45 @@
       },
       "instability": 2,
       "central": {
-        "ref": "masterOrb"
+        "ref": "masterOrb",
+        "meta": null
       },
       "components": [
         {
-          "ref": "magicales"
+          "ref": "magicales",
+          "meta": null
         },
         {
-          "ref": "imbuedSlate"
+          "ref": "imbuedSlate",
+          "meta": null
         },
         {
-          "ref": "imbuedSlate"
+          "ref": "imbuedSlate",
+          "meta": null
         },
         {
-          "ref": "tennebrae"
+          "ref": "tennebrae",
+          "meta": null
         },
         {
-          "ref": "sanctus"
+          "ref": "sanctus",
+          "meta": null
         },
         {
-          "ref": "aquasalus"
+          "ref": "aquasalus",
+          "meta": null
         },
         {
-          "ref": "incendium"
+          "ref": "incendium",
+          "meta": null
         },
         {
-          "ref": "terrae"
+          "ref": "terrae",
+          "meta": null
         },
         {
-          "ref": "aether"
+          "ref": "aether",
+          "meta": null
         }
       ]
     },
@@ -8713,7 +8891,10 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCap"
+        "ref": "ForbiddenItems.wandCap",
+        "meta": 0,
+        "name_en": "Iron Cap",
+        "name_ru": "Железный наконечник"
       },
       "aspects": {
         "victus": 12,
@@ -8725,13 +8906,16 @@
       },
       "components": [
         {
-          "ref": "magicales"
+          "ref": "magicales",
+          "meta": null
         },
         {
-          "ref": "magicales"
+          "ref": "magicales",
+          "meta": null
         },
         {
-          "ref": "magicales"
+          "ref": "magicales",
+          "meta": null
         }
       ]
     },
@@ -8741,6 +8925,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.bloodRapier",
+        "meta": 0,
         "name_en": "Rapier of the Strix",
         "name_ru": "Рапира неясыти"
       },
@@ -8761,10 +8946,12 @@
           "name_ru": "Заражённое щупальце"
         },
         {
-          "ref": "ForbiddenItems.deadlyShards"
+          "ref": "ForbiddenItems.deadlyShards",
+          "meta": 0
         },
         {
           "ref": "ForbiddenItems.gluttonyShard",
+          "meta": 0,
           "name_en": "Gluttony Shard",
           "name_ru": "Осколок прожорливости"
         },
@@ -8788,6 +8975,7 @@
       "mod": "ForbiddenMagic",
       "output": {
         "ref": "ForbiddenItems.bloodOrb",
+        "meta": 0,
         "name_en": "Eldritch Blood Orb",
         "name_ru": "Древний шар крови"
       },
@@ -8799,7 +8987,8 @@
       },
       "instability": 2,
       "central": {
-        "ref": "kamiOrb"
+        "ref": "kamiOrb",
+        "meta": null
       },
       "components": [
         {
@@ -8863,7 +9052,8 @@
       "type": "arcane",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 10
       },
       "aspects": {
         "perditio": 26,
@@ -8875,10 +9065,12 @@
       },
       "inputs": [
         {
-          "ref": "ForbiddenItems.wandCore"
+          "ref": "ForbiddenItems.wandCore",
+          "meta": 4
         },
         {
-          "ref": "essence"
+          "ref": "essence",
+          "meta": 10
         }
       ]
     },
@@ -8887,7 +9079,8 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 4
       },
       "aspects": {
         "praecantatio": 16,
@@ -8898,35 +9091,45 @@
       },
       "instability": 5,
       "central": {
-        "ref": "witchwood"
+        "ref": "witchwood",
+        "meta": null
       },
       "components": [
         {
-          "ref": "essence"
+          "ref": "essence",
+          "meta": 0
         },
         {
-          "ref": "amOre"
+          "ref": "amOre",
+          "meta": 3
         },
         {
-          "ref": "essence"
+          "ref": "essence",
+          "meta": 1
         },
         {
-          "ref": "essence"
+          "ref": "essence",
+          "meta": 2
         },
         {
-          "ref": "essence"
+          "ref": "essence",
+          "meta": 3
         },
         {
-          "ref": "essence"
+          "ref": "essence",
+          "meta": 4
         },
         {
-          "ref": "amOre"
+          "ref": "amOre",
+          "meta": 6
         },
         {
-          "ref": "amOre"
+          "ref": "amOre",
+          "meta": 7
         },
         {
-          "ref": "amOre"
+          "ref": "amOre",
+          "meta": 2
         }
       ]
     },
@@ -8935,7 +9138,10 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCap"
+        "ref": "ForbiddenItems.wandCap",
+        "meta": 1,
+        "name_en": "Gold Cap",
+        "name_ru": "Золотой наконечник"
       },
       "aspects": {
         "potentia": 12,
@@ -8947,13 +9153,16 @@
       },
       "components": [
         {
-          "ref": "amOre"
+          "ref": "amOre",
+          "meta": 0
         },
         {
-          "ref": "amOre"
+          "ref": "amOre",
+          "meta": 0
         },
         {
-          "ref": "amOre"
+          "ref": "amOre",
+          "meta": 0
         }
       ]
     },
@@ -8962,7 +9171,10 @@
       "type": "arcane",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCap"
+        "ref": "ForbiddenItems.wandCap",
+        "meta": 4,
+        "name_en": "Charged Silver Cap",
+        "name_ru": "Заряженный серебряный наконечник"
       },
       "aspects": {
         "perditio": 6,
@@ -8983,7 +9195,8 @@
       "type": "arcane",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 13
       },
       "aspects": {
         "perditio": 26,
@@ -8995,10 +9208,12 @@
       },
       "inputs": [
         {
-          "ref": "ForbiddenItems.wandCore"
+          "ref": "ForbiddenItems.wandCore",
+          "meta": 11
         },
         {
-          "ref": "resource"
+          "ref": "resource",
+          "meta": 9
         }
       ]
     },
@@ -9007,7 +9222,10 @@
       "type": "arcane",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCap"
+        "ref": "ForbiddenItems.wandCap",
+        "meta": 6,
+        "name_en": "Inert Thaumium Cap",
+        "name_ru": "Инертный таум-наконечник"
       },
       "aspects": {
         "perditio": 27,
@@ -9043,7 +9261,14 @@
           "raw": "new ItemStack((Block)"
         },
         {
-          "ref": "resource"
+          "ref": "resource",
+          "meta": 2,
+          "name_en": "Manasteel Nugget",
+          "name_ru": "Самородок манастали"
+        },
+        {
+          "ref": "resource",
+          "meta": 6
         },
         {
           "ref": "itemResource",
@@ -9052,10 +9277,16 @@
           "name_ru": "Фрагмент знаний"
         },
         {
-          "ref": "petal"
+          "ref": "petal",
+          "meta": 7
         },
         {
-          "ref": "rune"
+          "ref": "petal",
+          "meta": 10
+        },
+        {
+          "ref": "rune",
+          "meta": 14
         },
         {
           "ref": "itemResource",
@@ -9070,7 +9301,8 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 8
       },
       "aspects": {
         "praecantatio": 16,
@@ -9081,38 +9313,51 @@
       },
       "instability": 3,
       "central": {
-        "ref": "livingLog"
+        "ref": "livingLog",
+        "meta": null
       },
       "components": [
         {
-          "ref": "resource"
+          "ref": "resource",
+          "meta": 2,
+          "name_en": "Manasteel Nugget",
+          "name_ru": "Самородок манастали"
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 8
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 0
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 1
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 2
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 3
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 4
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 5
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 6
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 7
         }
       ]
     },
@@ -9121,7 +9366,8 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCore"
+        "ref": "ForbiddenItems.wandCore",
+        "meta": 12
       },
       "aspects": {
         "praecantatio": 16,
@@ -9132,38 +9378,51 @@
       },
       "instability": 3,
       "central": {
-        "ref": "dreamwood"
+        "ref": "dreamwood",
+        "meta": null
       },
       "components": [
         {
-          "ref": "resource"
+          "ref": "resource",
+          "meta": 2,
+          "name_en": "Manasteel Nugget",
+          "name_ru": "Самородок манастали"
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 8
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 0
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 1
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 2
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 3
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 4
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 5
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 6
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 7
         }
       ]
     },
@@ -9172,7 +9431,10 @@
       "type": "infusion",
       "mod": "ForbiddenMagic",
       "output": {
-        "ref": "ForbiddenItems.wandCap"
+        "ref": "ForbiddenItems.wandCap",
+        "meta": 5,
+        "name_en": "Inert Silver Cap",
+        "name_ru": "Инертный серебряный наконечник"
       },
       "aspects": {
         "terra": 18,
@@ -9182,23 +9444,31 @@
       },
       "instability": 1,
       "central": {
-        "ref": "ForbiddenItems.wandCap"
+        "ref": "ForbiddenItems.wandCap",
+        "meta": 6,
+        "name_en": "Inert Thaumium Cap",
+        "name_ru": "Инертный таум-наконечник"
       },
       "components": [
         {
-          "ref": "resource"
+          "ref": "resource",
+          "meta": 5
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 0
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 1
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 2
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 3
         }
       ]
     },
@@ -9216,7 +9486,8 @@
       },
       "instability": 8,
       "central": {
-        "ref": "flower"
+        "ref": "flower",
+        "meta": 6
       },
       "components": [
         {
@@ -9226,22 +9497,30 @@
           "name_ru": "Salis Mundus"
         },
         {
-          "ref": "resource"
+          "ref": "resource",
+          "meta": 1,
+          "name_en": "Shadow Ink",
+          "name_ru": "Теневые чернила"
         },
         {
-          "ref": "resource"
+          "ref": "resource",
+          "meta": 6
         },
         {
-          "ref": "petal"
+          "ref": "petal",
+          "meta": 6
         },
         {
-          "ref": "petal"
+          "ref": "petal",
+          "meta": 6
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 12
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 11
         }
       ]
     },
@@ -9267,19 +9546,24 @@
       },
       "components": [
         {
-          "ref": "petal"
+          "ref": "petal",
+          "meta": 10
         },
         {
-          "ref": "petal"
+          "ref": "petal",
+          "meta": 10
         },
         {
-          "ref": "petal"
+          "ref": "petal",
+          "meta": 10
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 10
         },
         {
-          "ref": "rune"
+          "ref": "rune",
+          "meta": 8
         }
       ]
     },
@@ -9288,7 +9572,10 @@
       "type": "crucible",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 3,
+        "name_en": "Warped Unbalanced Shard",
+        "name_ru": ""
       },
       "aspects": {
         "alienis": 4
@@ -9305,7 +9592,10 @@
       "type": "crucible",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 4,
+        "name_en": "Tainted Unbalanced Shard",
+        "name_ru": ""
       },
       "aspects": {
         "vitium": 4
@@ -9322,7 +9612,10 @@
       "type": "crucible",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 0,
+        "name_en": "Shadow Metal Ingot",
+        "name_ru": ""
       },
       "aspects": {
         "tenebrae": 3,
@@ -9383,7 +9676,10 @@
       "type": "arcane",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 6,
+        "name_en": "Thaumic Alloy Plating",
+        "name_ru": ""
       },
       "aspects": {
         "ordo": 50,
@@ -9420,7 +9716,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 2,
+          "name_en": "Crimson-stained Cloth",
+          "name_ru": ""
         }
       ]
     },
@@ -9440,7 +9739,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 2,
+          "name_en": "Crimson-stained Cloth",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151043_k",
@@ -9472,7 +9774,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 2,
+          "name_en": "Crimson-stained Cloth",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151043_k",
@@ -9504,7 +9809,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 2,
+          "name_en": "Crimson-stained Cloth",
+          "name_ru": ""
         }
       ]
     },
@@ -9513,7 +9821,10 @@
       "type": "arcane",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemWandRod"
+        "ref": "ItemRegistry.ItemWandRod",
+        "meta": 1,
+        "name_en": "Warpwood Staff Core",
+        "name_ru": ""
       },
       "aspects": {},
       "inputs": [
@@ -9524,7 +9835,10 @@
           "name_ru": "Сингулярная жемчужина"
         },
         {
-          "ref": "ItemRegistry.ItemWandRod"
+          "ref": "ItemRegistry.ItemWandRod",
+          "meta": 0,
+          "name_en": "Warpwood Rod",
+          "name_ru": ""
         }
       ]
     },
@@ -9545,7 +9859,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 7,
+          "name_en": "Crimson Plating",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151043_k",
@@ -9584,7 +9901,10 @@
           "name_ru": "Железный слиток"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 7,
+          "name_en": "Crimson Plating",
+          "name_ru": ""
         }
       ]
     },
@@ -9617,7 +9937,10 @@
           "name_ru": "Золотой слиток"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 7,
+          "name_en": "Crimson Plating",
+          "name_ru": ""
         }
       ]
     },
@@ -9650,7 +9973,10 @@
           "name_ru": "Железный слиток"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 7,
+          "name_en": "Crimson Plating",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151043_k",
@@ -9689,7 +10015,10 @@
           "name_ru": "Железный слиток"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 7,
+          "name_en": "Crimson Plating",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151043_k",
@@ -9722,7 +10051,10 @@
           "name_ru": "Поножи культиста"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 7,
+          "name_en": "Crimson Plating",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151042_j",
@@ -9743,7 +10075,10 @@
       "type": "arcane",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 1,
+        "name_en": "Shadow-imbued Cloth",
+        "name_ru": ""
       },
       "aspects": {
         "ordo": 10,
@@ -9751,7 +10086,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 8,
+          "name_en": "Shadow Metal Nugget",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -9767,6 +10105,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemHollowDagger",
+        "meta": null,
         "name_en": "Hollow Dagger",
         "name_ru": ""
       },
@@ -9776,7 +10115,9 @@
       "inputs": [
         {
           "ref": "itemWandRod",
-          "meta": 7
+          "meta": 7,
+          "name_en": "Bone Rod",
+          "name_ru": "Костяной стержень"
         },
         {
           "ref": "blockMagicalLog",
@@ -9792,7 +10133,10 @@
       "type": "arcane",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemWandCap"
+        "ref": "ItemRegistry.ItemWandCap",
+        "meta": 1,
+        "name_en": "Enchanted Cloth Cap",
+        "name_ru": ""
       },
       "aspects": {
         "terra": 10,
@@ -9814,7 +10158,10 @@
       "type": "arcane",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemWandCap"
+        "ref": "ItemRegistry.ItemWandCap",
+        "meta": 2,
+        "name_en": "Crimson-stained Cloth Cap",
+        "name_ru": ""
       },
       "aspects": {
         "ignis": 25,
@@ -9823,7 +10170,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 2,
+          "name_en": "Crimson-stained Cloth",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -9838,7 +10188,10 @@
       "type": "arcane",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemWandCap"
+        "ref": "ItemRegistry.ItemWandCap",
+        "meta": 3,
+        "name_en": "Shadow-imbued Cloth Cap",
+        "name_ru": ""
       },
       "aspects": {
         "terra": 55,
@@ -9848,7 +10201,10 @@
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 1,
+          "name_en": "Shadow-imbued Cloth",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -9864,6 +10220,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemFocusVisShard",
+        "meta": null,
         "name_en": "Wand Focus: Vis Shard",
         "name_ru": ""
       },
@@ -9886,7 +10243,10 @@
           "name_ru": "Сбалансированный кристалл"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 4,
+          "name_en": "Tainted Unbalanced Shard",
+          "name_ru": ""
         },
         {
           "ref": "itemWispEssence",
@@ -9902,6 +10262,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemFocusLumos",
+        "meta": null,
         "name_en": "Wand Focus: Lumos",
         "name_ru": ""
       },
@@ -9937,6 +10298,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemVoidBlood",
+        "meta": null,
         "name_en": "Phial of Void-infused Blood",
         "name_ru": ""
       },
@@ -9947,11 +10309,15 @@
       "inputs": [
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 10,
+          "name_en": "Primordial Mote",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -9972,7 +10338,10 @@
       "type": "arcane_shapeless",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 2,
+        "name_en": "Crimson-stained Cloth",
+        "name_ru": ""
       },
       "aspects": {
         "ignis": 5,
@@ -9981,6 +10350,7 @@
       "inputs": [
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         },
@@ -10004,6 +10374,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemWarpFertilizer",
+        "meta": null,
         "name_en": "Warping Fertilizer",
         "name_ru": ""
       },
@@ -10018,7 +10389,10 @@
           "name_ru": "Мозг зомби"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 3,
+          "name_en": "Warped Unbalanced Shard",
+          "name_ru": ""
         },
         {
           "ref": "itemWispEssence",
@@ -10040,6 +10414,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemMagicFunguar",
+        "meta": null,
         "name_en": "Magic Funguar",
         "name_ru": ""
       },
@@ -10062,7 +10437,10 @@
       "type": "arcane_shapeless",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 9,
+        "name_en": "Primordial Nodule",
+        "name_ru": ""
       },
       "aspects": {
         "perditio": 25
@@ -10081,14 +10459,20 @@
       "type": "arcane_shapeless",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 10,
+        "name_en": "Primordial Mote",
+        "name_ru": ""
       },
       "aspects": {
         "perditio": 15
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 9,
+          "name_en": "Primordial Nodule",
+          "name_ru": ""
         }
       ]
     },
@@ -10097,14 +10481,20 @@
       "type": "arcane_shapeless",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 11,
+        "name_en": "Creation Fragment",
+        "name_ru": ""
       },
       "aspects": {
         "perditio": 99
       },
       "inputs": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 5,
+          "name_en": "Shard of Creation",
+          "name_ru": ""
         }
       ]
     },
@@ -10114,6 +10504,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemFocusShockwave",
+        "meta": null,
         "name_en": "Wand Focus: Shockwave",
         "name_ru": ""
       },
@@ -10192,7 +10583,10 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 5,
+          "name_en": "Shard of Creation",
+          "name_ru": ""
         },
         {
           "ref": "itemShard",
@@ -10244,6 +10638,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemFocusMageMace",
+        "meta": null,
         "name_en": "Wand Focus: Mage's Mace",
         "name_ru": ""
       },
@@ -10314,16 +10709,19 @@
       "components": [
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         },
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         },
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         }
@@ -10335,6 +10733,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemVoidwalkerSash",
+        "meta": null,
         "name_en": "Voidwalker's Sash of Runic Shielding",
         "name_ru": ""
       },
@@ -10352,19 +10751,16 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 10,
+          "name_en": "Primordial Mote",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
-        },
-        {
-          "ref": "itemResource",
-          "meta": 16,
-          "name_en": "Void metal Ingot",
-          "name_ru": "Слиток пустотного металла"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -10373,7 +10769,22 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 1,
+          "name_en": "Shadow-imbued Cloth",
+          "name_ru": ""
+        },
+        {
+          "ref": "itemResource",
+          "meta": 16,
+          "name_en": "Void metal Ingot",
+          "name_ru": "Слиток пустотного металла"
+        },
+        {
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151042_j",
@@ -10382,7 +10793,10 @@
           "name_ru": "Железный слиток"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -10391,7 +10805,10 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 1,
+          "name_en": "Shadow-imbued Cloth",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -10400,7 +10817,10 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         }
       ]
     },
@@ -10409,7 +10829,10 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 5,
+        "name_en": "Shard of Creation",
+        "name_ru": ""
       },
       "aspects": {
         "auram": 40,
@@ -10474,7 +10897,8 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemWandRod"
+        "ref": "ItemRegistry.ItemWandRod",
+        "meta": null
       },
       "aspects": {
         "alienis": 65,
@@ -10486,18 +10910,26 @@
       "instability": 8,
       "central": {
         "ref": "BlockRegistry.BlockWarpwoodLog",
+        "meta": null,
         "name_en": "Warpwood Log",
         "name_ru": ""
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 9,
+          "name_en": "Primordial Nodule",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": null
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 3,
+          "name_en": "Warped Unbalanced Shard",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -10512,10 +10944,14 @@
           "name_ru": "Мозг зомби"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": null
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 3,
+          "name_en": "Warped Unbalanced Shard",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -10540,6 +10976,7 @@
       "instability": 5,
       "central": {
         "ref": "ItemRegistry.ItemVoidFortressHelmet",
+        "meta": null,
         "name_en": "Void Fortress Helm",
         "name_ru": ""
       },
@@ -10573,6 +11010,7 @@
       "instability": 8,
       "central": {
         "ref": "ItemRegistry.ItemVoidFortressHelmet",
+        "meta": null,
         "name_en": "Void Fortress Helm",
         "name_ru": ""
       },
@@ -10630,6 +11068,7 @@
       "instability": 8,
       "central": {
         "ref": "ItemRegistry.ItemVoidFortressHelmet",
+        "meta": null,
         "name_en": "Void Fortress Helm",
         "name_ru": ""
       },
@@ -10681,6 +11120,7 @@
       "instability": 8,
       "central": {
         "ref": "ItemRegistry.ItemVoidFortressHelmet",
+        "meta": null,
         "name_en": "Void Fortress Helm",
         "name_ru": ""
       },
@@ -10723,6 +11163,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemVoidFortressHelmet",
+        "meta": null,
         "name_en": "Void Fortress Helm",
         "name_ru": ""
       },
@@ -10779,6 +11220,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemVoidFortressChestplate",
+        "meta": null,
         "name_en": "Void Fortress Cuirass",
         "name_ru": ""
       },
@@ -10841,6 +11283,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemVoidFortressLeggings",
+        "meta": null,
         "name_en": "Void Fortress Thigh Guards",
         "name_ru": ""
       },
@@ -10897,6 +11340,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemWarpedGoggles",
+        "meta": null,
         "name_en": "Warped Goggles of Revealing",
         "name_ru": ""
       },
@@ -10915,7 +11359,10 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "ref": "itemNugget",
@@ -10930,7 +11377,8 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemWandCap"
+        "ref": "ItemRegistry.ItemWandCap",
+        "meta": null
       },
       "aspects": {
         "alienis": 55,
@@ -10942,29 +11390,20 @@
       "instability": 8,
       "central": {
         "ref": "itemWandCap",
-        "meta": 7
+        "meta": 7,
+        "name_en": "Charged Void metal Cap",
+        "name_ru": "Заряженный пустотный наконечник"
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 3,
+          "name_en": "Warped Unbalanced Shard",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
-        },
-        {
-          "ref": "itemResource",
-          "meta": 16,
-          "name_en": "Void metal Ingot",
-          "name_ru": "Слиток пустотного металла"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial"
-        },
-        {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": null
         },
         {
           "ref": "itemResource",
@@ -10973,7 +11412,28 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": null
+        },
+        {
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 9,
+          "name_en": "Primordial Nodule",
+          "name_ru": ""
+        },
+        {
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": null
+        },
+        {
+          "ref": "itemResource",
+          "meta": 16,
+          "name_en": "Void metal Ingot",
+          "name_ru": "Слиток пустотного металла"
+        },
+        {
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": null
         }
       ]
     },
@@ -10983,6 +11443,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemFocusTaintSwarm",
+        "meta": null,
         "name_en": "Wand Focus: Taint Swarm",
         "name_ru": ""
       },
@@ -10996,6 +11457,7 @@
       "instability": 4,
       "central": {
         "ref": "ItemRegistry.ItemFocusVisShard",
+        "meta": null,
         "name_en": "Wand Focus: Vis Shard",
         "name_ru": ""
       },
@@ -11007,7 +11469,10 @@
           "name_ru": "Заражённая слизь"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 4,
+          "name_en": "Tainted Unbalanced Shard",
+          "name_ru": ""
         },
         {
           "ref": "itemBottleTaint",
@@ -11016,7 +11481,10 @@
           "name_ru": "Порча в бутылке"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 4,
+          "name_en": "Tainted Unbalanced Shard",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -11025,7 +11493,10 @@
           "name_ru": "Заражённая слизь"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 4,
+          "name_en": "Tainted Unbalanced Shard",
+          "name_ru": ""
         },
         {
           "ref": "itemBottleTaint",
@@ -11034,7 +11505,10 @@
           "name_ru": "Порча в бутылке"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 4,
+          "name_en": "Tainted Unbalanced Shard",
+          "name_ru": ""
         }
       ]
     },
@@ -11044,6 +11518,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemFocusDarkMatter",
+        "meta": null,
         "name_en": "Wand Focus: Dark Matter",
         "name_ru": ""
       },
@@ -11069,10 +11544,16 @@
           "name_ru": "Сингулярная жемчужина"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 3,
+          "name_en": "Warped Unbalanced Shard",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151043_k",
@@ -11087,7 +11568,10 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 3,
+          "name_en": "Warped Unbalanced Shard",
+          "name_ru": ""
         },
         {
           "ref": "itemBucketDeath",
@@ -11096,10 +11580,16 @@
           "name_ru": "Ведро жидкой смерти"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 3,
+          "name_en": "Warped Unbalanced Shard",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151043_k",
@@ -11114,7 +11604,10 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 3,
+          "name_en": "Warped Unbalanced Shard",
+          "name_ru": ""
         }
       ]
     },
@@ -11123,7 +11616,10 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 7,
+        "name_en": "Crimson Plating",
+        "name_ru": ""
       },
       "aspects": {
         "fames": 4,
@@ -11140,6 +11636,7 @@
       "components": [
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         },
@@ -11151,6 +11648,7 @@
         },
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         },
@@ -11162,6 +11660,7 @@
         },
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         },
@@ -11173,6 +11672,7 @@
         },
         {
           "ref": "ItemRegistry.ItemCrimsonBlood",
+          "meta": null,
           "name_en": "Phial of Crimson Blood",
           "name_ru": ""
         },
@@ -11190,6 +11690,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemVoidwalkerBoots",
+        "meta": null,
         "name_en": "Boots of the Voidwalker",
         "name_ru": ""
       },
@@ -11209,7 +11710,10 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 10,
+          "name_en": "Primordial Mote",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -11218,13 +11722,20 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 1,
+          "name_en": "Shadow-imbued Cloth",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": null
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 1,
+          "name_en": "Shadow-imbued Cloth",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -11243,13 +11754,20 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 1,
+          "name_en": "Shadow-imbued Cloth",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": null
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 1,
+          "name_en": "Shadow-imbued Cloth",
+          "name_ru": ""
         },
         {
           "ref": "itemResource",
@@ -11264,7 +11782,10 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemSalis"
+        "ref": "ItemRegistry.ItemSalis",
+        "meta": 0,
+        "name_en": "Salis Tempestas",
+        "name_ru": ""
       },
       "aspects": {
         "auram": 20,
@@ -11280,7 +11801,10 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 11,
+          "name_en": "Creation Fragment",
+          "name_ru": ""
         },
         {
           "ref": "itemNugget",
@@ -11295,7 +11819,10 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemSalis"
+        "ref": "ItemRegistry.ItemSalis",
+        "meta": 1,
+        "name_en": "Salis Aevum",
+        "name_ru": ""
       },
       "aspects": {
         "auram": 20,
@@ -11311,7 +11838,10 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 11,
+          "name_en": "Creation Fragment",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151074_bl",
@@ -11327,6 +11857,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemThaumicDisassembler",
+        "meta": null,
         "name_en": "Thaumic Disassembler",
         "name_ru": ""
       },
@@ -11338,11 +11869,17 @@
       },
       "instability": 3,
       "central": {
-        "ref": "ItemRegistry.ItemMaterial"
+        "ref": "ItemRegistry.ItemMaterial",
+        "meta": 6,
+        "name_en": "Thaumic Alloy Plating",
+        "name_ru": ""
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 10,
+          "name_en": "Primordial Mote",
+          "name_ru": ""
         },
         {
           "ref": "itemPickVoid",
@@ -11403,6 +11940,7 @@
       "instability": 5,
       "central": {
         "ref": "ItemRegistry.ItemShadowFortressHelmet",
+        "meta": null,
         "name_en": "Shadow Fortress Helm",
         "name_ru": ""
       },
@@ -11436,6 +11974,7 @@
       "instability": 8,
       "central": {
         "ref": "ItemRegistry.ItemShadowFortressHelmet",
+        "meta": null,
         "name_en": "Shadow Fortress Helm",
         "name_ru": ""
       },
@@ -11493,6 +12032,7 @@
       "instability": 8,
       "central": {
         "ref": "ItemRegistry.ItemShadowFortressHelmet",
+        "meta": null,
         "name_en": "Shadow Fortress Helm",
         "name_ru": ""
       },
@@ -11544,6 +12084,7 @@
       "instability": 8,
       "central": {
         "ref": "ItemRegistry.ItemShadowFortressHelmet",
+        "meta": null,
         "name_en": "Shadow Fortress Helm",
         "name_ru": ""
       },
@@ -11586,6 +12127,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemShadowFortressHelmet",
+        "meta": null,
         "name_en": "Shadow Fortress Helm",
         "name_ru": ""
       },
@@ -11605,10 +12147,16 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151042_j",
@@ -11636,6 +12184,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemShadowFortressChestplate",
+        "meta": null,
         "name_en": "Shadow Fortress Cuirass",
         "name_ru": ""
       },
@@ -11655,16 +12204,28 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151042_j",
@@ -11686,6 +12247,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemShadowFortressLeggings",
+        "meta": null,
         "name_en": "Shadow Fortress Thigh Guards",
         "name_ru": ""
       },
@@ -11705,13 +12267,22 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151042_j",
@@ -11732,7 +12303,10 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": 0,
+        "name_en": "Thaumium Fortress Blade",
+        "name_ru": ""
       },
       "aspects": {
         "metallum": 42,
@@ -11814,7 +12388,10 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": 1,
+        "name_en": "Void Metal Fortress Blade",
+        "name_ru": ""
       },
       "aspects": {
         "metallum": 52,
@@ -11898,7 +12475,10 @@
       "type": "infusion",
       "mod": "TaintedMagic",
       "output": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": 2,
+        "name_en": "Shadow Metal Fortress Blade",
+        "name_ru": ""
       },
       "aspects": {
         "metallum": 62,
@@ -11913,7 +12493,10 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151042_j",
@@ -11934,10 +12517,16 @@
           "name_ru": "Железный слиток"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151042_j",
@@ -11958,7 +12547,10 @@
           "name_ru": "Железный слиток"
         },
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 0,
+          "name_en": "Shadow Metal Ingot",
+          "name_ru": ""
         }
       ]
     },
@@ -11968,6 +12560,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemFlyteCharm",
+        "meta": 0,
         "name_en": "Flyte Charm",
         "name_ru": ""
       },
@@ -11987,7 +12580,10 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 5,
+          "name_en": "Shard of Creation",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151043_k",
@@ -12039,6 +12635,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemGateKey",
+        "meta": 0,
         "name_en": "Celestial Gate Key",
         "name_ru": ""
       },
@@ -12057,7 +12654,10 @@
       },
       "components": [
         {
-          "ref": "ItemRegistry.ItemMaterial"
+          "ref": "ItemRegistry.ItemMaterial",
+          "meta": 11,
+          "name_en": "Creation Fragment",
+          "name_ru": ""
         },
         {
           "vanilla": "field_151042_j",
@@ -12109,6 +12709,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemVoidmetalGoggles",
+        "meta": null,
         "name_en": "Void Metal Goggles of Revealing",
         "name_ru": ""
       },
@@ -12120,6 +12721,7 @@
       "instability": 5,
       "central": {
         "ref": "ItemRegistry.ItemWarpedGoggles",
+        "meta": null,
         "name_en": "Warped Goggles of Revealing",
         "name_ru": ""
       },
@@ -12144,6 +12746,7 @@
       "mod": "TaintedMagic",
       "output": {
         "ref": "ItemRegistry.ItemLumosRing",
+        "meta": null,
         "name_en": "Ring of Lumos",
         "name_ru": ""
       },
@@ -12162,6 +12765,7 @@
       "components": [
         {
           "ref": "ItemRegistry.ItemFocusLumos",
+          "meta": null,
           "name_en": "Wand Focus: Lumos",
           "name_ru": ""
         },
@@ -12211,7 +12815,10 @@
       },
       "instability": 8,
       "central": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": 0,
+        "name_en": "Thaumium Fortress Blade",
+        "name_ru": ""
       },
       "components": [
         {
@@ -12254,11 +12861,15 @@
       },
       "instability": 8,
       "central": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": 0,
+        "name_en": "Thaumium Fortress Blade",
+        "name_ru": ""
       },
       "components": [
         {
           "ref": "ItemRegistry.ItemFocusShockwave",
+          "meta": null,
           "name_en": "Wand Focus: Shockwave",
           "name_ru": ""
         },
@@ -12308,7 +12919,10 @@
       },
       "instability": 8,
       "central": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": 0,
+        "name_en": "Thaumium Fortress Blade",
+        "name_ru": ""
       },
       "components": [
         {
@@ -12363,7 +12977,8 @@
       },
       "instability": 8,
       "central": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": null
       },
       "components": [
         {
@@ -12406,11 +13021,13 @@
       },
       "instability": 8,
       "central": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": null
       },
       "components": [
         {
           "ref": "ItemRegistry.ItemFocusShockwave",
+          "meta": null,
           "name_en": "Wand Focus: Shockwave",
           "name_ru": ""
         },
@@ -12460,7 +13077,8 @@
       },
       "instability": 8,
       "central": {
-        "ref": "ItemRegistry.ItemKatana"
+        "ref": "ItemRegistry.ItemKatana",
+        "meta": null
       },
       "components": [
         {
@@ -12689,7 +13307,8 @@
       "type": "infusion",
       "mod": "BloodArsenal",
       "output": {
-        "ref": "ModItems.wandCore"
+        "ref": "ModItems.wandCore",
+        "meta": 0
       },
       "aspects": {
         "victus": 32,
@@ -12703,25 +13322,37 @@
       "components": [
         {
           "ref": "ModItems.amorphic_catalyst",
+          "meta": null,
           "name_en": "Amorphic Catalyst",
           "name_ru": ""
         },
         {
           "ref": "ModItems.amorphic_catalyst",
+          "meta": null,
           "name_en": "Amorphic Catalyst",
           "name_ru": ""
         },
         {
-          "ref": "ModBlocks.blood_infused_wood"
+          "ref": "ModBlocks.blood_infused_wood",
+          "meta": null,
+          "name_en": "Blood Infused Wood",
+          "name_ru": ""
         },
         {
-          "ref": "ModBlocks.blood_infused_wood"
+          "ref": "ModBlocks.blood_infused_wood",
+          "meta": null,
+          "name_en": "Blood Infused Wood",
+          "name_ru": ""
         },
         {
-          "ref": "ModBlocks.blood_infused_wood"
+          "ref": "ModBlocks.blood_infused_wood",
+          "meta": null,
+          "name_en": "Blood Infused Wood",
+          "name_ru": ""
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
+          "meta": null,
           "name_en": "Blood Infused Glowstone Dust",
           "name_ru": ""
         }
@@ -12732,7 +13363,10 @@
       "type": "infusion",
       "mod": "BloodArsenal",
       "output": {
-        "ref": "ModItems.wandCap"
+        "ref": "ModItems.wandCap",
+        "meta": 0,
+        "name_en": "Iron Cap",
+        "name_ru": "Железный наконечник"
       },
       "aspects": {
         "victus": 24,
@@ -12746,36 +13380,43 @@
       "components": [
         {
           "ref": "ModItems.amorphic_catalyst",
+          "meta": null,
           "name_en": "Amorphic Catalyst",
           "name_ru": ""
         },
         {
           "ref": "ModItems.amorphic_catalyst",
+          "meta": null,
           "name_en": "Amorphic Catalyst",
           "name_ru": ""
         },
         {
           "ref": "ModItems.blood_infused_iron",
+          "meta": null,
           "name_en": "Blood Infused Iron Ingot",
           "name_ru": ""
         },
         {
           "ref": "ModItems.blood_infused_iron",
+          "meta": null,
           "name_en": "Blood Infused Iron Ingot",
           "name_ru": ""
         },
         {
           "ref": "ModItems.blood_infused_iron",
+          "meta": null,
           "name_en": "Blood Infused Iron Ingot",
           "name_ru": ""
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
+          "meta": null,
           "name_en": "Blood Infused Glowstone Dust",
           "name_ru": ""
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
+          "meta": null,
           "name_en": "Blood Infused Glowstone Dust",
           "name_ru": ""
         }
@@ -12786,7 +13427,8 @@
       "type": "infusion",
       "mod": "BloodArsenal",
       "output": {
-        "ref": "ModItems.wandCore"
+        "ref": "ModItems.wandCore",
+        "meta": 1
       },
       "aspects": {
         "victus": 64,
@@ -12800,60 +13442,82 @@
       },
       "components": [
         {
-          "ref": "ModItems.wandCore"
+          "ref": "ModItems.wandCore",
+          "meta": 0
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
+          "meta": null,
           "name_en": "Blood Infused Glowstone Dust",
           "name_ru": ""
         },
         {
           "ref": "ModItems.amorphic_catalyst",
+          "meta": null,
           "name_en": "Amorphic Catalyst",
           "name_ru": ""
         },
         {
-          "ref": "ModBlocks.blood_infused_wood"
+          "ref": "ModBlocks.blood_infused_wood",
+          "meta": null,
+          "name_en": "Blood Infused Wood",
+          "name_ru": ""
         },
         {
-          "ref": "ModBlocks.blood_infused_wood"
+          "ref": "ModBlocks.blood_infused_wood",
+          "meta": null,
+          "name_en": "Blood Infused Wood",
+          "name_ru": ""
         },
         {
           "ref": "ModItems.amorphic_catalyst",
+          "meta": null,
           "name_en": "Amorphic Catalyst",
           "name_ru": ""
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
+          "meta": null,
           "name_en": "Blood Infused Glowstone Dust",
           "name_ru": ""
         },
         {
-          "ref": "ModItems.wandCore"
+          "ref": "ModItems.wandCore",
+          "meta": 0
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
+          "meta": null,
           "name_en": "Blood Infused Glowstone Dust",
           "name_ru": ""
         },
         {
           "ref": "ModItems.amorphic_catalyst",
+          "meta": null,
           "name_en": "Amorphic Catalyst",
           "name_ru": ""
         },
         {
-          "ref": "ModBlocks.blood_infused_wood"
+          "ref": "ModBlocks.blood_infused_wood",
+          "meta": null,
+          "name_en": "Blood Infused Wood",
+          "name_ru": ""
         },
         {
-          "ref": "ModBlocks.blood_infused_wood"
+          "ref": "ModBlocks.blood_infused_wood",
+          "meta": null,
+          "name_en": "Blood Infused Wood",
+          "name_ru": ""
         },
         {
           "ref": "ModItems.amorphic_catalyst",
+          "meta": null,
           "name_en": "Amorphic Catalyst",
           "name_ru": ""
         },
         {
           "ref": "ModItems.blood_infused_glowstone_dust",
+          "meta": null,
           "name_en": "Blood Infused Glowstone Dust",
           "name_ru": ""
         }
@@ -12864,7 +13528,8 @@
       "type": "infusion",
       "mod": "Avaritia",
       "output": {
-        "ref": "LudicrousItems.bigPearl"
+        "ref": "LudicrousItems.bigPearl",
+        "meta": null
       },
       "aspects": {
         "alienis": 64,
@@ -12879,29 +13544,37 @@
       },
       "instability": 12,
       "central": {
-        "ref": "eldritch"
+        "ref": "eldritch",
+        "meta": 3
       },
       "components": [
         {
-          "ref": "eldritch"
+          "ref": "eldritch",
+          "meta": 3
         },
         {
-          "ref": "eldritch"
+          "ref": "eldritch",
+          "meta": 3
         },
         {
-          "ref": "eldritch"
+          "ref": "eldritch",
+          "meta": 3
         },
         {
-          "ref": "eldritch"
+          "ref": "eldritch",
+          "meta": 3
         },
         {
-          "ref": "eldritch"
+          "ref": "eldritch",
+          "meta": 3
         },
         {
-          "ref": "eldritch"
+          "ref": "eldritch",
+          "meta": 3
         },
         {
-          "ref": "eldritch"
+          "ref": "eldritch",
+          "meta": 3
         }
       ]
     },
@@ -12910,7 +13583,10 @@
       "type": "infusion",
       "mod": "Avaritia",
       "output": {
-        "ref": "LudicrousItems.akashic_record"
+        "ref": "LudicrousItems.akashic_record",
+        "meta": null,
+        "name_en": "Akashic Records",
+        "name_ru": "Акашийские Хроники"
       },
       "aspects": {
         "cognitio": 64,
@@ -12919,20 +13595,25 @@
       },
       "instability": 12,
       "central": {
-        "ref": "resource"
+        "ref": "resource",
+        "meta": 9
       },
       "components": [
         {
-          "ref": "LudicrousItems.resource"
+          "ref": "LudicrousItems.resource",
+          "meta": 6
         },
         {
-          "ref": "LudicrousItems.resource"
+          "ref": "LudicrousItems.resource",
+          "meta": 6
         },
         {
-          "ref": "LudicrousItems.resource"
+          "ref": "LudicrousItems.resource",
+          "meta": 6
         },
         {
-          "ref": "LudicrousItems.resource"
+          "ref": "LudicrousItems.resource",
+          "meta": 6
         }
       ]
     },
@@ -12957,7 +13638,8 @@
       "type": "crucible",
       "mod": "Alfheim",
       "output": {
-        "ref": "ModItems.manaResource"
+        "ref": "ModItems.manaResource",
+        "meta": 19
       },
       "aspects": {
         "metallum": 2,

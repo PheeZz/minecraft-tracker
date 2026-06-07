@@ -4164,7 +4164,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemLootbag",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Common Treasure",
+        "name_ru": "Обычное сокровище"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4176,7 +4178,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemLootbag",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Uncommon Treasure",
+        "name_ru": "Необычное сокровище"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4188,7 +4192,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemLootbag",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Rare Treasure",
+        "name_ru": "Редкое сокровище"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -5233,7 +5239,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.resource",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Emerald Fragment",
+        "name_ru": "Изумрудный фрагмент"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5245,7 +5253,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.resource",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Shadow Ink",
+        "name_ru": "Теневые чернила"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5320,7 +5330,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenBlocks.taintLeaves",
-        "meta": null
+        "meta": null,
+        "name_en": "Tainted Leaves",
+        "name_ru": ""
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5333,7 +5345,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenBlocks.taintLog",
-        "meta": null
+        "meta": null,
+        "name_en": "Tainted Log",
+        "name_ru": ""
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5398,7 +5412,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.resource",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Shadow Ink",
+        "name_ru": "Теневые чернила"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5412,7 +5428,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.resource",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Elementium Nugget",
+        "name_ru": "Элементиевый самородок"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5572,7 +5590,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.infinity_sword",
-        "meta": null
+        "meta": null,
+        "name_en": "Sword of the Cosmos",
+        "name_ru": "Меч бесконечности"
       },
       "mod": "Avaritia",
       "aspects": {

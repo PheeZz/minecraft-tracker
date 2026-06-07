@@ -57,10 +57,15 @@ def resolve(fld):
 cand = {f: (strong.get(f,[])+weak.get(f,[])) for f in set(strong)|set(weak)}
 
 out = {}
-for fld in cand:
+for fld in set(strong) | set(weak):
+    bases = []
+    for c in strong.get(fld, []) + weak.get(fld, []):
+        if c not in bases: bases.append(c)
+    rec = {"bases": bases}            # raw unloc/registry candidates (for base.meta.name resolution)
     r = resolve(fld)
     if r:
-        out[fld] = {"name_en": r[0], "name_ru": r[1], "via": r[2]}
+        rec["name_en"], rec["name_ru"], rec["via"] = r
+    out[fld] = rec
 
 json.dump({"_meta":{"server":"LoliLand","generated":"2026-06-07","count":len(out),
                     "scanned_fields":len(cand),

@@ -52,15 +52,23 @@ NAME = {i["key"]: i for i in items_out}   # lang-key -> {name_en,name_ru}
 VANILLA = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","vanilla-names.json"),encoding="utf-8"))["fields"]
 FIELDNAMES = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","field-names.json"),encoding="utf-8"))["fields"]
 
-def resolve_name(fld, meta):
-    cap = fld[0].upper()+fld[1:]
-    cands=[]
-    for pre,base in (("item",cap),("item",fld),("tile",fld),("tile",cap)):
-        if meta is not None: cands.append("%s.%s.%s.name"%(pre,base,meta))
-        cands.append("%s.%s.name"%(pre,base))
-    for c in cands:
-        if c in NAME:
-            return NAME[c]["name_en"], NAME[c]["name_ru"]
+def name_for(fld, meta):
+    bases = list(FIELDNAMES.get(fld, {}).get("bases", []))
+    for b in (fld, fld[0].upper()+fld[1:] if fld else fld):
+        if b not in bases: bases.append(b)
+    for pre in ("item","Item","block","Block"):
+        if fld.startswith(pre) and len(fld)>len(pre):
+            b=fld[len(pre):]
+            if b not in bases: bases.append(b)
+    if meta is not None:
+        for b in bases:
+            for k in ("item.%s.%s.name"%(b,meta),"tile.%s.%s.name"%(b,meta)):
+                if k in NAME: return NAME[k]["name_en"], NAME[k]["name_ru"]
+    for b in bases:
+        for k in ("item.%s.name"%b,"tile.%s.name"%b):
+            if k in NAME: return NAME[k]["name_en"], NAME[k]["name_ru"]
+    fn=FIELDNAMES.get(fld)
+    if fn and "name_en" in fn: return fn["name_en"], fn["name_ru"]
     return "", ""
 
 json.dump({"_meta":{"server":SERVER,"generated":"2026-06-07","count":len(items_out),
@@ -123,16 +131,12 @@ def subject(arg):
         meta=m.group(2)
         meta=(None if meta in (None,"Short.MAX_VALUE") else int(meta))
         out={"type":"item","ref":ref,"meta":meta}
-        fm=re.match(r'(?:ConfigItems|ConfigBlocks)\.(\w+)',ref)
-        if fm:
-            en,ru=resolve_name(fm.group(1),meta)
-            if en: out["name_en"]=en; out["name_ru"]=ru
         vm=re.match(r'(?:Items|Blocks)\.(\w+)',ref)
         if vm and vm.group(1) in VANILLA:
             v=VANILLA[vm.group(1)]; out["reg"]=v["reg"]; out["name_en"]=v["name_en"]; out["name_ru"]=v["name_ru"]
-        if "name_en" not in out:
-            fn=FIELDNAMES.get(ref.split(".")[-1])
-            if fn: out["name_en"]=fn["name_en"]; out["name_ru"]=fn["name_ru"]
+        else:
+            en,ru=name_for(ref.split(".")[-1], meta)
+            if en: out["name_en"]=en; out["name_ru"]=ru
         return out
     return {"type":"raw","ref":arg[:80]}
 
