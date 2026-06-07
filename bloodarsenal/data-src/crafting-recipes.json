@@ -1,0 +1,1962 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 68,
+    "notes": "BloodArsenal crafting-grid recipes. shaped/shaped_bloodorb: shape[]=rows + key{char->ingredient}; shaped_bloodorb requires a blood orb in the grid. Oredict ingredients resolved to a representative item."
+  },
+  "recipes": [
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_stained_ice",
+        "name_en": "Blood Stained Ice",
+        "name_ru": "Blood Stained Ice"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "vanilla": "ice",
+          "name_en": "Ice",
+          "name_ru": "Лёд"
+        },
+        "b": {
+          "ref": "BM:apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_stained_glass",
+        "name_en": "Blood Stained Glass",
+        "name_ru": "Blood Stained Glass"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "b": {
+          "ref": "BM:apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "life_infuser",
+        "name_en": "Life Infuser",
+        "name_ru": "Life Infuser"
+      },
+      "shape": [
+        "aba",
+        "aca",
+        "ada"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "c": {
+          "ref": "BM:blockAltar",
+          "name_en": "Blood Altar",
+          "name_ru": "Кровавый алтарь"
+        },
+        "d": {
+          "vanilla": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "lp_materializer",
+        "name_en": "Life Essence Materializer",
+        "name_ru": "Life Essence Materializer"
+      },
+      "shape": [
+        "aba",
+        "bcb",
+        "aba"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "BM:imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        },
+        "c": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "compacter",
+        "name_en": "Soul Compacter",
+        "name_ru": "Soul Compacter"
+      },
+      "shape": [
+        "aaa",
+        "bcb",
+        "ded"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_planks",
+          "name_en": "Blood Infused Wooden Plank",
+          "name_ru": "Blood Infused Wooden Plank"
+        },
+        "b": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        },
+        "c": {
+          "vanilla": "piston",
+          "name_en": "Piston",
+          "name_ru": "Поршень"
+        },
+        "d": {
+          "ref": "blood_infused_iron_block",
+          "name_en": "Blood Infused Iron Block",
+          "name_ru": "Blood Infused Iron Block"
+        },
+        "e": {
+          "ref": "BM:archmageBloodOrb",
+          "name_en": "Archmage's Blood Orb",
+          "name_ru": "Кровавый шар архимага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_axe_iron",
+        "name_en": "Blood Infused Iron Axe",
+        "name_ru": "Blood Infused Iron Axe"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "blood_infused_axe_wood",
+          "name_en": "Blood Infused Wooden Axe",
+          "name_ru": "Blood Infused Wooden Axe"
+        },
+        "c": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "d": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_pickaxe_iron",
+        "name_en": "Blood Infused Iron Pickaxe",
+        "name_ru": "Blood Infused Iron Pickaxe"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "blood_infused_pickaxe_wood",
+          "name_en": "Blood Infused Wooden Pickaxe",
+          "name_ru": "Blood Infused Wooden Pickaxe"
+        },
+        "c": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "d": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_shovel_iron",
+        "name_en": "Blood Infused Iron Shovel",
+        "name_ru": "Blood Infused Iron Shovel"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "blood_infused_shovel_wood",
+          "name_en": "Blood Infused Wooden Shovel",
+          "name_ru": "Blood Infused Wooden Shovel"
+        },
+        "c": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "d": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_sword_iron",
+        "name_en": "Blood Infused Iron Sword",
+        "name_ru": "Blood Infused Iron Sword"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "blood_infused_sword_wood",
+          "name_en": "Blood Infused Wooden Sword",
+          "name_ru": "Blood Infused Wooden Sword"
+        },
+        "c": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "d": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_diamond",
+        "name_en": "Blood Diamond",
+        "name_ru": "Blood Diamond"
+      },
+      "shape": [
+        "aba",
+        "bcb",
+        "aba"
+      ],
+      "key": {
+        "a": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "b": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "c": {
+          "ref": "BM:masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_diamond_unactive",
+        "name_en": "Blood Infused Diamond (Unactive)",
+        "name_ru": "Blood Infused Diamond (Unactive)"
+      },
+      "shape": [
+        "aba",
+        "bcb",
+        "ada"
+      ],
+      "key": {
+        "a": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "b": {
+          "ref": "blood_infused_iron_block",
+          "name_en": "Blood Infused Iron Block",
+          "name_ru": "Blood Infused Iron Block"
+        },
+        "c": {
+          "ref": "blood_diamond",
+          "name_en": "Blood Diamond",
+          "name_ru": "Blood Diamond"
+        },
+        "d": {
+          "ref": "BM:masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_axe_diamond",
+        "name_en": "Blood Infused Diamond Axe [WIP]",
+        "name_ru": "Blood Infused Diamond Axe [WIP]"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        },
+        "b": {
+          "ref": "blood_infused_axe_iron",
+          "name_en": "Blood Infused Iron Axe",
+          "name_ru": "Blood Infused Iron Axe"
+        },
+        "c": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "d": {
+          "ref": "BM:masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_pickaxe_diamond",
+        "name_en": "Blood Infused Diamond Pickaxe",
+        "name_ru": "Blood Infused Diamond Pickaxe"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        },
+        "b": {
+          "ref": "blood_infused_pickaxe_iron",
+          "name_en": "Blood Infused Iron Pickaxe",
+          "name_ru": "Blood Infused Iron Pickaxe"
+        },
+        "c": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "d": {
+          "ref": "BM:masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_shovel_diamond",
+        "name_en": "Blood Infused Diamond Shovel",
+        "name_ru": "Blood Infused Diamond Shovel"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        },
+        "b": {
+          "ref": "blood_infused_shovel_iron",
+          "name_en": "Blood Infused Iron Shovel",
+          "name_ru": "Blood Infused Iron Shovel"
+        },
+        "c": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "d": {
+          "ref": "BM:masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_infused_sword_diamond",
+        "name_en": "Blood Infused Diamond Sword [WIP]",
+        "name_ru": "Blood Infused Diamond Sword [WIP]"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        },
+        "b": {
+          "ref": "blood_infused_sword_iron",
+          "name_en": "Blood Infused Iron Sword",
+          "name_ru": "Blood Infused Iron Sword"
+        },
+        "c": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "d": {
+          "ref": "BM:masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "soul_booster",
+        "name_en": "Soul Booster",
+        "name_ru": "Soul Booster"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "aca"
+      ],
+      "key": {
+        "a": {
+          "ref": "soul_fragment",
+          "name_en": "Soul Fragment",
+          "name_ru": "Soul Fragment"
+        },
+        "b": {
+          "vanilla": "beacon",
+          "name_en": "Beacon",
+          "name_ru": "Маяк"
+        },
+        "c": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "soul_nullifier",
+        "name_en": "Soul Nullifier",
+        "name_ru": "Soul Nullifier"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "aca"
+      ],
+      "key": {
+        "a": {
+          "ref": "soul_fragment",
+          "name_en": "Soul Fragment",
+          "name_ru": "Soul Fragment"
+        },
+        "b": {
+          "ref": "BM:armourInhibitor",
+          "name_en": "Armour Inhibitor",
+          "name_ru": "Земедлитель брони"
+        },
+        "c": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigil_of_swimming",
+        "name_en": "Sigil of Swimming",
+        "name_ru": "Sigil of Swimming"
+      },
+      "shape": [
+        "aba",
+        "cdc",
+        "aea"
+      ],
+      "key": {
+        "a": {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        },
+        "b": {
+          "vanilla": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        },
+        "c": {
+          "vanilla": "lava_bucket",
+          "name_en": "Lava Bucket",
+          "name_ru": "Ведро лавы"
+        },
+        "d": {
+          "ref": "BM:voidSigil",
+          "name_en": "Void Sigil",
+          "name_ru": "Пустотный сигил"
+        },
+        "e": {
+          "ref": "BM:apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigil_of_ender",
+        "name_en": "Ender Sigil",
+        "name_ru": "Ender Sigil"
+      },
+      "shape": [
+        "aba",
+        "cdc",
+        "efe"
+      ],
+      "key": {
+        "a": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "b": {
+          "vanilla": "ender_eye",
+          "name_en": "Ender Eye",
+          "name_ru": "Ender Eye"
+        },
+        "c": {
+          "vanilla": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
+        },
+        "d": {
+          "ref": "BM:imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        },
+        "e": {
+          "vanilla": "ender_chest",
+          "name_en": "Ender Chest",
+          "name_ru": "Сундук Эндера"
+        },
+        "f": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigil_of_divinity",
+        "name_en": "Sigil of Divinity",
+        "name_ru": "Sigil of Divinity"
+      },
+      "shape": [
+        "aba",
+        "cde",
+        "fgf"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_glowstone",
+          "name_en": "Blood Infused Glowstone",
+          "name_ru": "Blood Infused Glowstone"
+        },
+        "b": {
+          "vanilla": "golden_apple",
+          "name_en": "Golden Apple",
+          "name_ru": "Золотое яблоко",
+          "meta": 1
+        },
+        "c": {
+          "vanilla": "nether_star",
+          "name_en": "Nether Star",
+          "name_ru": "Адская звезда"
+        },
+        "d": {
+          "ref": "BM:sigilOfElementalAffinity",
+          "name_en": "Sigil of Elemental Affinity",
+          "name_ru": "Сигил стихийного родства"
+        },
+        "e": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        },
+        "f": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        },
+        "g": {
+          "ref": "BM:transcendentBloodOrb",
+          "name_en": "Transcendent Blood Orb",
+          "name_ru": "Трансцендентальный кровавый шар"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blood_burned_string",
+        "name_en": "Blood Burned String",
+        "name_ru": "Blood Burned String"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        },
+        "b": {
+          "ref": "BM:weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigil_of_augmented_holding",
+        "name_en": "Sigil of Augmented Holding",
+        "name_ru": "Sigil of Augmented Holding"
+      },
+      "shape": [
+        "aba",
+        "cde",
+        "fgf"
+      ],
+      "key": {
+        "a": {
+          "ref": "BM:demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        },
+        "b": {
+          "ref": "BM:masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "c": {
+          "vanilla": "blaze_rod",
+          "name_en": "Blaze Rod",
+          "name_ru": "Стержень ифрита"
+        },
+        "d": {
+          "ref": "BM:sigilOfHolding",
+          "name_en": "Sigil of Holding",
+          "name_ru": "Сигил удержания"
+        },
+        "e": {
+          "vanilla": "ghast_tear",
+          "name_en": "Ghast Tear",
+          "name_ru": "Слеза Гаста"
+        },
+        "f": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "g": {
+          "vanilla": "chest",
+          "name_en": "Chest",
+          "name_ru": "Сундук"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigil_of_lightning",
+        "name_en": "Lightning Sigil",
+        "name_ru": "Lightning Sigil"
+      },
+      "shape": [
+        "aba",
+        "cdc",
+        "efg"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_stone",
+          "meta": 3,
+          "name_en": "Demonic Blood Stone",
+          "name_ru": "Demonic Blood Stone"
+        },
+        "b": {
+          "vanilla": "iron_block",
+          "name_en": "Iron Block",
+          "name_ru": "Iron Block"
+        },
+        "c": {
+          "ref": "blood_infused_iron_block",
+          "name_en": "Blood Infused Iron Block",
+          "name_ru": "Blood Infused Iron Block"
+        },
+        "d": {
+          "ref": "BM:baseItems",
+          "meta": 27,
+          "name_en": "Ethereal Slate",
+          "name_ru": "Эфирная плитка"
+        },
+        "e": {
+          "vanilla": "nether_star",
+          "name_en": "Nether Star",
+          "name_ru": "Адская звезда"
+        },
+        "f": {
+          "ref": "BM:archmageBloodOrb",
+          "name_en": "Archmage's Blood Orb",
+          "name_ru": "Кровавый шар архимага"
+        },
+        "g": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "glass_sacrificial_dagger",
+        "name_en": "Glass Sacrificial Dagger",
+        "name_ru": "Glass Sacrificial Dagger"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "glass_shard",
+          "name_en": "Glass Shard",
+          "name_ru": "Glass Shard"
+        },
+        "b": {
+          "ref": "BM:sacrificialDagger",
+          "name_en": "Sacrificial Knife",
+          "name_ru": "Жертвенный кинжал"
+        },
+        "c": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "d": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "glass_dagger_of_sacrifice",
+        "name_en": "Glass Dagger of Sacrifice",
+        "name_ru": "Glass Dagger of Sacrifice"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "cdc"
+      ],
+      "key": {
+        "a": {
+          "ref": "glass_shard",
+          "name_en": "Glass Shard",
+          "name_ru": "Glass Shard"
+        },
+        "b": {
+          "ref": "BM:daggerOfSacrifice",
+          "name_en": "Dagger of Sacrifice",
+          "name_ru": "Кинжал жертвоприношения"
+        },
+        "c": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "d": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "glass_helmet",
+        "name_en": "Glass Helmet",
+        "name_ru": "Glass Helmet"
+      },
+      "shape": [
+        "aaa",
+        "aba"
+      ],
+      "key": {
+        "a": {
+          "ref": "glass_shard",
+          "name_en": "Glass Shard",
+          "name_ru": "Glass Shard"
+        },
+        "b": {
+          "ref": "BM:apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "glass_chestplate",
+        "name_en": "Glass Chestplate",
+        "name_ru": "Glass Chestplate"
+      },
+      "shape": [
+        "aba",
+        "aaa",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "glass_shard",
+          "name_en": "Glass Shard",
+          "name_ru": "Glass Shard"
+        },
+        "b": {
+          "ref": "BM:apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "glass_leggings",
+        "name_en": "Glass Leggings",
+        "name_ru": "Glass Leggings"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "a a"
+      ],
+      "key": {
+        "a": {
+          "ref": "glass_shard",
+          "name_en": "Glass Shard",
+          "name_ru": "Glass Shard"
+        },
+        "b": {
+          "ref": "BM:apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "glass_boots",
+        "name_en": "Glass Boots",
+        "name_ru": "Glass Boots"
+      },
+      "shape": [
+        "a a",
+        "aba"
+      ],
+      "key": {
+        "a": {
+          "ref": "glass_shard",
+          "name_en": "Glass Shard",
+          "name_ru": "Glass Shard"
+        },
+        "b": {
+          "ref": "BM:apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "transparent_orb",
+        "name_en": "Transparent Orb",
+        "name_ru": "Transparent Orb"
+      },
+      "shape": [
+        "aba",
+        "bcb",
+        "ded"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_stained_glass",
+          "name_en": "Blood Stained Glass",
+          "name_ru": "Blood Stained Glass"
+        },
+        "b": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "c": {
+          "ref": "BM:transcendentBloodOrb",
+          "name_en": "Transcendent Blood Orb",
+          "name_ru": "Трансцендентальный кровавый шар"
+        },
+        "d": {
+          "ref": "blood_burned_string",
+          "name_en": "Blood Burned String",
+          "name_ru": "Blood Burned String"
+        },
+        "e": {
+          "ref": "BM:divinationSigil",
+          "name_en": "Divination Sigil",
+          "name_ru": "Сигил предсказания"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "life_imbued_helmet",
+        "name_en": "Life Imbued Helmet",
+        "name_ru": "Life Imbued Helmet"
+      },
+      "shape": [
+        "aba",
+        "aca"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "c": {
+          "vanilla": "iron_helmet",
+          "name_en": "Iron Helmet",
+          "name_ru": "Железный шлем"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "life_imbued_chestplate",
+        "name_en": "Life Imbued Chestplate",
+        "name_ru": "Life Imbued Chestplate"
+      },
+      "shape": [
+        "aba",
+        "aca",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "c": {
+          "vanilla": "iron_chestplate",
+          "name_en": "Iron Chestplate",
+          "name_ru": "Железный нагрудник"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "life_imbued_leggings",
+        "name_en": "Life Imbued Leggings",
+        "name_ru": "Life Imbued Leggings"
+      },
+      "shape": [
+        "aba",
+        "aca",
+        "a a"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "c": {
+          "vanilla": "iron_leggings",
+          "name_en": "Iron Leggings",
+          "name_ru": "Железные поножи"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "life_imbued_boots",
+        "name_en": "Life Imbued Boots",
+        "name_ru": "Life Imbued Boots"
+      },
+      "shape": [
+        "aba",
+        "aca"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "BM:magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "c": {
+          "vanilla": "iron_boots",
+          "name_en": "Iron Boots",
+          "name_ru": "Железные ботинки"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "vampire_ring",
+        "name_en": "Vampire Ring",
+        "name_ru": "Vampire Ring"
+      },
+      "shape": [
+        "ab ",
+        "bcb",
+        " b "
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        },
+        "b": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "c": {
+          "ref": "BM:masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sacrifice_amulet",
+        "name_en": "Amulet of Sacrifice",
+        "name_ru": "Amulet of Sacrifice"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "caa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_burned_string",
+          "name_en": "Blood Burned String",
+          "name_ru": "Blood Burned String"
+        },
+        "b": {
+          "ref": "BM:weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        },
+        "c": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "self_sacrifice_amulet",
+        "name_en": "Amulet of Self Sacrifice",
+        "name_ru": "Amulet of Self Sacrifice"
+      },
+      "shape": [
+        "aaa",
+        "aba",
+        "caa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_burned_string",
+          "name_en": "Blood Burned String",
+          "name_ru": "Blood Burned String"
+        },
+        "b": {
+          "ref": "BM:weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        },
+        "c": {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "empowered_self_sacrifice_amulet",
+        "name_en": "Empowered Self Sacrifice Amulet",
+        "name_ru": "Empowered Self Sacrifice Amulet"
+      },
+      "shape": [
+        "aba",
+        "cdc",
+        "ecf"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_glowstone_dust",
+          "name_en": "Blood Infused Glowstone Dust",
+          "name_ru": "Blood Infused Glowstone Dust"
+        },
+        "b": {
+          "vanilla": "blaze_rod",
+          "name_en": "Blaze Rod",
+          "name_ru": "Стержень ифрита"
+        },
+        "c": {
+          "ref": "BM:runeOfSelfSacrifice",
+          "name_en": "Rune of Self-Sacrifice",
+          "name_ru": "Руна самопожертвования"
+        },
+        "d": {
+          "ref": "self_sacrifice_amulet",
+          "name_en": "Amulet of Self Sacrifice",
+          "name_ru": "Amulet of Self Sacrifice"
+        },
+        "e": {
+          "vanilla": "glowstone",
+          "name_en": "Glowstone",
+          "name_ru": "Светящийся камень"
+        },
+        "f": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "empowered_sacrifice_amulet",
+        "name_en": "Empowered Sacrifice Amulet",
+        "name_ru": "Empowered Sacrifice Amulet"
+      },
+      "shape": [
+        "aba",
+        "cdc",
+        "ecf"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_glowstone_dust",
+          "name_en": "Blood Infused Glowstone Dust",
+          "name_ru": "Blood Infused Glowstone Dust"
+        },
+        "b": {
+          "vanilla": "blaze_rod",
+          "name_en": "Blaze Rod",
+          "name_ru": "Стержень ифрита"
+        },
+        "c": {
+          "ref": "BM:runeOfSacrifice",
+          "name_en": "Rune of Sacrifice",
+          "name_ru": "Руна жертвоприношения"
+        },
+        "d": {
+          "ref": "sacrifice_amulet",
+          "name_en": "Amulet of Sacrifice",
+          "name_ru": "Amulet of Sacrifice"
+        },
+        "e": {
+          "vanilla": "gold_block",
+          "name_en": "Gold Block",
+          "name_ru": "Gold Block"
+        },
+        "f": {
+          "ref": "amorphic_catalyst",
+          "name_en": "Amorphic Catalyst",
+          "name_ru": "Amorphic Catalyst"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_stone",
+        "name_en": "Blank Blood Stone",
+        "name_ru": "Blank Blood Stone"
+      },
+      "shape": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "BM:blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_stone",
+        "meta": 1,
+        "name_en": "Reinforced Blood Stone",
+        "name_ru": "Reinforced Blood Stone"
+      },
+      "shape": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "BM:reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_stone",
+        "meta": 2,
+        "name_en": "Imbued Blood Stone",
+        "name_ru": "Imbued Blood Stone"
+      },
+      "shape": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "BM:imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_stone",
+        "meta": 3,
+        "name_en": "Demonic Blood Stone",
+        "name_ru": "Demonic Blood Stone"
+      },
+      "shape": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "BM:demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_stone",
+        "meta": 4,
+        "name_en": "Ethereal Blood Stone",
+        "name_ru": "Ethereal Blood Stone"
+      },
+      "shape": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "BM:baseItems",
+          "meta": 27,
+          "name_en": "Ethereal Slate",
+          "name_ru": "Эфирная плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_infused_iron_block",
+        "name_en": "Blood Infused Iron Block",
+        "name_ru": "Blood Infused Iron Block"
+      },
+      "shape": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_stained_ice_packed",
+        "name_en": "Blood Stained Packed Ice",
+        "name_ru": "Blood Stained Packed Ice"
+      },
+      "shape": [
+        "aa",
+        "aa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_stained_ice",
+          "name_en": "Blood Stained Ice",
+          "name_ru": "Blood Stained Ice"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_infused_glowstone",
+        "name_en": "Blood Infused Glowstone",
+        "name_ru": "Blood Infused Glowstone"
+      },
+      "shape": [
+        "aa",
+        "aa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_glowstone_dust",
+          "name_en": "Blood Infused Glowstone Dust",
+          "name_ru": "Blood Infused Glowstone Dust"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_lamp",
+        "name_en": "Blood Lamp",
+        "name_ru": "Blood Lamp"
+      },
+      "shape": [
+        "aba",
+        "bcb",
+        "aba"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_iron",
+          "name_en": "Blood Infused Iron Ingot",
+          "name_ru": "Blood Infused Iron Ingot"
+        },
+        "b": {
+          "ref": "blood_stained_glass",
+          "name_en": "Blood Stained Glass",
+          "name_ru": "Blood Stained Glass"
+        },
+        "c": {
+          "ref": "blood_infused_glowstone",
+          "name_en": "Blood Infused Glowstone",
+          "name_ru": "Blood Infused Glowstone"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_infused_diamond_block",
+        "name_en": "Blood Infused Diamond Block",
+        "name_ru": "Blood Infused Diamond Block"
+      },
+      "shape": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_diamond_bound",
+          "name_en": "Bound Diamond",
+          "name_ru": "Bound Diamond"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_torch",
+        "name_en": "Blood Torch",
+        "name_ru": "Blood Torch"
+      },
+      "shape": [
+        "a",
+        "b"
+      ],
+      "key": {
+        "a": {
+          "ref": "bound_igniter",
+          "name_en": "Bound Igniter",
+          "name_ru": "Bound Igniter"
+        },
+        "b": {
+          "ref": "blood_infused_stick",
+          "name_en": "Blood Infused Stick",
+          "name_ru": "Blood Infused Stick"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_infused_stick",
+        "name_en": "Blood Infused Stick",
+        "name_ru": "Blood Infused Stick"
+      },
+      "shape": [
+        "a",
+        "a"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_planks",
+          "name_en": "Blood Infused Wooden Plank",
+          "name_ru": "Blood Infused Wooden Plank"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_infused_pickaxe_wood",
+        "name_en": "Blood Infused Wooden Pickaxe",
+        "name_ru": "Blood Infused Wooden Pickaxe"
+      },
+      "shape": [
+        "aaa",
+        " b ",
+        " b "
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_planks",
+          "name_en": "Blood Infused Wooden Plank",
+          "name_ru": "Blood Infused Wooden Plank"
+        },
+        "b": {
+          "ref": "blood_infused_stick",
+          "name_en": "Blood Infused Stick",
+          "name_ru": "Blood Infused Stick"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_infused_axe_wood",
+        "name_en": "Blood Infused Wooden Axe",
+        "name_ru": "Blood Infused Wooden Axe"
+      },
+      "shape": [
+        "aa ",
+        "ab ",
+        " b "
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_planks",
+          "name_en": "Blood Infused Wooden Plank",
+          "name_ru": "Blood Infused Wooden Plank"
+        },
+        "b": {
+          "ref": "blood_infused_stick",
+          "name_en": "Blood Infused Stick",
+          "name_ru": "Blood Infused Stick"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_infused_shovel_wood",
+        "name_en": "Blood Infused Wooden Shovel",
+        "name_ru": "Blood Infused Wooden Shovel"
+      },
+      "shape": [
+        " a ",
+        " b ",
+        " b "
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_planks",
+          "name_en": "Blood Infused Wooden Plank",
+          "name_ru": "Blood Infused Wooden Plank"
+        },
+        "b": {
+          "ref": "blood_infused_stick",
+          "name_en": "Blood Infused Stick",
+          "name_ru": "Blood Infused Stick"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_infused_sword_wood",
+        "name_en": "Blood Infused Wooden Sword",
+        "name_ru": "Blood Infused Wooden Sword"
+      },
+      "shape": [
+        " a ",
+        " a ",
+        " b "
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_infused_planks",
+          "name_en": "Blood Infused Wooden Plank",
+          "name_ru": "Blood Infused Wooden Plank"
+        },
+        "b": {
+          "ref": "blood_infused_stick",
+          "name_en": "Blood Infused Stick",
+          "name_ru": "Blood Infused Stick"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_money",
+        "meta": 1,
+        "name_en": "Blood Money x4",
+        "name_ru": "Blood Money x4"
+      },
+      "shape": [
+        "aa",
+        "aa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_money",
+          "name_en": "Blood Money x1",
+          "name_ru": "Blood Money x1"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_money",
+        "meta": 2,
+        "name_en": "Blood Money x16",
+        "name_ru": "Blood Money x16"
+      },
+      "shape": [
+        "aa",
+        "aa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_money",
+          "meta": 1,
+          "name_en": "Blood Money x4",
+          "name_ru": "Blood Money x4"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blood_money",
+        "meta": 3,
+        "name_en": "Blood Money x64",
+        "name_ru": "Blood Money x64"
+      },
+      "shape": [
+        "aa",
+        "aa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blood_money",
+          "meta": 2,
+          "name_en": "Blood Money x16",
+          "name_ru": "Blood Money x16"
+        }
+      }
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "blood_infused_planks",
+        "name_en": "Blood Infused Wooden Plank",
+        "name_ru": "Blood Infused Wooden Plank"
+      },
+      "inputs": [
+        {
+          "ref": "blood_infused_wood",
+          "name_en": "Blood Infused Wood",
+          "name_ru": "Blood Infused Wood"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "BM:blankSlate",
+        "name_en": "Blank Slate",
+        "name_ru": "Чистая плитка"
+      },
+      "inputs": [
+        {
+          "ref": "blood_stone",
+          "name_en": "Blank Blood Stone",
+          "name_ru": "Blank Blood Stone"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "BM:reinforcedSlate",
+        "name_en": "Reinforced Slate",
+        "name_ru": "Укреплённая плитка"
+      },
+      "inputs": [
+        {
+          "ref": "blood_stone",
+          "meta": 1,
+          "name_en": "Reinforced Blood Stone",
+          "name_ru": "Reinforced Blood Stone"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "BM:imbuedSlate",
+        "name_en": "Imbued Slate",
+        "name_ru": "Пропитанная плитка"
+      },
+      "inputs": [
+        {
+          "ref": "blood_stone",
+          "meta": 2,
+          "name_en": "Imbued Blood Stone",
+          "name_ru": "Imbued Blood Stone"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "BM:demonicSlate",
+        "name_en": "Demonic Slate",
+        "name_ru": "Демоническая плитка"
+      },
+      "inputs": [
+        {
+          "ref": "blood_stone",
+          "meta": 3,
+          "name_en": "Demonic Blood Stone",
+          "name_ru": "Demonic Blood Stone"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "BM:baseItems",
+        "meta": 27,
+        "name_en": "Ethereal Slate",
+        "name_ru": "Эфирная плитка"
+      },
+      "inputs": [
+        {
+          "ref": "blood_stone",
+          "meta": 4,
+          "name_en": "Ethereal Blood Stone",
+          "name_ru": "Ethereal Blood Stone"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "amorphic_catalyst",
+        "name_en": "Amorphic Catalyst",
+        "name_ru": "Amorphic Catalyst"
+      },
+      "inputs": [
+        {
+          "ref": "BM:blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        },
+        {
+          "ref": "BM:aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "ref": "BM:terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "BM:crystallos",
+          "name_en": "Crystallos",
+          "name_ru": "Crystallos"
+        },
+        {
+          "ref": "BM:sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "BM:magicales",
+          "name_en": "Magicales",
+          "name_ru": "Magicales"
+        },
+        {
+          "ref": "BM:crepitous",
+          "name_en": "Crepitous",
+          "name_ru": "Crepitous"
+        },
+        {
+          "ref": "BM:incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "BM:aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "blood_infused_iron",
+        "name_en": "Blood Infused Iron Ingot",
+        "name_ru": "Blood Infused Iron Ingot"
+      },
+      "inputs": [
+        {
+          "ref": "blood_infused_iron_block",
+          "name_en": "Blood Infused Iron Block",
+          "name_ru": "Blood Infused Iron Block"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "orange_juice",
+        "name_en": "Orange Juice",
+        "name_ru": "Orange Juice"
+      },
+      "inputs": [
+        {
+          "ref": "blood_orange",
+          "name_en": "Blood Orange",
+          "name_ru": "Blood Orange"
+        },
+        {
+          "vanilla": "glass_bottle",
+          "name_en": "Glass Bottle",
+          "name_ru": "Пузырёк"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "juice_and_cookies",
+        "name_en": "Juice and Cookies",
+        "name_ru": "Juice and Cookies"
+      },
+      "inputs": [
+        {
+          "vanilla": "cookie",
+          "name_en": "Cookie",
+          "name_ru": "Печенье"
+        },
+        {
+          "ref": "orange_juice",
+          "name_en": "Orange Juice",
+          "name_ru": "Orange Juice"
+        }
+      ]
+    }
+  ]
+}

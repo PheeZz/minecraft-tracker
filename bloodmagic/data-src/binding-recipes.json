@@ -1,0 +1,82 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 6,
+    "notes": "Ritual of Binding recipes (held item transmuted via the binding ritual). Unbinding = reverse of each."
+  },
+  "recipes": [
+    {
+      "output": {
+        "ref": "boundPickaxe",
+        "name_en": "Bound Pickaxe",
+        "name_ru": "Связанная кирка"
+      },
+      "input": {
+        "vanilla": "diamond_pickaxe",
+        "name_en": "Diamond Pickaxe",
+        "name_ru": "Алмазная кирка"
+      }
+    },
+    {
+      "output": {
+        "ref": "boundAxe",
+        "name_en": "Bound Axe",
+        "name_ru": "Связанный топор"
+      },
+      "input": {
+        "vanilla": "diamond_axe",
+        "name_en": "Diamond Axe",
+        "name_ru": "Алмазный топор"
+      }
+    },
+    {
+      "output": {
+        "ref": "boundShovel",
+        "name_en": "Bound Shovel",
+        "name_ru": "Связанная лопата"
+      },
+      "input": {
+        "vanilla": "diamond_shovel",
+        "name_en": "Diamond Shovel",
+        "name_ru": "Алмазная лопата"
+      }
+    },
+    {
+      "output": {
+        "ref": "energySword",
+        "name_en": "Bound Blade",
+        "name_ru": "Связанное лезвие"
+      },
+      "input": {
+        "vanilla": "diamond_sword",
+        "name_en": "Diamond Sword",
+        "name_ru": "Алмазный меч"
+      }
+    },
+    {
+      "output": {
+        "ref": "energyBlaster",
+        "name_en": "Energy Blaster",
+        "name_ru": "Энергетическая пушка"
+      },
+      "input": {
+        "ref": "apprenticeBloodOrb",
+        "name_en": "Apprentice Blood Orb",
+        "name_ru": "Кровавый шар ученика"
+      }
+    },
+    {
+      "output": {
+        "vanilla": "baked_potato",
+        "name_en": "Baked Potato",
+        "name_ru": "Печёный картофель"
+      },
+      "input": {
+        "vanilla": "potato",
+        "name_en": "Potato",
+        "name_ru": "Картофель"
+      }
+    }
+  ]
+}

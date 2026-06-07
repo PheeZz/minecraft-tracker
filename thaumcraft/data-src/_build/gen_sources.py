@@ -27,10 +27,29 @@ MODS = [
 
 SERVER = "LoliLand"   # data is specific to this server's modpack/versions; re-target by re-running per server
 
+# --- display-name cleaner: strip Minecraft format codes (§ + one char) & %s/%d placeholders
+def clean_name(s):
+    if not s: return s
+    s = re.sub(r'§[0-9A-Fa-fk-orK-OR]', '', s)   # Minecraft color/format codes
+    s = re.sub(r'§.', '', s)                       # any stray § + char
+    s = s.replace("%s", "[mob]").replace("%d", "[number]")
+    s = re.sub(r'\s{2,}', ' ', s)                  # collapse doubled spaces
+    return s.strip()
+
 def load_lang(p):
+    """Load a .lang file, trying encodings in order so a mis-encoded file still reads."""
     d={}
     if p and os.path.exists(p):
-        for line in open(p,encoding="utf-8",errors="replace"):
+        raw=open(p,"rb").read()
+        text=None
+        for enc in ("utf-8","utf-8-sig","windows-1251","latin-1"):
+            try:
+                text=raw.decode(enc); break
+            except UnicodeDecodeError:
+                continue
+        if text is None:
+            text=raw.decode("utf-8",errors="replace")
+        for line in text.splitlines():
             line=line.rstrip("\n")
             if "=" in line and not line.lstrip().startswith("#"):
                 k,v=line.split("=",1); d[k.strip()]=v.strip()
@@ -46,7 +65,10 @@ for mod,_,langdir in MODS:
         if (k.startswith("item.") or k.startswith("tile.")) and k.endswith(".name"):
             if k in seen: continue
             seen.add(k)
-            items_out.append({"key":k,"mod":mod,"name_en":v,"name_ru":ru.get(k,"")})
+            en_clean = clean_name(v)
+            ru_clean = clean_name(ru.get(k,""))
+            items_out.append({"key":k,"mod":mod,"name_en":en_clean,
+                              "name_ru":(ru_clean or en_clean)})   # EN fallback when RU key missing
 items_out.sort(key=lambda x:(x["mod"],x["key"]))
 NAME = {i["key"]: i for i in items_out}   # lang-key -> {name_en,name_ru}
 VANILLA = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","vanilla-names.json"),encoding="utf-8"))["fields"]
@@ -73,6 +95,10 @@ def name_for(fld, meta):
     fn=FIELDNAMES.get(fld)
     if fn and "name_en" in fn: return fn["name_en"], fn["name_ru"]
     return "", ""
+
+def name_for_clean(fld, meta):
+    en, ru = name_for(fld, meta)
+    return clean_name(en), clean_name(ru)
 
 json.dump({"_meta":{"server":SERVER,"generated":"2026-06-07","count":len(items_out),
                     "byMod":dict(collections.Counter(i["mod"] for i in items_out)),
@@ -136,9 +162,9 @@ def subject(arg):
         out={"type":"item","ref":ref,"meta":meta}
         vm=re.match(r'(?:Items|Blocks)\.(\w+)',ref)
         if vm and vm.group(1) in VANILLA:
-            v=VANILLA[vm.group(1)]; out["reg"]=v["reg"]; out["name_en"]=v["name_en"]; out["name_ru"]=v["name_ru"]
+            v=VANILLA[vm.group(1)]; out["reg"]=v["reg"]; out["name_en"]=clean_name(v["name_en"]); out["name_ru"]=clean_name(v["name_ru"])
         else:
-            en,ru=name_for(ref.split(".")[-1], meta)
+            en,ru=name_for_clean(ref.split(".")[-1], meta)
             if en: out["name_en"]=en; out["name_ru"]=ru
         return out
     return {"type":"raw","ref":arg[:80]}

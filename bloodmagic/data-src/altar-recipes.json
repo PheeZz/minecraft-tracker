@@ -1,0 +1,438 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 25,
+    "notes": "Blood Altar recipes. input item -> result; minTier = altar tier; liquidRequired_LP = LP; consumptionRate/drainRate per tick; canBeFilled = orb-style fill."
+  },
+  "recipes": [
+    {
+      "result": {
+        "ref": "weakBloodOrb",
+        "name_en": "Weak Blood Orb",
+        "name_ru": "Слабый кровавый шар"
+      },
+      "input": {
+        "vanilla": "diamond",
+        "name_en": "Diamond",
+        "name_ru": "Алмаз"
+      },
+      "minTier": 1,
+      "liquidRequired_LP": 2000,
+      "consumptionRate": 2,
+      "drainRate": 1,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "apprenticeBloodOrb",
+        "name_en": "Apprentice Blood Orb",
+        "name_ru": "Кровавый шар ученика"
+      },
+      "input": {
+        "vanilla": "emerald",
+        "name_en": "Emerald",
+        "name_ru": "Изумруд"
+      },
+      "minTier": 2,
+      "liquidRequired_LP": 5000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "magicianBloodOrb",
+        "name_en": "Magician's Blood Orb",
+        "name_ru": "Кровавый шар мага"
+      },
+      "input": {
+        "vanilla": "gold_block",
+        "name_en": "Gold Block",
+        "name_ru": "Gold Block"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 25000,
+      "consumptionRate": 20,
+      "drainRate": 20,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "masterBloodOrb",
+        "name_en": "Master Blood Orb",
+        "name_ru": "Кровавый шар мастера"
+      },
+      "input": {
+        "ref": "weakBloodShard",
+        "name_en": "Weak Blood Shard",
+        "name_ru": "Слабый кровавый осколок"
+      },
+      "minTier": 4,
+      "liquidRequired_LP": 40000,
+      "consumptionRate": 30,
+      "drainRate": 50,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "archmageBloodOrb",
+        "name_en": "Archmage's Blood Orb",
+        "name_ru": "Кровавый шар архимага"
+      },
+      "input": {
+        "ref": "demonBloodShard",
+        "name_en": "Demon Blood Shard",
+        "name_ru": "Осколок крови демона"
+      },
+      "minTier": 5,
+      "liquidRequired_LP": 75000,
+      "consumptionRate": 50,
+      "drainRate": 100,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "transcendentBloodOrb",
+        "name_en": "Transcendent Blood Orb",
+        "name_ru": "Трансцендентальный кровавый шар"
+      },
+      "input": {
+        "ref": "blockCrystal",
+        "name_en": "",
+        "name_ru": ""
+      },
+      "minTier": 6,
+      "liquidRequired_LP": 200000,
+      "consumptionRate": 100,
+      "drainRate": 200,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "telepositionFocus",
+        "name_en": "Teleposition Focus",
+        "name_ru": "Фокус телепозиции"
+      },
+      "input": {
+        "vanilla": "ender_pearl",
+        "name_en": "Ender Pearl",
+        "name_ru": "Жемчуг Эндера"
+      },
+      "minTier": 4,
+      "liquidRequired_LP": 2000,
+      "consumptionRate": 10,
+      "drainRate": 10,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "enhancedTelepositionFocus",
+        "name_en": "Enhanced Teleposition Focus",
+        "name_ru": "Улучшенный фокус телепозиции"
+      },
+      "input": {
+        "ref": "telepositionFocus",
+        "name_en": "Teleposition Focus",
+        "name_ru": "Фокус телепозиции"
+      },
+      "minTier": 4,
+      "liquidRequired_LP": 10000,
+      "consumptionRate": 25,
+      "drainRate": 15,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "demonicSlate",
+        "name_en": "Demonic Slate",
+        "name_ru": "Демоническая плитка"
+      },
+      "input": {
+        "ref": "imbuedSlate",
+        "name_en": "Imbued Slate",
+        "name_ru": "Пропитанная плитка"
+      },
+      "minTier": 4,
+      "liquidRequired_LP": 15000,
+      "consumptionRate": 20,
+      "drainRate": 20,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "baseItems",
+        "meta": 27,
+        "reg": "EtherealSlate",
+        "name_en": "Ethereal Slate",
+        "name_ru": "Эфирная плитка"
+      },
+      "input": {
+        "ref": "demonicSlate",
+        "name_en": "Demonic Slate",
+        "name_ru": "Демоническая плитка"
+      },
+      "minTier": 5,
+      "liquidRequired_LP": 30000,
+      "consumptionRate": 40,
+      "drainRate": 100,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "duskScribeTool",
+        "name_en": "Elemental Inscription Tool: Dusk",
+        "name_ru": "Инструмент начертания элементаля: Сумерки"
+      },
+      "input": {
+        "vanilla": "coal_block",
+        "name_en": "Coal Block",
+        "name_ru": "Coal Block"
+      },
+      "minTier": 4,
+      "liquidRequired_LP": 2000,
+      "consumptionRate": 20,
+      "drainRate": 10,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "bloodSocket",
+        "name_en": "Filled Socket",
+        "name_ru": "Заполненный сокет"
+      },
+      "input": {
+        "ref": "emptySocket",
+        "name_en": "Empty Socket",
+        "name_ru": "Пустой сокет"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 30000,
+      "consumptionRate": 40,
+      "drainRate": 10,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "earthScribeTool",
+        "name_en": "Elemental Inscription Tool: Earth",
+        "name_ru": "Инструмент начертания элементаля: Земля"
+      },
+      "input": {
+        "vanilla": "obsidian",
+        "name_en": "Obsidian",
+        "name_ru": "Обсидиан"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 1000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "waterScribeTool",
+        "name_en": "Elemental Inscription Tool: Water",
+        "name_ru": "Инструмент начертания элементаля: Вода"
+      },
+      "input": {
+        "vanilla": "lapis_block",
+        "name_en": "Lapis Block",
+        "name_ru": "Lapis Block"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 1000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blankSpell",
+        "name_en": "Unbound Crystal",
+        "name_ru": "Кристал отвязывания"
+      },
+      "input": {
+        "vanilla": "glass",
+        "name_en": "Glass",
+        "name_ru": "Стекло"
+      },
+      "minTier": 2,
+      "liquidRequired_LP": 1000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blankSlate",
+        "name_en": "Blank Slate",
+        "name_ru": "Чистая плитка"
+      },
+      "input": {
+        "vanilla": "stone",
+        "name_en": "Stone",
+        "name_ru": "Камень"
+      },
+      "minTier": 1,
+      "liquidRequired_LP": 1000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "activationCrystal",
+        "meta": 0,
+        "name_en": "Weak Activation Crystal",
+        "name_ru": "Слабый кристал активации"
+      },
+      "input": {
+        "ref": "lavaCrystal",
+        "name_en": "Lava Crystal",
+        "name_ru": "Лавовый кристал"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 10000,
+      "consumptionRate": 20,
+      "drainRate": 10,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "fireScribeTool",
+        "name_en": "Elemental Inscription Tool: Fire",
+        "name_ru": "Инструмент начертания элементаля: Огонь"
+      },
+      "input": {
+        "vanilla": "magma_cream",
+        "name_en": "Magma Cream",
+        "name_ru": "Сгусток магмы"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 1000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "airScribeTool",
+        "name_en": "Elemental Inscription Tool: Air",
+        "name_ru": "Инструмент начертания элементаля: Воздух"
+      },
+      "input": {
+        "vanilla": "ghast_tear",
+        "name_en": "Ghast Tear",
+        "name_ru": "Слеза Гаста"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 1000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "imbuedSlate",
+        "name_en": "Imbued Slate",
+        "name_ru": "Пропитанная плитка"
+      },
+      "input": {
+        "ref": "reinforcedSlate",
+        "name_en": "Reinforced Slate",
+        "name_ru": "Укреплённая плитка"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 5000,
+      "consumptionRate": 15,
+      "drainRate": 10,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "daggerOfSacrifice",
+        "name_en": "Dagger of Sacrifice",
+        "name_ru": "Кинжал жертвоприношения"
+      },
+      "input": {
+        "vanilla": "iron_sword",
+        "name_en": "Iron Sword",
+        "name_ru": "Железный меч"
+      },
+      "minTier": 2,
+      "liquidRequired_LP": 3000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "alchemyFlask",
+        "name_en": "Potion Flask",
+        "name_ru": "Фляжка для зелий"
+      },
+      "input": {
+        "vanilla": "glass_bottle",
+        "name_en": "Glass Bottle",
+        "name_ru": "Пузырёк"
+      },
+      "minTier": 2,
+      "liquidRequired_LP": 2000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "reinforcedSlate",
+        "name_en": "Reinforced Slate",
+        "name_ru": "Укреплённая плитка"
+      },
+      "input": {
+        "ref": "blankSlate",
+        "name_en": "Blank Slate",
+        "name_ru": "Чистая плитка"
+      },
+      "minTier": 2,
+      "liquidRequired_LP": 2000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "bucketLife",
+        "name_en": "Bucket of Life",
+        "name_ru": "Ведро жизни"
+      },
+      "input": {
+        "vanilla": "bucket",
+        "name_en": "Bucket",
+        "name_ru": "Ведро"
+      },
+      "minTier": 1,
+      "liquidRequired_LP": 1000,
+      "consumptionRate": 5,
+      "drainRate": 0,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "dawnScribeTool",
+        "name_en": "Elemental Inscription Tool: Dawn",
+        "name_ru": "Elemental Inscription Tool: Dawn"
+      },
+      "input": {
+        "vanilla": "glowstone",
+        "name_en": "Glowstone",
+        "name_ru": "Светящийся камень"
+      },
+      "minTier": 6,
+      "liquidRequired_LP": 20000,
+      "consumptionRate": 50,
+      "drainRate": 35,
+      "canBeFilled": false
+    }
+  ]
+}

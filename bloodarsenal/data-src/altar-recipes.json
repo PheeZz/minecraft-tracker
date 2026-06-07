@@ -1,0 +1,198 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 11,
+    "notes": "BloodArsenal Blood Altar recipes (registered into BloodMagic's altar). Same fields as BloodMagic altar recipes."
+  },
+  "recipes": [
+    {
+      "result": {
+        "ref": "blood_tnt",
+        "name_en": "Blood TNT",
+        "name_ru": "Blood TNT"
+      },
+      "input": {
+        "vanilla": "tnt",
+        "name_en": "TNT",
+        "name_ru": "Динамит"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 10000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blood_infused_wood",
+        "name_en": "Blood Infused Wood",
+        "name_ru": "Blood Infused Wood"
+      },
+      "input": {
+        "vanilla": "log",
+        "name_en": "Wood",
+        "name_ru": "Дерево"
+      },
+      "minTier": 2,
+      "liquidRequired_LP": 3000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blood_infused_iron_block",
+        "name_en": "Blood Infused Iron Block",
+        "name_ru": "Blood Infused Iron Block"
+      },
+      "input": {
+        "vanilla": "iron_block",
+        "name_en": "Iron Block",
+        "name_ru": "Iron Block"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 54000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "item_blood_cake",
+        "name_en": "Blood Cake",
+        "name_ru": "Blood Cake"
+      },
+      "input": {
+        "vanilla": "cake",
+        "name_en": "Cake",
+        "name_ru": "Торт"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 10000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blood_infused_iron",
+        "name_en": "Blood Infused Iron Ingot",
+        "name_ru": "Blood Infused Iron Ingot"
+      },
+      "input": {
+        "vanilla": "iron_ingot",
+        "name_en": "Iron Ingot",
+        "name_ru": "Железный слиток"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 6000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blood_orange",
+        "name_en": "Blood Orange",
+        "name_ru": "Blood Orange"
+      },
+      "input": {
+        "vanilla": "dye",
+        "name_en": "Dye",
+        "name_ru": "Dye",
+        "meta": 14
+      },
+      "minTier": 1,
+      "liquidRequired_LP": 200,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blood_infused_diamond_active",
+        "name_en": "Blood Infused Diamond (Active)",
+        "name_ru": "Blood Infused Diamond (Active)"
+      },
+      "input": {
+        "ref": "blood_infused_diamond_unactive",
+        "name_en": "Blood Infused Diamond (Unactive)",
+        "name_ru": "Blood Infused Diamond (Unactive)"
+      },
+      "minTier": 4,
+      "liquidRequired_LP": 80000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "soul_fragment",
+        "name_en": "Soul Fragment",
+        "name_ru": "Soul Fragment"
+      },
+      "input": {
+        "ref": "heart",
+        "name_en": "Heart",
+        "name_ru": "Heart"
+      },
+      "minTier": 4,
+      "liquidRequired_LP": 75000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blood_cookie",
+        "name_en": "Blood Cookie",
+        "name_ru": "Blood Cookie"
+      },
+      "input": {
+        "vanilla": "cookie",
+        "name_en": "Cookie",
+        "name_ru": "Печенье"
+      },
+      "minTier": 1,
+      "liquidRequired_LP": 2000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blood_infused_glowstone_dust",
+        "name_en": "Blood Infused Glowstone Dust",
+        "name_ru": "Blood Infused Glowstone Dust"
+      },
+      "input": {
+        "vanilla": "glowstone_dust",
+        "name_en": "Glowstone Dust",
+        "name_ru": "Светящаяся пыль"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 5000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    },
+    {
+      "result": {
+        "ref": "blood_money",
+        "name_en": "Blood Money x1",
+        "name_ru": "Blood Money x1"
+      },
+      "input": {
+        "vanilla": "paper",
+        "name_en": "Paper",
+        "name_ru": "Бумага"
+      },
+      "minTier": 3,
+      "liquidRequired_LP": 10000,
+      "consumptionRate": 5,
+      "drainRate": 5,
+      "canBeFilled": false
+    }
+  ]
+}

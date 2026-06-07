@@ -1,0 +1,157 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 15,
+    "notes": "Alchemic Chemistry Set reagents: item -> reagent type + mB produced."
+  },
+  "reagents": [
+    {
+      "item": {
+        "ref": "sanctus",
+        "name_en": "Sanctus",
+        "name_ru": "Sanctus"
+      },
+      "reagent": "sanctusReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "incendium",
+        "name_en": "Incendium",
+        "name_ru": "Incendium"
+      },
+      "reagent": "incendiumReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "aquasalus",
+        "name_en": "Aquasalus",
+        "name_ru": "Aquasalus"
+      },
+      "reagent": "aquasalusReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "magicales",
+        "name_en": "Magicales",
+        "name_ru": "Magicales"
+      },
+      "reagent": "magicalesReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "aether",
+        "name_en": "Aether",
+        "name_ru": "Эфир"
+      },
+      "reagent": "aetherReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "crepitous",
+        "name_en": "Crepitous",
+        "name_ru": "Crepitous"
+      },
+      "reagent": "crepitousReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "crystallos",
+        "name_en": "Crystallos",
+        "name_ru": "Crystallos"
+      },
+      "reagent": "crystallosReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "terrae",
+        "name_en": "Terrae",
+        "name_ru": "Terrae"
+      },
+      "reagent": "terraeReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "tennebrae",
+        "name_en": "Tenebrae",
+        "name_ru": "Tenebrae"
+      },
+      "reagent": "tenebraeReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "baseAlchemyItems",
+        "meta": 0,
+        "reg": "Offensa",
+        "name_en": "Offensa",
+        "name_ru": "Offensa"
+      },
+      "reagent": "offensaReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "baseAlchemyItems",
+        "meta": 1,
+        "reg": "Praesidium",
+        "name_en": "Praesidium",
+        "name_ru": "Praesidium"
+      },
+      "reagent": "praesidiumReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "baseAlchemyItems",
+        "meta": 2,
+        "reg": "OrbisTerrae",
+        "name_en": "Orbis Terrae",
+        "name_ru": "Orbis Terrae"
+      },
+      "reagent": "orbisTerraeReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "baseAlchemyItems",
+        "meta": 6,
+        "reg": "Virtus",
+        "name_en": "Virtus",
+        "name_ru": "Virtus"
+      },
+      "reagent": "virtusReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "baseAlchemyItems",
+        "meta": 7,
+        "reg": "Reductus",
+        "name_en": "Reductus",
+        "name_ru": "Reductus"
+      },
+      "reagent": "reductusReagent",
+      "amount": 1000
+    },
+    {
+      "item": {
+        "ref": "baseAlchemyItems",
+        "meta": 8,
+        "reg": "Potentia",
+        "name_en": "Potentia",
+        "name_ru": "Potentia"
+      },
+      "reagent": "potentiaReagent",
+      "amount": 1000
+    }
+  ]
+}

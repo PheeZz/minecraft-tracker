@@ -5318,7 +5318,7 @@
         "ref": "ForbiddenItems.taintFruit",
         "meta": null,
         "name_en": "Tainted Fruit",
-        "name_ru": ""
+        "name_ru": "Tainted Fruit"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5333,7 +5333,7 @@
         "ref": "ForbiddenItems.taintCoal",
         "meta": null,
         "name_en": "Hexcoal",
-        "name_ru": ""
+        "name_ru": "Hexcoal"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5348,7 +5348,7 @@
         "ref": "ForbiddenBlocks.taintLeaves",
         "meta": null,
         "name_en": "Tainted Leaves",
-        "name_ru": ""
+        "name_ru": "Tainted Leaves"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5363,7 +5363,7 @@
         "ref": "ForbiddenBlocks.taintLog",
         "meta": null,
         "name_en": "Tainted Log",
-        "name_ru": ""
+        "name_ru": "Tainted Log"
       },
       "mod": "ForbiddenMagic",
       "aspects": {

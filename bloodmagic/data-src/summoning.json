@@ -1,0 +1,589 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 14,
+    "notes": "demon/elemental summoning recipes (Blood Altar). altarTier = required tier; ingredient sets correspond to escalating summon tiers."
+  },
+  "summoning": [
+    {
+      "entityIdVar": "entityFallenAngelID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityLowerGuardianID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "vanilla": "cobblestone",
+          "name_en": "Cobblestone",
+          "name_ru": "Булыжник"
+        },
+        {
+          "vanilla": "cobblestone",
+          "name_en": "Cobblestone",
+          "name_ru": "Булыжник"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        {
+          "vanilla": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityBileDemonID",
+      "altarTier": 5,
+      "ingredients_main": [
+        {
+          "vanilla": "poisonous_potato",
+          "name_en": "Poisonous Potato",
+          "name_ru": "Ядовитый картофель"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "vanilla": "porkchop",
+          "name_en": "Porkchop",
+          "name_ru": "Porkchop"
+        },
+        {
+          "vanilla": "egg",
+          "name_en": "Egg",
+          "name_ru": "Яйцо"
+        },
+        {
+          "vanilla": "beef",
+          "name_en": "Beef",
+          "name_ru": "Beef"
+        }
+      ],
+      "ingredients_tier2": [
+        {
+          "ref": "crepitous",
+          "name_en": "Crepitous",
+          "name_ru": "Crepitous"
+        },
+        {
+          "ref": "crepitous",
+          "name_en": "Crepitous",
+          "name_ru": "Crepitous"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "vanilla": "iron_block",
+          "name_en": "Iron Block",
+          "name_ru": "Iron Block"
+        },
+        {
+          "vanilla": "iron_block",
+          "name_en": "Iron Block",
+          "name_ru": "Iron Block"
+        },
+        {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        }
+      ],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityWingedFireDemonID",
+      "altarTier": 5,
+      "ingredients_main": [
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "vanilla": "netherrack",
+          "name_en": "Netherrack",
+          "name_ru": "Адский камень"
+        }
+      ],
+      "ingredients_tier2": [
+        {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        {
+          "vanilla": "gold_block",
+          "name_en": "Gold Block",
+          "name_ru": "Gold Block"
+        },
+        {
+          "ref": "magicales",
+          "name_en": "Magicales",
+          "name_ru": "Magicales"
+        },
+        {
+          "ref": "magicales",
+          "name_en": "Magicales",
+          "name_ru": "Magicales"
+        },
+        {
+          "vanilla": "fire_charge",
+          "name_en": "Fire Charge",
+          "name_ru": "Огненный шар"
+        },
+        {
+          "vanilla": "coal_block",
+          "name_en": "Coal Block",
+          "name_ru": "Coal Block"
+        }
+      ],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entitySmallEarthGolemID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "vanilla": "clay_ball",
+          "name_en": "Clay Ball",
+          "name_ru": "Clay Ball"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityIceDemonID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "crystallos",
+          "name_en": "Crystallos",
+          "name_ru": "Crystallos"
+        },
+        {
+          "ref": "crystallos",
+          "name_en": "Crystallos",
+          "name_ru": "Crystallos"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "crystallos",
+          "name_en": "Crystallos",
+          "name_ru": "Crystallos"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityBoulderFistID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "vanilla": "bone",
+          "name_en": "Bone",
+          "name_ru": "Кость"
+        },
+        {
+          "vanilla": "cooked_beef",
+          "name_en": "Cooked Beef",
+          "name_ru": "Cooked Beef"
+        },
+        {
+          "vanilla": "cooked_beef",
+          "name_en": "Cooked Beef",
+          "name_ru": "Cooked Beef"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityShadeID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        {
+          "vanilla": "glass_bottle",
+          "name_en": "Glass Bottle",
+          "name_ru": "Пузырёк"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityAirElementalID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityWaterElementalID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityEarthElementalID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityFireElementalID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityShadeElementalID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    },
+    {
+      "entityIdVar": "entityHolyElementalID",
+      "altarTier": 4,
+      "ingredients_main": [
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        }
+      ],
+      "ingredients_tier2": [],
+      "ingredients_tier3": []
+    }
+  ]
+}

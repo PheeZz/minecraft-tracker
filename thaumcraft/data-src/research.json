@@ -373,8 +373,8 @@
       ],
       "autoUnlock": true,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cap Iron",
+      "name_ru": "Cap Iron",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -520,8 +520,8 @@
       ],
       "autoUnlock": true,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Rod Wood",
+      "name_ru": "Rod Wood",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -7681,7 +7681,7 @@
         }
       ],
       "name_en": "Vis Apiary Booster",
-      "name_ru": "",
+      "name_ru": "Vis Apiary Booster",
       "description_ru": "",
       "description_en": "Infusing Unusual Pollen with vis and combining it with gold creates an unusual crystal that, when fed vis from an aura node, creates an energizing aura that bees are naturally attracted to when attuned to the environment within a Magic Apiary.",
       "description": "Infusing Unusual Pollen with vis and combining it with gold creates an unusual crystal that, when fed vis from an aura node, creates an energizing aura that bees are naturally attracted to when attuned to the environment within a Magic Apiary."
@@ -7745,7 +7745,7 @@
         }
       ],
       "name_en": "Primal Scribing Tools",
-      "name_ru": "",
+      "name_ru": "Primal Scribing Tools",
       "description_ru": "",
       "description_en": "You've learned things humans weren't meant to know, seen things humans weren't meant to see, and been places humans weren't meant to go.\n\nWhat these experiences have taught you is how to refill your inkwell.\n\nBy utilizing the strange properties of the Primordial Pearl, you can create a set of scribing tools that will never run out of ink. At the cold, dark end of time when the light of a million stars have died out, the Primal Scribing Tools will still be ready to scribble onwards.",
       "description": "You've learned things humans weren't meant to know, seen things humans weren't meant to see, and been places humans weren't meant to go.\n\nWhat these experiences have taught you is how to refill your inkwell.\n\nBy utilizing the strange properties of the Primordial Pearl, you can create a set of scribing tools that will never run out of ink. At the cold, dark end of time when the light of a million stars have died out, the Primal Scribing Tools will still be ready to scribble onwards."
@@ -8034,7 +8034,7 @@
         }
       ],
       "name_en": "Profane Wand",
-      "name_ru": "",
+      "name_ru": "Profane Wand",
       "description_ru": "",
       "description_en": "Strange villagers have been known to procure these wooden wands carved with blasphemous symbols. Profane Wands draw from a mediocre pool of vis, but they seem to be able to refill themselves very quickly from an unseen source.\n\nThe runes on the wand sometimes shift and bleed and the wand itself occasionally whispers of demonic contracts and vile deeds.\n\nProlonged use is not recommended.",
       "description": "Strange villagers have been known to procure these wooden wands carved with blasphemous symbols. Profane Wands draw from a mediocre pool of vis, but they seem to be able to refill themselves very quickly from an unseen source.\n\nThe runes on the wand sometimes shift and bleed and the wand itself occasionally whispers of demonic contracts and vile deeds.\n\nProlonged use is not recommended."
@@ -8207,7 +8207,7 @@
         }
       ],
       "name_en": "Wand Focus: Blink",
-      "name_ru": "",
+      "name_ru": "Wand Focus: Blink",
       "description_ru": "",
       "description_en": "Ugh.\n\nThe only thing that sucks more than getting up is having to walk places. So much woooooork. What's the point of being a big fancy magician if you still have to use your feet like everyone else?\n\nThe Blink focus eases the hardships of having to put one foot in front of the other. Just point your wand at a distant location and wave it to teleport yourself there.\n\nNow all you need is a Shower focus and you'll be all set...",
       "description": "Ugh.\n\nThe only thing that sucks more than getting up is having to walk places. So much woooooork. What's the point of being a big fancy magician if you still have to use your feet like everyone else?\n\nThe Blink focus eases the hardships of having to put one foot in front of the other. Just point your wand at a distant location and wave it to teleport yourself there.\n\nNow all you need is a Shower focus and you'll be all set..."
@@ -8730,7 +8730,7 @@
         }
       ],
       "name_en": "Tainted Tree",
-      "name_ru": "",
+      "name_ru": "Tainted Tree",
       "description_ru": "",
       "description_en": "The sick, twisted runoff of magical experiments can take on a strange life of its own. Most plants are unable to survive in Tainted Lands, but you've found a way to grow one that can. By steeping a sapling in taint, you create a tree that can thrive in Tainted Lands.\n\nIts wood can also be turned into planks which are resistant to fibrous taint, allowing you to build structures safe from spreading taint.\n\nThe tree also seems to bear fruit, but eating them is not recommended...",
       "description": "The sick, twisted runoff of magical experiments can take on a strange life of its own. Most plants are unable to survive in Tainted Lands, but you've found a way to grow one that can. By steeping a sapling in taint, you create a tree that can thrive in Tainted Lands.\n\nIts wood can also be turned into planks which are resistant to fibrous taint, allowing you to build structures safe from spreading taint.\n\nThe tree also seems to bear fruit, but eating them is not recommended...",
@@ -8766,7 +8766,7 @@
         }
       ],
       "name_en": "Tainted Stone",
-      "name_ru": "",
+      "name_ru": "Tainted Stone",
       "description_ru": "",
       "description_en": "Tainted Lands aren't very safe places to be. Fibrous Taint hungrily spreads and crawls over most surfaces, eventually enveloping them and making them unsafe to walk on. The fibers don't appear to be harmful to tainted creatures or materials, however.\n\nBy mixing taint in with regular stone, you've created a magical material which is structurally stable, but resistant to the spread of fibrous taint. Tainted Stone can be used to build surfaces in Tainted Lands which are safe to walk on.\n\nNot that building in a Tainted Land is advised...",
       "description": "Tainted Lands aren't very safe places to be. Fibrous Taint hungrily spreads and crawls over most surfaces, eventually enveloping them and making them unsafe to walk on. The fibers don't appear to be harmful to tainted creatures or materials, however.\n\nBy mixing taint in with regular stone, you've created a magical material which is structurally stable, but resistant to the spread of fibrous taint. Tainted Stone can be used to build surfaces in Tainted Lands which are safe to walk on.\n\nNot that building in a Tainted Land is advised..."
@@ -9274,8 +9274,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Rod Dreamwood",
+      "name_ru": "Rod Dreamwood",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -9343,7 +9343,7 @@
         }
       ],
       "name_en": "Terrasteel Caps",
-      "name_ru": "",
+      "name_ru": "Terrasteel Caps",
       "description_ru": "",
       "description_en": "Sweet Baby Haruhi, this was a terrible idea. What were you thinking?\n\nTerrasteel's oversaturation of mana gives it many of the qualities of the earth it's named after: Strength, durability, density, and... extreme resistance to energy. Terrasteel's sheer inability to channel vis causes most vis to just dissipate harmlessly against it instead of being focused out of the wand.\n\nApparently just making caps out of every material under the sun isn't a great idea.",
       "description": "Sweet Baby Haruhi, this was a terrible idea. What were you thinking?\n\nTerrasteel's oversaturation of mana gives it many of the qualities of the earth it's named after: Strength, durability, density, and... extreme resistance to energy. Terrasteel's sheer inability to channel vis causes most vis to just dissipate harmlessly against it instead of being focused out of the wand.\n\nApparently just making caps out of every material under the sun isn't a great idea."
@@ -9457,8 +9457,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Tmeldritchmajor",
+      "name_ru": "Tmeldritchmajor",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -9486,8 +9486,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "While you were exploring the world and gathering magical knowledge, you came acr",
+      "name_ru": "While you were exploring the world and gathering magical knowledge, you came acr",
       "description_ru": "",
       "description_en": "While you were exploring the world and gathering magical knowledge, you came across something rather disturbing: a blood-stained page that seems to be from a Thaumonomicon. From your understanding, it speaks of dark magic.taintedmagic:textures/misc/p_taintedmagic.png:0:255:255:255:.42\n\nEven though the page is hardly legible, you are filled with a strange feeling as you attempt to read the spidery script. It almost feels like a headache... but not quite.\nThe darkness intrigues you, even though it ensues a dangerous path. Perhaps you will make it your goal to one day understand this strange magic. The thought of an adventure into the unknown is exciting, after all.",
       "description": "While you were exploring the world and gathering magical knowledge, you came across something rather disturbing: a blood-stained page that seems to be from a Thaumonomicon. From your understanding, it speaks of dark magic.taintedmagic:textures/misc/p_taintedmagic.png:0:255:255:255:.42\n\nEven though the page is hardly legible, you are filled with a strange feeling as you attempt to read the spidery script. It almost feels like a headache... but not quite.\nThe darkness intrigues you, even though it ensues a dangerous path. Perhaps you will make it your goal to one day understand this strange magic. The thought of an adventure into the unknown is exciting, after all."
@@ -9514,8 +9514,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Once upon a time you were transmuting something in your crucible.",
+      "name_ru": "Once upon a time you were transmuting something in your crucible.",
       "description_ru": "",
       "description_en": "Once upon a time you were transmuting something in your crucible. After making a mess of a recipe, you accidentally dropped some iron into the bubbling mess; to your surprise, out came a mysterious new metal ingot.\nYou have decided to name it Shadow Metal. It is extremely heavy and seems very durable, but it is highly unstable and difficult to craft with. You will likely have to use it alongside another magical metal.\nYou place your ear against this strange substance and hear faint whispers. Are you going mad? Who knows.",
       "description": "Once upon a time you were transmuting something in your crucible. After making a mess of a recipe, you accidentally dropped some iron into the bubbling mess; to your surprise, out came a mysterious new metal ingot.\nYou have decided to name it Shadow Metal. It is extremely heavy and seems very durable, but it is highly unstable and difficult to craft with. You will likely have to use it alongside another magical metal.\nYou place your ear against this strange substance and hear faint whispers. Are you going mad? Who knows."
@@ -9543,8 +9543,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By infusing Void Metal Wand Caps with some Shadow Metal, as well as the primal e",
+      "name_ru": "By infusing Void Metal Wand Caps with some Shadow Metal, as well as the primal e",
       "description_ru": "",
       "description_en": "By infusing Void Metal Wand Caps with some Shadow Metal, as well as the primal energies of a Primordial Pearl, you have successfully created Shadow Metal Wand Caps. Because Shadow Metal is incredibly efficient at channeling vis, they grant a hefty vis discount of 35%.",
       "description": "By infusing Void Metal Wand Caps with some Shadow Metal, as well as the primal energies of a Primordial Pearl, you have successfully created Shadow Metal Wand Caps. Because Shadow Metal is incredibly efficient at channeling vis, they grant a hefty vis discount of 35%."
@@ -9570,8 +9570,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By combining Enchanted Fabric with some Shadow Metal, you have created a new mag",
+      "name_ru": "By combining Enchanted Fabric with some Shadow Metal, you have created a new mag",
       "description_ru": "",
       "description_en": "By combining Enchanted Fabric with some Shadow Metal, you have created a new magical material: Shadow-Imbued Cloth. You are certain it will be useful in the construction of magical equipment.",
       "description": "By combining Enchanted Fabric with some Shadow Metal, you have created a new magical material: Shadow-Imbued Cloth. You are certain it will be useful in the construction of magical equipment."
@@ -9598,8 +9598,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By combining the magical wood from a Warpwood Tree with some other powerful reag",
+      "name_ru": "By combining the magical wood from a Warpwood Tree with some other powerful reag",
       "description_ru": "",
       "description_en": "By combining the magical wood from a Warpwood Tree with some other powerful reagents, you have fashioned a wand rod which is capable of storing 250 of each type of vis.\nYou have noticed that your warped psyche resonates with this wand rod, causing it to gradually replenish its vis storage. As your mind grows increasingly warped by forbidden magics, the rod's resonance becomes stronger, hastening the replenishing effect.\nToday my wand started whispering strangely to me.",
       "description": "By combining the magical wood from a Warpwood Tree with some other powerful reagents, you have fashioned a wand rod which is capable of storing 250 of each type of vis.\nYou have noticed that your warped psyche resonates with this wand rod, causing it to gradually replenish its vis storage. As your mind grows increasingly warped by forbidden magics, the rod's resonance becomes stronger, hastening the replenishing effect.\nToday my wand started whispering strangely to me."
@@ -9626,8 +9626,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Usually one is able to fashion a staff core by combining two wand rods with a Pr",
+      "name_ru": "Usually one is able to fashion a staff core by combining two wand rods with a Pr",
       "description_ru": "",
       "description_en": "Usually one is able to fashion a staff core by combining two wand rods with a Primal Charm. This construction method was unsuccessful in creating a Warpwood Staff. Substituting the Primal Charm for a more powerful primal reagent, the Primordial Pearl, seems to have done the trick.\nThis staff core is capable of storing 500 of each type of vis, furthermore, the Warpwood Rod's vis-replenishing traits are also present in this staff core.",
       "description": "Usually one is able to fashion a staff core by combining two wand rods with a Primal Charm. This construction method was unsuccessful in creating a Warpwood Staff. Substituting the Primal Charm for a more powerful primal reagent, the Primordial Pearl, seems to have done the trick.\nThis staff core is capable of storing 500 of each type of vis, furthermore, the Warpwood Rod's vis-replenishing traits are also present in this staff core."
@@ -9653,8 +9653,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Applying certain aspects to a Balanced Shard proved to have some rather interest",
+      "name_ru": "Applying certain aspects to a Balanced Shard proved to have some rather interest",
       "description_ru": "",
       "description_en": "Applying certain aspects to a Balanced Shard proved to have some rather interesting effects. You decided to call this process unbalancing.\nSo far, you have created the Tainted Unbalanced Shard and the Warped Unbalanced Shard.",
       "description": "Applying certain aspects to a Balanced Shard proved to have some rather interesting effects. You decided to call this process unbalancing.\nSo far, you have created the Tainted Unbalanced Shard and the Warped Unbalanced Shard."
@@ -9681,8 +9681,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have created a peculiar fertilizer which, when applied to a Silverwood Sapli",
+      "name_ru": "You have created a peculiar fertilizer which, when applied to a Silverwood Sapli",
       "description_ru": "",
       "description_en": "You have created a peculiar fertilizer which, when applied to a Silverwood Sapling, transfigures the sapling into a warped version of itself. Posessing strong levels of corrupt magics, the Warpwood Tree is, in every way, the opposite of a Silverwood.\nIt is advisable to walk with caution near a Warpwood, as poisonous Atropa Belladona often grows at its base.",
       "description": "You have created a peculiar fertilizer which, when applied to a Silverwood Sapling, transfigures the sapling into a warped version of itself. Posessing strong levels of corrupt magics, the Warpwood Tree is, in every way, the opposite of a Silverwood.\nIt is advisable to walk with caution near a Warpwood, as poisonous Atropa Belladona often grows at its base."
@@ -9709,8 +9709,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By staining some Enchanted Fabric with Crimson Blood, you have perfectly replica",
+      "name_ru": "By staining some Enchanted Fabric with Crimson Blood, you have perfectly replica",
       "description_ru": "",
       "description_en": "By staining some Enchanted Fabric with Crimson Blood, you have perfectly replicated the cloth from which the Crimson Cult makes their robes.\nUsing Crimson-stained Cloth (see right), and some other mundane materials, you were able to reproduce all of the various robe pieces worn by a Crimson Cleric. Their recipes are inscribed on the following pages.",
       "description": "By staining some Enchanted Fabric with Crimson Blood, you have perfectly replicated the cloth from which the Crimson Cult makes their robes.\nUsing Crimson-stained Cloth (see right), and some other mundane materials, you were able to reproduce all of the various robe pieces worn by a Crimson Cleric. Their recipes are inscribed on the following pages."
@@ -9738,8 +9738,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Using the same design principles with which you crafted Thaumium Fortress Armour",
+      "name_ru": "Using the same design principles with which you crafted Thaumium Fortress Armour",
       "description_ru": "",
       "description_en": "Using the same design principles with which you crafted Thaumium Fortress Armour, you have fashioned a similar set from Void Metal. By using Void Metal instead of Thaumium, not only did you increase the effectiveness of the armour, but also it's durability. Like anything made primarily from Void Metal, this armour will repair itself over time.\nLike normal Fortress Armour, this armour can be enhanced by various different faceplates and modifications.",
       "description": "Using the same design principles with which you crafted Thaumium Fortress Armour, you have fashioned a similar set from Void Metal. By using Void Metal instead of Thaumium, not only did you increase the effectiveness of the armour, but also it's durability. Like anything made primarily from Void Metal, this armour will repair itself over time.\nLike normal Fortress Armour, this armour can be enhanced by various different faceplates and modifications."
@@ -9766,8 +9766,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have improved the protection offered by your Goggles of Revealing by infusin",
+      "name_ru": "You have improved the protection offered by your Goggles of Revealing by infusin",
       "description_ru": "",
       "description_en": "You have improved the protection offered by your Goggles of Revealing by infusing them with some Shadow Metal and a drop of Quicksilver.\nOne of the goggle's lenses became clouded over during the infusion, causing strange visions while wearing them. Strangely, you don't mind.",
       "description": "You have improved the protection offered by your Goggles of Revealing by infusing them with some Shadow Metal and a drop of Quicksilver.\nOne of the goggle's lenses became clouded over during the infusion, causing strange visions while wearing them. Strangely, you don't mind."
@@ -9794,8 +9794,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By infusing some iron with Crimson Blood, you have perfectly replicated the mate",
+      "name_ru": "By infusing some iron with Crimson Blood, you have perfectly replicated the mate",
       "description_ru": "",
       "description_en": "By infusing some iron with Crimson Blood, you have perfectly replicated the material with which the Crimson Cult plates their armour.\nUsing Crimson Plating (see right), and some other mundane materials, you were able to reproduce all of the various armour pieces worn by a Crimson Knight. Their recipes are inscribed on the following pages.",
       "description": "By infusing some iron with Crimson Blood, you have perfectly replicated the material with which the Crimson Cult plates their armour.\nUsing Crimson Plating (see right), and some other mundane materials, you were able to reproduce all of the various armour pieces worn by a Crimson Knight. Their recipes are inscribed on the following pages."
@@ -9823,8 +9823,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Maybe you have encountered the leader of the Crimson Cult, the Crimson Praetor.",
+      "name_ru": "Maybe you have encountered the leader of the Crimson Cult, the Crimson Praetor.",
       "description_ru": "",
       "description_en": "Maybe you have encountered the leader of the Crimson Cult, the Crimson Praetor. Or, maybe you haven't. However, you have, at the very least least, read about the leader in a peculiar book titled Crimson Rites.\nYou have recreated the Crimson Praetor's armour by upgrading pieces of Crimson Knight armour.",
       "description": "Maybe you have encountered the leader of the Crimson Cult, the Crimson Praetor. Or, maybe you haven't. However, you have, at the very least least, read about the leader in a peculiar book titled Crimson Rites.\nYou have recreated the Crimson Praetor's armour by upgrading pieces of Crimson Knight armour."
@@ -9852,8 +9852,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Using Crimson Blood, you have created a elixir which harnesses the restorative p",
+      "name_ru": "Using Crimson Blood, you have created a elixir which harnesses the restorative p",
       "description_ru": "",
       "description_en": "Using Crimson Blood, you have created a elixir which harnesses the restorative properties of Void Metal.\nApplying this elixir to armour via a crafting grid will allow the armor to repair itself over time.",
       "description": "Using Crimson Blood, you have created a elixir which harnesses the restorative properties of Void Metal.\nApplying this elixir to armour via a crafting grid will allow the armor to repair itself over time."
@@ -9881,8 +9881,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have upgraded your Boots of the Traveller by infusing them with the power of",
+      "name_ru": "You have upgraded your Boots of the Traveller by infusing them with the power of",
       "description_ru": "",
       "description_en": "You have upgraded your Boots of the Traveller by infusing them with the power of the void.\nThe Boots of the Voidwalker offer outstanding protection and immunity to fall damage, as well as a hefty speed boost.",
       "description": "You have upgraded your Boots of the Traveller by infusing them with the power of the void.\nThe Boots of the Voidwalker offer outstanding protection and immunity to fall damage, as well as a hefty speed boost."
@@ -9901,8 +9901,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "While working with Primordial Pearls, you have realized that you do not always r",
+      "name_ru": "While working with Primordial Pearls, you have realized that you do not always r",
       "description_ru": "",
       "description_en": "While working with Primordial Pearls, you have realized that you do not always require an entire pearl. To solve this problem, you have perfected a method to magically fragmentate the pearl into medium-sized nodules and small-sized motes.",
       "description": "While working with Primordial Pearls, you have realized that you do not always require an entire pearl. To solve this problem, you have perfected a method to magically fragmentate the pearl into medium-sized nodules and small-sized motes."
@@ -9921,8 +9921,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Everything which you have researched so far has finally culminated together to d",
+      "name_ru": "Everything which you have researched so far has finally culminated together to d",
       "description_ru": "",
       "description_en": "Everything which you have researched so far has finally culminated together to discover the quintessential key to the secrets of the universe.\nThe Shard of Creation: a shard of condensed primal magic which contains age-old energies from a time when the universe was yet to exist. Using this shard as a source of power, you have access to magic which may alter the very fabric of existence.\nAs soon as the infusion was complete, a sensation of pure clarity filled your twisted mind, you had a revelation, it is all clear to you now. You are not a madman.",
       "description": "Everything which you have researched so far has finally culminated together to discover the quintessential key to the secrets of the universe.\nThe Shard of Creation: a shard of condensed primal magic which contains age-old energies from a time when the universe was yet to exist. Using this shard as a source of power, you have access to magic which may alter the very fabric of existence.\nAs soon as the infusion was complete, a sensation of pure clarity filled your twisted mind, you had a revelation, it is all clear to you now. You are not a madman."
@@ -9970,8 +9970,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "The moment you touched the Shard of Creation, forged from power you barely compr",
+      "name_ru": "The moment you touched the Shard of Creation, forged from power you barely compr",
       "description_ru": "",
       "description_en": "The moment you touched the Shard of Creation, forged from power you barely comprehend, you felt something. You felt as if the entire universe had shifted.\nYour body went numb, and for the first time since you opened the Thaumonomicon, the voices, they stopped.\nYou saw through what the voices have always kept hidden. You saw through the lies, through the insanity, through the veil between worlds. You saw Creation...\n\nEons ago, when the world you know was yet to exist, the formation of another universe began. The primal energies, in the form of vis, flowing from beyond reality clashed, combined, and, given time, created.\nA blank universe, exploding from nothing, into existence.\nThe energies which created this world, however, did not leave. They stayed, they twisted, and became a part of this new place, just as water or air are in your world.\n\nIf enough time is given to any universe, it will eventually develop life, and this universe was no exception. A race of beings, warped by power and twisted by magic. Every reference to them you've ever read always names them The Eldritch.\nTime passed, and the Eldritch developed magic. They practiced it, refined it, and it became quite similar to the Thaumaturgy you practice, except for one difference.\nWarp was in every word they wrote. Twisting, fluxing, and tainting. Their magic couldn't do anything without a far greater than equal reaction.\n\nSo, they decided they would break the rules. They decided to create a new universe. A universe without their limits, without the warp their universe was burdened with.\nThey began to manipulate primal energy, clashing it into the forms that would spark and create. However, right before this universe was created, they split the forces in two.\nAll the power of creation was placed into one half, and the matter created into another.\n\nThey ended up with two worlds... A never ending Voidscape, and the Overworld.\nNonetheless, the veil between these two worlds was weak, and the power contained within the voidscape was too dangerous to let the untrained hold.\nSo, the Eldritch condensed pieces of the energy of creation into Primordial Pearls and created labyrinths in which they would be sealed... The Outer Lands. To protect the Pearls, they created the Guardians, this ensured only those worthy would be able to obtain this power, as it could be devastating if used incorrectly.\n\nEons later, here you stand; one who has marched into eternity and emerged triumphant.\nYou hold a piece of the power used to create the universe...\nWith this piece of Creation, you have forged the final piece of the puzzle, the Shard of Creation.\nThe limits you once were bound by have been cast aside, just as the Eldritch cast aside theirs. With this, even gods would flee before you.",
       "description": "The moment you touched the Shard of Creation, forged from power you barely comprehend, you felt something. You felt as if the entire universe had shifted.\nYour body went numb, and for the first time since you opened the Thaumonomicon, the voices, they stopped.\nYou saw through what the voices have always kept hidden. You saw through the lies, through the insanity, through the veil between worlds. You saw Creation...\n\nEons ago, when the world you know was yet to exist, the formation of another universe began. The primal energies, in the form of vis, flowing from beyond reality clashed, combined, and, given time, created.\nA blank universe, exploding from nothing, into existence.\nThe energies which created this world, however, did not leave. They stayed, they twisted, and became a part of this new place, just as water or air are in your world.\n\nIf enough time is given to any universe, it will eventually develop life, and this universe was no exception. A race of beings, warped by power and twisted by magic. Every reference to them you've ever read always names them The Eldritch.\nTime passed, and the Eldritch developed magic. They practiced it, refined it, and it became quite similar to the Thaumaturgy you practice, except for one difference.\nWarp was in every word they wrote. Twisting, fluxing, and tainting. Their magic couldn't do anything without a far greater than equal reaction.\n\nSo, they decided they would break the rules. They decided to create a new universe. A universe without their limits, without the warp their universe was burdened with.\nThey began to manipulate primal energy, clashing it into the forms that would spark and create. However, right before this universe was created, they split the forces in two.\nAll the power of creation was placed into one half, and the matter created into another.\n\nThey ended up with two worlds... A never ending Voidscape, and the Overworld.\nNonetheless, the veil between these two worlds was weak, and the power contained within the voidscape was too dangerous to let the untrained hold.\nSo, the Eldritch condensed pieces of the energy of creation into Primordial Pearls and created labyrinths in which they would be sealed... The Outer Lands. To protect the Pearls, they created the Guardians, this ensured only those worthy would be able to obtain this power, as it could be devastating if used incorrectly.\n\nEons later, here you stand; one who has marched into eternity and emerged triumphant.\nYou hold a piece of the power used to create the universe...\nWith this piece of Creation, you have forged the final piece of the puzzle, the Shard of Creation.\nThe limits you once were bound by have been cast aside, just as the Eldritch cast aside theirs. With this, even gods would flee before you."
@@ -9996,8 +9996,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By combining a Fragment of Creation with some other magical ingredients, you hav",
+      "name_ru": "By combining a Fragment of Creation with some other magical ingredients, you hav",
       "description_ru": "",
       "description_en": "By combining a Fragment of Creation with some other magical ingredients, you have created a peculiar new type of salis.\nWhen this salis is thrown into the air (via right-click), it instantly interacts with the primal aspects of the atmosphere. If the skies are stormy, they will soon become clear, or if the skies are clear, they will soon become stormy.",
       "description": "By combining a Fragment of Creation with some other magical ingredients, you have created a peculiar new type of salis.\nWhen this salis is thrown into the air (via right-click), it instantly interacts with the primal aspects of the atmosphere. If the skies are stormy, they will soon become clear, or if the skies are clear, they will soon become stormy."
@@ -10022,8 +10022,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By combining a Fragment of Creation with some other magical ingredients, you hav",
+      "name_ru": "By combining a Fragment of Creation with some other magical ingredients, you hav",
       "description_ru": "",
       "description_en": "By combining a Fragment of Creation with some other magical ingredients, you have created a peculiar new type of salis.\nWhen this salis is thrown into the air (via right-click), it instantly interacts with the primal aspects of the space-time continuum. If it is nighttime, it will instantly become day, or if it is daytime, it will instantly become night.",
       "description": "By combining a Fragment of Creation with some other magical ingredients, you have created a peculiar new type of salis.\nWhen this salis is thrown into the air (via right-click), it instantly interacts with the primal aspects of the space-time continuum. If it is nighttime, it will instantly become day, or if it is daytime, it will instantly become night."
@@ -10050,8 +10050,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have constructed a high-tech magical multitool which you have named the Thau",
+      "name_ru": "You have constructed a high-tech magical multitool which you have named the Thau",
       "description_ru": "",
       "description_en": "You have constructed a high-tech magical multitool which you have named the Thaumic Disassembler. It easily breaks all block types, can create farmland, and is a decent weapon as well; allowing the user to avoid constantly swapping between tools. One would Shift+Right-click with the tool in hand to cycle between efficiency modes.\nThe Disassembler must be charged with entropy vis to be usable. It will automatically charge using vis from wands, staves, or baubles in the user's inventory.",
       "description": "You have constructed a high-tech magical multitool which you have named the Thaumic Disassembler. It easily breaks all block types, can create farmland, and is a decent weapon as well; allowing the user to avoid constantly swapping between tools. One would Shift+Right-click with the tool in hand to cycle between efficiency modes.\nThe Disassembler must be charged with entropy vis to be usable. It will automatically charge using vis from wands, staves, or baubles in the user's inventory."
@@ -10078,8 +10078,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have designed a runic accessory imbued with the power of the void.",
+      "name_ru": "You have designed a runic accessory imbued with the power of the void.",
       "description_ru": "",
       "description_en": "You have designed a runic accessory imbued with the power of the void. The Voidwalker's Sash of Runic Shielding offers Runic Shield +20, it can be equipped in the belt slot.\nWhen worn in conjunction with the Boots of the Voidwalker, an additional speed boost is granted. One would press Shift+Right-click with the sash in hand to toggle this additional effect.",
       "description": "You have designed a runic accessory imbued with the power of the void. The Voidwalker's Sash of Runic Shielding offers Runic Shield +20, it can be equipped in the belt slot.\nWhen worn in conjunction with the Boots of the Voidwalker, an additional speed boost is granted. One would press Shift+Right-click with the sash in hand to toggle this additional effect."
@@ -10106,8 +10106,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have been experimenting with Vishrooms lately and you have come to believe t",
+      "name_ru": "You have been experimenting with Vishrooms lately and you have come to believe t",
       "description_ru": "",
       "description_en": "You have been experimenting with Vishrooms lately and you have come to believe that the effects they induce are not all that bad.\nAfter combining a Vishroom with a magical shard, and some mundane ingredients, the mushroom became edible. When eaten, you receive a short burst of beneficial effects as well as random research points.",
       "description": "You have been experimenting with Vishrooms lately and you have come to believe that the effects they induce are not all that bad.\nAfter combining a Vishroom with a magical shard, and some mundane ingredients, the mushroom became edible. When eaten, you receive a short burst of beneficial effects as well as random research points."
@@ -10134,8 +10134,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Vishrooms: the bane of every Thaumaturge's existence.",
+      "name_ru": "Vishrooms: the bane of every Thaumaturge's existence.",
       "description_ru": "",
       "description_en": "Vishrooms: the bane of every Thaumaturge's existence. Every time you walk through a magical forest you somehow end up stepping on one of these pesky mushrooms, leaving you feeling sick.\nAfter stepping on one-too-many of these mushrooms, you had a (likely mushroom-induced) vision. This short-lived epiphany led to you to discover a method of transmuting Vishrooms from ordinary, mundane mushrooms. Why would one want to create Vishrooms? You have no idea.",
       "description": "Vishrooms: the bane of every Thaumaturge's existence. Every time you walk through a magical forest you somehow end up stepping on one of these pesky mushrooms, leaving you feeling sick.\nAfter stepping on one-too-many of these mushrooms, you had a (likely mushroom-induced) vision. This short-lived epiphany led to you to discover a method of transmuting Vishrooms from ordinary, mundane mushrooms. Why would one want to create Vishrooms? You have no idea."
@@ -10162,8 +10162,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By fashioning a dagger from a hollow Bone Rod, and some other materials, you now",
+      "name_ru": "By fashioning a dagger from a hollow Bone Rod, and some other materials, you now",
       "description_ru": "",
       "description_en": "By fashioning a dagger from a hollow Bone Rod, and some other materials, you now have an efficient way to collect blood from your enemies. If you posses an empty Glass Phial in your inventory, a phial will fill with blood upon stabbing a foe with this blade.\nUpon closer inspection, you noticed that blood collected this way posesses some interesting properties. Most notibly, its deep crimson colour. Perhaps even more interestingly, this specially collected blood seems to possess similar properties to the artifacts which you have previously retrieved from the Crimson Cult.",
       "description": "By fashioning a dagger from a hollow Bone Rod, and some other materials, you now have an efficient way to collect blood from your enemies. If you posses an empty Glass Phial in your inventory, a phial will fill with blood upon stabbing a foe with this blade.\nUpon closer inspection, you noticed that blood collected this way posesses some interesting properties. Most notibly, its deep crimson colour. Perhaps even more interestingly, this specially collected blood seems to possess similar properties to the artifacts which you have previously retrieved from the Crimson Cult."
@@ -10191,8 +10191,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By infusing a Void Metal Sword with Crimson Blood, you have recreated the blade",
+      "name_ru": "By infusing a Void Metal Sword with Crimson Blood, you have recreated the blade",
       "description_ru": "",
       "description_en": "By infusing a Void Metal Sword with Crimson Blood, you have recreated the blade wielded by the Crimson Cult's leader, the Crimson Praetor.\nThis blade possesses Greater Sapping, which causes weakness and hunger afflictions.",
       "description": "By infusing a Void Metal Sword with Crimson Blood, you have recreated the blade wielded by the Crimson Cult's leader, the Crimson Praetor.\nThis blade possesses Greater Sapping, which causes weakness and hunger afflictions."
@@ -10220,8 +10220,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Following the design used to create Fortress Armour from both Thaumium and Void",
+      "name_ru": "Following the design used to create Fortress Armour from both Thaumium and Void",
       "description_ru": "",
       "description_en": "Following the design used to create Fortress Armour from both Thaumium and Void Metal, you have crafted a similar set using Shadow Metal.\nWhile this suit of armor did not inherit Void Metal's auto-repair ability, it is more protective than Void Fortress Armor. Furthermore, wearing multiple pieces of this armour set will increase its overall protection significantly.\nLike Fortress Armour made from other materials, this armour can be enhanced by various faceplates and modifications.",
       "description": "Following the design used to create Fortress Armour from both Thaumium and Void Metal, you have crafted a similar set using Shadow Metal.\nWhile this suit of armor did not inherit Void Metal's auto-repair ability, it is more protective than Void Fortress Armor. Furthermore, wearing multiple pieces of this armour set will increase its overall protection significantly.\nLike Fortress Armour made from other materials, this armour can be enhanced by various faceplates and modifications."
@@ -10247,8 +10247,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have designed inexpensive Wand Caps made from Enchanted Cloth.",
+      "name_ru": "You have designed inexpensive Wand Caps made from Enchanted Cloth.",
       "description_ru": "",
       "description_en": "You have designed inexpensive Wand Caps made from Enchanted Cloth. Though they are simple to make, these Wand Caps provide a 3% vis discount, likely due to the Enchanted properties of the cloth.",
       "description": "You have designed inexpensive Wand Caps made from Enchanted Cloth. Though they are simple to make, these Wand Caps provide a 3% vis discount, likely due to the Enchanted properties of the cloth."
@@ -10275,8 +10275,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Making Wand Caps from Enchanted Cloth proved successful, so you have decided to",
+      "name_ru": "Making Wand Caps from Enchanted Cloth proved successful, so you have decided to",
       "description_ru": "",
       "description_en": "Making Wand Caps from Enchanted Cloth proved successful, so you have decided to do the same using Crimson-stained Cloth. These Wand Caps channel vis slightly better than Caps made from plain Enchanted Cloth, providing a 7% vis discount.",
       "description": "Making Wand Caps from Enchanted Cloth proved successful, so you have decided to do the same using Crimson-stained Cloth. These Wand Caps channel vis slightly better than Caps made from plain Enchanted Cloth, providing a 7% vis discount."
@@ -10304,8 +10304,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Making Wand Caps from Enchanted Cloth proved successful, so you have decided to",
+      "name_ru": "Making Wand Caps from Enchanted Cloth proved successful, so you have decided to",
       "description_ru": "",
       "description_en": "Making Wand Caps from Enchanted Cloth proved successful, so you have decided to do the same using Shadow-imbued Cloth. These Wand Caps channel vis slightly better than Caps made from plain Enchanted Cloth, providing a 7% vis discount.",
       "description": "Making Wand Caps from Enchanted Cloth proved successful, so you have decided to do the same using Shadow-imbued Cloth. These Wand Caps channel vis slightly better than Caps made from plain Enchanted Cloth, providing a 7% vis discount."
@@ -10334,8 +10334,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have expanded your primal tool set by designing a blade imbued with primal a",
+      "name_ru": "You have expanded your primal tool set by designing a blade imbued with primal a",
       "description_ru": "",
       "description_en": "You have expanded your primal tool set by designing a blade imbued with primal aspects.\nThe Primal Blade offers excellent attack damage, and will repair iteself over time. While holding right-click, a gravitational field is created which will draw all nearby enemies towards you. The blade also possesses Primal Sapping, which inflicts withering and weakness effects.\nOne should take care while wielding this blade, as it posesses a strong warping effect.",
       "description": "You have expanded your primal tool set by designing a blade imbued with primal aspects.\nThe Primal Blade offers excellent attack damage, and will repair iteself over time. While holding right-click, a gravitational field is created which will draw all nearby enemies towards you. The blade also possesses Primal Sapping, which inflicts withering and weakness effects.\nOne should take care while wielding this blade, as it posesses a strong warping effect."
@@ -10362,8 +10362,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have upgraded a Thaumium Sword by employing techniques similar to those used",
+      "name_ru": "You have upgraded a Thaumium Sword by employing techniques similar to those used",
       "description_ru": "",
       "description_en": "You have upgraded a Thaumium Sword by employing techniques similar to those used in the construction of Fortress Armor. The blade's attack damage has been augmented, and its durability increased so that will never break.\nWhile holding the blade, a Runic Gauge becomes visible. The blade can be charged by holding right-click until the gauge is full. Upon releasing a charged strike, additional damage will be dealt, with the chance of an even more powerful critical hit.\nThe blade will remain sheathed at your hip when it is not in use.",
       "description": "You have upgraded a Thaumium Sword by employing techniques similar to those used in the construction of Fortress Armor. The blade's attack damage has been augmented, and its durability increased so that will never break.\nWhile holding the blade, a Runic Gauge becomes visible. The blade can be charged by holding right-click until the gauge is full. Upon releasing a charged strike, additional damage will be dealt, with the chance of an even more powerful critical hit.\nThe blade will remain sheathed at your hip when it is not in use."
@@ -10391,8 +10391,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Using the same construction process used to create the Thaumium Fortress Blade,",
+      "name_ru": "Using the same construction process used to create the Thaumium Fortress Blade,",
       "description_ru": "",
       "description_en": "Using the same construction process used to create the Thaumium Fortress Blade, you have designed a Fortress Blade fashioned from Void Metal.\nThe Void Metal Fortress Blade is not only stronger than its Thaumium counterpart, but also possesses the Lesser Sapping effect which will weaken those struck by the blade.\nThis blade can also be enhanced with various inscriptions.",
       "description": "Using the same construction process used to create the Thaumium Fortress Blade, you have designed a Fortress Blade fashioned from Void Metal.\nThe Void Metal Fortress Blade is not only stronger than its Thaumium counterpart, but also possesses the Lesser Sapping effect which will weaken those struck by the blade.\nThis blade can also be enhanced with various inscriptions."
@@ -10421,8 +10421,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Using the same construction process used to create the Thaumium and Void Metal F",
+      "name_ru": "Using the same construction process used to create the Thaumium and Void Metal F",
       "description_ru": "",
       "description_en": "Using the same construction process used to create the Thaumium and Void Metal Fortress Blades, you have designed a Fortress Blade fashioned from Shadow Metal.\nThe Shadow Metal Fortress Blade possesses the Greater Sapping effect which will inflict those struck by the blade with weakness and hunger effects.\nThis blade can also be enhanced with various inscriptions.",
       "description": "Using the same construction process used to create the Thaumium and Void Metal Fortress Blades, you have designed a Fortress Blade fashioned from Shadow Metal.\nThe Shadow Metal Fortress Blade possesses the Greater Sapping effect which will inflict those struck by the blade with weakness and hunger effects.\nThis blade can also be enhanced with various inscriptions."
@@ -10449,8 +10449,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have upgraded your Fortress Blade by inscribing runes upon it.",
+      "name_ru": "You have upgraded your Fortress Blade by inscribing runes upon it.",
       "description_ru": "",
       "description_en": "You have upgraded your Fortress Blade by inscribing runes upon it.\nThis inscription will cause your blade to deal fire damage, which sets enemies aflame.\nFurthermore, when releasing a fully charged strike, an explosive fireball will be cast from your blade. One would hold down shift to cancel this effect and release a normal charged strike.",
       "description": "You have upgraded your Fortress Blade by inscribing runes upon it.\nThis inscription will cause your blade to deal fire damage, which sets enemies aflame.\nFurthermore, when releasing a fully charged strike, an explosive fireball will be cast from your blade. One would hold down shift to cancel this effect and release a normal charged strike."
@@ -10477,8 +10477,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have upgraded your Fortress Blade by inscribing runes upon it.",
+      "name_ru": "You have upgraded your Fortress Blade by inscribing runes upon it.",
       "description_ru": "",
       "description_en": "You have upgraded your Fortress Blade by inscribing runes upon it.\nThis inscription will cause your blade to deal magic damage, which inflicts a slowness effect on enemies.\nFurthermore, when releasing a fully charged strike, all nearby enemies will be hurled away from you, and damaged by means of magic. One would hold down shift to cancel this effect and release a normal charged strike.",
       "description": "You have upgraded your Fortress Blade by inscribing runes upon it.\nThis inscription will cause your blade to deal magic damage, which inflicts a slowness effect on enemies.\nFurthermore, when releasing a fully charged strike, all nearby enemies will be hurled away from you, and damaged by means of magic. One would hold down shift to cancel this effect and release a normal charged strike."
@@ -10505,8 +10505,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have upgraded your Fortress Blade by inscribing runes upon it.",
+      "name_ru": "You have upgraded your Fortress Blade by inscribing runes upon it.",
       "description_ru": "",
       "description_en": "You have upgraded your Fortress Blade by inscribing runes upon it.\nThis inscription will cause your blade to deal magic damage, which inflicts a withering effect on enemies.\nFurthermore, when releasing a fully charged strike, you will be healed and will recieve a short burst of beneficial potion effects. Healing potency increases the closer you are to death. Additionally, all enemies nearby will be inflicted with a withering effect upon healing yourself. One would hold down shift to cancel this effect and release a normal charged strike.",
       "description": "You have upgraded your Fortress Blade by inscribing runes upon it.\nThis inscription will cause your blade to deal magic damage, which inflicts a withering effect on enemies.\nFurthermore, when releasing a fully charged strike, you will be healed and will recieve a short burst of beneficial potion effects. Healing potency increases the closer you are to death. Additionally, all enemies nearby will be inflicted with a withering effect upon healing yourself. One would hold down shift to cancel this effect and release a normal charged strike."
@@ -10534,8 +10534,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By infusing your Warped Goggles of Revealing with Void Metal, you have created a",
+      "name_ru": "By infusing your Warped Goggles of Revealing with Void Metal, you have created a",
       "description_ru": "",
       "description_en": "By infusing your Warped Goggles of Revealing with Void Metal, you have created a pair of goggles that repair themselves, and have an extremely high vis discount.\nSadly, they offer inferior protection to the original Warped Goggles of Revealing.",
       "description": "By infusing your Warped Goggles of Revealing with Void Metal, you have created a pair of goggles that repair themselves, and have an extremely high vis discount.\nSadly, they offer inferior protection to the original Warped Goggles of Revealing."
@@ -10563,8 +10563,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have created a wand focus which allows you to wield the magics of an Eldritc",
+      "name_ru": "You have created a wand focus which allows you to wield the magics of an Eldritc",
       "description_ru": "",
       "description_en": "You have created a wand focus which allows you to wield the magics of an Eldritch Guardian. This focus conjures a destructive orb of concentrated dark matter when it is cast.\nIt is advised that one should be careful while using this focus, as it possesses a strong warping effect.",
       "description": "You have created a wand focus which allows you to wield the magics of an Eldritch Guardian. This focus conjures a destructive orb of concentrated dark matter when it is cast.\nIt is advised that one should be careful while using this focus, as it possesses a strong warping effect."
@@ -10592,8 +10592,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have created a Tier 5 upgrade applicable to the Dark Matter focus.",
+      "name_ru": "You have created a Tier 5 upgrade applicable to the Dark Matter focus.",
       "description_ru": "",
       "description_en": "You have created a Tier 5 upgrade applicable to the Dark Matter focus. With this upgrade, the focus will cast a continuous cloud of dark matter, draining the life of anything in its path.",
       "description": "You have created a Tier 5 upgrade applicable to the Dark Matter focus. With this upgrade, the focus will cast a continuous cloud of dark matter, draining the life of anything in its path."
@@ -10621,8 +10621,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By infusing a Block of Iron with some sharp objects, you have created a wand foc",
+      "name_ru": "By infusing a Block of Iron with some sharp objects, you have created a wand foc",
       "description_ru": "",
       "description_en": "By infusing a Block of Iron with some sharp objects, you have created a wand focus that acts as a mace, turning your wand or staff into a meele weapon.\nA small vis cost is required each time an enemy is hit; if the required vis is unavailable, no damage will be inflicted.\nUpgrading this focus with Potency will increase the mace's attack damage by +1 for each level.",
       "description": "By infusing a Block of Iron with some sharp objects, you have created a wand focus that acts as a mace, turning your wand or staff into a meele weapon.\nA small vis cost is required each time an enemy is hit; if the required vis is unavailable, no damage will be inflicted.\nUpgrading this focus with Potency will increase the mace's attack damage by +1 for each level."
@@ -10650,8 +10650,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have designed a defensive, lightning-aspected, area-of-effect wand focus.",
+      "name_ru": "You have designed a defensive, lightning-aspected, area-of-effect wand focus.",
       "description_ru": "",
       "description_en": "You have designed a defensive, lightning-aspected, area-of-effect wand focus.\nWhen cast, this focus hurls a violent bolt of lightning to each nearby enemy; dealing a hefty blow of damage, picking them up, and knocking them far away from you.",
       "description": "You have designed a defensive, lightning-aspected, area-of-effect wand focus.\nWhen cast, this focus hurls a violent bolt of lightning to each nearby enemy; dealing a hefty blow of damage, picking them up, and knocking them far away from you."
@@ -10678,8 +10678,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "With the study of different types of shards, an incredible idea dawned upon you:",
+      "name_ru": "With the study of different types of shards, an incredible idea dawned upon you:",
       "description_ru": "",
       "description_en": "With the study of different types of shards, an incredible idea dawned upon you: what if you could animate a vis shard to be used in combat?\nThis focus can only be cast if you are looking at an enemy. The shard will float through the air, homing in on its target, and will burst on contact.\nIt would seem that the shard will also bounce off of solid blocks.",
       "description": "With the study of different types of shards, an incredible idea dawned upon you: what if you could animate a vis shard to be used in combat?\nThis focus can only be cast if you are looking at an enemy. The shard will float through the air, homing in on its target, and will burst on contact.\nIt would seem that the shard will also bounce off of solid blocks."
@@ -10706,8 +10706,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By combining your knowledge of tainted creatures with your study of wand foci, y",
+      "name_ru": "By combining your knowledge of tainted creatures with your study of wand foci, y",
       "description_ru": "",
       "description_en": "By combining your knowledge of tainted creatures with your study of wand foci, you have created a focus which summons a friendly Taint Swarm to fight alongside you. The swarm will only attack the enemy which was targeted while casting the focus. If the target dies, or mysteriously disappears, the swarm will also die.\nUnfortunately, it would seem that this focus does not work in \"peaceful\" worlds.\nOne should be cautious when using this focus, as it is not uncommon to contract various taint-related ailments while using it.",
       "description": "By combining your knowledge of tainted creatures with your study of wand foci, you have created a focus which summons a friendly Taint Swarm to fight alongside you. The swarm will only attack the enemy which was targeted while casting the focus. If the target dies, or mysteriously disappears, the swarm will also die.\nUnfortunately, it would seem that this focus does not work in \"peaceful\" worlds.\nOne should be cautious when using this focus, as it is not uncommon to contract various taint-related ailments while using it."
@@ -10734,8 +10734,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have designed a focus which converts vis into light.",
+      "name_ru": "You have designed a focus which converts vis into light.",
       "description_ru": "",
       "description_en": "You have designed a focus which converts vis into light.\nSimply cast your wand (or staff) on a block and watch as a pocket of light appears.\nFurthermore, while this focus is equipped, your wand will light the area around you.",
       "description": "You have designed a focus which converts vis into light.\nSimply cast your wand (or staff) on a block and watch as a pocket of light appears.\nFurthermore, while this focus is equipped, your wand will light the area around you."
@@ -10763,8 +10763,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have created a ring using the Lumos focus.",
+      "name_ru": "You have created a ring using the Lumos focus.",
       "description_ru": "",
       "description_en": "You have created a ring using the Lumos focus. When the Ring of Lumos is equipped, the area around you will be perpetually illuminated.",
       "description": "You have created a ring using the Lumos focus. When the Ring of Lumos is equipped, the area around you will be perpetually illuminated."
@@ -10792,8 +10792,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "By infusing an Air Arrow with a Shard of Creation, you have created a charm whic",
+      "name_ru": "By infusing an Air Arrow with a Shard of Creation, you have created a charm whic",
       "description_ru": "",
       "description_en": "By infusing an Air Arrow with a Shard of Creation, you have created a charm which allows the user to fly.\nWhile you have the charm stored in your inventory, you will be granted Flyte at the cost of some Aer vis. One would double-jump to begin flying. While falling, hold shift to glide gently to the ground.",
       "description": "By infusing an Air Arrow with a Shard of Creation, you have created a charm which allows the user to fly.\nWhile you have the charm stored in your inventory, you will be granted Flyte at the cost of some Aer vis. One would double-jump to begin flying. While falling, hold shift to glide gently to the ground."
@@ -10821,8 +10821,8 @@
           "text_ru": ""
         }
       ],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "You have designed a key which opens a gate, acting as a 'shortcut' between two p",
+      "name_ru": "You have designed a key which opens a gate, acting as a 'shortcut' between two p",
       "description_ru": "",
       "description_en": "You have designed a key which opens a gate, acting as a 'shortcut' between two points in your world. The Celestial Gate Key allows you to teleport back to a bound return point. Unfortunately, interdimensional travel is impossible using this device.\nTo bind the key's return point, one would right-click on the block they wish to return to. Once bound, the key's bow will take on a unique colour and will be permanently bound to this location.\nTo return to the specified location, one must simply hold right-click for a few seconds with the item in hand.",
       "description": "You have designed a key which opens a gate, acting as a 'shortcut' between two points in your world. The Celestial Gate Key allows you to teleport back to a bound return point. Unfortunately, interdimensional travel is impossible using this device.\nTo bind the key's return point, one would right-click on the block they wish to return to. Once bound, the key's bow will take on a unique colour and will be permanently bound to this location.\nTo return to the specified location, one must simply hold right-click for a few seconds with the item in hand."
@@ -10847,8 +10847,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Animation Tablet",
+      "name_ru": "Animation Tablet",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -10874,8 +10874,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Enchanter",
+      "name_ru": "Enchanter",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -10904,8 +10904,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Funnel",
+      "name_ru": "Funnel",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -10934,8 +10934,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Magnets",
+      "name_ru": "Magnets",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -10962,8 +10962,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Platform",
+      "name_ru": "Platform",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -10989,8 +10989,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Remote Placer",
+      "name_ru": "Remote Placer",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11014,8 +11014,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Summon",
+      "name_ru": "Summon",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11041,8 +11041,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Fire Aer",
+      "name_ru": "Fire Aer",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11068,8 +11068,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Fire Perditio",
+      "name_ru": "Fire Perditio",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11095,8 +11095,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Fire Terra",
+      "name_ru": "Fire Terra",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11121,8 +11121,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Fire Ignis",
+      "name_ru": "Fire Ignis",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11148,8 +11148,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Fire Ordo",
+      "name_ru": "Fire Ordo",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11175,8 +11175,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Fire Aqua",
+      "name_ru": "Fire Aqua",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11204,8 +11204,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Warp Gate",
+      "name_ru": "Warp Gate",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11230,8 +11230,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Levitator Locomotive",
+      "name_ru": "Levitator Locomotive",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11261,8 +11261,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Dislocator",
+      "name_ru": "Dislocator",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11285,8 +11285,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Interface",
+      "name_ru": "Interface",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11313,8 +11313,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Blood Sword",
+      "name_ru": "Blood Sword",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11342,8 +11342,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Bright Nitor",
+      "name_ru": "Bright Nitor",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11369,8 +11369,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cleansing Talisman",
+      "name_ru": "Cleansing Talisman",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11396,8 +11396,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Gaseous Shadow",
+      "name_ru": "Gaseous Shadow",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11420,8 +11420,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Gaseous Light",
+      "name_ru": "Gaseous Light",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11446,8 +11446,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Gas Remover",
+      "name_ru": "Gas Remover",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11472,8 +11472,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Infused Potions",
+      "name_ru": "Infused Potions",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11499,8 +11499,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Revealing Helm",
+      "name_ru": "Revealing Helm",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11521,8 +11521,8 @@
       ],
       "autoUnlock": true,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Share Tome",
+      "name_ru": "Share Tome",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11545,8 +11545,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Spell Cloth",
+      "name_ru": "Spell Cloth",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11574,8 +11574,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Xp Talisman",
+      "name_ru": "Xp Talisman",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11603,8 +11603,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Deflect",
+      "name_ru": "Focus Deflect",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11631,8 +11631,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Dislocation",
+      "name_ru": "Focus Dislocation",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11658,8 +11658,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Ender Chest",
+      "name_ru": "Focus Ender Chest",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11685,8 +11685,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Flight",
+      "name_ru": "Focus Flight",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11713,8 +11713,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Heal",
+      "name_ru": "Focus Heal",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11740,8 +11740,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Smelt",
+      "name_ru": "Focus Smelt",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11768,8 +11768,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Telekinesis",
+      "name_ru": "Focus Telekinesis",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11795,8 +11795,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Block Talisman",
+      "name_ru": "Block Talisman",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11821,8 +11821,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cat Amulet",
+      "name_ru": "Cat Amulet",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11847,8 +11847,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichor Pouch",
+      "name_ru": "Ichor Pouch",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11869,8 +11869,8 @@
       ],
       "autoUnlock": true,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Dimension Shards",
+      "name_ru": "Dimension Shards",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11892,8 +11892,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichor",
+      "name_ru": "Ichor",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11920,8 +11920,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichor Cloth",
+      "name_ru": "Ichor Cloth",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11951,8 +11951,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichorium",
+      "name_ru": "Ichorium",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -11979,8 +11979,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cap Ichor",
+      "name_ru": "Cap Ichor",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12010,8 +12010,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Rod Ichorcloth",
+      "name_ru": "Rod Ichorcloth",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12036,8 +12036,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Placement Mirror",
+      "name_ru": "Placement Mirror",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12065,8 +12065,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Protoclay",
+      "name_ru": "Protoclay",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12091,8 +12091,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichorcloth Boots Gem",
+      "name_ru": "Ichorcloth Boots Gem",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12117,8 +12117,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichorcloth Chest Gem",
+      "name_ru": "Ichorcloth Chest Gem",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12143,8 +12143,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichorcloth Helm Gem",
+      "name_ru": "Ichorcloth Helm Gem",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12169,8 +12169,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichorcloth Legs Gem",
+      "name_ru": "Ichorcloth Legs Gem",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12197,8 +12197,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichorcloth Armor",
+      "name_ru": "Ichorcloth Armor",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12226,8 +12226,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Recall",
+      "name_ru": "Focus Recall",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12252,8 +12252,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Shadowbeam",
+      "name_ru": "Focus Shadowbeam",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12278,8 +12278,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Focus Xp Drain",
+      "name_ru": "Focus Xp Drain",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12304,8 +12304,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichor Axe Gem",
+      "name_ru": "Ichor Axe Gem",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12335,8 +12335,8 @@
       ],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichor Tools",
+      "name_ru": "Ichor Tools",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12361,8 +12361,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichor Pick Gem",
+      "name_ru": "Ichor Pick Gem",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12386,8 +12386,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichor Shovel Gem",
+      "name_ru": "Ichor Shovel Gem",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12412,8 +12412,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ichor Sword Gem",
+      "name_ru": "Ichor Sword Gem",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12434,8 +12434,8 @@
       ],
       "autoUnlock": true,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Dark Quartz",
+      "name_ru": "Dark Quartz",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12459,8 +12459,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Ascent Boost",
+      "name_ru": "Ttench Ascent Boost",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12484,8 +12484,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Slow Fall",
+      "name_ru": "Ttench Slow Fall",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12509,8 +12509,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Auto Smelt",
+      "name_ru": "Ttench Auto Smelt",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12534,8 +12534,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Desintegrate",
+      "name_ru": "Ttench Desintegrate",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12559,8 +12559,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Quick Draw",
+      "name_ru": "Ttench Quick Draw",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12584,8 +12584,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Vampirism",
+      "name_ru": "Ttench Vampirism",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12609,8 +12609,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Focused",
+      "name_ru": "Ttench Focused",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12634,8 +12634,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Dispersed",
+      "name_ru": "Ttench Dispersed",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12661,8 +12661,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Final",
+      "name_ru": "Ttench Final",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12687,8 +12687,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Pounce",
+      "name_ru": "Ttench Pounce",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12713,8 +12713,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Shatter",
+      "name_ru": "Ttench Shatter",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12739,8 +12739,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Shockwave",
+      "name_ru": "Ttench Shockwave",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12765,8 +12765,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Tunnel",
+      "name_ru": "Ttench Tunnel",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12790,8 +12790,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Ttench Valiance",
+      "name_ru": "Ttench Valiance",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -12827,7 +12827,7 @@
         }
       ],
       "name_en": "Blood Infused Wood Cores",
-      "name_ru": "",
+      "name_ru": "Blood Infused Wood Cores",
       "description_ru": "",
       "description_en": "Your works on the Blood Rods have led you to wonder if you can use the properties of Blood Infused Wood in the same manner as you have used the Blood Rods. Pondering on this thought, you realize that with a bit of catalyzing and some mystical infusing, that yes! It is indeed possible to upgrade a Blood Rod with Blood Infused Wood which grants it much higher regenerative vis capabilities. No wand has ever been so living! Recharging at twice the speed it was, you can fill the wand in no time. However there is one downside, it uses muuch more LP than the Blood Rod ever did. Even with Alchemical Caps, it still uses more than the Blood Rod. Desperate for a work-around, you wonder if you can\n\napply the same principles to Alchemical Caps...",
       "description": "Your works on the Blood Rods have led you to wonder if you can use the properties of Blood Infused Wood in the same manner as you have used the Blood Rods. Pondering on this thought, you realize that with a bit of catalyzing and some mystical infusing, that yes! It is indeed possible to upgrade a Blood Rod with Blood Infused Wood which grants it much higher regenerative vis capabilities. No wand has ever been so living! Recharging at twice the speed it was, you can fill the wand in no time. However there is one downside, it uses muuch more LP than the Blood Rod ever did. Even with Alchemical Caps, it still uses more than the Blood Rod. Desperate for a work-around, you wonder if you can\n\napply the same principles to Alchemical Caps...",
@@ -12859,7 +12859,7 @@
         }
       ],
       "name_en": "Blood Infused Iron Caps",
-      "name_ru": "",
+      "name_ru": "Blood Infused Iron Caps",
       "description_ru": "",
       "description_en": "Alchemical Caps were just the beginning. You know that like Blood Infused Wood, Blood Infused Iron also has regenerating properties so you have theorized a way to combine Blood Infused Iron into an Alchemical Cap making it...almost living! They give a better vis discount than the Alchemical Caps, and seem to be more efficient at consuming LP when combined with the Blood Infused Wooden Wand Rod. However, this regenerating property seems to be too much for a standard Blood Rod rendering it inert if put on a Blood Rod.",
       "description": "Alchemical Caps were just the beginning. You know that like Blood Infused Wood, Blood Infused Iron also has regenerating properties so you have theorized a way to combine Blood Infused Iron into an Alchemical Cap making it...almost living! They give a better vis discount than the Alchemical Caps, and seem to be more efficient at consuming LP when combined with the Blood Infused Wooden Wand Rod. However, this regenerating property seems to be too much for a standard Blood Rod rendering it inert if put on a Blood Rod.",
@@ -12895,7 +12895,7 @@
         }
       ],
       "name_en": "Blood Infused Wood Staff Core",
-      "name_ru": "",
+      "name_ru": "Blood Infused Wood Staff Core",
       "description_ru": "",
       "description_en": "Even with your supremely regenerative wand and caps, you are still not yet satisfied. You know that when the Blood Rods are turned into Blood Staff Cores, they regenerate four times faster but holds half the amount of vis. Working with some dark magics and a Blood Staff Core, you can now create a living terror. This mighty staff regenerates 2 times faster than the Blood Staff but this is where the regenerative capabilities of Blood Infused Wood meet its limits: the wood itself seemingly tries to regenerate faster than it physically can. To compensate for this, it has to draw Life from the player every time it regenerates vis. And unlike the other blood wands, it doesn't care if you survive or not...",
       "description": "Even with your supremely regenerative wand and caps, you are still not yet satisfied. You know that when the Blood Rods are turned into Blood Staff Cores, they regenerate four times faster but holds half the amount of vis. Working with some dark magics and a Blood Staff Core, you can now create a living terror. This mighty staff regenerates 2 times faster than the Blood Staff but this is where the regenerative capabilities of Blood Infused Wood meet its limits: the wood itself seemingly tries to regenerate faster than it physically can. To compensate for this, it has to draw Life from the player every time it regenerates vis. And unlike the other blood wands, it doesn't care if you survive or not...",
@@ -12983,8 +12983,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cap Alfheim Manasteel",
+      "name_ru": "Cap Alfheim Manasteel",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13006,8 +13006,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cap Alfheim Terrasteel",
+      "name_ru": "Cap Alfheim Terrasteel",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13028,8 +13028,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cap Alfheim Elementium",
+      "name_ru": "Cap Alfheim Elementium",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13051,8 +13051,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cap Alfheim Elvorium",
+      "name_ru": "Cap Alfheim Elvorium",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13075,8 +13075,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Cap Alfheim Mauftrium",
+      "name_ru": "Cap Alfheim Mauftrium",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13097,8 +13097,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Rod Alfheim Livingwood",
+      "name_ru": "Rod Alfheim Livingwood",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13119,8 +13119,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Rod Alfheim Dreamwood",
+      "name_ru": "Rod Alfheim Dreamwood",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13141,8 +13141,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Rod Alfheim Spiritual Staff",
+      "name_ru": "Rod Alfheim Spiritual Staff",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13163,8 +13163,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Alfheim Pure Elementium",
+      "name_ru": "Alfheim Pure Elementium",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13184,8 +13184,8 @@
       "flags": [],
       "autoUnlock": false,
       "pages": [],
-      "name_en": "",
-      "name_ru": "",
+      "name_en": "Alfheim Trans Elementium",
+      "name_ru": "Alfheim Trans Elementium",
       "description_ru": "",
       "description_en": "",
       "description": ""
@@ -13219,7 +13219,7 @@
         }
       ],
       "name_en": "Пробужденная алхимическая конструкция",
-      "name_ru": "",
+      "name_ru": "Пробужденная алхимическая конструкция",
       "description_ru": "До сих пор алхимия была своего рода чередующейся удачей и неудачей - просчитались в аспектах, уничтожили эссенцию и ингредиенты, или что-нибудь еще. Теперь это в прошлом.\nТауматорий - это чудесное изобретение, которое позволяет тауматургу выбрать, что именно делать и что использовать. Он автоматически использует нужную эссенцию, получая ее по трубам. Пока в нем есть катализатор, он будет беспрекословно производить нужный предмет.\nТигель не требует воды, но все ещё требует источник тепла.",
       "description_en": "Up to now alchemy has been somewhat of a hit and miss affair - miscounted aspects, degrading essentia and ingredients that require manual labor to mix. This is finally a thing of the past.\nThe Thaumatorium is a marvelous invention that allows a thaumaturge to select which formula to use and what catalysts to add. It then automatically draws essentia from available sources using tubes. As long as there is a supply of catalyst it produces the required object perfectly, every time.\nThe crucible that forms its base does not require water, but a heat source is still needed.",
       "description": "До сих пор алхимия была своего рода чередующейся удачей и неудачей - просчитались в аспектах, уничтожили эссенцию и ингредиенты, или что-нибудь еще. Теперь это в прошлом.\nТауматорий - это чудесное изобретение, которое позволяет тауматургу выбрать, что именно делать и что использовать. Он автоматически использует нужную эссенцию, получая ее по трубам. Пока в нем есть катализатор, он будет беспрекословно производить нужный предмет.\nТигель не требует воды, но все ещё требует источник тепла."
@@ -13253,7 +13253,7 @@
         }
       ],
       "name_en": "Пробужденная алхимическая печь",
-      "name_ru": "",
+      "name_ru": "Пробужденная алхимическая печь",
       "description_ru": "Сковывая чистый Ignis в печи, построенной из обсидиана и адских кирпичей, Вы создаете очень продуктивную и бестопливную печь. По сути, эффективность заключается в дополнительных материалах, которые печь будет выдавать.\nХоть печь и \"бестопливная\", но за это придется платить маленькой скоростью переплавки, до тех пор пока она не получит порцию аспекта Ignis. Вы наверняка найдете способы снабдить печь этим аспектом, если ещё не открыли...",
       "description_en": "By harnessing raw Ignis within a furnace crafted from obsidian and netherbrick you have created a highly efficient and fuel free furnace. So efficient in fact, that occasionally it will produce bonus materials in the form of nuggets or other items.\nWhile this is essentially free, it is also very slow unless the furnace gets a new supply of Ignis essentia or vis every now and again. This can be done by any methods you have discovered so far, or still will discover.",
       "description": "Сковывая чистый Ignis в печи, построенной из обсидиана и адских кирпичей, Вы создаете очень продуктивную и бестопливную печь. По сути, эффективность заключается в дополнительных материалах, которые печь будет выдавать.\nХоть печь и \"бестопливная\", но за это придется платить маленькой скоростью переплавки, до тех пор пока она не получит порцию аспекта Ignis. Вы наверняка найдете способы снабдить печь этим аспектом, если ещё не открыли...",
@@ -13641,7 +13641,7 @@
         }
       ],
       "name_en": "Wand Focus: AE Wrench",
-      "name_ru": "",
+      "name_ru": "Wand Focus: AE Wrench",
       "description_ru": "",
       "description_en": "This wand focus interacts with blocks and machinery as if it were an AE2 wrench.\nSneak + left click: Rotate.\nSneak + right click: Dismantle.",
       "description": "This wand focus interacts with blocks and machinery as if it were an AE2 wrench.\nSneak + left click: Rotate.\nSneak + right click: Dismantle.",
@@ -13671,7 +13671,7 @@
         }
       ],
       "name_en": "Distillation Pattern Encoder",
-      "name_ru": "",
+      "name_ru": "Distillation Pattern Encoder",
       "description_ru": "",
       "description_en": "Expanding on the principals of AE's autocrafing system, you have created a way to encode the essentia distillation process onto an Encoded Pattern.\nPlacing an item into the Thaumometer slot will reveal what you know of the items composition. After selecting the preferred aspect, it can then be encoded onto the encoded pattern or an available blank pattern.",
       "description": "Expanding on the principals of AE's autocrafing system, you have created a way to encode the essentia distillation process onto an Encoded Pattern.\nPlacing an item into the Thaumometer slot will reveal what you know of the items composition. After selecting the preferred aspect, it can then be encoded onto the encoded pattern or an available blank pattern.",
@@ -13693,7 +13693,7 @@
           "text_ru": "Охота на узлы за их энергией иногда может быть утомительной. Возможно, есть другой способ получения энергии...<BR><BR>Высекая стержень из наполненной древесины, Вы создаёте жезл, который может забирать энергию из растений. Тотемный стержень содержит 50 Вис и может забирать энергию из кристаллов хлорофилла в Вашем инвентаре, чтобы получать Вис."
         }
       ],
-      "name_en": "",
+      "name_en": "Rod Totem",
       "name_ru": "Тотемный стержень",
       "description_ru": "Охота на узлы за их энергией иногда может быть утомительной. Возможно, есть другой способ получения энергии...\n\nВысекая стержень из наполненной древесины, Вы создаёте жезл, который может забирать энергию из растений. Тотемный стержень содержит 50 Вис и может забирать энергию из кристаллов хлорофилла в Вашем инвентаре, чтобы получать Вис.",
       "description_en": "",

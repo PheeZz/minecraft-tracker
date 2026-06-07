@@ -1,0 +1,1860 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 59,
+    "notes": "Alchemic Chemistry Set recipes. inputs[] consumed; amountNeeded_LP = LP per craft; minOrbTier = required blood orb level."
+  },
+  "recipes": [
+    {
+      "output": {
+        "ref": "weakBindingAgent",
+        "name_en": "Weak Binding Agent",
+        "name_ru": "Слабый связывающий реагент"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        },
+        {
+          "vanilla": "clay_ball",
+          "name_en": "Clay Ball",
+          "name_ru": "Clay Ball"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "standardBindingAgent",
+        "name_en": "Standard Binding Agent",
+        "name_ru": "Обычный связывающий реагент"
+      },
+      "amountNeeded_LP": 15,
+      "inputs": [
+        {
+          "ref": "weakBindingAgent",
+          "name_en": "Weak Binding Agent",
+          "name_ru": "Слабый связывающий реагент"
+        },
+        {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        {
+          "ref": "crystallos",
+          "name_en": "Crystallos",
+          "name_ru": "Crystallos"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "simpleCatalyst",
+        "name_en": "Simple Catalyst",
+        "name_ru": "Простой катализатор"
+      },
+      "amountNeeded_LP": 2,
+      "inputs": [
+        {
+          "vanilla": "sugar",
+          "name_en": "Sugar",
+          "name_ru": "Сахар"
+        },
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "ref": "incendium",
+        "name_en": "Incendium",
+        "name_ru": "Incendium"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "lava_bucket",
+          "name_en": "Lava Bucket",
+          "name_ru": "Ведро лавы"
+        },
+        {
+          "vanilla": "blaze_powder",
+          "name_en": "Blaze Powder",
+          "name_ru": "Огненный порошок"
+        },
+        {
+          "vanilla": "blaze_powder",
+          "name_en": "Blaze Powder",
+          "name_ru": "Огненный порошок"
+        },
+        {
+          "vanilla": "netherrack",
+          "name_en": "Netherrack",
+          "name_ru": "Адский камень"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "aether",
+        "name_en": "Aether",
+        "name_ru": "Эфир"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
+        },
+        {
+          "vanilla": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
+        },
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "vanilla": "ghast_tear",
+          "name_en": "Ghast Tear",
+          "name_ru": "Слеза Гаста"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "sanctus",
+        "name_en": "Sanctus",
+        "name_ru": "Sanctus"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "vanilla": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        },
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "crepitous",
+        "name_en": "Crepitous",
+        "name_ru": "Crepitous"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        },
+        {
+          "vanilla": "cobblestone",
+          "name_en": "Cobblestone",
+          "name_ru": "Булыжник"
+        },
+        {
+          "vanilla": "cobblestone",
+          "name_en": "Cobblestone",
+          "name_ru": "Булыжник"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "crystallos",
+        "name_en": "Crystallos",
+        "name_ru": "Crystallos"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "ice",
+          "name_en": "Ice",
+          "name_ru": "Лёд"
+        },
+        {
+          "vanilla": "ice",
+          "name_en": "Ice",
+          "name_ru": "Лёд"
+        },
+        {
+          "vanilla": "snow",
+          "name_en": "Snow",
+          "name_ru": "Снег"
+        },
+        {
+          "vanilla": "snow",
+          "name_en": "Snow",
+          "name_ru": "Снег"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "terrae",
+        "name_en": "Terrae",
+        "name_ru": "Terrae"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "dirt",
+          "name_en": "Dirt",
+          "name_ru": "Земля"
+        },
+        {
+          "vanilla": "sand",
+          "name_en": "Sand",
+          "name_ru": "Песок"
+        },
+        {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "aquasalus",
+        "name_en": "Aquasalus",
+        "name_ru": "Aquasalus"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        },
+        {
+          "vanilla": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
+        },
+        {
+          "vanilla": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
+        },
+        {
+          "vanilla": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
+        },
+        {
+          "vanilla": "potion",
+          "name_en": "Potion",
+          "name_ru": "Зелье"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "tennebrae",
+        "name_en": "Tenebrae",
+        "name_ru": "Tenebrae"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        },
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь"
+        },
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь"
+        },
+        {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        {
+          "vanilla": "clay_ball",
+          "name_en": "Clay Ball",
+          "name_ru": "Clay Ball"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "magicales",
+        "name_en": "Magicales",
+        "name_ru": "Magicales"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        },
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "ref": "mundanePowerCatalyst",
+        "name_en": "Mundane Power Catalyst",
+        "name_ru": "Земной энергетический кристал"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "ref": "weakBindingAgent",
+          "name_en": "Weak Binding Agent",
+          "name_ru": "Слабый связывающий реагент"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "mundaneLengtheningCatalyst",
+        "name_en": "Mundane Lengthening Catalyst",
+        "name_ru": "Земной удлиняющий кристал"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "ref": "weakBindingAgent",
+          "name_en": "Weak Binding Agent",
+          "name_ru": "Слабый связывающий реагент"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "averagePowerCatalyst",
+        "name_en": "Average Power Catalyst",
+        "name_ru": "Обычный энергетический кристал"
+      },
+      "amountNeeded_LP": 20,
+      "inputs": [
+        {
+          "ref": "mundanePowerCatalyst",
+          "name_en": "Mundane Power Catalyst",
+          "name_ru": "Земной энергетический кристал"
+        },
+        {
+          "ref": "mundanePowerCatalyst",
+          "name_en": "Mundane Power Catalyst",
+          "name_ru": "Земной энергетический кристал"
+        },
+        {
+          "ref": "standardBindingAgent",
+          "name_en": "Standard Binding Agent",
+          "name_ru": "Обычный связывающий реагент"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "ref": "averageLengtheningCatalyst",
+        "name_en": "Average Lengthening Catalyst",
+        "name_ru": "Обычный удлиняющий кристал"
+      },
+      "amountNeeded_LP": 20,
+      "inputs": [
+        {
+          "ref": "mundaneLengtheningCatalyst",
+          "name_en": "Mundane Lengthening Catalyst",
+          "name_ru": "Земной удлиняющий кристал"
+        },
+        {
+          "ref": "mundaneLengtheningCatalyst",
+          "name_en": "Mundane Lengthening Catalyst",
+          "name_ru": "Земной удлиняющий кристал"
+        },
+        {
+          "ref": "standardBindingAgent",
+          "name_en": "Standard Binding Agent",
+          "name_ru": "Обычный связывающий реагент"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "ref": "greaterPowerCatalyst",
+        "name_en": "Greater Power Catalyst",
+        "name_ru": "Большой энергетический кристал"
+      },
+      "amountNeeded_LP": 30,
+      "inputs": [
+        {
+          "ref": "averagePowerCatalyst",
+          "name_en": "Average Power Catalyst",
+          "name_ru": "Обычный энергетический кристал"
+        },
+        {
+          "ref": "averagePowerCatalyst",
+          "name_en": "Average Power Catalyst",
+          "name_ru": "Обычный энергетический кристал"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "ref": "greaterLengtheningCatalyst",
+        "name_en": "Greater Lengthening Catalyst",
+        "name_ru": "Большой удлиняющий кристал"
+      },
+      "amountNeeded_LP": 30,
+      "inputs": [
+        {
+          "ref": "averageLengtheningCatalyst",
+          "name_en": "Average Lengthening Catalyst",
+          "name_ru": "Обычный удлиняющий кристал"
+        },
+        {
+          "ref": "averageLengtheningCatalyst",
+          "name_en": "Average Lengthening Catalyst",
+          "name_ru": "Обычный удлиняющий кристал"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "ref": "weakFillingAgent",
+        "name_en": "Weak Filling Agent",
+        "name_ru": "Слабый заполняющий реагент"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        },
+        {
+          "vanilla": "nether_wart",
+          "name_en": "Nether Wart",
+          "name_ru": "Адский нарост"
+        },
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "standardFillingAgent",
+        "name_en": "Standard Filling Agent",
+        "name_ru": "Обычный заполняющий реагент"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "ref": "weakFillingAgent",
+          "name_en": "Weak Filling Agent",
+          "name_ru": "Слабый заполняющий реагент"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "enhancedFillingAgent",
+        "name_en": "Enhanced Filling Agent",
+        "name_ru": "Улучшенный заполняющий реагент"
+      },
+      "amountNeeded_LP": 25,
+      "inputs": [
+        {
+          "ref": "standardFillingAgent",
+          "name_en": "Standard Filling Agent",
+          "name_ru": "Обычный заполняющий реагент"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "magicales",
+          "name_en": "Magicales",
+          "name_ru": "Magicales"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "ref": "activationCrystal",
+        "meta": 1,
+        "name_en": "Awakened Activation Crystal",
+        "name_ru": "Пробуждённый кристал активации"
+      },
+      "amountNeeded_LP": 100,
+      "inputs": [
+        {
+          "ref": "activationCrystal",
+          "meta": 0,
+          "name_en": "Weak Activation Crystal",
+          "name_ru": "Слабый кристал активации"
+        },
+        {
+          "ref": "demonBloodShard",
+          "name_en": "Demon Blood Shard",
+          "name_ru": "Осколок крови демона"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "ref": "activationCrystal",
+        "meta": 1,
+        "name_en": "Awakened Activation Crystal",
+        "name_ru": "Пробуждённый кристал активации"
+      },
+      "amountNeeded_LP": 100,
+      "inputs": [
+        {
+          "ref": "activationCrystal",
+          "meta": 0,
+          "name_en": "Weak Activation Crystal",
+          "name_ru": "Слабый кристал активации"
+        },
+        {
+          "vanilla": "nether_star",
+          "name_en": "Nether Star",
+          "name_ru": "Адская звезда"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        },
+        {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "vanilla": "web",
+        "name_en": "Cobweb",
+        "name_ru": "Паутина"
+      },
+      "amountNeeded_LP": 2,
+      "inputs": [
+        {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        },
+        {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        },
+        {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        },
+        {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        },
+        {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "gunpowder",
+        "name_en": "Gunpowder",
+        "name_ru": "Порох"
+      },
+      "amountNeeded_LP": 2,
+      "inputs": [
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        },
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь"
+        },
+        {
+          "vanilla": "sand",
+          "name_en": "Sand",
+          "name_ru": "Песок"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 3,
+        "reg": "StrengthenedCatalyst",
+        "name_en": "Strengthened Catalyst",
+        "name_ru": "Усиленный катализатор"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        },
+        {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        },
+        {
+          "vanilla": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye",
+          "meta": 15
+        },
+        {
+          "vanilla": "nether_wart",
+          "name_en": "Nether Wart",
+          "name_ru": "Адский нарост"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 0,
+        "reg": "Offensa",
+        "name_en": "Offensa",
+        "name_ru": "Offensa"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "vanilla": "arrow",
+          "name_en": "Arrow",
+          "name_ru": "Стрела"
+        },
+        {
+          "vanilla": "flint",
+          "name_en": "Flint",
+          "name_ru": "Кремень"
+        },
+        {
+          "vanilla": "arrow",
+          "name_en": "Arrow",
+          "name_ru": "Стрела"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 1,
+        "reg": "Praesidium",
+        "name_en": "Praesidium",
+        "name_ru": "Praesidium"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        {
+          "ref": "tennebrae",
+          "name_en": "Tenebrae",
+          "name_ru": "Tenebrae"
+        },
+        {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        {
+          "vanilla": "web",
+          "name_en": "Cobweb",
+          "name_ru": "Паутина"
+        },
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 2,
+        "reg": "OrbisTerrae",
+        "name_en": "Orbis Terrae",
+        "name_ru": "Orbis Terrae"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        },
+        {
+          "vanilla": "netherrack",
+          "name_en": "Netherrack",
+          "name_ru": "Адский камень"
+        },
+        {
+          "vanilla": "sand",
+          "name_en": "Sand",
+          "name_ru": "Песок"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 4,
+        "reg": "ConcentratedCatalyst",
+        "name_en": "Concentrated Catalyst",
+        "name_ru": "Концентрированный катализатор"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 5,
+          "reg": "FracturedBone",
+          "name_en": "Fractured Bone",
+          "name_ru": "Сломанная кость"
+        },
+        {
+          "vanilla": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 5,
+        "reg": "FracturedBone",
+        "name_en": "Fractured Bone",
+        "name_ru": "Сломанная кость"
+      },
+      "amountNeeded_LP": 2,
+      "inputs": [
+        {
+          "vanilla": "bone",
+          "name_en": "Bone",
+          "name_ru": "Кость"
+        },
+        {
+          "vanilla": "bone",
+          "name_en": "Bone",
+          "name_ru": "Кость"
+        },
+        {
+          "vanilla": "bone",
+          "name_en": "Bone",
+          "name_ru": "Кость"
+        },
+        {
+          "vanilla": "bone",
+          "name_en": "Bone",
+          "name_ru": "Кость"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 6,
+        "reg": "Virtus",
+        "name_en": "Virtus",
+        "name_ru": "Virtus"
+      },
+      "amountNeeded_LP": 20,
+      "inputs": [
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь"
+        },
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 7,
+        "reg": "Reductus",
+        "name_en": "Reductus",
+        "name_ru": "Reductus"
+      },
+      "amountNeeded_LP": 20,
+      "inputs": [
+        {
+          "vanilla": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
+        },
+        {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        {
+          "vanilla": "soul_sand",
+          "name_en": "Soul Sand",
+          "name_ru": "Песок душ"
+        },
+        {
+          "vanilla": "carrot",
+          "name_en": "Carrot",
+          "name_ru": "Морковь"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "baseAlchemyItems",
+        "meta": 8,
+        "reg": "Potentia",
+        "name_en": "Potentia",
+        "name_ru": "Potentia"
+      },
+      "amountNeeded_LP": 20,
+      "inputs": [
+        {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        {
+          "vanilla": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye",
+          "meta": 4
+        },
+        {
+          "vanilla": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye",
+          "meta": 4
+        },
+        {
+          "vanilla": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "baseItems",
+        "meta": 15,
+        "reg": "CrackedRunicPlate",
+        "name_en": "Cracked Runic Plate",
+        "name_ru": "Сломанная руническая пластина"
+      },
+      "amountNeeded_LP": 10,
+      "inputs": [
+        {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        },
+        {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        },
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 4,
+          "reg": "ConcentratedCatalyst",
+          "name_en": "Concentrated Catalyst",
+          "name_ru": "Концентрированный катализатор"
+        }
+      ],
+      "minOrbTier": 4
+    },
+    {
+      "output": {
+        "ref": "baseItems",
+        "meta": 16,
+        "reg": "RunicPlate",
+        "name_en": "Runic Plate",
+        "name_ru": "Руническая пластина"
+      },
+      "amountNeeded_LP": 30,
+      "inputs": [
+        {
+          "ref": "baseItems",
+          "meta": 15,
+          "reg": "CrackedRunicPlate",
+          "name_en": "Cracked Runic Plate",
+          "name_ru": "Сломанная руническая пластина"
+        },
+        {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        }
+      ],
+      "minOrbTier": 5
+    },
+    {
+      "output": {
+        "ref": "baseItems",
+        "meta": 17,
+        "reg": "ScribedRunicPlate",
+        "name_en": "Imbued Runic Plate",
+        "name_ru": "Пропитанная руническая пластина"
+      },
+      "amountNeeded_LP": 100,
+      "inputs": [
+        {
+          "ref": "magicales",
+          "name_en": "Magicales",
+          "name_ru": "Magicales"
+        },
+        {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        {
+          "ref": "baseItems",
+          "meta": 16,
+          "reg": "RunicPlate",
+          "name_en": "Runic Plate",
+          "name_ru": "Руническая пластина"
+        },
+        {
+          "ref": "baseItems",
+          "meta": 16,
+          "reg": "RunicPlate",
+          "name_en": "Runic Plate",
+          "name_ru": "Руническая пластина"
+        },
+        {
+          "ref": "aquasalus",
+          "name_en": "Aquasalus",
+          "name_ru": "Aquasalus"
+        }
+      ],
+      "minOrbTier": 5
+    },
+    {
+      "output": {
+        "ref": "itemComplexSpellCrystal",
+        "name_en": "Complex Spell Crystal",
+        "name_ru": "Сложный кристал заклинаний"
+      },
+      "amountNeeded_LP": 50,
+      "inputs": [
+        {
+          "ref": "blankSpell",
+          "name_en": "Unbound Crystal",
+          "name_ru": "Кристал отвязывания"
+        },
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "ref": "baseItems",
+        "meta": 30,
+        "reg": "SoulRunicPlate",
+        "name_en": "Soul Runic Plate",
+        "name_ru": "Руническая пластина души"
+      },
+      "amountNeeded_LP": 150,
+      "inputs": [
+        {
+          "ref": "baseItems",
+          "meta": 17,
+          "reg": "ScribedRunicPlate",
+          "name_en": "Imbued Runic Plate",
+          "name_ru": "Пропитанная руническая пластина"
+        },
+        {
+          "ref": "baseItems",
+          "meta": 29,
+          "reg": "SoulShard",
+          "name_en": "Soul Shard",
+          "name_ru": "Осколок души"
+        },
+        {
+          "ref": "baseItems",
+          "meta": 29,
+          "reg": "SoulShard",
+          "name_en": "Soul Shard",
+          "name_ru": "Осколок души"
+        },
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        }
+      ],
+      "minOrbTier": 6
+    },
+    {
+      "output": {
+        "vanilla": "flint",
+        "name_en": "Flint",
+        "name_ru": "Кремень"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "gravel",
+          "name_en": "Gravel",
+          "name_ru": "Гравий"
+        },
+        {
+          "vanilla": "flint",
+          "name_en": "Flint",
+          "name_ru": "Кремень"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "grass",
+        "name_en": "Grass Block",
+        "name_ru": "Блок травы"
+      },
+      "amountNeeded_LP": 2,
+      "inputs": [
+        {
+          "vanilla": "dirt",
+          "name_en": "Dirt",
+          "name_ru": "Земля"
+        },
+        {
+          "vanilla": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye",
+          "meta": 15
+        },
+        {
+          "vanilla": "wheat_seeds",
+          "name_en": "Wheat Seeds",
+          "name_ru": "Wheat Seeds"
+        },
+        {
+          "vanilla": "wheat_seeds",
+          "name_en": "Wheat Seeds",
+          "name_ru": "Wheat Seeds"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "leather",
+        "name_en": "Leather",
+        "name_ru": "Кожа"
+      },
+      "amountNeeded_LP": 2,
+      "inputs": [
+        {
+          "vanilla": "rotten_flesh",
+          "name_en": "Rotten Flesh",
+          "name_ru": "Гнилая плоть"
+        },
+        {
+          "vanilla": "rotten_flesh",
+          "name_en": "Rotten Flesh",
+          "name_ru": "Гнилая плоть"
+        },
+        {
+          "vanilla": "rotten_flesh",
+          "name_en": "Rotten Flesh",
+          "name_ru": "Гнилая плоть"
+        },
+        {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        },
+        {
+          "vanilla": "flint",
+          "name_en": "Flint",
+          "name_ru": "Кремень"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "bread",
+        "name_en": "Bread",
+        "name_ru": "Хлеб"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "wheat",
+          "name_en": "Wheat",
+          "name_ru": "Пшеница"
+        },
+        {
+          "vanilla": "sugar",
+          "name_en": "Sugar",
+          "name_ru": "Сахар"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "fire_charge",
+        "name_en": "Fire Charge",
+        "name_ru": "Огненный шар"
+      },
+      "amountNeeded_LP": 3,
+      "inputs": [
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь"
+        },
+        {
+          "vanilla": "blaze_powder",
+          "name_en": "Blaze Powder",
+          "name_ru": "Огненный порошок"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "sand",
+        "name_en": "Sand",
+        "name_ru": "Песок"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "cobblestone",
+          "name_en": "Cobblestone",
+          "name_ru": "Булыжник"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "clay",
+        "name_en": "Clay",
+        "name_ru": "Глина"
+      },
+      "amountNeeded_LP": 2,
+      "inputs": [
+        {
+          "vanilla": "hardened_clay",
+          "name_en": "Hardened Clay",
+          "name_ru": "Обожжёная глина"
+        },
+        {
+          "vanilla": "hardened_clay",
+          "name_en": "Hardened Clay",
+          "name_ru": "Обожжёная глина"
+        },
+        {
+          "vanilla": "hardened_clay",
+          "name_en": "Hardened Clay",
+          "name_ru": "Обожжёная глина"
+        },
+        {
+          "vanilla": "hardened_clay",
+          "name_en": "Hardened Clay",
+          "name_ru": "Обожжёная глина"
+        },
+        {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "string",
+        "name_en": "String",
+        "name_ru": "Нить"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "wool",
+          "name_en": "Wool",
+          "name_ru": "Шерсть"
+        },
+        {
+          "vanilla": "flint",
+          "name_en": "Flint",
+          "name_ru": "Кремень"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "gravel",
+        "name_en": "Gravel",
+        "name_ru": "Гравий"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        {
+          "vanilla": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "obsidian",
+        "name_en": "Obsidian",
+        "name_ru": "Обсидиан"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        },
+        {
+          "vanilla": "lava_bucket",
+          "name_en": "Lava Bucket",
+          "name_ru": "Ведро лавы"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "paper",
+        "name_en": "Paper",
+        "name_ru": "Бумага"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "reeds",
+          "name_en": "Sugar Canes",
+          "name_ru": "Сахарный тростник"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "soul_sand",
+        "name_en": "Soul Sand",
+        "name_ru": "Песок душ"
+      },
+      "amountNeeded_LP": 3,
+      "inputs": [
+        {
+          "vanilla": "sand",
+          "name_en": "Sand",
+          "name_ru": "Песок"
+        },
+        {
+          "vanilla": "sand",
+          "name_en": "Sand",
+          "name_ru": "Песок"
+        },
+        {
+          "vanilla": "sand",
+          "name_en": "Sand",
+          "name_ru": "Песок"
+        },
+        {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        },
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      ],
+      "minOrbTier": 3
+    },
+    {
+      "output": {
+        "vanilla": "mycelium",
+        "name_en": "Mycelium",
+        "name_ru": "Мицелий"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "grass",
+          "name_en": "Grass Block",
+          "name_ru": "Блок травы"
+        },
+        {
+          "vanilla": "brown_mushroom",
+          "name_en": "Brown Mushroom",
+          "name_ru": "Brown Mushroom"
+        },
+        {
+          "vanilla": "red_mushroom",
+          "name_en": "Red Mushroom",
+          "name_ru": "Red Mushroom"
+        }
+      ],
+      "minOrbTier": 2
+    },
+    {
+      "output": {
+        "vanilla": "ice",
+        "name_en": "Ice",
+        "name_ru": "Лёд"
+      },
+      "amountNeeded_LP": 2,
+      "inputs": [
+        {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        },
+        {
+          "vanilla": "snowball",
+          "name_en": "Snowball",
+          "name_ru": "Снежок"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "potion",
+        "name_en": "Potion",
+        "name_ru": "Зелье"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "glass_bottle",
+          "name_en": "Glass Bottle",
+          "name_ru": "Пузырёк"
+        },
+        {
+          "vanilla": "cactus",
+          "name_en": "Cactus",
+          "name_ru": "Кактус"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "water_bucket",
+        "name_en": "Water Bucket",
+        "name_ru": "Ведро воды"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        },
+        {
+          "vanilla": "cactus",
+          "name_en": "Cactus",
+          "name_ru": "Кактус"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "glass_bottle",
+        "name_en": "Glass Bottle",
+        "name_ru": "Пузырёк"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "ghast_tear",
+        "name_en": "Ghast Tear",
+        "name_ru": "Слеза Гаста"
+      },
+      "amountNeeded_LP": 100,
+      "inputs": [
+        {
+          "vanilla": "ghast_tear",
+          "name_en": "Ghast Tear",
+          "name_ru": "Слеза Гаста"
+        },
+        {
+          "ref": "baseAlchemyItems",
+          "meta": 4,
+          "reg": "ConcentratedCatalyst",
+          "name_en": "Concentrated Catalyst",
+          "name_ru": "Концентрированный катализатор"
+        },
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        {
+          "vanilla": "soul_sand",
+          "name_en": "Soul Sand",
+          "name_ru": "Песок душ"
+        },
+        {
+          "vanilla": "soul_sand",
+          "name_en": "Soul Sand",
+          "name_ru": "Песок душ"
+        }
+      ],
+      "minOrbTier": 5
+    },
+    {
+      "output": {
+        "vanilla": "coal",
+        "name_en": "Coal",
+        "name_ru": "Уголь"
+      },
+      "amountNeeded_LP": 1,
+      "inputs": [
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь",
+          "meta": 1
+        },
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь",
+          "meta": 1
+        },
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь",
+          "meta": 1
+        },
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь",
+          "meta": 1
+        },
+        {
+          "vanilla": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь",
+          "meta": 1
+        }
+      ],
+      "minOrbTier": 1
+    },
+    {
+      "output": {
+        "vanilla": "clay_ball",
+        "name_en": "Clay Ball",
+        "name_ru": "Clay Ball"
+      },
+      "amountNeeded_LP": 5,
+      "inputs": [
+        {
+          "vanilla": "sand",
+          "name_en": "Sand",
+          "name_ru": "Песок"
+        },
+        {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        }
+      ],
+      "minOrbTier": 2
+    }
+  ]
+}
