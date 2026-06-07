@@ -203,6 +203,31 @@ for dec in DECDIRS:
         for m in re.finditer(r'addWarpToItem\(\s*(?:\(ItemStack\)\s*)?(new ItemStack\([^;]*?\)|\w[\w.]*)\s*,\s*(?:\(int\)\s*)?(\d+)\s*\)',t):
             warp_items.append({"item":resolve_item(m.group(1)),"warp":int(m.group(2)),"mod":MODNAME[dec]})
 
+# ---- infernal furnace smelting bonus + loot bags
+smelting=[]; loot=[]
+LOOTBAG={0:"common",1:"uncommon",2:"rare"}
+for dec in DECDIRS:
+    for jf in glob.glob(os.path.join(DEC,dec,"**","*.java"),recursive=True):
+        try: t=open(jf,encoding="utf-8",errors="replace").read()
+        except: continue
+        for m in re.finditer(r'addSmeltingBonus\(\s*((?:new ItemStack\([^)]*\))|"[^"]+")\s*,\s*((?:new ItemStack\([^)]*\))|"[^"]+")',t):
+            smelting.append({"input":resolve_item(m.group(1)),"output":resolve_item(m.group(2)),"mod":MODNAME[dec]})
+        for m in re.finditer(r'addLootBagItem\(\s*(new ItemStack\([^)]*\))\s*,\s*(\d+)\s*((?:,\s*\d+\s*)*)\)',t):
+            bags=[int(x) for x in re.findall(r'\d+',m.group(3))]
+            loot.append({"item":resolve_item(m.group(1)),"weight":int(m.group(2)),
+                         "rarities":[LOOTBAG.get(b,b) for b in bags],"mod":MODNAME[dec]})
+import collections as _c
+json.dump({"_meta":{"server":"LoliLand","generated":"2026-06-07","count":len(smelting),
+                    "notes":"Infernal Furnace bonus drops: smelting `input` (ore/item) yields a chance of bonus `output`."},
+           "smeltingBonus":smelting},
+          open(os.path.join(PROJ,"thaumcraft","data-src","smelting-bonus.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=2)
+json.dump({"_meta":{"server":"LoliLand","generated":"2026-06-07","count":len(loot),
+                    "rarityLevels":LOOTBAG,
+                    "notes":"Eldritch loot bag contents. weight = relative drop weight; rarities = which bag tiers (common/uncommon/rare) contain it."},
+           "lootBags":loot},
+          open(os.path.join(PROJ,"thaumcraft","data-src","loot-bags.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=2)
+print("smelting bonus:",len(smelting),"| loot bag items:",len(loot))
+
 by_type=collections.Counter(r["type"] for r in recipes)
 by_mod=collections.Counter(r["mod"] for r in recipes)
 named=sum(1 for r in recipes if r.get("output",{}) and ("name_en" in (r["output"] or {})))

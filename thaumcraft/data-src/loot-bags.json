@@ -1,0 +1,373 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 27,
+    "rarityLevels": {
+      "0": "common",
+      "1": "uncommon",
+      "2": "rare"
+    },
+    "notes": "Eldritch loot bag contents. weight = relative drop weight; rarities = which bag tiers (common/uncommon/rare) contain it."
+  },
+  "lootBags": [
+    {
+      "item": {
+        "ref": "itemResource",
+        "meta": 18,
+        "name_en": "Gold Coin",
+        "name_ru": "Золотая монета"
+      },
+      "weight": 2500,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemResource",
+        "meta": 18,
+        "name_en": "Gold Coin",
+        "name_ru": "Золотая монета"
+      },
+      "weight": 2250,
+      "rarities": [
+        "uncommon"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemResource",
+        "meta": 18,
+        "name_en": "Gold Coin",
+        "name_ru": "Золотая монета"
+      },
+      "weight": 2000,
+      "rarities": [
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemEldritchObject",
+        "meta": 3,
+        "name_en": "Primordial Pearl",
+        "name_ru": "Сингулярная жемчужина"
+      },
+      "weight": 1,
+      "rarities": [
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151045_i",
+        "reg": "diamond",
+        "name_en": "Diamond",
+        "name_ru": "Алмаз"
+      },
+      "weight": 10,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151045_i",
+        "reg": "diamond",
+        "name_en": "Diamond",
+        "name_ru": "Алмаз"
+      },
+      "weight": 50,
+      "rarities": [
+        "uncommon",
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151166_bC",
+        "reg": "emerald",
+        "name_en": "Emerald",
+        "name_ru": "Изумруд"
+      },
+      "weight": 15,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151166_bC",
+        "reg": "emerald",
+        "name_en": "Emerald",
+        "name_ru": "Изумруд"
+      },
+      "weight": 75,
+      "rarities": [
+        "uncommon",
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151043_k",
+        "reg": "gold_ingot",
+        "name_en": "Gold Ingot",
+        "name_ru": "Золотой слиток"
+      },
+      "weight": 100,
+      "rarities": [
+        "common",
+        "uncommon",
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151079_bi",
+        "reg": "ender_pearl",
+        "name_en": "Ender Pearl",
+        "name_ru": "Жемчуг Эндера"
+      },
+      "weight": 100,
+      "rarities": [
+        "common",
+        "uncommon",
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemResource",
+        "meta": 9,
+        "name_en": "Knowledge Fragment",
+        "name_ru": "Фрагмент знаний"
+      },
+      "weight": 25,
+      "rarities": [
+        "common",
+        "uncommon",
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemBaubleBlanks",
+        "meta": 0,
+        "name_en": "Mundane Amulet",
+        "name_ru": "Обычный амулет"
+      },
+      "weight": 10,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemBaubleBlanks",
+        "meta": 1,
+        "name_en": "Mundane Ring",
+        "name_ru": "Обычное кольцо"
+      },
+      "weight": 10,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemBaubleBlanks",
+        "meta": 2,
+        "name_en": "Mundane Belt",
+        "name_ru": "Обычный пояс"
+      },
+      "weight": 10,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemBaubleBlanks",
+        "meta": null
+      },
+      "weight": 5,
+      "rarities": [
+        "uncommon"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemBaubleBlanks",
+        "meta": null
+      },
+      "weight": 7,
+      "rarities": [
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "ref": "itemRingRunic",
+        "meta": 0,
+        "name_en": "Ring of Protection",
+        "name_ru": "Кольцо защиты"
+      },
+      "weight": 5,
+      "rarities": [
+        "uncommon",
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151062_by",
+        "reg": "experience_bottle",
+        "name_en": "Experience Bottle",
+        "name_ru": "Experience Bottle"
+      },
+      "weight": 5,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151062_by",
+        "reg": "experience_bottle",
+        "name_en": "Experience Bottle",
+        "name_ru": "Experience Bottle"
+      },
+      "weight": 10,
+      "rarities": [
+        "uncommon"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151062_by",
+        "reg": "experience_bottle",
+        "name_en": "Experience Bottle",
+        "name_ru": "Experience Bottle"
+      },
+      "weight": 20,
+      "rarities": [
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151153_ao",
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
+      },
+      "weight": 1,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151153_ao",
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
+      },
+      "weight": 2,
+      "rarities": [
+        "uncommon"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151153_ao",
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
+      },
+      "weight": 3,
+      "rarities": [
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151153_ao",
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
+      },
+      "weight": 3,
+      "rarities": [
+        "common"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151153_ao",
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
+      },
+      "weight": 6,
+      "rarities": [
+        "uncommon"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151153_ao",
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
+      },
+      "weight": 9,
+      "rarities": [
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    },
+    {
+      "item": {
+        "vanilla": "field_151122_aG",
+        "reg": "book",
+        "name_en": "Book",
+        "name_ru": "Книга"
+      },
+      "weight": 10,
+      "rarities": [
+        "common",
+        "uncommon",
+        "rare"
+      ],
+      "mod": "Thaumcraft"
+    }
+  ]
+}
