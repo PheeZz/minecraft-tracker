@@ -115,7 +115,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150322_A",
-        "meta": null
+        "meta": null,
+        "reg": "sandstone",
+        "name_en": "Sandstone",
+        "name_ru": "Песчаник"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -127,7 +130,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150440_ba",
-        "meta": null
+        "meta": null,
+        "reg": "melon_block",
+        "name_en": "Melon Block",
+        "name_ru": "Melon Block"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -139,7 +145,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151121_aF",
-        "meta": null
+        "meta": null,
+        "reg": "paper",
+        "name_en": "Paper",
+        "name_ru": "Бумага"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -151,7 +160,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151122_aG",
-        "meta": null
+        "meta": null,
+        "reg": "book",
+        "name_en": "Book",
+        "name_ru": "Книга"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -163,7 +175,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150342_X",
-        "meta": null
+        "meta": null,
+        "reg": "bookshelf",
+        "name_en": "Bookshelf",
+        "name_ru": "Книжная полка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -175,7 +190,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151061_bv",
-        "meta": null
+        "meta": null,
+        "reg": "ender_eye",
+        "name_en": "Ender Eye",
+        "name_ru": "Ender Eye"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -187,7 +205,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151032_g",
-        "meta": null
+        "meta": null,
+        "reg": "arrow",
+        "name_en": "Arrow",
+        "name_ru": "Стрела"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -199,7 +220,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151069_bo",
-        "meta": null
+        "meta": null,
+        "reg": "glass_bottle",
+        "name_en": "Glass Bottle",
+        "name_ru": "Пузырёк"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -211,7 +235,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150486_ae",
-        "meta": null
+        "meta": null,
+        "reg": "chest",
+        "name_en": "Chest",
+        "name_ru": "Сундук"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -223,7 +250,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151153_ao",
-        "meta": 0
+        "meta": 0,
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -236,7 +266,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151153_ao",
-        "meta": 1
+        "meta": 1,
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -249,7 +282,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151054_z",
-        "meta": null
+        "meta": null,
+        "reg": "bowl",
+        "name_en": "Bowl",
+        "name_ru": "Миска"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -261,7 +297,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151009_A",
-        "meta": null
+        "meta": null,
+        "reg": "mushroom_stew",
+        "name_en": "Mushroom Stew",
+        "name_ru": "Тушеные грибы"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -273,7 +312,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151143_au",
-        "meta": null
+        "meta": null,
+        "reg": "minecart",
+        "name_en": "Minecart",
+        "name_ru": "Вагонетка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -286,7 +328,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151139_aw",
-        "meta": null
+        "meta": null,
+        "reg": "iron_door",
+        "name_en": "Iron Door",
+        "name_ru": "Железная дверь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -299,7 +344,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151135_aq",
-        "meta": null
+        "meta": null,
+        "reg": "wooden_door",
+        "name_en": "Wooden Door",
+        "name_ru": "Деревянная дверь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -312,7 +360,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151124_az",
-        "meta": null
+        "meta": null,
+        "reg": "boat",
+        "name_en": "Boat",
+        "name_ru": "Лодка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -325,7 +376,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151033_d",
-        "meta": null
+        "meta": null,
+        "reg": "flint_and_steel",
+        "name_en": "Flint And Steel",
+        "name_ru": "Flint And Steel"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -337,7 +391,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151112_aM",
-        "meta": null
+        "meta": null,
+        "reg": "fishing_rod",
+        "name_en": "Fishing Rod",
+        "name_ru": "Удочка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -350,7 +407,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151067_bt",
-        "meta": null
+        "meta": null,
+        "reg": "brewing_stand",
+        "name_en": "Brewing Stand",
+        "name_ru": "Варочная стойка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -363,7 +423,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150430_aB",
-        "meta": null
+        "meta": null,
+        "reg": "stone_button",
+        "name_en": "Stone Button",
+        "name_ru": "Stone Button"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -375,7 +438,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150448_aq",
-        "meta": null
+        "meta": null,
+        "reg": "rail",
+        "name_en": "Rail",
+        "name_ru": "Рельсы"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -388,7 +454,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150319_E",
-        "meta": null
+        "meta": null,
+        "reg": "detector_rail",
+        "name_en": "Detector Rail",
+        "name_ru": "Рельсы с датчиком"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -401,7 +470,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150318_D",
-        "meta": null
+        "meta": null,
+        "reg": "golden_rail",
+        "name_en": "Golden Rail",
+        "name_ru": "Golden Rail"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -414,7 +486,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150408_cc",
-        "meta": null
+        "meta": null,
+        "reg": "activator_rail",
+        "name_en": "Activator Rail",
+        "name_ru": "Активирующие рельсы"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -426,7 +501,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150396_be",
-        "meta": null
+        "meta": null,
+        "reg": "fence_gate",
+        "name_en": "Fence Gate",
+        "name_ru": "Калитка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -439,7 +517,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150452_aw",
-        "meta": null
+        "meta": null,
+        "reg": "wooden_pressure_plate",
+        "name_en": "Wooden Pressure Plate",
+        "name_ru": "Wooden Pressure Plate"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -452,7 +533,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150456_au",
-        "meta": null
+        "meta": null,
+        "reg": "stone_pressure_plate",
+        "name_en": "Stone Pressure Plate",
+        "name_ru": "Stone Pressure Plate"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -465,7 +549,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150445_bS",
-        "meta": null
+        "meta": null,
+        "reg": "light_weighted_pressure_plate",
+        "name_en": "Light Weighted Pressure Plate",
+        "name_ru": "Light Weighted Pressure Plate"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -478,7 +565,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150443_bT",
-        "meta": null
+        "meta": null,
+        "reg": "heavy_weighted_pressure_plate",
+        "name_en": "Heavy Weighted Pressure Plate",
+        "name_ru": "Heavy Weighted Pressure Plate"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -491,7 +581,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150442_at",
-        "meta": null
+        "meta": null,
+        "reg": "lever",
+        "name_en": "Lever",
+        "name_ru": "Рычаг"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -503,7 +596,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150429_aA",
-        "meta": null
+        "meta": null,
+        "reg": "redstone_torch",
+        "name_en": "Redstone Torch",
+        "name_ru": "Красный факел"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -515,7 +611,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150331_J",
-        "meta": null
+        "meta": null,
+        "reg": "piston",
+        "name_en": "Piston",
+        "name_ru": "Поршень"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -528,7 +627,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150320_F",
-        "meta": null
+        "meta": null,
+        "reg": "sticky_piston",
+        "name_en": "Sticky Piston",
+        "name_ru": "Липкий поршень"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -541,7 +643,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150421_aI",
-        "meta": null
+        "meta": null,
+        "reg": "jukebox",
+        "name_en": "Jukebox",
+        "name_ru": "Проигрыватель"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -555,7 +660,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150323_B",
-        "meta": null
+        "meta": null,
+        "reg": "noteblock",
+        "name_en": "Noteblock",
+        "name_ru": "Noteblock"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -569,7 +677,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150415_aT",
-        "meta": null
+        "meta": null,
+        "reg": "trapdoor",
+        "name_en": "Trapdoor",
+        "name_ru": "Люк"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -581,7 +692,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150470_am",
-        "meta": null
+        "meta": null,
+        "reg": "lit_furnace",
+        "name_en": "Lit Furnace",
+        "name_ru": "Lit Furnace"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -593,7 +707,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150460_al",
-        "meta": null
+        "meta": null,
+        "reg": "furnace",
+        "name_en": "Furnace",
+        "name_ru": "Печь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -605,7 +722,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150381_bn",
-        "meta": null
+        "meta": null,
+        "reg": "enchanting_table",
+        "name_en": "Enchanting Table",
+        "name_ru": "Enchanting Table"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -618,7 +738,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151113_aN",
-        "meta": null
+        "meta": null,
+        "reg": "clock",
+        "name_en": "Clock",
+        "name_ru": "Часы"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -630,7 +753,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150461_bJ",
-        "meta": null
+        "meta": null,
+        "reg": "beacon",
+        "name_en": "Beacon",
+        "name_ru": "Маяк"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -644,7 +770,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150471_bO",
-        "meta": null
+        "meta": null,
+        "reg": "wooden_button",
+        "name_en": "Wooden Button",
+        "name_ru": "Wooden Button"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -656,7 +785,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151146_bM",
-        "meta": null
+        "meta": null,
+        "reg": "carrot_on_a_stick",
+        "name_en": "Carrot On A Stick",
+        "name_ru": "Carrot On A Stick"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -668,7 +800,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151162_bE",
-        "meta": null
+        "meta": null,
+        "reg": "flower_pot",
+        "name_en": "Flower Pot",
+        "name_ru": "Цветочный горшок"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -681,7 +816,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151150_bK",
-        "meta": null
+        "meta": null,
+        "reg": "golden_carrot",
+        "name_en": "Golden Carrot",
+        "name_ru": "Золотая морковь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -693,7 +831,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150477_bB",
-        "meta": null
+        "meta": null,
+        "reg": "ender_chest",
+        "name_en": "Ender Chest",
+        "name_ru": "Сундук Эндера"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -707,7 +848,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150438_bZ",
-        "meta": null
+        "meta": null,
+        "reg": "hopper",
+        "name_en": "Hopper",
+        "name_ru": "Воронка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -721,7 +865,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150409_cd",
-        "meta": null
+        "meta": null,
+        "reg": "dropper",
+        "name_en": "Dropper",
+        "name_ru": "Выбрасыватель"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -735,7 +882,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150367_z",
-        "meta": null
+        "meta": null,
+        "reg": "dispenser",
+        "name_en": "Dispenser",
+        "name_ru": "Раздатчик"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -749,7 +899,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150453_bW",
-        "meta": null
+        "meta": null,
+        "reg": "daylight_detector",
+        "name_en": "Daylight Detector",
+        "name_ru": "Daylight Detector"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -989,7 +1142,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150439_ay",
-        "meta": null
+        "meta": null,
+        "reg": "lit_redstone_ore",
+        "name_en": "Lit Redstone Ore",
+        "name_ru": "Lit Redstone Ore"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1040,7 +1196,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151074_bl",
-        "meta": null
+        "meta": null,
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1087,7 +1246,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151042_j",
-        "meta": null
+        "meta": null,
+        "reg": "iron_ingot",
+        "name_en": "Iron Ingot",
+        "name_ru": "Железный слиток"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1125,7 +1287,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151043_k",
-        "meta": null
+        "meta": null,
+        "reg": "gold_ingot",
+        "name_en": "Gold Ingot",
+        "name_ru": "Золотой слиток"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1138,7 +1303,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150365_q",
-        "meta": null
+        "meta": null,
+        "reg": "coal_ore",
+        "name_en": "Coal Ore",
+        "name_ru": "Уголь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1152,7 +1320,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151044_h",
-        "meta": null
+        "meta": null,
+        "reg": "coal",
+        "name_en": "Coal",
+        "name_ru": "Уголь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1464,7 +1635,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150357_h",
-        "meta": null
+        "meta": null,
+        "reg": "bedrock",
+        "name_en": "Bedrock",
+        "name_ru": "Бедрок"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1479,7 +1653,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150346_d",
-        "meta": null
+        "meta": null,
+        "reg": "dirt",
+        "name_en": "Dirt",
+        "name_ru": "Земля"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1491,7 +1668,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150346_d",
-        "meta": 2
+        "meta": 2,
+        "reg": "dirt",
+        "name_en": "Dirt",
+        "name_ru": "Земля"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1504,7 +1684,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150458_ak",
-        "meta": null
+        "meta": null,
+        "reg": "farmland",
+        "name_en": "Farmland",
+        "name_ru": "Пашня"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1517,7 +1700,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150354_m",
-        "meta": null
+        "meta": null,
+        "reg": "sand",
+        "name_en": "Sand",
+        "name_ru": "Песок"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1530,7 +1716,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150349_c",
-        "meta": null
+        "meta": null,
+        "reg": "grass",
+        "name_en": "Grass Block",
+        "name_ru": "Блок травы"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1543,7 +1732,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151119_aD",
-        "meta": null
+        "meta": null,
+        "reg": "clay_ball",
+        "name_en": "Clay Ball",
+        "name_ru": "Clay Ball"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1556,7 +1748,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150377_bs",
-        "meta": null
+        "meta": null,
+        "reg": "end_stone",
+        "name_en": "End Stone",
+        "name_ru": "Эндерняк"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1569,7 +1764,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150351_n",
-        "meta": null
+        "meta": null,
+        "reg": "gravel",
+        "name_en": "Gravel",
+        "name_ru": "Гравий"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1581,7 +1779,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150391_bh",
-        "meta": null
+        "meta": null,
+        "reg": "mycelium",
+        "name_en": "Mycelium",
+        "name_ru": "Мицелий"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1594,7 +1795,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150435_aG",
-        "meta": null
+        "meta": null,
+        "reg": "clay",
+        "name_en": "Clay",
+        "name_ru": "Глина"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1607,7 +1811,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150405_ch",
-        "meta": null
+        "meta": null,
+        "reg": "hardened_clay",
+        "name_en": "Hardened Clay",
+        "name_ru": "Обожжёная глина"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1620,7 +1827,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150406_ce",
-        "meta": null
+        "meta": null,
+        "reg": "stained_hardened_clay",
+        "name_en": "Stained Hardened Clay",
+        "name_ru": "Stained Hardened Clay"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1634,7 +1844,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151118_aC",
-        "meta": null
+        "meta": null,
+        "reg": "brick",
+        "name_en": "Brick",
+        "name_ru": "Кирпич"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1647,7 +1860,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151130_bT",
-        "meta": null
+        "meta": null,
+        "reg": "netherbrick",
+        "name_en": "Nether Brick",
+        "name_ru": "Адский кирпич"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1659,7 +1875,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150359_w",
-        "meta": null
+        "meta": null,
+        "reg": "glass",
+        "name_en": "Glass",
+        "name_ru": "Стекло"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1671,7 +1890,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150399_cn",
-        "meta": null
+        "meta": null,
+        "reg": "stained_glass",
+        "name_en": "Stained Glass",
+        "name_ru": "Окрашенное стекло"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1683,7 +1905,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150341_Y",
-        "meta": null
+        "meta": null,
+        "reg": "mossy_cobblestone",
+        "name_en": "Mossy Cobblestone",
+        "name_ru": "Mossy Cobblestone"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1697,7 +1922,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150418_aU",
-        "meta": null
+        "meta": null,
+        "reg": "monster_egg",
+        "name_en": "Monster Egg",
+        "name_ru": "Monster Egg"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1711,7 +1939,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150417_aV",
-        "meta": null
+        "meta": null,
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1723,7 +1954,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150417_aV",
-        "meta": 1
+        "meta": 1,
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1735,7 +1969,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150417_aV",
-        "meta": 2
+        "meta": 2,
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1747,7 +1984,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150417_aV",
-        "meta": 3
+        "meta": 3,
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1759,7 +1999,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150322_A",
-        "meta": 1
+        "meta": 1,
+        "reg": "sandstone",
+        "name_en": "Sandstone",
+        "name_ru": "Песчаник"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1771,7 +2014,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150322_A",
-        "meta": 2
+        "meta": 2,
+        "reg": "sandstone",
+        "name_en": "Sandstone",
+        "name_ru": "Песчаник"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1783,7 +2029,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150329_H",
-        "meta": null
+        "meta": null,
+        "reg": "tallgrass",
+        "name_en": "Grass",
+        "name_ru": "Трава"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1796,7 +2045,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150398_cm",
-        "meta": null
+        "meta": null,
+        "reg": "double_plant",
+        "name_en": "Double Plant",
+        "name_ru": "Double Plant"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1809,7 +2061,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150392_bi",
-        "meta": null
+        "meta": null,
+        "reg": "waterlily",
+        "name_en": "Lily Pad",
+        "name_ru": "Кувшинка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1822,7 +2077,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150330_I",
-        "meta": null
+        "meta": null,
+        "reg": "deadbush",
+        "name_en": "Dead Bush",
+        "name_ru": "Мертвый куст"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1835,7 +2093,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150395_bd",
-        "meta": null
+        "meta": null,
+        "reg": "vine",
+        "name_en": "Vines",
+        "name_ru": "Лоза"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1847,7 +2108,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151014_N",
-        "meta": null
+        "meta": null,
+        "reg": "wheat_seeds",
+        "name_en": "Wheat Seeds",
+        "name_ru": "Wheat Seeds"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1859,7 +2123,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151081_bc",
-        "meta": null
+        "meta": null,
+        "reg": "melon_seeds",
+        "name_en": "Melon Seeds",
+        "name_ru": "Семена арбуза"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1871,7 +2138,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151080_bb",
-        "meta": null
+        "meta": null,
+        "reg": "pumpkin_seeds",
+        "name_en": "Pumpkin Seeds",
+        "name_ru": "Семена тыквы"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1883,7 +2153,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151127_ba",
-        "meta": null
+        "meta": null,
+        "reg": "melon",
+        "name_en": "Melon",
+        "name_ru": "Арбуз"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1895,7 +2168,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150328_O",
-        "meta": null
+        "meta": null,
+        "reg": "red_flower",
+        "name_en": "Red Flower",
+        "name_ru": "Red Flower"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1909,7 +2185,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150327_N",
-        "meta": null
+        "meta": null,
+        "reg": "yellow_flower",
+        "name_en": "Yellow Flower",
+        "name_ru": "Yellow Flower"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1923,7 +2202,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150434_aF",
-        "meta": null
+        "meta": null,
+        "reg": "cactus",
+        "name_en": "Cactus",
+        "name_ru": "Кактус"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1937,7 +2219,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150338_P",
-        "meta": null
+        "meta": null,
+        "reg": "brown_mushroom",
+        "name_en": "Brown Mushroom",
+        "name_ru": "Brown Mushroom"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1951,7 +2236,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150337_Q",
-        "meta": null
+        "meta": null,
+        "reg": "red_mushroom",
+        "name_en": "Red Mushroom",
+        "name_ru": "Red Mushroom"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1965,7 +2253,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150420_aW",
-        "meta": null
+        "meta": null,
+        "reg": "brown_mushroom_block",
+        "name_en": "Brown Mushroom Block",
+        "name_ru": "Brown Mushroom Block"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1979,7 +2270,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150419_aX",
-        "meta": null
+        "meta": null,
+        "reg": "red_mushroom_block",
+        "name_en": "Red Mushroom Block",
+        "name_ru": "Red Mushroom Block"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -1993,7 +2287,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151120_aE",
-        "meta": null
+        "meta": null,
+        "reg": "reeds",
+        "name_en": "Sugar Canes",
+        "name_ru": "Сахарный тростник"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2007,7 +2304,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151015_O",
-        "meta": null
+        "meta": null,
+        "reg": "wheat",
+        "name_en": "Wheat",
+        "name_ru": "Пшеница"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2020,7 +2320,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151034_e",
-        "meta": null
+        "meta": null,
+        "reg": "apple",
+        "name_en": "Apple",
+        "name_ru": "Яблоко"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2033,7 +2336,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151172_bF",
-        "meta": null
+        "meta": null,
+        "reg": "carrot",
+        "name_en": "Carrot",
+        "name_ru": "Морковь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2047,7 +2353,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151174_bG",
-        "meta": null
+        "meta": null,
+        "reg": "potato",
+        "name_en": "Potato",
+        "name_ru": "Картофель"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2061,7 +2370,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151168_bH",
-        "meta": null
+        "meta": null,
+        "reg": "baked_potato",
+        "name_en": "Baked Potato",
+        "name_ru": "Печёный картофель"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2074,7 +2386,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151170_bI",
-        "meta": null
+        "meta": null,
+        "reg": "poisonous_potato",
+        "name_en": "Poisonous Potato",
+        "name_ru": "Ядовитый картофель"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2087,7 +2402,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150423_aK",
-        "meta": null
+        "meta": null,
+        "reg": "pumpkin",
+        "name_en": "Pumpkin",
+        "name_ru": "Тыква"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2099,7 +2417,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151057_cb",
-        "meta": null
+        "meta": null,
+        "reg": "name_tag",
+        "name_en": "Name Tag",
+        "name_ru": "Бирка"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2112,7 +2433,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151138_bX",
-        "meta": null
+        "meta": null,
+        "reg": "iron_horse_armor",
+        "name_en": "Iron Horse Armor",
+        "name_ru": "Железная конская броня"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2125,7 +2449,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151136_bY",
-        "meta": null
+        "meta": null,
+        "reg": "golden_horse_armor",
+        "name_en": "Golden Horse Armor",
+        "name_ru": "Golden Horse Armor"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2138,7 +2465,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151125_bZ",
-        "meta": null
+        "meta": null,
+        "reg": "diamond_horse_armor",
+        "name_en": "Diamond Horse Armor",
+        "name_ru": "Алмазная конская броня"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2151,7 +2481,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150480_ab",
-        "meta": null
+        "meta": null,
+        "reg": "fire",
+        "name_en": "Fire",
+        "name_ru": "Огонь"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2163,7 +2496,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150355_j",
-        "meta": null
+        "meta": null,
+        "reg": "water",
+        "name_en": "Water",
+        "name_ru": "Вода"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2175,7 +2511,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150353_l",
-        "meta": null
+        "meta": null,
+        "reg": "lava",
+        "name_en": "Lava",
+        "name_ru": "Лава"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2188,7 +2527,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150432_aD",
-        "meta": null
+        "meta": null,
+        "reg": "ice",
+        "name_en": "Ice",
+        "name_ru": "Лёд"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2200,7 +2542,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150403_cj",
-        "meta": null
+        "meta": null,
+        "reg": "packed_ice",
+        "name_en": "Packed Ice",
+        "name_ru": "Плотный лёд"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2213,7 +2558,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151126_ay",
-        "meta": null
+        "meta": null,
+        "reg": "snowball",
+        "name_en": "Snowball",
+        "name_ru": "Снежок"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2225,7 +2573,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151106_aX",
-        "meta": null
+        "meta": null,
+        "reg": "cookie",
+        "name_en": "Cookie",
+        "name_ru": "Печенье"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2237,7 +2588,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151068_bn",
-        "meta": null
+        "meta": null,
+        "reg": "potion",
+        "name_en": "Potion",
+        "name_ru": "Зелье"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2250,7 +2604,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150478_aa",
-        "meta": null
+        "meta": null,
+        "reg": "torch",
+        "name_en": "Torch",
+        "name_ru": "Факел"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2262,7 +2619,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150321_G",
-        "meta": null
+        "meta": null,
+        "reg": "web",
+        "name_en": "Cobweb",
+        "name_ru": "Паутина"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2275,7 +2635,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151145_ak",
-        "meta": null
+        "meta": null,
+        "reg": "flint",
+        "name_en": "Flint",
+        "name_ru": "Кремень"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2288,7 +2651,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151007_F",
-        "meta": null
+        "meta": null,
+        "reg": "string",
+        "name_en": "String",
+        "name_ru": "Нить"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2301,7 +2667,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151123_aH",
-        "meta": null
+        "meta": null,
+        "reg": "slime_ball",
+        "name_en": "Slime Ball",
+        "name_ru": "Slime Ball"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2313,7 +2682,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151116_aA",
-        "meta": null
+        "meta": null,
+        "reg": "leather",
+        "name_en": "Leather",
+        "name_ru": "Кожа"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2327,7 +2699,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151078_bh",
-        "meta": null
+        "meta": null,
+        "reg": "rotten_flesh",
+        "name_en": "Rotten Flesh",
+        "name_ru": "Гнилая плоть"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2340,7 +2715,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151008_G",
-        "meta": null
+        "meta": null,
+        "reg": "feather",
+        "name_en": "Feather",
+        "name_ru": "Перо"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2353,7 +2731,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151103_aS",
-        "meta": null
+        "meta": null,
+        "reg": "bone",
+        "name_en": "Bone",
+        "name_ru": "Кость"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2366,7 +2747,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151110_aK",
-        "meta": null
+        "meta": null,
+        "reg": "egg",
+        "name_en": "Egg",
+        "name_ru": "Яйцо"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2380,7 +2764,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151070_bp",
-        "meta": null
+        "meta": null,
+        "reg": "spider_eye",
+        "name_en": "Spider Eye",
+        "name_ru": "Паучий глаз"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2394,7 +2781,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151016_H",
-        "meta": null
+        "meta": null,
+        "reg": "gunpowder",
+        "name_en": "Gunpowder",
+        "name_ru": "Порох"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2407,7 +2797,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150325_L",
-        "meta": null
+        "meta": null,
+        "reg": "wool",
+        "name_en": "Wool",
+        "name_ru": "Шерсть"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2420,7 +2813,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151115_aP",
-        "meta": null
+        "meta": null,
+        "reg": "fish",
+        "name_en": "Fish",
+        "name_ru": "Fish"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2434,7 +2830,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151101_aQ",
-        "meta": null
+        "meta": null,
+        "reg": "cooked_fished",
+        "name_en": "Cooked Fished",
+        "name_ru": "Cooked Fished"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2448,7 +2847,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151076_bf",
-        "meta": null
+        "meta": null,
+        "reg": "chicken",
+        "name_en": "Chicken",
+        "name_ru": "Курица"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2462,7 +2864,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151077_bg",
-        "meta": null
+        "meta": null,
+        "reg": "cooked_chicken",
+        "name_en": "Cooked Chicken",
+        "name_ru": "Жареная курица"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2476,7 +2881,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151147_al",
-        "meta": null
+        "meta": null,
+        "reg": "porkchop",
+        "name_en": "Porkchop",
+        "name_ru": "Porkchop"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2490,7 +2898,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151157_am",
-        "meta": null
+        "meta": null,
+        "reg": "cooked_porkchop",
+        "name_en": "Cooked Porkchop",
+        "name_ru": "Жареная свинина"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2504,7 +2915,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151082_bd",
-        "meta": null
+        "meta": null,
+        "reg": "beef",
+        "name_en": "Beef",
+        "name_ru": "Beef"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2518,7 +2932,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151083_be",
-        "meta": null
+        "meta": null,
+        "reg": "cooked_beef",
+        "name_en": "Cooked Beef",
+        "name_ru": "Cooked Beef"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2532,7 +2949,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151141_av",
-        "meta": null
+        "meta": null,
+        "reg": "saddle",
+        "name_en": "Saddle",
+        "name_ru": "Седло"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2546,7 +2966,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151079_bi",
-        "meta": null
+        "meta": null,
+        "reg": "ender_pearl",
+        "name_en": "Ender Pearl",
+        "name_ru": "Жемчуг Эндера"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2560,7 +2983,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151144_bL",
-        "meta": 0
+        "meta": 0,
+        "reg": "skull",
+        "name_en": "Skull",
+        "name_ru": "Skull"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2574,7 +3000,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151144_bL",
-        "meta": 2
+        "meta": 2,
+        "reg": "skull",
+        "name_en": "Skull",
+        "name_ru": "Skull"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2588,7 +3017,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151144_bL",
-        "meta": 3
+        "meta": 3,
+        "reg": "skull",
+        "name_en": "Skull",
+        "name_ru": "Skull"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2602,7 +3034,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151144_bL",
-        "meta": 4
+        "meta": 4,
+        "reg": "skull",
+        "name_en": "Skull",
+        "name_ru": "Skull"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2617,7 +3052,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151086_cn",
-        "meta": null
+        "meta": null,
+        "reg": "record_11",
+        "name_en": "Record 11",
+        "name_ru": "Record 11"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2631,7 +3069,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151096_cd",
-        "meta": null
+        "meta": null,
+        "reg": "record_13",
+        "name_en": "Record 13",
+        "name_ru": "Record 13"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2646,7 +3087,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151093_ce",
-        "meta": null
+        "meta": null,
+        "reg": "record_cat",
+        "name_en": "Record Cat",
+        "name_ru": "Record Cat"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2661,7 +3105,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151091_cg",
-        "meta": null
+        "meta": null,
+        "reg": "record_chirp",
+        "name_en": "Record Chirp",
+        "name_ru": "Record Chirp"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2676,7 +3123,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151092_ch",
-        "meta": null
+        "meta": null,
+        "reg": "record_far",
+        "name_en": "Record Far",
+        "name_ru": "Record Far"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2691,7 +3141,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151089_ci",
-        "meta": null
+        "meta": null,
+        "reg": "record_mall",
+        "name_en": "Record Mall",
+        "name_ru": "Record Mall"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2706,7 +3159,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151090_cj",
-        "meta": null
+        "meta": null,
+        "reg": "record_mellohi",
+        "name_en": "Record Mellohi",
+        "name_ru": "Record Mellohi"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2721,7 +3177,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151087_ck",
-        "meta": null
+        "meta": null,
+        "reg": "record_stal",
+        "name_en": "Record Stal",
+        "name_ru": "Record Stal"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2736,7 +3195,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151088_cl",
-        "meta": null
+        "meta": null,
+        "reg": "record_strad",
+        "name_en": "Record Strad",
+        "name_ru": "Record Strad"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2751,7 +3213,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151085_cm",
-        "meta": null
+        "meta": null,
+        "reg": "record_ward",
+        "name_en": "Record Ward",
+        "name_ru": "Record Ward"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2766,7 +3231,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151094_cf",
-        "meta": null
+        "meta": null,
+        "reg": "record_blocks",
+        "name_en": "Record Blocks",
+        "name_ru": "Record Blocks"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2781,7 +3249,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151084_co",
-        "meta": null
+        "meta": null,
+        "reg": "record_wait",
+        "name_en": "Record Wait",
+        "name_ru": "Record Wait"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2796,7 +3267,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151020_U",
-        "meta": null
+        "meta": null,
+        "reg": "chainmail_helmet",
+        "name_en": "Chainmail Helmet",
+        "name_ru": "Chainmail Helmet"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2808,7 +3282,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151023_V",
-        "meta": null
+        "meta": null,
+        "reg": "chainmail_chestplate",
+        "name_en": "Chainmail Chestplate",
+        "name_ru": "Chainmail Chestplate"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2820,7 +3297,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151022_W",
-        "meta": null
+        "meta": null,
+        "reg": "chainmail_leggings",
+        "name_en": "Chainmail Leggings",
+        "name_ru": "Chainmail Leggings"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2832,7 +3312,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151029_X",
-        "meta": null
+        "meta": null,
+        "reg": "chainmail_boots",
+        "name_en": "Chainmail Boots",
+        "name_ru": "Chainmail Boots"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2844,7 +3327,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150380_bt",
-        "meta": null
+        "meta": null,
+        "reg": "dragon_egg",
+        "name_en": "Dragon Egg",
+        "name_ru": "Яйцо дракона"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2858,7 +3344,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150427_aO",
-        "meta": null
+        "meta": null,
+        "reg": "portal",
+        "name_en": "Portal",
+        "name_ru": "Портал"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2871,7 +3360,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150384_bq",
-        "meta": null
+        "meta": null,
+        "reg": "end_portal",
+        "name_en": "End Portal",
+        "name_ru": "Портал в Энд"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2884,7 +3376,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150378_br",
-        "meta": null
+        "meta": null,
+        "reg": "end_portal_frame",
+        "name_en": "End Portal Frame",
+        "name_ru": "End Portal Frame"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2898,7 +3393,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150474_ac",
-        "meta": null
+        "meta": null,
+        "reg": "mob_spawner",
+        "name_en": "Mob Spawner",
+        "name_ru": "Mob Spawner"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2913,7 +3411,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151133_ar",
-        "meta": null
+        "meta": null,
+        "reg": "bucket",
+        "name_en": "Bucket",
+        "name_ru": "Ведро"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2926,7 +3427,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151131_as",
-        "meta": null
+        "meta": null,
+        "reg": "water_bucket",
+        "name_en": "Water Bucket",
+        "name_ru": "Ведро воды"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2938,7 +3442,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151129_at",
-        "meta": null
+        "meta": null,
+        "reg": "lava_bucket",
+        "name_en": "Lava Bucket",
+        "name_ru": "Ведро лавы"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2951,7 +3458,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151117_aB",
-        "meta": null
+        "meta": null,
+        "reg": "milk_bucket",
+        "name_en": "Milk Bucket",
+        "name_ru": "Milk Bucket"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2965,7 +3475,10 @@
       "subject": {
         "type": "item",
         "ref": "Items.field_151105_aU",
-        "meta": null
+        "meta": null,
+        "reg": "cake",
+        "name_en": "Cake",
+        "name_ru": "Торт"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2979,7 +3492,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150462_ai",
-        "meta": null
+        "meta": null,
+        "reg": "crafting_table",
+        "name_en": "Crafting Table",
+        "name_ru": "Верстак"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -2991,7 +3507,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150467_bQ",
-        "meta": null
+        "meta": null,
+        "reg": "anvil",
+        "name_en": "Anvil",
+        "name_ru": "Наковальня"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -3005,7 +3524,10 @@
       "subject": {
         "type": "item",
         "ref": "Blocks.field_150479_bC",
-        "meta": null
+        "meta": null,
+        "reg": "tripwire_hook",
+        "name_en": "Tripwire Hook",
+        "name_ru": "Крюк"
       },
       "mod": "Thaumcraft",
       "aspects": {

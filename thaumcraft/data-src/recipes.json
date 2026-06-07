@@ -21,7 +21,7 @@
       "Avaritia": 2,
       "Alfheim": 10
     },
-    "outputsNamed": 145,
+    "outputsNamed": 156,
     "notes": "aspects = essentia/vis cost (null value = computed at runtime, see aspectsComputed). output/input/central/components/inputs resolved to EN/RU names where the item ref maps to a lang key; otherwise {ref,meta} (ConfigItems/ConfigBlocks field) or {vanilla:srgName} or {oredict}. research = linked research key. infusion has instability + central + components."
   },
   "recipes": [
@@ -63,7 +63,10 @@
         "perditio": 3
       },
       "input": {
-        "vanilla": "field_151044_h"
+        "vanilla": "field_151044_h",
+        "reg": "coal",
+        "name_en": "Coal",
+        "name_ru": "Уголь"
       }
     },
     {
@@ -99,7 +102,10 @@
         "praecantatio": 4
       },
       "input": {
-        "vanilla": "field_151042_j"
+        "vanilla": "field_151042_j",
+        "reg": "iron_ingot",
+        "name_en": "Iron Ingot",
+        "name_ru": "Железный слиток"
       }
     },
     {
@@ -138,7 +144,10 @@
         "alienis": 2
       },
       "input": {
-        "vanilla": "field_151014_N"
+        "vanilla": "field_151014_N",
+        "reg": "wheat_seeds",
+        "name_en": "Wheat Seeds",
+        "name_ru": "Wheat Seeds"
       }
     },
     {
@@ -155,7 +164,10 @@
         "praecantatio": 2
       },
       "input": {
-        "vanilla": "field_151078_bh"
+        "vanilla": "field_151078_bh",
+        "reg": "rotten_flesh",
+        "name_en": "Rotten Flesh",
+        "name_ru": "Гнилая плоть"
       }
     },
     {
@@ -163,14 +175,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_151016_H"
+        "vanilla": "field_151016_H",
+        "reg": "gunpowder",
+        "name_en": "Gunpowder",
+        "name_ru": "Порох"
       },
       "aspects": {
         "ignis": 4,
         "perditio": 4
       },
       "input": {
-        "vanilla": "field_151016_H"
+        "vanilla": "field_151016_H",
+        "reg": "gunpowder",
+        "name_en": "Gunpowder",
+        "name_ru": "Порох"
       }
     },
     {
@@ -178,14 +196,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_151123_aH"
+        "vanilla": "field_151123_aH",
+        "reg": "slime_ball",
+        "name_en": "Slime Ball",
+        "name_ru": "Slime Ball"
       },
       "aspects": {
         "aqua": 2,
         "victus": 2
       },
       "input": {
-        "vanilla": "field_151123_aH"
+        "vanilla": "field_151123_aH",
+        "reg": "slime_ball",
+        "name_en": "Slime Ball",
+        "name_ru": "Slime Ball"
       }
     },
     {
@@ -193,14 +217,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_151119_aD"
+        "vanilla": "field_151119_aD",
+        "reg": "clay_ball",
+        "name_en": "Clay Ball",
+        "name_ru": "Clay Ball"
       },
       "aspects": {
         "aqua": 1,
         "terra": 2
       },
       "input": {
-        "vanilla": "field_151119_aD"
+        "vanilla": "field_151119_aD",
+        "reg": "clay_ball",
+        "name_en": "Clay Ball",
+        "name_ru": "Clay Ball"
       }
     },
     {
@@ -223,14 +253,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_151100_aR"
+        "vanilla": "field_151100_aR",
+        "reg": "dye",
+        "name_en": "Dye",
+        "name_ru": "Dye"
       },
       "aspects": {
         "aqua": 2,
         "sensus": 2
       },
       "input": {
-        "vanilla": "field_151100_aR"
+        "vanilla": "field_151100_aR",
+        "reg": "dye",
+        "name_en": "Dye",
+        "name_ru": "Dye"
       }
     },
     {
@@ -238,14 +274,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_150321_G"
+        "vanilla": "field_150321_G",
+        "reg": "web",
+        "name_en": "Cobweb",
+        "name_ru": "Паутина"
       },
       "aspects": {
         "vinculum": 2,
         "pannus": 2
       },
       "input": {
-        "vanilla": "field_151007_F"
+        "vanilla": "field_151007_F",
+        "reg": "string",
+        "name_en": "String",
+        "name_ru": "Нить"
       }
     },
     {
@@ -253,14 +295,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_150341_Y"
+        "vanilla": "field_150341_Y",
+        "reg": "mossy_cobblestone",
+        "name_en": "Mossy Cobblestone",
+        "name_ru": "Mossy Cobblestone"
       },
       "aspects": {
         "herba": 2,
         "praecantatio": 1
       },
       "input": {
-        "vanilla": "field_150347_e"
+        "vanilla": "field_150347_e",
+        "reg": "cobblestone",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
       }
     },
     {
@@ -268,14 +316,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_150432_aD"
+        "vanilla": "field_150432_aD",
+        "reg": "ice",
+        "name_en": "Ice",
+        "name_ru": "Лёд"
       },
       "aspects": {
         "ordo": 1,
         "gelum": 1
       },
       "input": {
-        "vanilla": "field_150433_aE"
+        "vanilla": "field_150433_aE",
+        "reg": "snow",
+        "name_en": "Snow",
+        "name_ru": "Снег"
       }
     },
     {
@@ -283,13 +337,19 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_150417_aV"
+        "vanilla": "field_150417_aV",
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
       },
       "aspects": {
         "perditio": 2
       },
       "input": {
-        "vanilla": "field_150417_aV"
+        "vanilla": "field_150417_aV",
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
       }
     },
     {
@@ -297,13 +357,19 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_151100_aR"
+        "vanilla": "field_151100_aR",
+        "reg": "dye",
+        "name_en": "Dye",
+        "name_ru": "Dye"
       },
       "aspects": {
         "perditio": 1
       },
       "input": {
-        "vanilla": "field_151103_aS"
+        "vanilla": "field_151103_aS",
+        "reg": "bone",
+        "name_en": "Bone",
+        "name_ru": "Кость"
       }
     },
     {
@@ -436,14 +502,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_151074_bl"
+        "vanilla": "field_151074_bl",
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
       },
       "aspects": {
         "metallum": 2,
         "lucrum": 1
       },
       "input": {
-        "vanilla": "field_151074_bl"
+        "vanilla": "field_151074_bl",
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
       }
     },
     {
@@ -557,7 +629,10 @@
         "perditio": 32
       },
       "input": {
-        "vanilla": "field_151133_ar"
+        "vanilla": "field_151133_ar",
+        "reg": "bucket",
+        "name_en": "Bucket",
+        "name_ru": "Ведро"
       }
     },
     {
@@ -594,7 +669,10 @@
         "spiritus": 4
       },
       "input": {
-        "vanilla": "field_150407_cf"
+        "vanilla": "field_150407_cf",
+        "reg": "hay_block",
+        "name_en": "Hay Block",
+        "name_ru": "Hay Block"
       }
     },
     {
@@ -655,7 +733,10 @@
         "spiritus": 4
       },
       "input": {
-        "vanilla": "field_150336_V"
+        "vanilla": "field_150336_V",
+        "reg": "brick_block",
+        "name_en": "Brick Block",
+        "name_ru": "Brick Block"
       }
     },
     {
@@ -696,7 +777,10 @@
         "spiritus": 4
       },
       "input": {
-        "vanilla": "field_150417_aV"
+        "vanilla": "field_150417_aV",
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
       }
     },
     {
@@ -715,7 +799,10 @@
         "spiritus": 4
       },
       "input": {
-        "vanilla": "field_150339_S"
+        "vanilla": "field_150339_S",
+        "reg": "iron_block",
+        "name_en": "Iron Block",
+        "name_ru": "Iron Block"
       }
     },
     {
@@ -952,14 +1039,20 @@
       "type": "crucible",
       "mod": "Thaumcraft",
       "output": {
-        "vanilla": "field_151074_bl"
+        "vanilla": "field_151074_bl",
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
       },
       "aspects": {
         "metallum": 2,
         "lucrum": 1
       },
       "input": {
-        "vanilla": "field_151074_bl"
+        "vanilla": "field_151074_bl",
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
       }
     },
     {
@@ -1035,7 +1128,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_150325_L"
+          "vanilla": "field_150325_L",
+          "reg": "wool",
+          "name_en": "Wool",
+          "name_ru": "Шерсть"
         },
         {
           "oredict": "stickWood"
@@ -1166,7 +1262,10 @@
           "name_ru": "Мозг зомби"
         },
         {
-          "vanilla": "field_150359_w"
+          "vanilla": "field_150359_w",
+          "reg": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
         },
         {
           "ref": "blockWoodenDevice",
@@ -1215,7 +1314,10 @@
           "meta": null
         },
         {
-          "vanilla": "field_150411_aY"
+          "vanilla": "field_150411_aY",
+          "reg": "iron_bars",
+          "name_en": "Iron Bars",
+          "name_ru": "Железные прутья"
         },
         {
           "ref": "blockTube",
@@ -1308,7 +1410,10 @@
           "name_ru": "Магический кирпич"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "raw": "new ItemStack((Block)"
@@ -1344,13 +1449,22 @@
           "name_ru": "Узел-стабилизатор"
         },
         {
-          "vanilla": "field_151132_bS"
+          "vanilla": "field_151132_bS",
+          "reg": "comparator",
+          "name_en": "Redstone Comparator",
+          "name_ru": "Компаратор"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_150451_bX"
+          "vanilla": "field_150451_bX",
+          "reg": "redstone_block",
+          "name_en": "Redstone Block",
+          "name_ru": "Redstone Block"
         },
         {
           "ref": "itemResource",
@@ -1376,7 +1490,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "itemShard",
@@ -1403,7 +1520,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "blockMetalDevice",
@@ -1453,10 +1573,16 @@
           "meta": null
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "ref": "itemResource",
@@ -1488,7 +1614,10 @@
           "name_ru": "Магический камень"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "blockCosmeticSolid",
@@ -1497,7 +1626,10 @@
           "name_ru": "Магический кирпич"
         },
         {
-          "vanilla": "field_150451_bX"
+          "vanilla": "field_150451_bX",
+          "reg": "redstone_block",
+          "name_en": "Redstone Block",
+          "name_ru": "Redstone Block"
         }
       ]
     },
@@ -1593,7 +1725,10 @@
           "name_ru": "Нитор"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -1627,7 +1762,10 @@
           "name_ru": "Магический камень"
         },
         {
-          "vanilla": "field_150411_aY"
+          "vanilla": "field_150411_aY",
+          "reg": "iron_bars",
+          "name_en": "Iron Bars",
+          "name_ru": "Железные прутья"
         }
       ]
     },
@@ -2382,10 +2520,16 @@
           "name_ru": "Таумометр"
         },
         {
-          "vanilla": "field_151005_D"
+          "vanilla": "field_151005_D",
+          "reg": "golden_pickaxe",
+          "name_en": "Golden Pickaxe",
+          "name_ru": "Золотая кирка"
         },
         {
-          "vanilla": "field_151006_E"
+          "vanilla": "field_151006_E",
+          "reg": "golden_axe",
+          "name_en": "Golden Axe",
+          "name_ru": "Золотой топор"
         }
       ]
     },
@@ -2432,10 +2576,16 @@
       },
       "inputs": [
         {
-          "vanilla": "field_151007_F"
+          "vanilla": "field_151007_F",
+          "reg": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
         },
         {
-          "vanilla": "field_150325_L"
+          "vanilla": "field_150325_L",
+          "reg": "wool",
+          "name_en": "Wool",
+          "name_ru": "Шерсть"
         }
       ]
     },
@@ -2729,7 +2879,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_150325_L"
+          "vanilla": "field_150325_L",
+          "reg": "wool",
+          "name_en": "Wool",
+          "name_ru": "Шерсть"
         }
       ]
     },
@@ -2749,7 +2902,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_150325_L"
+          "vanilla": "field_150325_L",
+          "reg": "wool",
+          "name_en": "Wool",
+          "name_ru": "Шерсть"
         }
       ]
     },
@@ -2769,7 +2925,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_150325_L"
+          "vanilla": "field_150325_L",
+          "reg": "wool",
+          "name_en": "Wool",
+          "name_ru": "Шерсть"
         }
       ]
     },
@@ -3185,7 +3344,10 @@
           "name_ru": "Труба для эссенции"
         },
         {
-          "vanilla": "field_150367_z"
+          "vanilla": "field_150367_z",
+          "reg": "dispenser",
+          "name_en": "Dispenser",
+          "name_ru": "Раздатчик"
         },
         {
           "ref": "itemShard",
@@ -3236,7 +3398,10 @@
           "name_ru": "Янтарь"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -3285,7 +3450,10 @@
           "name_ru": "Труба для эссенции"
         },
         {
-          "vanilla": "field_150442_at"
+          "vanilla": "field_150442_at",
+          "reg": "lever",
+          "name_en": "Lever",
+          "name_ru": "Рычаг"
         }
       ]
     },
@@ -3543,7 +3711,10 @@
       "aspectsComputed": true,
       "instability": 3,
       "central": {
-        "vanilla": "field_150432_aD"
+        "vanilla": "field_150432_aD",
+        "reg": "ice",
+        "name_en": "Ice",
+        "name_ru": "Лёд"
       },
       "components": [
         {
@@ -3609,7 +3780,10 @@
       "aspectsComputed": true,
       "instability": 3,
       "central": {
-        "vanilla": "field_151120_aE"
+        "vanilla": "field_151120_aE",
+        "reg": "reeds",
+        "name_en": "Sugar Canes",
+        "name_ru": "Сахарный тростник"
       },
       "components": [
         {
@@ -3675,7 +3849,10 @@
       "aspectsComputed": true,
       "instability": 3,
       "central": {
-        "vanilla": "field_151103_aS"
+        "vanilla": "field_151103_aS",
+        "reg": "bone",
+        "name_en": "Bone",
+        "name_ru": "Кость"
       },
       "components": [
         {
@@ -3879,7 +4056,10 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_151079_bi"
+        "vanilla": "field_151079_bi",
+        "reg": "ender_pearl",
+        "name_en": "Ender Pearl",
+        "name_ru": "Жемчуг Эндера"
       },
       "components": [
         {
@@ -3983,10 +4163,16 @@
       },
       "components": [
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "ref": "itemResource",
@@ -3995,7 +4181,10 @@
           "name_ru": "Сингулярный амулет"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         }
       ]
     },
@@ -4016,7 +4205,10 @@
       },
       "instability": 4,
       "central": {
-        "vanilla": "field_151132_bS"
+        "vanilla": "field_151132_bS",
+        "reg": "comparator",
+        "name_en": "Redstone Comparator",
+        "name_ru": "Компаратор"
       },
       "components": [
         {
@@ -4100,7 +4292,10 @@
           "name_ru": "Нитор"
         },
         {
-          "vanilla": "field_150451_bX"
+          "vanilla": "field_150451_bX",
+          "reg": "redstone_block",
+          "name_en": "Redstone Block",
+          "name_ru": "Redstone Block"
         },
         {
           "ref": "itemResource",
@@ -4109,7 +4304,10 @@
           "name_ru": "Алюментум"
         },
         {
-          "vanilla": "field_150451_bX"
+          "vanilla": "field_150451_bX",
+          "reg": "redstone_block",
+          "name_en": "Redstone Block",
+          "name_ru": "Redstone Block"
         },
         {
           "ref": "itemResource",
@@ -4118,7 +4316,10 @@
           "name_ru": "Нитор"
         },
         {
-          "vanilla": "field_150451_bX"
+          "vanilla": "field_150451_bX",
+          "reg": "redstone_block",
+          "name_en": "Redstone Block",
+          "name_ru": "Redstone Block"
         },
         {
           "ref": "itemResource",
@@ -4127,7 +4328,10 @@
           "name_ru": "Алюментум"
         },
         {
-          "vanilla": "field_150451_bX"
+          "vanilla": "field_150451_bX",
+          "reg": "redstone_block",
+          "name_en": "Redstone Block",
+          "name_ru": "Redstone Block"
         }
       ]
     },
@@ -4161,13 +4365,22 @@
           "name_ru": "Мозг зомби"
         },
         {
-          "vanilla": "field_151070_bp"
+          "vanilla": "field_151070_bp",
+          "reg": "spider_eye",
+          "name_en": "Spider Eye",
+          "name_ru": "Паучий глаз"
         },
         {
-          "vanilla": "field_151131_as"
+          "vanilla": "field_151131_as",
+          "reg": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
         },
         {
-          "vanilla": "field_151070_bp"
+          "vanilla": "field_151070_bp",
+          "reg": "spider_eye",
+          "name_en": "Spider Eye",
+          "name_ru": "Паучий глаз"
         }
       ]
     },
@@ -4190,10 +4403,16 @@
       },
       "components": [
         {
-          "vanilla": "field_151137_ax"
+          "vanilla": "field_151137_ax",
+          "reg": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
         },
         {
-          "vanilla": "field_151016_H"
+          "vanilla": "field_151016_H",
+          "reg": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
         },
         {
           "ref": "blockJar",
@@ -4225,7 +4444,10 @@
       },
       "instability": 6,
       "central": {
-        "vanilla": "field_151027_R"
+        "vanilla": "field_151027_R",
+        "reg": "leather_chestplate",
+        "name_en": "Leather Chestplate",
+        "name_ru": "Leather Chestplate"
       },
       "components": [
         {
@@ -4253,19 +4475,34 @@
           "name_ru": "Доски великого дерева"
         },
         {
-          "vanilla": "field_151132_bS"
+          "vanilla": "field_151132_bS",
+          "reg": "comparator",
+          "name_en": "Redstone Comparator",
+          "name_ru": "Компаратор"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -4300,10 +4537,16 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "ref": "itemShard",
@@ -4312,10 +4555,16 @@
           "name_ru": "Земляной кристалл"
         },
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         }
       ]
     },
@@ -4880,16 +5129,28 @@
       },
       "components": [
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151079_bi"
+          "vanilla": "field_151079_bi",
+          "reg": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
         }
       ]
     },
@@ -4914,10 +5175,16 @@
       },
       "components": [
         {
-          "vanilla": "field_151055_y"
+          "vanilla": "field_151055_y",
+          "reg": "stick",
+          "name_en": "Stick",
+          "name_ru": "Палка"
         },
         {
-          "vanilla": "field_151111_aL"
+          "vanilla": "field_151111_aL",
+          "reg": "compass",
+          "name_en": "Compass",
+          "name_ru": "Компас"
         },
         {
           "raw": "new ItemStack((Item)"
@@ -4948,16 +5215,28 @@
       },
       "components": [
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151079_bi"
+          "vanilla": "field_151079_bi",
+          "reg": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
         }
       ]
     },
@@ -4996,7 +5275,10 @@
           "name_ru": "Ледяной кристалл"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "ref": "blockMagicalLog",
@@ -5038,7 +5320,10 @@
           "name_ru": "Огненный кристалл"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "ref": "blockMagicalLog",
@@ -5082,7 +5367,10 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "ref": "blockMagicalLog",
@@ -5125,7 +5413,10 @@
           "name_ru": "Земляной кристалл"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "ref": "blockMagicalLog",
@@ -5169,7 +5460,10 @@
           "name_ru": "Энтропийный кристалл"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "ref": "blockMagicalLog",
@@ -5191,7 +5485,10 @@
       },
       "instability": 1,
       "central": {
-        "vanilla": "field_151021_T"
+        "vanilla": "field_151021_T",
+        "reg": "leather_boots",
+        "name_en": "Leather Boots",
+        "name_ru": "Кожаные ботинки"
       },
       "components": [
         {
@@ -5219,10 +5516,16 @@
           "name_ru": "Зачарованная ткань"
         },
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
-          "vanilla": "field_151115_aP"
+          "vanilla": "field_151115_aP",
+          "reg": "fish",
+          "name_en": "Fish",
+          "name_ru": "Fish"
         }
       ]
     },
@@ -5297,7 +5600,10 @@
           "name_ru": "Наполнение"
         },
         {
-          "vanilla": "field_151132_bS"
+          "vanilla": "field_151132_bS",
+          "reg": "comparator",
+          "name_en": "Redstone Comparator",
+          "name_ru": "Компаратор"
         },
         {
           "ref": "itemGolemCore",
@@ -5306,7 +5612,10 @@
           "name_ru": "Опустошение"
         },
         {
-          "vanilla": "field_151121_aF"
+          "vanilla": "field_151121_aF",
+          "reg": "paper",
+          "name_en": "Paper",
+          "name_ru": "Бумага"
         }
       ]
     },
@@ -5340,13 +5649,22 @@
           "name_ru": "Топор Потока"
         },
         {
-          "vanilla": "field_151036_c"
+          "vanilla": "field_151036_c",
+          "reg": "iron_axe",
+          "name_en": "Iron Axe",
+          "name_ru": "Железный топор"
         },
         {
-          "vanilla": "field_151036_c"
+          "vanilla": "field_151036_c",
+          "reg": "iron_axe",
+          "name_en": "Iron Axe",
+          "name_ru": "Железный топор"
         },
         {
-          "vanilla": "field_151036_c"
+          "vanilla": "field_151036_c",
+          "reg": "iron_axe",
+          "name_en": "Iron Axe",
+          "name_ru": "Железный топор"
         }
       ]
     },
@@ -5377,13 +5695,22 @@
           "raw": "new ItemStack((Item)"
         },
         {
-          "vanilla": "field_151115_aP"
+          "vanilla": "field_151115_aP",
+          "reg": "fish",
+          "name_en": "Fish",
+          "name_ru": "Fish"
         },
         {
-          "vanilla": "field_151115_aP"
+          "vanilla": "field_151115_aP",
+          "reg": "fish",
+          "name_en": "Fish",
+          "name_ru": "Fish"
         },
         {
-          "vanilla": "field_151115_aP"
+          "vanilla": "field_151115_aP",
+          "reg": "fish",
+          "name_en": "Fish",
+          "name_ru": "Fish"
         }
       ]
     },
@@ -5411,16 +5738,25 @@
       },
       "components": [
         {
-          "vanilla": "field_151132_bS"
+          "vanilla": "field_151132_bS",
+          "reg": "comparator",
+          "name_en": "Redstone Comparator",
+          "name_ru": "Компаратор"
         },
         {
-          "vanilla": "field_151033_d"
+          "vanilla": "field_151033_d",
+          "reg": "flint_and_steel",
+          "name_en": "Flint And Steel",
+          "name_ru": "Flint And Steel"
         },
         {
           "raw": "new ItemStack((Item)"
         },
         {
-          "vanilla": "field_150442_at"
+          "vanilla": "field_150442_at",
+          "reg": "lever",
+          "name_en": "Lever",
+          "name_ru": "Рычаг"
         }
       ]
     },
@@ -5443,7 +5779,10 @@
       },
       "instability": 4,
       "central": {
-        "vanilla": "field_150331_J"
+        "vanilla": "field_150331_J",
+        "reg": "piston",
+        "name_en": "Piston",
+        "name_ru": "Поршень"
       },
       "components": [
         {
@@ -5459,16 +5798,28 @@
           "name_ru": "Доски великого дерева"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151046_w"
+          "vanilla": "field_151046_w",
+          "reg": "diamond_pickaxe",
+          "name_en": "Diamond Pickaxe",
+          "name_ru": "Алмазная кирка"
         },
         {
-          "vanilla": "field_151047_v"
+          "vanilla": "field_151047_v",
+          "reg": "diamond_shovel",
+          "name_en": "Diamond Shovel",
+          "name_ru": "Алмазная лопата"
         },
         {
           "ref": "itemShard",
@@ -5507,7 +5858,10 @@
       },
       "components": [
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "blockWoodenDevice",
@@ -5553,10 +5907,16 @@
       },
       "components": [
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
           "ref": "itemShard",
@@ -5565,10 +5925,16 @@
           "name_ru": "Земляной кристалл"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
           "ref": "itemShard",
@@ -5602,10 +5968,16 @@
       },
       "components": [
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151015_O"
+          "vanilla": "field_151015_O",
+          "reg": "wheat",
+          "name_en": "Wheat",
+          "name_ru": "Пшеница"
         },
         {
           "ref": "itemShard",
@@ -5614,10 +5986,16 @@
           "name_ru": "Огненный кристалл"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151172_bF"
+          "vanilla": "field_151172_bF",
+          "reg": "carrot",
+          "name_en": "Carrot",
+          "name_ru": "Морковь"
         },
         {
           "ref": "itemShard",
@@ -5663,13 +6041,22 @@
           "name_ru": "Таум-слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         }
       ]
     },
@@ -5717,10 +6104,16 @@
           "name_ru": "Таум-слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
       ]
     },
@@ -5762,10 +6155,16 @@
           "name_ru": "Таум-слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
       ]
     },
@@ -5885,7 +6284,10 @@
           "name_ru": "Зачарованная ткань"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
       ]
     },
@@ -5940,7 +6342,10 @@
           "name_ru": "Зачарованная ткань"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
       ]
     },
@@ -5965,7 +6370,10 @@
       },
       "components": [
         {
-          "vanilla": "field_151123_aH"
+          "vanilla": "field_151123_aH",
+          "reg": "slime_ball",
+          "name_en": "Slime Ball",
+          "name_ru": "Slime Ball"
         },
         {
           "ref": "itemGoggles",
@@ -5996,13 +6404,22 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
           "ref": "blockCustomPlant",
@@ -6017,7 +6434,10 @@
           "name_ru": "Мозг зомби"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -6042,19 +6462,34 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
-          "vanilla": "field_151170_bI"
+          "vanilla": "field_151170_bI",
+          "reg": "poisonous_potato",
+          "name_en": "Poisonous Potato",
+          "name_ru": "Ядовитый картофель"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -6079,19 +6514,34 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
-          "vanilla": "field_151117_aB"
+          "vanilla": "field_151117_aB",
+          "reg": "milk_bucket",
+          "name_en": "Milk Bucket",
+          "name_ru": "Milk Bucket"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -6131,7 +6581,10 @@
           "name_ru": "Мозг зомби"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         }
       ]
     },
@@ -6215,7 +6668,10 @@
       },
       "instability": 5,
       "central": {
-        "vanilla": "field_151145_ak"
+        "vanilla": "field_151145_ak",
+        "reg": "flint",
+        "name_en": "Flint",
+        "name_ru": "Кремень"
       },
       "components": [
         {
@@ -6323,7 +6779,10 @@
       },
       "instability": 5,
       "central": {
-        "vanilla": "field_151061_bv"
+        "vanilla": "field_151061_bv",
+        "reg": "ender_eye",
+        "name_en": "Ender Eye",
+        "name_ru": "Ender Eye"
       },
       "components": [
         {
@@ -6333,7 +6792,10 @@
           "name_ru": "Семя пустоты"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         }
       ]
     },
@@ -6829,7 +7291,10 @@
         "herba": 4
       },
       "input": {
-        "vanilla": "field_150328_O"
+        "vanilla": "field_150328_O",
+        "reg": "red_flower",
+        "name_en": "Red Flower",
+        "name_ru": "Red Flower"
       }
     },
     {
@@ -6844,7 +7309,10 @@
         "perditio": 4
       },
       "input": {
-        "vanilla": "field_151078_bh"
+        "vanilla": "field_151078_bh",
+        "reg": "rotten_flesh",
+        "name_en": "Rotten Flesh",
+        "name_ru": "Гнилая плоть"
       }
     },
     {
@@ -6859,7 +7327,10 @@
         "praecantatio": 2
       },
       "input": {
-        "vanilla": "field_151116_aA"
+        "vanilla": "field_151116_aA",
+        "reg": "leather",
+        "name_en": "Leather",
+        "name_ru": "Кожа"
       }
     },
     {
@@ -6905,7 +7376,10 @@
         "vinculum": 4
       },
       "input": {
-        "vanilla": "field_151113_aN"
+        "vanilla": "field_151113_aN",
+        "reg": "clock",
+        "name_en": "Clock",
+        "name_ru": "Часы"
       }
     },
     {
@@ -7027,7 +7501,10 @@
       },
       "instability": 5,
       "central": {
-        "vanilla": "field_150340_R"
+        "vanilla": "field_150340_R",
+        "reg": "gold_block",
+        "name_en": "Gold Block",
+        "name_ru": "Gold Block"
       }
     },
     {
@@ -7059,7 +7536,10 @@
         "venenum": 4
       },
       "input": {
-        "vanilla": "field_150345_g"
+        "vanilla": "field_150345_g",
+        "reg": "sapling",
+        "name_en": "Sapling",
+        "name_ru": "Sapling"
       }
     },
     {
@@ -7074,7 +7554,10 @@
         "potentia": 10
       },
       "input": {
-        "vanilla": "field_151045_i"
+        "vanilla": "field_151045_i",
+        "reg": "diamond",
+        "name_en": "Diamond",
+        "name_ru": "Алмаз"
       }
     },
     {
@@ -7104,7 +7587,10 @@
         "victus": 5
       },
       "input": {
-        "vanilla": "field_150398_cm"
+        "vanilla": "field_150398_cm",
+        "reg": "double_plant",
+        "name_en": "Double Plant",
+        "name_ru": "Double Plant"
       }
     },
     {
@@ -7120,7 +7606,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_150348_b"
+          "vanilla": "field_150348_b",
+          "reg": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
         },
         {
           "oredict": "resourceTaint"
@@ -7150,7 +7639,10 @@
           "name_ru": "Обычное кольцо"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         }
       ]
     },
@@ -7260,7 +7752,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
           "ref": "itemEldritchObject",
@@ -7269,7 +7764,10 @@
           "name_ru": "Сингулярная жемчужина"
         },
         {
-          "vanilla": "field_151069_bo"
+          "vanilla": "field_151069_bo",
+          "reg": "glass_bottle",
+          "name_en": "Glass Bottle",
+          "name_ru": "Пузырёк"
         }
       ]
     },
@@ -7300,7 +7798,10 @@
           "name_ru": "Янтарь"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "oredict": "blockMagicalLog"
@@ -7331,7 +7832,10 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "oredict": "blockMagicalLog"
@@ -7402,7 +7906,10 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         }
       ]
     },
@@ -7437,7 +7944,10 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151058_ca"
+          "vanilla": "field_151058_ca",
+          "reg": "lead",
+          "name_en": "Lead",
+          "name_ru": "Поводок"
         },
         {
           "ref": "itemBaubleBlanks",
@@ -7461,20 +7971,32 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_151105_aU"
+        "vanilla": "field_151105_aU",
+        "reg": "cake",
+        "name_en": "Cake",
+        "name_ru": "Торт"
       },
       "components": [
         {
           "oredict": "itemResource"
         },
         {
-          "vanilla": "field_151110_aK"
+          "vanilla": "field_151110_aK",
+          "reg": "egg",
+          "name_en": "Egg",
+          "name_ru": "Яйцо"
         },
         {
-          "vanilla": "field_151117_aB"
+          "vanilla": "field_151117_aB",
+          "reg": "milk_bucket",
+          "name_en": "Milk Bucket",
+          "name_ru": "Milk Bucket"
         },
         {
-          "vanilla": "field_151110_aK"
+          "vanilla": "field_151110_aK",
+          "reg": "egg",
+          "name_en": "Egg",
+          "name_ru": "Яйцо"
         },
         {
           "ref": "ForbiddenItems"
@@ -7498,7 +8020,10 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_151105_aU"
+        "vanilla": "field_151105_aU",
+        "reg": "cake",
+        "name_en": "Cake",
+        "name_ru": "Торт"
       },
       "components": [
         {
@@ -7511,7 +8036,10 @@
           "ref": "ForbiddenBlocks"
         },
         {
-          "vanilla": "field_151110_aK"
+          "vanilla": "field_151110_aK",
+          "reg": "egg",
+          "name_en": "Egg",
+          "name_ru": "Яйцо"
         },
         {
           "ref": "ForbiddenItems"
@@ -7536,7 +8064,10 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_151079_bi"
+        "vanilla": "field_151079_bi",
+        "reg": "ender_pearl",
+        "name_en": "Ender Pearl",
+        "name_ru": "Жемчуг Эндера"
       },
       "components": [
         {
@@ -7574,7 +8105,10 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "oredict": "itemResource"
@@ -7608,7 +8142,10 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "oredict": "itemResource"
@@ -7642,7 +8179,10 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "oredict": "itemResource"
@@ -7676,7 +8216,10 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "oredict": "itemResource"
@@ -7745,16 +8288,28 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "oredict": "blockJar"
@@ -7785,7 +8340,10 @@
       },
       "components": [
         {
-          "vanilla": "field_151137_ax"
+          "vanilla": "field_151137_ax",
+          "reg": "redstone",
+          "name_en": "Redstone",
+          "name_ru": "Красная пыль"
         }
       ]
     },
@@ -7823,7 +8381,10 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_151035_b"
+        "vanilla": "field_151035_b",
+        "reg": "iron_pickaxe",
+        "name_en": "Iron Pickaxe",
+        "name_ru": "Железная кирка"
       }
     },
     {
@@ -7840,7 +8401,10 @@
       },
       "instability": 8,
       "central": {
-        "vanilla": "field_151048_u"
+        "vanilla": "field_151048_u",
+        "reg": "diamond_sword",
+        "name_en": "Diamond Sword",
+        "name_ru": "Алмазный меч"
       }
     },
     {
@@ -7857,7 +8421,10 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_151122_aG"
+        "vanilla": "field_151122_aG",
+        "reg": "book",
+        "name_en": "Book",
+        "name_ru": "Книга"
       }
     },
     {
@@ -7968,13 +8535,19 @@
       },
       "inputs": [
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
           "ref": "bloodBucket"
         },
         {
-          "vanilla": "field_151069_bo"
+          "vanilla": "field_151069_bo",
+          "reg": "glass_bottle",
+          "name_en": "Glass Bottle",
+          "name_ru": "Пузырёк"
         },
         {
           "ref": "crapOrb"
@@ -8084,7 +8657,10 @@
           "ref": "ForbiddenItems"
         },
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
           "ref": "itemResource",
@@ -8640,7 +9216,10 @@
         "praecantatio": 2
       },
       "input": {
-        "vanilla": "field_151042_j"
+        "vanilla": "field_151042_j",
+        "reg": "iron_ingot",
+        "name_en": "Iron Ingot",
+        "name_ru": "Железный слиток"
       }
     },
     {
@@ -8658,7 +9237,10 @@
         "venenum": 1
       },
       "input": {
-        "vanilla": "field_150338_P"
+        "vanilla": "field_150338_P",
+        "reg": "brown_mushroom",
+        "name_en": "Brown Mushroom",
+        "name_ru": "Brown Mushroom"
       }
     },
     {
@@ -8676,7 +9258,10 @@
         "venenum": 1
       },
       "input": {
-        "vanilla": "field_150337_Q"
+        "vanilla": "field_150337_Q",
+        "reg": "red_mushroom",
+        "name_en": "Red Mushroom",
+        "name_ru": "Red Mushroom"
       }
     },
     {
@@ -8742,10 +9327,16 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -8766,10 +9357,16 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -8833,10 +9430,16 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -8855,7 +9458,10 @@
       },
       "inputs": [
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "ItemRegistry"
@@ -8877,10 +9483,16 @@
       },
       "inputs": [
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "ref": "ItemRegistry"
@@ -8910,13 +9522,19 @@
           "name_ru": "Шлем культиста"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         }
       ]
     },
@@ -8939,13 +9557,19 @@
           "meta": null
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         }
       ]
     },
@@ -8971,10 +9595,16 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         }
       ]
     },
@@ -9216,7 +9846,10 @@
           "name_ru": "Зачарованная ткань"
         },
         {
-          "vanilla": "field_151074_bl"
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
         }
       ]
     },
@@ -9247,7 +9880,10 @@
           "name_ru": "Эфирная эссенция"
         },
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         }
       ]
     },
@@ -9343,10 +9979,16 @@
       },
       "components": [
         {
-          "vanilla": "field_150335_W"
+          "vanilla": "field_150335_W",
+          "reg": "tnt",
+          "name_en": "TNT",
+          "name_ru": "Динамит"
         },
         {
-          "vanilla": "field_151016_H"
+          "vanilla": "field_151016_H",
+          "reg": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
         },
         {
           "ref": "itemShard",
@@ -9355,10 +9997,16 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "vanilla": "field_150335_W"
+          "vanilla": "field_150335_W",
+          "reg": "tnt",
+          "name_en": "TNT",
+          "name_ru": "Динамит"
         },
         {
-          "vanilla": "field_151016_H"
+          "vanilla": "field_151016_H",
+          "reg": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
         },
         {
           "ref": "itemShard",
@@ -9452,11 +10100,17 @@
       },
       "instability": 3,
       "central": {
-        "vanilla": "field_150339_S"
+        "vanilla": "field_150339_S",
+        "reg": "iron_block",
+        "name_en": "Iron Block",
+        "name_ru": "Iron Block"
       },
       "components": [
         {
-          "vanilla": "field_151040_l"
+          "vanilla": "field_151040_l",
+          "reg": "iron_sword",
+          "name_en": "Iron Sword",
+          "name_ru": "Железный меч"
         },
         {
           "ref": "itemShard",
@@ -9465,7 +10119,10 @@
           "name_ru": "Энтропийный кристалл"
         },
         {
-          "vanilla": "field_151040_l"
+          "vanilla": "field_151040_l",
+          "reg": "iron_sword",
+          "name_en": "Iron Sword",
+          "name_ru": "Железный меч"
         },
         {
           "ref": "itemShard",
@@ -9556,7 +10213,10 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "ItemRegistry"
@@ -9718,7 +10378,10 @@
       },
       "components": [
         {
-          "vanilla": "field_151123_aH"
+          "vanilla": "field_151123_aH",
+          "reg": "slime_ball",
+          "name_en": "Slime Ball",
+          "name_ru": "Slime Ball"
         },
         {
           "ref": "itemGoggles",
@@ -9746,13 +10409,22 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
           "ref": "blockCustomPlant",
@@ -9767,7 +10439,10 @@
           "name_ru": "Мозг зомби"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -9789,19 +10464,34 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
-          "vanilla": "field_151170_bI"
+          "vanilla": "field_151170_bI",
+          "reg": "poisonous_potato",
+          "name_en": "Poisonous Potato",
+          "name_ru": "Ядовитый картофель"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -9823,19 +10513,34 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
-          "vanilla": "field_151117_aB"
+          "vanilla": "field_151117_aB",
+          "reg": "milk_bucket",
+          "name_en": "Milk Bucket",
+          "name_ru": "Milk Bucket"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -9874,13 +10579,22 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         }
       ]
     },
@@ -9929,10 +10643,16 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
       ]
     },
@@ -9975,10 +10695,16 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
       ]
     },
@@ -10156,7 +10882,10 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "ref": "itemResource",
@@ -10180,7 +10909,10 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "ref": "itemResource",
@@ -10207,32 +10939,47 @@
       },
       "instability": 2,
       "central": {
-        "vanilla": "field_150339_S"
+        "vanilla": "field_150339_S",
+        "reg": "iron_block",
+        "name_en": "Iron Block",
+        "name_ru": "Iron Block"
       },
       "components": [
         {
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151074_bl"
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
         },
         {
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151074_bl"
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
         },
         {
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151074_bl"
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
         },
         {
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151074_bl"
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
         }
       ]
     },
@@ -10362,7 +11109,10 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151074_bl"
+          "vanilla": "field_151074_bl",
+          "reg": "gold_nugget",
+          "name_en": "Gold Nugget",
+          "name_ru": "Золотой самородок"
         }
       ]
     },
@@ -10406,7 +11156,10 @@
           "name_ru": "Пустотная лопата"
         },
         {
-          "vanilla": "field_151045_i"
+          "vanilla": "field_151045_i",
+          "reg": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
         },
         {
           "ref": "itemSwordVoid",
@@ -10446,7 +11199,10 @@
       },
       "components": [
         {
-          "vanilla": "field_151123_aH"
+          "vanilla": "field_151123_aH",
+          "reg": "slime_ball",
+          "name_en": "Slime Ball",
+          "name_ru": "Slime Ball"
         },
         {
           "ref": "itemGoggles",
@@ -10474,13 +11230,22 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
           "ref": "blockCustomPlant",
@@ -10495,7 +11260,10 @@
           "name_ru": "Мозг зомби"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -10517,19 +11285,34 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
-          "vanilla": "field_151170_bI"
+          "vanilla": "field_151170_bI",
+          "reg": "poisonous_potato",
+          "name_en": "Poisonous Potato",
+          "name_ru": "Ядовитый картофель"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -10551,19 +11334,34 @@
       },
       "components": [
         {
-          "vanilla": "field_151100_aR"
+          "vanilla": "field_151100_aR",
+          "reg": "dye",
+          "name_en": "Dye",
+          "name_ru": "Dye"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         },
         {
-          "vanilla": "field_151117_aB"
+          "vanilla": "field_151117_aB",
+          "reg": "milk_bucket",
+          "name_en": "Milk Bucket",
+          "name_ru": "Milk Bucket"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -10596,13 +11394,22 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         }
       ]
     },
@@ -10639,10 +11446,16 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
       ]
     },
@@ -10676,10 +11489,16 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151116_aA"
+          "vanilla": "field_151116_aA",
+          "reg": "leather",
+          "name_en": "Leather",
+          "name_ru": "Кожа"
         }
       ]
     },
@@ -10710,13 +11529,22 @@
           "name_ru": "Таум-слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "itemResource",
@@ -10731,13 +11559,22 @@
           "name_ru": "Таум-слиток"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "itemResource",
@@ -10776,13 +11613,22 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "itemResource",
@@ -10797,13 +11643,22 @@
           "name_ru": "Слиток пустотного металла"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "itemResource",
@@ -10836,13 +11691,22 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "ItemRegistry"
@@ -10851,13 +11715,22 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151166_bC"
+          "vanilla": "field_151166_bC",
+          "reg": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "ItemRegistry"
@@ -10890,7 +11763,10 @@
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "ref": "itemShard",
@@ -10899,13 +11775,22 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "ref": "itemShard",
@@ -10914,7 +11799,10 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         }
       ]
     },
@@ -10933,14 +11821,20 @@
       },
       "instability": 7,
       "central": {
-        "vanilla": "field_151043_k"
+        "vanilla": "field_151043_k",
+        "reg": "gold_ingot",
+        "name_en": "Gold Ingot",
+        "name_ru": "Золотой слиток"
       },
       "components": [
         {
           "ref": "ItemRegistry"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "itemShard",
@@ -10949,13 +11843,22 @@
           "name_ru": "Сбалансированный кристалл"
         },
         {
-          "vanilla": "field_151079_bi"
+          "vanilla": "field_151079_bi",
+          "reg": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
         },
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
-          "vanilla": "field_151042_j"
+          "vanilla": "field_151042_j",
+          "reg": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
         },
         {
           "ref": "itemShard",
@@ -10964,7 +11867,10 @@
           "name_ru": "Сбалансированный кристалл"
         },
         {
-          "vanilla": "field_151079_bi"
+          "vanilla": "field_151079_bi",
+          "reg": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
         }
       ]
     },
@@ -11029,7 +11935,10 @@
           "name_ru": "Янтарь"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         },
         {
           "ref": "itemResource",
@@ -11044,7 +11953,10 @@
           "name_ru": "Янтарь"
         },
         {
-          "vanilla": "field_151043_k"
+          "vanilla": "field_151043_k",
+          "reg": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
         }
       ]
     },
@@ -11070,10 +11982,16 @@
           "meta": null
         },
         {
-          "vanilla": "field_151044_h"
+          "vanilla": "field_151044_h",
+          "reg": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь"
         },
         {
-          "vanilla": "field_151059_bz"
+          "vanilla": "field_151059_bz",
+          "reg": "fire_charge",
+          "name_en": "Fire Charge",
+          "name_ru": "Огненный шар"
         },
         {
           "ref": "itemResource",
@@ -11110,10 +12028,16 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
-          "vanilla": "field_150335_W"
+          "vanilla": "field_150335_W",
+          "reg": "tnt",
+          "name_en": "TNT",
+          "name_ru": "Динамит"
         },
         {
           "ref": "itemShard",
@@ -11122,7 +12046,10 @@
           "name_ru": "Энтропийный кристалл"
         },
         {
-          "vanilla": "field_151016_H"
+          "vanilla": "field_151016_H",
+          "reg": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
         }
       ]
     },
@@ -11148,13 +12075,22 @@
           "meta": null
         },
         {
-          "vanilla": "field_151103_aS"
+          "vanilla": "field_151103_aS",
+          "reg": "bone",
+          "name_en": "Bone",
+          "name_ru": "Кость"
         },
         {
-          "vanilla": "field_151078_bh"
+          "vanilla": "field_151078_bh",
+          "reg": "rotten_flesh",
+          "name_en": "Rotten Flesh",
+          "name_ru": "Гнилая плоть"
         },
         {
-          "vanilla": "field_151071_bq"
+          "vanilla": "field_151071_bq",
+          "reg": "fermented_spider_eye",
+          "name_en": "Fermented Spider Eye",
+          "name_ru": "Маринованный паучий глаз"
         },
         {
           "ref": "itemZombieBrain",
@@ -11192,10 +12128,16 @@
           "meta": null
         },
         {
-          "vanilla": "field_151044_h"
+          "vanilla": "field_151044_h",
+          "reg": "coal",
+          "name_en": "Coal",
+          "name_ru": "Уголь"
         },
         {
-          "vanilla": "field_151059_bz"
+          "vanilla": "field_151059_bz",
+          "reg": "fire_charge",
+          "name_en": "Fire Charge",
+          "name_ru": "Огненный шар"
         },
         {
           "ref": "itemResource",
@@ -11232,10 +12174,16 @@
           "name_ru": "Грозовой кристалл"
         },
         {
-          "vanilla": "field_151008_G"
+          "vanilla": "field_151008_G",
+          "reg": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
         },
         {
-          "vanilla": "field_150335_W"
+          "vanilla": "field_150335_W",
+          "reg": "tnt",
+          "name_en": "TNT",
+          "name_ru": "Динамит"
         },
         {
           "ref": "itemShard",
@@ -11244,7 +12192,10 @@
           "name_ru": "Энтропийный кристалл"
         },
         {
-          "vanilla": "field_151016_H"
+          "vanilla": "field_151016_H",
+          "reg": "gunpowder",
+          "name_en": "Gunpowder",
+          "name_ru": "Порох"
         }
       ]
     },
@@ -11270,13 +12221,22 @@
           "meta": null
         },
         {
-          "vanilla": "field_151103_aS"
+          "vanilla": "field_151103_aS",
+          "reg": "bone",
+          "name_en": "Bone",
+          "name_ru": "Кость"
         },
         {
-          "vanilla": "field_151078_bh"
+          "vanilla": "field_151078_bh",
+          "reg": "rotten_flesh",
+          "name_en": "Rotten Flesh",
+          "name_ru": "Гнилая плоть"
         },
         {
-          "vanilla": "field_151071_bq"
+          "vanilla": "field_151071_bq",
+          "reg": "fermented_spider_eye",
+          "name_en": "Fermented Spider Eye",
+          "name_ru": "Маринованный паучий глаз"
         },
         {
           "ref": "itemZombieBrain",

@@ -18,6 +18,8 @@ DECDIRS = ["decompTC","decompMB2","decompFM","decompTM","decompTT","decompAE2","
 # ---- item-name lang (from generated item-names.json) : lang-key -> {en,ru}
 names = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","item-names.json"),encoding="utf-8"))
 NAME = {i["key"]: i for i in names["items"]}
+# ---- vanilla SRG field -> {reg,name_en,name_ru}
+VANILLA = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","vanilla-names.json"),encoding="utf-8"))["fields"]
 
 # aspect field -> tag
 field_tag = {}
@@ -52,7 +54,9 @@ def resolve_item(tok):
         return {"ref":fld,"meta":(int(meta) if meta else None)}
     m = re.search(r'(?<![A-Za-z])(?:Items|Blocks)\.(\w+)', tok)
     if m:
-        return {"vanilla":m.group(1)}
+        fld=m.group(1); v=VANILLA.get(fld)
+        if v: return {"vanilla":fld,"reg":v["reg"],"name_en":v["name_en"],"name_ru":v["name_ru"]}
+        return {"vanilla":fld}
     m = re.search(r'new ItemStack\(\s*(\w+)', tok)
     if m:
         return {"ref":m.group(1)}
