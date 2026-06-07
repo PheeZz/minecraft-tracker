@@ -1096,8 +1096,8 @@
       "mod": "MagicBees"
     },
     {
-      "en": "Earthy",
-      "ru": "Earthy",
+      "en": "Earthen",
+      "ru": "Земляная",
       "mod": "MagicBees"
     },
     {
@@ -1186,48 +1186,48 @@
       "mod": "MagicBees"
     },
     {
-      "en": "Bigbad",
-      "ru": "Bigbad",
+      "en": "Big Bad",
+      "ru": "Злющая",
       "mod": "MagicBees"
     },
     {
-      "en": "Chicken",
-      "ru": "Chicken",
+      "en": "Poultry",
+      "ru": "Куриные",
       "mod": "MagicBees"
     },
     {
-      "en": "Beef",
-      "ru": "Beef",
+      "en": "Beefy",
+      "ru": "Мясистые",
       "mod": "MagicBees"
     },
     {
-      "en": "Pork",
-      "ru": "Pork",
+      "en": "Porcine",
+      "ru": "Свиные",
       "mod": "MagicBees"
     },
     {
       "en": "Sheepish",
-      "ru": "Sheepish",
+      "ru": "Овечья",
       "mod": "MagicBees"
     },
     {
       "en": "Neighsayer",
-      "ru": "Neighsayer",
+      "ru": "Лошадиная",
       "mod": "MagicBees"
     },
     {
       "en": "Catty",
-      "ru": "Catty",
+      "ru": "Кошачья",
       "mod": "MagicBees"
     },
     {
       "en": "Batty",
-      "ru": "Batty",
+      "ru": "Сумасшедшие",
       "mod": "MagicBees"
     },
     {
       "en": "Brainy",
-      "ru": "Brainy",
+      "ru": "Умные",
       "mod": "MagicBees"
     },
     {
@@ -1321,268 +1321,263 @@
       "mod": "MagicBees"
     },
     {
-      "en": "TcAir",
-      "ru": "TcAir",
+      "en": "Aer",
+      "ru": "Аура",
       "mod": "MagicBees"
     },
     {
-      "en": "TcFire",
-      "ru": "TcFire",
+      "en": "Ignis",
+      "ru": "Игнис",
       "mod": "MagicBees"
     },
     {
-      "en": "TcWater",
-      "ru": "TcWater",
+      "en": "Aqua",
+      "ru": "Аква",
       "mod": "MagicBees"
     },
     {
-      "en": "TcEarth",
-      "ru": "TcEarth",
+      "en": "Solum",
+      "ru": "Солим",
       "mod": "MagicBees"
     },
     {
-      "en": "TcOrder",
-      "ru": "TcOrder",
+      "en": "Ordered",
+      "ru": "Праекантатио",
       "mod": "MagicBees"
     },
     {
-      "en": "TcChaos",
-      "ru": "TcChaos",
+      "en": "Chaotic",
+      "ru": "Абсолютные",
       "mod": "MagicBees"
     },
     {
-      "en": "TcVis",
-      "ru": "TcVis",
+      "en": "Vis",
+      "ru": "Вис",
       "mod": "MagicBees"
     },
     {
-      "en": "TcRejuvenating",
-      "ru": "TcRejuvenating",
+      "en": "Rejuvenating",
+      "ru": "Омолаживающая",
       "mod": "MagicBees"
     },
     {
-      "en": "TcEmpowering",
-      "ru": "TcEmpowering",
+      "en": "Empowering",
+      "ru": "Усиливающая",
       "mod": "MagicBees"
     },
     {
-      "en": "TcNexus",
-      "ru": "TcNexus",
+      "en": "Nexus",
+      "ru": "Нексус",
       "mod": "MagicBees"
     },
     {
-      "en": "TcTaint",
-      "ru": "TcTaint",
+      "en": "Flux",
+      "ru": "Льняные",
       "mod": "MagicBees"
     },
     {
-      "en": "TcPure",
-      "ru": "TcPure",
+      "en": "Pure",
+      "ru": "Чистые",
       "mod": "MagicBees"
     },
     {
-      "en": "TcHungry",
-      "ru": "TcHungry",
+      "en": "Ravening",
+      "ru": "Алчная",
       "mod": "MagicBees"
     },
     {
-      "en": "TcWispy",
-      "ru": "TcWispy",
+      "en": "Wispy",
+      "ru": "Виспи",
       "mod": "MagicBees"
     },
     {
-      "en": "TcVoid",
-      "ru": "TcVoid",
+      "en": "Void",
+      "ru": "Пустотная",
       "mod": "MagicBees"
     },
     {
-      "en": "AmEssence",
-      "ru": "AmEssence",
+      "en": "Essence",
+      "ru": "Эссенция",
       "mod": "MagicBees"
     },
     {
-      "en": "AmQuintessence",
-      "ru": "AmQuintessence",
+      "en": "Quintessential",
+      "ru": "Квинтэссенция",
       "mod": "MagicBees"
     },
     {
-      "en": "AmAir",
-      "ru": "AmAir",
+      "en": "Aiolic",
+      "ru": "Эолова",
       "mod": "MagicBees"
     },
     {
-      "en": "AmEarth",
-      "ru": "AmEarth",
+      "en": "Terrestric",
+      "ru": "Земная",
       "mod": "MagicBees"
     },
     {
-      "en": "AmFire",
-      "ru": "AmFire",
+      "en": "Igneous",
+      "ru": "Магматическая",
       "mod": "MagicBees"
     },
     {
-      "en": "AmWater",
-      "ru": "AmWater",
+      "en": "Aqueous",
+      "ru": "Водянистая",
       "mod": "MagicBees"
     },
     {
-      "en": "AmArcane",
-      "ru": "AmArcane",
+      "en": "Arcane",
+      "ru": "Арканная",
       "mod": "MagicBees"
     },
     {
-      "en": "AmLightning",
-      "ru": "AmLightning",
+      "en": "Fulguric",
+      "ru": "Молниевая",
       "mod": "MagicBees"
     },
     {
-      "en": "AmPlant",
-      "ru": "AmPlant",
+      "en": "Fruticic",
+      "ru": "Кустарниковая",
       "mod": "MagicBees"
     },
     {
-      "en": "AmIce",
-      "ru": "AmIce",
+      "en": "Glacic",
+      "ru": "Гляциальная",
       "mod": "MagicBees"
     },
     {
-      "en": "AmVortex",
-      "ru": "AmVortex",
+      "en": "Vortex",
+      "ru": "Вихревые",
       "mod": "MagicBees"
     },
     {
-      "en": "AmWight",
-      "ru": "AmWight",
+      "en": "Wight",
+      "ru": "Умертвие",
       "mod": "MagicBees"
     },
     {
-      "en": "EeMinium",
-      "ru": "EeMinium",
+      "en": "Minium",
+      "ru": "Алхимические",
       "mod": "MagicBees"
     },
     {
-      "en": "RsaFluxed",
-      "ru": "RsaFluxed",
+      "en": "Fluxed",
+      "ru": "Флюксовая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeBronze",
-      "ru": "TeBronze",
+      "en": "Bronzed",
+      "ru": "Бронзовая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeElectrum",
-      "ru": "TeElectrum",
+      "en": "Electrum",
+      "ru": "Электрумовая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeNickel",
-      "ru": "TeNickel",
+      "en": "Nickel",
+      "ru": "Никелевая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeInvar",
-      "ru": "TeInvar",
+      "en": "Invar",
+      "ru": "Инваровая",
       "mod": "MagicBees"
     },
     {
-      "en": "TePlatinum",
-      "ru": "TePlatinum",
+      "en": "Platinum",
+      "ru": "Платиновая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeCoal",
-      "ru": "TeCoal",
+      "en": "Carbon",
+      "ru": "Углеродная",
       "mod": "MagicBees"
     },
     {
-      "en": "TeDestabilized",
-      "ru": "TeDestabilized",
+      "en": "Destabilized",
+      "ru": "Дестабилизированная",
       "mod": "MagicBees"
     },
     {
-      "en": "TeLux",
-      "ru": "TeLux",
+      "en": "Lux",
+      "ru": "Световая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeDante",
-      "ru": "TeDante",
+      "en": "Dante",
+      "ru": "Дантова",
       "mod": "MagicBees"
     },
     {
-      "en": "TePyro",
-      "ru": "TePyro",
+      "en": "Pyro",
+      "ru": "Пирокластическая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeBlizzy",
-      "ru": "TeBlizzy",
+      "en": "Blizzy",
+      "ru": "Метельная",
       "mod": "MagicBees"
     },
     {
-      "en": "TeGelid",
-      "ru": "TeGelid",
+      "en": "Gelid",
+      "ru": "Стылая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeShocking",
-      "ru": "TeShocking",
+      "en": "Shocking",
+      "ru": "Шокирующая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeAmped",
-      "ru": "TeAmped",
+      "en": "Amped",
+      "ru": "Заряженная",
       "mod": "MagicBees"
     },
     {
-      "en": "TeGrounded",
-      "ru": "TeGrounded",
+      "en": "Grounded",
+      "ru": "Заземлённая",
       "mod": "MagicBees"
     },
     {
-      "en": "TeRocking",
-      "ru": "TeRocking",
+      "en": "Winsome",
+      "ru": "Рокерская",
       "mod": "MagicBees"
     },
     {
-      "en": "TeWinsome",
-      "ru": "TeWinsome",
-      "mod": "MagicBees"
-    },
-    {
-      "en": "TeEndearing",
-      "ru": "TeEndearing",
+      "en": "Endearing",
+      "ru": "Милая",
       "mod": "MagicBees"
     },
     {
       "en": "Rooted",
-      "ru": "Rooted",
+      "ru": "Укоренённая",
       "mod": "MagicBees"
     },
     {
       "en": "Somnolent",
-      "ru": "Somnolent",
+      "ru": "Дремотная",
       "mod": "MagicBees"
     },
     {
       "en": "Dreaming",
-      "ru": "Dreaming",
+      "ru": "Сновидческая",
       "mod": "MagicBees"
     },
     {
       "en": "Blossom",
-      "ru": "Blossom",
+      "ru": "Цветущая",
       "mod": "MagicBees"
     },
     {
       "en": "Floral",
-      "ru": "Floral",
+      "ru": "Цветочная",
       "mod": "MagicBees"
     },
     {
-      "en": "AeSkystone",
-      "ru": "AeSkystone",
+      "en": "Skystone",
+      "ru": "Небокаменная",
       "mod": "MagicBees"
     },
     {
@@ -1622,17 +1617,17 @@
     },
     {
       "en": "Botanic",
-      "ru": "Botanic",
+      "ru": "Ботаническая",
       "mod": "MagicBees"
     },
     {
       "en": "Vazbee",
-      "ru": "Vazbee",
+      "ru": "Вазби",
       "mod": "MagicBees"
     },
     {
       "en": "Alfheim",
-      "ru": "Alfheim",
+      "ru": "Альвхеймская",
       "mod": "MagicBees"
     }
   ],

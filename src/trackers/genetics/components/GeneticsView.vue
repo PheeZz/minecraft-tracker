@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import GeneticsDashboard from './GeneticsDashboard.vue'
 import GeneCollection from './GeneCollection.vue'
 import GeneCard from './GeneCard.vue'
@@ -9,6 +9,9 @@ import type { AlleleDef, TraitDef } from '../domain/genetics'
 import { useGenesStore } from '../stores/useGenesStore'
 import { useGeneTargetsStore } from '../stores/useGeneTargetsStore'
 import { downloadJson, parseJsonFileText } from '@/shared/persistence/importExport'
+import { useTour } from '@/shared/ui/useTour'
+import { useOnboardingSeen } from '@/shared/composables/useOnboardingSeen'
+import { buildGeneticsTour } from '../onboarding/geneticsTour'
 
 type Panel = 'dashboard' | 'collection' | 'builder' | 'pipeline'
 const PANELS: { id: Panel; label: string }[] = [
@@ -23,6 +26,20 @@ const card = ref<{ trait: TraitDef; allele: AlleleDef } | null>(null)
 function pick(trait: TraitDef, allele: AlleleDef): void {
   card.value = { trait, allele }
 }
+
+// ── Обучение (как в пчёлах/деревьях): авто-старт при первом визите ──
+const onboarding = useOnboardingSeen('genetics')
+const tour = useTour(() => buildGeneticsTour({ setPanel: (p) => (panel.value = p) }), {
+  onDone: () => onboarding.markSeen(),
+})
+let autoStartTimer: ReturnType<typeof setTimeout> | undefined
+onMounted(() => {
+  if (!onboarding.seen()) autoStartTimer = setTimeout(() => void tour.start(), 500)
+})
+onBeforeUnmount(() => {
+  clearTimeout(autoStartTimer)
+  tour.destroy()
+})
 
 // ── Экспорт/импорт прогресса генетики (собранные гены + цели) ──
 const genes = useGenesStore()
@@ -59,7 +76,7 @@ async function onImport(e: Event): Promise<void> {
 
 <template>
   <div class="genetics">
-    <nav class="genetics__nav" aria-label="Разделы генетики">
+    <nav class="genetics__nav" data-tour="genetics-nav" aria-label="Разделы генетики">
       <div class="genetics__tabs" role="group">
         <button
           v-for="p in PANELS"
@@ -73,7 +90,15 @@ async function onImport(e: Event): Promise<void> {
           {{ p.label }}
         </button>
       </div>
-      <div class="genetics__data">
+      <div class="genetics__data" data-tour="genetics-data">
+        <button
+          type="button"
+          class="genetics__databtn"
+          title="Запустить обучение по разделу"
+          @click="tour.start()"
+        >
+          Обзор
+        </button>
         <button type="button" class="genetics__databtn" title="Экспорт прогресса" @click="onExport">
           Экспорт
         </button>
@@ -99,7 +124,7 @@ async function onImport(e: Event): Promise<void> {
       {{ msg.text }}
     </p>
 
-    <div class="genetics__body">
+    <div class="genetics__body" data-tour="genetics-body">
       <Transition name="gpanel" mode="out-in">
         <GeneticsDashboard v-if="panel === 'dashboard'" key="dashboard" @goto="panel = $event" />
         <GeneCollection v-else-if="panel === 'collection'" key="collection" @pick="pick" />
@@ -123,31 +148,44 @@ async function onImport(e: Event): Promise<void> {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 18px;
+  padding: 9px 18px;
   border-bottom: 1px solid var(--line);
   flex: none;
 }
 .genetics__tabs {
   display: flex;
   gap: 4px;
+  padding: 3px;
+  background: rgba(6, 13, 18, 0.55);
+  border: 1px solid var(--cardln);
+  border-radius: 11px;
 }
 .genetics__tab {
+  position: relative;
   font: inherit;
   font-size: 13px;
   font-weight: 600;
   color: var(--muted);
   background: none;
   border: 0;
-  padding: 7px 14px;
+  padding: 7px 15px;
   border-radius: 8px;
   cursor: pointer;
+  transition:
+    color 0.16s ease,
+    background 0.16s ease,
+    box-shadow 0.16s ease;
 }
 .genetics__tab.on {
-  background: var(--solid);
+  background: linear-gradient(180deg, #38d4de, var(--solid));
   color: var(--solid-ink);
+  box-shadow:
+    0 0 0 1px rgba(95, 224, 234, 0.5),
+    0 4px 14px var(--glow-cyan);
 }
 .genetics__tab:hover:not(.on) {
   color: var(--ink);
+  background: rgba(95, 224, 234, 0.08);
 }
 .genetics__tab:focus-visible,
 .genetics__databtn:focus-visible {
@@ -164,15 +202,20 @@ async function onImport(e: Event): Promise<void> {
   font-size: 12px;
   font-weight: 600;
   color: var(--ink2);
-  background: var(--card);
+  background: linear-gradient(180deg, var(--card2), var(--card));
   border: 1px solid var(--cardln);
   border-radius: 8px;
-  padding: 6px 10px;
+  padding: 6px 11px;
   cursor: pointer;
+  transition:
+    border-color 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease;
 }
 .genetics__databtn:hover {
   border-color: var(--honey-dk);
   color: var(--ink);
+  box-shadow: 0 0 0 1px var(--ring-cyan);
 }
 .genetics__msg {
   margin: 8px 18px 0;

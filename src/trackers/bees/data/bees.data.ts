@@ -3404,8 +3404,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Earthy',
-    en: 'Earthy',
+    id: 'Земляная',
+    en: 'Earthen',
     source: 'M',
     parents: [
       {
@@ -3722,7 +3722,7 @@ export const BEES: Bee[] = [
     source: 'M',
     parents: [
       {
-        p1: 'Batty',
+        p1: 'Сумасшедшие',
         p2: 'Эфирная',
         chance: 9,
       },
@@ -3760,8 +3760,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Bigbad',
-    en: 'Bigbad',
+    id: 'Злющая',
+    en: 'Big Bad',
     source: 'M',
     parents: [
       {
@@ -3779,8 +3779,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Chicken',
-    en: 'Chicken',
+    id: 'Куриные',
+    en: 'Poultry',
     source: 'M',
     parents: [
       {
@@ -3792,8 +3792,8 @@ export const BEES: Bee[] = [
     products: [],
   },
   {
-    id: 'Beef',
-    en: 'Beef',
+    id: 'Мясистые',
+    en: 'Beefy',
     source: 'M',
     parents: [
       {
@@ -3811,8 +3811,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Pork',
-    en: 'Pork',
+    id: 'Свиные',
+    en: 'Porcine',
     source: 'M',
     parents: [
       {
@@ -3830,12 +3830,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Sheepish',
+    id: 'Овечья',
     en: 'Sheepish',
     source: 'M',
     parents: [
       {
-        p1: 'Pork',
+        p1: 'Свиные',
         p2: 'Прячущиеся',
         chance: 13,
       },
@@ -3849,25 +3849,25 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Neighsayer',
+    id: 'Лошадиная',
     en: 'Neighsayer',
     source: 'M',
     parents: [
       {
-        p1: 'Beef',
-        p2: 'Sheepish',
+        p1: 'Мясистые',
+        p2: 'Овечья',
         chance: 12,
       },
     ],
     products: [],
   },
   {
-    id: 'Catty',
+    id: 'Кошачья',
     en: 'Catty',
     source: 'M',
     parents: [
       {
-        p1: 'Chicken',
+        p1: 'Куриные',
         p2: 'Паучая',
         chance: 15,
       },
@@ -3881,7 +3881,7 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Batty',
+    id: 'Сумасшедшие',
     en: 'Batty',
     source: 'M',
     parents: [
@@ -3905,7 +3905,7 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Brainy',
+    id: 'Умные',
     en: 'Brainy',
     source: 'M',
     parents: [
@@ -4269,8 +4269,8 @@ export const BEES: Bee[] = [
     products: [],
   },
   {
-    id: 'TcAir',
-    en: 'TcAir',
+    id: 'Аура',
+    en: 'Aer',
     source: 'M',
     parents: [
       {
@@ -4288,8 +4288,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcFire',
-    en: 'TcFire',
+    id: 'Игнис',
+    en: 'Ignis',
     source: 'M',
     parents: [
       {
@@ -4307,8 +4307,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcWater',
-    en: 'TcWater',
+    id: 'Аква',
+    en: 'Aqua',
     source: 'M',
     parents: [
       {
@@ -4326,13 +4326,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcEarth',
-    en: 'TcEarth',
+    id: 'Солим',
+    en: 'Solum',
     source: 'M',
     parents: [
       {
-        p1: 'Earthy',
-        p2: 'Earthy',
+        p1: 'Земляная',
+        p2: 'Земляная',
         chance: 8,
       },
     ],
@@ -4345,8 +4345,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcOrder',
-    en: 'TcOrder',
+    id: 'Праекантатио',
+    en: 'Ordered',
     source: 'M',
     parents: [
       {
@@ -4364,8 +4364,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcChaos',
-    en: 'TcChaos',
+    id: 'Абсолютные',
+    en: 'Chaotic',
     source: 'M',
     parents: [
       {
@@ -4383,8 +4383,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcVis',
-    en: 'TcVis',
+    id: 'Вис',
+    en: 'Vis',
     source: 'M',
     parents: [
       {
@@ -4402,13 +4402,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcRejuvenating',
-    en: 'TcRejuvenating',
+    id: 'Омолаживающая',
+    en: 'Rejuvenating',
     source: 'M',
     parents: [
       {
         p1: 'Приученная',
-        p2: 'TcVis',
+        p2: 'Вис',
         chance: 8,
       },
     ],
@@ -4421,13 +4421,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcEmpowering',
-    en: 'TcEmpowering',
+    id: 'Усиливающая',
+    en: 'Empowering',
     source: 'M',
     parents: [
       {
-        p1: 'TcVis',
-        p2: 'TcRejuvenating',
+        p1: 'Вис',
+        p2: 'Омолаживающая',
         chance: 6,
       },
     ],
@@ -4440,13 +4440,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcNexus',
-    en: 'TcNexus',
+    id: 'Нексус',
+    en: 'Nexus',
     source: 'M',
     parents: [
       {
-        p1: 'TcRejuvenating',
-        p2: 'TcEmpowering',
+        p1: 'Омолаживающая',
+        p2: 'Усиливающая',
         chance: 10,
       },
     ],
@@ -4464,13 +4464,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcTaint',
-    en: 'TcTaint',
+    id: 'Льняные',
+    en: 'Flux',
     source: 'M',
     parents: [
       {
         p1: 'Трансмутирующая',
-        p2: 'TcEmpowering',
+        p2: 'Усиливающая',
         chance: 11,
       },
     ],
@@ -4483,13 +4483,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcPure',
-    en: 'TcPure',
+    id: 'Чистые',
+    en: 'Pure',
     source: 'M',
     parents: [
       {
         p1: 'Трансмутирующая',
-        p2: 'TcRejuvenating',
+        p2: 'Омолаживающая',
         chance: 8,
       },
     ],
@@ -4507,13 +4507,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcHungry',
-    en: 'TcHungry',
+    id: 'Алчная',
+    en: 'Ravening',
     source: 'M',
     parents: [
       {
-        p1: 'Bigbad',
-        p2: 'TcVis',
+        p1: 'Злющая',
+        p2: 'Вис',
         chance: 20,
       },
     ],
@@ -4531,8 +4531,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcWispy',
-    en: 'TcWispy',
+    id: 'Виспи',
+    en: 'Wispy',
     source: 'M',
     parents: [
       {
@@ -4550,13 +4550,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TcVoid',
-    en: 'TcVoid',
+    id: 'Пустотная',
+    en: 'Void',
     source: 'M',
     parents: [
       {
         p1: 'Железистая',
-        p2: 'TcTaint',
+        p2: 'Льняные',
         chance: 5,
       },
     ],
@@ -4569,8 +4569,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmEssence',
-    en: 'AmEssence',
+    id: 'Эссенция',
+    en: 'Essence',
     source: 'M',
     parents: [
       {
@@ -4588,13 +4588,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmQuintessence',
-    en: 'AmQuintessence',
+    id: 'Квинтэссенция',
+    en: 'Quintessential',
     source: 'M',
     parents: [
       {
         p1: 'Магическая',
-        p2: 'AmEssence',
+        p2: 'Эссенция',
         chance: 7,
       },
     ],
@@ -4607,12 +4607,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmAir',
-    en: 'AmAir',
+    id: 'Эолова',
+    en: 'Aiolic',
     source: 'M',
     parents: [
       {
-        p1: 'AmEssence',
+        p1: 'Эссенция',
         p2: 'Ветряная',
         chance: 10,
       },
@@ -4626,13 +4626,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmEarth',
-    en: 'AmEarth',
+    id: 'Земная',
+    en: 'Terrestric',
     source: 'M',
     parents: [
       {
-        p1: 'AmEssence',
-        p2: 'Earthy',
+        p1: 'Эссенция',
+        p2: 'Земляная',
         chance: 10,
       },
     ],
@@ -4645,12 +4645,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmFire',
-    en: 'AmFire',
+    id: 'Магматическая',
+    en: 'Igneous',
     source: 'M',
     parents: [
       {
-        p1: 'AmEssence',
+        p1: 'Эссенция',
         p2: 'Огненная',
         chance: 10,
       },
@@ -4664,12 +4664,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmWater',
-    en: 'AmWater',
+    id: 'Водянистая',
+    en: 'Aqueous',
     source: 'M',
     parents: [
       {
-        p1: 'AmEssence',
+        p1: 'Эссенция',
         p2: 'Водная ✦',
         chance: 10,
       },
@@ -4683,12 +4683,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmArcane',
-    en: 'AmArcane',
+    id: 'Арканная',
+    en: 'Arcane',
     source: 'M',
     parents: [
       {
-        p1: 'AmEssence',
+        p1: 'Эссенция',
         p2: 'Эфирная',
         chance: 10,
       },
@@ -4702,13 +4702,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmLightning',
-    en: 'AmLightning',
+    id: 'Молниевая',
+    en: 'Fulguric',
     source: 'M',
     parents: [
       {
         p1: 'Ветряная',
-        p2: 'AmAir',
+        p2: 'Эолова',
         chance: 8,
       },
     ],
@@ -4721,13 +4721,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmPlant',
-    en: 'AmPlant',
+    id: 'Кустарниковая',
+    en: 'Fruticic',
     source: 'M',
     parents: [
       {
-        p1: 'Earthy',
-        p2: 'AmEarth',
+        p1: 'Земляная',
+        p2: 'Земная',
         chance: 8,
       },
     ],
@@ -4740,13 +4740,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmIce',
-    en: 'AmIce',
+    id: 'Гляциальная',
+    en: 'Glacic',
     source: 'M',
     parents: [
       {
         p1: 'Водная ✦',
-        p2: 'AmWater',
+        p2: 'Водянистая',
         chance: 8,
       },
     ],
@@ -4759,13 +4759,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmVortex',
-    en: 'AmVortex',
+    id: 'Вихревые',
+    en: 'Vortex',
     source: 'M',
     parents: [
       {
         p1: 'Прячущиеся',
-        p2: 'AmEssence',
+        p2: 'Эссенция',
         chance: 8,
       },
     ],
@@ -4778,8 +4778,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AmWight',
-    en: 'AmWight',
+    id: 'Умертвие',
+    en: 'Wight',
     source: 'M',
     parents: [
       {
@@ -4812,8 +4812,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'EeMinium',
-    en: 'EeMinium',
+    id: 'Алхимические',
+    en: 'Minium',
     source: 'M',
     parents: [
       {
@@ -4831,13 +4831,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'RsaFluxed',
-    en: 'RsaFluxed',
+    id: 'Флюксовая',
+    en: 'Fluxed',
     source: 'M',
     parents: [
       {
-        p1: 'TeElectrum',
-        p2: 'TeDestabilized',
+        p1: 'Электрумовая',
+        p2: 'Дестабилизированная',
         chance: 10,
       },
     ],
@@ -4850,8 +4850,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeBronze',
-    en: 'TeBronze',
+    id: 'Бронзовая',
+    en: 'Bronzed',
     source: 'M',
     parents: [
       {
@@ -4869,8 +4869,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeElectrum',
-    en: 'TeElectrum',
+    id: 'Электрумовая',
+    en: 'Electrum',
     source: 'M',
     parents: [
       {
@@ -4888,8 +4888,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeNickel',
-    en: 'TeNickel',
+    id: 'Никелевая',
+    en: 'Nickel',
     source: 'M',
     parents: [
       {
@@ -4907,13 +4907,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeInvar',
-    en: 'TeInvar',
+    id: 'Инваровая',
+    en: 'Invar',
     source: 'M',
     parents: [
       {
         p1: 'Железистая',
-        p2: 'TeNickel',
+        p2: 'Никелевая',
         chance: 14,
       },
     ],
@@ -4926,13 +4926,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TePlatinum',
-    en: 'TePlatinum',
+    id: 'Платиновая',
+    en: 'Platinum',
     source: 'M',
     parents: [
       {
-        p1: 'TeNickel',
-        p2: 'TeInvar',
+        p1: 'Никелевая',
+        p2: 'Инваровая',
         chance: 10,
       },
     ],
@@ -4945,8 +4945,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeCoal',
-    en: 'TeCoal',
+    id: 'Углеродная',
+    en: 'Carbon',
     source: 'M',
     parents: [
       {
@@ -4969,8 +4969,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeDestabilized',
-    en: 'TeDestabilized',
+    id: 'Дестабилизированная',
+    en: 'Destabilized',
     source: 'M',
     parents: [
       {
@@ -4993,8 +4993,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeLux',
-    en: 'TeLux',
+    id: 'Световая',
+    en: 'Lux',
     source: 'M',
     parents: [
       {
@@ -5017,8 +5017,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeDante',
-    en: 'TeDante',
+    id: 'Дантова',
+    en: 'Dante',
     source: 'M',
     parents: [
       {
@@ -5030,13 +5030,13 @@ export const BEES: Bee[] = [
     products: [],
   },
   {
-    id: 'TePyro',
-    en: 'TePyro',
+    id: 'Пирокластическая',
+    en: 'Pyro',
     source: 'M',
     parents: [
       {
-        p1: 'TeDante',
-        p2: 'TeCoal',
+        p1: 'Дантова',
+        p2: 'Углеродная',
         chance: 8,
       },
     ],
@@ -5054,8 +5054,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeBlizzy',
-    en: 'TeBlizzy',
+    id: 'Метельная',
+    en: 'Blizzy',
     source: 'M',
     parents: [
       {
@@ -5073,12 +5073,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeGelid',
-    en: 'TeGelid',
+    id: 'Стылая',
+    en: 'Gelid',
     source: 'M',
     parents: [
       {
-        p1: 'TeBlizzy',
+        p1: 'Метельная',
         p2: 'Ледяная',
         chance: 8,
       },
@@ -5092,8 +5092,8 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeShocking',
-    en: 'TeShocking',
+    id: 'Шокирующая',
+    en: 'Shocking',
     source: 'M',
     parents: [
       {
@@ -5111,12 +5111,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeAmped',
-    en: 'TeAmped',
+    id: 'Заряженная',
+    en: 'Amped',
     source: 'M',
     parents: [
       {
-        p1: 'TeShocking',
+        p1: 'Шокирующая',
         p2: 'Ветряная',
         chance: 8,
       },
@@ -5130,13 +5130,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeGrounded',
-    en: 'TeGrounded',
+    id: 'Заземлённая',
+    en: 'Grounded',
     source: 'M',
     parents: [
       {
         p1: 'Тлеющая',
-        p2: 'Earthy',
+        p2: 'Земляная',
         chance: 12,
       },
     ],
@@ -5149,13 +5149,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeRocking',
-    en: 'TeRocking',
+    id: 'Рокерская',
+    en: "Rockin'",
     source: 'M',
     parents: [
       {
-        p1: 'TeGrounded',
-        p2: 'Earthy',
+        p1: 'Заземлённая',
+        p2: 'Земляная',
         chance: 9,
       },
     ],
@@ -5168,12 +5168,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeWinsome',
-    en: 'TeWinsome',
+    id: 'Обаятельная',
+    en: 'Winsome',
     source: 'M',
     parents: [
       {
-        p1: 'TePlatinum',
+        p1: 'Платиновая',
         p2: 'Забвенная',
         chance: 12,
       },
@@ -5192,13 +5192,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'TeEndearing',
-    en: 'TeEndearing',
+    id: 'Милая',
+    en: 'Endearing',
     source: 'M',
     parents: [
       {
-        p1: 'TeWinsome',
-        p2: 'TeCoal',
+        p1: 'Обаятельная',
+        p2: 'Углеродная',
         chance: 8,
       },
     ],
@@ -5216,7 +5216,7 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Rooted',
+    id: 'Укоренённая',
     en: 'Rooted',
     source: 'M',
     parents: [
@@ -5235,12 +5235,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Somnolent',
+    id: 'Дремотная',
     en: 'Somnolent',
     source: 'M',
     parents: [
       {
-        p1: 'Rooted',
+        p1: 'Укоренённая',
         p2: 'Водная ✦',
         chance: 16,
       },
@@ -5259,13 +5259,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Dreaming',
+    id: 'Сновидческая',
     en: 'Dreaming',
     source: 'M',
     parents: [
       {
         p1: 'Ветряная',
-        p2: 'Somnolent',
+        p2: 'Дремотная',
         chance: 8,
       },
     ],
@@ -5283,13 +5283,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Blossom',
+    id: 'Цветущая',
     en: 'Blossom',
     source: 'M',
     parents: [
       {
-        p1: 'Botanic',
-        p2: 'Earthy',
+        p1: 'Ботаническая',
+        p2: 'Земляная',
         chance: 12,
       },
     ],
@@ -5307,13 +5307,13 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Floral',
+    id: 'Цветочная',
     en: 'Floral',
     source: 'M',
     parents: [
       {
-        p1: 'Botanic',
-        p2: 'Blossom',
+        p1: 'Ботаническая',
+        p2: 'Цветущая',
         chance: 8,
       },
     ],
@@ -5331,12 +5331,12 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'AeSkystone',
-    en: 'AeSkystone',
+    id: 'Небокаменная',
+    en: 'Skystone',
     source: 'M',
     parents: [
       {
-        p1: 'Earthy',
+        p1: 'Земляная',
         p2: 'Ветряная',
         chance: 20,
       },
@@ -5441,7 +5441,7 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Botanic',
+    id: 'Ботаническая',
     en: 'Botanic',
     source: 'M',
     parents: [],
@@ -5459,7 +5459,7 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Vazbee',
+    id: 'Вазби',
     en: 'Vazbee',
     source: 'M',
     parents: [],
@@ -5477,7 +5477,7 @@ export const BEES: Bee[] = [
     ],
   },
   {
-    id: 'Alfheim',
+    id: 'Альвхеймская',
     en: 'Alfheim',
     source: 'M',
     parents: [],

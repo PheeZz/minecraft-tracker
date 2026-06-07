@@ -6,8 +6,10 @@ import {
   collectionTotals,
   targetGeneState,
   targetSummary,
+  buildCarrierIndex,
+  carriersOf,
 } from './genetics'
-import type { TraitDef } from './genetics'
+import type { TraitDef, SpeciesGenomeLike } from './genetics'
 
 const TRAITS: TraitDef[] = [
   {
@@ -95,5 +97,29 @@ describe('targetSummary', () => {
       ru: 'Молниеносная',
       mod: 'MagicBees',
     })
+  })
+})
+
+describe('buildCarrierIndex / carriersOf', () => {
+  const GENOMES: SpeciesGenomeLike[] = [
+    {
+      en: 'Industrious',
+      ru: 'Трудолюбивая',
+      mod: 'Forestry',
+      genome: { speed: 'Fast', fertility: '2' },
+    },
+    { en: 'Imperial', ru: 'Имперская', mod: 'Forestry', genome: { speed: 'Fast', fertility: '4' } },
+    { en: 'Common', ru: 'Обычная', mod: 'Forestry', genome: { speed: 'Slow' } },
+  ]
+  const idx = buildCarrierIndex(GENOMES)
+
+  it('находит всех носителей аллеля', () => {
+    expect(carriersOf(idx, 'speed', 'Fast').map((s) => s.ru)).toEqual(['Трудолюбивая', 'Имперская'])
+  })
+  it('один носитель', () => {
+    expect(carriersOf(idx, 'fertility', '4').map((s) => s.en)).toEqual(['Imperial'])
+  })
+  it('пусто, если никто не несёт', () => {
+    expect(carriersOf(idx, 'speed', 'Fastest')).toEqual([])
   })
 })

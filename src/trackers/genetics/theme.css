@@ -1,40 +1,52 @@
 /* Тема трекера генетики — тёмная «лабораторная» (сине-бирюзовый + фиолет, ДНК-вайб). */
 [data-tracker='genetics'] {
   color-scheme: dark;
-  --bg: #0c1518;
-  --bg2: #091013;
-  --card: #122029;
-  --cardln: #263a42;
+  --bg: #0a141a;
+  --bg2: #060d12;
+  --card: #102029;
+  --card2: #13262f; /* верх градиентной заливки карточки */
+  --cardln: #294049;
   --panel: rgba(14, 26, 30, 0.62); /* фон боковых панелей (фростед поверх фона) */
-  --ink: #e7f1f2;
-  --ink2: #bcd0d2;
-  --muted: #80999d;
-  --dim: #8aa0a3;
-  --honey: #29b8c2; /* базовый акцент (бирюза) — имя токена общее с другими темами */
-  --honey-dk: #4fd6df; /* акцентный текст на тёмном — светлая бирюза */
+  --ink: #f2fafa;
+  --ink2: #d6e8ea; /* поднят контраст основного вторичного текста */
+  --muted: #a7bec1; /* поднят контраст вторичного текста на тёмном фоне */
+  --dim: #9bb2b5;
+  --honey: #2cc5d0; /* базовый акцент (бирюза) — имя токена общее с другими темами */
+  --honey-dk: #5fe0ea; /* акцентный текст на тёмном — светлая бирюза */
   --accent: var(--honey-dk); /* акцент для бренд-элементов */
-  --amber: #e6c15a;
+  --amber: #f0cb63;
   --rust: #e0813c;
-  --src-f: #3fc98e; /* зелёный «собрано» — читаем как текст и как фон бейджа */
-  --src-f-soft: rgba(63, 201, 142, 0.16);
+  --src-f: #46d79b; /* зелёный «собрано» — читаем как текст и как фон бейджа */
+  --src-f-soft: rgba(70, 215, 155, 0.16);
   --src-e: #d8743a;
   --src-e-soft: rgba(216, 116, 58, 0.16);
-  --src-m: #a98cf0; /* фиолет аддонов — читаемый как текст */
-  --src-m-soft: rgba(169, 140, 240, 0.18);
-  --line: rgba(79, 214, 223, 0.14);
-  --alt: #b79bf0; /* светлый фиолет для аддонных аллелей */
-  --scroll-thumb: #2a3f44;
+  --src-m: #b49bf2; /* фиолет аддонов — читаемый как текст */
+  --src-m-soft: rgba(180, 155, 242, 0.2);
+  --line: rgba(95, 224, 234, 0.16);
+  --alt: #c2adf5; /* светлый фиолет для аддонных аллелей */
+  --scroll-thumb: #2f4951;
 
   /* «сплошная» заливка для активной пилюли / кружка шага и текст на ней */
-  --solid: #29b8c2;
+  --solid: #2cc5d0;
   --solid-ink: #04181b;
+
+  /* Полировка: кольца/свечения/тени в духе проекта (ДНК-бирюза, фиолет). */
+  --ring-cyan: rgba(95, 224, 234, 0.45);
+  --glow-cyan: rgba(44, 197, 208, 0.35);
+  --glow-green: rgba(70, 215, 155, 0.4);
+  --glow-violet: rgba(180, 155, 242, 0.38);
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 6px 20px rgba(0, 0, 0, 0.32);
+  --shadow-card-hi: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 10px 30px rgba(0, 0, 0, 0.42);
+  --accent-grad: linear-gradient(135deg, var(--honey-dk), #7c8cf0);
+  --bar-grad: linear-gradient(90deg, var(--src-f), #5fe0ea);
 
   --font-display: 'Unbounded', sans-serif;
   --font-body: 'Manrope', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   background:
-    radial-gradient(70% 55% at 80% -10%, rgba(41, 184, 194, 0.12), transparent 60%),
-    radial-gradient(55% 50% at 0% 100%, rgba(155, 122, 214, 0.1), transparent 55%),
+    radial-gradient(58% 48% at 84% -12%, rgba(44, 197, 208, 0.16), transparent 62%),
+    radial-gradient(50% 46% at -6% 104%, rgba(155, 122, 214, 0.13), transparent 58%),
+    radial-gradient(40% 38% at 50% 50%, rgba(44, 197, 208, 0.04), transparent 70%),
     linear-gradient(160deg, var(--bg), var(--bg2));
 }

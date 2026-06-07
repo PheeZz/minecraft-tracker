@@ -1,0 +1,332 @@
+{
+  "Earthy": {
+    "en": "Earthen",
+    "ru": "Земляная",
+    "src": "офиц.ru_RU"
+  },
+  "Bigbad": {
+    "en": "Big Bad",
+    "ru": "Злющая",
+    "src": "мой перевод"
+  },
+  "Chicken": {
+    "en": "Poultry",
+    "ru": "Куриные",
+    "src": "офиц.ru_RU"
+  },
+  "Beef": {
+    "en": "Beefy",
+    "ru": "Мясистые",
+    "src": "офиц.ru_RU"
+  },
+  "Pork": {
+    "en": "Porcine",
+    "ru": "Свиные",
+    "src": "офиц.ru_RU"
+  },
+  "Sheepish": {
+    "en": "Sheepish",
+    "ru": "Овечья",
+    "src": "мой перевод"
+  },
+  "Neighsayer": {
+    "en": "Neighsayer",
+    "ru": "Лошадиная",
+    "src": "мой перевод"
+  },
+  "Catty": {
+    "en": "Catty",
+    "ru": "Кошачья",
+    "src": "мой перевод"
+  },
+  "Batty": {
+    "en": "Batty",
+    "ru": "Сумасшедшие",
+    "src": "офиц.ru_RU"
+  },
+  "Brainy": {
+    "en": "Brainy",
+    "ru": "Умные",
+    "src": "офиц.ru_RU"
+  },
+  "TcAir": {
+    "en": "Aer",
+    "ru": "Аура",
+    "src": "офиц.ru_RU"
+  },
+  "TcFire": {
+    "en": "Ignis",
+    "ru": "Игнис",
+    "src": "офиц.ru_RU"
+  },
+  "TcWater": {
+    "en": "Aqua",
+    "ru": "Аква",
+    "src": "офиц.ru_RU"
+  },
+  "TcEarth": {
+    "en": "Solum",
+    "ru": "Солим",
+    "src": "офиц.ru_RU"
+  },
+  "TcOrder": {
+    "en": "Ordered",
+    "ru": "Праекантатио",
+    "src": "офиц.ru_RU"
+  },
+  "TcChaos": {
+    "en": "Chaotic",
+    "ru": "Абсолютные",
+    "src": "офиц.ru_RU"
+  },
+  "TcVis": {
+    "en": "Vis",
+    "ru": "Вис",
+    "src": "офиц.ru_RU"
+  },
+  "TcRejuvenating": {
+    "en": "Rejuvenating",
+    "ru": "Омолаживающая",
+    "src": "мой перевод"
+  },
+  "TcEmpowering": {
+    "en": "Empowering",
+    "ru": "Усиливающая",
+    "src": "мой перевод"
+  },
+  "TcNexus": {
+    "en": "Nexus",
+    "ru": "Нексус",
+    "src": "мой перевод"
+  },
+  "TcTaint": {
+    "en": "Flux",
+    "ru": "Льняные",
+    "src": "офиц.ru_RU"
+  },
+  "TcPure": {
+    "en": "Pure",
+    "ru": "Чистые",
+    "src": "офиц.ru_RU"
+  },
+  "TcHungry": {
+    "en": "Ravening",
+    "ru": "Алчная",
+    "src": "мой перевод"
+  },
+  "TcWispy": {
+    "en": "Wispy",
+    "ru": "Виспи",
+    "src": "офиц.ru_RU"
+  },
+  "TcVoid": {
+    "en": "Void",
+    "ru": "Пустотная",
+    "src": "мой перевод"
+  },
+  "AmEssence": {
+    "en": "Essence",
+    "ru": "Эссенция",
+    "src": "мой перевод"
+  },
+  "AmQuintessence": {
+    "en": "Quintessential",
+    "ru": "Квинтэссенция",
+    "src": "мой перевод"
+  },
+  "AmAir": {
+    "en": "Aiolic",
+    "ru": "Эолова",
+    "src": "мой перевод"
+  },
+  "AmEarth": {
+    "en": "Terrestric",
+    "ru": "Земная",
+    "src": "мой перевод"
+  },
+  "AmFire": {
+    "en": "Igneous",
+    "ru": "Магматическая",
+    "src": "мой перевод"
+  },
+  "AmWater": {
+    "en": "Aqueous",
+    "ru": "Водянистая",
+    "src": "мой перевод"
+  },
+  "AmArcane": {
+    "en": "Arcane",
+    "ru": "Арканная",
+    "src": "мой перевод"
+  },
+  "AmLightning": {
+    "en": "Fulguric",
+    "ru": "Молниевая",
+    "src": "мой перевод"
+  },
+  "AmPlant": {
+    "en": "Fruticic",
+    "ru": "Кустарниковая",
+    "src": "мой перевод"
+  },
+  "AmIce": {
+    "en": "Glacic",
+    "ru": "Гляциальная",
+    "src": "мой перевод"
+  },
+  "AmVortex": {
+    "en": "Vortex",
+    "ru": "Вихревые",
+    "src": "офиц.ru_RU"
+  },
+  "AmWight": {
+    "en": "Wight",
+    "ru": "Умертвие",
+    "src": "мой перевод"
+  },
+  "EeMinium": {
+    "en": "Minium",
+    "ru": "Алхимические",
+    "src": "офиц.ru_RU"
+  },
+  "RsaFluxed": {
+    "en": "Fluxed",
+    "ru": "Флюксовая",
+    "src": "мой перевод"
+  },
+  "TeBronze": {
+    "en": "Bronzed",
+    "ru": "Бронзовая",
+    "src": "мой перевод"
+  },
+  "TeElectrum": {
+    "en": "Electrum",
+    "ru": "Электрумовая",
+    "src": "мой перевод"
+  },
+  "TeNickel": {
+    "en": "Nickel",
+    "ru": "Никелевая",
+    "src": "мой перевод"
+  },
+  "TeInvar": {
+    "en": "Invar",
+    "ru": "Инваровая",
+    "src": "мой перевод"
+  },
+  "TePlatinum": {
+    "en": "Platinum",
+    "ru": "Платиновая",
+    "src": "мой перевод"
+  },
+  "TeCoal": {
+    "en": "Carbon",
+    "ru": "Углеродная",
+    "src": "мой перевод"
+  },
+  "TeDestabilized": {
+    "en": "Destabilized",
+    "ru": "Дестабилизированная",
+    "src": "мой перевод"
+  },
+  "TeLux": {
+    "en": "Lux",
+    "ru": "Световая",
+    "src": "мой перевод"
+  },
+  "TeDante": {
+    "en": "Dante",
+    "ru": "Дантова",
+    "src": "мой перевод"
+  },
+  "TePyro": {
+    "en": "Pyro",
+    "ru": "Пирокластическая",
+    "src": "мой перевод"
+  },
+  "TeBlizzy": {
+    "en": "Blizzy",
+    "ru": "Метельная",
+    "src": "мой перевод"
+  },
+  "TeGelid": {
+    "en": "Gelid",
+    "ru": "Стылая",
+    "src": "мой перевод"
+  },
+  "TeShocking": {
+    "en": "Shocking",
+    "ru": "Шокирующая",
+    "src": "мой перевод"
+  },
+  "TeAmped": {
+    "en": "Amped",
+    "ru": "Заряженная",
+    "src": "мой перевод"
+  },
+  "TeGrounded": {
+    "en": "Grounded",
+    "ru": "Заземлённая",
+    "src": "мой перевод"
+  },
+  "TeRocking": {
+    "en": "Rockin'",
+    "ru": "Рокерская",
+    "src": "мой перевод"
+  },
+  "TeWinsome": {
+    "en": "Winsome",
+    "ru": "Обаятельная",
+    "src": "мой перевод"
+  },
+  "TeEndearing": {
+    "en": "Endearing",
+    "ru": "Милая",
+    "src": "мой перевод"
+  },
+  "Rooted": {
+    "en": "Rooted",
+    "ru": "Укоренённая",
+    "src": "мой перевод"
+  },
+  "Somnolent": {
+    "en": "Somnolent",
+    "ru": "Дремотная",
+    "src": "мой перевод"
+  },
+  "Dreaming": {
+    "en": "Dreaming",
+    "ru": "Сновидческая",
+    "src": "мой перевод"
+  },
+  "Blossom": {
+    "en": "Blossom",
+    "ru": "Цветущая",
+    "src": "мой перевод"
+  },
+  "Floral": {
+    "en": "Floral",
+    "ru": "Цветочная",
+    "src": "мой перевод"
+  },
+  "AeSkystone": {
+    "en": "Skystone",
+    "ru": "Небокаменная",
+    "src": "мой перевод"
+  },
+  "Botanic": {
+    "en": "Botanic",
+    "ru": "Ботаническая",
+    "src": "мой перевод"
+  },
+  "Vazbee": {
+    "en": "Vazbee",
+    "ru": "Вазби",
+    "src": "мой перевод"
+  },
+  "Alfheim": {
+    "en": "Alfheim",
+    "ru": "Альвхеймская",
+    "src": "мой перевод"
+  }
+}
