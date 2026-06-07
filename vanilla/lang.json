@@ -1,0 +1,2411 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 480,
+    "source": "MC 1.7.10 client.jar lang/en_US.lang + mcvanilla ru_RU.lang",
+    "note": "item.*.name / tile.*.name keys; ru falls back to en; format codes stripped"
+  },
+  "entries": [
+    {
+      "key": "item.apple.name",
+      "name_en": "Apple",
+      "name_ru": "Яблоко"
+    },
+    {
+      "key": "item.appleGold.name",
+      "name_en": "Golden Apple",
+      "name_ru": "Золотое яблоко"
+    },
+    {
+      "key": "item.arrow.name",
+      "name_en": "Arrow",
+      "name_ru": "Стрела"
+    },
+    {
+      "key": "item.bed.name",
+      "name_en": "Bed",
+      "name_ru": "Кровать"
+    },
+    {
+      "key": "item.beefCooked.name",
+      "name_en": "Steak",
+      "name_ru": "Стейк"
+    },
+    {
+      "key": "item.beefRaw.name",
+      "name_en": "Raw Beef",
+      "name_ru": "Сырая говядина"
+    },
+    {
+      "key": "item.blazePowder.name",
+      "name_en": "Blaze Powder",
+      "name_ru": "Огненный порошок"
+    },
+    {
+      "key": "item.blazeRod.name",
+      "name_en": "Blaze Rod",
+      "name_ru": "Стержень ифрита"
+    },
+    {
+      "key": "item.boat.name",
+      "name_en": "Boat",
+      "name_ru": "Лодка"
+    },
+    {
+      "key": "item.bone.name",
+      "name_en": "Bone",
+      "name_ru": "Кость"
+    },
+    {
+      "key": "item.book.name",
+      "name_en": "Book",
+      "name_ru": "Книга"
+    },
+    {
+      "key": "item.bootsChain.name",
+      "name_en": "Chain Boots",
+      "name_ru": "Кольчужные ботинки"
+    },
+    {
+      "key": "item.bootsCloth.name",
+      "name_en": "Leather Boots",
+      "name_ru": "Кожаные ботинки"
+    },
+    {
+      "key": "item.bootsDiamond.name",
+      "name_en": "Diamond Boots",
+      "name_ru": "Алмазные ботинки"
+    },
+    {
+      "key": "item.bootsGold.name",
+      "name_en": "Golden Boots",
+      "name_ru": "Золотые ботинки"
+    },
+    {
+      "key": "item.bootsIron.name",
+      "name_en": "Iron Boots",
+      "name_ru": "Железные ботинки"
+    },
+    {
+      "key": "item.bow.name",
+      "name_en": "Bow",
+      "name_ru": "Лук"
+    },
+    {
+      "key": "item.bowl.name",
+      "name_en": "Bowl",
+      "name_ru": "Миска"
+    },
+    {
+      "key": "item.bread.name",
+      "name_en": "Bread",
+      "name_ru": "Хлеб"
+    },
+    {
+      "key": "item.brewingStand.name",
+      "name_en": "Brewing Stand",
+      "name_ru": "Варочная стойка"
+    },
+    {
+      "key": "item.brick.name",
+      "name_en": "Brick",
+      "name_ru": "Кирпич"
+    },
+    {
+      "key": "item.bucket.name",
+      "name_en": "Bucket",
+      "name_ru": "Ведро"
+    },
+    {
+      "key": "item.bucketLava.name",
+      "name_en": "Lava Bucket",
+      "name_ru": "Ведро лавы"
+    },
+    {
+      "key": "item.bucketWater.name",
+      "name_en": "Water Bucket",
+      "name_ru": "Ведро воды"
+    },
+    {
+      "key": "item.cake.name",
+      "name_en": "Cake",
+      "name_ru": "Торт"
+    },
+    {
+      "key": "item.carrotGolden.name",
+      "name_en": "Golden Carrot",
+      "name_ru": "Золотая морковь"
+    },
+    {
+      "key": "item.carrotOnAStick.name",
+      "name_en": "Carrot on a Stick",
+      "name_ru": "Удочка с морковью"
+    },
+    {
+      "key": "item.carrots.name",
+      "name_en": "Carrot",
+      "name_ru": "Морковь"
+    },
+    {
+      "key": "item.cauldron.name",
+      "name_en": "Cauldron",
+      "name_ru": "Котёл"
+    },
+    {
+      "key": "item.charcoal.name",
+      "name_en": "Charcoal",
+      "name_ru": "Древесный уголь"
+    },
+    {
+      "key": "item.chestplateChain.name",
+      "name_en": "Chain Chestplate",
+      "name_ru": "Кольчуга"
+    },
+    {
+      "key": "item.chestplateCloth.name",
+      "name_en": "Leather Tunic",
+      "name_ru": "Кожаная куртка"
+    },
+    {
+      "key": "item.chestplateDiamond.name",
+      "name_en": "Diamond Chestplate",
+      "name_ru": "Алмазный нагрудник"
+    },
+    {
+      "key": "item.chestplateGold.name",
+      "name_en": "Golden Chestplate",
+      "name_ru": "Золотой нагрудник"
+    },
+    {
+      "key": "item.chestplateIron.name",
+      "name_en": "Iron Chestplate",
+      "name_ru": "Железный нагрудник"
+    },
+    {
+      "key": "item.chickenCooked.name",
+      "name_en": "Cooked Chicken",
+      "name_ru": "Жареная курица"
+    },
+    {
+      "key": "item.chickenRaw.name",
+      "name_en": "Raw Chicken",
+      "name_ru": "Курятина"
+    },
+    {
+      "key": "item.clay.name",
+      "name_en": "Clay",
+      "name_ru": "Глина"
+    },
+    {
+      "key": "item.clock.name",
+      "name_en": "Clock",
+      "name_ru": "Часы"
+    },
+    {
+      "key": "item.coal.name",
+      "name_en": "Coal",
+      "name_ru": "Уголь"
+    },
+    {
+      "key": "item.comparator.name",
+      "name_en": "Redstone Comparator",
+      "name_ru": "Компаратор"
+    },
+    {
+      "key": "item.compass.name",
+      "name_en": "Compass",
+      "name_ru": "Компас"
+    },
+    {
+      "key": "item.cookie.name",
+      "name_en": "Cookie",
+      "name_ru": "Печенье"
+    },
+    {
+      "key": "item.diamond.name",
+      "name_en": "Diamond",
+      "name_ru": "Алмаз"
+    },
+    {
+      "key": "item.diode.name",
+      "name_en": "Redstone Repeater",
+      "name_ru": "Повторитель"
+    },
+    {
+      "key": "item.doorIron.name",
+      "name_en": "Iron Door",
+      "name_ru": "Железная дверь"
+    },
+    {
+      "key": "item.doorWood.name",
+      "name_en": "Wooden Door",
+      "name_ru": "Деревянная дверь"
+    },
+    {
+      "key": "item.dyePowder.black.name",
+      "name_en": "Ink Sac",
+      "name_ru": "Чернильный мешок"
+    },
+    {
+      "key": "item.dyePowder.blue.name",
+      "name_en": "Lapis Lazuli",
+      "name_ru": "Лазурит"
+    },
+    {
+      "key": "item.dyePowder.brown.name",
+      "name_en": "Cocoa Beans",
+      "name_ru": "Какао-бобы"
+    },
+    {
+      "key": "item.dyePowder.cyan.name",
+      "name_en": "Cyan Dye",
+      "name_ru": "Бирюзовый краситель"
+    },
+    {
+      "key": "item.dyePowder.gray.name",
+      "name_en": "Gray Dye",
+      "name_ru": "Серый краситель"
+    },
+    {
+      "key": "item.dyePowder.green.name",
+      "name_en": "Cactus Green",
+      "name_ru": "Зеленый краситель"
+    },
+    {
+      "key": "item.dyePowder.lightBlue.name",
+      "name_en": "Light Blue Dye",
+      "name_ru": "Голубой краситель"
+    },
+    {
+      "key": "item.dyePowder.lime.name",
+      "name_en": "Lime Dye",
+      "name_ru": "Лаймовый краситель"
+    },
+    {
+      "key": "item.dyePowder.magenta.name",
+      "name_en": "Magenta Dye",
+      "name_ru": "Пурпурный краситель"
+    },
+    {
+      "key": "item.dyePowder.orange.name",
+      "name_en": "Orange Dye",
+      "name_ru": "Оранжевый краситель"
+    },
+    {
+      "key": "item.dyePowder.pink.name",
+      "name_en": "Pink Dye",
+      "name_ru": "Розовый краситель"
+    },
+    {
+      "key": "item.dyePowder.purple.name",
+      "name_en": "Purple Dye",
+      "name_ru": "Фиолетовый краситель"
+    },
+    {
+      "key": "item.dyePowder.red.name",
+      "name_en": "Rose Red",
+      "name_ru": "Красный краситель"
+    },
+    {
+      "key": "item.dyePowder.silver.name",
+      "name_en": "Light Gray Dye",
+      "name_ru": "Светло-серый краситель"
+    },
+    {
+      "key": "item.dyePowder.white.name",
+      "name_en": "Bone Meal",
+      "name_ru": "Костная мука"
+    },
+    {
+      "key": "item.dyePowder.yellow.name",
+      "name_en": "Dandelion Yellow",
+      "name_ru": "Желтый краситель"
+    },
+    {
+      "key": "item.egg.name",
+      "name_en": "Egg",
+      "name_ru": "Яйцо"
+    },
+    {
+      "key": "item.emerald.name",
+      "name_en": "Emerald",
+      "name_ru": "Изумруд"
+    },
+    {
+      "key": "item.emptyMap.name",
+      "name_en": "Empty Map",
+      "name_ru": "Чистая карта"
+    },
+    {
+      "key": "item.emptyPotion.name",
+      "name_en": "Water Bottle",
+      "name_ru": "Пузырёк воды"
+    },
+    {
+      "key": "item.enchantedBook.name",
+      "name_en": "Enchanted Book",
+      "name_ru": "Зачарованная книга"
+    },
+    {
+      "key": "item.enderPearl.name",
+      "name_en": "Ender Pearl",
+      "name_ru": "Жемчуг Эндера"
+    },
+    {
+      "key": "item.expBottle.name",
+      "name_en": "Bottle o' Enchanting",
+      "name_ru": "Пузырёк опыта"
+    },
+    {
+      "key": "item.eyeOfEnder.name",
+      "name_en": "Eye of Ender",
+      "name_ru": "Око Эндера"
+    },
+    {
+      "key": "item.feather.name",
+      "name_en": "Feather",
+      "name_ru": "Перо"
+    },
+    {
+      "key": "item.fermentedSpiderEye.name",
+      "name_en": "Fermented Spider Eye",
+      "name_ru": "Маринованный паучий глаз"
+    },
+    {
+      "key": "item.fireball.name",
+      "name_en": "Fire Charge",
+      "name_ru": "Огненный шар"
+    },
+    {
+      "key": "item.fireworks.name",
+      "name_en": "Firework Rocket",
+      "name_ru": "Фейерверк"
+    },
+    {
+      "key": "item.fireworksCharge.name",
+      "name_en": "Firework Star",
+      "name_ru": "Звёздочка"
+    },
+    {
+      "key": "item.fish.clownfish.raw.name",
+      "name_en": "Clownfish",
+      "name_ru": "Рыба-клоун"
+    },
+    {
+      "key": "item.fish.cod.cooked.name",
+      "name_en": "Cooked Fish",
+      "name_ru": "Приготовленная рыба"
+    },
+    {
+      "key": "item.fish.cod.raw.name",
+      "name_en": "Raw Fish",
+      "name_ru": "Сырая рыба"
+    },
+    {
+      "key": "item.fish.pufferfish.raw.name",
+      "name_en": "Pufferfish",
+      "name_ru": "Рыба фугу"
+    },
+    {
+      "key": "item.fish.salmon.cooked.name",
+      "name_en": "Cooked Salmon",
+      "name_ru": "Приготовленный лосось"
+    },
+    {
+      "key": "item.fish.salmon.raw.name",
+      "name_en": "Raw Salmon",
+      "name_ru": "Сырой лосось"
+    },
+    {
+      "key": "item.fishingRod.name",
+      "name_en": "Fishing Rod",
+      "name_ru": "Удочка"
+    },
+    {
+      "key": "item.flint.name",
+      "name_en": "Flint",
+      "name_ru": "Кремень"
+    },
+    {
+      "key": "item.flintAndSteel.name",
+      "name_en": "Flint and Steel",
+      "name_ru": "Огниво"
+    },
+    {
+      "key": "item.flowerPot.name",
+      "name_en": "Flower Pot",
+      "name_ru": "Цветочный горшок"
+    },
+    {
+      "key": "item.frame.name",
+      "name_en": "Item Frame",
+      "name_ru": "Рамка"
+    },
+    {
+      "key": "item.ghastTear.name",
+      "name_en": "Ghast Tear",
+      "name_ru": "Слеза Гаста"
+    },
+    {
+      "key": "item.glassBottle.name",
+      "name_en": "Glass Bottle",
+      "name_ru": "Пузырёк"
+    },
+    {
+      "key": "item.goldNugget.name",
+      "name_en": "Gold Nugget",
+      "name_ru": "Золотой самородок"
+    },
+    {
+      "key": "item.hatchetDiamond.name",
+      "name_en": "Diamond Axe",
+      "name_ru": "Алмазный топор"
+    },
+    {
+      "key": "item.hatchetGold.name",
+      "name_en": "Golden Axe",
+      "name_ru": "Золотой топор"
+    },
+    {
+      "key": "item.hatchetIron.name",
+      "name_en": "Iron Axe",
+      "name_ru": "Железный топор"
+    },
+    {
+      "key": "item.hatchetStone.name",
+      "name_en": "Stone Axe",
+      "name_ru": "Каменный топор"
+    },
+    {
+      "key": "item.hatchetWood.name",
+      "name_en": "Wooden Axe",
+      "name_ru": "Деревянный топор"
+    },
+    {
+      "key": "item.helmetChain.name",
+      "name_en": "Chain Helmet",
+      "name_ru": "Койф"
+    },
+    {
+      "key": "item.helmetCloth.name",
+      "name_en": "Leather Cap",
+      "name_ru": "Кожаный шлем"
+    },
+    {
+      "key": "item.helmetDiamond.name",
+      "name_en": "Diamond Helmet",
+      "name_ru": "Алмазный шлем"
+    },
+    {
+      "key": "item.helmetGold.name",
+      "name_en": "Golden Helmet",
+      "name_ru": "Золотой шлем"
+    },
+    {
+      "key": "item.helmetIron.name",
+      "name_en": "Iron Helmet",
+      "name_ru": "Железный шлем"
+    },
+    {
+      "key": "item.hoeDiamond.name",
+      "name_en": "Diamond Hoe",
+      "name_ru": "Алмазная мотыга"
+    },
+    {
+      "key": "item.hoeGold.name",
+      "name_en": "Golden Hoe",
+      "name_ru": "Золотая мотыга"
+    },
+    {
+      "key": "item.hoeIron.name",
+      "name_en": "Iron Hoe",
+      "name_ru": "Железная мотыга"
+    },
+    {
+      "key": "item.hoeStone.name",
+      "name_en": "Stone Hoe",
+      "name_ru": "Каменная мотыга"
+    },
+    {
+      "key": "item.hoeWood.name",
+      "name_en": "Wooden Hoe",
+      "name_ru": "Деревянная мотыга"
+    },
+    {
+      "key": "item.horsearmordiamond.name",
+      "name_en": "Diamond Horse Armor",
+      "name_ru": "Алмазная конская броня"
+    },
+    {
+      "key": "item.horsearmorgold.name",
+      "name_en": "Gold Horse Armor",
+      "name_ru": "Золотая конская броня"
+    },
+    {
+      "key": "item.horsearmormetal.name",
+      "name_en": "Iron Horse Armor",
+      "name_ru": "Железная конская броня"
+    },
+    {
+      "key": "item.ingotGold.name",
+      "name_en": "Gold Ingot",
+      "name_ru": "Золотой слиток"
+    },
+    {
+      "key": "item.ingotIron.name",
+      "name_en": "Iron Ingot",
+      "name_ru": "Железный слиток"
+    },
+    {
+      "key": "item.leash.name",
+      "name_en": "Lead",
+      "name_ru": "Поводок"
+    },
+    {
+      "key": "item.leather.name",
+      "name_en": "Leather",
+      "name_ru": "Кожа"
+    },
+    {
+      "key": "item.leaves.name",
+      "name_en": "Leaves",
+      "name_ru": "Листья"
+    },
+    {
+      "key": "item.leggingsChain.name",
+      "name_en": "Chain Leggings",
+      "name_ru": "Кольчужные поножи"
+    },
+    {
+      "key": "item.leggingsCloth.name",
+      "name_en": "Leather Pants",
+      "name_ru": "Кожаные штаны"
+    },
+    {
+      "key": "item.leggingsDiamond.name",
+      "name_en": "Diamond Leggings",
+      "name_ru": "Алмазные поножи"
+    },
+    {
+      "key": "item.leggingsGold.name",
+      "name_en": "Golden Leggings",
+      "name_ru": "Золотые поножи"
+    },
+    {
+      "key": "item.leggingsIron.name",
+      "name_en": "Iron Leggings",
+      "name_ru": "Железные поножи"
+    },
+    {
+      "key": "item.magmaCream.name",
+      "name_en": "Magma Cream",
+      "name_ru": "Сгусток магмы"
+    },
+    {
+      "key": "item.map.name",
+      "name_en": "Map",
+      "name_ru": "Карта"
+    },
+    {
+      "key": "item.melon.name",
+      "name_en": "Melon",
+      "name_ru": "Арбуз"
+    },
+    {
+      "key": "item.milk.name",
+      "name_en": "Milk",
+      "name_ru": "Молоко"
+    },
+    {
+      "key": "item.minecart.name",
+      "name_en": "Minecart",
+      "name_ru": "Вагонетка"
+    },
+    {
+      "key": "item.minecartChest.name",
+      "name_en": "Minecart with Chest",
+      "name_ru": "Грузовая вагонетка"
+    },
+    {
+      "key": "item.minecartCommandBlock.name",
+      "name_en": "Minecart with Command Block",
+      "name_ru": "Вагонетка с командным блоком"
+    },
+    {
+      "key": "item.minecartFurnace.name",
+      "name_en": "Minecart with Furnace",
+      "name_ru": "Самоходная вагонетка"
+    },
+    {
+      "key": "item.minecartHopper.name",
+      "name_en": "Minecart with Hopper",
+      "name_ru": "Вагонетка с загрузочной воронкой"
+    },
+    {
+      "key": "item.minecartTnt.name",
+      "name_en": "Minecart with TNT",
+      "name_ru": "Вагонетка с динамитом"
+    },
+    {
+      "key": "item.monsterPlacer.name",
+      "name_en": "Spawn",
+      "name_ru": "Призвать существо -"
+    },
+    {
+      "key": "item.mushroomStew.name",
+      "name_en": "Mushroom Stew",
+      "name_ru": "Тушеные грибы"
+    },
+    {
+      "key": "item.nameTag.name",
+      "name_en": "Name Tag",
+      "name_ru": "Бирка"
+    },
+    {
+      "key": "item.netherStalkSeeds.name",
+      "name_en": "Nether Wart",
+      "name_ru": "Адский нарост"
+    },
+    {
+      "key": "item.netherStar.name",
+      "name_en": "Nether Star",
+      "name_ru": "Адская звезда"
+    },
+    {
+      "key": "item.netherbrick.name",
+      "name_en": "Nether Brick",
+      "name_ru": "Адский кирпич"
+    },
+    {
+      "key": "item.netherquartz.name",
+      "name_en": "Nether Quartz",
+      "name_ru": "Кварц"
+    },
+    {
+      "key": "item.painting.name",
+      "name_en": "Painting",
+      "name_ru": "Картина"
+    },
+    {
+      "key": "item.paper.name",
+      "name_en": "Paper",
+      "name_ru": "Бумага"
+    },
+    {
+      "key": "item.pickaxeDiamond.name",
+      "name_en": "Diamond Pickaxe",
+      "name_ru": "Алмазная кирка"
+    },
+    {
+      "key": "item.pickaxeGold.name",
+      "name_en": "Golden Pickaxe",
+      "name_ru": "Золотая кирка"
+    },
+    {
+      "key": "item.pickaxeIron.name",
+      "name_en": "Iron Pickaxe",
+      "name_ru": "Железная кирка"
+    },
+    {
+      "key": "item.pickaxeStone.name",
+      "name_en": "Stone Pickaxe",
+      "name_ru": "Каменная кирка"
+    },
+    {
+      "key": "item.pickaxeWood.name",
+      "name_en": "Wooden Pickaxe",
+      "name_ru": "Деревянная кирка"
+    },
+    {
+      "key": "item.porkchopCooked.name",
+      "name_en": "Cooked Porkchop",
+      "name_ru": "Жареная свинина"
+    },
+    {
+      "key": "item.porkchopRaw.name",
+      "name_en": "Raw Porkchop",
+      "name_ru": "Сырая свинина"
+    },
+    {
+      "key": "item.potato.name",
+      "name_en": "Potato",
+      "name_ru": "Картофель"
+    },
+    {
+      "key": "item.potatoBaked.name",
+      "name_en": "Baked Potato",
+      "name_ru": "Печёный картофель"
+    },
+    {
+      "key": "item.potatoPoisonous.name",
+      "name_en": "Poisonous Potato",
+      "name_ru": "Ядовитый картофель"
+    },
+    {
+      "key": "item.potion.name",
+      "name_en": "Potion",
+      "name_ru": "Зелье"
+    },
+    {
+      "key": "item.pumpkinPie.name",
+      "name_en": "Pumpkin Pie",
+      "name_ru": "Тыквенный пирог"
+    },
+    {
+      "key": "item.record.name",
+      "name_en": "Music Disc",
+      "name_ru": "Пластинка"
+    },
+    {
+      "key": "item.redstone.name",
+      "name_en": "Redstone",
+      "name_ru": "Красная пыль"
+    },
+    {
+      "key": "item.reeds.name",
+      "name_en": "Sugar Canes",
+      "name_ru": "Сахарный тростник"
+    },
+    {
+      "key": "item.rottenFlesh.name",
+      "name_en": "Rotten Flesh",
+      "name_ru": "Гнилая плоть"
+    },
+    {
+      "key": "item.ruby.name",
+      "name_en": "Ruby",
+      "name_ru": "Рубин"
+    },
+    {
+      "key": "item.saddle.name",
+      "name_en": "Saddle",
+      "name_ru": "Седло"
+    },
+    {
+      "key": "item.seeds.name",
+      "name_en": "Seeds",
+      "name_ru": "Семена пшеницы"
+    },
+    {
+      "key": "item.seeds_melon.name",
+      "name_en": "Melon Seeds",
+      "name_ru": "Семена арбуза"
+    },
+    {
+      "key": "item.seeds_pumpkin.name",
+      "name_en": "Pumpkin Seeds",
+      "name_ru": "Семена тыквы"
+    },
+    {
+      "key": "item.shears.name",
+      "name_en": "Shears",
+      "name_ru": "Ножницы"
+    },
+    {
+      "key": "item.shovelDiamond.name",
+      "name_en": "Diamond Shovel",
+      "name_ru": "Алмазная лопата"
+    },
+    {
+      "key": "item.shovelGold.name",
+      "name_en": "Golden Shovel",
+      "name_ru": "Золотая лопата"
+    },
+    {
+      "key": "item.shovelIron.name",
+      "name_en": "Iron Shovel",
+      "name_ru": "Железная лопата"
+    },
+    {
+      "key": "item.shovelStone.name",
+      "name_en": "Stone Shovel",
+      "name_ru": "Каменная лопата"
+    },
+    {
+      "key": "item.shovelWood.name",
+      "name_en": "Wooden Shovel",
+      "name_ru": "Деревянная лопата"
+    },
+    {
+      "key": "item.sign.name",
+      "name_en": "Sign",
+      "name_ru": "Табличка"
+    },
+    {
+      "key": "item.skull.char.name",
+      "name_en": "Head",
+      "name_ru": "Голова"
+    },
+    {
+      "key": "item.skull.creeper.name",
+      "name_en": "Creeper Head",
+      "name_ru": "Голова крипера"
+    },
+    {
+      "key": "item.skull.player.name",
+      "name_en": "%s's Head",
+      "name_ru": "Голова %s"
+    },
+    {
+      "key": "item.skull.skeleton.name",
+      "name_en": "Skeleton Skull",
+      "name_ru": "Череп"
+    },
+    {
+      "key": "item.skull.wither.name",
+      "name_en": "Wither Skeleton Skull",
+      "name_ru": "Череп Скелета-Иссушителя"
+    },
+    {
+      "key": "item.skull.zombie.name",
+      "name_en": "Zombie Head",
+      "name_ru": "Голова зомби"
+    },
+    {
+      "key": "item.slimeball.name",
+      "name_en": "Slimeball",
+      "name_ru": "Сгусток слизи"
+    },
+    {
+      "key": "item.snowball.name",
+      "name_en": "Snowball",
+      "name_ru": "Снежок"
+    },
+    {
+      "key": "item.speckledMelon.name",
+      "name_en": "Glistering Melon",
+      "name_ru": "Сверкающий арбуз"
+    },
+    {
+      "key": "item.spiderEye.name",
+      "name_en": "Spider Eye",
+      "name_ru": "Паучий глаз"
+    },
+    {
+      "key": "item.stick.name",
+      "name_en": "Stick",
+      "name_ru": "Палка"
+    },
+    {
+      "key": "item.string.name",
+      "name_en": "String",
+      "name_ru": "Нить"
+    },
+    {
+      "key": "item.sugar.name",
+      "name_en": "Sugar",
+      "name_ru": "Сахар"
+    },
+    {
+      "key": "item.sulphur.name",
+      "name_en": "Gunpowder",
+      "name_ru": "Порох"
+    },
+    {
+      "key": "item.swordDiamond.name",
+      "name_en": "Diamond Sword",
+      "name_ru": "Алмазный меч"
+    },
+    {
+      "key": "item.swordGold.name",
+      "name_en": "Golden Sword",
+      "name_ru": "Золотой меч"
+    },
+    {
+      "key": "item.swordIron.name",
+      "name_en": "Iron Sword",
+      "name_ru": "Железный меч"
+    },
+    {
+      "key": "item.swordStone.name",
+      "name_en": "Stone Sword",
+      "name_ru": "Каменный меч"
+    },
+    {
+      "key": "item.swordWood.name",
+      "name_en": "Wooden Sword",
+      "name_ru": "Деревянный меч"
+    },
+    {
+      "key": "item.wheat.name",
+      "name_en": "Wheat",
+      "name_ru": "Пшеница"
+    },
+    {
+      "key": "item.writingBook.name",
+      "name_en": "Book and Quill",
+      "name_ru": "Книга и перо"
+    },
+    {
+      "key": "item.writtenBook.name",
+      "name_en": "Written Book",
+      "name_ru": "Завершенная книга"
+    },
+    {
+      "key": "item.yellowDust.name",
+      "name_en": "Glowstone Dust",
+      "name_ru": "Светящаяся пыль"
+    },
+    {
+      "key": "tile.activatorRail.name",
+      "name_en": "Activator Rail",
+      "name_ru": "Активирующие рельсы"
+    },
+    {
+      "key": "tile.anvil.intact.name",
+      "name_en": "Anvil",
+      "name_ru": "Наковальня"
+    },
+    {
+      "key": "tile.anvil.name",
+      "name_en": "Anvil",
+      "name_ru": "Наковальня"
+    },
+    {
+      "key": "tile.anvil.slightlyDamaged.name",
+      "name_en": "Slightly Damaged Anvil",
+      "name_ru": "Повреждённая наковальня"
+    },
+    {
+      "key": "tile.anvil.veryDamaged.name",
+      "name_en": "Very Damaged Anvil",
+      "name_ru": "Сильно повреждённая наковальня"
+    },
+    {
+      "key": "tile.beacon.name",
+      "name_en": "Beacon",
+      "name_ru": "Маяк"
+    },
+    {
+      "key": "tile.bed.name",
+      "name_en": "Bed",
+      "name_ru": "Кровать"
+    },
+    {
+      "key": "tile.bedrock.name",
+      "name_en": "Bedrock",
+      "name_ru": "Бедрок"
+    },
+    {
+      "key": "tile.blockCoal.name",
+      "name_en": "Block of Coal",
+      "name_ru": "Угольный блок"
+    },
+    {
+      "key": "tile.blockDiamond.name",
+      "name_en": "Block of Diamond",
+      "name_ru": "Алмазный блок"
+    },
+    {
+      "key": "tile.blockEmerald.name",
+      "name_en": "Block of Emerald",
+      "name_ru": "Изумрудный блок"
+    },
+    {
+      "key": "tile.blockGold.name",
+      "name_en": "Block of Gold",
+      "name_ru": "Золотой блок"
+    },
+    {
+      "key": "tile.blockIron.name",
+      "name_en": "Block of Iron",
+      "name_ru": "Железный блок"
+    },
+    {
+      "key": "tile.blockLapis.name",
+      "name_en": "Lapis Lazuli Block",
+      "name_ru": "Блок лазурита"
+    },
+    {
+      "key": "tile.blockRedstone.name",
+      "name_en": "Block of Redstone",
+      "name_ru": "Блок красного камня"
+    },
+    {
+      "key": "tile.bookshelf.name",
+      "name_en": "Bookshelf",
+      "name_ru": "Книжная полка"
+    },
+    {
+      "key": "tile.brick.name",
+      "name_en": "Bricks",
+      "name_ru": "Кирпичи"
+    },
+    {
+      "key": "tile.button.name",
+      "name_en": "Button",
+      "name_ru": "Кнопка"
+    },
+    {
+      "key": "tile.cactus.name",
+      "name_en": "Cactus",
+      "name_ru": "Кактус"
+    },
+    {
+      "key": "tile.cake.name",
+      "name_en": "Cake",
+      "name_ru": "Торт"
+    },
+    {
+      "key": "tile.carrots.name",
+      "name_en": "Carrots",
+      "name_ru": "Морковь"
+    },
+    {
+      "key": "tile.cauldron.name",
+      "name_en": "Cauldron",
+      "name_ru": "Котёл"
+    },
+    {
+      "key": "tile.chest.name",
+      "name_en": "Chest",
+      "name_ru": "Сундук"
+    },
+    {
+      "key": "tile.chestTrap.name",
+      "name_en": "Trapped Chest",
+      "name_ru": "Сундук-ловушка"
+    },
+    {
+      "key": "tile.clay.name",
+      "name_en": "Clay",
+      "name_ru": "Глина"
+    },
+    {
+      "key": "tile.clayHardened.name",
+      "name_en": "Hardened Clay",
+      "name_ru": "Обожжёная глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.black.name",
+      "name_en": "Black Stained Clay",
+      "name_ru": "Чёрная обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.blue.name",
+      "name_en": "Blue Stained Clay",
+      "name_ru": "Синяя обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.brown.name",
+      "name_en": "Brown Stained Clay",
+      "name_ru": "Коричневая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.cyan.name",
+      "name_en": "Cyan Stained Clay",
+      "name_ru": "Бирюзовая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.gray.name",
+      "name_en": "Gray Stained Clay",
+      "name_ru": "Серая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.green.name",
+      "name_en": "Green Stained Clay",
+      "name_ru": "Зелёная обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.lightBlue.name",
+      "name_en": "Light Blue Stained Clay",
+      "name_ru": "Голубая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.lime.name",
+      "name_en": "Lime Stained Clay",
+      "name_ru": "Лаймовая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.magenta.name",
+      "name_en": "Magenta Stained Clay",
+      "name_ru": "Пурпурная обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.orange.name",
+      "name_en": "Orange Stained Clay",
+      "name_ru": "Оранжевая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.pink.name",
+      "name_en": "Pink Stained Clay",
+      "name_ru": "Розовая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.purple.name",
+      "name_en": "Purple Stained Clay",
+      "name_ru": "Фиолетовая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.red.name",
+      "name_en": "Red Stained Clay",
+      "name_ru": "Красная обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.silver.name",
+      "name_en": "Light Gray Stained Clay",
+      "name_ru": "Светло-серая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.white.name",
+      "name_en": "White Stained Clay",
+      "name_ru": "Белая обожжённая глина"
+    },
+    {
+      "key": "tile.clayHardenedStained.yellow.name",
+      "name_en": "Yellow Stained Clay",
+      "name_ru": "Жёлтая обожжённая глина"
+    },
+    {
+      "key": "tile.cloth.black.name",
+      "name_en": "Black Wool",
+      "name_ru": "Черная шерсть"
+    },
+    {
+      "key": "tile.cloth.blue.name",
+      "name_en": "Blue Wool",
+      "name_ru": "Синяя шерсть"
+    },
+    {
+      "key": "tile.cloth.brown.name",
+      "name_en": "Brown Wool",
+      "name_ru": "Коричневая шерсть"
+    },
+    {
+      "key": "tile.cloth.cyan.name",
+      "name_en": "Cyan Wool",
+      "name_ru": "Бирюзовая шерсть"
+    },
+    {
+      "key": "tile.cloth.gray.name",
+      "name_en": "Gray Wool",
+      "name_ru": "Серая шерсть"
+    },
+    {
+      "key": "tile.cloth.green.name",
+      "name_en": "Green Wool",
+      "name_ru": "Зеленая шерсть"
+    },
+    {
+      "key": "tile.cloth.lightBlue.name",
+      "name_en": "Light Blue Wool",
+      "name_ru": "Голубая шерсть"
+    },
+    {
+      "key": "tile.cloth.lime.name",
+      "name_en": "Lime Wool",
+      "name_ru": "Лаймовая шерсть"
+    },
+    {
+      "key": "tile.cloth.magenta.name",
+      "name_en": "Magenta Wool",
+      "name_ru": "Пурпурная шерсть"
+    },
+    {
+      "key": "tile.cloth.name",
+      "name_en": "Wool",
+      "name_ru": "Шерсть"
+    },
+    {
+      "key": "tile.cloth.orange.name",
+      "name_en": "Orange Wool",
+      "name_ru": "Оранжевая шерсть"
+    },
+    {
+      "key": "tile.cloth.pink.name",
+      "name_en": "Pink Wool",
+      "name_ru": "Розовая шерсть"
+    },
+    {
+      "key": "tile.cloth.purple.name",
+      "name_en": "Purple Wool",
+      "name_ru": "Фиолетовая шерсть"
+    },
+    {
+      "key": "tile.cloth.red.name",
+      "name_en": "Red Wool",
+      "name_ru": "Красная шерсть"
+    },
+    {
+      "key": "tile.cloth.silver.name",
+      "name_en": "Light Gray Wool",
+      "name_ru": "Светло-серая шерсть"
+    },
+    {
+      "key": "tile.cloth.white.name",
+      "name_en": "Wool",
+      "name_ru": "Шерсть"
+    },
+    {
+      "key": "tile.cloth.yellow.name",
+      "name_en": "Yellow Wool",
+      "name_ru": "Желтая шерсть"
+    },
+    {
+      "key": "tile.cobbleWall.mossy.name",
+      "name_en": "Mossy Cobblestone Wall",
+      "name_ru": "Ограда из замшелого булыжника"
+    },
+    {
+      "key": "tile.cobbleWall.normal.name",
+      "name_en": "Cobblestone Wall",
+      "name_ru": "Каменная ограда"
+    },
+    {
+      "key": "tile.cocoa.name",
+      "name_en": "Cocoa",
+      "name_ru": "Какао"
+    },
+    {
+      "key": "tile.commandBlock.name",
+      "name_en": "Command Block",
+      "name_ru": "Командный блок"
+    },
+    {
+      "key": "tile.crops.name",
+      "name_en": "Crops",
+      "name_ru": "Всходы"
+    },
+    {
+      "key": "tile.daylightDetector.name",
+      "name_en": "Daylight Sensor",
+      "name_ru": "Датчик дневного света"
+    },
+    {
+      "key": "tile.deadbush.name",
+      "name_en": "Dead Bush",
+      "name_ru": "Мертвый куст"
+    },
+    {
+      "key": "tile.detectorRail.name",
+      "name_en": "Detector Rail",
+      "name_ru": "Рельсы с датчиком"
+    },
+    {
+      "key": "tile.dirt.default.name",
+      "name_en": "Dirt",
+      "name_ru": "Земля"
+    },
+    {
+      "key": "tile.dirt.podzol.name",
+      "name_en": "Podzol",
+      "name_ru": "Подзол"
+    },
+    {
+      "key": "tile.dispenser.name",
+      "name_en": "Dispenser",
+      "name_ru": "Раздатчик"
+    },
+    {
+      "key": "tile.doorIron.name",
+      "name_en": "Iron Door",
+      "name_ru": "Железная дверь"
+    },
+    {
+      "key": "tile.doorWood.name",
+      "name_en": "Wooden Door",
+      "name_ru": "Деревянная дверь"
+    },
+    {
+      "key": "tile.doublePlant.fern.name",
+      "name_en": "Large Fern",
+      "name_ru": "Раскидистый папоротник"
+    },
+    {
+      "key": "tile.doublePlant.grass.name",
+      "name_en": "Double Tallgrass",
+      "name_ru": "Двойная высокая трава"
+    },
+    {
+      "key": "tile.doublePlant.paeonia.name",
+      "name_en": "Peony",
+      "name_ru": "Пион"
+    },
+    {
+      "key": "tile.doublePlant.rose.name",
+      "name_en": "Rose Bush",
+      "name_ru": "Розовый куст"
+    },
+    {
+      "key": "tile.doublePlant.sunflower.name",
+      "name_en": "Sunflower",
+      "name_ru": "Подсолнух"
+    },
+    {
+      "key": "tile.doublePlant.syringa.name",
+      "name_en": "Lilac",
+      "name_ru": "Сирень"
+    },
+    {
+      "key": "tile.dragonEgg.name",
+      "name_en": "Dragon Egg",
+      "name_ru": "Яйцо дракона"
+    },
+    {
+      "key": "tile.dropper.name",
+      "name_en": "Dropper",
+      "name_ru": "Выбрасыватель"
+    },
+    {
+      "key": "tile.enchantmentTable.name",
+      "name_en": "Enchantment Table",
+      "name_ru": "Стол зачарований"
+    },
+    {
+      "key": "tile.endPortalFrame.name",
+      "name_en": "End Portal",
+      "name_ru": "Портал в Энд"
+    },
+    {
+      "key": "tile.enderChest.name",
+      "name_en": "Ender Chest",
+      "name_ru": "Сундук Эндера"
+    },
+    {
+      "key": "tile.farmland.name",
+      "name_en": "Farmland",
+      "name_ru": "Пашня"
+    },
+    {
+      "key": "tile.fence.name",
+      "name_en": "Fence",
+      "name_ru": "Забор"
+    },
+    {
+      "key": "tile.fenceGate.name",
+      "name_en": "Fence Gate",
+      "name_ru": "Калитка"
+    },
+    {
+      "key": "tile.fenceIron.name",
+      "name_en": "Iron Bars",
+      "name_ru": "Железные прутья"
+    },
+    {
+      "key": "tile.fire.name",
+      "name_en": "Fire",
+      "name_ru": "Огонь"
+    },
+    {
+      "key": "tile.flower1.dandelion.name",
+      "name_en": "Dandelion",
+      "name_ru": "Одуванчик"
+    },
+    {
+      "key": "tile.flower2.allium.name",
+      "name_en": "Allium",
+      "name_ru": "Лук"
+    },
+    {
+      "key": "tile.flower2.blueOrchid.name",
+      "name_en": "Blue Orchid",
+      "name_ru": "Синяя орхидея"
+    },
+    {
+      "key": "tile.flower2.houstonia.name",
+      "name_en": "Azure Bluet",
+      "name_ru": "Голубой василек"
+    },
+    {
+      "key": "tile.flower2.oxeyeDaisy.name",
+      "name_en": "Oxeye Daisy",
+      "name_ru": "Ромашка"
+    },
+    {
+      "key": "tile.flower2.poppy.name",
+      "name_en": "Poppy",
+      "name_ru": "Мак"
+    },
+    {
+      "key": "tile.flower2.tulipOrange.name",
+      "name_en": "Orange Tulip",
+      "name_ru": "Оранжевый тюльпан"
+    },
+    {
+      "key": "tile.flower2.tulipPink.name",
+      "name_en": "Pink Tulip",
+      "name_ru": "Розовый тюльпан"
+    },
+    {
+      "key": "tile.flower2.tulipRed.name",
+      "name_en": "Red Tulip",
+      "name_ru": "Красный тюльпан"
+    },
+    {
+      "key": "tile.flower2.tulipWhite.name",
+      "name_en": "White Tulip",
+      "name_ru": "Белый тюльпан"
+    },
+    {
+      "key": "tile.furnace.name",
+      "name_en": "Furnace",
+      "name_ru": "Печь"
+    },
+    {
+      "key": "tile.glass.name",
+      "name_en": "Glass",
+      "name_ru": "Стекло"
+    },
+    {
+      "key": "tile.goldenRail.name",
+      "name_en": "Powered Rail",
+      "name_ru": "Энергорельсы"
+    },
+    {
+      "key": "tile.grass.name",
+      "name_en": "Grass Block",
+      "name_ru": "Блок травы"
+    },
+    {
+      "key": "tile.gravel.name",
+      "name_en": "Gravel",
+      "name_ru": "Гравий"
+    },
+    {
+      "key": "tile.hayBlock.name",
+      "name_en": "Hay Bale",
+      "name_ru": "Сноп сена"
+    },
+    {
+      "key": "tile.hellrock.name",
+      "name_en": "Netherrack",
+      "name_ru": "Адский камень"
+    },
+    {
+      "key": "tile.hellsand.name",
+      "name_en": "Soul Sand",
+      "name_ru": "Песок душ"
+    },
+    {
+      "key": "tile.hopper.name",
+      "name_en": "Hopper",
+      "name_ru": "Воронка"
+    },
+    {
+      "key": "tile.ice.name",
+      "name_en": "Ice",
+      "name_ru": "Лёд"
+    },
+    {
+      "key": "tile.icePacked.name",
+      "name_en": "Packed Ice",
+      "name_ru": "Плотный лёд"
+    },
+    {
+      "key": "tile.jukebox.name",
+      "name_en": "Jukebox",
+      "name_ru": "Проигрыватель"
+    },
+    {
+      "key": "tile.ladder.name",
+      "name_en": "Ladder",
+      "name_ru": "Лестница"
+    },
+    {
+      "key": "tile.lava.name",
+      "name_en": "Lava",
+      "name_ru": "Лава"
+    },
+    {
+      "key": "tile.leaves.acacia.name",
+      "name_en": "Acacia Leaves",
+      "name_ru": "Листья акации"
+    },
+    {
+      "key": "tile.leaves.big_oak.name",
+      "name_en": "Dark Oak Leaves",
+      "name_ru": "Листья тёмного дуба"
+    },
+    {
+      "key": "tile.leaves.birch.name",
+      "name_en": "Birch Leaves",
+      "name_ru": "Берёзовые листья"
+    },
+    {
+      "key": "tile.leaves.jungle.name",
+      "name_en": "Jungle Leaves",
+      "name_ru": "Листья тропического дерева"
+    },
+    {
+      "key": "tile.leaves.name",
+      "name_en": "Leaves",
+      "name_ru": "Листья"
+    },
+    {
+      "key": "tile.leaves.oak.name",
+      "name_en": "Oak Leaves",
+      "name_ru": "Дубовые листья"
+    },
+    {
+      "key": "tile.leaves.spruce.name",
+      "name_en": "Spruce Leaves",
+      "name_ru": "Хвоя"
+    },
+    {
+      "key": "tile.lever.name",
+      "name_en": "Lever",
+      "name_ru": "Рычаг"
+    },
+    {
+      "key": "tile.lightgem.name",
+      "name_en": "Glowstone",
+      "name_ru": "Светящийся камень"
+    },
+    {
+      "key": "tile.litpumpkin.name",
+      "name_en": "Jack o'Lantern",
+      "name_ru": "Светильник Джека"
+    },
+    {
+      "key": "tile.lockedchest.name",
+      "name_en": "Locked chest",
+      "name_ru": "Запертый сундук"
+    },
+    {
+      "key": "tile.log.acacia.name",
+      "name_en": "Acacia Wood",
+      "name_ru": "Древесина акации"
+    },
+    {
+      "key": "tile.log.big_oak.name",
+      "name_en": "Dark Oak Wood",
+      "name_ru": "Древесина тёмного дуба"
+    },
+    {
+      "key": "tile.log.birch.name",
+      "name_en": "Birch Wood",
+      "name_ru": "Берёза"
+    },
+    {
+      "key": "tile.log.jungle.name",
+      "name_en": "Jungle Wood",
+      "name_ru": "Тропическое дерево"
+    },
+    {
+      "key": "tile.log.name",
+      "name_en": "Wood",
+      "name_ru": "Дерево"
+    },
+    {
+      "key": "tile.log.oak.name",
+      "name_en": "Oak Wood",
+      "name_ru": "Дуб"
+    },
+    {
+      "key": "tile.log.spruce.name",
+      "name_en": "Spruce Wood",
+      "name_ru": "Ель"
+    },
+    {
+      "key": "tile.melon.name",
+      "name_en": "Melon",
+      "name_ru": "Арбуз"
+    },
+    {
+      "key": "tile.mobSpawner.name",
+      "name_en": "Monster Spawner",
+      "name_ru": "Рассадник монстров"
+    },
+    {
+      "key": "tile.monsterStoneEgg.brick.name",
+      "name_en": "Stone Brick Monster Egg",
+      "name_ru": "Каменный кирпич с монстрами"
+    },
+    {
+      "key": "tile.monsterStoneEgg.chiseledbrick.name",
+      "name_en": "Chiseled Stone Brick Monster Egg",
+      "name_ru": "Резной каменный кирпич с монстрами"
+    },
+    {
+      "key": "tile.monsterStoneEgg.cobble.name",
+      "name_en": "Cobblestone Monster Egg",
+      "name_ru": "Булыжник с монстрами"
+    },
+    {
+      "key": "tile.monsterStoneEgg.crackedbrick.name",
+      "name_en": "Cracked Stone Brick Monster Egg",
+      "name_ru": "Потрескавшийся каменный кирпич с монстрами"
+    },
+    {
+      "key": "tile.monsterStoneEgg.mossybrick.name",
+      "name_en": "Mossy Stone Brick Monster Egg",
+      "name_ru": "Замшелый каменный кирпич с монстрами"
+    },
+    {
+      "key": "tile.monsterStoneEgg.stone.name",
+      "name_en": "Stone Monster Egg",
+      "name_ru": "Камень с монстрами"
+    },
+    {
+      "key": "tile.mushroom.name",
+      "name_en": "Mushroom",
+      "name_ru": "Гриб"
+    },
+    {
+      "key": "tile.musicBlock.name",
+      "name_en": "Note Block",
+      "name_ru": "Нотный блок"
+    },
+    {
+      "key": "tile.mycel.name",
+      "name_en": "Mycelium",
+      "name_ru": "Мицелий"
+    },
+    {
+      "key": "tile.netherBrick.name",
+      "name_en": "Nether Brick",
+      "name_ru": "Адские кирпичи"
+    },
+    {
+      "key": "tile.netherFence.name",
+      "name_en": "Nether Brick Fence",
+      "name_ru": "Адский забор"
+    },
+    {
+      "key": "tile.netherStalk.name",
+      "name_en": "Nether Wart",
+      "name_ru": "Адский нарост"
+    },
+    {
+      "key": "tile.netherquartz.name",
+      "name_en": "Nether Quartz Ore",
+      "name_ru": "Кварцевая руда"
+    },
+    {
+      "key": "tile.notGate.name",
+      "name_en": "Redstone Torch",
+      "name_ru": "Красный факел"
+    },
+    {
+      "key": "tile.obsidian.name",
+      "name_en": "Obsidian",
+      "name_ru": "Обсидиан"
+    },
+    {
+      "key": "tile.oreCoal.name",
+      "name_en": "Coal Ore",
+      "name_ru": "Уголь"
+    },
+    {
+      "key": "tile.oreDiamond.name",
+      "name_en": "Diamond Ore",
+      "name_ru": "Алмазная руда"
+    },
+    {
+      "key": "tile.oreEmerald.name",
+      "name_en": "Emerald Ore",
+      "name_ru": "Изумрудная руда"
+    },
+    {
+      "key": "tile.oreGold.name",
+      "name_en": "Gold Ore",
+      "name_ru": "Золотая руда"
+    },
+    {
+      "key": "tile.oreIron.name",
+      "name_en": "Iron Ore",
+      "name_ru": "Железная руда"
+    },
+    {
+      "key": "tile.oreLapis.name",
+      "name_en": "Lapis Lazuli Ore",
+      "name_ru": "Лазуритовая руда"
+    },
+    {
+      "key": "tile.oreRedstone.name",
+      "name_en": "Redstone Ore",
+      "name_ru": "Красная руда"
+    },
+    {
+      "key": "tile.oreRuby.name",
+      "name_en": "Ruby Ore",
+      "name_ru": "Рубиновая руда"
+    },
+    {
+      "key": "tile.pistonBase.name",
+      "name_en": "Piston",
+      "name_ru": "Поршень"
+    },
+    {
+      "key": "tile.pistonStickyBase.name",
+      "name_en": "Sticky Piston",
+      "name_ru": "Липкий поршень"
+    },
+    {
+      "key": "tile.portal.name",
+      "name_en": "Portal",
+      "name_ru": "Портал"
+    },
+    {
+      "key": "tile.potatoes.name",
+      "name_en": "Potatoes",
+      "name_ru": "Картофель"
+    },
+    {
+      "key": "tile.pressurePlate.name",
+      "name_en": "Pressure Plate",
+      "name_ru": "Нажимная плита"
+    },
+    {
+      "key": "tile.pumpkin.name",
+      "name_en": "Pumpkin",
+      "name_ru": "Тыква"
+    },
+    {
+      "key": "tile.quartzBlock.chiseled.name",
+      "name_en": "Chiseled Quartz Block",
+      "name_ru": "Резной кварцевый блок"
+    },
+    {
+      "key": "tile.quartzBlock.default.name",
+      "name_en": "Block of Quartz",
+      "name_ru": "Кварцевый блок"
+    },
+    {
+      "key": "tile.quartzBlock.lines.name",
+      "name_en": "Pillar Quartz Block",
+      "name_ru": "Кварцевая колонна"
+    },
+    {
+      "key": "tile.rail.name",
+      "name_en": "Rail",
+      "name_ru": "Рельсы"
+    },
+    {
+      "key": "tile.redstoneDust.name",
+      "name_en": "Redstone Dust",
+      "name_ru": "Красная пыль"
+    },
+    {
+      "key": "tile.redstoneLight.name",
+      "name_en": "Redstone Lamp",
+      "name_ru": "Лампа"
+    },
+    {
+      "key": "tile.reeds.name",
+      "name_en": "Sugar cane",
+      "name_ru": "Сахарный тростник"
+    },
+    {
+      "key": "tile.sand.default.name",
+      "name_en": "Sand",
+      "name_ru": "Песок"
+    },
+    {
+      "key": "tile.sand.red.name",
+      "name_en": "Red Sand",
+      "name_ru": "Красный песок"
+    },
+    {
+      "key": "tile.sandStone.chiseled.name",
+      "name_en": "Chiseled Sandstone",
+      "name_ru": "Резной песчаник"
+    },
+    {
+      "key": "tile.sandStone.default.name",
+      "name_en": "Sandstone",
+      "name_ru": "Песчаник"
+    },
+    {
+      "key": "tile.sandStone.name",
+      "name_en": "Sandstone",
+      "name_ru": "Песчаник"
+    },
+    {
+      "key": "tile.sandStone.smooth.name",
+      "name_en": "Smooth Sandstone",
+      "name_ru": "Гладкий песчаник"
+    },
+    {
+      "key": "tile.sapling.acacia.name",
+      "name_en": "Acacia Sapling",
+      "name_ru": "Саженец акации"
+    },
+    {
+      "key": "tile.sapling.birch.name",
+      "name_en": "Birch Sapling",
+      "name_ru": "Саженец берёзы"
+    },
+    {
+      "key": "tile.sapling.jungle.name",
+      "name_en": "Jungle Sapling",
+      "name_ru": "Саженец тропического дерева"
+    },
+    {
+      "key": "tile.sapling.oak.name",
+      "name_en": "Oak Sapling",
+      "name_ru": "Саженец дуба"
+    },
+    {
+      "key": "tile.sapling.roofed_oak.name",
+      "name_en": "Dark Oak Sapling",
+      "name_ru": "Саженец тёмного дуба"
+    },
+    {
+      "key": "tile.sapling.spruce.name",
+      "name_en": "Spruce Sapling",
+      "name_ru": "Саженец ели"
+    },
+    {
+      "key": "tile.sign.name",
+      "name_en": "Sign",
+      "name_ru": "Табличка"
+    },
+    {
+      "key": "tile.snow.name",
+      "name_en": "Snow",
+      "name_ru": "Снег"
+    },
+    {
+      "key": "tile.sponge.name",
+      "name_en": "Sponge",
+      "name_ru": "Губка"
+    },
+    {
+      "key": "tile.stainedGlass.black.name",
+      "name_en": "Black Stained Glass",
+      "name_ru": "Чёрное стекло"
+    },
+    {
+      "key": "tile.stainedGlass.blue.name",
+      "name_en": "Blue Stained Glass",
+      "name_ru": "Синее стекло"
+    },
+    {
+      "key": "tile.stainedGlass.brown.name",
+      "name_en": "Brown Stained Glass",
+      "name_ru": "Коричневое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.cyan.name",
+      "name_en": "Cyan Stained Glass",
+      "name_ru": "Бирюзовое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.gray.name",
+      "name_en": "Gray Stained Glass",
+      "name_ru": "Серое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.green.name",
+      "name_en": "Green Stained Glass",
+      "name_ru": "Зелёное стекло"
+    },
+    {
+      "key": "tile.stainedGlass.lightBlue.name",
+      "name_en": "Light Blue Stained Glass",
+      "name_ru": "Голубое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.lime.name",
+      "name_en": "Lime Stained Glass",
+      "name_ru": "Лаймовое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.magenta.name",
+      "name_en": "Magenta Stained Glass",
+      "name_ru": "Пурпурное стекло"
+    },
+    {
+      "key": "tile.stainedGlass.name",
+      "name_en": "Stained Glass",
+      "name_ru": "Окрашенное стекло"
+    },
+    {
+      "key": "tile.stainedGlass.orange.name",
+      "name_en": "Orange Stained Glass",
+      "name_ru": "Оранжевое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.pink.name",
+      "name_en": "Pink Stained Glass",
+      "name_ru": "Розовое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.purple.name",
+      "name_en": "Purple Stained Glass",
+      "name_ru": "Фиолетовое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.red.name",
+      "name_en": "Red Stained Glass",
+      "name_ru": "Красное стекло"
+    },
+    {
+      "key": "tile.stainedGlass.silver.name",
+      "name_en": "Light Gray Stained Glass",
+      "name_ru": "Светло-серое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.white.name",
+      "name_en": "White Stained Glass",
+      "name_ru": "Белое стекло"
+    },
+    {
+      "key": "tile.stainedGlass.yellow.name",
+      "name_en": "Yellow Stained Glass",
+      "name_ru": "Жёлтое стекло"
+    },
+    {
+      "key": "tile.stairsBrick.name",
+      "name_en": "Brick Stairs",
+      "name_ru": "Кирпичные ступеньки"
+    },
+    {
+      "key": "tile.stairsNetherBrick.name",
+      "name_en": "Nether Brick Stairs",
+      "name_ru": "Адские ступеньки"
+    },
+    {
+      "key": "tile.stairsQuartz.name",
+      "name_en": "Quartz Stairs",
+      "name_ru": "Кварцевые ступеньки"
+    },
+    {
+      "key": "tile.stairsSandStone.name",
+      "name_en": "Sandstone Stairs",
+      "name_ru": "Ступеньки из песчаника"
+    },
+    {
+      "key": "tile.stairsStone.name",
+      "name_en": "Stone Stairs",
+      "name_ru": "Ступеньки из булыжника"
+    },
+    {
+      "key": "tile.stairsStoneBrickSmooth.name",
+      "name_en": "Stone Brick Stairs",
+      "name_ru": "Ступеньки из каменного кирпича"
+    },
+    {
+      "key": "tile.stairsWood.name",
+      "name_en": "Oak Wood Stairs",
+      "name_ru": "Дубовые ступеньки"
+    },
+    {
+      "key": "tile.stairsWoodAcacia.name",
+      "name_en": "Acacia Wood Stairs",
+      "name_ru": "Ступеньки из древесины акации"
+    },
+    {
+      "key": "tile.stairsWoodBirch.name",
+      "name_en": "Birch Wood Stairs",
+      "name_ru": "Березовые ступеньки"
+    },
+    {
+      "key": "tile.stairsWoodDarkOak.name",
+      "name_en": "Dark Oak Wood Stairs",
+      "name_ru": "Ступеньки из тёмного дуба"
+    },
+    {
+      "key": "tile.stairsWoodJungle.name",
+      "name_en": "Jungle Wood Stairs",
+      "name_ru": "Ступеньки из тропической древесины"
+    },
+    {
+      "key": "tile.stairsWoodSpruce.name",
+      "name_en": "Spruce Wood Stairs",
+      "name_ru": "Еловые ступеньки"
+    },
+    {
+      "key": "tile.stone.name",
+      "name_en": "Stone",
+      "name_ru": "Камень"
+    },
+    {
+      "key": "tile.stoneMoss.name",
+      "name_en": "Moss Stone",
+      "name_ru": "Замшелый булыжник"
+    },
+    {
+      "key": "tile.stoneSlab.brick.name",
+      "name_en": "Bricks Slab",
+      "name_ru": "Кирпичная плита"
+    },
+    {
+      "key": "tile.stoneSlab.cobble.name",
+      "name_en": "Cobblestone Slab",
+      "name_ru": "Плита из булыжника"
+    },
+    {
+      "key": "tile.stoneSlab.netherBrick.name",
+      "name_en": "Nether Brick Slab",
+      "name_ru": "Плита из адского кирпича"
+    },
+    {
+      "key": "tile.stoneSlab.quartz.name",
+      "name_en": "Quartz Slab",
+      "name_ru": "Кварцевая плита"
+    },
+    {
+      "key": "tile.stoneSlab.sand.name",
+      "name_en": "Sandstone Slab",
+      "name_ru": "Плита из песчаника"
+    },
+    {
+      "key": "tile.stoneSlab.smoothStoneBrick.name",
+      "name_en": "Stone Bricks Slab",
+      "name_ru": "Плита из каменных кирпичей"
+    },
+    {
+      "key": "tile.stoneSlab.stone.name",
+      "name_en": "Stone Slab",
+      "name_ru": "Каменная плита"
+    },
+    {
+      "key": "tile.stoneSlab.wood.name",
+      "name_en": "Wooden Slab",
+      "name_ru": "Деревянная плита"
+    },
+    {
+      "key": "tile.stonebrick.name",
+      "name_en": "Cobblestone",
+      "name_ru": "Булыжник"
+    },
+    {
+      "key": "tile.stonebricksmooth.chiseled.name",
+      "name_en": "Chiseled Stone Bricks",
+      "name_ru": "Резные каменные кирпичи"
+    },
+    {
+      "key": "tile.stonebricksmooth.cracked.name",
+      "name_en": "Cracked Stone Bricks",
+      "name_ru": "Потресканные каменные кирпичи"
+    },
+    {
+      "key": "tile.stonebricksmooth.default.name",
+      "name_en": "Stone Bricks",
+      "name_ru": "Каменные кирпичи"
+    },
+    {
+      "key": "tile.stonebricksmooth.mossy.name",
+      "name_en": "Mossy Stone Bricks",
+      "name_ru": "Замшелые каменные кирпичи"
+    },
+    {
+      "key": "tile.stonebricksmooth.name",
+      "name_en": "Stone Bricks",
+      "name_ru": "Каменные кирпичи"
+    },
+    {
+      "key": "tile.tallgrass.fern.name",
+      "name_en": "Fern",
+      "name_ru": "Папоротник"
+    },
+    {
+      "key": "tile.tallgrass.grass.name",
+      "name_en": "Grass",
+      "name_ru": "Высокая трава"
+    },
+    {
+      "key": "tile.tallgrass.name",
+      "name_en": "Grass",
+      "name_ru": "Трава"
+    },
+    {
+      "key": "tile.tallgrass.shrub.name",
+      "name_en": "Shrub",
+      "name_ru": "Куст"
+    },
+    {
+      "key": "tile.thinGlass.name",
+      "name_en": "Glass Pane",
+      "name_ru": "Стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.black.name",
+      "name_en": "Black Stained Glass Pane",
+      "name_ru": "Чёрная стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.blue.name",
+      "name_en": "Blue Stained Glass Pane",
+      "name_ru": "Синяя стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.brown.name",
+      "name_en": "Brown Stained Glass Pane",
+      "name_ru": "Коричневая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.cyan.name",
+      "name_en": "Cyan Stained Glass Pane",
+      "name_ru": "Бирюзовая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.gray.name",
+      "name_en": "Gray Stained Glass Pane",
+      "name_ru": "Серая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.green.name",
+      "name_en": "Green Stained Glass Pane",
+      "name_ru": "Зелёная стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.lightBlue.name",
+      "name_en": "Light Blue Stained Glass Pane",
+      "name_ru": "Голубая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.lime.name",
+      "name_en": "Lime Stained Glass Pane",
+      "name_ru": "Лаймовая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.magenta.name",
+      "name_en": "Magenta Stained Glass Pane",
+      "name_ru": "Пурпурная стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.name",
+      "name_en": "Stained Glass Pane",
+      "name_ru": "Окрашенная стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.orange.name",
+      "name_en": "Orange Stained Glass Pane",
+      "name_ru": "Оранжевая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.pink.name",
+      "name_en": "Pink Stained Glass Pane",
+      "name_ru": "Розовая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.purple.name",
+      "name_en": "Purple Stained Glass Pane",
+      "name_ru": "Фиолетовая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.red.name",
+      "name_en": "Red Stained Glass Pane",
+      "name_ru": "Красная стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.silver.name",
+      "name_en": "Light Gray Stained Glass Pane",
+      "name_ru": "Светло-серая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.white.name",
+      "name_en": "White Stained Glass Pane",
+      "name_ru": "Белая стеклянная панель"
+    },
+    {
+      "key": "tile.thinStainedGlass.yellow.name",
+      "name_en": "Yellow Stained Glass Pane",
+      "name_ru": "Жёлтая стеклянная панель"
+    },
+    {
+      "key": "tile.tnt.name",
+      "name_en": "TNT",
+      "name_ru": "Динамит"
+    },
+    {
+      "key": "tile.torch.name",
+      "name_en": "Torch",
+      "name_ru": "Факел"
+    },
+    {
+      "key": "tile.trapdoor.name",
+      "name_en": "Trapdoor",
+      "name_ru": "Люк"
+    },
+    {
+      "key": "tile.tripWire.name",
+      "name_en": "Tripwire",
+      "name_ru": "Растяжка"
+    },
+    {
+      "key": "tile.tripWireSource.name",
+      "name_en": "Tripwire Hook",
+      "name_ru": "Крюк"
+    },
+    {
+      "key": "tile.vine.name",
+      "name_en": "Vines",
+      "name_ru": "Лоза"
+    },
+    {
+      "key": "tile.water.name",
+      "name_en": "Water",
+      "name_ru": "Вода"
+    },
+    {
+      "key": "tile.waterlily.name",
+      "name_en": "Lily Pad",
+      "name_ru": "Кувшинка"
+    },
+    {
+      "key": "tile.web.name",
+      "name_en": "Cobweb",
+      "name_ru": "Паутина"
+    },
+    {
+      "key": "tile.weightedPlate_heavy.name",
+      "name_en": "Weighted Pressure Plate (Heavy)",
+      "name_ru": "Утяжелённая нажимная пластина (Тяжёлая)"
+    },
+    {
+      "key": "tile.weightedPlate_light.name",
+      "name_en": "Weighted Pressure Plate (Light)",
+      "name_ru": "Утяжелённая нажимная пластина (Лёгкая)"
+    },
+    {
+      "key": "tile.whiteStone.name",
+      "name_en": "End Stone",
+      "name_ru": "Эндерняк"
+    },
+    {
+      "key": "tile.wood.acacia.name",
+      "name_en": "Acacia Wood Planks",
+      "name_ru": "Доски из акации"
+    },
+    {
+      "key": "tile.wood.big_oak.name",
+      "name_en": "Dark Oak Wood Planks",
+      "name_ru": "Доски из тёмного дуба"
+    },
+    {
+      "key": "tile.wood.birch.name",
+      "name_en": "Birch Wood Planks",
+      "name_ru": "Берёзовые доски"
+    },
+    {
+      "key": "tile.wood.jungle.name",
+      "name_en": "Jungle Wood Planks",
+      "name_ru": "Доски из тропического дерева"
+    },
+    {
+      "key": "tile.wood.name",
+      "name_en": "Wooden Planks",
+      "name_ru": "Доски"
+    },
+    {
+      "key": "tile.wood.oak.name",
+      "name_en": "Oak Wood Planks",
+      "name_ru": "Дубовые доски"
+    },
+    {
+      "key": "tile.wood.spruce.name",
+      "name_en": "Spruce Wood Planks",
+      "name_ru": "Еловые доски"
+    },
+    {
+      "key": "tile.woodSlab.acacia.name",
+      "name_en": "Acacia Wood Slab",
+      "name_ru": "Плита из акации"
+    },
+    {
+      "key": "tile.woodSlab.big_oak.name",
+      "name_en": "Dark Oak Wood Slab",
+      "name_ru": "Плита из тёмного дуба"
+    },
+    {
+      "key": "tile.woodSlab.birch.name",
+      "name_en": "Birch Wood Slab",
+      "name_ru": "Берёзовая плита"
+    },
+    {
+      "key": "tile.woodSlab.jungle.name",
+      "name_en": "Jungle Wood Slab",
+      "name_ru": "Плита из тропического дерева"
+    },
+    {
+      "key": "tile.woodSlab.oak.name",
+      "name_en": "Oak Wood Slab",
+      "name_ru": "Дубовая плита"
+    },
+    {
+      "key": "tile.woodSlab.spruce.name",
+      "name_en": "Spruce Wood Slab",
+      "name_ru": "Еловая панель"
+    },
+    {
+      "key": "tile.woolCarpet.black.name",
+      "name_en": "Black Carpet",
+      "name_ru": "Чёрный ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.blue.name",
+      "name_en": "Blue Carpet",
+      "name_ru": "Синий ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.brown.name",
+      "name_en": "Brown Carpet",
+      "name_ru": "Коричневый ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.cyan.name",
+      "name_en": "Cyan Carpet",
+      "name_ru": "Бирюзовый ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.gray.name",
+      "name_en": "Gray Carpet",
+      "name_ru": "Серый ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.green.name",
+      "name_en": "Green Carpet",
+      "name_ru": "Зелёный ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.lightBlue.name",
+      "name_en": "Light Blue Carpet",
+      "name_ru": "Голубой ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.lime.name",
+      "name_en": "Lime Carpet",
+      "name_ru": "Лаймовый ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.magenta.name",
+      "name_en": "Magenta Carpet",
+      "name_ru": "Пурпурный ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.orange.name",
+      "name_en": "Orange Carpet",
+      "name_ru": "Оранжевый ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.pink.name",
+      "name_en": "Pink Carpet",
+      "name_ru": "Розовый ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.purple.name",
+      "name_en": "Purple Carpet",
+      "name_ru": "Фиолетовый ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.red.name",
+      "name_en": "Red Carpet",
+      "name_ru": "Красный ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.silver.name",
+      "name_en": "Light Gray Carpet",
+      "name_ru": "Светло-серый ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.white.name",
+      "name_en": "Carpet",
+      "name_ru": "Ковёр"
+    },
+    {
+      "key": "tile.woolCarpet.yellow.name",
+      "name_en": "Yellow Carpet",
+      "name_ru": "Жёлтый ковёр"
+    },
+    {
+      "key": "tile.workbench.name",
+      "name_en": "Crafting Table",
+      "name_ru": "Верстак"
+    }
+  ]
+}

@@ -1,0 +1,3171 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 90,
+    "notes": "vanilla crafting-grid recipes added by BloodMagic. shaped: shape[]=rows, key{char->ingredient}; *_bloodorb variants require a blood orb of the embedded tier in the grid."
+  },
+  "recipes": [
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "sacrificialDagger",
+        "name_en": "Sacrificial Knife",
+        "name_ru": "Жертвенный кинжал"
+      },
+      "shape": [
+        "ggg",
+        " dg",
+        "i g"
+      ],
+      "key": {
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "d": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "i": {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "lavaSigil",
+        "name_en": "Lava Sigil",
+        "name_ru": "Лавовый сигил"
+      },
+      "shape": [
+        "lml",
+        "lbl",
+        "lcl"
+      ],
+      "key": {
+        "l": {
+          "vanilla": "lava_bucket",
+          "name_en": "Lava Bucket",
+          "name_ru": "Ведро лавы"
+        },
+        "b": {
+          "ref": "blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        },
+        "m": {
+          "vanilla": "magma_cream",
+          "name_en": "Magma Cream",
+          "name_ru": "Сгусток магмы"
+        },
+        "c": {
+          "ref": "lavaCrystal",
+          "name_en": "Lava Crystal",
+          "name_ru": "Лавовый кристал"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockAltar",
+        "name_en": "Blood Altar",
+        "name_ru": "Кровавый алтарь"
+      },
+      "shape": [
+        "s s",
+        "scs",
+        "gdg"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "c": {
+          "vanilla": "furnace",
+          "name_en": "Furnace",
+          "name_ru": "Печь"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "speedRune",
+        "name_en": "Speed Rune",
+        "name_ru": "Руна скорости"
+      },
+      "shape": [
+        "sbs",
+        "uru",
+        "sbs"
+      ],
+      "key": {
+        "u": {
+          "vanilla": "sugar",
+          "name_en": "Sugar",
+          "name_ru": "Сахар"
+        },
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "r": {
+          "ref": "bloodRune",
+          "name_en": "",
+          "name_ru": ""
+        },
+        "b": {
+          "ref": "blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "emptySocket",
+        "name_en": "Empty Socket",
+        "name_ru": "Пустой сокет"
+      },
+      "shape": [
+        "bgb",
+        "gdg",
+        "bgb"
+      ],
+      "key": {
+        "b": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "bloodStoneBrick",
+        "name_en": "Bloodstone Brick",
+        "name_ru": "Кровавый кирпич"
+      },
+      "shape": [
+        "bb",
+        "bb"
+      ],
+      "key": {
+        "b": {
+          "ref": "largeBloodStoneBrick",
+          "name_en": "Large Bloodstone Brick",
+          "name_ru": "Большой кровавый кирпич"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockPedestal",
+        "name_en": "Arcane Pedestal",
+        "name_ru": "Тайный пьедестал"
+      },
+      "shape": [
+        "ooo",
+        " c ",
+        "ooo"
+      ],
+      "key": {
+        "o": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "c": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockPlinth",
+        "name_en": "Arcane Plinth",
+        "name_ru": "Тайный постамент"
+      },
+      "shape": [
+        "iii",
+        " p ",
+        "iii"
+      ],
+      "key": {
+        "i": {
+          "vanilla": "iron_block",
+          "name_en": "Iron Block",
+          "name_ru": "Iron Block"
+        },
+        "p": {
+          "ref": "blockPedestal",
+          "name_en": "Arcane Pedestal",
+          "name_ru": "Тайный пьедестал"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockTeleposer",
+        "name_en": "Teleposer",
+        "name_ru": "Телепозер"
+      },
+      "shape": [
+        "ggg",
+        "efe",
+        "ggg"
+      ],
+      "key": {
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "f": {
+          "ref": "telepositionFocus",
+          "name_en": "Teleposition Focus",
+          "name_ru": "Фокус телепозиции"
+        },
+        "e": {
+          "vanilla": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "armourInhibitor",
+        "name_en": "Armour Inhibitor",
+        "name_ru": "Земедлитель брони"
+      },
+      "shape": [
+        " gg",
+        "gsg",
+        "gg "
+      ],
+      "key": {
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "itemRitualDiviner",
+        "name_en": "Ritual Diviner",
+        "name_ru": "Предсказатель ритуала"
+      },
+      "shape": [
+        "d1d",
+        "2e3",
+        "d4d"
+      ],
+      "key": {
+        "1": {
+          "ref": "airScribeTool",
+          "name_en": "Elemental Inscription Tool: Air",
+          "name_ru": "Инструмент начертания элементаля: Воздух"
+        },
+        "2": {
+          "ref": "waterScribeTool",
+          "name_en": "Elemental Inscription Tool: Water",
+          "name_ru": "Инструмент начертания элементаля: Вода"
+        },
+        "3": {
+          "ref": "fireScribeTool",
+          "name_en": "Elemental Inscription Tool: Fire",
+          "name_ru": "Инструмент начертания элементаля: Огонь"
+        },
+        "4": {
+          "ref": "earthScribeTool",
+          "name_en": "Elemental Inscription Tool: Earth",
+          "name_ru": "Инструмент начертания элементаля: Земля"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "e": {
+          "vanilla": "emerald",
+          "name_en": "Emerald",
+          "name_ru": "Изумруд"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "itemRitualDiviner",
+        "name_en": "Ritual Diviner",
+        "name_ru": "Предсказатель ритуала"
+      },
+      "shape": [
+        " d ",
+        "srs",
+        " d "
+      ],
+      "key": {
+        "d": {
+          "ref": "duskScribeTool",
+          "name_en": "Elemental Inscription Tool: Dusk",
+          "name_ru": "Инструмент начертания элементаля: Сумерки"
+        },
+        "s": {
+          "ref": "demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        },
+        "r": {
+          "ref": "itemRitualDiviner",
+          "name_en": "Ritual Diviner",
+          "name_ru": "Предсказатель ритуала"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "itemKeyOfDiablo",
+        "name_en": "Key of Binding",
+        "name_ru": "Ключ связывания"
+      },
+      "shape": [
+        " gw",
+        "gdg",
+        "wg "
+      ],
+      "key": {
+        "w": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "itemBloodPack",
+        "name_en": "Blood Letter's Pack",
+        "name_ru": "Рюкзак кровопускателя"
+      },
+      "shape": [
+        "gbg",
+        "flf",
+        "gsg"
+      ],
+      "key": {
+        "s": {
+          "ref": "blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        },
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "f": {
+          "vanilla": "flint",
+          "name_en": "Flint",
+          "name_ru": "Кремень"
+        },
+        "b": {
+          "vanilla": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        },
+        "l": {
+          "vanilla": "leather_chestplate",
+          "name_en": "Leather Chestplate",
+          "name_ru": "Leather Chestplate"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockCrystal",
+        "name_en": "",
+        "name_ru": ""
+      },
+      "shape": [
+        "lsl",
+        "sls",
+        "lsl"
+      ],
+      "key": {
+        "l": {
+          "ref": "baseItems",
+          "meta": 28,
+          "reg": "LifeShard",
+          "name_en": "Life Shard",
+          "name_ru": "Осколок жизни"
+        },
+        "s": {
+          "ref": "baseItems",
+          "meta": 29,
+          "reg": "SoulShard",
+          "name_en": "Soul Shard",
+          "name_ru": "Осколок души"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 0,
+        "reg": "QuartzRod",
+        "name_en": "Quartz Rod",
+        "name_ru": "Кварцевый стержень"
+      },
+      "shape": [
+        "qqq"
+      ],
+      "key": {
+        "q": {
+          "vanilla": "quartz",
+          "name_en": "Quartz",
+          "name_ru": "Quartz"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 1,
+        "reg": "EmptyCore",
+        "name_en": "Empty Core",
+        "name_ru": "Пустое ядро"
+      },
+      "shape": [
+        "gig",
+        "nrn",
+        "gig"
+      ],
+      "key": {
+        "n": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "i": {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "r": {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 2,
+        "reg": "MagicalesCable",
+        "name_en": "Magicales Cable",
+        "name_ru": "Магический провод"
+      },
+      "shape": [
+        "sss",
+        "mmm",
+        "sss"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        },
+        "m": {
+          "ref": "magicales",
+          "name_en": "Magicales",
+          "name_ru": "Magicales"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 3,
+        "reg": "WoodBrace",
+        "name_en": "Wooden Brace",
+        "name_ru": "Деревянное скрепление"
+      },
+      "shape": [
+        " il",
+        "ili",
+        "li "
+      ],
+      "key": {
+        "l": {
+          "vanilla": "log",
+          "name_en": "Wood",
+          "name_ru": "Дерево"
+        },
+        "i": {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 4,
+        "reg": "StoneBrace",
+        "name_en": "Stone Brace",
+        "name_ru": "Каменное скрепление"
+      },
+      "shape": [
+        " is",
+        "isi",
+        "si "
+      ],
+      "key": {
+        "i": {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "s": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 25,
+        "reg": "ObsidianBrace",
+        "name_en": "Obsidian Brace",
+        "name_ru": "Обсидиановое скрепление"
+      },
+      "shape": [
+        " is",
+        "ibi",
+        "si "
+      ],
+      "key": {
+        "i": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "s": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        },
+        "b": {
+          "ref": "baseItems",
+          "meta": 4,
+          "reg": "StoneBrace",
+          "name_en": "Stone Brace",
+          "name_ru": "Каменное скрепление"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 31,
+        "reg": "LifeBrace",
+        "name_en": "Living Brace",
+        "name_ru": "Живое скрепление"
+      },
+      "shape": [
+        " gc",
+        "gog",
+        "sg "
+      ],
+      "key": {
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "o": {
+          "ref": "baseItems",
+          "meta": 25,
+          "reg": "ObsidianBrace",
+          "name_en": "Obsidian Brace",
+          "name_ru": "Обсидиановое скрепление"
+        },
+        "c": {
+          "ref": "baseItems",
+          "meta": 28,
+          "reg": "LifeShard",
+          "name_en": "Life Shard",
+          "name_ru": "Осколок жизни"
+        },
+        "s": {
+          "ref": "demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 8,
+        "reg": "ParadigmBackPlate",
+        "name_en": "Paradigm Plate",
+        "name_ru": "Примерная пластина"
+      },
+      "shape": [
+        "isi",
+        "rgr",
+        "isi"
+      ],
+      "key": {
+        "i": {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "r": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "s": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 9,
+        "reg": "OutputCable",
+        "name_en": "Output Spell Cable",
+        "name_ru": "Провод для выхода заклинаний"
+      },
+      "shape": [
+        " si",
+        "s c",
+        " si"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "i": {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "c": {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "baseItems",
+        "meta": 14,
+        "reg": "InputCable",
+        "name_en": "Input Spell Cable",
+        "name_ru": "Провод для входа заклинаний"
+      },
+      "shape": [
+        "ws ",
+        "rcs",
+        "ws "
+      ],
+      "key": {
+        "w": {
+          "ref": "blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        },
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "r": {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        },
+        "c": {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "itemAttunedCrystal",
+        "name_en": "Alchemic Router",
+        "name_ru": "Алхимический маршрутизатор"
+      },
+      "shape": [
+        "Sr ",
+        " ar",
+        "s S"
+      ],
+      "key": {
+        "r": {
+          "ref": "baseItems",
+          "meta": 0,
+          "reg": "QuartzRod",
+          "name_en": "Quartz Rod",
+          "name_ru": "Кварцевый стержень"
+        },
+        "s": {
+          "vanilla": "stick",
+          "name_en": "Stick",
+          "name_ru": "Палка"
+        },
+        "a": {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        "S": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "itemTankSegmenter",
+        "name_en": "Alchemic Segmenter",
+        "name_ru": "Алхимический сегментер"
+      },
+      "shape": [
+        "gqi",
+        " rq",
+        "q g"
+      ],
+      "key": {
+        "q": {
+          "ref": "baseItems",
+          "meta": 0,
+          "reg": "QuartzRod",
+          "name_en": "Quartz Rod",
+          "name_ru": "Кварцевый стержень"
+        },
+        "i": {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "r": {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "itemDestinationClearer",
+        "name_en": "Alchemic Cleanser",
+        "name_ru": "Алхимический очиститель"
+      },
+      "shape": [
+        "qcq",
+        "c c",
+        "qcq"
+      ],
+      "key": {
+        "q": {
+          "ref": "baseItems",
+          "meta": 0,
+          "reg": "QuartzRod",
+          "name_en": "Quartz Rod",
+          "name_ru": "Кварцевый стержень"
+        },
+        "c": {
+          "ref": "simpleCatalyst",
+          "name_en": "Simple Catalyst",
+          "name_ru": "Простой катализатор"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockAlchemicCalcinator",
+        "name_en": "Alchemic Calcinator",
+        "name_ru": "Алхимический кальцинатор"
+      },
+      "shape": [
+        "pgp",
+        "gsg",
+        "ccc"
+      ],
+      "key": {
+        "p": {
+          "ref": "baseItems",
+          "meta": 15,
+          "reg": "CrackedRunicPlate",
+          "name_en": "Cracked Runic Plate",
+          "name_ru": "Сломанная руническая пластина"
+        },
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "s": {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        "c": {
+          "vanilla": "cobblestone",
+          "name_en": "Cobblestone",
+          "name_ru": "Булыжник"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockCrystalBelljar",
+        "name_en": "Crystal Belljar",
+        "name_ru": "Кристальный стеклянный колпак"
+      },
+      "shape": [
+        "GGG",
+        "GcG",
+        "www"
+      ],
+      "key": {
+        "G": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "c": {
+          "ref": "baseAlchemyItems",
+          "meta": 4,
+          "reg": "ConcentratedCatalyst",
+          "name_en": "Concentrated Catalyst",
+          "name_ru": "Концентрированный катализатор"
+        },
+        "w": {
+          "vanilla": "wooden_slab",
+          "name_en": "Wooden Slab",
+          "name_ru": "Деревянная плита"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockReagentConduit",
+        "name_en": "Alchemy Relay",
+        "name_ru": "Алхимическое реле"
+      },
+      "shape": [
+        "isi",
+        "scs",
+        "isi"
+      ],
+      "key": {
+        "c": {
+          "ref": "baseAlchemyItems",
+          "meta": 4,
+          "reg": "ConcentratedCatalyst",
+          "name_en": "Concentrated Catalyst",
+          "name_ru": "Концентрированный катализатор"
+        },
+        "s": {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        },
+        "i": {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "ritualDismantler",
+        "name_en": "Ritual Dismantler",
+        "name_ru": "Ritual Dismantler"
+      },
+      "shape": [
+        "a a",
+        " b "
+      ],
+      "key": {
+        "a": {
+          "raw": "Blocks.field_150429_aA"
+        },
+        "b": {
+          "ref": "itemRitualDiviner",
+          "name_en": "Ritual Diviner",
+          "name_ru": "Предсказатель ритуала"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "inputRoutingFocus",
+        "name_en": "Input Routing Focus",
+        "name_ru": "Фокус направления входа"
+      },
+      "shape": [
+        "sgs",
+        "geg",
+        "sgs"
+      ],
+      "key": {
+        "e": {
+          "ref": "baseItems",
+          "meta": 32,
+          "reg": "EnderShard",
+          "name_en": "Ender Shard",
+          "name_ru": "Осколок Края"
+        },
+        "s": {
+          "vanilla": "stick",
+          "name_en": "Stick",
+          "name_ru": "Палка"
+        },
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockStabilityGlyph",
+        "name_en": "",
+        "name_ru": ""
+      },
+      "shape": [
+        "1s1",
+        "grg",
+        "bob"
+      ],
+      "key": {
+        "o": {
+          "ref": "transcendentBloodOrb",
+          "name_en": "Transcendent Blood Orb",
+          "name_ru": "Трансцендентальный кровавый шар"
+        },
+        "r": {
+          "ref": "bloodRune",
+          "name_en": "",
+          "name_ru": ""
+        },
+        "1": {
+          "ref": "crepitous",
+          "name_en": "Crepitous",
+          "name_ru": "Crepitous"
+        },
+        "g": {
+          "ref": "baseItems",
+          "meta": 27,
+          "reg": "EtherealSlate",
+          "name_en": "Ethereal Slate",
+          "name_ru": "Эфирная плитка"
+        },
+        "b": {
+          "ref": "baseAlchemyItems",
+          "meta": 1,
+          "reg": "Praesidium",
+          "name_en": "Praesidium",
+          "name_ru": "Praesidium"
+        },
+        "s": {
+          "ref": "magicales",
+          "name_en": "Magicales",
+          "name_ru": "Magicales"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "itemRitualDiviner",
+        "name_en": "Ritual Diviner",
+        "name_ru": "Предсказатель ритуала"
+      },
+      "shape": [
+        " d ",
+        "srs",
+        " d "
+      ],
+      "key": {
+        "d": {
+          "ref": "dawnScribeTool",
+          "name_en": "Elemental Inscription Tool: Dawn",
+          "name_ru": "Elemental Inscription Tool: Dawn"
+        },
+        "s": {
+          "ref": "baseItems",
+          "meta": 27,
+          "reg": "EtherealSlate",
+          "name_en": "Ethereal Slate",
+          "name_ru": "Эфирная плитка"
+        },
+        "r": {
+          "ref": "itemRitualDiviner",
+          "name_en": "Ritual Diviner",
+          "name_ru": "Предсказатель ритуала"
+        }
+      }
+    },
+    {
+      "type": "shaped",
+      "result": {
+        "ref": "blockCrucible",
+        "name_en": "Incense Crucible",
+        "name_ru": "Incense Crucible"
+      },
+      "shape": [
+        "i i",
+        "sis",
+        " S "
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone_slab",
+          "name_en": "Stone Slab",
+          "name_ru": "Каменная плита"
+        },
+        "i": {
+          "vanilla": "iron_ingot",
+          "name_en": "Iron Ingot",
+          "name_ru": "Железный слиток"
+        },
+        "S": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "lavaCrystal",
+        "name_en": "Lava Crystal",
+        "name_ru": "Лавовый кристал"
+      },
+      "shape": [
+        "glg",
+        "lbl",
+        "odo"
+      ],
+      "key": {
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "l": {
+          "vanilla": "lava_bucket",
+          "name_en": "Lava Bucket",
+          "name_ru": "Ведро лавы"
+        },
+        "b": {
+          "ref": "weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "o": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "waterSigil",
+        "name_en": "Water Sigil",
+        "name_ru": "Водный сигил"
+      },
+      "shape": [
+        "www",
+        "wbw",
+        "wow"
+      ],
+      "key": {
+        "w": {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        },
+        "b": {
+          "ref": "blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        },
+        "o": {
+          "ref": "weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "voidSigil",
+        "name_en": "Void Sigil",
+        "name_ru": "Пустотный сигил"
+      },
+      "shape": [
+        "ese",
+        "ere",
+        "eoe"
+      ],
+      "key": {
+        "e": {
+          "vanilla": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        },
+        "r": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        },
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        },
+        "s": {
+          "vanilla": "string",
+          "name_en": "String",
+          "name_ru": "Нить"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "bloodRune",
+        "name_en": "",
+        "name_ru": ""
+      },
+      "shape": [
+        "sss",
+        "ror",
+        "sss"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "o": {
+          "ref": "weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        },
+        "r": {
+          "ref": "blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "bloodRune",
+        "name_en": "",
+        "name_ru": "",
+        "meta": 1
+      },
+      "shape": [
+        "sbs",
+        "bob",
+        "srs"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "b": {
+          "vanilla": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        },
+        "r": {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "bloodRune",
+        "name_en": "",
+        "name_ru": "",
+        "meta": 2
+      },
+      "shape": [
+        "sbs",
+        "bob",
+        "srs"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "b": {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        },
+        "r": {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "bloodRune",
+        "name_en": "",
+        "name_ru": "",
+        "meta": 3
+      },
+      "shape": [
+        "sws",
+        "ror",
+        "sws"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "w": {
+          "ref": "weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        },
+        "r": {
+          "ref": "demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "bloodRune",
+        "name_en": "",
+        "name_ru": "",
+        "meta": 4
+      },
+      "shape": [
+        "srs",
+        "beb",
+        "sos"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "r": {
+          "ref": "demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        },
+        "b": {
+          "vanilla": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        },
+        "e": {
+          "ref": "bloodRune",
+          "name_en": "",
+          "name_ru": "",
+          "meta": 1
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "airSigil",
+        "name_en": "Air Sigil",
+        "name_ru": "Воздушный сигил"
+      },
+      "shape": [
+        "fgf",
+        "fsf",
+        "fof"
+      ],
+      "key": {
+        "f": {
+          "vanilla": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
+        },
+        "g": {
+          "vanilla": "ghast_tear",
+          "name_en": "Ghast Tear",
+          "name_ru": "Слеза Гаста"
+        },
+        "s": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        },
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigilOfTheFastMiner",
+        "name_en": "Sigil of the Fast Miner",
+        "name_ru": "Сигил быстрого копателя"
+      },
+      "shape": [
+        "sps",
+        "hra",
+        "sos"
+      ],
+      "key": {
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        },
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "p": {
+          "vanilla": "iron_pickaxe",
+          "name_en": "Iron Pickaxe",
+          "name_ru": "Железная кирка"
+        },
+        "h": {
+          "vanilla": "iron_shovel",
+          "name_en": "Iron Shovel",
+          "name_ru": "Железная лопата"
+        },
+        "a": {
+          "vanilla": "iron_axe",
+          "name_en": "Iron Axe",
+          "name_ru": "Железный топор"
+        },
+        "r": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "runeOfSacrifice",
+        "name_en": "Rune of Sacrifice",
+        "name_ru": "Руна жертвоприношения"
+      },
+      "shape": [
+        "srs",
+        "gog",
+        "srs"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        },
+        "r": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "runeOfSelfSacrifice",
+        "name_en": "Rune of Self-Sacrifice",
+        "name_ru": "Руна самопожертвования"
+      },
+      "shape": [
+        "srs",
+        "gog",
+        "srs"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "g": {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        },
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        },
+        "r": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "divinationSigil",
+        "name_en": "Divination Sigil",
+        "name_ru": "Сигил предсказания"
+      },
+      "shape": [
+        "ggg",
+        "gsg",
+        "gog"
+      ],
+      "key": {
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "s": {
+          "ref": "blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        },
+        "o": {
+          "ref": "weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "itemSeerSigil",
+        "name_en": "Sigil of Sight",
+        "name_ru": "Сигил зрения"
+      },
+      "shape": [
+        "gbg",
+        "gsg",
+        "gog"
+      ],
+      "key": {
+        "g": {
+          "vanilla": "glass",
+          "name_en": "Glass",
+          "name_ru": "Стекло"
+        },
+        "s": {
+          "ref": "divinationSigil",
+          "name_en": "Divination Sigil",
+          "name_ru": "Сигил предсказания"
+        },
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        },
+        "b": {
+          "ref": "bucketLife",
+          "name_en": "Bucket of Life",
+          "name_ru": "Ведро жизни"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "ritualStone",
+        "name_en": "Ritual Stone",
+        "name_ru": "Ритуальный камень"
+      },
+      "shape": [
+        "srs",
+        "ror",
+        "srs"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        },
+        "r": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blockMasterStone",
+        "name_en": "Master Ritual Stone",
+        "name_ru": "Ритуальный камень мастера"
+      },
+      "shape": [
+        "brb",
+        "ror",
+        "brb"
+      ],
+      "key": {
+        "b": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "r": {
+          "ref": "ritualStone",
+          "name_en": "Ritual Stone",
+          "name_ru": "Ритуальный камень"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "imperfectRitualStone",
+        "name_en": "Imperfect Ritual Stone",
+        "name_ru": "Несовершенный ритуальный камень"
+      },
+      "shape": [
+        "bsb",
+        "sos",
+        "bsb"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "b": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "o": {
+          "ref": "weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigilOfElementalAffinity",
+        "name_en": "Sigil of Elemental Affinity",
+        "name_ru": "Сигил стихийного родства"
+      },
+      "shape": [
+        "oao",
+        "wsl",
+        "oro"
+      ],
+      "key": {
+        "o": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "a": {
+          "ref": "airSigil",
+          "name_en": "Air Sigil",
+          "name_ru": "Воздушный сигил"
+        },
+        "w": {
+          "ref": "waterSigil",
+          "name_en": "Water Sigil",
+          "name_ru": "Водный сигил"
+        },
+        "l": {
+          "ref": "lavaSigil",
+          "name_en": "Lava Sigil",
+          "name_ru": "Лавовый сигил"
+        },
+        "r": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "s": {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigilOfHolding",
+        "name_en": "Sigil of Holding",
+        "name_ru": "Сигил удержания"
+      },
+      "shape": [
+        "asa",
+        "srs",
+        "aoa"
+      ],
+      "key": {
+        "a": {
+          "ref": "blankSlate",
+          "name_en": "Blank Slate",
+          "name_ru": "Чистая плитка"
+        },
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "r": {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "armourForge",
+        "name_en": "Soul Armour Forge",
+        "name_ru": "Кузница душевной брони"
+      },
+      "shape": [
+        "sfs",
+        "fof",
+        "sfs"
+      ],
+      "key": {
+        "f": {
+          "ref": "bloodSocket",
+          "name_en": "Filled Socket",
+          "name_ru": "Заполненный сокет"
+        },
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "growthSigil",
+        "name_en": "Sigil of the Green Grove",
+        "name_ru": "Сигил зелёной рощи"
+      },
+      "shape": [
+        "srs",
+        "rer",
+        "sos"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "sapling",
+          "name_en": "Sapling",
+          "name_ru": "Sapling"
+        },
+        "r": {
+          "vanilla": "reeds",
+          "name_en": "Sugar Canes",
+          "name_ru": "Сахарный тростник"
+        },
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        },
+        "e": {
+          "ref": "reinforcedSlate",
+          "name_en": "Reinforced Slate",
+          "name_ru": "Укреплённая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blockHomHeart",
+        "name_en": "Spell Table",
+        "name_ru": "Стол заклинаний"
+      },
+      "shape": [
+        "www",
+        "srs",
+        "sos"
+      ],
+      "key": {
+        "w": {
+          "vanilla": "wool",
+          "name_en": "Wool",
+          "name_ru": "Шерсть",
+          "meta": 14
+        },
+        "s": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "r": {
+          "ref": "bloodRune",
+          "name_en": "",
+          "name_ru": ""
+        },
+        "o": {
+          "ref": "apprenticeBloodOrb",
+          "name_en": "Apprentice Blood Orb",
+          "name_ru": "Кровавый шар ученика"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "blockWritingTable",
+        "name_en": "Alchemic Chemistry Set",
+        "name_ru": "Алхимическая и химическая установка"
+      },
+      "shape": [
+        " s ",
+        "ror"
+      ],
+      "key": {
+        "s": {
+          "vanilla": "brewing_stand",
+          "name_en": "Brewing Stand",
+          "name_ru": "Варочная стойка"
+        },
+        "r": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "o": {
+          "ref": "weakBloodOrb",
+          "name_en": "Weak Blood Orb",
+          "name_ru": "Слабый кровавый шар"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigilOfHaste",
+        "name_en": "Sigil of Haste",
+        "name_ru": "Сигил быстроты"
+      },
+      "shape": [
+        "csc",
+        "sts",
+        "ror"
+      ],
+      "key": {
+        "c": {
+          "vanilla": "cookie",
+          "name_en": "Cookie",
+          "name_ru": "Печенье"
+        },
+        "s": {
+          "vanilla": "sugar",
+          "name_en": "Sugar",
+          "name_ru": "Сахар"
+        },
+        "t": {
+          "ref": "demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        },
+        "r": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigilOfWind",
+        "name_en": "Sigil of the Whirlwind",
+        "name_ru": "Сигил вихря"
+      },
+      "shape": [
+        "faf",
+        "grg",
+        "fof"
+      ],
+      "key": {
+        "f": {
+          "vanilla": "feather",
+          "name_en": "Feather",
+          "name_ru": "Перо"
+        },
+        "g": {
+          "vanilla": "ghast_tear",
+          "name_en": "Ghast Tear",
+          "name_ru": "Слеза Гаста"
+        },
+        "a": {
+          "ref": "airSigil",
+          "name_en": "Air Sigil",
+          "name_ru": "Воздушный сигил"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "r": {
+          "ref": "demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigilOfTheBridge",
+        "name_en": "Sigil of the Phantom Bridge",
+        "name_ru": "Сигил призрачного моста"
+      },
+      "shape": [
+        "nnn",
+        "nsn",
+        "ror"
+      ],
+      "key": {
+        "n": {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        },
+        "r": {
+          "vanilla": "soul_sand",
+          "name_en": "Soul Sand",
+          "name_ru": "Песок душ"
+        },
+        "s": {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "sigilOfMagnetism",
+        "name_en": "Sigil of Magnetism",
+        "name_ru": "Сигил магнетизма"
+      },
+      "shape": [
+        "bgb",
+        "gsg",
+        "bob"
+      ],
+      "key": {
+        "b": {
+          "vanilla": "iron_block",
+          "name_en": "Iron Block",
+          "name_ru": "Iron Block"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        },
+        "s": {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "energyBazooka",
+        "name_en": "Energy Bazooka",
+        "name_ru": "Энергетическая базука"
+      },
+      "shape": [
+        "Ocd",
+        "cb ",
+        "d w"
+      ],
+      "key": {
+        "O": {
+          "ref": "archmageBloodOrb",
+          "name_en": "Archmage's Blood Orb",
+          "name_ru": "Кровавый шар архимага"
+        },
+        "c": {
+          "ref": "crepitous",
+          "name_en": "Crepitous",
+          "name_ru": "Crepitous"
+        },
+        "b": {
+          "ref": "energyBlaster",
+          "name_en": "Energy Blaster",
+          "name_ru": "Энергетическая пушка"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "w": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "itemBloodLightSigil",
+        "name_en": "Sigil of the Blood Lamp",
+        "name_ru": "Сигил кровавого светильника"
+      },
+      "shape": [
+        "btb",
+        "sss",
+        "bob"
+      ],
+      "key": {
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "b": {
+          "vanilla": "glowstone",
+          "name_en": "Glowstone",
+          "name_ru": "Светящийся камень"
+        },
+        "t": {
+          "vanilla": "torch",
+          "name_en": "Torch",
+          "name_ru": "Факел"
+        },
+        "s": {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 5,
+        "reg": "ProjectileCore",
+        "name_en": "Projectile Core",
+        "name_ru": "Метательное ядро"
+      },
+      "shape": [
+        "mbm",
+        "aca",
+        "mom"
+      ],
+      "key": {
+        "c": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "b": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "m": {
+          "ref": "magicales",
+          "name_en": "Magicales",
+          "name_ru": "Magicales"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "a": {
+          "vanilla": "arrow",
+          "name_en": "Arrow",
+          "name_ru": "Стрела"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 6,
+        "reg": "SelfCore",
+        "name_en": "Self Core",
+        "name_ru": "Сплошное ядро"
+      },
+      "shape": [
+        "sbs",
+        "ncn",
+        "sos"
+      ],
+      "key": {
+        "c": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "s": {
+          "ref": "sanctus",
+          "name_en": "Sanctus",
+          "name_ru": "Sanctus"
+        },
+        "b": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "n": {
+          "vanilla": "glowstone_dust",
+          "name_en": "Glowstone Dust",
+          "name_ru": "Светящаяся пыль"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 7,
+        "reg": "MeleeCore",
+        "name_en": "Melee Core",
+        "name_ru": "Ближнее ядро"
+      },
+      "shape": [
+        "sbs",
+        "ncn",
+        "sos"
+      ],
+      "key": {
+        "c": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "s": {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        "b": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "n": {
+          "vanilla": "fire_charge",
+          "name_en": "Fire Charge",
+          "name_ru": "Огненный шар"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 26,
+        "reg": "ToolCore",
+        "name_en": "Tool Core",
+        "name_ru": "Ядро инструментов"
+      },
+      "shape": [
+        "sbs",
+        "ncn",
+        "sos"
+      ],
+      "key": {
+        "c": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "s": {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        "b": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "n": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 10,
+        "reg": "FlameCore",
+        "name_en": "Fire Core",
+        "name_ru": "Огненное ядро"
+      },
+      "shape": [
+        "mdm",
+        "scs",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "incendium",
+          "name_en": "Incendium",
+          "name_ru": "Incendium"
+        },
+        "c": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 11,
+        "reg": "IcyCore",
+        "name_en": "Icy Core",
+        "name_ru": "Ледяное ядро"
+      },
+      "shape": [
+        "mdm",
+        "scs",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "crystallos",
+          "name_en": "Crystallos",
+          "name_ru": "Crystallos"
+        },
+        "c": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 12,
+        "reg": "GustCore",
+        "name_en": "Gusty Core",
+        "name_ru": "Ветреное ядро"
+      },
+      "shape": [
+        "mdm",
+        "scs",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "aether",
+          "name_en": "Aether",
+          "name_ru": "Эфир"
+        },
+        "c": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 13,
+        "reg": "EarthenCore",
+        "name_en": "Earthen Core",
+        "name_ru": "Земляное ядро"
+      },
+      "shape": [
+        "mdm",
+        "scs",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "terrae",
+          "name_en": "Terrae",
+          "name_ru": "Terrae"
+        },
+        "c": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "d": {
+          "vanilla": "diamond",
+          "name_en": "Diamond",
+          "name_ru": "Алмаз"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 18,
+        "reg": "DefaultCore",
+        "name_en": "Unattuned Core",
+        "name_ru": "Ненастроенное ядро"
+      },
+      "shape": [
+        "msm",
+        "geg",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "baseAlchemyItems",
+          "meta": 3,
+          "reg": "StrengthenedCatalyst",
+          "name_en": "Strengthened Catalyst",
+          "name_ru": "Усиленный катализатор"
+        },
+        "e": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 19,
+        "reg": "OffensiveCore",
+        "name_en": "Offensive Core",
+        "name_ru": "Ядро нападения"
+      },
+      "shape": [
+        "msm",
+        "geg",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "baseAlchemyItems",
+          "meta": 0,
+          "reg": "Offensa",
+          "name_en": "Offensa",
+          "name_ru": "Offensa"
+        },
+        "e": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 20,
+        "reg": "DefensiveCore",
+        "name_en": "Defensive Core",
+        "name_ru": "Ядро обороны"
+      },
+      "shape": [
+        "msm",
+        "geg",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "baseAlchemyItems",
+          "meta": 1,
+          "reg": "Praesidium",
+          "name_en": "Praesidium",
+          "name_ru": "Praesidium"
+        },
+        "e": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 21,
+        "reg": "EnvironmentalCore",
+        "name_en": "Environmental Core",
+        "name_ru": "Ядро окружающей среды"
+      },
+      "shape": [
+        "msm",
+        "geg",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "baseAlchemyItems",
+          "meta": 2,
+          "reg": "OrbisTerrae",
+          "name_en": "Orbis Terrae",
+          "name_ru": "Orbis Terrae"
+        },
+        "e": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "magicianBloodOrb",
+          "name_en": "Magician's Blood Orb",
+          "name_ru": "Кровавый шар мага"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 22,
+        "reg": "PowerCore",
+        "name_en": "Power Core",
+        "name_ru": "Энергетическое ядро"
+      },
+      "shape": [
+        "msm",
+        "geg",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "baseAlchemyItems",
+          "meta": 6,
+          "reg": "Virtus",
+          "name_en": "Virtus",
+          "name_ru": "Virtus"
+        },
+        "e": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 23,
+        "reg": "CostCore",
+        "name_en": "Reduction Core",
+        "name_ru": "Ядро уменьшения"
+      },
+      "shape": [
+        "msm",
+        "geg",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "baseAlchemyItems",
+          "meta": 7,
+          "reg": "Reductus",
+          "name_en": "Reductus",
+          "name_ru": "Reductus"
+        },
+        "e": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "baseItems",
+        "meta": 24,
+        "reg": "PotencyCore",
+        "name_en": "Potency Core",
+        "name_ru": "Ядро эффективности"
+      },
+      "shape": [
+        "msm",
+        "geg",
+        "mom"
+      ],
+      "key": {
+        "m": {
+          "ref": "baseAlchemyItems",
+          "meta": 8,
+          "reg": "Potentia",
+          "name_en": "Potentia",
+          "name_ru": "Potentia"
+        },
+        "e": {
+          "ref": "baseItems",
+          "meta": 1,
+          "reg": "EmptyCore",
+          "name_en": "Empty Core",
+          "name_ru": "Пустое ядро"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "s": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "itemHarvestSigil",
+        "name_en": "Harvest Goddess Sigil",
+        "name_ru": "Сигил богини плодородия"
+      },
+      "shape": [
+        "mgm",
+        "gsg",
+        "mom"
+      ],
+      "key": {
+        "s": {
+          "ref": "baseItems",
+          "meta": 27,
+          "reg": "EtherealSlate",
+          "name_en": "Ethereal Slate",
+          "name_ru": "Эфирная плитка"
+        },
+        "o": {
+          "ref": "archmageBloodOrb",
+          "name_en": "Archmage's Blood Orb",
+          "name_ru": "Кровавый шар архимага"
+        },
+        "g": {
+          "vanilla": "golden_hoe",
+          "name_en": "Golden Hoe",
+          "name_ru": "Золотая мотыга"
+        },
+        "m": {
+          "vanilla": "dirt",
+          "name_en": "Dirt",
+          "name_ru": "Земля"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "bloodRune",
+        "name_en": "",
+        "name_ru": "",
+        "meta": 5
+      },
+      "shape": [
+        "bsb",
+        "grg",
+        "bob"
+      ],
+      "key": {
+        "s": {
+          "ref": "baseItems",
+          "meta": 27,
+          "reg": "EtherealSlate",
+          "name_en": "Ethereal Slate",
+          "name_ru": "Эфирная плитка"
+        },
+        "o": {
+          "ref": "archmageBloodOrb",
+          "name_en": "Archmage's Blood Orb",
+          "name_ru": "Кровавый шар архимага"
+        },
+        "r": {
+          "ref": "speedRune",
+          "name_en": "Speed Rune",
+          "name_ru": "Руна скорости"
+        },
+        "b": {
+          "vanilla": "bucket",
+          "name_en": "Bucket",
+          "name_ru": "Ведро"
+        },
+        "g": {
+          "vanilla": "gold_ingot",
+          "name_en": "Gold Ingot",
+          "name_ru": "Золотой слиток"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "itemCompressionSigil",
+        "name_en": "Sigil of Compression",
+        "name_ru": "Сигил сжатия"
+      },
+      "shape": [
+        "pop",
+        "csc",
+        "obo"
+      ],
+      "key": {
+        "b": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "p": {
+          "vanilla": "piston",
+          "name_en": "Piston",
+          "name_ru": "Поршень"
+        },
+        "c": {
+          "vanilla": "crafting_table",
+          "name_en": "Crafting Table",
+          "name_ru": "Верстак"
+        },
+        "s": {
+          "ref": "demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        },
+        "o": {
+          "vanilla": "obsidian",
+          "name_en": "Obsidian",
+          "name_ru": "Обсидиан"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "itemSigilOfSupression",
+        "name_en": "Sigil of Supression",
+        "name_ru": "Сигил подавления"
+      },
+      "shape": [
+        "wtl",
+        "wvl",
+        "wol"
+      ],
+      "key": {
+        "v": {
+          "ref": "voidSigil",
+          "name_en": "Void Sigil",
+          "name_ru": "Пустотный сигил"
+        },
+        "t": {
+          "ref": "blockTeleposer",
+          "name_en": "Teleposer",
+          "name_ru": "Телепозер"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "l": {
+          "vanilla": "lava_bucket",
+          "name_en": "Lava Bucket",
+          "name_ru": "Ведро лавы"
+        },
+        "w": {
+          "vanilla": "water_bucket",
+          "name_en": "Water Bucket",
+          "name_ru": "Ведро воды"
+        }
+      }
+    },
+    {
+      "type": "shaped_bloodorb",
+      "result": {
+        "ref": "itemSigilOfEnderSeverance",
+        "name_en": "Sigil of Ender Severance",
+        "name_ru": "Сигил разрыва Края"
+      },
+      "shape": [
+        "ptp",
+        "ese",
+        "pop"
+      ],
+      "key": {
+        "s": {
+          "ref": "demonicSlate",
+          "name_en": "Demonic Slate",
+          "name_ru": "Демоническая плитка"
+        },
+        "t": {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        "o": {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        "e": {
+          "vanilla": "ender_eye",
+          "name_en": "Ender Eye",
+          "name_ru": "Ender Eye"
+        },
+        "p": {
+          "vanilla": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
+        }
+      }
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "largeBloodStoneBrick",
+        "name_en": "Large Bloodstone Brick",
+        "name_ru": "Большой кровавый кирпич"
+      },
+      "inputs": [
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        {
+          "vanilla": "stone",
+          "name_en": "Stone",
+          "name_ru": "Камень"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "reinforcedTelepositionFocus",
+        "name_en": "Reinforced Teleposition Focus",
+        "name_ru": "Усиленный фокус телепозиции"
+      },
+      "inputs": [
+        {
+          "ref": "enhancedTelepositionFocus",
+          "name_en": "Enhanced Teleposition Focus",
+          "name_ru": "Улучшенный фокус телепозиции"
+        },
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "demonicTelepositionFocus",
+        "name_en": "Demonic Teleposition Focus",
+        "name_ru": "Демонический фокус телепозиции"
+      },
+      "inputs": [
+        {
+          "ref": "reinforcedTelepositionFocus",
+          "name_en": "Reinforced Teleposition Focus",
+          "name_ru": "Усиленный фокус телепозиции"
+        },
+        {
+          "ref": "demonBloodShard",
+          "name_en": "Demon Blood Shard",
+          "name_ru": "Осколок крови демона"
+        }
+      ]
+    },
+    {
+      "type": "shapeless",
+      "result": {
+        "ref": "baseItems",
+        "meta": 32,
+        "reg": "EnderShard",
+        "name_en": "Ender Shard",
+        "name_ru": "Осколок Края"
+      },
+      "inputs": [
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        {
+          "vanilla": "ender_pearl",
+          "name_en": "Ender Pearl",
+          "name_ru": "Жемчуг Эндера"
+        }
+      ]
+    },
+    {
+      "type": "shapeless_bloodorb",
+      "result": {
+        "ref": "weakBloodShard",
+        "name_en": "Weak Blood Shard",
+        "name_ru": "Слабый кровавый осколок"
+      },
+      "inputs": [
+        {
+          "ref": "masterBloodOrb",
+          "name_en": "Master Blood Orb",
+          "name_ru": "Кровавый шар мастера"
+        },
+        {
+          "ref": "weakBloodShard",
+          "name_en": "Weak Blood Shard",
+          "name_ru": "Слабый кровавый осколок"
+        },
+        {
+          "ref": "imbuedSlate",
+          "name_en": "Imbued Slate",
+          "name_ru": "Пропитанная плитка"
+        }
+      ]
+    }
+  ]
+}

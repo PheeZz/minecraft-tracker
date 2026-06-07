@@ -36,7 +36,16 @@ MODS = [
 def load_lang(path):
     d = {}
     if path and os.path.exists(path):
-        for line in open(path, encoding="utf-8", errors="replace"):
+        raw = open(path, "rb").read()
+        text = None
+        for enc in ("utf-8", "utf-8-sig", "windows-1251", "latin-1"):
+            try:
+                text = raw.decode(enc); break
+            except UnicodeDecodeError:
+                continue
+        if text is None:
+            text = raw.decode("utf-8", errors="replace")
+        for line in text.splitlines():
             line = line.rstrip("\n")
             if "=" in line and not line.lstrip().startswith("#"):
                 k, v = line.split("=", 1)
@@ -65,6 +74,40 @@ def clean(s):
     s = re.sub(r'§.', '', s)
     s = re.sub(r'<[^>]+>', '', s)
     return s.strip()
+
+def clean_name(s):
+    """Strip Minecraft format codes & placeholders from a display name."""
+    if not s: return s
+    s = re.sub(r'§[0-9A-Fa-fk-orK-OR]', '', s)
+    s = re.sub(r'§.', '', s)
+    s = s.replace("%s", "[mob]").replace("%d", "[number]")
+    s = re.sub(r'\s{2,}', ' ', s)
+    return s.strip()
+
+def titlecase_key(key):
+    """Derive a readable titlecase title from a research key (last resort)."""
+    if not key: return ""
+    base = key.split(".")[-1].replace("_", " ")
+    base = re.sub(r'(?<=[a-z0-9])(?=[A-Z])', ' ', base)   # camelCase -> spaced
+    base = re.sub(r'\s{2,}', ' ', base).strip()
+    return base.title()
+
+def first_sentence(desc):
+    if not desc: return ""
+    d = clean(desc).strip()
+    m = re.split(r'(?<=[.!?])\s', d, maxsplit=1)
+    s = m[0].strip() if m else d
+    return s[:80].strip()
+
+def resolve_names(key, desc_en):
+    """name_en/name_ru with fallbacks: EN <- first-sentence(desc) <- titlecase(key); RU <- EN."""
+    name_en = clean_name(find_name(key, NAME_EN))
+    name_ru = clean_name(find_name(key, NAME_RU))
+    if not name_en:
+        name_en = first_sentence(desc_en) or titlecase_key(key)
+    if not name_ru:
+        name_ru = name_en
+    return name_en, name_ru
 
 # ---------------------------------------------------------------- aspect field -> tag map (all mods)
 field_tag = {}
@@ -258,12 +301,11 @@ for mod, dec, _ in MODS:
             for pk in page_keys:
                 pages.append({"key": pk, "text_en": EN.get(pk, ""), "text_ru": RU.get(pk, "")})
             entry["pages"] = pages
-            # names
-            entry["name_en"] = find_name(key, NAME_EN)
-            entry["name_ru"] = find_name(key, NAME_RU)
             # description (RU priority), cleaned
             ru_desc = "\n\n".join(clean(p["text_ru"]) for p in pages if p["text_ru"]).strip()
             en_desc = "\n\n".join(clean(p["text_en"]) for p in pages if p["text_en"]).strip()
+            # names (with EN<-desc<-titlecase, RU<-EN fallbacks)
+            entry["name_en"], entry["name_ru"] = resolve_names(key, en_desc)
             entry["description_ru"] = ru_desc
             entry["description_en"] = en_desc
             entry["description"] = ru_desc or en_desc
@@ -316,11 +358,15 @@ for lang, name_idx in ((EN, NAME_EN), (RU, NAME_RU)):
         ru_desc = "\n\n".join(clean(p["text_ru"]) for p in pages if p["text_ru"]).strip()
         en_desc = "\n\n".join(clean(p["text_en"]) for p in pages if p["text_en"]).strip()
         mod = PREFIX_MOD.get(prefix) or guess_mod(tail)
+        nm_en = clean_name(find_name(tail, NAME_EN) or find_name(bare, NAME_EN))
+        nm_ru = clean_name(find_name(tail, NAME_RU) or find_name(bare, NAME_RU))
+        if not nm_en: nm_en = first_sentence(en_desc) or titlecase_key(bare)
+        if not nm_ru: nm_ru = nm_en
         research[tail] = {
             "key": bare, "mod": mod, "category": "",
             "aspects": {}, "flags": [], "autoUnlock": False, "pages": pages,
-            "name_en": find_name(tail, NAME_EN) or find_name(bare, NAME_EN),
-            "name_ru": find_name(tail, NAME_RU) or find_name(bare, NAME_RU),
+            "name_en": nm_en,
+            "name_ru": nm_ru,
             "description_ru": ru_desc, "description_en": en_desc,
             "description": ru_desc or en_desc,
             "_langOnly": True,

@@ -1,0 +1,1057 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 160,
+    "notes": "every BloodMagic item lang key -> EN/RU display name. field = ModItems field; sub-items (baseItems/baseAlchemyItems/activationCrystal) expanded per meta."
+  },
+  "items": [
+    {
+      "field": "aether",
+      "unlocalized": "aether",
+      "name_en": "Aether",
+      "name_ru": "Эфир"
+    },
+    {
+      "field": "airScribeTool",
+      "unlocalized": "airScribeTool",
+      "name_en": "Elemental Inscription Tool: Air",
+      "name_ru": "Инструмент начертания элементаля: Воздух"
+    },
+    {
+      "field": "airSigil",
+      "unlocalized": "airSigil",
+      "name_en": "Air Sigil",
+      "name_ru": "Воздушный сигил"
+    },
+    {
+      "field": "alchemyFlask",
+      "unlocalized": "alchemyFlask",
+      "name_en": "Potion Flask",
+      "name_ru": "Фляжка для зелий"
+    },
+    {
+      "field": "apprenticeBloodOrb",
+      "unlocalized": "apprenticeBloodOrb",
+      "name_en": "Apprentice Blood Orb",
+      "name_ru": "Кровавый шар ученика"
+    },
+    {
+      "field": "aquasalus",
+      "unlocalized": "aquasalus",
+      "name_en": "Aquasalus",
+      "name_ru": "Aquasalus"
+    },
+    {
+      "field": "archmageBloodOrb",
+      "unlocalized": "archmageBloodOrb",
+      "name_en": "Archmage's Blood Orb",
+      "name_ru": "Кровавый шар архимага"
+    },
+    {
+      "field": "armourInhibitor",
+      "unlocalized": "armourInhibitor",
+      "name_en": "Armour Inhibitor",
+      "name_ru": "Земедлитель брони"
+    },
+    {
+      "field": "averageLengtheningCatalyst",
+      "unlocalized": "averageLengtheningCatalyst",
+      "name_en": "Average Lengthening Catalyst",
+      "name_ru": "Обычный удлиняющий кристал"
+    },
+    {
+      "field": "averagePowerCatalyst",
+      "unlocalized": "averagePowerCatalyst",
+      "name_en": "Average Power Catalyst",
+      "name_ru": "Обычный энергетический кристал"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "unlocalized": "baseAlchemyItems",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "baseItems",
+      "unlocalized": "baseItems",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "blankSlate",
+      "unlocalized": "blankSlate",
+      "name_en": "Blank Slate",
+      "name_ru": "Чистая плитка"
+    },
+    {
+      "field": "blankSpell",
+      "unlocalized": "blankSpell",
+      "name_en": "Unbound Crystal",
+      "name_ru": "Кристал отвязывания"
+    },
+    {
+      "field": "boundAxe",
+      "unlocalized": "boundAxe",
+      "name_en": "Bound Axe",
+      "name_ru": "Связанный топор"
+    },
+    {
+      "field": "boundBoots",
+      "unlocalized": "boundBoots",
+      "name_en": "Bound Boots",
+      "name_ru": "Связанные ботинки"
+    },
+    {
+      "field": "boundBootsEarth",
+      "unlocalized": "boundBootsEarth",
+      "name_en": "Earth Omega Boots",
+      "name_ru": "Земляные омега ботинки"
+    },
+    {
+      "field": "boundBootsFire",
+      "unlocalized": "boundBootsFire",
+      "name_en": "Fire Omega Boots",
+      "name_ru": "Огненные омега ботинки"
+    },
+    {
+      "field": "boundBootsWater",
+      "unlocalized": "boundBootsWater",
+      "name_en": "Water Omega Boots",
+      "name_ru": "Водные омега ботинки"
+    },
+    {
+      "field": "boundBootsWind",
+      "unlocalized": "boundBootsWind",
+      "name_en": "Wind Omega Boots",
+      "name_ru": "Воздушные омега ботинки"
+    },
+    {
+      "field": "boundHelmet",
+      "unlocalized": "boundHelmet",
+      "name_en": "Bound Helmet",
+      "name_ru": "Связанный шлем"
+    },
+    {
+      "field": "boundHelmetEarth",
+      "unlocalized": "boundHelmetEarth",
+      "name_en": "Earth Omega Helmet",
+      "name_ru": "Земляной омега шлем"
+    },
+    {
+      "field": "boundHelmetFire",
+      "unlocalized": "boundHelmetFire",
+      "name_en": "Fire Omega Helmet",
+      "name_ru": "Огненный омега шлем"
+    },
+    {
+      "field": "boundHelmetWater",
+      "unlocalized": "boundHelmetWater",
+      "name_en": "Water Omega Helmet",
+      "name_ru": "Водный омега шлем"
+    },
+    {
+      "field": "boundHelmetWind",
+      "unlocalized": "boundHelmetWind",
+      "name_en": "Wind Omega Helmet",
+      "name_ru": "Воздушный омега шлем"
+    },
+    {
+      "field": "boundLeggings",
+      "unlocalized": "boundLeggings",
+      "name_en": "Bound Leggings",
+      "name_ru": "Связанные поножи"
+    },
+    {
+      "field": "boundLeggingsEarth",
+      "unlocalized": "boundLeggingsEarth",
+      "name_en": "Earth Omega Leggings",
+      "name_ru": "Земляные омега поножи"
+    },
+    {
+      "field": "boundLeggingsFire",
+      "unlocalized": "boundLeggingsFire",
+      "name_en": "Fire Omega Leggings",
+      "name_ru": "Огненные омега поножи"
+    },
+    {
+      "field": "boundLeggingsWater",
+      "unlocalized": "boundLeggingsWater",
+      "name_en": "Water Omega Leggings",
+      "name_ru": "Водные омега поножи"
+    },
+    {
+      "field": "boundLeggingsWind",
+      "unlocalized": "boundLeggingsWind",
+      "name_en": "Wind Omega Leggings",
+      "name_ru": "Воздушные омега поножи"
+    },
+    {
+      "field": "boundPickaxe",
+      "unlocalized": "boundPickaxe",
+      "name_en": "Bound Pickaxe",
+      "name_ru": "Связанная кирка"
+    },
+    {
+      "field": "boundPlate",
+      "unlocalized": "boundPlate",
+      "name_en": "Bound Plate",
+      "name_ru": "Связанная кираса"
+    },
+    {
+      "field": "boundPlateEarth",
+      "unlocalized": "boundPlateEarth",
+      "name_en": "Earth Omega Plate",
+      "name_ru": "Земляная омега кираса"
+    },
+    {
+      "field": "boundPlateFire",
+      "unlocalized": "boundPlateFire",
+      "name_en": "Fire Omega Plate",
+      "name_ru": "Огненная омега кираса"
+    },
+    {
+      "field": "boundPlateWater",
+      "unlocalized": "boundPlateWater",
+      "name_en": "Water Omega Plate",
+      "name_ru": "Водная омега кираса"
+    },
+    {
+      "field": "boundPlateWind",
+      "unlocalized": "boundPlateWind",
+      "name_en": "Wind Omega Plate",
+      "name_ru": "Воздушная омега кираса"
+    },
+    {
+      "field": "boundShovel",
+      "unlocalized": "boundShovel",
+      "name_en": "Bound Shovel",
+      "name_ru": "Связанная лопата"
+    },
+    {
+      "field": "bucketLife",
+      "unlocalized": "bucketLife",
+      "name_en": "Bucket of Life",
+      "name_ru": "Ведро жизни"
+    },
+    {
+      "field": "creativeDagger",
+      "unlocalized": "creativeDagger",
+      "name_en": "Creative Sacrificial Knife",
+      "name_ru": "Творческий жертвенный кинжал"
+    },
+    {
+      "field": "creativeFiller",
+      "unlocalized": "cheatyItem",
+      "name_en": "Orb of Testing",
+      "name_ru": "Шар тестирования"
+    },
+    {
+      "field": "crepitous",
+      "unlocalized": "crepitous",
+      "name_en": "Crepitous",
+      "name_ru": "Crepitous"
+    },
+    {
+      "field": "crystallos",
+      "unlocalized": "crystallos",
+      "name_en": "Crystallos",
+      "name_ru": "Crystallos"
+    },
+    {
+      "field": "customTool",
+      "unlocalized": "multiTool",
+      "name_en": "Dynamic Mace",
+      "name_ru": "Динамический жезл"
+    },
+    {
+      "field": "daggerOfSacrifice",
+      "unlocalized": "daggerOfSacrifice",
+      "name_en": "Dagger of Sacrifice",
+      "name_ru": "Кинжал жертвоприношения"
+    },
+    {
+      "field": "dawnScribeTool",
+      "unlocalized": "dawnScribeTool",
+      "name_en": "Elemental Inscription Tool: Dawn",
+      "name_ru": "Elemental Inscription Tool: Dawn"
+    },
+    {
+      "field": "demonBloodShard",
+      "unlocalized": "demonBloodShard",
+      "name_en": "Demon Blood Shard",
+      "name_ru": "Осколок крови демона"
+    },
+    {
+      "field": "demonPlacer",
+      "unlocalized": "demonPlacer",
+      "name_en": "Demon Crystal",
+      "name_ru": "Демонический кристалл"
+    },
+    {
+      "field": "demonicSlate",
+      "unlocalized": "demonicSlate",
+      "name_en": "Demonic Slate",
+      "name_ru": "Демоническая плитка"
+    },
+    {
+      "field": "demonicTelepositionFocus",
+      "unlocalized": "demonicTelepositionFocus",
+      "name_en": "Demonic Teleposition Focus",
+      "name_ru": "Демонический фокус телепозиции"
+    },
+    {
+      "field": "divinationSigil",
+      "unlocalized": "divinationSigil",
+      "name_en": "Divination Sigil",
+      "name_ru": "Сигил предсказания"
+    },
+    {
+      "field": "duskScribeTool",
+      "unlocalized": "duskScribeTool",
+      "name_en": "Elemental Inscription Tool: Dusk",
+      "name_ru": "Инструмент начертания элементаля: Сумерки"
+    },
+    {
+      "field": "earthScribeTool",
+      "unlocalized": "earthScribeTool",
+      "name_en": "Elemental Inscription Tool: Earth",
+      "name_ru": "Инструмент начертания элементаля: Земля"
+    },
+    {
+      "field": "energyBazooka",
+      "unlocalized": "energyBazooka",
+      "name_en": "Energy Bazooka",
+      "name_ru": "Энергетическая базука"
+    },
+    {
+      "field": "energyBlaster",
+      "unlocalized": "energyBlast",
+      "name_en": "Energy Blaster",
+      "name_ru": "Энергетическая пушка"
+    },
+    {
+      "field": "energySword",
+      "unlocalized": "energySword",
+      "name_en": "Bound Blade",
+      "name_ru": "Связанное лезвие"
+    },
+    {
+      "field": "enhancedFillingAgent",
+      "unlocalized": "enhancedFillingAgent",
+      "name_en": "Enhanced Filling Agent",
+      "name_ru": "Улучшенный заполняющий реагент"
+    },
+    {
+      "field": "enhancedTelepositionFocus",
+      "unlocalized": "enhancedTelepositionFocus",
+      "name_en": "Enhanced Teleposition Focus",
+      "name_ru": "Улучшенный фокус телепозиции"
+    },
+    {
+      "field": "fireScribeTool",
+      "unlocalized": "fireScribeTool",
+      "name_en": "Elemental Inscription Tool: Fire",
+      "name_ru": "Инструмент начертания элементаля: Огонь"
+    },
+    {
+      "field": "greaterLengtheningCatalyst",
+      "unlocalized": "greaterLengtheningCatalyst",
+      "name_en": "Greater Lengthening Catalyst",
+      "name_ru": "Большой удлиняющий кристал"
+    },
+    {
+      "field": "greaterPowerCatalyst",
+      "unlocalized": "greaterPowerCatalyst",
+      "name_en": "Greater Power Catalyst",
+      "name_ru": "Большой энергетический кристал"
+    },
+    {
+      "field": "growthSigil",
+      "unlocalized": "growthSigil",
+      "name_en": "Sigil of the Green Grove",
+      "name_ru": "Сигил зелёной рощи"
+    },
+    {
+      "field": "imbuedSlate",
+      "unlocalized": "imbuedSlate",
+      "name_en": "Imbued Slate",
+      "name_ru": "Пропитанная плитка"
+    },
+    {
+      "field": "incendium",
+      "unlocalized": "incendium",
+      "name_en": "Incendium",
+      "name_ru": "Incendium"
+    },
+    {
+      "field": "inputRoutingFocus",
+      "unlocalized": "inputRoutingFocus",
+      "name_en": "Input Routing Focus",
+      "name_ru": "Фокус направления входа"
+    },
+    {
+      "field": "itemAssassinSigil",
+      "unlocalized": "itemAssassinSigil",
+      "name_en": "Sigil of the Assassin",
+      "name_ru": "Сигил убийцы"
+    },
+    {
+      "field": "itemAttunedCrystal",
+      "unlocalized": "itemAttunedCrystal",
+      "name_en": "Alchemic Router",
+      "name_ru": "Алхимический маршрутизатор"
+    },
+    {
+      "field": "itemBloodLightSigil",
+      "unlocalized": "bloodLightSigil",
+      "name_en": "Sigil of the Blood Lamp",
+      "name_ru": "Сигил кровавого светильника"
+    },
+    {
+      "field": "itemBloodPack",
+      "unlocalized": "itemBloodPack",
+      "name_en": "Blood Letter's Pack",
+      "name_ru": "Рюкзак кровопускателя"
+    },
+    {
+      "field": "itemCombinationalCatalyst",
+      "unlocalized": "itemCombinationalCatalyst",
+      "name_en": "Combinational Catalyst",
+      "name_ru": "Комбинационный катализатор"
+    },
+    {
+      "field": "itemComplexSpellCrystal",
+      "unlocalized": "itemComplexSpellCrystal",
+      "name_en": "Complex Spell Crystal",
+      "name_ru": "Сложный кристал заклинаний"
+    },
+    {
+      "field": "itemCompressionSigil",
+      "unlocalized": "itemCompressionSigil",
+      "name_en": "Sigil of Compression",
+      "name_ru": "Сигил сжатия"
+    },
+    {
+      "field": "itemDestinationClearer",
+      "unlocalized": "destinationClearer",
+      "name_en": "Alchemic Cleanser",
+      "name_ru": "Алхимический очиститель"
+    },
+    {
+      "field": "itemFluidSigil",
+      "unlocalized": "itemFluidSigil",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "itemHarvestSigil",
+      "unlocalized": "itemHarvestSigil",
+      "name_en": "Harvest Goddess Sigil",
+      "name_ru": "Сигил богини плодородия"
+    },
+    {
+      "field": "itemIncense",
+      "unlocalized": "bloodMagicIncenseItem",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "itemKeyOfDiablo",
+      "unlocalized": "itemDiabloKey",
+      "name_en": "Key of Binding",
+      "name_ru": "Ключ связывания"
+    },
+    {
+      "field": "itemRitualDiviner",
+      "unlocalized": "ritualDiviner",
+      "name_en": "Ritual Diviner",
+      "name_ru": "Предсказатель ритуала"
+    },
+    {
+      "field": "itemSeerSigil",
+      "unlocalized": "itemSeerSigil",
+      "name_en": "Sigil of Sight",
+      "name_ru": "Сигил зрения"
+    },
+    {
+      "field": "itemSigilOfEnderSeverance",
+      "unlocalized": "itemSigilOfEnderSeverance",
+      "name_en": "Sigil of Ender Severance",
+      "name_ru": "Сигил разрыва Края"
+    },
+    {
+      "field": "itemSigilOfSupression",
+      "unlocalized": "itemSigilOfSupression",
+      "name_en": "Sigil of Supression",
+      "name_ru": "Сигил подавления"
+    },
+    {
+      "field": "itemTankSegmenter",
+      "unlocalized": "itemTankSegmenter",
+      "name_en": "Alchemic Segmenter",
+      "name_ru": "Алхимический сегментер"
+    },
+    {
+      "field": "lavaCrystal",
+      "unlocalized": "lavaCrystal",
+      "name_en": "Lava Crystal",
+      "name_ru": "Лавовый кристал"
+    },
+    {
+      "field": "lavaSigil",
+      "unlocalized": "lavaSigil",
+      "name_en": "Lava Sigil",
+      "name_ru": "Лавовый сигил"
+    },
+    {
+      "field": "magicales",
+      "unlocalized": "magicales",
+      "name_en": "Magicales",
+      "name_ru": "Magicales"
+    },
+    {
+      "field": "magicianBloodOrb",
+      "unlocalized": "magicianBloodOrb",
+      "name_en": "Magician's Blood Orb",
+      "name_ru": "Кровавый шар мага"
+    },
+    {
+      "field": "masterBloodOrb",
+      "unlocalized": "masterBloodOrb",
+      "name_en": "Master Blood Orb",
+      "name_ru": "Кровавый шар мастера"
+    },
+    {
+      "field": "mundaneLengtheningCatalyst",
+      "unlocalized": "mundaneLengtheningCatalyst",
+      "name_en": "Mundane Lengthening Catalyst",
+      "name_ru": "Земной удлиняющий кристал"
+    },
+    {
+      "field": "mundanePowerCatalyst",
+      "unlocalized": "mundanePowerCatalyst",
+      "name_en": "Mundane Power Catalyst",
+      "name_ru": "Земной энергетический кристал"
+    },
+    {
+      "field": "outputRoutingFocus",
+      "unlocalized": "outputRoutingFocus",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "reinforcedSlate",
+      "unlocalized": "reinforcedSlate",
+      "name_en": "Reinforced Slate",
+      "name_ru": "Укреплённая плитка"
+    },
+    {
+      "field": "reinforcedTelepositionFocus",
+      "unlocalized": "reinforcedTelepositionFocus",
+      "name_en": "Reinforced Teleposition Focus",
+      "name_ru": "Усиленный фокус телепозиции"
+    },
+    {
+      "field": "ritualDismantler",
+      "unlocalized": "ritualDismantler",
+      "name_en": "Ritual Dismantler",
+      "name_ru": "Ritual Dismantler"
+    },
+    {
+      "field": "sacrificialDagger",
+      "unlocalized": "sacrificialDagger",
+      "name_en": "Sacrificial Knife",
+      "name_ru": "Жертвенный кинжал"
+    },
+    {
+      "field": "sanctus",
+      "unlocalized": "sanctus",
+      "name_en": "Sanctus",
+      "name_ru": "Sanctus"
+    },
+    {
+      "field": "sigilOfElementalAffinity",
+      "unlocalized": "sigilOfElementalAffinity",
+      "name_en": "Sigil of Elemental Affinity",
+      "name_ru": "Сигил стихийного родства"
+    },
+    {
+      "field": "sigilOfHaste",
+      "unlocalized": "sigilOfHaste",
+      "name_en": "Sigil of Haste",
+      "name_ru": "Сигил быстроты"
+    },
+    {
+      "field": "sigilOfHolding",
+      "unlocalized": "sigilOfHolding",
+      "name_en": "Sigil of Holding",
+      "name_ru": "Сигил удержания"
+    },
+    {
+      "field": "sigilOfMagnetism",
+      "unlocalized": "sigilOfMagnetism",
+      "name_en": "Sigil of Magnetism",
+      "name_ru": "Сигил магнетизма"
+    },
+    {
+      "field": "sigilOfTheBridge",
+      "unlocalized": "sigilOfTheBridge",
+      "name_en": "Sigil of the Phantom Bridge",
+      "name_ru": "Сигил призрачного моста"
+    },
+    {
+      "field": "sigilOfTheFastMiner",
+      "unlocalized": "sigilOfTheFastMiner",
+      "name_en": "Sigil of the Fast Miner",
+      "name_ru": "Сигил быстрого копателя"
+    },
+    {
+      "field": "sigilOfWind",
+      "unlocalized": "sigilOfWind",
+      "name_en": "Sigil of the Whirlwind",
+      "name_ru": "Сигил вихря"
+    },
+    {
+      "field": "simpleCatalyst",
+      "unlocalized": "simpleCatalyst",
+      "name_en": "Simple Catalyst",
+      "name_ru": "Простой катализатор"
+    },
+    {
+      "field": "standardBindingAgent",
+      "unlocalized": "standardBindingAgent",
+      "name_en": "Standard Binding Agent",
+      "name_ru": "Обычный связывающий реагент"
+    },
+    {
+      "field": "standardFillingAgent",
+      "unlocalized": "standardFillingAgent",
+      "name_en": "Standard Filling Agent",
+      "name_ru": "Обычный заполняющий реагент"
+    },
+    {
+      "field": "telepositionFocus",
+      "unlocalized": "telepositionFocus",
+      "name_en": "Teleposition Focus",
+      "name_ru": "Фокус телепозиции"
+    },
+    {
+      "field": "tennebrae",
+      "unlocalized": "tennebrae",
+      "name_en": "Tenebrae",
+      "name_ru": "Tenebrae"
+    },
+    {
+      "field": "terrae",
+      "unlocalized": "terrae",
+      "name_en": "Terrae",
+      "name_ru": "Terrae"
+    },
+    {
+      "field": "transcendentBloodOrb",
+      "unlocalized": "transcendentBloodOrb",
+      "name_en": "Transcendent Blood Orb",
+      "name_ru": "Трансцендентальный кровавый шар"
+    },
+    {
+      "field": "voidSigil",
+      "unlocalized": "voidSigil",
+      "name_en": "Void Sigil",
+      "name_ru": "Пустотный сигил"
+    },
+    {
+      "field": "waterScribeTool",
+      "unlocalized": "waterScribeTool",
+      "name_en": "Elemental Inscription Tool: Water",
+      "name_ru": "Инструмент начертания элементаля: Вода"
+    },
+    {
+      "field": "waterSigil",
+      "unlocalized": "waterSigil",
+      "name_en": "Water Sigil",
+      "name_ru": "Водный сигил"
+    },
+    {
+      "field": "weakBindingAgent",
+      "unlocalized": "weakBindingAgent",
+      "name_en": "Weak Binding Agent",
+      "name_ru": "Слабый связывающий реагент"
+    },
+    {
+      "field": "weakBloodOrb",
+      "unlocalized": "weakBloodOrb",
+      "name_en": "Weak Blood Orb",
+      "name_ru": "Слабый кровавый шар"
+    },
+    {
+      "field": "weakBloodShard",
+      "unlocalized": "weakBloodShard",
+      "name_en": "Weak Blood Shard",
+      "name_ru": "Слабый кровавый осколок"
+    },
+    {
+      "field": "weakFillingAgent",
+      "unlocalized": "weakFillingAgent",
+      "name_en": "Weak Filling Agent",
+      "name_ru": "Слабый заполняющий реагент"
+    },
+    {
+      "field": "baseItems",
+      "meta": 0,
+      "sub": "QuartzRod",
+      "unlocalized": "bloodMagicBaseItem.QuartzRod",
+      "name_en": "Quartz Rod",
+      "name_ru": "Кварцевый стержень"
+    },
+    {
+      "field": "baseItems",
+      "meta": 1,
+      "sub": "EmptyCore",
+      "unlocalized": "bloodMagicBaseItem.EmptyCore",
+      "name_en": "Empty Core",
+      "name_ru": "Пустое ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 2,
+      "sub": "MagicalesCable",
+      "unlocalized": "bloodMagicBaseItem.MagicalesCable",
+      "name_en": "Magicales Cable",
+      "name_ru": "Магический провод"
+    },
+    {
+      "field": "baseItems",
+      "meta": 3,
+      "sub": "WoodBrace",
+      "unlocalized": "bloodMagicBaseItem.WoodBrace",
+      "name_en": "Wooden Brace",
+      "name_ru": "Деревянное скрепление"
+    },
+    {
+      "field": "baseItems",
+      "meta": 4,
+      "sub": "StoneBrace",
+      "unlocalized": "bloodMagicBaseItem.StoneBrace",
+      "name_en": "Stone Brace",
+      "name_ru": "Каменное скрепление"
+    },
+    {
+      "field": "baseItems",
+      "meta": 5,
+      "sub": "ProjectileCore",
+      "unlocalized": "bloodMagicBaseItem.ProjectileCore",
+      "name_en": "Projectile Core",
+      "name_ru": "Метательное ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 6,
+      "sub": "SelfCore",
+      "unlocalized": "bloodMagicBaseItem.SelfCore",
+      "name_en": "Self Core",
+      "name_ru": "Сплошное ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 7,
+      "sub": "MeleeCore",
+      "unlocalized": "bloodMagicBaseItem.MeleeCore",
+      "name_en": "Melee Core",
+      "name_ru": "Ближнее ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 8,
+      "sub": "ParadigmBackPlate",
+      "unlocalized": "bloodMagicBaseItem.ParadigmBackPlate",
+      "name_en": "Paradigm Plate",
+      "name_ru": "Примерная пластина"
+    },
+    {
+      "field": "baseItems",
+      "meta": 9,
+      "sub": "OutputCable",
+      "unlocalized": "bloodMagicBaseItem.OutputCable",
+      "name_en": "Output Spell Cable",
+      "name_ru": "Провод для выхода заклинаний"
+    },
+    {
+      "field": "baseItems",
+      "meta": 10,
+      "sub": "FlameCore",
+      "unlocalized": "bloodMagicBaseItem.FlameCore",
+      "name_en": "Fire Core",
+      "name_ru": "Огненное ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 11,
+      "sub": "IcyCore",
+      "unlocalized": "bloodMagicBaseItem.IcyCore",
+      "name_en": "Icy Core",
+      "name_ru": "Ледяное ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 12,
+      "sub": "GustCore",
+      "unlocalized": "bloodMagicBaseItem.GustCore",
+      "name_en": "Gusty Core",
+      "name_ru": "Ветреное ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 13,
+      "sub": "EarthenCore",
+      "unlocalized": "bloodMagicBaseItem.EarthenCore",
+      "name_en": "Earthen Core",
+      "name_ru": "Земляное ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 14,
+      "sub": "InputCable",
+      "unlocalized": "bloodMagicBaseItem.InputCable",
+      "name_en": "Input Spell Cable",
+      "name_ru": "Провод для входа заклинаний"
+    },
+    {
+      "field": "baseItems",
+      "meta": 15,
+      "sub": "CrackedRunicPlate",
+      "unlocalized": "bloodMagicBaseItem.CrackedRunicPlate",
+      "name_en": "Cracked Runic Plate",
+      "name_ru": "Сломанная руническая пластина"
+    },
+    {
+      "field": "baseItems",
+      "meta": 16,
+      "sub": "RunicPlate",
+      "unlocalized": "bloodMagicBaseItem.RunicPlate",
+      "name_en": "Runic Plate",
+      "name_ru": "Руническая пластина"
+    },
+    {
+      "field": "baseItems",
+      "meta": 17,
+      "sub": "ScribedRunicPlate",
+      "unlocalized": "bloodMagicBaseItem.ScribedRunicPlate",
+      "name_en": "Imbued Runic Plate",
+      "name_ru": "Пропитанная руническая пластина"
+    },
+    {
+      "field": "baseItems",
+      "meta": 18,
+      "sub": "DefaultCore",
+      "unlocalized": "bloodMagicBaseItem.DefaultCore",
+      "name_en": "Unattuned Core",
+      "name_ru": "Ненастроенное ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 19,
+      "sub": "OffensiveCore",
+      "unlocalized": "bloodMagicBaseItem.OffensiveCore",
+      "name_en": "Offensive Core",
+      "name_ru": "Ядро нападения"
+    },
+    {
+      "field": "baseItems",
+      "meta": 20,
+      "sub": "DefensiveCore",
+      "unlocalized": "bloodMagicBaseItem.DefensiveCore",
+      "name_en": "Defensive Core",
+      "name_ru": "Ядро обороны"
+    },
+    {
+      "field": "baseItems",
+      "meta": 21,
+      "sub": "EnvironmentalCore",
+      "unlocalized": "bloodMagicBaseItem.EnvironmentalCore",
+      "name_en": "Environmental Core",
+      "name_ru": "Ядро окружающей среды"
+    },
+    {
+      "field": "baseItems",
+      "meta": 22,
+      "sub": "PowerCore",
+      "unlocalized": "bloodMagicBaseItem.PowerCore",
+      "name_en": "Power Core",
+      "name_ru": "Энергетическое ядро"
+    },
+    {
+      "field": "baseItems",
+      "meta": 23,
+      "sub": "CostCore",
+      "unlocalized": "bloodMagicBaseItem.CostCore",
+      "name_en": "Reduction Core",
+      "name_ru": "Ядро уменьшения"
+    },
+    {
+      "field": "baseItems",
+      "meta": 24,
+      "sub": "PotencyCore",
+      "unlocalized": "bloodMagicBaseItem.PotencyCore",
+      "name_en": "Potency Core",
+      "name_ru": "Ядро эффективности"
+    },
+    {
+      "field": "baseItems",
+      "meta": 25,
+      "sub": "ObsidianBrace",
+      "unlocalized": "bloodMagicBaseItem.ObsidianBrace",
+      "name_en": "Obsidian Brace",
+      "name_ru": "Обсидиановое скрепление"
+    },
+    {
+      "field": "baseItems",
+      "meta": 26,
+      "sub": "ToolCore",
+      "unlocalized": "bloodMagicBaseItem.ToolCore",
+      "name_en": "Tool Core",
+      "name_ru": "Ядро инструментов"
+    },
+    {
+      "field": "baseItems",
+      "meta": 27,
+      "sub": "EtherealSlate",
+      "unlocalized": "bloodMagicBaseItem.EtherealSlate",
+      "name_en": "Ethereal Slate",
+      "name_ru": "Эфирная плитка"
+    },
+    {
+      "field": "baseItems",
+      "meta": 28,
+      "sub": "LifeShard",
+      "unlocalized": "bloodMagicBaseItem.LifeShard",
+      "name_en": "Life Shard",
+      "name_ru": "Осколок жизни"
+    },
+    {
+      "field": "baseItems",
+      "meta": 29,
+      "sub": "SoulShard",
+      "unlocalized": "bloodMagicBaseItem.SoulShard",
+      "name_en": "Soul Shard",
+      "name_ru": "Осколок души"
+    },
+    {
+      "field": "baseItems",
+      "meta": 30,
+      "sub": "SoulRunicPlate",
+      "unlocalized": "bloodMagicBaseItem.SoulRunicPlate",
+      "name_en": "Soul Runic Plate",
+      "name_ru": "Руническая пластина души"
+    },
+    {
+      "field": "baseItems",
+      "meta": 31,
+      "sub": "LifeBrace",
+      "unlocalized": "bloodMagicBaseItem.LifeBrace",
+      "name_en": "Living Brace",
+      "name_ru": "Живое скрепление"
+    },
+    {
+      "field": "baseItems",
+      "meta": 32,
+      "sub": "EnderShard",
+      "unlocalized": "bloodMagicBaseItem.EnderShard",
+      "name_en": "Ender Shard",
+      "name_ru": "Осколок Края"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 0,
+      "sub": "Offensa",
+      "unlocalized": "bloodMagicAlchemyItem.Offensa",
+      "name_en": "Offensa",
+      "name_ru": "Offensa"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 1,
+      "sub": "Praesidium",
+      "unlocalized": "bloodMagicAlchemyItem.Praesidium",
+      "name_en": "Praesidium",
+      "name_ru": "Praesidium"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 2,
+      "sub": "OrbisTerrae",
+      "unlocalized": "bloodMagicAlchemyItem.OrbisTerrae",
+      "name_en": "Orbis Terrae",
+      "name_ru": "Orbis Terrae"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 3,
+      "sub": "StrengthenedCatalyst",
+      "unlocalized": "bloodMagicAlchemyItem.StrengthenedCatalyst",
+      "name_en": "Strengthened Catalyst",
+      "name_ru": "Усиленный катализатор"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 4,
+      "sub": "ConcentratedCatalyst",
+      "unlocalized": "bloodMagicAlchemyItem.ConcentratedCatalyst",
+      "name_en": "Concentrated Catalyst",
+      "name_ru": "Концентрированный катализатор"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 5,
+      "sub": "FracturedBone",
+      "unlocalized": "bloodMagicAlchemyItem.FracturedBone",
+      "name_en": "Fractured Bone",
+      "name_ru": "Сломанная кость"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 6,
+      "sub": "Virtus",
+      "unlocalized": "bloodMagicAlchemyItem.Virtus",
+      "name_en": "Virtus",
+      "name_ru": "Virtus"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 7,
+      "sub": "Reductus",
+      "unlocalized": "bloodMagicAlchemyItem.Reductus",
+      "name_en": "Reductus",
+      "name_ru": "Reductus"
+    },
+    {
+      "field": "baseAlchemyItems",
+      "meta": 8,
+      "sub": "Potentia",
+      "unlocalized": "bloodMagicAlchemyItem.Potentia",
+      "name_en": "Potentia",
+      "name_ru": "Potentia"
+    },
+    {
+      "field": "activationCrystal",
+      "meta": 0,
+      "unlocalized": "activationCrystalWeak",
+      "name_en": "Weak Activation Crystal",
+      "name_ru": "Слабый кристал активации"
+    },
+    {
+      "field": "activationCrystal",
+      "meta": 1,
+      "unlocalized": "activationCrystalAwakened",
+      "name_en": "Awakened Activation Crystal",
+      "name_ru": "Пробуждённый кристал активации"
+    },
+    {
+      "field": "activationCrystal",
+      "meta": 2,
+      "unlocalized": "activationCrystalCreative",
+      "name_en": "Creative Activation Crystal",
+      "name_ru": "Творческий кристал активации"
+    }
+  ]
+}

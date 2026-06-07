@@ -1,0 +1,6971 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 6,
+    "notes": "Blood Altar multiblock structures per tier. Each tier lists every block (offset x,y,z from the altar at 0,0,0) that must be present. isBloodRune = any blood rune accepted in that slot; isUpgradeSlot = a rune slot the player customises (capacity/speed/sacrifice runes). Tiers are cumulative (a tier-4 altar also satisfies lower tiers)."
+  },
+  "tiers": [
+    {
+      "tier": 1,
+      "components": [],
+      "note": "Tier 1 = the Blood Altar alone (no surrounding structure)."
+    },
+    {
+      "tier": 2,
+      "componentCount": 8,
+      "runeCount": 8,
+      "upgradeSlots": 4,
+      "components": [
+        {
+          "x": -1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": false
+        }
+      ]
+    },
+    {
+      "tier": 3,
+      "componentCount": 40,
+      "runeCount": 28,
+      "upgradeSlots": 28,
+      "components": [
+        {
+          "x": -1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "z": -3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "z": -3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "z": 3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "z": 3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        }
+      ]
+    },
+    {
+      "tier": 4,
+      "componentCount": 88,
+      "runeCount": 56,
+      "upgradeSlots": 56,
+      "components": [
+        {
+          "x": -1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "z": -3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "z": -3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "z": 3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "z": 3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -2,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -2,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -2,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -2,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "z": 5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "z": -5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "z": -5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "z": 5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        }
+      ]
+    },
+    {
+      "tier": 5,
+      "componentCount": 144,
+      "runeCount": 108,
+      "upgradeSlots": 108,
+      "components": [
+        {
+          "x": -1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "z": -3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "z": -3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "z": 3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "z": 3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -2,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -2,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -2,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -2,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "z": 5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "z": -5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "z": -5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "z": 5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "z": 8,
+          "block": {
+            "vanilla": "beacon",
+            "name_en": "Beacon",
+            "name_ru": "Маяк"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "z": -8,
+          "block": {
+            "vanilla": "beacon",
+            "name_en": "Beacon",
+            "name_ru": "Маяк"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "z": -8,
+          "block": {
+            "vanilla": "beacon",
+            "name_en": "Beacon",
+            "name_ru": "Маяк"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "z": 8,
+          "block": {
+            "vanilla": "beacon",
+            "name_en": "Beacon",
+            "name_ru": "Маяк"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -6,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -4,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 4,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 6,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -6,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -4,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 4,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 6,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        }
+      ]
+    },
+    {
+      "tier": 6,
+      "componentCount": 252,
+      "runeCount": 184,
+      "upgradeSlots": 184,
+      "components": [
+        {
+          "x": -1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "z": -3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "z": 3,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "z": -3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "z": -3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "z": 3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "z": 3,
+          "block": {
+            "vanilla": "glowstone",
+            "name_en": "Glowstone",
+            "name_ru": "Светящийся камень"
+          },
+          "meta": "placement",
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -2,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -3,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -3,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -2,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -2,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": -1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -2,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "z": -5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -2,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "z": 5,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "z": 5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "z": -5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "z": -5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "z": 5,
+          "block": {
+            "ref": "largeBloodStoneBrick",
+            "name_en": "Large Bloodstone Brick",
+            "name_ru": "Большой кровавый кирпич"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "z": 8,
+          "block": {
+            "vanilla": "beacon",
+            "name_en": "Beacon",
+            "name_ru": "Маяк"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "z": -8,
+          "block": {
+            "vanilla": "beacon",
+            "name_en": "Beacon",
+            "name_ru": "Маяк"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "z": -8,
+          "block": {
+            "vanilla": "beacon",
+            "name_en": "Beacon",
+            "name_ru": "Маяк"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "z": 8,
+          "block": {
+            "vanilla": "beacon",
+            "name_en": "Beacon",
+            "name_ru": "Маяк"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -4,
+          "z": 6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -4,
+          "z": 6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -6,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -4,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 4,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 6,
+          "y": -4,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -6,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -4,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 4,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 6,
+          "y": -4,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -4,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": -3,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": -2,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": -1,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": 0,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": 1,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": -4,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": -3,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": -2,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": -1,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": 0,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": 1,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": 2,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": -4,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": -3,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": -2,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": -1,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": 0,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": 1,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "z": -11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": -4,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": -3,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": -2,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": -1,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": 0,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": 1,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": 2,
+          "z": 11,
+          "block": {
+            "vanilla": "stonebrick",
+            "name_en": "Cobblestone",
+            "name_ru": "Булыжник"
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "z": 11,
+          "block": {
+            "ref": "blockCrystal",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": 3,
+          "z": -11,
+          "block": {
+            "ref": "blockCrystal",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "z": -11,
+          "block": {
+            "ref": "blockCrystal",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": -11,
+          "y": 3,
+          "z": 11,
+          "block": {
+            "ref": "blockCrystal",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": false,
+          "isUpgradeSlot": false
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -9,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -7,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 7,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 11,
+          "y": -5,
+          "z": 9,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -9,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -7,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": -1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 0,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 1,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 2,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 3,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 4,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 5,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 6,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 7,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 8,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -11,
+          "y": -5,
+          "z": 9,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -9,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -7,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -6,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -4,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 4,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 6,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 7,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 9,
+          "y": -5,
+          "z": 11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -9,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -8,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -7,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -6,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -5,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -4,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -3,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -2,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": -1,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 0,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 1,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 2,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 3,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 4,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 5,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 6,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 7,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 8,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        },
+        {
+          "x": 9,
+          "y": -5,
+          "z": -11,
+          "block": {
+            "ref": "bloodRune",
+            "name_en": "",
+            "name_ru": ""
+          },
+          "meta": 0,
+          "isBloodRune": true,
+          "isUpgradeSlot": true
+        }
+      ]
+    }
+  ]
+}

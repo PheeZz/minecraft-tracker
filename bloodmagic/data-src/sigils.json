@@ -1,0 +1,170 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 20,
+    "notes": "Blood Magic sigils (Soul Network powered tools). cost_LP_per_use = mod-default LP drained per activation (server may override via config); kind: placement (places a block), activated (toggle/use effect), passive (divination/seer, no LP). Sigils also appear in items.json."
+  },
+  "sigils": [
+    {
+      "field": "airSigil",
+      "class": "SigilAir",
+      "name_en": "Air Sigil",
+      "name_ru": "Воздушный сигил",
+      "cost_LP_per_use": 50,
+      "kind": "activated"
+    },
+    {
+      "field": "itemBloodLightSigil",
+      "class": "SigilBloodLight",
+      "name_en": "Sigil of the Blood Lamp",
+      "name_ru": "Сигил кровавого светильника",
+      "cost_LP_per_use": 10,
+      "kind": "activated"
+    },
+    {
+      "field": "divinationSigil",
+      "class": "SigilDivination",
+      "name_en": "Divination Sigil",
+      "name_ru": "Сигил предсказания",
+      "cost_LP_per_use": null,
+      "kind": "passive"
+    },
+    {
+      "field": "itemFluidSigil",
+      "class": "SigilFluid",
+      "name_en": "Fluid Sigil",
+      "name_ru": "Fluid Sigil",
+      "cost_LP_per_use": null,
+      "kind": "passive"
+    },
+    {
+      "field": "itemHarvestSigil",
+      "class": "SigilHarvest",
+      "name_en": "Harvest Goddess Sigil",
+      "name_ru": "Сигил богини плодородия",
+      "cost_LP_per_use": 500,
+      "kind": "activated"
+    },
+    {
+      "field": "lavaSigil",
+      "class": "SigilLava",
+      "name_en": "Lava Sigil",
+      "name_ru": "Лавовый сигил",
+      "cost_LP_per_use": 1000,
+      "kind": "placement"
+    },
+    {
+      "field": "sigilOfElementalAffinity",
+      "class": "SigilOfElementalAffinity",
+      "name_en": "Sigil of Elemental Affinity",
+      "name_ru": "Сигил стихийного родства",
+      "cost_LP_per_use": 200,
+      "kind": "activated"
+    },
+    {
+      "field": "itemSigilOfEnderSeverance",
+      "class": "SigilOfEnderSeverance",
+      "name_en": "Sigil of Ender Severance",
+      "name_ru": "Сигил разрыва Края",
+      "cost_LP_per_use": 200,
+      "kind": "activated"
+    },
+    {
+      "field": "growthSigil",
+      "class": "SigilOfGrowth",
+      "name_en": "Sigil of the Green Grove",
+      "name_ru": "Сигил зелёной рощи",
+      "cost_LP_per_use": 150,
+      "kind": "activated"
+    },
+    {
+      "field": "sigilOfHaste",
+      "class": "SigilOfHaste",
+      "name_en": "Sigil of Haste",
+      "name_ru": "Сигил быстроты",
+      "cost_LP_per_use": 250,
+      "kind": "activated"
+    },
+    {
+      "field": "sigilOfMagnetism",
+      "class": "SigilOfMagnetism",
+      "name_en": "Sigil of Magnetism",
+      "name_ru": "Сигил магнетизма",
+      "cost_LP_per_use": 50,
+      "kind": "activated"
+    },
+    {
+      "field": "itemSigilOfSupression",
+      "class": "SigilOfSupression",
+      "name_en": "Sigil of Supression",
+      "name_ru": "Сигил подавления",
+      "cost_LP_per_use": 400,
+      "kind": "activated"
+    },
+    {
+      "field": "itemAssassinSigil",
+      "class": "SigilOfTheAssassin",
+      "name_en": "Sigil of the Assassin",
+      "name_ru": "Сигил убийцы",
+      "cost_LP_per_use": 100,
+      "kind": "activated"
+    },
+    {
+      "field": "sigilOfTheBridge",
+      "class": "SigilOfTheBridge",
+      "name_en": "Sigil of the Phantom Bridge",
+      "name_ru": "Сигил призрачного моста",
+      "cost_LP_per_use": 100,
+      "kind": "activated"
+    },
+    {
+      "field": "sigilOfTheFastMiner",
+      "class": "SigilOfTheFastMiner",
+      "name_en": "Sigil of the Fast Miner",
+      "name_ru": "Сигил быстрого копателя",
+      "cost_LP_per_use": 100,
+      "kind": "activated"
+    },
+    {
+      "field": "sigilOfWind",
+      "class": "SigilOfWind",
+      "name_en": "Sigil of the Whirlwind",
+      "name_ru": "Сигил вихря",
+      "cost_LP_per_use": 250,
+      "kind": "activated"
+    },
+    {
+      "field": "itemCompressionSigil",
+      "class": "SigilPackRat",
+      "name_en": "Sigil of Compression",
+      "name_ru": "Сигил сжатия",
+      "cost_LP_per_use": 200,
+      "kind": "activated"
+    },
+    {
+      "field": "itemSeerSigil",
+      "class": "SigilSeer",
+      "name_en": "Sigil of Sight",
+      "name_ru": "Сигил зрения",
+      "cost_LP_per_use": null,
+      "kind": "passive"
+    },
+    {
+      "field": "voidSigil",
+      "class": "SigilVoid",
+      "name_en": "Void Sigil",
+      "name_ru": "Пустотный сигил",
+      "cost_LP_per_use": 50,
+      "kind": "placement"
+    },
+    {
+      "field": "waterSigil",
+      "class": "SigilWater",
+      "name_en": "Water Sigil",
+      "name_ru": "Водный сигил",
+      "cost_LP_per_use": 100,
+      "kind": "placement"
+    }
+  ]
+}

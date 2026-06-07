@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 950,
+    "source": "MC 1.7.10 client.jar assets/minecraft/textures/",
+    "note": "vanilla texture PNGs by top-level folder, structure preserved"
+  },
+  "byFolder": {
+    "blocks": 349,
+    "colormap": 2,
+    "effect": 1,
+    "entity": 88,
+    "environment": 6,
+    "font": 224,
+    "gui": 36,
+    "items": 214,
+    "loading_screen": 7,
+    "map": 2,
+    "misc": 6,
+    "models": 12,
+    "painting": 1,
+    "particle": 2
+  },
+  "total": 950
+}

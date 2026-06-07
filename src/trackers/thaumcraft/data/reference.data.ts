@@ -10,7 +10,7 @@ import type {
 export const SMELTING: readonly SmeltingBonus[] = [
   {
     input: 'Золотая руда',
-    output: { ru: 'Золотой самородок', en: 'Gold Nugget' },
+    output: { ru: 'Золотой самородок', en: 'Gold Nugget', icon: 'vanilla/items/gold_nugget.png' },
     mod: 'Thaumcraft',
   },
   {
@@ -24,11 +24,7 @@ export const SMELTING: readonly SmeltingBonus[] = [
   },
   {
     input: 'Киноварная руда',
-    output: {
-      ru: 'Капля ртути',
-      en: 'Quicksilver Drop',
-      icon: 'items/thaumcraft/quicksilver.png',
-    },
+    output: { ru: 'Капля ртути', en: 'Quicksilver Drop', icon: 'items/thaumcraft/quicksilver.png' },
     mod: 'Thaumcraft',
   },
   {
@@ -42,11 +38,7 @@ export const SMELTING: readonly SmeltingBonus[] = [
   },
   {
     input: 'Оловянная руда',
-    output: {
-      ru: 'Оловянный самородок',
-      en: 'Tin Nugget',
-      icon: 'items/thaumcraft/nuggettin.png',
-    },
+    output: { ru: 'Оловянный самородок', en: 'Tin Nugget', icon: 'items/thaumcraft/nuggettin.png' },
     mod: 'Thaumcraft',
   },
   {
@@ -69,7 +61,7 @@ export const SMELTING: readonly SmeltingBonus[] = [
   },
   {
     input: 'Золоторудный кластер',
-    output: { ru: 'Золотой самородок', en: 'Gold Nugget' },
+    output: { ru: 'Золотой самородок', en: 'Gold Nugget', icon: 'vanilla/items/gold_nugget.png' },
     mod: 'Thaumcraft',
   },
   {
@@ -83,11 +75,7 @@ export const SMELTING: readonly SmeltingBonus[] = [
   },
   {
     input: 'Киноварный кластер',
-    output: {
-      ru: 'Капля ртути',
-      en: 'Quicksilver Drop',
-      icon: 'items/thaumcraft/quicksilver.png',
-    },
+    output: { ru: 'Капля ртути', en: 'Quicksilver Drop', icon: 'items/thaumcraft/quicksilver.png' },
     mod: 'Thaumcraft',
   },
   {
@@ -101,11 +89,7 @@ export const SMELTING: readonly SmeltingBonus[] = [
   },
   {
     input: 'Оловяннорудный кластер',
-    output: {
-      ru: 'Оловянный самородок',
-      en: 'Tin Nugget',
-      icon: 'items/thaumcraft/nuggettin.png',
-    },
+    output: { ru: 'Оловянный самородок', en: 'Tin Nugget', icon: 'items/thaumcraft/nuggettin.png' },
     mod: 'Thaumcraft',
   },
   {
@@ -137,52 +121,32 @@ export const SMELTING: readonly SmeltingBonus[] = [
   },
   {
     input: 'Beef',
-    output: {
-      ru: 'Кусочек говядины',
-      en: 'Beef Nugget',
-      icon: 'items/thaumcraft/nuggetbeef.png',
-    },
+    output: { ru: 'Кусочек говядины', en: 'Beef Nugget', icon: 'items/thaumcraft/nuggetbeef.png' },
     mod: 'Thaumcraft',
   },
   {
     input: 'Porkchop',
-    output: {
-      ru: 'Кусочек свинины',
-      en: 'Pork Nugget',
-      icon: 'items/thaumcraft/nuggetpork.png',
-    },
+    output: { ru: 'Кусочек свинины', en: 'Pork Nugget', icon: 'items/thaumcraft/nuggetpork.png' },
     mod: 'Thaumcraft',
   },
   {
     input: 'Fish',
-    output: {
-      ru: 'Кусочек рыбки',
-      en: 'Fish Nugget',
-      icon: 'items/thaumcraft/nuggetfish.png',
-    },
+    output: { ru: 'Кусочек рыбки', en: 'Fish Nugget', icon: 'items/thaumcraft/nuggetfish.png' },
     mod: 'Thaumcraft',
   },
   {
     input: 'Киноварная руда',
-    output: {
-      ru: 'Капля ртути',
-      en: 'Quicksilver Drop',
-      icon: 'items/thaumcraft/quicksilver.png',
-    },
+    output: { ru: 'Капля ртути', en: 'Quicksilver Drop', icon: 'items/thaumcraft/quicksilver.png' },
     mod: 'Thaumcraft',
   },
   {
     input: 'Золоторудный кластер',
-    output: { ru: 'Золотой самородок', en: 'Gold Nugget' },
+    output: { ru: 'Золотой самородок', en: 'Gold Nugget', icon: 'vanilla/items/gold_nugget.png' },
     mod: 'Thaumcraft',
   },
   {
     input: 'Киноварный кластер',
-    output: {
-      ru: 'Капля ртути',
-      en: 'Quicksilver Drop',
-      icon: 'items/thaumcraft/quicksilver.png',
-    },
+    output: { ru: 'Капля ртути', en: 'Quicksilver Drop', icon: 'items/thaumcraft/quicksilver.png' },
     mod: 'Thaumcraft',
   },
 ]
@@ -216,37 +180,37 @@ export const LOOT: readonly LootBag[] = [
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Алмаз', en: 'Diamond' },
+    item: { ru: 'Алмаз', en: 'Diamond', icon: 'vanilla/items/diamond.png' },
     weight: 10,
     rarities: ['common'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Алмаз', en: 'Diamond' },
+    item: { ru: 'Алмаз', en: 'Diamond', icon: 'vanilla/items/diamond.png' },
     weight: 50,
     rarities: ['uncommon', 'rare'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Изумруд', en: 'Emerald' },
+    item: { ru: 'Изумруд', en: 'Emerald', icon: 'vanilla/items/emerald.png' },
     weight: 15,
     rarities: ['common'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Изумруд', en: 'Emerald' },
+    item: { ru: 'Изумруд', en: 'Emerald', icon: 'vanilla/items/emerald.png' },
     weight: 75,
     rarities: ['uncommon', 'rare'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Золотой слиток', en: 'Gold Ingot' },
+    item: { ru: 'Золотой слиток', en: 'Gold Ingot', icon: 'vanilla/items/gold_ingot.png' },
     weight: 100,
     rarities: ['common', 'uncommon', 'rare'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Жемчуг Эндера', en: 'Ender Pearl' },
+    item: { ru: 'Жемчуг Эндера', en: 'Ender Pearl', icon: 'vanilla/items/ender_pearl.png' },
     weight: 100,
     rarities: ['common', 'uncommon', 'rare'],
     mod: 'Thaumcraft',
@@ -272,21 +236,13 @@ export const LOOT: readonly LootBag[] = [
     mod: 'Thaumcraft',
   },
   {
-    item: {
-      ru: 'Обычное кольцо',
-      en: 'Mundane Ring',
-      icon: 'items/thaumcraft/bauble_ring.png',
-    },
+    item: { ru: 'Обычное кольцо', en: 'Mundane Ring', icon: 'items/thaumcraft/bauble_ring.png' },
     weight: 10,
     rarities: ['common'],
     mod: 'Thaumcraft',
   },
   {
-    item: {
-      ru: 'Обычный пояс',
-      en: 'Mundane Belt',
-      icon: 'items/thaumcraft/bauble_belt.png',
-    },
+    item: { ru: 'Обычный пояс', en: 'Mundane Belt', icon: 'items/thaumcraft/bauble_belt.png' },
     weight: 10,
     rarities: ['common'],
     mod: 'Thaumcraft',
@@ -314,61 +270,73 @@ export const LOOT: readonly LootBag[] = [
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Experience Bottle', en: 'Experience Bottle' },
+    item: {
+      ru: 'Experience Bottle',
+      en: 'Experience Bottle',
+      icon: 'vanilla/items/experience_bottle.png',
+    },
     weight: 5,
     rarities: ['common'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Experience Bottle', en: 'Experience Bottle' },
+    item: {
+      ru: 'Experience Bottle',
+      en: 'Experience Bottle',
+      icon: 'vanilla/items/experience_bottle.png',
+    },
     weight: 10,
     rarities: ['uncommon'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Experience Bottle', en: 'Experience Bottle' },
+    item: {
+      ru: 'Experience Bottle',
+      en: 'Experience Bottle',
+      icon: 'vanilla/items/experience_bottle.png',
+    },
     weight: 20,
     rarities: ['rare'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Золотое яблоко', en: 'Golden Apple' },
+    item: { ru: 'Золотое яблоко', en: 'Golden Apple', icon: 'vanilla/items/apple_golden.png' },
     weight: 1,
     rarities: ['common'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Золотое яблоко', en: 'Golden Apple' },
+    item: { ru: 'Золотое яблоко', en: 'Golden Apple', icon: 'vanilla/items/apple_golden.png' },
     weight: 2,
     rarities: ['uncommon'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Золотое яблоко', en: 'Golden Apple' },
+    item: { ru: 'Золотое яблоко', en: 'Golden Apple', icon: 'vanilla/items/apple_golden.png' },
     weight: 3,
     rarities: ['rare'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Золотое яблоко', en: 'Golden Apple' },
+    item: { ru: 'Золотое яблоко', en: 'Golden Apple', icon: 'vanilla/items/apple_golden.png' },
     weight: 3,
     rarities: ['common'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Золотое яблоко', en: 'Golden Apple' },
+    item: { ru: 'Золотое яблоко', en: 'Golden Apple', icon: 'vanilla/items/apple_golden.png' },
     weight: 6,
     rarities: ['uncommon'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Золотое яблоко', en: 'Golden Apple' },
+    item: { ru: 'Золотое яблоко', en: 'Golden Apple', icon: 'vanilla/items/apple_golden.png' },
     weight: 9,
     rarities: ['rare'],
     mod: 'Thaumcraft',
   },
   {
-    item: { ru: 'Книга', en: 'Book' },
+    item: { ru: 'Книга', en: 'Book', icon: 'vanilla/items/book_normal.png' },
     weight: 10,
     rarities: ['common', 'uncommon', 'rare'],
     mod: 'Thaumcraft',

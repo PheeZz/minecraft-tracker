@@ -1,0 +1,283 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 39,
+    "notes": "every BloodMagic block. field = ModBlocks field; unlocalized from func_149663_c."
+  },
+  "blocks": [
+    {
+      "field": "armourForge",
+      "class": "ArmourForge",
+      "unlocalized": "armourForge",
+      "name_en": "Soul Armour Forge",
+      "name_ru": "Кузница душевной брони"
+    },
+    {
+      "field": "blockAlchemicCalcinator",
+      "class": "BlockAlchemicCalcinator",
+      "unlocalized": "alchemicCalcinator",
+      "name_en": "Alchemic Calcinator",
+      "name_ru": "Алхимический кальцинатор"
+    },
+    {
+      "field": "blockAltar",
+      "class": "BlockAltar",
+      "unlocalized": "bloodAltar",
+      "name_en": "Blood Altar",
+      "name_ru": "Кровавый алтарь"
+    },
+    {
+      "field": "blockBloodLight",
+      "class": "BlockBloodLightSource",
+      "unlocalized": "blockBloodLightSource",
+      "name_en": "Blood Light",
+      "name_ru": "Кровавый свет"
+    },
+    {
+      "field": "blockBuildingSchematicSaver",
+      "class": "BlockSchematicSaver",
+      "unlocalized": "schematicSaver",
+      "name_en": "Schematic Saver",
+      "name_ru": "Schematic Saver"
+    },
+    {
+      "field": "blockConduit",
+      "class": "BlockConduit",
+      "unlocalized": "blockConduit",
+      "name_en": "Spell Conduit",
+      "name_ru": "Труба для заклинаний"
+    },
+    {
+      "field": "blockCrucible",
+      "class": "BlockCrucible",
+      "unlocalized": "blockCrucible",
+      "name_en": "Incense Crucible",
+      "name_ru": "Incense Crucible"
+    },
+    {
+      "field": "blockCrystal",
+      "class": "BlockCrystal",
+      "unlocalized": "crystalBlock",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "blockCrystalBelljar",
+      "class": "BlockBelljar",
+      "unlocalized": "crystalBelljar",
+      "name_en": "Crystal Belljar",
+      "name_ru": "Кристальный стеклянный колпак"
+    },
+    {
+      "field": "blockDemonChest",
+      "class": "BlockDemonChest",
+      "unlocalized": "demonChest",
+      "name_en": "Demon's Chest",
+      "name_ru": "Сундук демона"
+    },
+    {
+      "field": "blockDemonPortal",
+      "class": "BlockDemonPortal",
+      "unlocalized": "demonPortal",
+      "name_en": "Demon Portal",
+      "name_ru": "Демонический портал"
+    },
+    {
+      "field": "blockEnchantmentGlyph",
+      "class": "BlockEnchantmentGlyph",
+      "unlocalized": "enchantmentGlyph",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "blockHomHeart",
+      "class": "BlockHomHeart",
+      "unlocalized": "blockHomHeart",
+      "name_en": "Spell Table",
+      "name_ru": "Стол заклинаний"
+    },
+    {
+      "field": "blockLifeEssence",
+      "class": "LifeEssenceBlock",
+      "unlocalized": "lifeEssenceFluidBlock",
+      "name_en": "Life Essence",
+      "name_ru": "Жизненная эссенция"
+    },
+    {
+      "field": "blockMasterStone",
+      "class": "BlockMasterStone",
+      "unlocalized": "blockMasterStone",
+      "name_en": "Master Ritual Stone",
+      "name_ru": "Ритуальный камень мастера"
+    },
+    {
+      "field": "blockMimic",
+      "class": "MimicBlock",
+      "unlocalized": "blockMimic",
+      "name_en": "Mimic Block",
+      "name_ru": "Блок-имитатор"
+    },
+    {
+      "field": "blockPedestal",
+      "class": "BlockPedestal",
+      "unlocalized": "bloodPedestal",
+      "name_en": "Arcane Pedestal",
+      "name_ru": "Тайный пьедестал"
+    },
+    {
+      "field": "blockPlinth",
+      "class": "BlockPlinth",
+      "unlocalized": "bloodPlinth",
+      "name_en": "Arcane Plinth",
+      "name_ru": "Тайный постамент"
+    },
+    {
+      "field": "blockReagentConduit",
+      "class": "BlockReagentConduit",
+      "unlocalized": "blockReagentConduit",
+      "name_en": "Alchemy Relay",
+      "name_ru": "Алхимическое реле"
+    },
+    {
+      "field": "blockSpectralContainer",
+      "class": "BlockSpectralContainer",
+      "unlocalized": "blockSpectralContainer",
+      "name_en": "Spectral Container",
+      "name_ru": "Призрачный контейнер"
+    },
+    {
+      "field": "blockSpellEffect",
+      "class": "BlockSpellEffect",
+      "unlocalized": "blockSpellEffect",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "blockSpellEnhancement",
+      "class": "BlockSpellEnhancement",
+      "unlocalized": "blockSpellEnhancement",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "blockSpellModifier",
+      "class": "BlockSpellModifier",
+      "unlocalized": "blockSpellModifier",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "blockSpellParadigm",
+      "class": "BlockSpellParadigm",
+      "unlocalized": "blockSpellParadigm",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "blockStabilityGlyph",
+      "class": "BlockStabilityGlyph",
+      "unlocalized": "stabilityGlyph",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "blockTeleposer",
+      "class": "BlockTeleposer",
+      "unlocalized": "bloodTeleposer",
+      "name_en": "Teleposer",
+      "name_ru": "Телепозер"
+    },
+    {
+      "field": "blockWritingTable",
+      "class": "BlockWritingTable",
+      "unlocalized": "blockWritingTable",
+      "name_en": "Alchemic Chemistry Set",
+      "name_ru": "Алхимическая и химическая установка"
+    },
+    {
+      "field": "bloodRune",
+      "class": "BloodRune",
+      "unlocalized": "bloodRune",
+      "name_en": "",
+      "name_ru": ""
+    },
+    {
+      "field": "bloodSocket",
+      "class": "BlockSocket",
+      "unlocalized": "bloodSocket",
+      "name_en": "Filled Socket",
+      "name_ru": "Заполненный сокет"
+    },
+    {
+      "field": "bloodStoneBrick",
+      "class": "BloodStoneBrick",
+      "unlocalized": "bloodStoneBrick",
+      "name_en": "Bloodstone Brick",
+      "name_ru": "Кровавый кирпич"
+    },
+    {
+      "field": "efficiencyRune",
+      "class": "EfficiencyRune",
+      "unlocalized": "efficiencyRune",
+      "name_en": "Efficiency Rune",
+      "name_ru": "Руна эффективности"
+    },
+    {
+      "field": "emptySocket",
+      "class": "EmptySocket",
+      "unlocalized": "emptySocket",
+      "name_en": "Empty Socket",
+      "name_ru": "Пустой сокет"
+    },
+    {
+      "field": "imperfectRitualStone",
+      "class": "ImperfectRitualStone",
+      "unlocalized": "imperfectRitualStone",
+      "name_en": "Imperfect Ritual Stone",
+      "name_ru": "Несовершенный ритуальный камень"
+    },
+    {
+      "field": "largeBloodStoneBrick",
+      "class": "LargeBloodStoneBrick",
+      "unlocalized": "largeBloodStoneBrick",
+      "name_en": "Large Bloodstone Brick",
+      "name_ru": "Большой кровавый кирпич"
+    },
+    {
+      "field": "ritualStone",
+      "class": "RitualStone",
+      "unlocalized": "ritualStone",
+      "name_en": "Ritual Stone",
+      "name_ru": "Ритуальный камень"
+    },
+    {
+      "field": "runeOfSacrifice",
+      "class": "RuneOfSacrifice",
+      "unlocalized": "runeOfSacrifice",
+      "name_en": "Rune of Sacrifice",
+      "name_ru": "Руна жертвоприношения"
+    },
+    {
+      "field": "runeOfSelfSacrifice",
+      "class": "RuneOfSelfSacrifice",
+      "unlocalized": "runeOfSelfSacrifice",
+      "name_en": "Rune of Self-Sacrifice",
+      "name_ru": "Руна самопожертвования"
+    },
+    {
+      "field": "spectralBlock",
+      "class": "SpectralBlock",
+      "unlocalized": "spectralBlock",
+      "name_en": "Spectral Block",
+      "name_ru": "Призрачный блок"
+    },
+    {
+      "field": "speedRune",
+      "class": "SpeedRune",
+      "unlocalized": "speedRune",
+      "name_en": "Speed Rune",
+      "name_ru": "Руна скорости"
+    }
+  ]
+}

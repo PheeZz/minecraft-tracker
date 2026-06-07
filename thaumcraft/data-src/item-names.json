@@ -111,38 +111,38 @@
     {
       "key": "item.RealitySword0.name",
       "mod": "Alfheim",
-      "name_en": "§6Sword of Reality§f (§7Inert§f)",
-      "name_ru": "§6Меч мироздания§f (§7Инертный§f)"
+      "name_en": "Sword of Reality (Inert)",
+      "name_ru": "Меч мироздания (Инертный)"
     },
     {
       "key": "item.RealitySword1.name",
       "mod": "Alfheim",
-      "name_en": "§6Sword of Reality§f (§eAir§f)",
-      "name_ru": "§6Меч мироздания§f (§eВоздух§f)"
+      "name_en": "Sword of Reality (Air)",
+      "name_ru": "Меч мироздания (Воздух)"
     },
     {
       "key": "item.RealitySword2.name",
       "mod": "Alfheim",
-      "name_en": "§6Sword of Reality§f (§aEarth§f)",
-      "name_ru": "§6Меч мироздания§f (§aЗемля§f)"
+      "name_en": "Sword of Reality (Earth)",
+      "name_ru": "Меч мироздания (Земля)"
     },
     {
       "key": "item.RealitySword3.name",
       "mod": "Alfheim",
-      "name_en": "§6Sword of Reality§f (§cFire§f)",
-      "name_ru": "§6Меч мироздания§f (§cОгонь§f)"
+      "name_en": "Sword of Reality (Fire)",
+      "name_ru": "Меч мироздания (Огонь)"
     },
     {
       "key": "item.RealitySword4.name",
       "mod": "Alfheim",
-      "name_en": "§6Sword of Reality§f (§bWater§f)",
-      "name_ru": "§6Меч мироздания§f (§bВода§f)"
+      "name_en": "Sword of Reality (Water)",
+      "name_ru": "Меч мироздания (Вода)"
     },
     {
       "key": "item.RealitySword5.name",
       "mod": "Alfheim",
-      "name_en": "§6Sword of Creator",
-      "name_ru": "§6Меч создателя"
+      "name_en": "Sword of Creator",
+      "name_ru": "Меч создателя"
     },
     {
       "key": "item.Transferer.name",
@@ -327,14 +327,14 @@
     {
       "key": "item.alfheim:MauftriumIngot.name",
       "mod": "Alfheim",
-      "name_en": "§6Mauftrium Ingot",
-      "name_ru": "§6Слиток мауфтрия"
+      "name_en": "Mauftrium Ingot",
+      "name_ru": "Слиток мауфтрия"
     },
     {
       "key": "item.alfheim:MauftriumNugget.name",
       "mod": "Alfheim",
-      "name_en": "§6Mauftrium Nugget",
-      "name_ru": "§6Самородок мауфтрия"
+      "name_en": "Mauftrium Nugget",
+      "name_ru": "Самородок мауфтрия"
     },
     {
       "key": "item.alfheim:MikuHead.name",
@@ -423,8 +423,8 @@
     {
       "key": "item.alfheim:PrimalRune.name",
       "mod": "Alfheim",
-      "name_en": "§5Primordial Rune",
-      "name_ru": "§5Руна первоэлементов"
+      "name_en": "Primordial Rune",
+      "name_ru": "Руна первоэлементов"
     },
     {
       "key": "item.alfheim:RainbowDust.name",
@@ -1143,8 +1143,8 @@
     {
       "key": "tile.AlfheimPylons2.name",
       "mod": "Alfheim",
-      "name_en": "§4Anti-Pylon",
-      "name_ru": "§4Анти-пилон"
+      "name_en": "Anti-Pylon",
+      "name_ru": "Анти-пилон"
     },
     {
       "key": "tile.Anomaly..name",
@@ -1659,8 +1659,8 @@
     {
       "key": "tile.alfStorage1.name",
       "mod": "Alfheim",
-      "name_en": "§6Block of Mauftrium",
-      "name_ru": "§6Блок мауфтрия"
+      "name_en": "Block of Mauftrium",
+      "name_ru": "Блок мауфтрия"
     },
     {
       "key": "tile.alfStorage2.name",
@@ -3922,7 +3922,7 @@
       "key": "item.appliedenergistics2.ItemPart.InvalidType.name",
       "mod": "AppliedEnergistics2",
       "name_en": "Disabled Item",
-      "name_ru": ""
+      "name_ru": "Disabled Item"
     },
     {
       "key": "item.appliedenergistics2.ItemPart.InvertedToggleBus.name",
@@ -4582,601 +4582,601 @@
       "key": "item.amorphic_catalyst.name",
       "mod": "BloodArsenal",
       "name_en": "Amorphic Catalyst",
-      "name_ru": ""
+      "name_ru": "Amorphic Catalyst"
     },
     {
       "key": "item.blood_ball.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Ball",
-      "name_ru": ""
+      "name_ru": "Blood Ball"
     },
     {
       "key": "item.blood_burned_string.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Burned String",
-      "name_ru": ""
+      "name_ru": "Blood Burned String"
     },
     {
       "key": "item.blood_cookie.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Cookie",
-      "name_ru": ""
+      "name_ru": "Blood Cookie"
     },
     {
       "key": "item.blood_diamond.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Diamond",
-      "name_ru": ""
+      "name_ru": "Blood Diamond"
     },
     {
       "key": "item.blood_infused_axe_diamond.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Diamond Axe [WIP]",
-      "name_ru": ""
+      "name_ru": "Blood Infused Diamond Axe [WIP]"
     },
     {
       "key": "item.blood_infused_axe_iron.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Iron Axe",
-      "name_ru": ""
+      "name_ru": "Blood Infused Iron Axe"
     },
     {
       "key": "item.blood_infused_axe_wood.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Wooden Axe",
-      "name_ru": ""
+      "name_ru": "Blood Infused Wooden Axe"
     },
     {
       "key": "item.blood_infused_diamond_active.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Diamond (Active)",
-      "name_ru": ""
+      "name_ru": "Blood Infused Diamond (Active)"
     },
     {
       "key": "item.blood_infused_diamond_bound.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Diamond",
-      "name_ru": ""
+      "name_ru": "Bound Diamond"
     },
     {
       "key": "item.blood_infused_diamond_unactive.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Diamond (Unactive)",
-      "name_ru": ""
+      "name_ru": "Blood Infused Diamond (Unactive)"
     },
     {
       "key": "item.blood_infused_glowstone_dust.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Glowstone Dust",
-      "name_ru": ""
+      "name_ru": "Blood Infused Glowstone Dust"
     },
     {
       "key": "item.blood_infused_iron.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Iron Ingot",
-      "name_ru": ""
+      "name_ru": "Blood Infused Iron Ingot"
     },
     {
       "key": "item.blood_infused_pickaxe_diamond.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Diamond Pickaxe",
-      "name_ru": ""
+      "name_ru": "Blood Infused Diamond Pickaxe"
     },
     {
       "key": "item.blood_infused_pickaxe_iron.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Iron Pickaxe",
-      "name_ru": ""
+      "name_ru": "Blood Infused Iron Pickaxe"
     },
     {
       "key": "item.blood_infused_pickaxe_wood.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Wooden Pickaxe",
-      "name_ru": ""
+      "name_ru": "Blood Infused Wooden Pickaxe"
     },
     {
       "key": "item.blood_infused_shovel_diamond.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Diamond Shovel",
-      "name_ru": ""
+      "name_ru": "Blood Infused Diamond Shovel"
     },
     {
       "key": "item.blood_infused_shovel_iron.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Iron Shovel",
-      "name_ru": ""
+      "name_ru": "Blood Infused Iron Shovel"
     },
     {
       "key": "item.blood_infused_shovel_wood.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Wooden Shovel",
-      "name_ru": ""
+      "name_ru": "Blood Infused Wooden Shovel"
     },
     {
       "key": "item.blood_infused_stick.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Stick",
-      "name_ru": ""
+      "name_ru": "Blood Infused Stick"
     },
     {
       "key": "item.blood_infused_sword_diamond.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Diamond Sword [WIP]",
-      "name_ru": ""
+      "name_ru": "Blood Infused Diamond Sword [WIP]"
     },
     {
       "key": "item.blood_infused_sword_iron.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Iron Sword",
-      "name_ru": ""
+      "name_ru": "Blood Infused Iron Sword"
     },
     {
       "key": "item.blood_infused_sword_wood.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Wooden Sword",
-      "name_ru": ""
+      "name_ru": "Blood Infused Wooden Sword"
     },
     {
       "key": "item.blood_money1.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Money x1",
-      "name_ru": ""
+      "name_ru": "Blood Money x1"
     },
     {
       "key": "item.blood_money16.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Money x16",
-      "name_ru": ""
+      "name_ru": "Blood Money x16"
     },
     {
       "key": "item.blood_money4.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Money x4",
-      "name_ru": ""
+      "name_ru": "Blood Money x4"
     },
     {
       "key": "item.blood_money64.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Money x64",
-      "name_ru": ""
+      "name_ru": "Blood Money x64"
     },
     {
       "key": "item.blood_orange.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Orange",
-      "name_ru": ""
+      "name_ru": "Blood Orange"
     },
     {
       "key": "item.bound_bow.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Bow",
-      "name_ru": ""
+      "name_ru": "Bound Bow"
     },
     {
       "key": "item.bound_diamond_shard_.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Diamond Shard",
-      "name_ru": ""
+      "name_ru": "Bound Diamond Shard"
     },
     {
       "key": "item.bound_diamond_shard_air.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Diamond Air Shard",
-      "name_ru": ""
+      "name_ru": "Bound Diamond Air Shard"
     },
     {
       "key": "item.bound_diamond_shard_dawn.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Diamond Dawn Shard",
-      "name_ru": ""
+      "name_ru": "Bound Diamond Dawn Shard"
     },
     {
       "key": "item.bound_diamond_shard_dusk.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Diamond Dusk Shard",
-      "name_ru": ""
+      "name_ru": "Bound Diamond Dusk Shard"
     },
     {
       "key": "item.bound_diamond_shard_earth.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Diamond Earth Shard",
-      "name_ru": ""
+      "name_ru": "Bound Diamond Earth Shard"
     },
     {
       "key": "item.bound_diamond_shard_fire.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Diamond Fire Shard",
-      "name_ru": ""
+      "name_ru": "Bound Diamond Fire Shard"
     },
     {
       "key": "item.bound_diamond_shard_water.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Diamond Water Shard",
-      "name_ru": ""
+      "name_ru": "Bound Diamond Water Shard"
     },
     {
       "key": "item.bound_igniter.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Igniter",
-      "name_ru": ""
+      "name_ru": "Bound Igniter"
     },
     {
       "key": "item.bound_shears.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Shears",
-      "name_ru": ""
+      "name_ru": "Bound Shears"
     },
     {
       "key": "item.bound_sickle.name",
       "mod": "BloodArsenal",
       "name_en": "Bound Sickle",
-      "name_ru": ""
+      "name_ru": "Bound Sickle"
     },
     {
       "key": "item.empowered_sacrifice_amulet.name",
       "mod": "BloodArsenal",
       "name_en": "Empowered Sacrifice Amulet",
-      "name_ru": ""
+      "name_ru": "Empowered Sacrifice Amulet"
     },
     {
       "key": "item.empowered_self_sacrifice_amulet.name",
       "mod": "BloodArsenal",
       "name_en": "Empowered Self Sacrifice Amulet",
-      "name_ru": ""
+      "name_ru": "Empowered Self Sacrifice Amulet"
     },
     {
       "key": "item.energy_gatling.name",
       "mod": "BloodArsenal",
       "name_en": "Energy Gatling [WIP]",
-      "name_ru": ""
+      "name_ru": "Energy Gatling [WIP]"
     },
     {
       "key": "item.glass_boots.name",
       "mod": "BloodArsenal",
       "name_en": "Glass Boots",
-      "name_ru": ""
+      "name_ru": "Glass Boots"
     },
     {
       "key": "item.glass_chestplate.name",
       "mod": "BloodArsenal",
       "name_en": "Glass Chestplate",
-      "name_ru": ""
+      "name_ru": "Glass Chestplate"
     },
     {
       "key": "item.glass_dagger_of_sacrifice.name",
       "mod": "BloodArsenal",
       "name_en": "Glass Dagger of Sacrifice",
-      "name_ru": ""
+      "name_ru": "Glass Dagger of Sacrifice"
     },
     {
       "key": "item.glass_helmet.name",
       "mod": "BloodArsenal",
       "name_en": "Glass Helmet",
-      "name_ru": ""
+      "name_ru": "Glass Helmet"
     },
     {
       "key": "item.glass_leggings.name",
       "mod": "BloodArsenal",
       "name_en": "Glass Leggings",
-      "name_ru": ""
+      "name_ru": "Glass Leggings"
     },
     {
       "key": "item.glass_sacrificial_dagger.name",
       "mod": "BloodArsenal",
       "name_en": "Glass Sacrificial Dagger",
-      "name_ru": ""
+      "name_ru": "Glass Sacrificial Dagger"
     },
     {
       "key": "item.glass_sacrificial_orb.name",
       "mod": "BloodArsenal",
       "name_en": "Glass Sacrificial Orb",
-      "name_ru": ""
+      "name_ru": "Glass Sacrificial Orb"
     },
     {
       "key": "item.glass_shard.name",
       "mod": "BloodArsenal",
       "name_en": "Glass Shard",
-      "name_ru": ""
+      "name_ru": "Glass Shard"
     },
     {
       "key": "item.heart.name",
       "mod": "BloodArsenal",
       "name_en": "Heart",
-      "name_ru": ""
+      "name_ru": "Heart"
     },
     {
       "key": "item.item_blood_cake.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Cake",
-      "name_ru": ""
+      "name_ru": "Blood Cake"
     },
     {
       "key": "item.juice_and_cookies.name",
       "mod": "BloodArsenal",
       "name_en": "Juice and Cookies",
-      "name_ru": ""
+      "name_ru": "Juice and Cookies"
     },
     {
       "key": "item.life_imbued_boots.name",
       "mod": "BloodArsenal",
       "name_en": "Life Imbued Boots",
-      "name_ru": ""
+      "name_ru": "Life Imbued Boots"
     },
     {
       "key": "item.life_imbued_chestplate.name",
       "mod": "BloodArsenal",
       "name_en": "Life Imbued Chestplate",
-      "name_ru": ""
+      "name_ru": "Life Imbued Chestplate"
     },
     {
       "key": "item.life_imbued_helmet.name",
       "mod": "BloodArsenal",
       "name_en": "Life Imbued Helmet",
-      "name_ru": ""
+      "name_ru": "Life Imbued Helmet"
     },
     {
       "key": "item.life_imbued_leggings.name",
       "mod": "BloodArsenal",
       "name_en": "Life Imbued Leggings",
-      "name_ru": ""
+      "name_ru": "Life Imbued Leggings"
     },
     {
       "key": "item.orange_juice.name",
       "mod": "BloodArsenal",
       "name_en": "Orange Juice",
-      "name_ru": ""
+      "name_ru": "Orange Juice"
     },
     {
       "key": "item.sacrifice_amulet.name",
       "mod": "BloodArsenal",
       "name_en": "Amulet of Sacrifice",
-      "name_ru": ""
+      "name_ru": "Amulet of Sacrifice"
     },
     {
       "key": "item.self_sacrifice_amulet.name",
       "mod": "BloodArsenal",
       "name_en": "Amulet of Self Sacrifice",
-      "name_ru": ""
+      "name_ru": "Amulet of Self Sacrifice"
     },
     {
       "key": "item.sigil_of_augmented_holding.name",
       "mod": "BloodArsenal",
       "name_en": "Sigil of Augmented Holding",
-      "name_ru": ""
+      "name_ru": "Sigil of Augmented Holding"
     },
     {
       "key": "item.sigil_of_divinity.name",
       "mod": "BloodArsenal",
       "name_en": "Sigil of Divinity",
-      "name_ru": ""
+      "name_ru": "Sigil of Divinity"
     },
     {
       "key": "item.sigil_of_ender.name",
       "mod": "BloodArsenal",
       "name_en": "Ender Sigil",
-      "name_ru": ""
+      "name_ru": "Ender Sigil"
     },
     {
       "key": "item.sigil_of_lightning.name",
       "mod": "BloodArsenal",
       "name_en": "Lightning Sigil",
-      "name_ru": ""
+      "name_ru": "Lightning Sigil"
     },
     {
       "key": "item.sigil_of_swimming.name",
       "mod": "BloodArsenal",
       "name_en": "Sigil of Swimming",
-      "name_ru": ""
+      "name_ru": "Sigil of Swimming"
     },
     {
       "key": "item.soul_booster.name",
       "mod": "BloodArsenal",
       "name_en": "Soul Booster",
-      "name_ru": ""
+      "name_ru": "Soul Booster"
     },
     {
       "key": "item.soul_fragment.name",
       "mod": "BloodArsenal",
       "name_en": "Soul Fragment",
-      "name_ru": ""
+      "name_ru": "Soul Fragment"
     },
     {
       "key": "item.soul_nullifier.name",
       "mod": "BloodArsenal",
       "name_en": "Soul Nullifier",
-      "name_ru": ""
+      "name_ru": "Soul Nullifier"
     },
     {
       "key": "item.transparent_orb.name",
       "mod": "BloodArsenal",
       "name_en": "Transparent Orb",
-      "name_ru": ""
+      "name_ru": "Transparent Orb"
     },
     {
       "key": "item.vampire_boots.name",
       "mod": "BloodArsenal",
       "name_en": "Vampire Boots",
-      "name_ru": ""
+      "name_ru": "Vampire Boots"
     },
     {
       "key": "item.vampire_cape.name",
       "mod": "BloodArsenal",
       "name_en": "Vampire Cape",
-      "name_ru": ""
+      "name_ru": "Vampire Cape"
     },
     {
       "key": "item.vampire_greaves.name",
       "mod": "BloodArsenal",
       "name_en": "Vampire Greaves",
-      "name_ru": ""
+      "name_ru": "Vampire Greaves"
     },
     {
       "key": "item.vampire_ring.name",
       "mod": "BloodArsenal",
       "name_en": "Vampire Ring",
-      "name_ru": ""
+      "name_ru": "Vampire Ring"
     },
     {
       "key": "item.wand_caps.blood_iron.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Iron Cap",
-      "name_ru": ""
+      "name_ru": "Blood Infused Iron Cap"
     },
     {
       "key": "item.wand_cores.blood_wood.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Wooden Rod",
-      "name_ru": ""
+      "name_ru": "Blood Infused Wooden Rod"
     },
     {
       "key": "item.wand_cores.blood_wood_staff.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Wooden Staff Of Doom",
-      "name_ru": ""
+      "name_ru": "Blood Infused Wooden Staff Of Doom"
     },
     {
       "key": "item.wolf_hide.name",
       "mod": "BloodArsenal",
       "name_en": "Wolf Hide",
-      "name_ru": ""
+      "name_ru": "Wolf Hide"
     },
     {
       "key": "tile.block_burned_string.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Burned String",
-      "name_ru": ""
+      "name_ru": "Blood Burned String"
     },
     {
       "key": "tile.blood_cake.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Cake",
-      "name_ru": ""
+      "name_ru": "Blood Cake"
     },
     {
       "key": "tile.blood_infused_diamond_block.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Diamond Block",
-      "name_ru": ""
+      "name_ru": "Blood Infused Diamond Block"
     },
     {
       "key": "tile.blood_infused_glowstone.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Glowstone",
-      "name_ru": ""
+      "name_ru": "Blood Infused Glowstone"
     },
     {
       "key": "tile.blood_infused_iron_block.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Iron Block",
-      "name_ru": ""
+      "name_ru": "Blood Infused Iron Block"
     },
     {
       "key": "tile.blood_infused_planks.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Wooden Plank",
-      "name_ru": ""
+      "name_ru": "Blood Infused Wooden Plank"
     },
     {
       "key": "tile.blood_infused_wood.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Infused Wood",
-      "name_ru": ""
+      "name_ru": "Blood Infused Wood"
     },
     {
       "key": "tile.blood_lamp.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Lamp",
-      "name_ru": ""
+      "name_ru": "Blood Lamp"
     },
     {
       "key": "tile.blood_stained_glass.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Stained Glass",
-      "name_ru": ""
+      "name_ru": "Blood Stained Glass"
     },
     {
       "key": "tile.blood_stained_ice.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Stained Ice",
-      "name_ru": ""
+      "name_ru": "Blood Stained Ice"
     },
     {
       "key": "tile.blood_stained_ice_packed.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Stained Packed Ice",
-      "name_ru": ""
+      "name_ru": "Blood Stained Packed Ice"
     },
     {
       "key": "tile.blood_stone_1.name",
       "mod": "BloodArsenal",
       "name_en": "Blank Blood Stone",
-      "name_ru": ""
+      "name_ru": "Blank Blood Stone"
     },
     {
       "key": "tile.blood_stone_2.name",
       "mod": "BloodArsenal",
       "name_en": "Reinforced Blood Stone",
-      "name_ru": ""
+      "name_ru": "Reinforced Blood Stone"
     },
     {
       "key": "tile.blood_stone_3.name",
       "mod": "BloodArsenal",
       "name_en": "Imbued Blood Stone",
-      "name_ru": ""
+      "name_ru": "Imbued Blood Stone"
     },
     {
       "key": "tile.blood_stone_4.name",
       "mod": "BloodArsenal",
       "name_en": "Demonic Blood Stone",
-      "name_ru": ""
+      "name_ru": "Demonic Blood Stone"
     },
     {
       "key": "tile.blood_stone_5.name",
       "mod": "BloodArsenal",
       "name_en": "Ethereal Blood Stone",
-      "name_ru": ""
+      "name_ru": "Ethereal Blood Stone"
     },
     {
       "key": "tile.blood_tnt.name",
       "mod": "BloodArsenal",
       "name_en": "Blood TNT",
-      "name_ru": ""
+      "name_ru": "Blood TNT"
     },
     {
       "key": "tile.blood_torch.name",
       "mod": "BloodArsenal",
       "name_en": "Blood Torch",
-      "name_ru": ""
+      "name_ru": "Blood Torch"
     },
     {
       "key": "tile.compacted_mrs.name",
       "mod": "BloodArsenal",
       "name_en": "Compacted Master Ritual Stone",
-      "name_ru": ""
+      "name_ru": "Compacted Master Ritual Stone"
     },
     {
       "key": "tile.compacter.name",
       "mod": "BloodArsenal",
       "name_en": "Soul Compacter",
-      "name_ru": ""
+      "name_ru": "Soul Compacter"
     },
     {
       "key": "tile.life_infuser.name",
       "mod": "BloodArsenal",
       "name_en": "Life Infuser",
-      "name_ru": ""
+      "name_ru": "Life Infuser"
     },
     {
       "key": "tile.lp_materializer.name",
       "mod": "BloodArsenal",
       "name_en": "Life Essence Materializer",
-      "name_ru": ""
+      "name_ru": "Life Essence Materializer"
     },
     {
       "key": "tile.portable_altar.name",
       "mod": "BloodArsenal",
       "name_en": "Portable Altar",
-      "name_ru": ""
+      "name_ru": "Portable Altar"
     },
     {
       "key": "item.ArcaneCake.name",
@@ -5188,7 +5188,7 @@
       "key": "item.BlinkFocus.name",
       "mod": "ForbiddenMagic",
       "name_en": "Wand Focus: Blink",
-      "name_ru": ""
+      "name_ru": "Wand Focus: Blink"
     },
     {
       "key": "item.BloodRapier.name",
@@ -5277,8 +5277,8 @@
     {
       "key": "item.MobCrystal.name",
       "mod": "ForbiddenMagic",
-      "name_en": "%s Imprinted Crystal",
-      "name_ru": "Отпечатанный кристалл (%s)"
+      "name_en": "[mob] Imprinted Crystal",
+      "name_ru": "Отпечатанный кристалл ([mob])"
     },
     {
       "key": "item.MobCrystalEmpty.name",
@@ -5368,7 +5368,7 @@
       "key": "item.Primewell.name",
       "mod": "ForbiddenMagic",
       "name_en": "Primal Scribing Tools",
-      "name_ru": ""
+      "name_ru": "Primal Scribing Tools"
     },
     {
       "key": "item.RidingCrop.name",
@@ -5398,19 +5398,19 @@
       "key": "item.Sword_Dragonslayer.name",
       "mod": "ForbiddenMagic",
       "name_en": "Sword of the Dragonslayer",
-      "name_ru": ""
+      "name_ru": "Sword of the Dragonslayer"
     },
     {
       "key": "item.TaintCoal.name",
       "mod": "ForbiddenMagic",
       "name_en": "Hexcoal",
-      "name_ru": ""
+      "name_ru": "Hexcoal"
     },
     {
       "key": "item.TaintFruit.name",
       "mod": "ForbiddenMagic",
       "name_en": "Tainted Fruit",
-      "name_ru": ""
+      "name_ru": "Tainted Fruit"
     },
     {
       "key": "item.TaintPickaxe.name",
@@ -5464,7 +5464,7 @@
       "key": "item.WandCaps.terrasteel.name",
       "mod": "ForbiddenMagic",
       "name_en": "Terrasteel Cap",
-      "name_ru": ""
+      "name_ru": "Terrasteel Cap"
     },
     {
       "key": "item.WandCaps.vinteum.name",
@@ -5530,7 +5530,7 @@
       "key": "item.WandCores.profane.name",
       "mod": "ForbiddenMagic",
       "name_en": "Profane Rod",
-      "name_ru": ""
+      "name_ru": "Profane Rod"
     },
     {
       "key": "item.WandCores.soul.name",
@@ -5578,37 +5578,37 @@
       "key": "tile.TaintLeaves.name",
       "mod": "ForbiddenMagic",
       "name_en": "Tainted Leaves",
-      "name_ru": ""
+      "name_ru": "Tainted Leaves"
     },
     {
       "key": "tile.TaintLog.name",
       "mod": "ForbiddenMagic",
       "name_en": "Tainted Log",
-      "name_ru": ""
+      "name_ru": "Tainted Log"
     },
     {
       "key": "tile.TaintPlank.name",
       "mod": "ForbiddenMagic",
       "name_en": "Tainted Planks",
-      "name_ru": ""
+      "name_ru": "Tainted Planks"
     },
     {
       "key": "tile.TaintSapling.name",
       "mod": "ForbiddenMagic",
       "name_en": "Tainted Sapling",
-      "name_ru": ""
+      "name_ru": "Tainted Sapling"
     },
     {
       "key": "tile.TaintStone_Brick.name",
       "mod": "ForbiddenMagic",
       "name_en": "Tainted Stone Bricks",
-      "name_ru": ""
+      "name_ru": "Tainted Stone Bricks"
     },
     {
       "key": "tile.TaintStone_Smooth.name",
       "mod": "ForbiddenMagic",
       "name_en": "Tainted Stone",
-      "name_ru": ""
+      "name_ru": "Tainted Stone"
     },
     {
       "key": "tile.WrathCage.name",
@@ -5626,247 +5626,247 @@
       "key": "tile.botania:flower.bloodthorn.name",
       "mod": "ForbiddenMagic",
       "name_en": "Bloodthorn",
-      "name_ru": ""
+      "name_ru": "Bloodthorn"
     },
     {
       "key": "tile.botania:flower.euclidaisy.name",
       "mod": "ForbiddenMagic",
       "name_en": "Euclidaisy",
-      "name_ru": ""
+      "name_ru": "Euclidaisy"
     },
     {
       "key": "tile.botania:flower.tainthistle.name",
       "mod": "ForbiddenMagic",
       "name_en": "Tainthistle",
-      "name_ru": ""
+      "name_ru": "Tainthistle"
     },
     {
       "key": "tile.botania:flower.whisperweed.name",
       "mod": "ForbiddenMagic",
       "name_en": "Whisperweed",
-      "name_ru": ""
+      "name_ru": "Whisperweed"
     },
     {
       "key": "item.ItemManulinGemBoots.name",
       "mod": "LoliMagically",
       "name_en": "Манулиновые щитовые сапоги",
-      "name_ru": ""
+      "name_ru": "Манулиновые щитовые сапоги"
     },
     {
       "key": "item.ItemManulinGemChest.name",
       "mod": "LoliMagically",
       "name_en": "Манулиновая роба стратосферы",
-      "name_ru": ""
+      "name_ru": "Манулиновая роба стратосферы"
     },
     {
       "key": "item.ItemManulinGemHelm.name",
       "mod": "LoliMagically",
       "name_en": "Манулиновый капюшон адских глубин",
-      "name_ru": ""
+      "name_ru": "Манулиновый капюшон адских глубин"
     },
     {
       "key": "item.ItemManulinGemLegs.name",
       "mod": "LoliMagically",
       "name_en": "Манулиновые пылающие шаровары",
-      "name_ru": ""
+      "name_ru": "Манулиновые пылающие шаровары"
     },
     {
       "key": "item.ItemManulinIchorAxe.name",
       "mod": "LoliMagically",
       "name_en": "Пробуждённый манулино-ихориевый топор",
-      "name_ru": ""
+      "name_ru": "Пробуждённый манулино-ихориевый топор"
     },
     {
       "key": "item.ItemManulinIchorPick.name",
       "mod": "LoliMagically",
       "name_en": "Пробуждённая манулино-ихориевая кирка",
-      "name_ru": ""
+      "name_ru": "Пробуждённая манулино-ихориевая кирка"
     },
     {
       "key": "item.ItemManulinIchorShovel.name",
       "mod": "LoliMagically",
       "name_en": "Пробуждённая манулино-ихориевая лопата",
-      "name_ru": ""
+      "name_ru": "Пробуждённая манулино-ихориевая лопата"
     },
     {
       "key": "item.ItemManulinIchorSword.name",
       "mod": "LoliMagically",
       "name_en": "Пробуждённый манулино-ихориевый меч",
-      "name_ru": ""
+      "name_ru": "Пробуждённый манулино-ихориевый меч"
     },
     {
       "key": "item.gayaIngot1.name",
       "mod": "LoliMagically",
       "name_en": "Слиток Гайи (2 уровень)",
-      "name_ru": ""
+      "name_ru": "Слиток Гайи (2 уровень)"
     },
     {
       "key": "item.gayaIngot2.name",
       "mod": "LoliMagically",
       "name_en": "Слиток Гайи (3 уровень)",
-      "name_ru": ""
+      "name_ru": "Слиток Гайи (3 уровень)"
     },
     {
       "key": "item.gayaIngot3.name",
       "mod": "LoliMagically",
       "name_en": "Слиток Гайи (4 уровень)",
-      "name_ru": ""
+      "name_ru": "Слиток Гайи (4 уровень)"
     },
     {
       "key": "item.gaya_shard_1.name",
       "mod": "LoliMagically",
       "name_en": "Осколок души Гайи (2 уровень)",
-      "name_ru": ""
+      "name_ru": "Осколок души Гайи (2 уровень)"
     },
     {
       "key": "item.gaya_shard_2.name",
       "mod": "LoliMagically",
       "name_en": "Осколок души Гайи (3 уровень)",
-      "name_ru": ""
+      "name_ru": "Осколок души Гайи (3 уровень)"
     },
     {
       "key": "item.gaya_shard_3.name",
       "mod": "LoliMagically",
       "name_en": "Осколок души Гайи (4 уровень)",
-      "name_ru": ""
+      "name_ru": "Осколок души Гайи (4 уровень)"
     },
     {
       "key": "tile.AdvancedMechanicalRunicAltar.name",
       "mod": "LoliMagically",
       "name_en": "Продвинутый механический рунический алтарь",
-      "name_ru": ""
+      "name_ru": "Продвинутый механический рунический алтарь"
     },
     {
       "key": "tile.AdvancedMechanicalRunicAltarL1.name",
       "mod": "LoliMagically",
       "name_en": "Продвинутый механический рунический алтарь X1",
-      "name_ru": ""
+      "name_ru": "Продвинутый механический рунический алтарь X1"
     },
     {
       "key": "tile.AdvancedMechanicalRunicAltarL2.name",
       "mod": "LoliMagically",
       "name_en": "Продвинутый механический рунический алтарь X2",
-      "name_ru": ""
+      "name_ru": "Продвинутый механический рунический алтарь X2"
     },
     {
       "key": "tile.AdvancedMechanicalRunicAltarL3.name",
       "mod": "LoliMagically",
       "name_en": "Продвинутый механический рунический алтарь X3",
-      "name_ru": ""
+      "name_ru": "Продвинутый механический рунический алтарь X3"
     },
     {
       "key": "tile.AdvancedMechanicalRunicAltarL4.name",
       "mod": "LoliMagically",
       "name_en": "Продвинутый механический рунический алтарь X4",
-      "name_ru": ""
+      "name_ru": "Продвинутый механический рунический алтарь X4"
     },
     {
       "key": "tile.AlfheimMarket.name",
       "mod": "LoliMagically",
       "name_en": "Обменник Альфхейма",
-      "name_ru": ""
+      "name_ru": "Обменник Альфхейма"
     },
     {
       "key": "tile.AsgardManaBatteryX1.name",
       "mod": "LoliMagically",
       "name_en": "Батарея асгарда 1 уровня",
-      "name_ru": ""
+      "name_ru": "Батарея асгарда 1 уровня"
     },
     {
       "key": "tile.AsgardManaBatteryX2.name",
       "mod": "LoliMagically",
       "name_en": "Батарея асгарда 2 уровня",
-      "name_ru": ""
+      "name_ru": "Батарея асгарда 2 уровня"
     },
     {
       "key": "tile.AsgardManaBatteryX3.name",
       "mod": "LoliMagically",
       "name_en": "Батарея асгарда 3 уровня",
-      "name_ru": ""
+      "name_ru": "Батарея асгарда 3 уровня"
     },
     {
       "key": "tile.AsgardManaBatteryX4.name",
       "mod": "LoliMagically",
       "name_en": "Батарея асгарда 4 уровня",
-      "name_ru": ""
+      "name_ru": "Батарея асгарда 4 уровня"
     },
     {
       "key": "tile.IndustrialAgglomerationFactory.name",
       "mod": "LoliMagically",
       "name_en": "Завод промышленной агломерации",
-      "name_ru": ""
+      "name_ru": "Завод промышленной агломерации"
     },
     {
       "key": "tile.ManaBattery.name",
       "mod": "LoliMagically",
       "name_en": "Манабатарея",
-      "name_ru": ""
+      "name_ru": "Манабатарея"
     },
     {
       "key": "tile.MechanicalApothecary.name",
       "mod": "LoliMagically",
       "name_en": "Механический аптекарь",
-      "name_ru": ""
+      "name_ru": "Механический аптекарь"
     },
     {
       "key": "tile.MechanicalBrewery.name",
       "mod": "LoliMagically",
       "name_en": "Механическая варочная стойка",
-      "name_ru": ""
+      "name_ru": "Механическая варочная стойка"
     },
     {
       "key": "tile.MechanicalDaisy.name",
       "mod": "LoliMagically",
       "name_en": "Механическая чистая маргаритка",
-      "name_ru": ""
+      "name_ru": "Механическая чистая маргаритка"
     },
     {
       "key": "tile.MechanicalManaPool.name",
       "mod": "LoliMagically",
       "name_en": "Механический бассейн маны",
-      "name_ru": ""
+      "name_ru": "Механический бассейн маны"
     },
     {
       "key": "tile.MechanicalRunicAltar.name",
       "mod": "LoliMagically",
       "name_en": "Механический рунический алтарь",
-      "name_ru": ""
+      "name_ru": "Механический рунический алтарь"
     },
     {
       "key": "tile.ReagentForge.name",
       "mod": "LoliMagically",
       "name_en": "Реагентная кузница",
-      "name_ru": ""
+      "name_ru": "Реагентная кузница"
     },
     {
       "key": "tile.botania:custompylon0.name",
       "mod": "LoliMagically",
       "name_en": "Гайа Пилон (2 уровень)",
-      "name_ru": ""
+      "name_ru": "Гайа Пилон (2 уровень)"
     },
     {
       "key": "tile.botania:custompylon1.name",
       "mod": "LoliMagically",
       "name_en": "Гайа Пилон (3 уровень)",
-      "name_ru": ""
+      "name_ru": "Гайа Пилон (3 уровень)"
     },
     {
       "key": "tile.botania:custompylon2.name",
       "mod": "LoliMagically",
       "name_en": "Гайа Пилон (4 уровень)",
-      "name_ru": ""
+      "name_ru": "Гайа Пилон (4 уровень)"
     },
     {
       "key": "tile.botania:flower.asgardandelion_legendary.name",
       "mod": "LoliMagically",
       "name_en": "Легендарный Асгардуванчик",
-      "name_ru": ""
+      "name_ru": "Легендарный Асгардуванчик"
     },
     {
       "key": "tile.botania:flower.asgardandelion_ultra.name",
       "mod": "LoliMagically",
       "name_en": "Улучшенный Асгардуванчик",
-      "name_ru": ""
+      "name_ru": "Улучшенный Асгардуванчик"
     },
     {
       "key": "item.frameGentle.name",
@@ -5920,13 +5920,13 @@
       "key": "item.manasteelGrafter.name",
       "mod": "MagicBees",
       "name_en": "Manasteel Grafter",
-      "name_ru": ""
+      "name_ru": "Manasteel Grafter"
     },
     {
       "key": "item.manasteelScoop.name",
       "mod": "MagicBees",
       "name_en": "Manasteel Scoop",
-      "name_ru": ""
+      "name_ru": "Manasteel Scoop"
     },
     {
       "key": "item.moonDial.name",
@@ -5950,19 +5950,19 @@
       "key": "tile.botania:flower.beegonia.name",
       "mod": "MagicBees",
       "name_en": "Beegonia",
-      "name_ru": ""
+      "name_ru": "Beegonia"
     },
     {
       "key": "tile.botania:flower.hibeescus.name",
       "mod": "MagicBees",
       "name_en": "Hibeescus",
-      "name_ru": ""
+      "name_ru": "Hibeescus"
     },
     {
       "key": "tile.botania:flower.hiveacynth.name",
       "mod": "MagicBees",
       "name_en": "Hiveacynth",
-      "name_ru": ""
+      "name_ru": "Hiveacynth"
     },
     {
       "key": "tile.effectJar.name",
@@ -5974,7 +5974,7 @@
       "key": "tile.enchantedEarth.name",
       "mod": "MagicBees",
       "name_en": "Enchanted Earth",
-      "name_ru": ""
+      "name_ru": "Enchanted Earth"
     },
     {
       "key": "tile.hive.curious.name",
@@ -6016,385 +6016,385 @@
       "key": "tile.magicApiary.name",
       "mod": "MagicBees",
       "name_en": "Magic Apiary",
-      "name_ru": ""
+      "name_ru": "Magic Apiary"
     },
     {
       "key": "tile.manaAuraProvider.name",
       "mod": "MagicBees",
       "name_en": "Mana Apiary Booster",
-      "name_ru": ""
+      "name_ru": "Mana Apiary Booster"
     },
     {
       "key": "tile.visAuraProvider.name",
       "mod": "MagicBees",
       "name_en": "Vis Apiary Booster",
-      "name_ru": ""
+      "name_ru": "Vis Apiary Booster"
     },
     {
       "key": "item.ItemCrimsonBlood.name",
       "mod": "TaintedMagic",
       "name_en": "Phial of Crimson Blood",
-      "name_ru": ""
+      "name_ru": "Phial of Crimson Blood"
     },
     {
       "key": "item.ItemFlyteCharm.name",
       "mod": "TaintedMagic",
       "name_en": "Flyte Charm",
-      "name_ru": ""
+      "name_ru": "Flyte Charm"
     },
     {
       "key": "item.ItemFocusDarkMatter.name",
       "mod": "TaintedMagic",
       "name_en": "Wand Focus: Dark Matter",
-      "name_ru": ""
+      "name_ru": "Wand Focus: Dark Matter"
     },
     {
       "key": "item.ItemFocusLumos.name",
       "mod": "TaintedMagic",
       "name_en": "Wand Focus: Lumos",
-      "name_ru": ""
+      "name_ru": "Wand Focus: Lumos"
     },
     {
       "key": "item.ItemFocusMageMace.name",
       "mod": "TaintedMagic",
       "name_en": "Wand Focus: Mage's Mace",
-      "name_ru": ""
+      "name_ru": "Wand Focus: Mage's Mace"
     },
     {
       "key": "item.ItemFocusShockwave.name",
       "mod": "TaintedMagic",
       "name_en": "Wand Focus: Shockwave",
-      "name_ru": ""
+      "name_ru": "Wand Focus: Shockwave"
     },
     {
       "key": "item.ItemFocusTaintSwarm.name",
       "mod": "TaintedMagic",
       "name_en": "Wand Focus: Taint Swarm",
-      "name_ru": ""
+      "name_ru": "Wand Focus: Taint Swarm"
     },
     {
       "key": "item.ItemFocusVisShard.name",
       "mod": "TaintedMagic",
       "name_en": "Wand Focus: Vis Shard",
-      "name_ru": ""
+      "name_ru": "Wand Focus: Vis Shard"
     },
     {
       "key": "item.ItemGateKey.name",
       "mod": "TaintedMagic",
       "name_en": "Celestial Gate Key",
-      "name_ru": ""
+      "name_ru": "Celestial Gate Key"
     },
     {
       "key": "item.ItemHollowDagger.name",
       "mod": "TaintedMagic",
       "name_en": "Hollow Dagger",
-      "name_ru": ""
+      "name_ru": "Hollow Dagger"
     },
     {
       "key": "item.ItemKatana.0.name",
       "mod": "TaintedMagic",
       "name_en": "Thaumium Fortress Blade",
-      "name_ru": ""
+      "name_ru": "Thaumium Fortress Blade"
     },
     {
       "key": "item.ItemKatana.1.name",
       "mod": "TaintedMagic",
       "name_en": "Void Metal Fortress Blade",
-      "name_ru": ""
+      "name_ru": "Void Metal Fortress Blade"
     },
     {
       "key": "item.ItemKatana.2.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Fortress Blade",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Fortress Blade"
     },
     {
       "key": "item.ItemLumosRing.name",
       "mod": "TaintedMagic",
       "name_en": "Ring of Lumos",
-      "name_ru": ""
+      "name_ru": "Ring of Lumos"
     },
     {
       "key": "item.ItemMagicFunguar.name",
       "mod": "TaintedMagic",
       "name_en": "Magic Funguar",
-      "name_ru": ""
+      "name_ru": "Magic Funguar"
     },
     {
       "key": "item.ItemMaterial.0.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Ingot",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Ingot"
     },
     {
       "key": "item.ItemMaterial.1.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow-imbued Cloth",
-      "name_ru": ""
+      "name_ru": "Shadow-imbued Cloth"
     },
     {
       "key": "item.ItemMaterial.10.name",
       "mod": "TaintedMagic",
       "name_en": "Primordial Mote",
-      "name_ru": ""
+      "name_ru": "Primordial Mote"
     },
     {
       "key": "item.ItemMaterial.11.name",
       "mod": "TaintedMagic",
       "name_en": "Creation Fragment",
-      "name_ru": ""
+      "name_ru": "Creation Fragment"
     },
     {
       "key": "item.ItemMaterial.2.name",
       "mod": "TaintedMagic",
       "name_en": "Crimson-stained Cloth",
-      "name_ru": ""
+      "name_ru": "Crimson-stained Cloth"
     },
     {
       "key": "item.ItemMaterial.3.name",
       "mod": "TaintedMagic",
       "name_en": "Warped Unbalanced Shard",
-      "name_ru": ""
+      "name_ru": "Warped Unbalanced Shard"
     },
     {
       "key": "item.ItemMaterial.4.name",
       "mod": "TaintedMagic",
       "name_en": "Tainted Unbalanced Shard",
-      "name_ru": ""
+      "name_ru": "Tainted Unbalanced Shard"
     },
     {
       "key": "item.ItemMaterial.5.name",
       "mod": "TaintedMagic",
       "name_en": "Shard of Creation",
-      "name_ru": ""
+      "name_ru": "Shard of Creation"
     },
     {
       "key": "item.ItemMaterial.6.name",
       "mod": "TaintedMagic",
       "name_en": "Thaumic Alloy Plating",
-      "name_ru": ""
+      "name_ru": "Thaumic Alloy Plating"
     },
     {
       "key": "item.ItemMaterial.7.name",
       "mod": "TaintedMagic",
       "name_en": "Crimson Plating",
-      "name_ru": ""
+      "name_ru": "Crimson Plating"
     },
     {
       "key": "item.ItemMaterial.8.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Nugget",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Nugget"
     },
     {
       "key": "item.ItemMaterial.9.name",
       "mod": "TaintedMagic",
       "name_en": "Primordial Nodule",
-      "name_ru": ""
+      "name_ru": "Primordial Nodule"
     },
     {
       "key": "item.ItemNightshadeBerries.name",
       "mod": "TaintedMagic",
       "name_en": "Nightshade Berries",
-      "name_ru": ""
+      "name_ru": "Nightshade Berries"
     },
     {
       "key": "item.ItemPrimalBlade.name",
       "mod": "TaintedMagic",
       "name_en": "Primal Blade",
-      "name_ru": ""
+      "name_ru": "Primal Blade"
     },
     {
       "key": "item.ItemSalis.0.name",
       "mod": "TaintedMagic",
       "name_en": "Salis Tempestas",
-      "name_ru": ""
+      "name_ru": "Salis Tempestas"
     },
     {
       "key": "item.ItemSalis.1.name",
       "mod": "TaintedMagic",
       "name_en": "Salis Aevum",
-      "name_ru": ""
+      "name_ru": "Salis Aevum"
     },
     {
       "key": "item.ItemShadowFortressChestplate.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Fortress Cuirass",
-      "name_ru": ""
+      "name_ru": "Shadow Fortress Cuirass"
     },
     {
       "key": "item.ItemShadowFortressHelmet.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Fortress Helm",
-      "name_ru": ""
+      "name_ru": "Shadow Fortress Helm"
     },
     {
       "key": "item.ItemShadowFortressLeggings.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Fortress Thigh Guards",
-      "name_ru": ""
+      "name_ru": "Shadow Fortress Thigh Guards"
     },
     {
       "key": "item.ItemShadowmetalAxe.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Axe",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Axe"
     },
     {
       "key": "item.ItemShadowmetalHoe.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Hoe",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Hoe"
     },
     {
       "key": "item.ItemShadowmetalPick.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Pickaxe",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Pickaxe"
     },
     {
       "key": "item.ItemShadowmetalSpade.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Shovel",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Shovel"
     },
     {
       "key": "item.ItemShadowmetalSword.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Blade",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Blade"
     },
     {
       "key": "item.ItemThaumicDisassembler.name",
       "mod": "TaintedMagic",
       "name_en": "Thaumic Disassembler",
-      "name_ru": ""
+      "name_ru": "Thaumic Disassembler"
     },
     {
       "key": "item.ItemVoidBlood.name",
       "mod": "TaintedMagic",
       "name_en": "Phial of Void-infused Blood",
-      "name_ru": ""
+      "name_ru": "Phial of Void-infused Blood"
     },
     {
       "key": "item.ItemVoidFortressChestplate.name",
       "mod": "TaintedMagic",
       "name_en": "Void Fortress Cuirass",
-      "name_ru": ""
+      "name_ru": "Void Fortress Cuirass"
     },
     {
       "key": "item.ItemVoidFortressHelmet.name",
       "mod": "TaintedMagic",
       "name_en": "Void Fortress Helm",
-      "name_ru": ""
+      "name_ru": "Void Fortress Helm"
     },
     {
       "key": "item.ItemVoidFortressLeggings.name",
       "mod": "TaintedMagic",
       "name_en": "Void Fortress Thigh Guards",
-      "name_ru": ""
+      "name_ru": "Void Fortress Thigh Guards"
     },
     {
       "key": "item.ItemVoidmetalGoggles.name",
       "mod": "TaintedMagic",
       "name_en": "Void Metal Goggles of Revealing",
-      "name_ru": ""
+      "name_ru": "Void Metal Goggles of Revealing"
     },
     {
       "key": "item.ItemVoidwalkerBoots.name",
       "mod": "TaintedMagic",
       "name_en": "Boots of the Voidwalker",
-      "name_ru": ""
+      "name_ru": "Boots of the Voidwalker"
     },
     {
       "key": "item.ItemVoidwalkerSash.name",
       "mod": "TaintedMagic",
       "name_en": "Voidwalker's Sash of Runic Shielding",
-      "name_ru": ""
+      "name_ru": "Voidwalker's Sash of Runic Shielding"
     },
     {
       "key": "item.ItemWandCap.0.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow Metal Cap",
-      "name_ru": ""
+      "name_ru": "Shadow Metal Cap"
     },
     {
       "key": "item.ItemWandCap.1.name",
       "mod": "TaintedMagic",
       "name_en": "Enchanted Cloth Cap",
-      "name_ru": ""
+      "name_ru": "Enchanted Cloth Cap"
     },
     {
       "key": "item.ItemWandCap.2.name",
       "mod": "TaintedMagic",
       "name_en": "Crimson-stained Cloth Cap",
-      "name_ru": ""
+      "name_ru": "Crimson-stained Cloth Cap"
     },
     {
       "key": "item.ItemWandCap.3.name",
       "mod": "TaintedMagic",
       "name_en": "Shadow-imbued Cloth Cap",
-      "name_ru": ""
+      "name_ru": "Shadow-imbued Cloth Cap"
     },
     {
       "key": "item.ItemWandRod.0.name",
       "mod": "TaintedMagic",
       "name_en": "Warpwood Rod",
-      "name_ru": ""
+      "name_ru": "Warpwood Rod"
     },
     {
       "key": "item.ItemWandRod.1.name",
       "mod": "TaintedMagic",
       "name_en": "Warpwood Staff Core",
-      "name_ru": ""
+      "name_ru": "Warpwood Staff Core"
     },
     {
       "key": "item.ItemWarpFertilizer.name",
       "mod": "TaintedMagic",
       "name_en": "Warping Fertilizer",
-      "name_ru": ""
+      "name_ru": "Warping Fertilizer"
     },
     {
       "key": "item.ItemWarpedGoggles.name",
       "mod": "TaintedMagic",
       "name_en": "Warped Goggles of Revealing",
-      "name_ru": ""
+      "name_ru": "Warped Goggles of Revealing"
     },
     {
       "key": "tile.BlockLumos.name",
       "mod": "TaintedMagic",
       "name_en": "Lumos",
-      "name_ru": ""
+      "name_ru": "Lumos"
     },
     {
       "key": "tile.BlockNightshadeBush.name",
       "mod": "TaintedMagic",
       "name_en": "Atropa Belladonna",
-      "name_ru": ""
+      "name_ru": "Atropa Belladonna"
     },
     {
       "key": "tile.BlockWarpwoodLeaves.name",
       "mod": "TaintedMagic",
       "name_en": "Warped Leaves",
-      "name_ru": ""
+      "name_ru": "Warped Leaves"
     },
     {
       "key": "tile.BlockWarpwoodLog.name",
       "mod": "TaintedMagic",
       "name_en": "Warpwood Log",
-      "name_ru": ""
+      "name_ru": "Warpwood Log"
     },
     {
       "key": "tile.BlockWarpwoodPlanks.name",
       "mod": "TaintedMagic",
       "name_en": "Warpwood Planks",
-      "name_ru": ""
+      "name_ru": "Warpwood Planks"
     },
     {
       "key": "tile.BlockWarpwoodSapling.name",
       "mod": "TaintedMagic",
       "name_en": "Warpwood Sapling",
-      "name_ru": ""
+      "name_ru": "Warpwood Sapling"
     },
     {
       "key": "item.ArcaneDoorKey.0.name",

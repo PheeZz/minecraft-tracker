@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 8,
+    "notes": "BloodArsenal Ritual of Binding recipes. seasonal=halloween entries only register during the Halloween event."
+  },
+  "recipes": [
+    {
+      "output": {
+        "ref": "bound_bow",
+        "name_en": "Bound Bow",
+        "name_ru": "Bound Bow"
+      },
+      "input": {
+        "vanilla": "bow",
+        "name_en": "Bow",
+        "name_ru": "Лук"
+      }
+    },
+    {
+      "output": {
+        "ref": "bound_sickle",
+        "name_en": "Bound Sickle",
+        "name_ru": "Bound Sickle"
+      },
+      "input": {
+        "vanilla": "diamond_hoe",
+        "name_en": "Diamond Hoe",
+        "name_ru": "Алмазная мотыга"
+      }
+    },
+    {
+      "output": {
+        "ref": "bound_shears",
+        "name_en": "Bound Shears",
+        "name_ru": "Bound Shears"
+      },
+      "input": {
+        "vanilla": "shears",
+        "name_en": "Shears",
+        "name_ru": "Ножницы"
+      }
+    },
+    {
+      "output": {
+        "ref": "blood_infused_diamond_bound",
+        "name_en": "Bound Diamond",
+        "name_ru": "Bound Diamond"
+      },
+      "input": {
+        "ref": "blood_infused_diamond_active",
+        "name_en": "Blood Infused Diamond (Active)",
+        "name_ru": "Blood Infused Diamond (Active)"
+      }
+    },
+    {
+      "output": {
+        "ref": "bound_igniter",
+        "name_en": "Bound Igniter",
+        "name_ru": "Bound Igniter"
+      },
+      "input": {
+        "vanilla": "flint_and_steel",
+        "name_en": "Flint And Steel",
+        "name_ru": "Flint And Steel"
+      }
+    },
+    {
+      "output": {
+        "ref": "vampire_cape",
+        "name_en": "Vampire Cape",
+        "name_ru": "Vampire Cape"
+      },
+      "input": {
+        "vanilla": "leather_chestplate",
+        "name_en": "Leather Chestplate",
+        "name_ru": "Leather Chestplate"
+      },
+      "seasonal": "halloween"
+    },
+    {
+      "output": {
+        "ref": "vampire_greaves",
+        "name_en": "Vampire Greaves",
+        "name_ru": "Vampire Greaves"
+      },
+      "input": {
+        "vanilla": "leather_leggings",
+        "name_en": "Leather Leggings",
+        "name_ru": "Leather Leggings"
+      },
+      "seasonal": "halloween"
+    },
+    {
+      "output": {
+        "ref": "vampire_boots",
+        "name_en": "Vampire Boots",
+        "name_ru": "Vampire Boots"
+      },
+      "input": {
+        "vanilla": "leather_boots",
+        "name_en": "Leather Boots",
+        "name_ru": "Кожаные ботинки"
+      },
+      "seasonal": "halloween"
+    }
+  ]
+}

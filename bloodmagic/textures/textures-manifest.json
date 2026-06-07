@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "note": "BloodMagic (alchemicalwizardry) item/block textures extracted from the mod jar.",
+    "iconMapMatchRate": "114/186"
+  },
+  "byMod": {
+    "alchemicalwizardry": {
+      "items": 192,
+      "blocks": 56
+    }
+  },
+  "total": {
+    "items": 192,
+    "blocks": 56
+  }
+}

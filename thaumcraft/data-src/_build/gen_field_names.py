@@ -14,6 +14,14 @@ PROJ = os.path.abspath(os.path.join(ROOT, "..", "..", ".."))
 DEC = r"C:\Users\pheezz\Desktop\pricoli-jar"
 DECDIRS = ["decompTC","decompMB2","decompFM","decompTM","decompTT","decompAE2","decompBA","decompAV","decompAL","decompLM"]
 
+def clean_name(s):
+    if not s: return s
+    s = re.sub(r'§[0-9A-Fa-fk-orK-OR]', '', s)
+    s = re.sub(r'§.', '', s)
+    s = s.replace("%s", "[mob]").replace("%d", "[number]")
+    s = re.sub(r'\s{2,}', ' ', s)
+    return s.strip()
+
 NAME = {i["key"]: i for i in json.load(open(os.path.join(PROJ,"thaumcraft","data-src","item-names.json"),encoding="utf-8"))["items"]}
 
 # field -> ORDERED candidate unloc/registry strings (strong = explicit registration first)
@@ -44,7 +52,7 @@ for dec in DECDIRS:
 
 def lookup(c):
     for k in ("item.%s.name"%c, "tile.%s.name"%c):
-        if k in NAME: return NAME[k]["name_en"], NAME[k]["name_ru"]
+        if k in NAME: return clean_name(NAME[k]["name_en"]), clean_name(NAME[k]["name_ru"])
     return None
 
 def resolve(fld):
@@ -115,7 +123,7 @@ for fld, rec in out.items():
             keys = ["%s%s.name"%(lit, suf)]
         for k in keys:
             if k in NAME:
-                metas[str(i)] = {"name_en": NAME[k]["name_en"], "name_ru": NAME[k]["name_ru"]}
+                metas[str(i)] = {"name_en": clean_name(NAME[k]["name_en"]), "name_ru": clean_name(NAME[k]["name_ru"])}
                 break
     if metas:
         rec["metas"] = metas; subcount += 1
