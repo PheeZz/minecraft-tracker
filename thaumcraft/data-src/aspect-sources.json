@@ -928,7 +928,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemTripleMeatTreat",
-        "meta": null
+        "meta": null,
+        "name_en": "Triple Meat Treat",
+        "name_ru": "Мясное ассорти"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4492,7 +4494,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemFocusPech",
-        "meta": null
+        "meta": null,
+        "name_en": "Wand Focus: Pech's Curse",
+        "name_ru": "Набалдашник: Гномье проклятие"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4508,7 +4512,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemChestCultistPlate",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Cult Chestplate",
+        "name_ru": "Кираса культиста"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4521,7 +4527,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemChestCultistRobe",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Cult Robe",
+        "name_ru": "Мантия культиста"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4535,7 +4543,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemChestCultistLeaderPlate",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Praetor Chestplate",
+        "name_ru": "Кираса Претора культистов"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4548,7 +4558,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemLegsCultistPlate",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Cult Greaves",
+        "name_ru": "Поножи культиста"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4561,7 +4573,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemLegsCultistLeaderPlate",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Praetor Greaves",
+        "name_ru": "Поножи Претора культистов"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4574,7 +4588,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigItems.itemLegsCultistRobe",
-        "meta": null
+        "meta": null,
+        "name_en": "Crimson Cult Leggings",
+        "name_ru": "Шаровары культиста"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -4749,7 +4765,9 @@
       "subject": {
         "type": "item",
         "ref": "ConfigBlocks.blockEldritchPortal",
-        "meta": null
+        "meta": null,
+        "name_en": "Eldritch Portal",
+        "name_ru": "Древний портал"
       },
       "mod": "Thaumcraft",
       "aspects": {
@@ -5171,7 +5189,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.gluttonyShard",
-        "meta": null
+        "meta": null,
+        "name_en": "Gluttony Shard",
+        "name_ru": "Осколок прожорливости"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5252,7 +5272,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.ridingCrop",
-        "meta": null
+        "meta": null,
+        "name_en": "Riding Crop",
+        "name_ru": "Хлыст"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5268,7 +5290,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.taintFruit",
-        "meta": null
+        "meta": null,
+        "name_en": "Tainted Fruit",
+        "name_ru": ""
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5281,7 +5305,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.taintCoal",
-        "meta": null
+        "meta": null,
+        "name_en": "Hexcoal",
+        "name_ru": ""
       },
       "mod": "ForbiddenMagic",
       "aspects": {

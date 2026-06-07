@@ -20,6 +20,8 @@ names = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","item-names.jso
 NAME = {i["key"]: i for i in names["items"]}
 # ---- vanilla SRG field -> {reg,name_en,name_ru}
 VANILLA = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","vanilla-names.json"),encoding="utf-8"))["fields"]
+# ---- mod field name -> {name_en,name_ru}
+FIELDNAMES = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","field-names.json"),encoding="utf-8"))["fields"]
 
 # aspect field -> tag
 field_tag = {}
@@ -51,15 +53,22 @@ def resolve_item(tok):
             if c in NAME:
                 return {"ref":fld,"meta":(int(meta) if meta else None),
                         "name_en":NAME[c]["name_en"],"name_ru":NAME[c]["name_ru"]}
+        fn=FIELDNAMES.get(fld)
+        if fn:
+            return {"ref":fld,"meta":(int(meta) if meta else None),
+                    "name_en":fn["name_en"],"name_ru":fn["name_ru"]}
         return {"ref":fld,"meta":(int(meta) if meta else None)}
     m = re.search(r'(?<![A-Za-z])(?:Items|Blocks)\.(\w+)', tok)
     if m:
         fld=m.group(1); v=VANILLA.get(fld)
         if v: return {"vanilla":fld,"reg":v["reg"],"name_en":v["name_en"],"name_ru":v["name_ru"]}
         return {"vanilla":fld}
-    m = re.search(r'new ItemStack\(\s*(\w+)', tok)
+    m = re.search(r'new ItemStack\(\s*([\w.]+)', tok)
     if m:
-        return {"ref":m.group(1)}
+        ref=m.group(1); fld=ref.split(".")[-1]
+        fn=FIELDNAMES.get(fld)
+        if fn: return {"ref":ref,"name_en":fn["name_en"],"name_ru":fn["name_ru"]}
+        return {"ref":ref}
     return {"raw":tok[:60]}
 
 def balanced(s,start):

@@ -50,6 +50,7 @@ for mod,_,langdir in MODS:
 items_out.sort(key=lambda x:(x["mod"],x["key"]))
 NAME = {i["key"]: i for i in items_out}   # lang-key -> {name_en,name_ru}
 VANILLA = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","vanilla-names.json"),encoding="utf-8"))["fields"]
+FIELDNAMES = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","field-names.json"),encoding="utf-8"))["fields"]
 
 def resolve_name(fld, meta):
     cap = fld[0].upper()+fld[1:]
@@ -129,6 +130,9 @@ def subject(arg):
         vm=re.match(r'(?:Items|Blocks)\.(\w+)',ref)
         if vm and vm.group(1) in VANILLA:
             v=VANILLA[vm.group(1)]; out["reg"]=v["reg"]; out["name_en"]=v["name_en"]; out["name_ru"]=v["name_ru"]
+        if "name_en" not in out:
+            fn=FIELDNAMES.get(ref.split(".")[-1])
+            if fn: out["name_en"]=fn["name_en"]; out["name_ru"]=fn["name_ru"]
         return out
     return {"type":"raw","ref":arg[:80]}
 
