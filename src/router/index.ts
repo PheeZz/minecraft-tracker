@@ -45,11 +45,20 @@ export const router = createRouter({
 const BRAND = 'Катализатор бесконечности'
 const titleById = new Map<string, string>(TRACKER_MODULES.map((m) => [m.id, m.title]))
 
+// Суффикс заголовка по трекеру: Forestry — только пчёлы/деревья; генетика и
+// Thaumcraft к Forestry не относятся, у них своя приписка.
+const TITLE_SUFFIX: Record<TrackerId, string> = {
+  trees: 'Forestry — схемы скрещивания',
+  bees: 'Forestry — схемы скрещивания',
+  genetics: '— генетика пчёл',
+  thaumcraft: '— магия и аспекты',
+}
+
 /** Заголовок вкладки для трекера (ключевик впереди, бренд в хвосте). */
 export function titleFor(tracker?: TrackerId): string {
   const name = tracker ? titleById.get(tracker) : undefined
-  return name
-    ? `${name} Forestry — схемы скрещивания · ${BRAND}`
+  return name && tracker
+    ? `${name} ${TITLE_SUFFIX[tracker]} · ${BRAND}`
     : `Селекция Forestry: пчёлы и деревья · ${BRAND}`
 }
 

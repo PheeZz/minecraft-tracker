@@ -43,6 +43,7 @@ await page.setContent(`<!doctype html><html lang="ru"><head><meta charset="utf-8
   .tag{font:700 21px 'JetBrains Mono',monospace;padding:9px 18px;border-radius:999px;border:1.6px solid rgba(143,209,79,.42);color:#bcd3b0;display:flex;align-items:center;gap:9px}
   .tag.honey{border-color:rgba(232,167,44,.5);color:#f0b54a}
   .tag.cyan{border-color:rgba(79,214,223,.55);color:#4fd6df}
+  .tag.violet{border-color:rgba(160,107,255,.6);color:#cdb6ff}
   .tag.cosmo{border-color:rgba(180,150,255,.55);color:#cdb6ff;padding-left:11px}
   .tag.cosmo img{width:30px;height:30px;margin:-4px 0}
   .art{display:flex;align-items:center;justify-content:center;position:relative;padding-right:72px}
@@ -56,11 +57,12 @@ await page.setContent(`<!doctype html><html lang="ru"><head><meta charset="utf-8
   <div class="b">
     <div class="text">
       <h1>Катализатор<br><span class="grad">бесконечности</span></h1>
-      <div class="sub">Роадмап Forestry — пчёлы, деревья и генетика</div>
+      <div class="sub">Пчёлы и деревья Forestry, генетика, магия Thaumcraft</div>
       <div class="tags">
         <span class="tag">🌳 деревья</span>
         <span class="tag honey">🐝 пчёлы</span>
         <span class="tag cyan">🔬 генетика</span>
+        <span class="tag violet">🔮 таумкрафт</span>
         <span class="tag cosmo"><img src="${starUri}" alt=""> Avaritia</span>
       </div>
     </div>

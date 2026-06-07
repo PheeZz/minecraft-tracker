@@ -38,3 +38,13 @@ public/genetics/
 .superpowers/
 
 scripts/og/
+
+# запечённые иконки аспектов Thaumcraft (генерируемы)
+public/thaumcraft/
+
+# диагностика генератора иконок (регенерируется)
+thaumcraft/textures/_unmatched-items.json
+
+# диагностика локализатора (регенерируется)
+thaumcraft/i18n/_needs-localization.json
+thaumcraft/i18n/_garbage-names.json

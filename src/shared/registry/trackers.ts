@@ -35,6 +35,14 @@ export const TRACKER_MODULES = [
     path: '/genetics',
     view: () => import('@/trackers/genetics/components/GeneticsView.vue'),
   },
+  {
+    id: 'thaumcraft',
+    title: 'Таумкрафт',
+    kicker: 'Thaumcraft · Аспекты',
+    mark: 'aspect',
+    path: '/thaumcraft',
+    view: () => import('@/trackers/thaumcraft/components/ThaumcraftView.vue'),
+  },
 ] as const satisfies readonly TrackerModule[]
 
 export type TrackerId = (typeof TRACKER_MODULES)[number]['id']

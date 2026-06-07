@@ -13,6 +13,8 @@ const DIRS = [
   ['trees/fruit-assets/forestry-fruits', 'public/trees/fruits/forestry-fruits'],
   ['genetics/textures/items', 'public/genetics/items'],
   ['genetics/textures/blocks', 'public/genetics/blocks'],
+  ['thaumcraft/textures/items', 'public/thaumcraft/tex/items'],
+  ['thaumcraft/textures/blocks', 'public/thaumcraft/tex/blocks'],
 ]
 const FILES = [
   ['bees/mockups/beeCombs.0.png', 'public/bees/beeCombs.0.png'],

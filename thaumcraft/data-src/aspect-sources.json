@@ -1,0 +1,6342 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "objectTags": 375,
+    "entityTags": 69,
+    "byMod": {
+      "Thaumcraft": 389,
+      "MagicBees": 19,
+      "ForbiddenMagic": 21,
+      "Avaritia": 15
+    },
+    "notes": "object/entity scanning tags. subject.type: oredict (ore-dictionary id, directly usable) | item (ConfigItems/ConfigBlocks/Items/Blocks field ref + meta) | raw. 'aspectGivers' indexes aspect->oredict sources (item-ref sources omitted there since names need resolution)."
+  },
+  "objectTags": [
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 3,
+        "instrumentum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "motus": 2,
+        "instrumentum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 1,
+        "potentia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "venenum": 2,
+        "potentia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "instrumentum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "instrumentum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "is"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 2,
+        "lucrum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150322_A",
+        "meta": null,
+        "reg": "sandstone",
+        "name_en": "Sandstone",
+        "name_ru": "Песчаник"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150440_ba",
+        "meta": null,
+        "reg": "melon_block",
+        "name_en": "Melon Block",
+        "name_ru": "Melon Block"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151121_aF",
+        "meta": null,
+        "reg": "paper",
+        "name_en": "Paper",
+        "name_ru": "Бумага"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151122_aG",
+        "meta": null,
+        "reg": "book",
+        "name_en": "Book",
+        "name_ru": "Книга"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 3
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150342_X",
+        "meta": null,
+        "reg": "bookshelf",
+        "name_en": "Bookshelf",
+        "name_ru": "Книжная полка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 8
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151061_bv",
+        "meta": null,
+        "reg": "ender_eye",
+        "name_en": "Ender Eye",
+        "name_ru": "Ender Eye"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151032_g",
+        "meta": null,
+        "reg": "arrow",
+        "name_en": "Arrow",
+        "name_ru": "Стрела"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "telum": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151069_bo",
+        "meta": null,
+        "reg": "glass_bottle",
+        "name_en": "Glass Bottle",
+        "name_ru": "Пузырёк"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150486_ae",
+        "meta": null,
+        "reg": "chest",
+        "name_en": "Chest",
+        "name_ru": "Сундук"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151153_ao",
+        "meta": 0,
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 2,
+        "sano": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151153_ao",
+        "meta": 1,
+        "reg": "golden_apple",
+        "name_en": "Golden Apple",
+        "name_ru": "Золотое яблоко"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 4,
+        "sano": 8
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151054_z",
+        "meta": null,
+        "reg": "bowl",
+        "name_en": "Bowl",
+        "name_ru": "Миска"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151009_A",
+        "meta": null,
+        "reg": "mushroom_stew",
+        "name_en": "Mushroom Stew",
+        "name_ru": "Тушеные грибы"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151143_au",
+        "meta": null,
+        "reg": "minecart",
+        "name_en": "Minecart",
+        "name_ru": "Вагонетка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "iter": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151139_aw",
+        "meta": null,
+        "reg": "iron_door",
+        "name_en": "Iron Door",
+        "name_ru": "Железная дверь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "motus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151135_aq",
+        "meta": null,
+        "reg": "wooden_door",
+        "name_en": "Wooden Door",
+        "name_ru": "Деревянная дверь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "motus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151124_az",
+        "meta": null,
+        "reg": "boat",
+        "name_en": "Boat",
+        "name_ru": "Лодка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 4,
+        "iter": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151033_d",
+        "meta": null,
+        "reg": "flint_and_steel",
+        "name_en": "Flint And Steel",
+        "name_ru": "Flint And Steel"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151112_aM",
+        "meta": null,
+        "reg": "fishing_rod",
+        "name_en": "Fishing Rod",
+        "name_ru": "Удочка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 1,
+        "instrumentum": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151067_bt",
+        "meta": null,
+        "reg": "brewing_stand",
+        "name_en": "Brewing Stand",
+        "name_ru": "Варочная стойка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 2,
+        "aqua": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150430_aB",
+        "meta": null,
+        "reg": "stone_button",
+        "name_en": "Stone Button",
+        "name_ru": "Stone Button"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150448_aq",
+        "meta": null,
+        "reg": "rail",
+        "name_en": "Rail",
+        "name_ru": "Рельсы"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1,
+        "iter": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150319_E",
+        "meta": null,
+        "reg": "detector_rail",
+        "name_en": "Detector Rail",
+        "name_ru": "Рельсы с датчиком"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150318_D",
+        "meta": null,
+        "reg": "golden_rail",
+        "name_en": "Golden Rail",
+        "name_ru": "Golden Rail"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "potentia": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150408_cc",
+        "meta": null,
+        "reg": "activator_rail",
+        "name_en": "Activator Rail",
+        "name_ru": "Активирующие рельсы"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150396_be",
+        "meta": null,
+        "reg": "fence_gate",
+        "name_en": "Fence Gate",
+        "name_ru": "Калитка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "iter": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150452_aw",
+        "meta": null,
+        "reg": "wooden_pressure_plate",
+        "name_en": "Wooden Pressure Plate",
+        "name_ru": "Wooden Pressure Plate"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150456_au",
+        "meta": null,
+        "reg": "stone_pressure_plate",
+        "name_en": "Stone Pressure Plate",
+        "name_ru": "Stone Pressure Plate"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150445_bS",
+        "meta": null,
+        "reg": "light_weighted_pressure_plate",
+        "name_en": "Light Weighted Pressure Plate",
+        "name_ru": "Light Weighted Pressure Plate"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150443_bT",
+        "meta": null,
+        "reg": "heavy_weighted_pressure_plate",
+        "name_en": "Heavy Weighted Pressure Plate",
+        "name_ru": "Heavy Weighted Pressure Plate"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "sensus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150442_at",
+        "meta": null,
+        "reg": "lever",
+        "name_en": "Lever",
+        "name_ru": "Рычаг"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150429_aA",
+        "meta": null,
+        "reg": "redstone_torch",
+        "name_en": "Redstone Torch",
+        "name_ru": "Красный факел"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150331_J",
+        "meta": null,
+        "reg": "piston",
+        "name_en": "Piston",
+        "name_ru": "Поршень"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "motus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150320_F",
+        "meta": null,
+        "reg": "sticky_piston",
+        "name_en": "Sticky Piston",
+        "name_ru": "Липкий поршень"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "motus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150421_aI",
+        "meta": null,
+        "reg": "jukebox",
+        "name_en": "Jukebox",
+        "name_ru": "Проигрыватель"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "machina": 2,
+        "aer": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150323_B",
+        "meta": null,
+        "reg": "noteblock",
+        "name_en": "Noteblock",
+        "name_ru": "Noteblock"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "machina": 1,
+        "aer": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150415_aT",
+        "meta": null,
+        "reg": "trapdoor",
+        "name_en": "Trapdoor",
+        "name_ru": "Люк"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "motus": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150470_am",
+        "meta": null,
+        "reg": "lit_furnace",
+        "name_en": "Lit Furnace",
+        "name_ru": "Lit Furnace"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150460_al",
+        "meta": null,
+        "reg": "furnace",
+        "name_en": "Furnace",
+        "name_ru": "Печь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150381_bn",
+        "meta": null,
+        "reg": "enchanting_table",
+        "name_en": "Enchanting Table",
+        "name_ru": "Enchanting Table"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 8,
+        "fabrico": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151113_aN",
+        "meta": null,
+        "reg": "clock",
+        "name_en": "Clock",
+        "name_ru": "Часы"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150461_bJ",
+        "meta": null,
+        "reg": "beacon",
+        "name_en": "Beacon",
+        "name_ru": "Маяк"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "auram": 2,
+        "praecantatio": 2,
+        "permutatio": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150471_bO",
+        "meta": null,
+        "reg": "wooden_button",
+        "name_en": "Wooden Button",
+        "name_ru": "Wooden Button"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151146_bM",
+        "meta": null,
+        "reg": "carrot_on_a_stick",
+        "name_en": "Carrot On A Stick",
+        "name_ru": "Carrot On A Stick"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "iter": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151162_bE",
+        "meta": null,
+        "reg": "flower_pot",
+        "name_en": "Flower Pot",
+        "name_ru": "Цветочный горшок"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 1,
+        "herba": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151150_bK",
+        "meta": null,
+        "reg": "golden_carrot",
+        "name_en": "Golden Carrot",
+        "name_ru": "Золотая морковь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 2
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150477_bB",
+        "meta": null,
+        "reg": "ender_chest",
+        "name_en": "Ender Chest",
+        "name_ru": "Сундук Эндера"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "permutatio": 2,
+        "iter": 2,
+        "vacuos": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150438_bZ",
+        "meta": null,
+        "reg": "hopper",
+        "name_en": "Hopper",
+        "name_ru": "Воронка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "permutatio": 1,
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150409_cd",
+        "meta": null,
+        "reg": "dropper",
+        "name_en": "Dropper",
+        "name_ru": "Выбрасыватель"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "permutatio": 1,
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150367_z",
+        "meta": null,
+        "reg": "dispenser",
+        "name_en": "Dispenser",
+        "name_ru": "Раздатчик"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 1,
+        "permutatio": 1,
+        "vacuos": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150453_bW",
+        "meta": null,
+        "reg": "daylight_detector",
+        "name_en": "Daylight Detector",
+        "name_ru": "Daylight Detector"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 2,
+        "lux": 3,
+        "machina": 3
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTable",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "instrumentum": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemTripleMeatTreat",
+        "meta": null,
+        "name_en": "Triple Meat Treat",
+        "name_ru": "Мясное ассорти"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sano": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemPrimalArrow",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "telum": 1
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemGoggles",
+        "meta": null,
+        "name_en": "Goggles of Revealing",
+        "name_ru": "Очки откровения"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockWoodenDevice",
+        "meta": 1,
+        "name_en": "Arcane Ear",
+        "name_ru": "Магическое ухо"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "stone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "cobblestone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "logWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "plankWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "slabWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "stairWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "stickWood"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "treeSapling"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1,
+        "herba": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "treeLeaves"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "dyes[i]"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreLapis"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "sensus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreDiamond"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "lucrum": 3,
+        "vitreus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "gemDiamond"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreRedstone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "potentia": 2,
+        "machina": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150439_ay",
+        "meta": null,
+        "reg": "lit_redstone_ore",
+        "name_en": "Lit Redstone Ore",
+        "name_ru": "Lit Redstone Ore"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "potentia": 3,
+        "machina": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreEmerald"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "lucrum": 4,
+        "vitreus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "gemEmerald"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 4,
+        "lucrum": 5
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreQuartz"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "vitreus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151074_bl",
+        "meta": null,
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetIron"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreIron"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "metallum": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustIron"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151042_j",
+        "meta": null,
+        "reg": "iron_ingot",
+        "name_en": "Iron Ingot",
+        "name_ru": "Железный слиток"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreGold"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "metallum": 2,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustGold"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151043_k",
+        "meta": null,
+        "reg": "gold_ingot",
+        "name_en": "Gold Ingot",
+        "name_ru": "Золотой слиток"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "lucrum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150365_q",
+        "meta": null,
+        "reg": "coal_ore",
+        "name_en": "Coal Ore",
+        "name_ru": "Уголь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "potentia": 2,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151044_h",
+        "meta": null,
+        "reg": "coal",
+        "name_en": "Coal",
+        "name_ru": "Уголь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "potentia": 2,
+        "ignis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustRedstone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "potentia": 2,
+        "machina": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustGlowstone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 1,
+        "lux": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "glowstone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 3,
+        "lux": 10
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetCopper"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "ingotCopper"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "permutatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustCopper"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "permutatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreCopper"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "terra": 1,
+        "permutatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 17,
+        "name_en": "Native Copper Cluster",
+        "name_ru": "Меднорудный кластер"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 5,
+        "terra": 1,
+        "permutatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetTin"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "ingotTin"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustTin"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreTin"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "perditio": 1,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 18,
+        "name_en": "Native Tin Cluster",
+        "name_ru": "Оловяннорудный кластер"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 5,
+        "terra": 1,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetSilver"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "ingotSilver"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustSilver"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreSilver"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "perditio": 1,
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 19,
+        "name_en": "Native Silver Cluster",
+        "name_ru": "Серебрянорудный кластер"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 5,
+        "terra": 1,
+        "lucrum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "nuggetLead"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "ingotLead"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "dustLead"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "perditio": 1,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "oredict",
+        "id": "oreLead"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "perditio": 1,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 20,
+        "name_en": "Native Lead Cluster",
+        "name_ru": "Свинцоворудный кластер"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 2,
+        "metallum": 5,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150357_h",
+        "meta": null,
+        "reg": "bedrock",
+        "name_en": "Bedrock",
+        "name_ru": "Бедрок"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 16,
+        "perditio": 16,
+        "terra": 16,
+        "tenebrae": 16
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150346_d",
+        "meta": null,
+        "reg": "dirt",
+        "name_en": "Dirt",
+        "name_ru": "Земля"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150346_d",
+        "meta": 2,
+        "reg": "dirt",
+        "name_en": "Dirt",
+        "name_ru": "Земля"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150458_ak",
+        "meta": null,
+        "reg": "farmland",
+        "name_en": "Farmland",
+        "name_ru": "Пашня"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "meto": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150354_m",
+        "meta": null,
+        "reg": "sand",
+        "name_en": "Sand",
+        "name_ru": "Песок"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150349_c",
+        "meta": null,
+        "reg": "grass",
+        "name_en": "Grass Block",
+        "name_ru": "Блок травы"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151119_aD",
+        "meta": null,
+        "reg": "clay_ball",
+        "name_en": "Clay Ball",
+        "name_ru": "Clay Ball"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 1,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150377_bs",
+        "meta": null,
+        "reg": "end_stone",
+        "name_en": "End Stone",
+        "name_ru": "Эндерняк"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "tenebrae": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150351_n",
+        "meta": null,
+        "reg": "gravel",
+        "name_en": "Gravel",
+        "name_ru": "Гравий"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150391_bh",
+        "meta": null,
+        "reg": "mycelium",
+        "name_en": "Mycelium",
+        "name_ru": "Мицелий"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150435_aG",
+        "meta": null,
+        "reg": "clay",
+        "name_en": "Clay",
+        "name_ru": "Глина"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 3,
+        "aqua": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150405_ch",
+        "meta": null,
+        "reg": "hardened_clay",
+        "name_en": "Hardened Clay",
+        "name_ru": "Обожжёная глина"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 4,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150406_ce",
+        "meta": null,
+        "reg": "stained_hardened_clay",
+        "name_en": "Stained Hardened Clay",
+        "name_ru": "Stained Hardened Clay"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 3,
+        "ignis": 1,
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151118_aC",
+        "meta": null,
+        "reg": "brick",
+        "name_en": "Brick",
+        "name_ru": "Кирпич"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151130_bT",
+        "meta": null,
+        "reg": "netherbrick",
+        "name_en": "Nether Brick",
+        "name_ru": "Адский кирпич"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150359_w",
+        "meta": null,
+        "reg": "glass",
+        "name_en": "Glass",
+        "name_ru": "Стекло"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150399_cn",
+        "meta": null,
+        "reg": "stained_glass",
+        "name_en": "Stained Glass",
+        "name_ru": "Окрашенное стекло"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150341_Y",
+        "meta": null,
+        "reg": "mossy_cobblestone",
+        "name_en": "Mossy Cobblestone",
+        "name_ru": "Mossy Cobblestone"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "herba": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150418_aU",
+        "meta": null,
+        "reg": "monster_egg",
+        "name_en": "Monster Egg",
+        "name_ru": "Monster Egg"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 2,
+        "bestia": 1,
+        "vinculum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150417_aV",
+        "meta": null,
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150417_aV",
+        "meta": 1,
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150417_aV",
+        "meta": 2,
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150417_aV",
+        "meta": 3,
+        "reg": "stonebrick",
+        "name_en": "Cobblestone",
+        "name_ru": "Булыжник"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150322_A",
+        "meta": 1,
+        "reg": "sandstone",
+        "name_en": "Sandstone",
+        "name_ru": "Песчаник"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150322_A",
+        "meta": 2,
+        "reg": "sandstone",
+        "name_en": "Sandstone",
+        "name_ru": "Песчаник"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150329_H",
+        "meta": null,
+        "reg": "tallgrass",
+        "name_en": "Grass",
+        "name_ru": "Трава"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "aer": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150398_cm",
+        "meta": null,
+        "reg": "double_plant",
+        "name_en": "Double Plant",
+        "name_ru": "Double Plant"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "aer": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150392_bi",
+        "meta": null,
+        "reg": "waterlily",
+        "name_en": "Lily Pad",
+        "name_ru": "Кувшинка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "aqua": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150330_I",
+        "meta": null,
+        "reg": "deadbush",
+        "name_en": "Dead Bush",
+        "name_ru": "Мертвый куст"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150395_bd",
+        "meta": null,
+        "reg": "vine",
+        "name_en": "Vines",
+        "name_ru": "Лоза"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151014_N",
+        "meta": null,
+        "reg": "wheat_seeds",
+        "name_en": "Wheat Seeds",
+        "name_ru": "Wheat Seeds"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151081_bc",
+        "meta": null,
+        "reg": "melon_seeds",
+        "name_en": "Melon Seeds",
+        "name_ru": "Семена арбуза"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151080_bb",
+        "meta": null,
+        "reg": "pumpkin_seeds",
+        "name_en": "Pumpkin Seeds",
+        "name_ru": "Семена тыквы"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151127_ba",
+        "meta": null,
+        "reg": "melon",
+        "name_en": "Melon",
+        "name_ru": "Арбуз"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150328_O",
+        "meta": null,
+        "reg": "red_flower",
+        "name_en": "Red Flower",
+        "name_ru": "Red Flower"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "victus": 1,
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150327_N",
+        "meta": null,
+        "reg": "yellow_flower",
+        "name_en": "Yellow Flower",
+        "name_ru": "Yellow Flower"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "victus": 1,
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150434_aF",
+        "meta": null,
+        "reg": "cactus",
+        "name_en": "Cactus",
+        "name_ru": "Кактус"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 3,
+        "aqua": 1,
+        "perditio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150338_P",
+        "meta": null,
+        "reg": "brown_mushroom",
+        "name_en": "Brown Mushroom",
+        "name_ru": "Brown Mushroom"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "tenebrae": 1,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150337_Q",
+        "meta": null,
+        "reg": "red_mushroom",
+        "name_en": "Red Mushroom",
+        "name_ru": "Red Mushroom"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "tenebrae": 1,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150420_aW",
+        "meta": null,
+        "reg": "brown_mushroom_block",
+        "name_en": "Brown Mushroom Block",
+        "name_ru": "Brown Mushroom Block"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "tenebrae": 1,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150419_aX",
+        "meta": null,
+        "reg": "red_mushroom_block",
+        "name_en": "Red Mushroom Block",
+        "name_ru": "Red Mushroom Block"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "tenebrae": 1,
+        "ignis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151120_aE",
+        "meta": null,
+        "reg": "reeds",
+        "name_en": "Sugar Canes",
+        "name_ru": "Сахарный тростник"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "aqua": 1,
+        "aer": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151015_O",
+        "meta": null,
+        "reg": "wheat",
+        "name_en": "Wheat",
+        "name_ru": "Пшеница"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 2,
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151034_e",
+        "meta": null,
+        "reg": "apple",
+        "name_en": "Apple",
+        "name_ru": "Яблоко"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 2,
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151172_bF",
+        "meta": null,
+        "reg": "carrot",
+        "name_en": "Carrot",
+        "name_ru": "Морковь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 1,
+        "fames": 1,
+        "sensus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151174_bG",
+        "meta": null,
+        "reg": "potato",
+        "name_en": "Potato",
+        "name_ru": "Картофель"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 1,
+        "fames": 1,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151168_bH",
+        "meta": null,
+        "reg": "baked_potato",
+        "name_en": "Baked Potato",
+        "name_ru": "Печёный картофель"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 1,
+        "fames": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151170_bI",
+        "meta": null,
+        "reg": "poisonous_potato",
+        "name_en": "Poisonous Potato",
+        "name_ru": "Ядовитый картофель"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 1,
+        "venenum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150423_aK",
+        "meta": null,
+        "reg": "pumpkin",
+        "name_en": "Pumpkin",
+        "name_ru": "Тыква"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "messis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151057_cb",
+        "meta": null,
+        "reg": "name_tag",
+        "name_en": "Name Tag",
+        "name_ru": "Бирка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 2,
+        "bestia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151138_bX",
+        "meta": null,
+        "reg": "iron_horse_armor",
+        "name_en": "Iron Horse Armor",
+        "name_ru": "Железная конская броня"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "tutamen": 2,
+        "bestia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151136_bY",
+        "meta": null,
+        "reg": "golden_horse_armor",
+        "name_en": "Golden Horse Armor",
+        "name_ru": "Golden Horse Armor"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "tutamen": 4,
+        "bestia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151125_bZ",
+        "meta": null,
+        "reg": "diamond_horse_armor",
+        "name_en": "Diamond Horse Armor",
+        "name_ru": "Алмазная конская броня"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "tutamen": 6,
+        "bestia": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150480_ab",
+        "meta": null,
+        "reg": "fire",
+        "name_en": "Fire",
+        "name_ru": "Огонь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150355_j",
+        "meta": null,
+        "reg": "water",
+        "name_en": "Water",
+        "name_ru": "Вода"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150353_l",
+        "meta": null,
+        "reg": "lava",
+        "name_en": "Lava",
+        "name_ru": "Лава"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 3,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150432_aD",
+        "meta": null,
+        "reg": "ice",
+        "name_en": "Ice",
+        "name_ru": "Лёд"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "gelum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150403_cj",
+        "meta": null,
+        "reg": "packed_ice",
+        "name_en": "Packed Ice",
+        "name_ru": "Плотный лёд"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "gelum": 3,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151126_ay",
+        "meta": null,
+        "reg": "snowball",
+        "name_en": "Snowball",
+        "name_ru": "Снежок"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "gelum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151106_aX",
+        "meta": null,
+        "reg": "cookie",
+        "name_en": "Cookie",
+        "name_ru": "Печенье"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151068_bn",
+        "meta": null,
+        "reg": "potion",
+        "name_en": "Potion",
+        "name_ru": "Зелье"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 1,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150478_aa",
+        "meta": null,
+        "reg": "torch",
+        "name_en": "Torch",
+        "name_ru": "Факел"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150321_G",
+        "meta": null,
+        "reg": "web",
+        "name_en": "Cobweb",
+        "name_ru": "Паутина"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vinculum": 2,
+        "pannus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151145_ak",
+        "meta": null,
+        "reg": "flint",
+        "name_en": "Flint",
+        "name_ru": "Кремень"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "instrumentum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151007_F",
+        "meta": null,
+        "reg": "string",
+        "name_en": "String",
+        "name_ru": "Нить"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "pannus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151123_aH",
+        "meta": null,
+        "reg": "slime_ball",
+        "name_en": "Slime Ball",
+        "name_ru": "Slime Ball"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151116_aA",
+        "meta": null,
+        "reg": "leather",
+        "name_en": "Leather",
+        "name_ru": "Кожа"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "pannus": 2,
+        "bestia": 1,
+        "tutamen": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151078_bh",
+        "meta": null,
+        "reg": "rotten_flesh",
+        "name_en": "Rotten Flesh",
+        "name_ru": "Гнилая плоть"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 1,
+        "corpus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151008_G",
+        "meta": null,
+        "reg": "feather",
+        "name_en": "Feather",
+        "name_ru": "Перо"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "volatus": 2,
+        "aer": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151103_aS",
+        "meta": null,
+        "reg": "bone",
+        "name_en": "Bone",
+        "name_ru": "Кость"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 2,
+        "corpus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151110_aK",
+        "meta": null,
+        "reg": "egg",
+        "name_en": "Egg",
+        "name_ru": "Яйцо"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 1,
+        "victus": 1,
+        "bestia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151070_bp",
+        "meta": null,
+        "reg": "spider_eye",
+        "name_en": "Spider Eye",
+        "name_ru": "Паучий глаз"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 2,
+        "bestia": 2,
+        "venenum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151016_H",
+        "meta": null,
+        "reg": "gunpowder",
+        "name_en": "Gunpowder",
+        "name_ru": "Порох"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4,
+        "perditio": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150325_L",
+        "meta": null,
+        "reg": "wool",
+        "name_en": "Wool",
+        "name_ru": "Шерсть"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "pannus": 4,
+        "fabrico": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151115_aP",
+        "meta": null,
+        "reg": "fish",
+        "name_en": "Fish",
+        "name_ru": "Fish"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 3,
+        "victus": 1,
+        "aqua": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151101_aQ",
+        "meta": null,
+        "reg": "cooked_fished",
+        "name_en": "Cooked Fished",
+        "name_ru": "Cooked Fished"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 1,
+        "corpus": 4,
+        "fames": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151076_bf",
+        "meta": null,
+        "reg": "chicken",
+        "name_en": "Chicken",
+        "name_ru": "Курица"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 3,
+        "victus": 2,
+        "bestia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151077_bg",
+        "meta": null,
+        "reg": "cooked_chicken",
+        "name_en": "Cooked Chicken",
+        "name_ru": "Жареная курица"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 1,
+        "corpus": 4,
+        "fames": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151147_al",
+        "meta": null,
+        "reg": "porkchop",
+        "name_en": "Porkchop",
+        "name_ru": "Porkchop"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 3,
+        "victus": 1,
+        "bestia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151157_am",
+        "meta": null,
+        "reg": "cooked_porkchop",
+        "name_en": "Cooked Porkchop",
+        "name_ru": "Жареная свинина"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 1,
+        "corpus": 3,
+        "fames": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151082_bd",
+        "meta": null,
+        "reg": "beef",
+        "name_en": "Beef",
+        "name_ru": "Beef"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 4,
+        "victus": 2,
+        "bestia": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151083_be",
+        "meta": null,
+        "reg": "cooked_beef",
+        "name_en": "Cooked Beef",
+        "name_ru": "Cooked Beef"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 1,
+        "corpus": 4,
+        "fames": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151141_av",
+        "meta": null,
+        "reg": "saddle",
+        "name_en": "Saddle",
+        "name_ru": "Седло"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "pannus": 3,
+        "iter": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151079_bi",
+        "meta": null,
+        "reg": "ender_pearl",
+        "name_en": "Ender Pearl",
+        "name_ru": "Жемчуг Эндера"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "praecantatio": 2,
+        "iter": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151144_bL",
+        "meta": 0,
+        "reg": "skull",
+        "name_en": "Skull",
+        "name_ru": "Skull"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 4,
+        "spiritus": 4,
+        "exanimis": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151144_bL",
+        "meta": 2,
+        "reg": "skull",
+        "name_en": "Skull",
+        "name_ru": "Skull"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 4,
+        "spiritus": 4,
+        "corpus": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151144_bL",
+        "meta": 3,
+        "reg": "skull",
+        "name_en": "Skull",
+        "name_ru": "Skull"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 4,
+        "spiritus": 4,
+        "humanus": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151144_bL",
+        "meta": 4,
+        "reg": "skull",
+        "name_en": "Skull",
+        "name_ru": "Skull"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "mortuus": 4,
+        "spiritus": 4,
+        "perditio": 2,
+        "ignis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151086_cn",
+        "meta": null,
+        "reg": "record_11",
+        "name_en": "Record 11",
+        "name_ru": "Record 11"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151096_cd",
+        "meta": null,
+        "reg": "record_13",
+        "name_en": "Record 13",
+        "name_ru": "Record 13"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "aqua": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151093_ce",
+        "meta": null,
+        "reg": "record_cat",
+        "name_en": "Record Cat",
+        "name_ru": "Record Cat"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "bestia": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151091_cg",
+        "meta": null,
+        "reg": "record_chirp",
+        "name_en": "Record Chirp",
+        "name_ru": "Record Chirp"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "terra": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151092_ch",
+        "meta": null,
+        "reg": "record_far",
+        "name_en": "Record Far",
+        "name_ru": "Record Far"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "alienis": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151089_ci",
+        "meta": null,
+        "reg": "record_mall",
+        "name_en": "Record Mall",
+        "name_ru": "Record Mall"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "humanus": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151090_cj",
+        "meta": null,
+        "reg": "record_mellohi",
+        "name_en": "Record Mellohi",
+        "name_ru": "Record Mellohi"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "fabrico": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151087_ck",
+        "meta": null,
+        "reg": "record_stal",
+        "name_en": "Record Stal",
+        "name_ru": "Record Stal"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "tenebrae": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151088_cl",
+        "meta": null,
+        "reg": "record_strad",
+        "name_en": "Record Strad",
+        "name_ru": "Record Strad"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "machina": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151085_cm",
+        "meta": null,
+        "reg": "record_ward",
+        "name_en": "Record Ward",
+        "name_ru": "Record Ward"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "praecantatio": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151094_cf",
+        "meta": null,
+        "reg": "record_blocks",
+        "name_en": "Record Blocks",
+        "name_ru": "Record Blocks"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "instrumentum": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151084_co",
+        "meta": null,
+        "reg": "record_wait",
+        "name_en": "Record Wait",
+        "name_ru": "Record Wait"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 4,
+        "aer": 4,
+        "vinculum": 4,
+        "lucrum": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151020_U",
+        "meta": null,
+        "reg": "chainmail_helmet",
+        "name_en": "Chainmail Helmet",
+        "name_ru": "Chainmail Helmet"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151023_V",
+        "meta": null,
+        "reg": "chainmail_chestplate",
+        "name_en": "Chainmail Chestplate",
+        "name_ru": "Chainmail Chestplate"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 12
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151022_W",
+        "meta": null,
+        "reg": "chainmail_leggings",
+        "name_en": "Chainmail Leggings",
+        "name_ru": "Chainmail Leggings"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 11
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151029_X",
+        "meta": null,
+        "reg": "chainmail_boots",
+        "name_en": "Chainmail Boots",
+        "name_ru": "Chainmail Boots"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 7
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150380_bt",
+        "meta": null,
+        "reg": "dragon_egg",
+        "name_en": "Dragon Egg",
+        "name_ru": "Яйцо дракона"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 8,
+        "bestia": 8,
+        "praecantatio": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150427_aO",
+        "meta": null,
+        "reg": "portal",
+        "name_en": "Portal",
+        "name_ru": "Портал"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4,
+        "iter": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150384_bq",
+        "meta": null,
+        "reg": "end_portal",
+        "name_en": "End Portal",
+        "name_ru": "Портал в Энд"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "iter": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150378_br",
+        "meta": null,
+        "reg": "end_portal_frame",
+        "name_en": "End Portal Frame",
+        "name_ru": "End Portal Frame"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "machina": 4,
+        "iter": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150474_ac",
+        "meta": null,
+        "reg": "mob_spawner",
+        "name_en": "Mob Spawner",
+        "name_ru": "Mob Spawner"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 4,
+        "iter": 4,
+        "exanimis": 4,
+        "praecantatio": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151133_ar",
+        "meta": null,
+        "reg": "bucket",
+        "name_en": "Bucket",
+        "name_ru": "Ведро"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 8,
+        "vacuos": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151131_as",
+        "meta": null,
+        "reg": "water_bucket",
+        "name_en": "Water Bucket",
+        "name_ru": "Ведро воды"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151129_at",
+        "meta": null,
+        "reg": "lava_bucket",
+        "name_en": "Lava Bucket",
+        "name_ru": "Ведро лавы"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ignis": 4,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151117_aB",
+        "meta": null,
+        "reg": "milk_bucket",
+        "name_en": "Milk Bucket",
+        "name_ru": "Milk Bucket"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 2,
+        "sano": 2,
+        "aqua": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Items.field_151105_aU",
+        "meta": null,
+        "reg": "cake",
+        "name_en": "Cake",
+        "name_ru": "Торт"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aqua": 4,
+        "fames": 4,
+        "victus": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150462_ai",
+        "meta": null,
+        "reg": "crafting_table",
+        "name_en": "Crafting Table",
+        "name_ru": "Верстак"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150467_bQ",
+        "meta": null,
+        "reg": "anvil",
+        "name_en": "Anvil",
+        "name_ru": "Наковальня"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 64,
+        "fabrico": 2,
+        "instrumentum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Blocks.field_150479_bC",
+        "meta": null,
+        "reg": "tripwire_hook",
+        "name_en": "Tripwire Hook",
+        "name_ru": "Крюк"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 1,
+        "machina": 1,
+        "vinculum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTable",
+        "meta": 15,
+        "name_en": "Arcane Worktable",
+        "name_ru": "Магический верстак"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTable",
+        "meta": 2
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 16,
+        "name_en": "Native Iron Cluster",
+        "name_ru": "Железорудный кластер"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 6,
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 31,
+        "name_en": "Native Gold Cluster",
+        "name_ru": "Золоторудный кластер"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 4,
+        "terra": 1,
+        "lucrum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 21,
+        "name_en": "Native Cinnabar Cluster",
+        "name_ru": "Киноварный кластер"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "ordo": 1,
+        "metallum": 4,
+        "terra": 1,
+        "permutatio": 4,
+        "venenum": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 5,
+        "name_en": "Quicksilver Drop",
+        "name_ru": "Капля ртути"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNugget",
+        "meta": 6,
+        "name_en": "Thaumium Nugget",
+        "name_ru": "Самородок таум-металла"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 0,
+        "name_en": "Cinnabar Ore",
+        "name_ru": "Киноварь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "metallum": 2,
+        "permutatio": 2,
+        "venenum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 7,
+        "name_en": "Amber Bearing Stone",
+        "name_ru": "Янтарная руда"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "vinculum": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 1,
+        "name_en": "Air Infused Stone",
+        "name_ru": "Грозовая руда"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "aer": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 2,
+        "name_en": "Fire Infused Stone",
+        "name_ru": "Огненная руда"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "ignis": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 3,
+        "name_en": "Water Infused Stone",
+        "name_ru": "Ледяная руда"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "aqua": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 4,
+        "name_en": "Earth Infused Stone",
+        "name_ru": "Руда земляного кристалла"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 5,
+        "name_en": "Order Infused Stone",
+        "name_ru": "Руда кристалла порядка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "ordo": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomOre",
+        "meta": 6,
+        "name_en": "Entropy Infused Stone",
+        "name_ru": "Энтропийная руда"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "perditio": 3,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaint",
+        "meta": 0,
+        "name_en": "Crusted Taint",
+        "name_ru": "Заражённый камень"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 1,
+        "vitium": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaint",
+        "meta": 1,
+        "name_en": "Tainted Soil",
+        "name_ru": "Заражённая земля"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "vitium": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 0,
+        "name_en": "Fibrous Taint",
+        "name_ru": "Заражённое волокно"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "victus": 1,
+        "vitium": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 1,
+        "name_en": "Tainted Grass",
+        "name_ru": "Заражённая трава"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "vitium": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 2,
+        "name_en": "Tainted Plant",
+        "name_ru": "Заражённое растение"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1,
+        "vitium": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 3,
+        "name_en": "Spore Stalk",
+        "name_ru": "Спороцвет"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "herba": 1,
+        "vitium": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockTaintFibres",
+        "meta": 4,
+        "name_en": "Mature Spore Stalk",
+        "name_ru": "Крупный спороцвет"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "herba": 1,
+        "vitium": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 4,
+        "tenebrae": 2,
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMagicalLog",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 3,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMagicalLog",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "arbor": 3,
+        "praecantatio": 1,
+        "ordo": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMagicalLeaves",
+        "meta": 0
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMagicalLeaves",
+        "meta": 1
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 0,
+        "name_en": "Greatwood Sapling",
+        "name_ru": "Саженец великого дерева"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "arbor": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 1,
+        "name_en": "Silverwood Sapling",
+        "name_ru": "Саженец серебрянного дерева"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "arbor": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 2,
+        "name_en": "Shimmerleaf",
+        "name_ru": "Сребролист"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "permutatio": 2,
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 3,
+        "name_en": "Cinderpearl",
+        "name_ru": "Огненный жемчуг"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "ignis": 2,
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCustomPlant",
+        "meta": 5,
+        "name_en": "Vishroom",
+        "name_ru": "Висомор"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "venenum": 1,
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": 6,
+        "name_en": "Arcane Stone Block",
+        "name_ru": "Магический камень"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": 7,
+        "name_en": "Arcane Stone Bricks",
+        "name_ru": "Магический кирпич"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 3,
+        "name_en": "Quicksilver",
+        "name_ru": "Ртуть"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "venenum": 1,
+        "permutatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemZombieBrain",
+        "meta": null,
+        "name_en": "Zombie Brain",
+        "name_ru": "Мозг зомби"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "corpus": 2,
+        "cognitio": 4,
+        "exanimis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 6,
+        "name_en": "Amber",
+        "name_ru": "Янтарь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vinculum": 2,
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 9,
+        "name_en": "Knowledge Fragment",
+        "name_ru": "Фрагмент знаний"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 11,
+        "name_en": "Tainted Goo",
+        "name_ru": "Заражённая слизь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "limus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 12,
+        "name_en": "Taint Tendril",
+        "name_ru": "Заражённое щупальце"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "lucrum": 1,
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 18,
+        "name_en": "Gold Coin",
+        "name_ru": "Золотая монета"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lucrum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLootbag",
+        "meta": 0,
+        "name_en": "Common Treasure",
+        "name_ru": "Обычное сокровище"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lucrum": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLootbag",
+        "meta": 1,
+        "name_en": "Uncommon Treasure",
+        "name_ru": "Необычное сокровище"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lucrum": 16
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLootbag",
+        "meta": 2,
+        "name_en": "Rare Treasure",
+        "name_ru": "Редкое сокровище"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lucrum": 32
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNuggetBeef",
+        "meta": null,
+        "name_en": "Beef Nugget",
+        "name_ru": "Кусочек говядины"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNuggetChicken",
+        "meta": null,
+        "name_en": "Chicken Nugget",
+        "name_ru": "Кусочек курятины"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNuggetPork",
+        "meta": null,
+        "name_en": "Pork Nugget",
+        "name_ru": "Кусочек свинины"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemNuggetFish",
+        "meta": null,
+        "name_en": "Fish Nugget",
+        "name_ru": "Кусочек рыбки"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fames": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 0,
+        "name_en": "Air Shard",
+        "name_ru": "Грозовой кристалл"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "aer": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 1,
+        "name_en": "Fire Shard",
+        "name_ru": "Огненный кристалл"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "ignis": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 2,
+        "name_en": "Water Shard",
+        "name_ru": "Ледяной кристалл"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "aqua": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 3,
+        "name_en": "Earth Shard",
+        "name_ru": "Земляной кристалл"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "terra": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 4,
+        "name_en": "Order Shard",
+        "name_ru": "Кристалл порядка"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "ordo": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemShard",
+        "meta": 5,
+        "name_en": "Entropy Shard",
+        "name_ru": "Энтропийный кристалл"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 1,
+        "perditio": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemResource",
+        "meta": 14,
+        "name_en": "Salis Mundus",
+        "name_ru": "Salis Mundus"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockMetalDevice",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "fabrico": 4,
+        "praecantatio": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCandle",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 2,
+        "corpus": 1,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockAiry",
+        "meta": 2,
+        "name_en": "Glimmer of Light",
+        "name_ru": "Мерцающий эфир"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockAiry",
+        "meta": 3,
+        "name_en": "Glimmer of Light",
+        "name_ru": "Мерцающий эфир"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemThaumonomicon",
+        "meta": null,
+        "name_en": "Thaumonomicon",
+        "name_ru": "Таумономикон"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 2,
+        "cognitio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockAlchemyFurnace",
+        "meta": null,
+        "name_en": "Advanced Alchemical Furnace",
+        "name_ru": "Улучшенная алхимическая печь"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 8,
+        "aqua": 8,
+        "fabrico": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEssence",
+        "meta": 0,
+        "name_en": "Glass Phial",
+        "name_ru": "Стеклянный пузырёк"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemWispEssence",
+        "meta": 0,
+        "name_en": "Ethereal Essence",
+        "name_ru": "Эфирная эссенция"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "auram": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemBaubleBlanks",
+        "meta": 3,
+        "name_en": "Apprentices Ring of %TYPE",
+        "name_ru": "Кольцо подмастерья - %TYPE"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 5
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemFocusPech",
+        "meta": null,
+        "name_en": "Wand Focus: Pech's Curse",
+        "name_ru": "Набалдашник: Гномье проклятие"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "praecantatio": 5,
+        "venenum": 5,
+        "perditio": 5,
+        "alienis": 5,
+        "telum": 5
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemChestCultistPlate",
+        "meta": null,
+        "name_en": "Crimson Cult Chestplate",
+        "name_ru": "Кираса культиста"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemChestCultistRobe",
+        "meta": null,
+        "name_en": "Crimson Cult Robe",
+        "name_ru": "Мантия культиста"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "pannus": 2,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemChestCultistLeaderPlate",
+        "meta": null,
+        "name_en": "Crimson Praetor Chestplate",
+        "name_ru": "Кираса Претора культистов"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLegsCultistPlate",
+        "meta": null,
+        "name_en": "Crimson Cult Greaves",
+        "name_ru": "Поножи культиста"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLegsCultistLeaderPlate",
+        "meta": null,
+        "name_en": "Crimson Praetor Greaves",
+        "name_ru": "Поножи Претора культистов"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemLegsCultistRobe",
+        "meta": null,
+        "name_en": "Crimson Cult Leggings",
+        "name_ru": "Шаровары культиста"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "pannus": 2,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemHelmetCultistPlate",
+        "meta": null,
+        "name_en": "Crimson Cult Helm",
+        "name_ru": "Шлем культиста"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemHelmetCultistLeaderPlate",
+        "meta": null,
+        "name_en": "Crimson Praetor Helm",
+        "name_ru": "Шлем Претора культистов"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 5,
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemHelmetCultistRobe",
+        "meta": null,
+        "name_en": "Crimson Cult Hood",
+        "name_ru": "Капюшон культиста"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 3,
+        "pannus": 2,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemBootsCultist",
+        "meta": null,
+        "name_en": "Crimson Cult Boots",
+        "name_ru": "Ботинки культиста"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 4,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockWoodenDevice",
+        "meta": 8,
+        "name_en": "Crimson Cult Banner",
+        "name_ru": "Вымпел"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 1,
+        "arbor": 2,
+        "pannus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEldritchObject",
+        "meta": 0,
+        "name_en": "Eldritch Eye",
+        "name_ru": "Глаз Древних"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 5,
+        "auram": 3,
+        "praecantatio": 3,
+        "sensus": 3,
+        "spiritus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEldritchObject",
+        "meta": 1,
+        "name_en": "Crimson Rites",
+        "name_ru": "Багровые ритуалы"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 5,
+        "praecantatio": 3,
+        "alienis": 3,
+        "spiritus": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEldritchObject",
+        "meta": 2,
+        "name_en": "Runed Tablet",
+        "name_ru": "Рунная скрижаль"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vinculum": 4,
+        "cognitio": 4,
+        "machina": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigItems.itemEldritchObject",
+        "meta": 3,
+        "name_en": "Primordial Pearl",
+        "name_ru": "Сингулярная жемчужина"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aer": 16,
+        "terra": 16,
+        "ignis": 16,
+        "aqua": 16,
+        "ordo": 16,
+        "perditio": 16
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": null
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 8,
+        "alienis": 8,
+        "sensus": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritchPortal",
+        "meta": null,
+        "name_en": "Eldritch Portal",
+        "name_ru": "Древний портал"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 8,
+        "alienis": 8,
+        "iter": 8
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": 3,
+        "name_en": "Eldritch Capstone",
+        "name_ru": "Пьедестал древних"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vacuos": 4,
+        "alienis": 4
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": 4,
+        "name_en": "Glowing Crusted Stone",
+        "name_ru": "Светящийся заросший камень"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "lux": 1,
+        "terra": 1,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": 5,
+        "name_en": "Glyphed Stone",
+        "name_ru": "Исписанный камень"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 2,
+        "terra": 1,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockEldritch",
+        "meta": 6
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 2,
+        "machina": 2,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": 11,
+        "name_en": "Ancient Stone",
+        "name_ru": "Древний камень"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ConfigBlocks.blockCosmeticSolid",
+        "meta": 12,
+        "name_en": "Ancient Rock",
+        "name_ru": "Древняя скала"
+      },
+      "mod": "Thaumcraft",
+      "aspects": {
+        "terra": 1,
+        "alienis": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "item2.func_77973_b(",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "vitreus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "item2.func_77973_b(",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "limus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "item2.func_77973_b(",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "alienis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.propolis",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "perditio": 1,
+        "permutatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.propolis",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "aer": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.propolis",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "aqua": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.propolis",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "ignis": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.propolis",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "terra": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.propolis",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "ordo": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.propolis",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "perditio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.pollen",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "ordo": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.wax",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "praecantatio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.wax",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "spiritus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Config.wax",
+        "meta": null
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "cognitio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "victus": 6
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "mortuus": 6
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "tutamen": 6
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(ItemStack)item2"
+      },
+      "mod": "MagicBees",
+      "aspects": {
+        "vacuos": 6
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "raw",
+        "ref": "(String)\"oreQuartz\""
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitreus": 3,
+        "infernus": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 0,
+        "name_en": "Wrath Shard",
+        "name_ru": "Осколок гнева"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "ira": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 1,
+        "name_en": "Envy Shard",
+        "name_ru": "Осколок зависти"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "invidia": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 2,
+        "name_en": "Taint Shard",
+        "name_ru": "Осколок заразы"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 3,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 3,
+        "name_en": "Pride Shard",
+        "name_ru": "Осколок гордости"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "superbia": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 4,
+        "name_en": "Lust Shard",
+        "name_ru": "Осколок страсти"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "luxuria": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 4,
+        "name_en": "Lust Shard",
+        "name_ru": "Осколок страсти"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vacuos": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.gluttonyShard",
+        "meta": null,
+        "name_en": "Gluttony Shard",
+        "name_ru": "Осколок прожорливости"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "gula": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 5,
+        "name_en": "Sloth Shard",
+        "name_ru": "Осколок лени"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "desidia": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.deadlyShards",
+        "meta": 6,
+        "name_en": "Greed Shard",
+        "name_ru": "Осколок жадности"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "infernus": 1,
+        "lucrum": 2,
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.resource",
+        "meta": 0,
+        "name_en": "Emerald Fragment",
+        "name_ru": "Изумрудный фрагмент"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitreus": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.resource",
+        "meta": 1,
+        "name_en": "Shadow Ink",
+        "name_ru": "Теневые чернила"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "tenebrae": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.blackFlower",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "herba": 1,
+        "victus": 1,
+        "sensus": 1,
+        "tenebrae": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.ridingCrop",
+        "meta": null,
+        "name_en": "Riding Crop",
+        "name_ru": "Хлыст"
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "arbor": 2,
+        "pannus": 2,
+        "bestia": 1,
+        "luxuria": 1,
+        "telum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.taintFruit",
+        "meta": null,
+        "name_en": "Tainted Fruit",
+        "name_ru": ""
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 2,
+        "venenum": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenItems.taintCoal",
+        "meta": null,
+        "name_en": "Hexcoal",
+        "name_ru": ""
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 2,
+        "perditio": 2
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.taintLeaves",
+        "meta": null,
+        "name_en": "Tainted Leaves",
+        "name_ru": ""
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 1,
+        "herba": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.taintLog",
+        "meta": null,
+        "name_en": "Tainted Log",
+        "name_ru": ""
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "vitium": 1,
+        "arbor": 3
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.taintPlanks",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "arbor": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "ForbiddenBlocks.taintStone",
+        "meta": 1
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "terra": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "Compat.getItem(\"Botania\"",
+        "meta": null
+      },
+      "mod": "ForbiddenMagic",
+      "aspects": {
+        "herba": 4,
+        "praecantatio": 1
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.skull_sword",
+        "meta": null
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 1,
+        "ignis": 2,
+        "vitreus": 16,
+        "mortuus": 4
+      },
+      "complex": true
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.resource",
+        "meta": 1,
+        "name_en": "Shadow Ink",
+        "name_ru": "Теневые чернила"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 1,
+        "potentia": 8,
+        "vitreus": 32
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.resource",
+        "meta": 4,
+        "name_en": "Elementium Nugget",
+        "name_ru": "Элементиевый самородок"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 2,
+        "metallum": 12,
+        "potentia": 12
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.resource",
+        "meta": 5
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 5,
+        "permutatio": 12
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.resource",
+        "meta": 6
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 16,
+        "alienis": 64
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 0,
+        "name_en": "Iron Singularity",
+        "name_ru": "Железная сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 1,
+        "name_en": "Golden Singularity",
+        "name_ru": "Золотая сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100,
+        "lucrum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 2,
+        "name_en": "Lapis Singularity",
+        "name_ru": "Лазуритовая сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "sensus": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 3,
+        "name_en": "Redstone Singularity",
+        "name_ru": "Редстоуновая сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "machina": 100,
+        "potentia": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 4,
+        "name_en": "Nether Quartz Singularity",
+        "name_ru": "Кварцевая сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "vitreus": 100,
+        "ordo": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 5,
+        "name_en": "Copper Singularity",
+        "name_ru": "Медная сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 6,
+        "name_en": "Tin Singularity",
+        "name_ru": "Оловянная сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 7,
+        "name_en": "Leaden Singularity",
+        "name_ru": "Свинцовая сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.singularity",
+        "meta": 8,
+        "name_en": "Silver Singularity",
+        "name_ru": "Серебряная сингулярность"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 3,
+        "metallum": 100
+      },
+      "complex": false
+    },
+    {
+      "subject": {
+        "type": "item",
+        "ref": "LudicrousItems.infinity_sword",
+        "meta": null,
+        "name_en": "Sword of the Cosmos",
+        "name_ru": "Меч бесконечности"
+      },
+      "mod": "Avaritia",
+      "aspects": {
+        "terminus": 60,
+        "telum": 999,
+        "mortuus": 999,
+        "alienis": 100
+      },
+      "complex": false
+    }
+  ],
+  "entityTags": [
+    {
+      "entity": "Zombie",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 2,
+        "humanus": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Giant",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 4,
+        "humanus": 3,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "Skeleton",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 3,
+        "humanus": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Skeleton",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 4,
+        "humanus": 1,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Creeper",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 2,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Creeper",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "herba": 3,
+        "ignis": 3,
+        "potentia": 3
+      }
+    },
+    {
+      "entity": "EntityHorse",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 4,
+        "terra": 1,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Pig",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "XPOrb",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "cognitio": 5
+      }
+    },
+    {
+      "entity": "Sheep",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "Cow",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "MushroomCow",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "herba": 1,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "SnowMan",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "gelum": 3,
+        "aqua": 1
+      }
+    },
+    {
+      "entity": "Ozelot",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "perditio": 3
+      }
+    },
+    {
+      "entity": "Chicken",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "volatus": 2,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Squid",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "aqua": 2
+      }
+    },
+    {
+      "entity": "Wolf",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "Bat",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "volatus": 1,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Boat",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 2,
+        "aqua": 2
+      }
+    },
+    {
+      "entity": "Spider",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 3,
+        "perditio": 2
+      }
+    },
+    {
+      "entity": "Slime",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 2,
+        "aqua": 2
+      }
+    },
+    {
+      "entity": "Ghast",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 3,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "PigZombie",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 4,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Enderman",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "iter": 2,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "CaveSpider",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "venenum": 2,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Silverfish",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Blaze",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "ignis": 1
+      }
+    },
+    {
+      "entity": "LavaSlime",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 3,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "EnderDragon",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 20,
+        "bestia": 20,
+        "perditio": 20
+      }
+    },
+    {
+      "entity": "WitherBoss",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 20,
+        "perditio": 20,
+        "ignis": 15
+      }
+    },
+    {
+      "entity": "Witch",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 3,
+        "praecantatio": 2,
+        "ignis": 1
+      }
+    },
+    {
+      "entity": "Villager",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 3,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "VillagerGolem",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "metallum": 4,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "MinecartRideable",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "MinecartChest",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "vacuos": 1
+      }
+    },
+    {
+      "entity": "MinecartFurnace",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "ignis": 1
+      }
+    },
+    {
+      "entity": "MinecartTNT",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "ignis": 1
+      }
+    },
+    {
+      "entity": "MinecartHopper",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "permutatio": 1
+      }
+    },
+    {
+      "entity": "MinecartSpawner",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "machina": 3,
+        "aer": 1,
+        "praecantatio": 1
+      }
+    },
+    {
+      "entity": "EnderCrystal",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 3,
+        "praecantatio": 3,
+        "sano": 3
+      }
+    },
+    {
+      "entity": "ItemFrame",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 3,
+        "pannus": 1
+      }
+    },
+    {
+      "entity": "Painting",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "sensus": 5,
+        "pannus": 3
+      }
+    },
+    {
+      "entity": "Thaumcraft.PrimalOrb",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aer": 5,
+        "perditio": 10,
+        "praecantatio": 10,
+        "potentia": 10
+      }
+    },
+    {
+      "entity": "Thaumcraft.Firebat",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "bestia": 2,
+        "volatus": 1,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.Pech",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 2,
+        "praecantatio": 2,
+        "permutatio": 2,
+        "lucrum": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.Pech",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 2,
+        "praecantatio": 2,
+        "permutatio": 2,
+        "telum": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.Pech",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "humanus": 2,
+        "praecantatio": 4,
+        "permutatio": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.ThaumSlime",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "limus": 2,
+        "praecantatio": 1,
+        "aqua": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.BrainyZombie",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 3,
+        "humanus": 1,
+        "cognitio": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.GiantBrainyZombie",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "exanimis": 4,
+        "humanus": 2,
+        "cognitio": 1,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.Taintacle",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "aqua": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintacleTiny",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 1,
+        "aqua": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintSpider",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 1,
+        "terra": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintSpore",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintSwarmer",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintSwarm",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "aer": 3
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedPig",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedSheep",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "terra": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedCow",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "terra": 3
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedChicken",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "volatus": 2,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedVillager",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 3,
+        "aer": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.TaintedCreeper",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.MindSpider",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "vitium": 2,
+        "ignis": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.EldritchGuardian",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 4,
+        "mortuus": 2,
+        "exanimis": 4
+      }
+    },
+    {
+      "entity": "Thaumcraft.EldritchOrb",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 2,
+        "mortuus": 2
+      }
+    },
+    {
+      "entity": "Thaumcraft.CultistKnight",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 1,
+        "humanus": 2,
+        "perditio": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.CultistCleric",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "alienis": 1,
+        "humanus": 2,
+        "perditio": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.Wisp",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "tag": 2,
+        "praecantatio": 1,
+        "aer": 1
+      }
+    },
+    {
+      "entity": "Thaumcraft.Golem",
+      "mod": "Thaumcraft",
+      "aspects": {
+        "aer": 2,
+        "terra": 2,
+        "praecantatio": 2
+      }
+    }
+  ],
+  "aspectGivers": {
+    "arbor": [
+      "logWood",
+      "plankWood",
+      "slabWood",
+      "stairWood",
+      "stickWood",
+      "treeSapling"
+    ],
+    "herba": [
+      "treeLeaves",
+      "treeSapling"
+    ],
+    "lucrum": [
+      "dustGold",
+      "dustSilver",
+      "gemDiamond",
+      "gemEmerald",
+      "ingotSilver",
+      "oreDiamond",
+      "oreEmerald",
+      "oreGold",
+      "oreSilver"
+    ],
+    "lux": [
+      "dustGlowstone",
+      "glowstone"
+    ],
+    "machina": [
+      "dustRedstone",
+      "oreRedstone"
+    ],
+    "metallum": [
+      "dustCopper",
+      "dustGold",
+      "dustIron",
+      "dustLead",
+      "dustSilver",
+      "dustTin",
+      "ingotCopper",
+      "ingotLead",
+      "ingotSilver",
+      "ingotTin",
+      "nuggetCopper",
+      "nuggetIron",
+      "nuggetLead",
+      "nuggetSilver",
+      "nuggetTin",
+      "oreCopper",
+      "oreGold",
+      "oreIron",
+      "oreLead",
+      "oreSilver",
+      "oreTin"
+    ],
+    "ordo": [
+      "dustLead",
+      "ingotLead",
+      "oreLead"
+    ],
+    "perditio": [
+      "cobblestone",
+      "dustCopper",
+      "dustGold",
+      "dustIron",
+      "dustLead",
+      "dustSilver",
+      "dustTin",
+      "oreLead",
+      "oreSilver",
+      "oreTin"
+    ],
+    "permutatio": [
+      "dustCopper",
+      "ingotCopper",
+      "oreCopper"
+    ],
+    "potentia": [
+      "dustRedstone",
+      "oreRedstone"
+    ],
+    "sensus": [
+      "dustGlowstone",
+      "glowstone",
+      "oreLapis"
+    ],
+    "terra": [
+      "cobblestone",
+      "oreCopper",
+      "oreDiamond",
+      "oreEmerald",
+      "oreGold",
+      "oreIron",
+      "oreLapis",
+      "oreQuartz",
+      "oreRedstone",
+      "stone"
+    ],
+    "vitreus": [
+      "dustTin",
+      "gemDiamond",
+      "gemEmerald",
+      "ingotTin",
+      "oreDiamond",
+      "oreEmerald",
+      "oreQuartz",
+      "oreTin"
+    ]
+  }
+}

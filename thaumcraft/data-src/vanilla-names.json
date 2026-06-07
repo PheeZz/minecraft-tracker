@@ -1,0 +1,1721 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 342,
+    "source": "MC 1.7.10 client.jar net/minecraft/init/{Items,Blocks} (SRG) + vanilla en/ru lang",
+    "notes": "field = SRG field name as used in decompiled mod code (Items.field_xxx / Blocks.field_xxx). reg = vanilla registry id. names fall back to title-cased reg when the lang key differs from the registry id."
+  },
+  "fields": {
+    "field_151037_a": {
+      "reg": "iron_shovel",
+      "name_en": "Iron Shovel",
+      "name_ru": "Железная лопата"
+    },
+    "field_151035_b": {
+      "reg": "iron_pickaxe",
+      "name_en": "Iron Pickaxe",
+      "name_ru": "Железная кирка"
+    },
+    "field_151036_c": {
+      "reg": "iron_axe",
+      "name_en": "Iron Axe",
+      "name_ru": "Железный топор"
+    },
+    "field_151033_d": {
+      "reg": "flint_and_steel",
+      "name_en": "Flint And Steel",
+      "name_ru": "Flint And Steel"
+    },
+    "field_151034_e": {
+      "reg": "apple",
+      "name_en": "Apple",
+      "name_ru": "Яблоко"
+    },
+    "field_151031_f": {
+      "reg": "bow",
+      "name_en": "Bow",
+      "name_ru": "Лук"
+    },
+    "field_151032_g": {
+      "reg": "arrow",
+      "name_en": "Arrow",
+      "name_ru": "Стрела"
+    },
+    "field_151044_h": {
+      "reg": "coal",
+      "name_en": "Coal",
+      "name_ru": "Уголь"
+    },
+    "field_151045_i": {
+      "reg": "diamond",
+      "name_en": "Diamond",
+      "name_ru": "Алмаз"
+    },
+    "field_151042_j": {
+      "reg": "iron_ingot",
+      "name_en": "Iron Ingot",
+      "name_ru": "Железный слиток"
+    },
+    "field_151043_k": {
+      "reg": "gold_ingot",
+      "name_en": "Gold Ingot",
+      "name_ru": "Золотой слиток"
+    },
+    "field_151040_l": {
+      "reg": "iron_sword",
+      "name_en": "Iron Sword",
+      "name_ru": "Железный меч"
+    },
+    "field_151041_m": {
+      "reg": "wooden_sword",
+      "name_en": "Wooden Sword",
+      "name_ru": "Деревянный меч"
+    },
+    "field_151038_n": {
+      "reg": "wooden_shovel",
+      "name_en": "Wooden Shovel",
+      "name_ru": "Деревянная лопата"
+    },
+    "field_151039_o": {
+      "reg": "wooden_pickaxe",
+      "name_en": "Wooden Pickaxe",
+      "name_ru": "Деревянная кирка"
+    },
+    "field_151053_p": {
+      "reg": "wooden_axe",
+      "name_en": "Wooden Axe",
+      "name_ru": "Деревянный топор"
+    },
+    "field_151052_q": {
+      "reg": "stone_sword",
+      "name_en": "Stone Sword",
+      "name_ru": "Каменный меч"
+    },
+    "field_151051_r": {
+      "reg": "stone_shovel",
+      "name_en": "Stone Shovel",
+      "name_ru": "Каменная лопата"
+    },
+    "field_151050_s": {
+      "reg": "stone_pickaxe",
+      "name_en": "Stone Pickaxe",
+      "name_ru": "Каменная кирка"
+    },
+    "field_151049_t": {
+      "reg": "stone_axe",
+      "name_en": "Stone Axe",
+      "name_ru": "Каменный топор"
+    },
+    "field_151048_u": {
+      "reg": "diamond_sword",
+      "name_en": "Diamond Sword",
+      "name_ru": "Алмазный меч"
+    },
+    "field_151047_v": {
+      "reg": "diamond_shovel",
+      "name_en": "Diamond Shovel",
+      "name_ru": "Алмазная лопата"
+    },
+    "field_151046_w": {
+      "reg": "diamond_pickaxe",
+      "name_en": "Diamond Pickaxe",
+      "name_ru": "Алмазная кирка"
+    },
+    "field_151056_x": {
+      "reg": "diamond_axe",
+      "name_en": "Diamond Axe",
+      "name_ru": "Алмазный топор"
+    },
+    "field_151055_y": {
+      "reg": "stick",
+      "name_en": "Stick",
+      "name_ru": "Палка"
+    },
+    "field_151054_z": {
+      "reg": "bowl",
+      "name_en": "Bowl",
+      "name_ru": "Миска"
+    },
+    "field_151009_A": {
+      "reg": "mushroom_stew",
+      "name_en": "Mushroom Stew",
+      "name_ru": "Тушеные грибы"
+    },
+    "field_151010_B": {
+      "reg": "golden_sword",
+      "name_en": "Golden Sword",
+      "name_ru": "Золотой меч"
+    },
+    "field_151011_C": {
+      "reg": "golden_shovel",
+      "name_en": "Golden Shovel",
+      "name_ru": "Золотая лопата"
+    },
+    "field_151005_D": {
+      "reg": "golden_pickaxe",
+      "name_en": "Golden Pickaxe",
+      "name_ru": "Золотая кирка"
+    },
+    "field_151006_E": {
+      "reg": "golden_axe",
+      "name_en": "Golden Axe",
+      "name_ru": "Золотой топор"
+    },
+    "field_151007_F": {
+      "reg": "string",
+      "name_en": "String",
+      "name_ru": "Нить"
+    },
+    "field_151008_G": {
+      "reg": "feather",
+      "name_en": "Feather",
+      "name_ru": "Перо"
+    },
+    "field_151016_H": {
+      "reg": "gunpowder",
+      "name_en": "Gunpowder",
+      "name_ru": "Порох"
+    },
+    "field_151017_I": {
+      "reg": "wooden_hoe",
+      "name_en": "Wooden Hoe",
+      "name_ru": "Деревянная мотыга"
+    },
+    "field_151018_J": {
+      "reg": "stone_hoe",
+      "name_en": "Stone Hoe",
+      "name_ru": "Каменная мотыга"
+    },
+    "field_151019_K": {
+      "reg": "iron_hoe",
+      "name_en": "Iron Hoe",
+      "name_ru": "Железная мотыга"
+    },
+    "field_151012_L": {
+      "reg": "diamond_hoe",
+      "name_en": "Diamond Hoe",
+      "name_ru": "Алмазная мотыга"
+    },
+    "field_151013_M": {
+      "reg": "golden_hoe",
+      "name_en": "Golden Hoe",
+      "name_ru": "Золотая мотыга"
+    },
+    "field_151014_N": {
+      "reg": "wheat_seeds",
+      "name_en": "Wheat Seeds",
+      "name_ru": "Wheat Seeds"
+    },
+    "field_151015_O": {
+      "reg": "wheat",
+      "name_en": "Wheat",
+      "name_ru": "Пшеница"
+    },
+    "field_151025_P": {
+      "reg": "bread",
+      "name_en": "Bread",
+      "name_ru": "Хлеб"
+    },
+    "field_151024_Q": {
+      "reg": "leather_helmet",
+      "name_en": "Leather Helmet",
+      "name_ru": "Leather Helmet"
+    },
+    "field_151027_R": {
+      "reg": "leather_chestplate",
+      "name_en": "Leather Chestplate",
+      "name_ru": "Leather Chestplate"
+    },
+    "field_151026_S": {
+      "reg": "leather_leggings",
+      "name_en": "Leather Leggings",
+      "name_ru": "Leather Leggings"
+    },
+    "field_151021_T": {
+      "reg": "leather_boots",
+      "name_en": "Leather Boots",
+      "name_ru": "Кожаные ботинки"
+    },
+    "field_151020_U": {
+      "reg": "chainmail_helmet",
+      "name_en": "Chainmail Helmet",
+      "name_ru": "Chainmail Helmet"
+    },
+    "field_151023_V": {
+      "reg": "chainmail_chestplate",
+      "name_en": "Chainmail Chestplate",
+      "name_ru": "Chainmail Chestplate"
+    },
+    "field_151022_W": {
+      "reg": "chainmail_leggings",
+      "name_en": "Chainmail Leggings",
+      "name_ru": "Chainmail Leggings"
+    },
+    "field_151029_X": {
+      "reg": "chainmail_boots",
+      "name_en": "Chainmail Boots",
+      "name_ru": "Chainmail Boots"
+    },
+    "field_151028_Y": {
+      "reg": "iron_helmet",
+      "name_en": "Iron Helmet",
+      "name_ru": "Железный шлем"
+    },
+    "field_151030_Z": {
+      "reg": "iron_chestplate",
+      "name_en": "Iron Chestplate",
+      "name_ru": "Железный нагрудник"
+    },
+    "field_151165_aa": {
+      "reg": "iron_leggings",
+      "name_en": "Iron Leggings",
+      "name_ru": "Железные поножи"
+    },
+    "field_151167_ab": {
+      "reg": "iron_boots",
+      "name_en": "Iron Boots",
+      "name_ru": "Железные ботинки"
+    },
+    "field_151161_ac": {
+      "reg": "diamond_helmet",
+      "name_en": "Diamond Helmet",
+      "name_ru": "Алмазный шлем"
+    },
+    "field_151163_ad": {
+      "reg": "diamond_chestplate",
+      "name_en": "Diamond Chestplate",
+      "name_ru": "Алмазный нагрудник"
+    },
+    "field_151173_ae": {
+      "reg": "diamond_leggings",
+      "name_en": "Diamond Leggings",
+      "name_ru": "Алмазные поножи"
+    },
+    "field_151175_af": {
+      "reg": "diamond_boots",
+      "name_en": "Diamond Boots",
+      "name_ru": "Алмазные ботинки"
+    },
+    "field_151169_ag": {
+      "reg": "golden_helmet",
+      "name_en": "Golden Helmet",
+      "name_ru": "Золотой шлем"
+    },
+    "field_151171_ah": {
+      "reg": "golden_chestplate",
+      "name_en": "Golden Chestplate",
+      "name_ru": "Золотой нагрудник"
+    },
+    "field_151149_ai": {
+      "reg": "golden_leggings",
+      "name_en": "Golden Leggings",
+      "name_ru": "Золотые поножи"
+    },
+    "field_151151_aj": {
+      "reg": "golden_boots",
+      "name_en": "Golden Boots",
+      "name_ru": "Золотые ботинки"
+    },
+    "field_151145_ak": {
+      "reg": "flint",
+      "name_en": "Flint",
+      "name_ru": "Кремень"
+    },
+    "field_151147_al": {
+      "reg": "porkchop",
+      "name_en": "Porkchop",
+      "name_ru": "Porkchop"
+    },
+    "field_151157_am": {
+      "reg": "cooked_porkchop",
+      "name_en": "Cooked Porkchop",
+      "name_ru": "Жареная свинина"
+    },
+    "field_151159_an": {
+      "reg": "painting",
+      "name_en": "Painting",
+      "name_ru": "Картина"
+    },
+    "field_151153_ao": {
+      "reg": "golden_apple",
+      "name_en": "Golden Apple",
+      "name_ru": "Золотое яблоко"
+    },
+    "field_151155_ap": {
+      "reg": "sign",
+      "name_en": "Sign",
+      "name_ru": "Табличка"
+    },
+    "field_151135_aq": {
+      "reg": "wooden_door",
+      "name_en": "Wooden Door",
+      "name_ru": "Деревянная дверь"
+    },
+    "field_151133_ar": {
+      "reg": "bucket",
+      "name_en": "Bucket",
+      "name_ru": "Ведро"
+    },
+    "field_151131_as": {
+      "reg": "water_bucket",
+      "name_en": "Water Bucket",
+      "name_ru": "Ведро воды"
+    },
+    "field_151129_at": {
+      "reg": "lava_bucket",
+      "name_en": "Lava Bucket",
+      "name_ru": "Ведро лавы"
+    },
+    "field_151143_au": {
+      "reg": "minecart",
+      "name_en": "Minecart",
+      "name_ru": "Вагонетка"
+    },
+    "field_151141_av": {
+      "reg": "saddle",
+      "name_en": "Saddle",
+      "name_ru": "Седло"
+    },
+    "field_151139_aw": {
+      "reg": "iron_door",
+      "name_en": "Iron Door",
+      "name_ru": "Железная дверь"
+    },
+    "field_151137_ax": {
+      "reg": "redstone",
+      "name_en": "Redstone",
+      "name_ru": "Красная пыль"
+    },
+    "field_151126_ay": {
+      "reg": "snowball",
+      "name_en": "Snowball",
+      "name_ru": "Снежок"
+    },
+    "field_151124_az": {
+      "reg": "boat",
+      "name_en": "Boat",
+      "name_ru": "Лодка"
+    },
+    "field_151116_aA": {
+      "reg": "leather",
+      "name_en": "Leather",
+      "name_ru": "Кожа"
+    },
+    "field_151117_aB": {
+      "reg": "milk_bucket",
+      "name_en": "Milk Bucket",
+      "name_ru": "Milk Bucket"
+    },
+    "field_151118_aC": {
+      "reg": "brick",
+      "name_en": "Brick",
+      "name_ru": "Кирпич"
+    },
+    "field_151119_aD": {
+      "reg": "clay_ball",
+      "name_en": "Clay Ball",
+      "name_ru": "Clay Ball"
+    },
+    "field_151120_aE": {
+      "reg": "reeds",
+      "name_en": "Sugar Canes",
+      "name_ru": "Сахарный тростник"
+    },
+    "field_151121_aF": {
+      "reg": "paper",
+      "name_en": "Paper",
+      "name_ru": "Бумага"
+    },
+    "field_151122_aG": {
+      "reg": "book",
+      "name_en": "Book",
+      "name_ru": "Книга"
+    },
+    "field_151123_aH": {
+      "reg": "slime_ball",
+      "name_en": "Slime Ball",
+      "name_ru": "Slime Ball"
+    },
+    "field_151108_aI": {
+      "reg": "chest_minecart",
+      "name_en": "Chest Minecart",
+      "name_ru": "Chest Minecart"
+    },
+    "field_151109_aJ": {
+      "reg": "furnace_minecart",
+      "name_en": "Furnace Minecart",
+      "name_ru": "Furnace Minecart"
+    },
+    "field_151110_aK": {
+      "reg": "egg",
+      "name_en": "Egg",
+      "name_ru": "Яйцо"
+    },
+    "field_151111_aL": {
+      "reg": "compass",
+      "name_en": "Compass",
+      "name_ru": "Компас"
+    },
+    "field_151112_aM": {
+      "reg": "fishing_rod",
+      "name_en": "Fishing Rod",
+      "name_ru": "Удочка"
+    },
+    "field_151113_aN": {
+      "reg": "clock",
+      "name_en": "Clock",
+      "name_ru": "Часы"
+    },
+    "field_151114_aO": {
+      "reg": "glowstone_dust",
+      "name_en": "Glowstone Dust",
+      "name_ru": "Светящаяся пыль"
+    },
+    "field_151115_aP": {
+      "reg": "fish",
+      "name_en": "Fish",
+      "name_ru": "Fish"
+    },
+    "field_151101_aQ": {
+      "reg": "cooked_fished",
+      "name_en": "Cooked Fished",
+      "name_ru": "Cooked Fished"
+    },
+    "field_151100_aR": {
+      "reg": "dye",
+      "name_en": "Dye",
+      "name_ru": "Dye"
+    },
+    "field_151103_aS": {
+      "reg": "bone",
+      "name_en": "Bone",
+      "name_ru": "Кость"
+    },
+    "field_151102_aT": {
+      "reg": "sugar",
+      "name_en": "Sugar",
+      "name_ru": "Сахар"
+    },
+    "field_151105_aU": {
+      "reg": "cake",
+      "name_en": "Cake",
+      "name_ru": "Торт"
+    },
+    "field_151104_aV": {
+      "reg": "bed",
+      "name_en": "Bed",
+      "name_ru": "Кровать"
+    },
+    "field_151107_aW": {
+      "reg": "repeater",
+      "name_en": "Repeater",
+      "name_ru": "Repeater"
+    },
+    "field_151106_aX": {
+      "reg": "cookie",
+      "name_en": "Cookie",
+      "name_ru": "Печенье"
+    },
+    "field_151098_aY": {
+      "reg": "filled_map",
+      "name_en": "Filled Map",
+      "name_ru": "Filled Map"
+    },
+    "field_151097_aZ": {
+      "reg": "shears",
+      "name_en": "Shears",
+      "name_ru": "Ножницы"
+    },
+    "field_151127_ba": {
+      "reg": "melon",
+      "name_en": "Melon",
+      "name_ru": "Арбуз"
+    },
+    "field_151080_bb": {
+      "reg": "pumpkin_seeds",
+      "name_en": "Pumpkin Seeds",
+      "name_ru": "Семена тыквы"
+    },
+    "field_151081_bc": {
+      "reg": "melon_seeds",
+      "name_en": "Melon Seeds",
+      "name_ru": "Семена арбуза"
+    },
+    "field_151082_bd": {
+      "reg": "beef",
+      "name_en": "Beef",
+      "name_ru": "Beef"
+    },
+    "field_151083_be": {
+      "reg": "cooked_beef",
+      "name_en": "Cooked Beef",
+      "name_ru": "Cooked Beef"
+    },
+    "field_151076_bf": {
+      "reg": "chicken",
+      "name_en": "Chicken",
+      "name_ru": "Курица"
+    },
+    "field_151077_bg": {
+      "reg": "cooked_chicken",
+      "name_en": "Cooked Chicken",
+      "name_ru": "Жареная курица"
+    },
+    "field_151078_bh": {
+      "reg": "rotten_flesh",
+      "name_en": "Rotten Flesh",
+      "name_ru": "Гнилая плоть"
+    },
+    "field_151079_bi": {
+      "reg": "ender_pearl",
+      "name_en": "Ender Pearl",
+      "name_ru": "Жемчуг Эндера"
+    },
+    "field_151072_bj": {
+      "reg": "blaze_rod",
+      "name_en": "Blaze Rod",
+      "name_ru": "Стержень ифрита"
+    },
+    "field_151073_bk": {
+      "reg": "ghast_tear",
+      "name_en": "Ghast Tear",
+      "name_ru": "Слеза Гаста"
+    },
+    "field_151074_bl": {
+      "reg": "gold_nugget",
+      "name_en": "Gold Nugget",
+      "name_ru": "Золотой самородок"
+    },
+    "field_151075_bm": {
+      "reg": "nether_wart",
+      "name_en": "Nether Wart",
+      "name_ru": "Адский нарост"
+    },
+    "field_151068_bn": {
+      "reg": "potion",
+      "name_en": "Potion",
+      "name_ru": "Зелье"
+    },
+    "field_151069_bo": {
+      "reg": "glass_bottle",
+      "name_en": "Glass Bottle",
+      "name_ru": "Пузырёк"
+    },
+    "field_151070_bp": {
+      "reg": "spider_eye",
+      "name_en": "Spider Eye",
+      "name_ru": "Паучий глаз"
+    },
+    "field_151071_bq": {
+      "reg": "fermented_spider_eye",
+      "name_en": "Fermented Spider Eye",
+      "name_ru": "Маринованный паучий глаз"
+    },
+    "field_151065_br": {
+      "reg": "blaze_powder",
+      "name_en": "Blaze Powder",
+      "name_ru": "Огненный порошок"
+    },
+    "field_151064_bs": {
+      "reg": "magma_cream",
+      "name_en": "Magma Cream",
+      "name_ru": "Сгусток магмы"
+    },
+    "field_151067_bt": {
+      "reg": "brewing_stand",
+      "name_en": "Brewing Stand",
+      "name_ru": "Варочная стойка"
+    },
+    "field_151066_bu": {
+      "reg": "cauldron",
+      "name_en": "Cauldron",
+      "name_ru": "Котёл"
+    },
+    "field_151061_bv": {
+      "reg": "ender_eye",
+      "name_en": "Ender Eye",
+      "name_ru": "Ender Eye"
+    },
+    "field_151060_bw": {
+      "reg": "speckled_melon",
+      "name_en": "Speckled Melon",
+      "name_ru": "Speckled Melon"
+    },
+    "field_151063_bx": {
+      "reg": "spawn_egg",
+      "name_en": "Spawn Egg",
+      "name_ru": "Spawn Egg"
+    },
+    "field_151062_by": {
+      "reg": "experience_bottle",
+      "name_en": "Experience Bottle",
+      "name_ru": "Experience Bottle"
+    },
+    "field_151059_bz": {
+      "reg": "fire_charge",
+      "name_en": "Fire Charge",
+      "name_ru": "Огненный шар"
+    },
+    "field_151099_bA": {
+      "reg": "writable_book",
+      "name_en": "Writable Book",
+      "name_ru": "Writable Book"
+    },
+    "field_151164_bB": {
+      "reg": "written_book",
+      "name_en": "Written Book",
+      "name_ru": "Завершенная книга"
+    },
+    "field_151166_bC": {
+      "reg": "emerald",
+      "name_en": "Emerald",
+      "name_ru": "Изумруд"
+    },
+    "field_151160_bD": {
+      "reg": "item_frame",
+      "name_en": "Item Frame",
+      "name_ru": "Рамка"
+    },
+    "field_151162_bE": {
+      "reg": "flower_pot",
+      "name_en": "Flower Pot",
+      "name_ru": "Цветочный горшок"
+    },
+    "field_151172_bF": {
+      "reg": "carrot",
+      "name_en": "Carrot",
+      "name_ru": "Морковь"
+    },
+    "field_151174_bG": {
+      "reg": "potato",
+      "name_en": "Potato",
+      "name_ru": "Картофель"
+    },
+    "field_151168_bH": {
+      "reg": "baked_potato",
+      "name_en": "Baked Potato",
+      "name_ru": "Печёный картофель"
+    },
+    "field_151170_bI": {
+      "reg": "poisonous_potato",
+      "name_en": "Poisonous Potato",
+      "name_ru": "Ядовитый картофель"
+    },
+    "field_151148_bJ": {
+      "reg": "map",
+      "name_en": "Map",
+      "name_ru": "Карта"
+    },
+    "field_151150_bK": {
+      "reg": "golden_carrot",
+      "name_en": "Golden Carrot",
+      "name_ru": "Золотая морковь"
+    },
+    "field_151144_bL": {
+      "reg": "skull",
+      "name_en": "Skull",
+      "name_ru": "Skull"
+    },
+    "field_151146_bM": {
+      "reg": "carrot_on_a_stick",
+      "name_en": "Carrot On A Stick",
+      "name_ru": "Carrot On A Stick"
+    },
+    "field_151156_bN": {
+      "reg": "nether_star",
+      "name_en": "Nether Star",
+      "name_ru": "Адская звезда"
+    },
+    "field_151158_bO": {
+      "reg": "pumpkin_pie",
+      "name_en": "Pumpkin Pie",
+      "name_ru": "Тыквенный пирог"
+    },
+    "field_151152_bP": {
+      "reg": "fireworks",
+      "name_en": "Firework Rocket",
+      "name_ru": "Фейерверк"
+    },
+    "field_151154_bQ": {
+      "reg": "firework_charge",
+      "name_en": "Firework Charge",
+      "name_ru": "Firework Charge"
+    },
+    "field_151134_bR": {
+      "reg": "enchanted_book",
+      "name_en": "Enchanted Book",
+      "name_ru": "Зачарованная книга"
+    },
+    "field_151132_bS": {
+      "reg": "comparator",
+      "name_en": "Redstone Comparator",
+      "name_ru": "Компаратор"
+    },
+    "field_151130_bT": {
+      "reg": "netherbrick",
+      "name_en": "Nether Brick",
+      "name_ru": "Адский кирпич"
+    },
+    "field_151128_bU": {
+      "reg": "quartz",
+      "name_en": "Quartz",
+      "name_ru": "Quartz"
+    },
+    "field_151142_bV": {
+      "reg": "tnt_minecart",
+      "name_en": "Tnt Minecart",
+      "name_ru": "Tnt Minecart"
+    },
+    "field_151140_bW": {
+      "reg": "hopper_minecart",
+      "name_en": "Hopper Minecart",
+      "name_ru": "Hopper Minecart"
+    },
+    "field_151138_bX": {
+      "reg": "iron_horse_armor",
+      "name_en": "Iron Horse Armor",
+      "name_ru": "Железная конская броня"
+    },
+    "field_151136_bY": {
+      "reg": "golden_horse_armor",
+      "name_en": "Golden Horse Armor",
+      "name_ru": "Golden Horse Armor"
+    },
+    "field_151125_bZ": {
+      "reg": "diamond_horse_armor",
+      "name_en": "Diamond Horse Armor",
+      "name_ru": "Алмазная конская броня"
+    },
+    "field_151058_ca": {
+      "reg": "lead",
+      "name_en": "Lead",
+      "name_ru": "Поводок"
+    },
+    "field_151057_cb": {
+      "reg": "name_tag",
+      "name_en": "Name Tag",
+      "name_ru": "Бирка"
+    },
+    "field_151095_cc": {
+      "reg": "command_block_minecart",
+      "name_en": "Command Block Minecart",
+      "name_ru": "Command Block Minecart"
+    },
+    "field_151096_cd": {
+      "reg": "record_13",
+      "name_en": "Record 13",
+      "name_ru": "Record 13"
+    },
+    "field_151093_ce": {
+      "reg": "record_cat",
+      "name_en": "Record Cat",
+      "name_ru": "Record Cat"
+    },
+    "field_151094_cf": {
+      "reg": "record_blocks",
+      "name_en": "Record Blocks",
+      "name_ru": "Record Blocks"
+    },
+    "field_151091_cg": {
+      "reg": "record_chirp",
+      "name_en": "Record Chirp",
+      "name_ru": "Record Chirp"
+    },
+    "field_151092_ch": {
+      "reg": "record_far",
+      "name_en": "Record Far",
+      "name_ru": "Record Far"
+    },
+    "field_151089_ci": {
+      "reg": "record_mall",
+      "name_en": "Record Mall",
+      "name_ru": "Record Mall"
+    },
+    "field_151090_cj": {
+      "reg": "record_mellohi",
+      "name_en": "Record Mellohi",
+      "name_ru": "Record Mellohi"
+    },
+    "field_151087_ck": {
+      "reg": "record_stal",
+      "name_en": "Record Stal",
+      "name_ru": "Record Stal"
+    },
+    "field_151088_cl": {
+      "reg": "record_strad",
+      "name_en": "Record Strad",
+      "name_ru": "Record Strad"
+    },
+    "field_151085_cm": {
+      "reg": "record_ward",
+      "name_en": "Record Ward",
+      "name_ru": "Record Ward"
+    },
+    "field_151086_cn": {
+      "reg": "record_11",
+      "name_en": "Record 11",
+      "name_ru": "Record 11"
+    },
+    "field_151084_co": {
+      "reg": "record_wait",
+      "name_en": "Record Wait",
+      "name_ru": "Record Wait"
+    },
+    "field_150350_a": {
+      "reg": "air",
+      "name_en": "Air",
+      "name_ru": "Air"
+    },
+    "field_150348_b": {
+      "reg": "stone",
+      "name_en": "Stone",
+      "name_ru": "Камень"
+    },
+    "field_150349_c": {
+      "reg": "grass",
+      "name_en": "Grass Block",
+      "name_ru": "Блок травы"
+    },
+    "field_150346_d": {
+      "reg": "dirt",
+      "name_en": "Dirt",
+      "name_ru": "Земля"
+    },
+    "field_150347_e": {
+      "reg": "cobblestone",
+      "name_en": "Cobblestone",
+      "name_ru": "Булыжник"
+    },
+    "field_150344_f": {
+      "reg": "planks",
+      "name_en": "Planks",
+      "name_ru": "Planks"
+    },
+    "field_150345_g": {
+      "reg": "sapling",
+      "name_en": "Sapling",
+      "name_ru": "Sapling"
+    },
+    "field_150357_h": {
+      "reg": "bedrock",
+      "name_en": "Bedrock",
+      "name_ru": "Бедрок"
+    },
+    "field_150358_i": {
+      "reg": "flowing_water",
+      "name_en": "Flowing Water",
+      "name_ru": "Flowing Water"
+    },
+    "field_150355_j": {
+      "reg": "water",
+      "name_en": "Water",
+      "name_ru": "Вода"
+    },
+    "field_150356_k": {
+      "reg": "flowing_lava",
+      "name_en": "Flowing Lava",
+      "name_ru": "Flowing Lava"
+    },
+    "field_150353_l": {
+      "reg": "lava",
+      "name_en": "Lava",
+      "name_ru": "Лава"
+    },
+    "field_150354_m": {
+      "reg": "sand",
+      "name_en": "Sand",
+      "name_ru": "Песок"
+    },
+    "field_150351_n": {
+      "reg": "gravel",
+      "name_en": "Gravel",
+      "name_ru": "Гравий"
+    },
+    "field_150352_o": {
+      "reg": "gold_ore",
+      "name_en": "Gold Ore",
+      "name_ru": "Золотая руда"
+    },
+    "field_150366_p": {
+      "reg": "iron_ore",
+      "name_en": "Iron Ore",
+      "name_ru": "Железная руда"
+    },
+    "field_150365_q": {
+      "reg": "coal_ore",
+      "name_en": "Coal Ore",
+      "name_ru": "Уголь"
+    },
+    "field_150364_r": {
+      "reg": "log",
+      "name_en": "Wood",
+      "name_ru": "Дерево"
+    },
+    "field_150363_s": {
+      "reg": "log2",
+      "name_en": "Log2",
+      "name_ru": "Log2"
+    },
+    "field_150362_t": {
+      "reg": "leaves",
+      "name_en": "Leaves",
+      "name_ru": "Листья"
+    },
+    "field_150361_u": {
+      "reg": "leaves2",
+      "name_en": "Leaves2",
+      "name_ru": "Leaves2"
+    },
+    "field_150360_v": {
+      "reg": "sponge",
+      "name_en": "Sponge",
+      "name_ru": "Губка"
+    },
+    "field_150359_w": {
+      "reg": "glass",
+      "name_en": "Glass",
+      "name_ru": "Стекло"
+    },
+    "field_150369_x": {
+      "reg": "lapis_ore",
+      "name_en": "Lapis Ore",
+      "name_ru": "Lapis Ore"
+    },
+    "field_150368_y": {
+      "reg": "lapis_block",
+      "name_en": "Lapis Block",
+      "name_ru": "Lapis Block"
+    },
+    "field_150367_z": {
+      "reg": "dispenser",
+      "name_en": "Dispenser",
+      "name_ru": "Раздатчик"
+    },
+    "field_150322_A": {
+      "reg": "sandstone",
+      "name_en": "Sandstone",
+      "name_ru": "Песчаник"
+    },
+    "field_150323_B": {
+      "reg": "noteblock",
+      "name_en": "Noteblock",
+      "name_ru": "Noteblock"
+    },
+    "field_150324_C": {
+      "reg": "bed",
+      "name_en": "Bed",
+      "name_ru": "Кровать"
+    },
+    "field_150318_D": {
+      "reg": "golden_rail",
+      "name_en": "Golden Rail",
+      "name_ru": "Golden Rail"
+    },
+    "field_150319_E": {
+      "reg": "detector_rail",
+      "name_en": "Detector Rail",
+      "name_ru": "Рельсы с датчиком"
+    },
+    "field_150320_F": {
+      "reg": "sticky_piston",
+      "name_en": "Sticky Piston",
+      "name_ru": "Липкий поршень"
+    },
+    "field_150321_G": {
+      "reg": "web",
+      "name_en": "Cobweb",
+      "name_ru": "Паутина"
+    },
+    "field_150329_H": {
+      "reg": "tallgrass",
+      "name_en": "Grass",
+      "name_ru": "Трава"
+    },
+    "field_150330_I": {
+      "reg": "deadbush",
+      "name_en": "Dead Bush",
+      "name_ru": "Мертвый куст"
+    },
+    "field_150331_J": {
+      "reg": "piston",
+      "name_en": "Piston",
+      "name_ru": "Поршень"
+    },
+    "field_150332_K": {
+      "reg": "piston_head",
+      "name_en": "Piston Head",
+      "name_ru": "Piston Head"
+    },
+    "field_150325_L": {
+      "reg": "wool",
+      "name_en": "Wool",
+      "name_ru": "Шерсть"
+    },
+    "field_150326_M": {
+      "reg": "piston_extension",
+      "name_en": "Piston Extension",
+      "name_ru": "Piston Extension"
+    },
+    "field_150327_N": {
+      "reg": "yellow_flower",
+      "name_en": "Yellow Flower",
+      "name_ru": "Yellow Flower"
+    },
+    "field_150328_O": {
+      "reg": "red_flower",
+      "name_en": "Red Flower",
+      "name_ru": "Red Flower"
+    },
+    "field_150338_P": {
+      "reg": "brown_mushroom",
+      "name_en": "Brown Mushroom",
+      "name_ru": "Brown Mushroom"
+    },
+    "field_150337_Q": {
+      "reg": "red_mushroom",
+      "name_en": "Red Mushroom",
+      "name_ru": "Red Mushroom"
+    },
+    "field_150340_R": {
+      "reg": "gold_block",
+      "name_en": "Gold Block",
+      "name_ru": "Gold Block"
+    },
+    "field_150339_S": {
+      "reg": "iron_block",
+      "name_en": "Iron Block",
+      "name_ru": "Iron Block"
+    },
+    "field_150334_T": {
+      "reg": "double_stone_slab",
+      "name_en": "Double Stone Slab",
+      "name_ru": "Double Stone Slab"
+    },
+    "field_150333_U": {
+      "reg": "stone_slab",
+      "name_en": "Stone Slab",
+      "name_ru": "Каменная плита"
+    },
+    "field_150336_V": {
+      "reg": "brick_block",
+      "name_en": "Brick Block",
+      "name_ru": "Brick Block"
+    },
+    "field_150335_W": {
+      "reg": "tnt",
+      "name_en": "TNT",
+      "name_ru": "Динамит"
+    },
+    "field_150342_X": {
+      "reg": "bookshelf",
+      "name_en": "Bookshelf",
+      "name_ru": "Книжная полка"
+    },
+    "field_150341_Y": {
+      "reg": "mossy_cobblestone",
+      "name_en": "Mossy Cobblestone",
+      "name_ru": "Mossy Cobblestone"
+    },
+    "field_150343_Z": {
+      "reg": "obsidian",
+      "name_en": "Obsidian",
+      "name_ru": "Обсидиан"
+    },
+    "field_150478_aa": {
+      "reg": "torch",
+      "name_en": "Torch",
+      "name_ru": "Факел"
+    },
+    "field_150480_ab": {
+      "reg": "fire",
+      "name_en": "Fire",
+      "name_ru": "Огонь"
+    },
+    "field_150474_ac": {
+      "reg": "mob_spawner",
+      "name_en": "Mob Spawner",
+      "name_ru": "Mob Spawner"
+    },
+    "field_150476_ad": {
+      "reg": "oak_stairs",
+      "name_en": "Oak Stairs",
+      "name_ru": "Oak Stairs"
+    },
+    "field_150486_ae": {
+      "reg": "chest",
+      "name_en": "Chest",
+      "name_ru": "Сундук"
+    },
+    "field_150488_af": {
+      "reg": "redstone_wire",
+      "name_en": "Redstone Wire",
+      "name_ru": "Redstone Wire"
+    },
+    "field_150482_ag": {
+      "reg": "diamond_ore",
+      "name_en": "Diamond Ore",
+      "name_ru": "Алмазная руда"
+    },
+    "field_150484_ah": {
+      "reg": "diamond_block",
+      "name_en": "Diamond Block",
+      "name_ru": "Diamond Block"
+    },
+    "field_150462_ai": {
+      "reg": "crafting_table",
+      "name_en": "Crafting Table",
+      "name_ru": "Верстак"
+    },
+    "field_150464_aj": {
+      "reg": "wheat",
+      "name_en": "Wheat",
+      "name_ru": "Пшеница"
+    },
+    "field_150458_ak": {
+      "reg": "farmland",
+      "name_en": "Farmland",
+      "name_ru": "Пашня"
+    },
+    "field_150460_al": {
+      "reg": "furnace",
+      "name_en": "Furnace",
+      "name_ru": "Печь"
+    },
+    "field_150470_am": {
+      "reg": "lit_furnace",
+      "name_en": "Lit Furnace",
+      "name_ru": "Lit Furnace"
+    },
+    "field_150472_an": {
+      "reg": "standing_sign",
+      "name_en": "Standing Sign",
+      "name_ru": "Standing Sign"
+    },
+    "field_150466_ao": {
+      "reg": "wooden_door",
+      "name_en": "Wooden Door",
+      "name_ru": "Деревянная дверь"
+    },
+    "field_150468_ap": {
+      "reg": "ladder",
+      "name_en": "Ladder",
+      "name_ru": "Лестница"
+    },
+    "field_150448_aq": {
+      "reg": "rail",
+      "name_en": "Rail",
+      "name_ru": "Рельсы"
+    },
+    "field_150446_ar": {
+      "reg": "stone_stairs",
+      "name_en": "Stone Stairs",
+      "name_ru": "Ступеньки из булыжника"
+    },
+    "field_150444_as": {
+      "reg": "wall_sign",
+      "name_en": "Wall Sign",
+      "name_ru": "Wall Sign"
+    },
+    "field_150442_at": {
+      "reg": "lever",
+      "name_en": "Lever",
+      "name_ru": "Рычаг"
+    },
+    "field_150456_au": {
+      "reg": "stone_pressure_plate",
+      "name_en": "Stone Pressure Plate",
+      "name_ru": "Stone Pressure Plate"
+    },
+    "field_150454_av": {
+      "reg": "iron_door",
+      "name_en": "Iron Door",
+      "name_ru": "Железная дверь"
+    },
+    "field_150452_aw": {
+      "reg": "wooden_pressure_plate",
+      "name_en": "Wooden Pressure Plate",
+      "name_ru": "Wooden Pressure Plate"
+    },
+    "field_150450_ax": {
+      "reg": "redstone_ore",
+      "name_en": "Redstone Ore",
+      "name_ru": "Красная руда"
+    },
+    "field_150439_ay": {
+      "reg": "lit_redstone_ore",
+      "name_en": "Lit Redstone Ore",
+      "name_ru": "Lit Redstone Ore"
+    },
+    "field_150437_az": {
+      "reg": "unlit_redstone_torch",
+      "name_en": "Unlit Redstone Torch",
+      "name_ru": "Unlit Redstone Torch"
+    },
+    "field_150429_aA": {
+      "reg": "redstone_torch",
+      "name_en": "Redstone Torch",
+      "name_ru": "Красный факел"
+    },
+    "field_150430_aB": {
+      "reg": "stone_button",
+      "name_en": "Stone Button",
+      "name_ru": "Stone Button"
+    },
+    "field_150431_aC": {
+      "reg": "snow_layer",
+      "name_en": "Snow Layer",
+      "name_ru": "Snow Layer"
+    },
+    "field_150432_aD": {
+      "reg": "ice",
+      "name_en": "Ice",
+      "name_ru": "Лёд"
+    },
+    "field_150433_aE": {
+      "reg": "snow",
+      "name_en": "Snow",
+      "name_ru": "Снег"
+    },
+    "field_150434_aF": {
+      "reg": "cactus",
+      "name_en": "Cactus",
+      "name_ru": "Кактус"
+    },
+    "field_150435_aG": {
+      "reg": "clay",
+      "name_en": "Clay",
+      "name_ru": "Глина"
+    },
+    "field_150436_aH": {
+      "reg": "reeds",
+      "name_en": "Sugar Canes",
+      "name_ru": "Сахарный тростник"
+    },
+    "field_150421_aI": {
+      "reg": "jukebox",
+      "name_en": "Jukebox",
+      "name_ru": "Проигрыватель"
+    },
+    "field_150422_aJ": {
+      "reg": "fence",
+      "name_en": "Fence",
+      "name_ru": "Забор"
+    },
+    "field_150423_aK": {
+      "reg": "pumpkin",
+      "name_en": "Pumpkin",
+      "name_ru": "Тыква"
+    },
+    "field_150424_aL": {
+      "reg": "netherrack",
+      "name_en": "Netherrack",
+      "name_ru": "Адский камень"
+    },
+    "field_150425_aM": {
+      "reg": "soul_sand",
+      "name_en": "Soul Sand",
+      "name_ru": "Песок душ"
+    },
+    "field_150426_aN": {
+      "reg": "glowstone",
+      "name_en": "Glowstone",
+      "name_ru": "Светящийся камень"
+    },
+    "field_150427_aO": {
+      "reg": "portal",
+      "name_en": "Portal",
+      "name_ru": "Портал"
+    },
+    "field_150428_aP": {
+      "reg": "lit_pumpkin",
+      "name_en": "Lit Pumpkin",
+      "name_ru": "Lit Pumpkin"
+    },
+    "field_150414_aQ": {
+      "reg": "cake",
+      "name_en": "Cake",
+      "name_ru": "Торт"
+    },
+    "field_150413_aR": {
+      "reg": "unpowered_repeater",
+      "name_en": "Unpowered Repeater",
+      "name_ru": "Unpowered Repeater"
+    },
+    "field_150416_aS": {
+      "reg": "powered_repeater",
+      "name_en": "Powered Repeater",
+      "name_ru": "Powered Repeater"
+    },
+    "field_150415_aT": {
+      "reg": "trapdoor",
+      "name_en": "Trapdoor",
+      "name_ru": "Люк"
+    },
+    "field_150418_aU": {
+      "reg": "monster_egg",
+      "name_en": "Monster Egg",
+      "name_ru": "Monster Egg"
+    },
+    "field_150417_aV": {
+      "reg": "stonebrick",
+      "name_en": "Cobblestone",
+      "name_ru": "Булыжник"
+    },
+    "field_150420_aW": {
+      "reg": "brown_mushroom_block",
+      "name_en": "Brown Mushroom Block",
+      "name_ru": "Brown Mushroom Block"
+    },
+    "field_150419_aX": {
+      "reg": "red_mushroom_block",
+      "name_en": "Red Mushroom Block",
+      "name_ru": "Red Mushroom Block"
+    },
+    "field_150411_aY": {
+      "reg": "iron_bars",
+      "name_en": "Iron Bars",
+      "name_ru": "Железные прутья"
+    },
+    "field_150410_aZ": {
+      "reg": "glass_pane",
+      "name_en": "Glass Pane",
+      "name_ru": "Стеклянная панель"
+    },
+    "field_150440_ba": {
+      "reg": "melon_block",
+      "name_en": "Melon Block",
+      "name_ru": "Melon Block"
+    },
+    "field_150393_bb": {
+      "reg": "pumpkin_stem",
+      "name_en": "Pumpkin Stem",
+      "name_ru": "Pumpkin Stem"
+    },
+    "field_150394_bc": {
+      "reg": "melon_stem",
+      "name_en": "Melon Stem",
+      "name_ru": "Melon Stem"
+    },
+    "field_150395_bd": {
+      "reg": "vine",
+      "name_en": "Vines",
+      "name_ru": "Лоза"
+    },
+    "field_150396_be": {
+      "reg": "fence_gate",
+      "name_en": "Fence Gate",
+      "name_ru": "Калитка"
+    },
+    "field_150389_bf": {
+      "reg": "brick_stairs",
+      "name_en": "Brick Stairs",
+      "name_ru": "Кирпичные ступеньки"
+    },
+    "field_150390_bg": {
+      "reg": "stone_brick_stairs",
+      "name_en": "Stone Brick Stairs",
+      "name_ru": "Ступеньки из каменного кирпича"
+    },
+    "field_150391_bh": {
+      "reg": "mycelium",
+      "name_en": "Mycelium",
+      "name_ru": "Мицелий"
+    },
+    "field_150392_bi": {
+      "reg": "waterlily",
+      "name_en": "Lily Pad",
+      "name_ru": "Кувшинка"
+    },
+    "field_150385_bj": {
+      "reg": "nether_brick",
+      "name_en": "Nether Brick",
+      "name_ru": "Адские кирпичи"
+    },
+    "field_150386_bk": {
+      "reg": "nether_brick_fence",
+      "name_en": "Nether Brick Fence",
+      "name_ru": "Адский забор"
+    },
+    "field_150387_bl": {
+      "reg": "nether_brick_stairs",
+      "name_en": "Nether Brick Stairs",
+      "name_ru": "Адские ступеньки"
+    },
+    "field_150388_bm": {
+      "reg": "nether_wart",
+      "name_en": "Nether Wart",
+      "name_ru": "Адский нарост"
+    },
+    "field_150381_bn": {
+      "reg": "enchanting_table",
+      "name_en": "Enchanting Table",
+      "name_ru": "Enchanting Table"
+    },
+    "field_150382_bo": {
+      "reg": "brewing_stand",
+      "name_en": "Brewing Stand",
+      "name_ru": "Варочная стойка"
+    },
+    "field_150383_bp": {
+      "reg": "cauldron",
+      "name_en": "Cauldron",
+      "name_ru": "Котёл"
+    },
+    "field_150384_bq": {
+      "reg": "end_portal",
+      "name_en": "End Portal",
+      "name_ru": "Портал в Энд"
+    },
+    "field_150378_br": {
+      "reg": "end_portal_frame",
+      "name_en": "End Portal Frame",
+      "name_ru": "End Portal Frame"
+    },
+    "field_150377_bs": {
+      "reg": "end_stone",
+      "name_en": "End Stone",
+      "name_ru": "Эндерняк"
+    },
+    "field_150380_bt": {
+      "reg": "dragon_egg",
+      "name_en": "Dragon Egg",
+      "name_ru": "Яйцо дракона"
+    },
+    "field_150379_bu": {
+      "reg": "redstone_lamp",
+      "name_en": "Redstone Lamp",
+      "name_ru": "Лампа"
+    },
+    "field_150374_bv": {
+      "reg": "lit_redstone_lamp",
+      "name_en": "Lit Redstone Lamp",
+      "name_ru": "Lit Redstone Lamp"
+    },
+    "field_150373_bw": {
+      "reg": "double_wooden_slab",
+      "name_en": "Double Wooden Slab",
+      "name_ru": "Double Wooden Slab"
+    },
+    "field_150376_bx": {
+      "reg": "wooden_slab",
+      "name_en": "Wooden Slab",
+      "name_ru": "Деревянная плита"
+    },
+    "field_150375_by": {
+      "reg": "cocoa",
+      "name_en": "Cocoa",
+      "name_ru": "Какао"
+    },
+    "field_150372_bz": {
+      "reg": "sandstone_stairs",
+      "name_en": "Sandstone Stairs",
+      "name_ru": "Ступеньки из песчаника"
+    },
+    "field_150412_bA": {
+      "reg": "emerald_ore",
+      "name_en": "Emerald Ore",
+      "name_ru": "Изумрудная руда"
+    },
+    "field_150477_bB": {
+      "reg": "ender_chest",
+      "name_en": "Ender Chest",
+      "name_ru": "Сундук Эндера"
+    },
+    "field_150479_bC": {
+      "reg": "tripwire_hook",
+      "name_en": "Tripwire Hook",
+      "name_ru": "Крюк"
+    },
+    "field_150473_bD": {
+      "reg": "tripwire",
+      "name_en": "Tripwire",
+      "name_ru": "Растяжка"
+    },
+    "field_150475_bE": {
+      "reg": "emerald_block",
+      "name_en": "Emerald Block",
+      "name_ru": "Emerald Block"
+    },
+    "field_150485_bF": {
+      "reg": "spruce_stairs",
+      "name_en": "Spruce Stairs",
+      "name_ru": "Spruce Stairs"
+    },
+    "field_150487_bG": {
+      "reg": "birch_stairs",
+      "name_en": "Birch Stairs",
+      "name_ru": "Birch Stairs"
+    },
+    "field_150481_bH": {
+      "reg": "jungle_stairs",
+      "name_en": "Jungle Stairs",
+      "name_ru": "Jungle Stairs"
+    },
+    "field_150483_bI": {
+      "reg": "command_block",
+      "name_en": "Command Block",
+      "name_ru": "Командный блок"
+    },
+    "field_150461_bJ": {
+      "reg": "beacon",
+      "name_en": "Beacon",
+      "name_ru": "Маяк"
+    },
+    "field_150463_bK": {
+      "reg": "cobblestone_wall",
+      "name_en": "Cobblestone Wall",
+      "name_ru": "Каменная ограда"
+    },
+    "field_150457_bL": {
+      "reg": "flower_pot",
+      "name_en": "Flower Pot",
+      "name_ru": "Цветочный горшок"
+    },
+    "field_150459_bM": {
+      "reg": "carrots",
+      "name_en": "Carrot",
+      "name_ru": "Морковь"
+    },
+    "field_150469_bN": {
+      "reg": "potatoes",
+      "name_en": "Potatoes",
+      "name_ru": "Картофель"
+    },
+    "field_150471_bO": {
+      "reg": "wooden_button",
+      "name_en": "Wooden Button",
+      "name_ru": "Wooden Button"
+    },
+    "field_150465_bP": {
+      "reg": "skull",
+      "name_en": "Skull",
+      "name_ru": "Skull"
+    },
+    "field_150467_bQ": {
+      "reg": "anvil",
+      "name_en": "Anvil",
+      "name_ru": "Наковальня"
+    },
+    "field_150447_bR": {
+      "reg": "trapped_chest",
+      "name_en": "Trapped Chest",
+      "name_ru": "Сундук-ловушка"
+    },
+    "field_150445_bS": {
+      "reg": "light_weighted_pressure_plate",
+      "name_en": "Light Weighted Pressure Plate",
+      "name_ru": "Light Weighted Pressure Plate"
+    },
+    "field_150443_bT": {
+      "reg": "heavy_weighted_pressure_plate",
+      "name_en": "Heavy Weighted Pressure Plate",
+      "name_ru": "Heavy Weighted Pressure Plate"
+    },
+    "field_150441_bU": {
+      "reg": "unpowered_comparator",
+      "name_en": "Unpowered Comparator",
+      "name_ru": "Unpowered Comparator"
+    },
+    "field_150455_bV": {
+      "reg": "powered_comparator",
+      "name_en": "Powered Comparator",
+      "name_ru": "Powered Comparator"
+    },
+    "field_150453_bW": {
+      "reg": "daylight_detector",
+      "name_en": "Daylight Detector",
+      "name_ru": "Daylight Detector"
+    },
+    "field_150451_bX": {
+      "reg": "redstone_block",
+      "name_en": "Redstone Block",
+      "name_ru": "Redstone Block"
+    },
+    "field_150449_bY": {
+      "reg": "quartz_ore",
+      "name_en": "Quartz Ore",
+      "name_ru": "Quartz Ore"
+    },
+    "field_150438_bZ": {
+      "reg": "hopper",
+      "name_en": "Hopper",
+      "name_ru": "Воронка"
+    },
+    "field_150371_ca": {
+      "reg": "quartz_block",
+      "name_en": "Quartz Block",
+      "name_ru": "Quartz Block"
+    },
+    "field_150370_cb": {
+      "reg": "quartz_stairs",
+      "name_en": "Quartz Stairs",
+      "name_ru": "Кварцевые ступеньки"
+    },
+    "field_150408_cc": {
+      "reg": "activator_rail",
+      "name_en": "Activator Rail",
+      "name_ru": "Активирующие рельсы"
+    },
+    "field_150409_cd": {
+      "reg": "dropper",
+      "name_en": "Dropper",
+      "name_ru": "Выбрасыватель"
+    },
+    "field_150406_ce": {
+      "reg": "stained_hardened_clay",
+      "name_en": "Stained Hardened Clay",
+      "name_ru": "Stained Hardened Clay"
+    },
+    "field_150407_cf": {
+      "reg": "hay_block",
+      "name_en": "Hay Block",
+      "name_ru": "Hay Block"
+    },
+    "field_150404_cg": {
+      "reg": "carpet",
+      "name_en": "Carpet",
+      "name_ru": "Ковёр"
+    },
+    "field_150405_ch": {
+      "reg": "hardened_clay",
+      "name_en": "Hardened Clay",
+      "name_ru": "Обожжёная глина"
+    },
+    "field_150402_ci": {
+      "reg": "coal_block",
+      "name_en": "Coal Block",
+      "name_ru": "Coal Block"
+    },
+    "field_150403_cj": {
+      "reg": "packed_ice",
+      "name_en": "Packed Ice",
+      "name_ru": "Плотный лёд"
+    },
+    "field_150400_ck": {
+      "reg": "acacia_stairs",
+      "name_en": "Acacia Stairs",
+      "name_ru": "Acacia Stairs"
+    },
+    "field_150401_cl": {
+      "reg": "dark_oak_stairs",
+      "name_en": "Dark Oak Stairs",
+      "name_ru": "Dark Oak Stairs"
+    },
+    "field_150398_cm": {
+      "reg": "double_plant",
+      "name_en": "Double Plant",
+      "name_ru": "Double Plant"
+    },
+    "field_150399_cn": {
+      "reg": "stained_glass",
+      "name_en": "Stained Glass",
+      "name_ru": "Окрашенное стекло"
+    },
+    "field_150397_co": {
+      "reg": "stained_glass_pane",
+      "name_en": "Stained Glass Pane",
+      "name_ru": "Окрашенная стеклянная панель"
+    }
+  }
+}

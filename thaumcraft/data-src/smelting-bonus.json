@@ -1,0 +1,301 @@
+{
+  "_meta": {
+    "server": "LoliLand",
+    "generated": "2026-06-07",
+    "count": 21,
+    "notes": "Infernal Furnace bonus drops: smelting `input` (ore/item) yields a chance of bonus `output`."
+  },
+  "smeltingBonus": [
+    {
+      "input": {
+        "oredict": "oreGold"
+      },
+      "output": {
+        "vanilla": "field_151074_bl",
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "oredict": "oreIron"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 0,
+        "name_en": "Iron Nugget",
+        "name_ru": "Железный самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "oredict": "oreCinnabar"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 5,
+        "name_en": "Quicksilver Drop",
+        "name_ru": "Капля ртути"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "oredict": "oreCopper"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 1,
+        "name_en": "Copper Nugget",
+        "name_ru": "Медный самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "oredict": "oreTin"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 2,
+        "name_en": "Tin Nugget",
+        "name_ru": "Оловянный самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "oredict": "oreSilver"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 3,
+        "name_en": "Silver Nugget",
+        "name_ru": "Серебряный самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "oredict": "oreLead"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 4,
+        "name_en": "Lead Nugget",
+        "name_ru": "Свинцовый самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 31,
+        "name_en": "Native Gold Cluster",
+        "name_ru": "Золоторудный кластер"
+      },
+      "output": {
+        "vanilla": "field_151074_bl",
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 16,
+        "name_en": "Native Iron Cluster",
+        "name_ru": "Железорудный кластер"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 0,
+        "name_en": "Iron Nugget",
+        "name_ru": "Железный самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 21,
+        "name_en": "Native Cinnabar Cluster",
+        "name_ru": "Киноварный кластер"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 5,
+        "name_en": "Quicksilver Drop",
+        "name_ru": "Капля ртути"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 17,
+        "name_en": "Native Copper Cluster",
+        "name_ru": "Меднорудный кластер"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 1,
+        "name_en": "Copper Nugget",
+        "name_ru": "Медный самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 18,
+        "name_en": "Native Tin Cluster",
+        "name_ru": "Оловяннорудный кластер"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 2,
+        "name_en": "Tin Nugget",
+        "name_ru": "Оловянный самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 19,
+        "name_en": "Native Silver Cluster",
+        "name_ru": "Серебрянорудный кластер"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 3,
+        "name_en": "Silver Nugget",
+        "name_ru": "Серебряный самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 20,
+        "name_en": "Native Lead Cluster",
+        "name_ru": "Свинцоворудный кластер"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 4,
+        "name_en": "Lead Nugget",
+        "name_ru": "Свинцовый самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "vanilla": "field_151076_bf",
+        "reg": "chicken",
+        "name_en": "Chicken",
+        "name_ru": "Курица"
+      },
+      "output": {
+        "ref": "itemNuggetChicken",
+        "meta": null,
+        "name_en": "Chicken Nugget",
+        "name_ru": "Кусочек курятины"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "vanilla": "field_151082_bd",
+        "reg": "beef",
+        "name_en": "Beef",
+        "name_ru": "Beef"
+      },
+      "output": {
+        "ref": "itemNuggetBeef",
+        "meta": null,
+        "name_en": "Beef Nugget",
+        "name_ru": "Кусочек говядины"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "vanilla": "field_151147_al",
+        "reg": "porkchop",
+        "name_en": "Porkchop",
+        "name_ru": "Porkchop"
+      },
+      "output": {
+        "ref": "itemNuggetPork",
+        "meta": null,
+        "name_en": "Pork Nugget",
+        "name_ru": "Кусочек свинины"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "vanilla": "field_151115_aP",
+        "reg": "fish",
+        "name_en": "Fish",
+        "name_ru": "Fish"
+      },
+      "output": {
+        "ref": "itemNuggetFish",
+        "meta": null,
+        "name_en": "Fish Nugget",
+        "name_ru": "Кусочек рыбки"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "oredict": "oreCinnabar"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 5,
+        "name_en": "Quicksilver Drop",
+        "name_ru": "Капля ртути"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 31,
+        "name_en": "Native Gold Cluster",
+        "name_ru": "Золоторудный кластер"
+      },
+      "output": {
+        "vanilla": "field_151074_bl",
+        "reg": "gold_nugget",
+        "name_en": "Gold Nugget",
+        "name_ru": "Золотой самородок"
+      },
+      "mod": "Thaumcraft"
+    },
+    {
+      "input": {
+        "ref": "itemNugget",
+        "meta": 21,
+        "name_en": "Native Cinnabar Cluster",
+        "name_ru": "Киноварный кластер"
+      },
+      "output": {
+        "ref": "itemNugget",
+        "meta": 5,
+        "name_en": "Quicksilver Drop",
+        "name_ru": "Капля ртути"
+      },
+      "mod": "Thaumcraft"
+    }
+  ]
+}

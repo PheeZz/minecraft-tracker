@@ -33,6 +33,8 @@ import pencil from '@/assets/icons/pencil.svg?raw'
 import bee from '@/assets/icons/bee.svg?raw'
 import grid from '@/assets/icons/grid.svg?raw'
 import heart from '@/assets/icons/heart.svg?raw'
+import aspect from '@/assets/icons/aspect.svg?raw'
+import arrow from '@/assets/icons/arrow.svg?raw'
 
 export const ICONS = {
   leaf,
@@ -63,6 +65,8 @@ export const ICONS = {
   bee,
   grid,
   heart,
+  aspect,
+  arrow,
 } as const
 
 export type IconName = keyof typeof ICONS

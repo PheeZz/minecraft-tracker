@@ -1,0 +1,115 @@
+/* Глобальные стили графа исследований: HTML-карточки нод (.rnode) рендерятся
+   расширением node-html-label вне scoped-стилей Vue, поэтому стили — здесь. */
+
+.rnode {
+  display: flex;
+  align-items: stretch;
+  width: 210px;
+  border-radius: 11px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1.5px solid var(--cardln);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.4);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--ink2);
+  cursor: pointer;
+}
+/* боковой ярлык вкладки изучения (категории) */
+.rnode__cat {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 6px 4px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--honey-dk);
+  background: rgba(160, 107, 255, 0.14);
+  border-right: 1px solid var(--cardln);
+}
+.rnode__body {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  min-width: 0;
+}
+.rnode__nm {
+  white-space: normal;
+  word-break: break-word;
+}
+.rnode__ok {
+  color: var(--src-f);
+  font-weight: 800;
+  font-size: 12px;
+  flex: none;
+}
+.rnode__star {
+  color: var(--amber);
+  font-size: 12px;
+  flex: none;
+}
+
+/* изучено — зелёная рамка/подсветка */
+.rnode--done {
+  border-color: var(--src-f);
+  color: var(--ink);
+  box-shadow:
+    0 0 0 1.5px rgba(82, 224, 160, 0.28),
+    0 5px 14px rgba(0, 0, 0, 0.4);
+}
+/* доступно сейчас — фиолетовая рамка */
+.rnode--available {
+  border-color: var(--honey-dk);
+  color: var(--ink);
+}
+/* заблокировано предпосылками — приглушено */
+.rnode--locked {
+  background: var(--bg2);
+  border-style: dashed;
+  border-color: var(--dim);
+  color: var(--muted);
+}
+/* активная цель — золотое кольцо (поверх состояния) */
+.rnode--goal {
+  border-color: var(--amber) !important;
+  color: var(--ink);
+  box-shadow:
+    0 0 0 3px rgba(255, 215, 107, 0.35),
+    0 8px 22px rgba(191, 130, 26, 0.35);
+}
+/* выбранный узел — яркая фиолетовая обводка */
+.rnode--sel {
+  outline: 2px solid var(--solid);
+  outline-offset: 2px;
+}
+
+/* «лёгкий рендер»: на время панорамы/зума снимаем тени карточек */
+body.is-panning .rnode,
+body.is-panning .rnode--done,
+body.is-panning .rnode--goal {
+  box-shadow: none !important;
+}
+
+/* вход нод (cy-intro на контейнере; не добавляется при prefers-reduced-motion) */
+@keyframes researchNodeIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.cy-intro .rnode {
+  animation: researchNodeIn 0.32s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}

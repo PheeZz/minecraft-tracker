@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { storage } from '@/shared/persistence/storage'
 import GeneticsDashboard from './GeneticsDashboard.vue'
 import GeneCollection from './GeneCollection.vue'
 import GeneCard from './GeneCard.vue'
@@ -20,7 +21,13 @@ const PANELS: { id: Panel; label: string }[] = [
   { id: 'builder', label: 'Сборка' },
   { id: 'pipeline', label: 'Пайплайн' },
 ]
-const panel = ref<Panel>('dashboard')
+// активная вкладка сохраняется — при возврате открывается она же
+const PANEL_KEY = 'genetics.panel'
+const savedPanel = storage.get<string>(PANEL_KEY, 'dashboard')
+const panel = ref<Panel>(
+  PANELS.some((p) => p.id === savedPanel) ? (savedPanel as Panel) : 'dashboard',
+)
+watch(panel, (p) => storage.set(PANEL_KEY, p))
 
 const card = ref<{ trait: TraitDef; allele: AlleleDef } | null>(null)
 function pick(trait: TraitDef, allele: AlleleDef): void {

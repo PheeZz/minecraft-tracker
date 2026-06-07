@@ -5,6 +5,7 @@ import { useBeesStore } from './useBeesStore'
 import type { BeeSource } from '../domain/types'
 
 const INV_PREFS_KEY = 'bees.invPrefs'
+const VIEW_KEY = 'bees.view'
 
 export type BeeMode = 'comb' | 'bee'
 
@@ -46,8 +47,10 @@ export const useBeesUiStore = defineStore('bees-ui', () => {
   const mode = ref<BeeMode>('comb')
   const curComb = ref<string | null>(null)
   const curTarget = ref<string | null>(null)
-  /** Текущий основной экран области пчёл. */
-  const view = ref<'graph' | 'inventory'>('graph')
+  /** Текущий основной экран области пчёл (сохраняется между визитами). */
+  const view = ref<'graph' | 'inventory'>(
+    storage.get<string>(VIEW_KEY, 'graph') === 'inventory' ? 'inventory' : 'graph',
+  )
   /** Открыта ли модалка задач (независима от view, рисуется поверх). */
   const tasksOpen = ref(false)
 
@@ -92,6 +95,7 @@ export const useBeesUiStore = defineStore('bees-ui', () => {
   }
   function setView(v: 'graph' | 'inventory'): void {
     view.value = v
+    storage.set(VIEW_KEY, v)
   }
   function openTasks(): void {
     tasksOpen.value = true

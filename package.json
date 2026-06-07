@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "prebuild": "node scripts/copy-assets.mjs",
-    "gen:assets": "node scripts/copy-assets.mjs",
+    "prebuild": "node scripts/copy-assets.mjs && node scripts/gen-thaumcraft-icons.mjs",
+    "gen:assets": "node scripts/copy-assets.mjs && node scripts/gen-thaumcraft-icons.mjs",
     "preview": "vite preview",
     "typecheck": "vue-tsc -b && vue-tsc -p tsconfig.vitest.json",
     "lint": "eslint . --fix",
@@ -24,7 +24,9 @@
     "screenshot": "node scripts/screenshot.mjs",
     "gen:brand": "node scripts/gen-brand-assets.mjs",
     "gen:genomes": "node scripts/gen-genomes.mjs",
-    "gen:textures": "node scripts/gen-textures.mjs"
+    "gen:textures": "node scripts/gen-textures.mjs",
+    "gen:thaumcraft": "node scripts/gen-thaumcraft.mjs",
+    "gen:thaumcraft-icons": "node scripts/gen-thaumcraft-icons.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
