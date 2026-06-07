@@ -5114,7 +5114,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Wrath Shard",
+        "name_ru": "Осколок гнева"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5128,7 +5130,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Envy Shard",
+        "name_ru": "Осколок зависти"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5142,7 +5146,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Taint Shard",
+        "name_ru": "Осколок заразы"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5155,7 +5161,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Pride Shard",
+        "name_ru": "Осколок гордости"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5169,7 +5177,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Lust Shard",
+        "name_ru": "Осколок страсти"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5183,7 +5193,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Lust Shard",
+        "name_ru": "Осколок страсти"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5211,7 +5223,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Sloth Shard",
+        "name_ru": "Осколок лени"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5225,7 +5239,9 @@
       "subject": {
         "type": "item",
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Greed Shard",
+        "name_ru": "Осколок жадности"
       },
       "mod": "ForbiddenMagic",
       "aspects": {
@@ -5470,7 +5486,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 0
+        "meta": 0,
+        "name_en": "Iron Singularity",
+        "name_ru": "Железная сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5483,7 +5501,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Golden Singularity",
+        "name_ru": "Золотая сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5497,7 +5517,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 2
+        "meta": 2,
+        "name_en": "Lapis Singularity",
+        "name_ru": "Лазуритовая сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5510,7 +5532,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 3
+        "meta": 3,
+        "name_en": "Redstone Singularity",
+        "name_ru": "Редстоуновая сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5524,7 +5548,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 4
+        "meta": 4,
+        "name_en": "Nether Quartz Singularity",
+        "name_ru": "Кварцевая сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5538,7 +5564,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 5
+        "meta": 5,
+        "name_en": "Copper Singularity",
+        "name_ru": "Медная сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5551,7 +5579,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 6
+        "meta": 6,
+        "name_en": "Tin Singularity",
+        "name_ru": "Оловянная сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5564,7 +5594,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 7
+        "meta": 7,
+        "name_en": "Leaden Singularity",
+        "name_ru": "Свинцовая сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {
@@ -5577,7 +5609,9 @@
       "subject": {
         "type": "item",
         "ref": "LudicrousItems.singularity",
-        "meta": 8
+        "meta": 8,
+        "name_en": "Silver Singularity",
+        "name_ru": "Серебряная сингулярность"
       },
       "mod": "Avaritia",
       "aspects": {

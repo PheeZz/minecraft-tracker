@@ -53,7 +53,10 @@ VANILLA = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","vanilla-name
 FIELDNAMES = json.load(open(os.path.join(PROJ,"thaumcraft","data-src","field-names.json"),encoding="utf-8"))["fields"]
 
 def name_for(fld, meta):
-    bases = list(FIELDNAMES.get(fld, {}).get("bases", []))
+    fn0 = FIELDNAMES.get(fld, {})
+    if meta is not None and str(meta) in fn0.get("metas", {}):
+        mm = fn0["metas"][str(meta)]; return mm["name_en"], mm["name_ru"]
+    bases = list(fn0.get("bases", []))
     for b in (fld, fld[0].upper()+fld[1:] if fld else fld):
         if b not in bases: bases.append(b)
     for pre in ("item","Item","block","Block"):

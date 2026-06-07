@@ -279,6 +279,23 @@ if os.path.exists(ae2_reg):
     for em in re.finditer(r'\b[A-Z_]+\("(\w+)",\s*(-?\d+),\s*(-?\d+)\)', rs):
         ae2_pos["TE" + em.group(1)] = (int(em.group(2)), int(em.group(3)))
 
+# ---- AE2 research aspects: ResearchTypes enum const -> "TE"+name; Feature files -> aspectList
+ae2_internal = {}
+if os.path.exists(ae2_reg):
+    rs2 = open(ae2_reg, encoding="utf-8", errors="replace").read()
+    for em in re.finditer(r'\b([A-Z_]+)\("(\w+)",\s*-?\d+,\s*-?\d+\)', rs2):
+        ae2_internal[em.group(1)] = "TE" + em.group(2)
+ae2_aspects = {}   # internalKey -> {tag:n}
+featdir = os.path.join(DEC, "decompAE2", "appeng", "integration", "modules", "thaumcraft", "common", "features")
+for ff in glob.glob(os.path.join(featdir, "Feature*.java")):
+    ft = open(ff, encoding="utf-8", errors="replace").read()
+    cm = re.search(r'ResearchTypes\.(\w+)', ft)
+    if not cm or cm.group(1) not in ae2_internal: continue
+    asp = {}
+    for am in re.finditer(r'aspectList\.add\(\s*(?:\w+\.)?(\w+),\s*(\d+)\)', ft):
+        asp[field_tag.get(am.group(1), am.group(1).lower())] = int(am.group(2))
+    if asp: ae2_aspects[ae2_internal[cm.group(1)]] = asp
+
 # ---- lang-only sweep: capture research that has lang entries but wasn't code-parsed
 def guess_mod(full_key):
     if full_key.startswith("appliedenergistics2"): return "AppliedEnergistics2"
@@ -325,6 +342,11 @@ for _, dec, _ in MODS:
 for k, w in warp_map.items():
     if k in research:
         research[k]["warp"] = w
+
+# attach AE2 aspects (entries created in the lang-sweep above)
+for r in research.values():
+    if r.get("mod") == "AppliedEnergistics2" and not r.get("aspects") and r["key"] in ae2_aspects:
+        r["aspects"] = ae2_aspects[r["key"]]
 
 res_list = [research[k] for k in res_order]
 by_mod = {}

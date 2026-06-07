@@ -67,6 +67,60 @@ for fld in set(strong) | set(weak):
         rec["name_en"], rec["name_ru"], rec["via"] = r
     out[fld] = rec
 
+# ---- sub-item engine: field -> class -> meta -> name (string-suffix & separate-registry subtypes)
+# 1) field -> constructed class name
+field_class = {}
+# 2) class -> (kind, array, literal)   kind A: base + "." + arr[meta]; kind B: "literal" + arr[meta]
+class_meta = {}
+for dec in DECDIRS:
+    for jf in glob.glob(os.path.join(DEC,dec,"**","*.java"),recursive=True):
+        try: t=open(jf,encoding="utf-8",errors="replace").read()
+        except: continue
+        for ln in t.splitlines():
+            m = re.search(r'\b(\w+)\s*=\s*[^;=]*?\bnew (\w+)\(', ln)
+            if m: field_class.setdefault(m.group(1), []).append(m.group(2))
+        cm = re.search(r'\bclass (\w+)\b', t)
+        if not cm or "func_77667_c" not in t: continue
+        cls = cm.group(1)
+        arrays = {}
+        for am in re.finditer(r'String\[\]\s+(\w+)\s*=\s*(?:new String\[\]\s*)?\{([^}]*)\}', t):
+            arrays[am.group(1)] = [s.strip().strip('"') for s in am.group(2).split(",") if s.strip()]
+        fm = re.search(r'func_77667_c\([^)]*\)\s*\{(.*?)\n    \}', t, re.S)
+        body = fm.group(1) if fm else ""
+        rm = re.search(r'return\s+(.+?);', body, re.S)
+        ret = rm.group(1) if rm else ""
+        arr_ref = re.search(r'(\w+)\s*\[', ret)
+        if not arr_ref or arr_ref.group(1) not in arrays: continue
+        arr = arrays[arr_ref.group(1)]
+        litm = re.search(r'"((?:item|tile)\.[^"]*)"\s*\+', ret)
+        if "func_77658_a()" in ret or "func_77658_a ()" in ret:
+            class_meta[cls] = ("A", arr, None)
+        elif litm:
+            class_meta[cls] = ("B", arr, litm.group(1))
+
+def base_of(fld):
+    bs = out.get(fld, {}).get("bases", [])
+    return bs[0] if bs else (fld[0].upper()+fld[1:] if fld else fld)
+
+subcount = 0
+for fld, rec in out.items():
+    cm = next((class_meta[c] for c in field_class.get(fld, []) if c in class_meta), None)
+    if not cm: continue
+    kind, arr, lit = cm
+    metas = {}
+    for i, suf in enumerate(arr):
+        if kind == "A":
+            keys = ["item.%s.%s.name"%(base_of(fld), suf), "tile.%s.%s.name"%(base_of(fld), suf)]
+        else:
+            keys = ["%s%s.name"%(lit, suf)]
+        for k in keys:
+            if k in NAME:
+                metas[str(i)] = {"name_en": NAME[k]["name_en"], "name_ru": NAME[k]["name_ru"]}
+                break
+    if metas:
+        rec["metas"] = metas; subcount += 1
+print("sub-item fields with per-meta names:", subcount)
+
 json.dump({"_meta":{"server":"LoliLand","generated":"2026-06-07","count":len(out),
                     "scanned_fields":len(cand),
                     "notes":"fieldName -> resolved display name via the mod's unlocalized/registry id and merged lang. Keyed by the bare field identifier (last segment of e.g. ForbiddenItems.deadlyShards)."},

@@ -44,6 +44,9 @@ def name_bases(fld):
     return bases
 
 def name_for(fld, meta):
+    fn0 = FIELDNAMES.get(fld, {})
+    if meta is not None and str(meta) in fn0.get("metas", {}):
+        mm = fn0["metas"][str(meta)]; return mm["name_en"], mm["name_ru"]
     bases = name_bases(fld)
     if meta is not None:
         for b in bases:

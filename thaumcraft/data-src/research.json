@@ -13354,7 +13354,14 @@
       "key": "TECORES",
       "mod": "AppliedEnergistics2",
       "category": "",
-      "aspects": {},
+      "aspects": {
+        "aqua": 2,
+        "ordo": 2,
+        "limus": 3,
+        "praecantatio": 5,
+        "machina": 5,
+        "permutatio": 5
+      },
       "flags": [],
       "autoUnlock": false,
       "pages": [
@@ -13382,7 +13389,14 @@
       "key": "TESTORAGE",
       "mod": "AppliedEnergistics2",
       "category": "",
-      "aspects": {},
+      "aspects": {
+        "ignis": 3,
+        "ordo": 1,
+        "vacuos": 5,
+        "potentia": 5,
+        "vitreus": 3,
+        "metallum": 3
+      },
       "flags": [],
       "autoUnlock": false,
       "pages": [
@@ -13410,7 +13424,18 @@
       "key": "TEARCANETERM",
       "mod": "AppliedEnergistics2",
       "category": "",
-      "aspects": {},
+      "aspects": {
+        "aer": 10,
+        "terra": 10,
+        "perditio": 10,
+        "ignis": 10,
+        "ordo": 10,
+        "aqua": 10,
+        "fabrico": 5,
+        "potentia": 3,
+        "machina": 3,
+        "vacuos": 3
+      },
       "flags": [],
       "autoUnlock": false,
       "pages": [
@@ -13433,7 +13458,14 @@
       "key": "TEINFPROV",
       "mod": "AppliedEnergistics2",
       "category": "",
-      "aspects": {},
+      "aspects": {
+        "machina": 3,
+        "praecantatio": 3,
+        "ordo": 32,
+        "permutatio": 7,
+        "motus": 7,
+        "sensus": 5
+      },
       "flags": [],
       "autoUnlock": false,
       "pages": [
@@ -13456,7 +13488,18 @@
       "key": "TEVISINT",
       "mod": "AppliedEnergistics2",
       "category": "",
-      "aspects": {},
+      "aspects": {
+        "aer": 2,
+        "terra": 2,
+        "perditio": 2,
+        "ignis": 2,
+        "ordo": 2,
+        "aqua": 2,
+        "auram": 5,
+        "potentia": 4,
+        "vacuos": 3,
+        "machina": 2
+      },
       "flags": [],
       "autoUnlock": false,
       "pages": [
@@ -13489,7 +13532,11 @@
       "key": "TECERTUSDUPE",
       "mod": "AppliedEnergistics2",
       "category": "",
-      "aspects": {},
+      "aspects": {
+        "vitreus": 5,
+        "aqua": 2,
+        "potentia": 2
+      },
       "flags": [],
       "autoUnlock": false,
       "pages": [
@@ -13540,7 +13587,17 @@
       "key": "TEARCANEASSEMBLER",
       "mod": "AppliedEnergistics2",
       "category": "",
-      "aspects": {},
+      "aspects": {
+        "aqua": 3,
+        "ordo": 3,
+        "terra": 1,
+        "fabrico": 5,
+        "machina": 3,
+        "cognitio": 3,
+        "permutatio": 3,
+        "auram": 3,
+        "lucrum": 3
+      },
       "flags": [],
       "autoUnlock": false,
       "pages": [
@@ -13594,7 +13651,16 @@
       "key": "TEDISTILLATIONPATTERNENCODER",
       "mod": "AppliedEnergistics2",
       "category": "",
-      "aspects": {},
+      "aspects": {
+        "ordo": 5,
+        "perditio": 5,
+        "ignis": 3,
+        "fabrico": 5,
+        "permutatio": 5,
+        "machina": 3,
+        "lucrum": 3,
+        "cognitio": 1
+      },
       "flags": [],
       "autoUnlock": false,
       "pages": [

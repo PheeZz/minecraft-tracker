@@ -5,11 +5,11 @@
     "generated": "2026-06-07",
     "count": 58,
     "byMod": {
-      "Thaumcraft": 48,
       "Alfheim": 1,
-      "ForbiddenMagic": 7,
+      "Thaumcraft": 48,
+      "MagicBees": 1,
       "Avaritia": 1,
-      "MagicBees": 1
+      "ForbiddenMagic": 7
     },
     "primals": [
       "aer",

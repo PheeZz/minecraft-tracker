@@ -8704,7 +8704,9 @@
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 2
+          "meta": 2,
+          "name_en": "Taint Shard",
+          "name_ru": "Осколок заразы"
         },
         {
           "vanilla": "field_151045_i",
@@ -8740,27 +8742,39 @@
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 2
+          "meta": 2,
+          "name_en": "Taint Shard",
+          "name_ru": "Осколок заразы"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 2
+          "meta": 2,
+          "name_en": "Taint Shard",
+          "name_ru": "Осколок заразы"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 2
+          "meta": 2,
+          "name_en": "Taint Shard",
+          "name_ru": "Осколок заразы"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 2
+          "meta": 2,
+          "name_en": "Taint Shard",
+          "name_ru": "Осколок заразы"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 2
+          "meta": 2,
+          "name_en": "Taint Shard",
+          "name_ru": "Осколок заразы"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 2
+          "meta": 2,
+          "name_en": "Taint Shard",
+          "name_ru": "Осколок заразы"
         }
       ]
     },
@@ -8786,11 +8800,15 @@
       "components": [
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Wrath Shard",
+          "name_ru": "Осколок гнева"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Wrath Shard",
+          "name_ru": "Осколок гнева"
         },
         {
           "vanilla": "field_151045_i",
@@ -8826,15 +8844,21 @@
       "components": [
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 4
+          "meta": 4,
+          "name_en": "Lust Shard",
+          "name_ru": "Осколок страсти"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 4
+          "meta": 4,
+          "name_en": "Lust Shard",
+          "name_ru": "Осколок страсти"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 4
+          "meta": 4,
+          "name_en": "Lust Shard",
+          "name_ru": "Осколок страсти"
         },
         {
           "vanilla": "field_151058_ca",
@@ -8992,15 +9016,21 @@
       "components": [
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 5
+          "meta": 5,
+          "name_en": "Sloth Shard",
+          "name_ru": "Осколок лени"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 5
+          "meta": 5,
+          "name_en": "Sloth Shard",
+          "name_ru": "Осколок лени"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 5
+          "meta": 5,
+          "name_en": "Sloth Shard",
+          "name_ru": "Осколок лени"
         }
       ]
     },
@@ -9026,11 +9056,15 @@
       "components": [
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 1
+          "meta": 1,
+          "name_en": "Envy Shard",
+          "name_ru": "Осколок зависти"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 1
+          "meta": 1,
+          "name_en": "Envy Shard",
+          "name_ru": "Осколок зависти"
         },
         {
           "vanilla": "field_151045_i",
@@ -9068,11 +9102,15 @@
       "components": [
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 1
+          "meta": 1,
+          "name_en": "Envy Shard",
+          "name_ru": "Осколок зависти"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 1
+          "meta": 1,
+          "name_en": "Envy Shard",
+          "name_ru": "Осколок зависти"
         },
         {
           "vanilla": "field_151045_i",
@@ -9110,11 +9148,15 @@
       "components": [
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 1
+          "meta": 1,
+          "name_en": "Envy Shard",
+          "name_ru": "Осколок зависти"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 1
+          "meta": 1,
+          "name_en": "Envy Shard",
+          "name_ru": "Осколок зависти"
         },
         {
           "vanilla": "field_151045_i",
@@ -9152,11 +9194,15 @@
       "components": [
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 1
+          "meta": 1,
+          "name_en": "Envy Shard",
+          "name_ru": "Осколок зависти"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 1
+          "meta": 1,
+          "name_en": "Envy Shard",
+          "name_ru": "Осколок зависти"
         },
         {
           "vanilla": "field_151045_i",
@@ -9195,11 +9241,15 @@
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 3
+          "meta": 3,
+          "name_en": "Pride Shard",
+          "name_ru": "Осколок гордости"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 3
+          "meta": 3,
+          "name_en": "Pride Shard",
+          "name_ru": "Осколок гордости"
         }
       ]
     },
@@ -9226,19 +9276,27 @@
       "components": [
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Wrath Shard",
+          "name_ru": "Осколок гнева"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Wrath Shard",
+          "name_ru": "Осколок гнева"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Wrath Shard",
+          "name_ru": "Осколок гнева"
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Wrath Shard",
+          "name_ru": "Осколок гнева"
         },
         {
           "vanilla": "field_151045_i",
@@ -9452,7 +9510,9 @@
       "instability": 8,
       "central": {
         "ref": "ForbiddenItems.deadlyShards",
-        "meta": 1
+        "meta": 1,
+        "name_en": "Envy Shard",
+        "name_ru": "Осколок зависти"
       }
     },
     {
@@ -9627,7 +9687,9 @@
         },
         {
           "ref": "ForbiddenItems.deadlyShards",
-          "meta": 0
+          "meta": 0,
+          "name_en": "Wrath Shard",
+          "name_ru": "Осколок гнева"
         },
         {
           "ref": "ForbiddenItems.gluttonyShard",
