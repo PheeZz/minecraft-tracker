@@ -3,7 +3,12 @@ import type { Recipe } from '../domain/types'
 export const RECIPES: readonly Recipe[] = [
   {
     source: 'altar',
-    output: { ref: 'weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+    output: {
+      ref: 'weakBloodOrb',
+      name_en: 'Weak Blood Orb',
+      name_ru: 'Слабый кровавый шар',
+      icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+    },
     inputs: [
       {
         vanilla: 'diamond',
@@ -123,6 +128,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'telepositionFocus',
       name_en: 'Teleposition Focus',
       name_ru: 'Фокус телепозиции',
+      icon: 'bloodmagic/items/alchemicalwizardry/TeleposerFocus.png',
     },
     inputs: [
       {
@@ -142,9 +148,15 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'enhancedTelepositionFocus',
       name_en: 'Enhanced Teleposition Focus',
       name_ru: 'Улучшенный фокус телепозиции',
+      icon: 'bloodmagic/items/alchemicalwizardry/EnhancedTeleposerFocus.png',
     },
     inputs: [
-      { ref: 'telepositionFocus', name_en: 'Teleposition Focus', name_ru: 'Фокус телепозиции' },
+      {
+        ref: 'telepositionFocus',
+        name_en: 'Teleposition Focus',
+        name_ru: 'Фокус телепозиции',
+        icon: 'bloodmagic/items/alchemicalwizardry/TeleposerFocus.png',
+      },
     ],
     minTier: 4,
     lp: 10000,
@@ -152,8 +164,20 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'altar',
-    output: { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
-    inputs: [{ ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' }],
+    output: {
+      ref: 'demonicSlate',
+      name_en: 'Demonic Slate',
+      name_ru: 'Демоническая плитка',
+      icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+    },
+    inputs: [
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
+    ],
     minTier: 4,
     lp: 15000,
     meta: { consumptionRate: 20, drainRate: 20, canBeFilled: false },
@@ -166,7 +190,14 @@ export const RECIPES: readonly Recipe[] = [
       name_ru: 'Эфирная плитка',
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemEtherealSlate.png',
     },
-    inputs: [{ ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' }],
+    inputs: [
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
+    ],
     minTier: 5,
     lp: 30000,
     meta: { consumptionRate: 40, drainRate: 100, canBeFilled: false },
@@ -297,6 +328,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'activationCrystal',
       name_en: 'Weak Activation Crystal',
       name_ru: 'Слабый кристал активации',
+      icon: 'bloodmagic/items/alchemicalwizardry/activationCrystalAwakened.png',
     },
     inputs: [
       {
@@ -352,7 +384,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'altar',
-    output: { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+    output: {
+      ref: 'imbuedSlate',
+      name_en: 'Imbued Slate',
+      name_ru: 'Пропитанная плитка',
+      icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+    },
     inputs: [
       {
         ref: 'reinforcedSlate',
@@ -427,7 +464,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'altar',
-    output: { ref: 'bucketLife', name_en: 'Bucket of Life', name_ru: 'Ведро жизни' },
+    output: {
+      ref: 'bucketLife',
+      name_en: 'Bucket of Life',
+      name_ru: 'Ведро жизни',
+      icon: 'bloodmagic/items/alchemicalwizardry/LifeBucket.png',
+    },
     inputs: [
       {
         vanilla: 'bucket',
@@ -1251,12 +1293,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'activationCrystal',
       name_en: 'Awakened Activation Crystal',
       name_ru: 'Пробуждённый кристал активации',
+      icon: 'bloodmagic/items/alchemicalwizardry/activationCrystalAwakened.png',
     },
     inputs: [
       {
         ref: 'activationCrystal',
         name_en: 'Weak Activation Crystal',
         name_ru: 'Слабый кристал активации',
+        icon: 'bloodmagic/items/alchemicalwizardry/activationCrystalAwakened.png',
       },
       {
         ref: 'demonBloodShard',
@@ -1292,12 +1336,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'activationCrystal',
       name_en: 'Awakened Activation Crystal',
       name_ru: 'Пробуждённый кристал активации',
+      icon: 'bloodmagic/items/alchemicalwizardry/activationCrystalAwakened.png',
     },
     inputs: [
       {
         ref: 'activationCrystal',
         name_en: 'Weak Activation Crystal',
         name_ru: 'Слабый кристал активации',
+        icon: 'bloodmagic/items/alchemicalwizardry/activationCrystalAwakened.png',
       },
       {
         vanilla: 'nether_star',
@@ -1407,6 +1453,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'baseAlchemyItems',
       name_en: 'Strengthened Catalyst',
       name_ru: 'Усиленный катализатор',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
     },
     inputs: [
       {
@@ -1439,12 +1486,18 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'alchemy',
-    output: { ref: 'baseAlchemyItems', name_en: 'Offensa', name_ru: 'Offensa' },
+    output: {
+      ref: 'baseAlchemyItems',
+      name_en: 'Offensa',
+      name_ru: 'Offensa',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemOffensa.png',
+    },
     inputs: [
       {
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         ref: 'incendium',
@@ -1476,12 +1529,18 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'alchemy',
-    output: { ref: 'baseAlchemyItems', name_en: 'Praesidium', name_ru: 'Praesidium' },
+    output: {
+      ref: 'baseAlchemyItems',
+      name_en: 'Praesidium',
+      name_ru: 'Praesidium',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemPraesidium.png',
+    },
     inputs: [
       {
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         ref: 'tennebrae',
@@ -1513,12 +1572,18 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'alchemy',
-    output: { ref: 'baseAlchemyItems', name_en: 'Orbis Terrae', name_ru: 'Orbis Terrae' },
+    output: {
+      ref: 'baseAlchemyItems',
+      name_en: 'Orbis Terrae',
+      name_ru: 'Orbis Terrae',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemOrbisTerrae.png',
+    },
     inputs: [
       {
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         ref: 'terrae',
@@ -1554,14 +1619,21 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'baseAlchemyItems',
       name_en: 'Concentrated Catalyst',
       name_ru: 'Концентрированный катализатор',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemConcentratedCatalyst.png',
     },
     inputs: [
       {
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
-      { ref: 'baseAlchemyItems', name_en: 'Fractured Bone', name_ru: 'Сломанная кость' },
+      {
+        ref: 'baseAlchemyItems',
+        name_en: 'Fractured Bone',
+        name_ru: 'Сломанная кость',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemFracturedBone.png',
+      },
       {
         vanilla: 'gold_nugget',
         name_en: 'Gold Nugget',
@@ -1574,7 +1646,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'alchemy',
-    output: { ref: 'baseAlchemyItems', name_en: 'Fractured Bone', name_ru: 'Сломанная кость' },
+    output: {
+      ref: 'baseAlchemyItems',
+      name_en: 'Fractured Bone',
+      name_ru: 'Сломанная кость',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemFracturedBone.png',
+    },
     inputs: [
       {
         vanilla: 'bone',
@@ -1612,7 +1689,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'alchemy',
-    output: { ref: 'baseAlchemyItems', name_en: 'Virtus', name_ru: 'Virtus' },
+    output: {
+      ref: 'baseAlchemyItems',
+      name_en: 'Virtus',
+      name_ru: 'Virtus',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemVirtus.png',
+    },
     inputs: [
       {
         vanilla: 'redstone',
@@ -1630,6 +1712,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         vanilla: 'redstone',
@@ -1649,7 +1732,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'alchemy',
-    output: { ref: 'baseAlchemyItems', name_en: 'Reductus', name_ru: 'Reductus' },
+    output: {
+      ref: 'baseAlchemyItems',
+      name_en: 'Reductus',
+      name_ru: 'Reductus',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemReductus.png',
+    },
     inputs: [
       {
         vanilla: 'redstone',
@@ -1667,6 +1755,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         vanilla: 'soul_sand',
@@ -1686,7 +1775,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'alchemy',
-    output: { ref: 'baseAlchemyItems', name_en: 'Potentia', name_ru: 'Potentia' },
+    output: {
+      ref: 'baseAlchemyItems',
+      name_en: 'Potentia',
+      name_ru: 'Potentia',
+      icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemPotentia.png',
+    },
     inputs: [
       {
         vanilla: 'glowstone_dust',
@@ -1698,6 +1792,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         vanilla: 'dye',
@@ -1730,12 +1825,23 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemCrackedRunicPlate.png',
     },
     inputs: [
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
       {
         ref: 'baseAlchemyItems',
         name_en: 'Concentrated Catalyst',
         name_ru: 'Концентрированный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemConcentratedCatalyst.png',
       },
     ],
     lp: 10,
@@ -1815,6 +1921,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'itemComplexSpellCrystal',
       name_en: 'Complex Spell Crystal',
       name_ru: 'Сложный кристал заклинаний',
+      icon: 'bloodmagic/items/alchemicalwizardry/ComplexCrystal.png',
     },
     inputs: [
       {
@@ -2416,6 +2523,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Concentrated Catalyst',
         name_ru: 'Концентрированный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemConcentratedCatalyst.png',
       },
       {
         ref: 'weakBloodShard',
@@ -2575,7 +2683,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'blockAltar', name_en: 'Blood Altar', name_ru: 'Кровавый алтарь' },
+    output: {
+      ref: 'blockAltar',
+      name_en: 'Blood Altar',
+      name_ru: 'Кровавый алтарь',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/BloodAltar_Top.png',
+    },
     inputs: [
       {
         vanilla: 'stone',
@@ -2625,7 +2738,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Камень',
         icon: 'bloodmagic/vanilla/blocks/stone.png',
       },
-      { ref: 'bloodRune', name_en: 'Blood Rune', name_ru: 'Кровавая руна' },
+      {
+        ref: 'bloodRune',
+        name_en: 'Blood Rune',
+        name_ru: 'Кровавая руна',
+        icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+      },
       {
         ref: 'blankSlate',
         name_en: 'Blank Slate',
@@ -2733,7 +2851,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'blockTeleposer', name_en: 'Teleposer', name_ru: 'Телепозер' },
+    output: {
+      ref: 'blockTeleposer',
+      name_en: 'Teleposer',
+      name_ru: 'Телепозер',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/Teleposer_Top.png',
+    },
     inputs: [
       {
         vanilla: 'gold_ingot',
@@ -2741,7 +2864,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Золотой слиток',
         icon: 'bloodmagic/vanilla/items/gold_ingot.png',
       },
-      { ref: 'telepositionFocus', name_en: 'Teleposition Focus', name_ru: 'Фокус телепозиции' },
+      {
+        ref: 'telepositionFocus',
+        name_en: 'Teleposition Focus',
+        name_ru: 'Фокус телепозиции',
+        icon: 'bloodmagic/items/alchemicalwizardry/TeleposerFocus.png',
+      },
       {
         vanilla: 'ender_pearl',
         name_en: 'Ender Pearl',
@@ -2838,7 +2966,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Инструмент начертания элементаля: Сумерки',
         icon: 'bloodmagic/items/alchemicalwizardry/DuskScribeTool.png',
       },
-      { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
       {
         ref: 'itemRitualDiviner',
         name_en: 'Ritual Diviner',
@@ -2850,7 +2983,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'itemKeyOfDiablo', name_en: 'Key of Binding', name_ru: 'Ключ связывания' },
+    output: {
+      ref: 'itemKeyOfDiablo',
+      name_en: 'Key of Binding',
+      name_ru: 'Ключ связывания',
+      icon: 'bloodmagic/items/alchemicalwizardry/DiabloKey.png',
+    },
     inputs: [
       {
         ref: 'weakBloodShard',
@@ -2879,6 +3017,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'itemBloodPack',
       name_en: "Blood Letter's Pack",
       name_ru: 'Рюкзак кровопускателя',
+      icon: 'bloodmagic/items/alchemicalwizardry/BloodPack.png',
     },
     inputs: [
       {
@@ -3025,7 +3164,12 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemWoodBrace.png',
     },
     inputs: [
-      { vanilla: 'log', name_en: 'Wood', name_ru: 'Дерево' },
+      {
+        vanilla: 'log',
+        name_en: 'Wood',
+        name_ru: 'Дерево',
+        icon: 'bloodmagic/vanilla/blocks/log_acacia.png',
+      },
       {
         vanilla: 'string',
         name_en: 'String',
@@ -3116,7 +3260,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Осколок жизни',
         icon: 'bloodmagic/items/alchemicalwizardry/baseItemLifeShard.png',
       },
-      { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
     ],
     meta: { type: 'shaped', shape: [' gc', 'gog', 'sg '] },
   },
@@ -3207,7 +3356,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Камень',
         icon: 'bloodmagic/vanilla/blocks/stone.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
       {
         ref: 'simpleCatalyst',
         name_en: 'Simple Catalyst',
@@ -3223,6 +3377,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'itemAttunedCrystal',
       name_en: 'Alchemic Router',
       name_ru: 'Алхимический маршрутизатор',
+      icon: 'bloodmagic/items/alchemicalwizardry/AttunedCrystal1.png',
     },
     inputs: [
       {
@@ -3241,6 +3396,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         vanilla: 'stone',
@@ -3257,6 +3413,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'itemTankSegmenter',
       name_en: 'Alchemic Segmenter',
       name_ru: 'Алхимический сегментер',
+      icon: 'bloodmagic/items/alchemicalwizardry/TankSegmenter1.png',
     },
     inputs: [
       {
@@ -3275,6 +3432,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         vanilla: 'gold_ingot',
@@ -3291,6 +3449,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'itemDestinationClearer',
       name_en: 'Alchemic Cleanser',
       name_ru: 'Алхимический очиститель',
+      icon: 'bloodmagic/items/alchemicalwizardry/TankClearer.png',
     },
     inputs: [
       {
@@ -3314,6 +3473,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blockAlchemicCalcinator',
       name_en: 'Alchemic Calcinator',
       name_ru: 'Алхимический кальцинатор',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/AlchemicChemistrySet.png',
     },
     inputs: [
       {
@@ -3332,6 +3492,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         vanilla: 'cobblestone',
@@ -3360,6 +3521,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Concentrated Catalyst',
         name_ru: 'Концентрированный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemConcentratedCatalyst.png',
       },
       { vanilla: 'wooden_slab', name_en: 'Wooden Slab', name_ru: 'Деревянная плита' },
     ],
@@ -3373,6 +3535,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Concentrated Catalyst',
         name_ru: 'Концентрированный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemConcentratedCatalyst.png',
       },
       {
         vanilla: 'string',
@@ -3459,14 +3622,24 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Трансцендентальный кровавый шар',
         icon: 'bloodmagic/items/alchemicalwizardry/TranscendentBloodOrb.png',
       },
-      { ref: 'bloodRune', name_en: 'Blood Rune', name_ru: 'Кровавая руна' },
+      {
+        ref: 'bloodRune',
+        name_en: 'Blood Rune',
+        name_ru: 'Кровавая руна',
+        icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+      },
       {
         ref: 'baseItems',
         name_en: 'Ethereal Slate',
         name_ru: 'Эфирная плитка',
         icon: 'bloodmagic/items/alchemicalwizardry/baseItemEtherealSlate.png',
       },
-      { ref: 'baseAlchemyItems', name_en: 'Praesidium', name_ru: 'Praesidium' },
+      {
+        ref: 'baseAlchemyItems',
+        name_en: 'Praesidium',
+        name_ru: 'Praesidium',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemPraesidium.png',
+      },
       {
         ref: 'magicales',
         name_en: 'Magicales',
@@ -3508,9 +3681,19 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'blockCrucible', name_en: 'Incense Crucible', name_ru: 'Incense Crucible' },
+    output: {
+      ref: 'blockCrucible',
+      name_en: 'Incense Crucible',
+      name_ru: 'Incense Crucible',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/Crucible_Side.png',
+    },
     inputs: [
-      { vanilla: 'stone_slab', name_en: 'Stone Slab', name_ru: 'Каменная плита' },
+      {
+        vanilla: 'stone_slab',
+        name_en: 'Stone Slab',
+        name_ru: 'Каменная плита',
+        icon: 'bloodmagic/vanilla/blocks/stone_slab_side.png',
+      },
       {
         vanilla: 'iron_ingot',
         name_en: 'Iron Ingot',
@@ -3547,7 +3730,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Ведро лавы',
         icon: 'bloodmagic/vanilla/items/bucket_lava.png',
       },
-      { ref: 'weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
       {
         vanilla: 'diamond',
         name_en: 'Diamond',
@@ -3584,7 +3772,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Чистая плитка',
         icon: 'bloodmagic/items/alchemicalwizardry/BlankSlate.png',
       },
-      { ref: 'weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['www', 'wbw', 'wow'] },
   },
@@ -3626,7 +3819,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: 'Blood Rune', name_ru: 'Кровавая руна' },
+    output: {
+      ref: 'bloodRune',
+      name_en: 'Blood Rune',
+      name_ru: 'Кровавая руна',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+    },
     inputs: [
       {
         vanilla: 'stone',
@@ -3634,7 +3832,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Камень',
         icon: 'bloodmagic/vanilla/blocks/stone.png',
       },
-      { ref: 'weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
       {
         ref: 'blankSlate',
         name_en: 'Blank Slate',
@@ -3650,6 +3853,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'bloodRune',
       name_en: 'Rune of Augmented Capacity',
       name_ru: 'Руна дополнительной ёмкости',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
     },
     inputs: [
       {
@@ -3670,13 +3874,23 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Ведро',
         icon: 'bloodmagic/vanilla/items/bucket_empty.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['sbs', 'bob', 'srs'] },
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: 'Rune of Dislocation', name_ru: 'Руна дислокации' },
+    output: {
+      ref: 'bloodRune',
+      name_en: 'Rune of Dislocation',
+      name_ru: 'Руна дислокации',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+    },
     inputs: [
       {
         vanilla: 'stone',
@@ -3696,13 +3910,23 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Ведро воды',
         icon: 'bloodmagic/vanilla/items/bucket_water.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['sbs', 'bob', 'srs'] },
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: 'Rune of the Orb', name_ru: 'Руна шара' },
+    output: {
+      ref: 'bloodRune',
+      name_en: 'Rune of the Orb',
+      name_ru: 'Руна шара',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+    },
     inputs: [
       {
         vanilla: 'stone',
@@ -3716,8 +3940,18 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Кровавый шар мастера',
         icon: 'bloodmagic/items/alchemicalwizardry/MasterBloodOrb.png',
       },
-      { ref: 'weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
-      { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['sws', 'ror', 'sws'] },
   },
@@ -3727,6 +3961,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'bloodRune',
       name_en: 'Rune of Superior Capacity',
       name_ru: 'Руна улучшенной ёмкости',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
     },
     inputs: [
       {
@@ -3741,7 +3976,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Кровавый шар мастера',
         icon: 'bloodmagic/items/alchemicalwizardry/MasterBloodOrb.png',
       },
-      { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
       {
         vanilla: 'bucket',
         name_en: 'Bucket',
@@ -3752,6 +3992,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'bloodRune',
         name_en: 'Rune of Augmented Capacity',
         name_ru: 'Руна дополнительной ёмкости',
+        icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
       },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['srs', 'beb', 'sos'] },
@@ -3798,6 +4039,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'sigilOfTheFastMiner',
       name_en: 'Sigil of the Fast Miner',
       name_ru: 'Сигил быстрого копателя',
+      icon: 'bloodmagic/items/alchemicalwizardry/MiningSigil_activated.png',
     },
     inputs: [
       {
@@ -3932,13 +4174,23 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Чистая плитка',
         icon: 'bloodmagic/items/alchemicalwizardry/BlankSlate.png',
       },
-      { ref: 'weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['ggg', 'gsg', 'gog'] },
   },
   {
     source: 'crafting',
-    output: { ref: 'itemSeerSigil', name_en: 'Sigil of Sight', name_ru: 'Сигил зрения' },
+    output: {
+      ref: 'itemSeerSigil',
+      name_en: 'Sigil of Sight',
+      name_ru: 'Сигил зрения',
+      icon: 'bloodmagic/items/alchemicalwizardry/SeerSigil.png',
+    },
     inputs: [
       {
         vanilla: 'glass',
@@ -3958,7 +4210,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Кровавый шар ученика',
         icon: 'bloodmagic/items/alchemicalwizardry/ApprenticeBloodOrb.png',
       },
-      { ref: 'bucketLife', name_en: 'Bucket of Life', name_ru: 'Ведро жизни' },
+      {
+        ref: 'bucketLife',
+        name_en: 'Bucket of Life',
+        name_ru: 'Ведро жизни',
+        icon: 'bloodmagic/items/alchemicalwizardry/LifeBucket.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['gbg', 'gsg', 'gog'] },
   },
@@ -3998,6 +4255,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blockMasterStone',
       name_en: 'Master Ritual Stone',
       name_ru: 'Ритуальный камень мастера',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/MasterStone.png',
     },
     inputs: [
       {
@@ -4042,7 +4300,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Обсидиан',
         icon: 'bloodmagic/vanilla/blocks/obsidian.png',
       },
-      { ref: 'weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['bsb', 'sos', 'bsb'] },
   },
@@ -4052,6 +4315,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'sigilOfElementalAffinity',
       name_en: 'Sigil of Elemental Affinity',
       name_ru: 'Сигил стихийного родства',
+      icon: 'bloodmagic/items/alchemicalwizardry/ElementalSigil_activated.png',
     },
     inputs: [
       {
@@ -4084,7 +4348,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Кровавый шар мага',
         icon: 'bloodmagic/items/alchemicalwizardry/MagicianBloodOrb.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['oao', 'wsl', 'oro'] },
   },
@@ -4109,7 +4378,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Камень',
         icon: 'bloodmagic/vanilla/blocks/stone.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
       {
         ref: 'magicianBloodOrb',
         name_en: "Magician's Blood Orb",
@@ -4121,7 +4395,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'armourForge', name_en: 'Soul Armour Forge', name_ru: 'Кузница душевной брони' },
+    output: {
+      ref: 'armourForge',
+      name_en: 'Soul Armour Forge',
+      name_ru: 'Кузница душевной брони',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/SoulForge.png',
+    },
     inputs: [
       {
         ref: 'bloodSocket',
@@ -4182,7 +4461,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'blockHomHeart', name_en: 'Spell Table', name_ru: 'Стол заклинаний' },
+    output: {
+      ref: 'blockHomHeart',
+      name_en: 'Spell Table',
+      name_ru: 'Стол заклинаний',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/HomHeart_top.png',
+    },
     inputs: [
       {
         vanilla: 'wool',
@@ -4196,7 +4480,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Камень',
         icon: 'bloodmagic/vanilla/blocks/stone.png',
       },
-      { ref: 'bloodRune', name_en: 'Blood Rune', name_ru: 'Кровавая руна' },
+      {
+        ref: 'bloodRune',
+        name_en: 'Blood Rune',
+        name_ru: 'Кровавая руна',
+        icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+      },
       {
         ref: 'apprenticeBloodOrb',
         name_en: 'Apprentice Blood Orb',
@@ -4227,13 +4516,23 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Обсидиан',
         icon: 'bloodmagic/vanilla/blocks/obsidian.png',
       },
-      { ref: 'weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: [' s ', 'ror'] },
   },
   {
     source: 'crafting',
-    output: { ref: 'sigilOfHaste', name_en: 'Sigil of Haste', name_ru: 'Сигил быстроты' },
+    output: {
+      ref: 'sigilOfHaste',
+      name_en: 'Sigil of Haste',
+      name_ru: 'Сигил быстроты',
+      icon: 'bloodmagic/items/alchemicalwizardry/HasteSigil_activated.png',
+    },
     inputs: [
       {
         vanilla: 'cookie',
@@ -4247,7 +4546,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Сахар',
         icon: 'bloodmagic/vanilla/items/sugar.png',
       },
-      { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
       {
         vanilla: 'obsidian',
         name_en: 'Obsidian',
@@ -4265,7 +4569,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'sigilOfWind', name_en: 'Sigil of the Whirlwind', name_ru: 'Сигил вихря' },
+    output: {
+      ref: 'sigilOfWind',
+      name_en: 'Sigil of the Whirlwind',
+      name_ru: 'Сигил вихря',
+      icon: 'bloodmagic/items/alchemicalwizardry/WindSigil_activated.png',
+    },
     inputs: [
       {
         vanilla: 'feather',
@@ -4291,7 +4600,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Кровавый шар мастера',
         icon: 'bloodmagic/items/alchemicalwizardry/MasterBloodOrb.png',
       },
-      { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['faf', 'grg', 'fof'] },
   },
@@ -4301,6 +4615,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'sigilOfTheBridge',
       name_en: 'Sigil of the Phantom Bridge',
       name_ru: 'Сигил призрачного моста',
+      icon: 'bloodmagic/items/alchemicalwizardry/BridgeSigil_activated.png',
     },
     inputs: [
       {
@@ -4315,7 +4630,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Песок душ',
         icon: 'bloodmagic/vanilla/blocks/soul_sand.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
       {
         ref: 'magicianBloodOrb',
         name_en: "Magician's Blood Orb",
@@ -4346,7 +4666,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Золотой слиток',
         icon: 'bloodmagic/vanilla/items/gold_ingot.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
       {
         ref: 'magicianBloodOrb',
         name_en: "Magician's Blood Orb",
@@ -4404,6 +4729,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'itemBloodLightSigil',
       name_en: 'Sigil of the Blood Lamp',
       name_ru: 'Сигил кровавого светильника',
+      icon: 'bloodmagic/items/alchemicalwizardry/BloodLightSigil.png',
     },
     inputs: [
       {
@@ -4424,7 +4750,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Факел',
         icon: 'bloodmagic/vanilla/blocks/torch_on.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['btb', 'sss', 'bob'] },
   },
@@ -4777,6 +5108,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'baseAlchemyItems',
         name_en: 'Strengthened Catalyst',
         name_ru: 'Усиленный катализатор',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemStrengthenedCatalyst.png',
       },
       {
         ref: 'baseItems',
@@ -4814,7 +5146,12 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemOffensiveCore.png',
     },
     inputs: [
-      { ref: 'baseAlchemyItems', name_en: 'Offensa', name_ru: 'Offensa' },
+      {
+        ref: 'baseAlchemyItems',
+        name_en: 'Offensa',
+        name_ru: 'Offensa',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemOffensa.png',
+      },
       {
         ref: 'baseItems',
         name_en: 'Empty Core',
@@ -4851,7 +5188,12 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemDefensiveCore.png',
     },
     inputs: [
-      { ref: 'baseAlchemyItems', name_en: 'Praesidium', name_ru: 'Praesidium' },
+      {
+        ref: 'baseAlchemyItems',
+        name_en: 'Praesidium',
+        name_ru: 'Praesidium',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemPraesidium.png',
+      },
       {
         ref: 'baseItems',
         name_en: 'Empty Core',
@@ -4888,7 +5230,12 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemEnvironmentalCore.png',
     },
     inputs: [
-      { ref: 'baseAlchemyItems', name_en: 'Orbis Terrae', name_ru: 'Orbis Terrae' },
+      {
+        ref: 'baseAlchemyItems',
+        name_en: 'Orbis Terrae',
+        name_ru: 'Orbis Terrae',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemOrbisTerrae.png',
+      },
       {
         ref: 'baseItems',
         name_en: 'Empty Core',
@@ -4925,7 +5272,12 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemPowerCore.png',
     },
     inputs: [
-      { ref: 'baseAlchemyItems', name_en: 'Virtus', name_ru: 'Virtus' },
+      {
+        ref: 'baseAlchemyItems',
+        name_en: 'Virtus',
+        name_ru: 'Virtus',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemVirtus.png',
+      },
       {
         ref: 'baseItems',
         name_en: 'Empty Core',
@@ -4962,7 +5314,12 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemCostCore.png',
     },
     inputs: [
-      { ref: 'baseAlchemyItems', name_en: 'Reductus', name_ru: 'Reductus' },
+      {
+        ref: 'baseAlchemyItems',
+        name_en: 'Reductus',
+        name_ru: 'Reductus',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemReductus.png',
+      },
       {
         ref: 'baseItems',
         name_en: 'Empty Core',
@@ -4999,7 +5356,12 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemPotencyCore.png',
     },
     inputs: [
-      { ref: 'baseAlchemyItems', name_en: 'Potentia', name_ru: 'Potentia' },
+      {
+        ref: 'baseAlchemyItems',
+        name_en: 'Potentia',
+        name_ru: 'Potentia',
+        icon: 'bloodmagic/items/alchemicalwizardry/baseAlchemyItemPotentia.png',
+      },
       {
         ref: 'baseItems',
         name_en: 'Empty Core',
@@ -5065,7 +5427,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: 'Rune of Acceleration', name_ru: 'Руна ускорения' },
+    output: {
+      ref: 'bloodRune',
+      name_en: 'Rune of Acceleration',
+      name_ru: 'Руна ускорения',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+    },
     inputs: [
       {
         ref: 'baseItems',
@@ -5106,6 +5473,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'itemCompressionSigil',
       name_en: 'Sigil of Compression',
       name_ru: 'Сигил сжатия',
+      icon: 'bloodmagic/items/alchemicalwizardry/CompressionSigil_activated.png',
     },
     inputs: [
       {
@@ -5126,7 +5494,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Верстак',
         icon: 'bloodmagic/vanilla/blocks/crafting_table_front.png',
       },
-      { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
       {
         vanilla: 'obsidian',
         name_en: 'Obsidian',
@@ -5151,7 +5524,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Пустотный сигил',
         icon: 'bloodmagic/items/alchemicalwizardry/VoidSigil.png',
       },
-      { ref: 'blockTeleposer', name_en: 'Teleposer', name_ru: 'Телепозер' },
+      {
+        ref: 'blockTeleposer',
+        name_en: 'Teleposer',
+        name_ru: 'Телепозер',
+        icon: 'bloodmagic/blocks/alchemicalwizardry/Teleposer_Top.png',
+      },
       {
         ref: 'masterBloodOrb',
         name_en: 'Master Blood Orb',
@@ -5179,9 +5557,15 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'itemSigilOfEnderSeverance',
       name_en: 'Sigil of Ender Severance',
       name_ru: 'Сигил разрыва Края',
+      icon: 'bloodmagic/items/alchemicalwizardry/SigilOfSeverance_activated.png',
     },
     inputs: [
-      { ref: 'demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
       {
         ref: 'weakBloodShard',
         name_en: 'Weak Blood Shard',
@@ -5239,12 +5623,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'reinforcedTelepositionFocus',
       name_en: 'Reinforced Teleposition Focus',
       name_ru: 'Усиленный фокус телепозиции',
+      icon: 'bloodmagic/items/alchemicalwizardry/ReinforcedTeleposerFocus.png',
     },
     inputs: [
       {
         ref: 'enhancedTelepositionFocus',
         name_en: 'Enhanced Teleposition Focus',
         name_ru: 'Улучшенный фокус телепозиции',
+        icon: 'bloodmagic/items/alchemicalwizardry/EnhancedTeleposerFocus.png',
       },
       {
         ref: 'weakBloodShard',
@@ -5261,12 +5647,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'demonicTelepositionFocus',
       name_en: 'Demonic Teleposition Focus',
       name_ru: 'Демонический фокус телепозиции',
+      icon: 'bloodmagic/items/alchemicalwizardry/DemonicTeleposerFocus.png',
     },
     inputs: [
       {
         ref: 'reinforcedTelepositionFocus',
         name_en: 'Reinforced Teleposition Focus',
         name_ru: 'Усиленный фокус телепозиции',
+        icon: 'bloodmagic/items/alchemicalwizardry/ReinforcedTeleposerFocus.png',
       },
       {
         ref: 'demonBloodShard',
@@ -5322,7 +5710,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Слабый кровавый осколок',
         icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodShard.png',
       },
-      { ref: 'imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
     ],
     meta: { type: 'shapeless_bloodorb', shape: null },
   },
@@ -5379,7 +5772,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'binding',
-    output: { ref: 'energySword', name_en: 'Bound Blade', name_ru: 'Связанное лезвие' },
+    output: {
+      ref: 'energySword',
+      name_en: 'Bound Blade',
+      name_ru: 'Связанное лезвие',
+      icon: 'bloodmagic/items/alchemicalwizardry/BoundTool.png',
+    },
     inputs: [
       {
         vanilla: 'diamond_sword',
@@ -6085,7 +6483,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'altar',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_tnt', name_en: 'Blood TNT', name_ru: 'Blood TNT' },
+    output: {
+      ref: 'blood_tnt',
+      name_en: 'Blood TNT',
+      name_ru: 'Blood TNT',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_tnt_side.png',
+    },
     inputs: [
       {
         vanilla: 'tnt',
@@ -6105,8 +6508,16 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_wood',
       name_en: 'Blood Infused Wood',
       name_ru: 'Blood Infused Wood',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_wood.png',
     },
-    inputs: [{ vanilla: 'log', name_en: 'Wood', name_ru: 'Дерево' }],
+    inputs: [
+      {
+        vanilla: 'log',
+        name_en: 'Wood',
+        name_ru: 'Дерево',
+        icon: 'bloodmagic/vanilla/blocks/log_acacia.png',
+      },
+    ],
     minTier: 2,
     lp: 3000,
     meta: { consumptionRate: 5, drainRate: 5, canBeFilled: false },
@@ -6118,6 +6529,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_iron_block',
       name_en: 'Blood Infused Iron Block',
       name_ru: 'Blood Infused Iron Block',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_iron_block.png',
     },
     inputs: [
       {
@@ -6134,7 +6546,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'altar',
     addon: 'bloodarsenal',
-    output: { ref: 'item_blood_cake', name_en: 'Blood Cake', name_ru: 'Blood Cake' },
+    output: {
+      ref: 'item_blood_cake',
+      name_en: 'Blood Cake',
+      name_ru: 'Blood Cake',
+      icon: 'bloodmagic/items/bloodarsenal/item_blood_cake.png',
+    },
     inputs: [
       {
         vanilla: 'cake',
@@ -6154,6 +6571,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_iron',
       name_en: 'Blood Infused Iron Ingot',
       name_ru: 'Blood Infused Iron Ingot',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
     },
     inputs: [
       {
@@ -6170,7 +6588,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'altar',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_orange', name_en: 'Blood Orange', name_ru: 'Blood Orange' },
+    output: {
+      ref: 'blood_orange',
+      name_en: 'Blood Orange',
+      name_ru: 'Blood Orange',
+      icon: 'bloodmagic/items/bloodarsenal/blood_orange.png',
+    },
     inputs: [
       {
         vanilla: 'dye',
@@ -6190,12 +6613,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_diamond_active',
       name_en: 'Blood Infused Diamond (Active)',
       name_ru: 'Blood Infused Diamond (Active)',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_active.png',
     },
     inputs: [
       {
         ref: 'blood_infused_diamond_unactive',
         name_en: 'Blood Infused Diamond (Unactive)',
         name_ru: 'Blood Infused Diamond (Unactive)',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_unactive.png',
       },
     ],
     minTier: 4,
@@ -6205,8 +6630,20 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'altar',
     addon: 'bloodarsenal',
-    output: { ref: 'soul_fragment', name_en: 'Soul Fragment', name_ru: 'Soul Fragment' },
-    inputs: [{ ref: 'heart', name_en: 'Heart', name_ru: 'Heart' }],
+    output: {
+      ref: 'soul_fragment',
+      name_en: 'Soul Fragment',
+      name_ru: 'Soul Fragment',
+      icon: 'bloodmagic/items/bloodarsenal/soul_fragment.png',
+    },
+    inputs: [
+      {
+        ref: 'heart',
+        name_en: 'Heart',
+        name_ru: 'Heart',
+        icon: 'bloodmagic/items/bloodarsenal/heart.png',
+      },
+    ],
     minTier: 4,
     lp: 75000,
     meta: { consumptionRate: 5, drainRate: 5, canBeFilled: false },
@@ -6214,7 +6651,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'altar',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_cookie', name_en: 'Blood Cookie', name_ru: 'Blood Cookie' },
+    output: {
+      ref: 'blood_cookie',
+      name_en: 'Blood Cookie',
+      name_ru: 'Blood Cookie',
+      icon: 'bloodmagic/items/bloodarsenal/blood_cookie.png',
+    },
     inputs: [
       {
         vanilla: 'cookie',
@@ -6234,6 +6676,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_glowstone_dust',
       name_en: 'Blood Infused Glowstone Dust',
       name_ru: 'Blood Infused Glowstone Dust',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_glowstone_dust.png',
     },
     inputs: [
       {
@@ -6250,7 +6693,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'altar',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_money', name_en: 'Blood Money x1', name_ru: 'Blood Money x1' },
+    output: {
+      ref: 'blood_money',
+      name_en: 'Blood Money x1',
+      name_ru: 'Blood Money x1',
+      icon: 'bloodmagic/items/bloodarsenal/blood_money1.png',
+    },
     inputs: [
       {
         vanilla: 'paper',
@@ -6270,6 +6718,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_stained_ice',
       name_en: 'Blood Stained Ice',
       name_ru: 'Blood Stained Ice',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_stained_ice.png',
     },
     inputs: [
       { vanilla: 'ice', name_en: 'Ice', name_ru: 'Лёд', icon: 'bloodmagic/vanilla/blocks/ice.png' },
@@ -6289,6 +6738,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_stained_glass',
       name_en: 'Blood Stained Glass',
       name_ru: 'Blood Stained Glass',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_stained_glass.png',
     },
     inputs: [
       {
@@ -6315,6 +6765,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'BM:magicianBloodOrb',
@@ -6322,7 +6773,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Кровавый шар мага',
         icon: 'bloodmagic/items/alchemicalwizardry/MagicianBloodOrb.png',
       },
-      { ref: 'BM:blockAltar', name_en: 'Blood Altar', name_ru: 'Кровавый алтарь' },
+      {
+        ref: 'BM:blockAltar',
+        name_en: 'Blood Altar',
+        name_ru: 'Кровавый алтарь',
+        icon: 'bloodmagic/blocks/alchemicalwizardry/BloodAltar_Top.png',
+      },
       {
         vanilla: 'bucket',
         name_en: 'Bucket',
@@ -6339,14 +6795,21 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'lp_materializer',
       name_en: 'Life Essence Materializer',
       name_ru: 'Life Essence Materializer',
+      icon: 'bloodmagic/blocks/bloodarsenal/lp_materializer_side.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
-      { ref: 'BM:imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'BM:imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
       {
         ref: 'BM:magicianBloodOrb',
         name_en: "Magician's Blood Orb",
@@ -6359,14 +6822,25 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'compacter', name_en: 'Soul Compacter', name_ru: 'Soul Compacter' },
+    output: {
+      ref: 'compacter',
+      name_en: 'Soul Compacter',
+      name_ru: 'Soul Compacter',
+      icon: 'bloodmagic/blocks/bloodarsenal/compacter_side.png',
+    },
     inputs: [
       {
         ref: 'blood_infused_planks',
         name_en: 'Blood Infused Wooden Plank',
         name_ru: 'Blood Infused Wooden Plank',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_planks.png',
       },
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
       {
         vanilla: 'piston',
         name_en: 'Piston',
@@ -6377,6 +6851,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_infused_iron_block',
         name_en: 'Blood Infused Iron Block',
         name_ru: 'Blood Infused Iron Block',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_iron_block.png',
       },
       {
         ref: 'BM:archmageBloodOrb',
@@ -6394,19 +6869,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_axe_iron',
       name_en: 'Blood Infused Iron Axe',
       name_ru: 'Blood Infused Iron Axe',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_axe_iron.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'blood_infused_axe_wood',
         name_en: 'Blood Infused Wooden Axe',
         name_ru: 'Blood Infused Wooden Axe',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_axe_wood.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:magicianBloodOrb',
         name_en: "Magician's Blood Orb",
@@ -6423,19 +6906,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_pickaxe_iron',
       name_en: 'Blood Infused Iron Pickaxe',
       name_ru: 'Blood Infused Iron Pickaxe',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_pickaxe_iron.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'blood_infused_pickaxe_wood',
         name_en: 'Blood Infused Wooden Pickaxe',
         name_ru: 'Blood Infused Wooden Pickaxe',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_pickaxe_wood.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:magicianBloodOrb',
         name_en: "Magician's Blood Orb",
@@ -6452,19 +6943,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_shovel_iron',
       name_en: 'Blood Infused Iron Shovel',
       name_ru: 'Blood Infused Iron Shovel',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_shovel_iron.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'blood_infused_shovel_wood',
         name_en: 'Blood Infused Wooden Shovel',
         name_ru: 'Blood Infused Wooden Shovel',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_shovel_wood.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:magicianBloodOrb',
         name_en: "Magician's Blood Orb",
@@ -6481,19 +6980,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_sword_iron',
       name_en: 'Blood Infused Iron Sword',
       name_ru: 'Blood Infused Iron Sword',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_sword_iron.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'blood_infused_sword_wood',
         name_en: 'Blood Infused Wooden Sword',
         name_ru: 'Blood Infused Wooden Sword',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_sword_wood.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:magicianBloodOrb',
         name_en: "Magician's Blood Orb",
@@ -6506,7 +7013,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_diamond', name_en: 'Blood Diamond', name_ru: 'Blood Diamond' },
+    output: {
+      ref: 'blood_diamond',
+      name_en: 'Blood Diamond',
+      name_ru: 'Blood Diamond',
+      icon: 'bloodmagic/items/bloodarsenal/blood_diamond.png',
+    },
     inputs: [
       {
         vanilla: 'glass',
@@ -6536,15 +7048,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_diamond_unactive',
       name_en: 'Blood Infused Diamond (Unactive)',
       name_ru: 'Blood Infused Diamond (Unactive)',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_unactive.png',
     },
     inputs: [
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'blood_infused_iron_block',
         name_en: 'Blood Infused Iron Block',
         name_ru: 'Blood Infused Iron Block',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_iron_block.png',
       },
-      { ref: 'blood_diamond', name_en: 'Blood Diamond', name_ru: 'Blood Diamond' },
+      {
+        ref: 'blood_diamond',
+        name_en: 'Blood Diamond',
+        name_ru: 'Blood Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_diamond.png',
+      },
       {
         ref: 'BM:masterBloodOrb',
         name_en: 'Master Blood Orb',
@@ -6561,15 +7085,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_axe_diamond',
       name_en: 'Blood Infused Diamond Axe [WIP]',
       name_ru: 'Blood Infused Diamond Axe [WIP]',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_axe_diamond.png',
     },
     inputs: [
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
       {
         ref: 'blood_infused_axe_iron',
         name_en: 'Blood Infused Iron Axe',
         name_ru: 'Blood Infused Iron Axe',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_axe_iron.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:masterBloodOrb',
         name_en: 'Master Blood Orb',
@@ -6586,15 +7122,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_pickaxe_diamond',
       name_en: 'Blood Infused Diamond Pickaxe',
       name_ru: 'Blood Infused Diamond Pickaxe',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_pickaxe_diamond.png',
     },
     inputs: [
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
       {
         ref: 'blood_infused_pickaxe_iron',
         name_en: 'Blood Infused Iron Pickaxe',
         name_ru: 'Blood Infused Iron Pickaxe',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_pickaxe_iron.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:masterBloodOrb',
         name_en: 'Master Blood Orb',
@@ -6611,15 +7159,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_shovel_diamond',
       name_en: 'Blood Infused Diamond Shovel',
       name_ru: 'Blood Infused Diamond Shovel',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_shovel_diamond.png',
     },
     inputs: [
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
       {
         ref: 'blood_infused_shovel_iron',
         name_en: 'Blood Infused Iron Shovel',
         name_ru: 'Blood Infused Iron Shovel',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_shovel_iron.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:masterBloodOrb',
         name_en: 'Master Blood Orb',
@@ -6636,15 +7196,27 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_sword_diamond',
       name_en: 'Blood Infused Diamond Sword [WIP]',
       name_ru: 'Blood Infused Diamond Sword [WIP]',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_sword_diamond.png',
     },
     inputs: [
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
       {
         ref: 'blood_infused_sword_iron',
         name_en: 'Blood Infused Iron Sword',
         name_ru: 'Blood Infused Iron Sword',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_sword_iron.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:masterBloodOrb',
         name_en: 'Master Blood Orb',
@@ -6657,9 +7229,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'soul_booster', name_en: 'Soul Booster', name_ru: 'Soul Booster' },
+    output: {
+      ref: 'soul_booster',
+      name_en: 'Soul Booster',
+      name_ru: 'Soul Booster',
+      icon: 'bloodmagic/items/bloodarsenal/soul_booster.png',
+    },
     inputs: [
-      { ref: 'soul_fragment', name_en: 'Soul Fragment', name_ru: 'Soul Fragment' },
+      {
+        ref: 'soul_fragment',
+        name_en: 'Soul Fragment',
+        name_ru: 'Soul Fragment',
+        icon: 'bloodmagic/items/bloodarsenal/soul_fragment.png',
+      },
       {
         vanilla: 'beacon',
         name_en: 'Beacon',
@@ -6678,9 +7260,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'soul_nullifier', name_en: 'Soul Nullifier', name_ru: 'Soul Nullifier' },
+    output: {
+      ref: 'soul_nullifier',
+      name_en: 'Soul Nullifier',
+      name_ru: 'Soul Nullifier',
+      icon: 'bloodmagic/items/bloodarsenal/soul_nullifier.png',
+    },
     inputs: [
-      { ref: 'soul_fragment', name_en: 'Soul Fragment', name_ru: 'Soul Fragment' },
+      {
+        ref: 'soul_fragment',
+        name_en: 'Soul Fragment',
+        name_ru: 'Soul Fragment',
+        icon: 'bloodmagic/items/bloodarsenal/soul_fragment.png',
+      },
       {
         ref: 'BM:armourInhibitor',
         name_en: 'Armour Inhibitor',
@@ -6703,6 +7295,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'sigil_of_swimming',
       name_en: 'Sigil of Swimming',
       name_ru: 'Sigil of Swimming',
+      icon: 'bloodmagic/items/alchemicalwizardry/WaterSigil.png',
     },
     inputs: [
       {
@@ -6741,7 +7334,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'sigil_of_ender', name_en: 'Ender Sigil', name_ru: 'Ender Sigil' },
+    output: {
+      ref: 'sigil_of_ender',
+      name_en: 'Ender Sigil',
+      name_ru: 'Ender Sigil',
+      icon: 'bloodmagic/items/bloodarsenal/sigil_of_ender.png',
+    },
     inputs: [
       {
         vanilla: 'obsidian',
@@ -6761,7 +7359,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Жемчуг Эндера',
         icon: 'bloodmagic/vanilla/items/ender_pearl.png',
       },
-      { ref: 'BM:imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
+      {
+        ref: 'BM:imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
       { vanilla: 'ender_chest', name_en: 'Ender Chest', name_ru: 'Сундук Эндера' },
       {
         ref: 'BM:magicianBloodOrb',
@@ -6779,12 +7382,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'sigil_of_divinity',
       name_en: 'Sigil of Divinity',
       name_ru: 'Sigil of Divinity',
+      icon: 'bloodmagic/items/alchemicalwizardry/DivinationSigil.png',
     },
     inputs: [
       {
         ref: 'blood_infused_glowstone',
         name_en: 'Blood Infused Glowstone',
         name_ru: 'Blood Infused Glowstone',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_glowstone.png',
       },
       {
         vanilla: 'golden_apple',
@@ -6802,9 +7407,20 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'BM:sigilOfElementalAffinity',
         name_en: 'Sigil of Elemental Affinity',
         name_ru: 'Сигил стихийного родства',
+        icon: 'bloodmagic/items/alchemicalwizardry/ElementalSigil_activated.png',
       },
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
       {
         ref: 'BM:transcendentBloodOrb',
         name_en: 'Transcendent Blood Orb',
@@ -6821,6 +7437,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_burned_string',
       name_en: 'Blood Burned String',
       name_ru: 'Blood Burned String',
+      icon: 'bloodmagic/items/bloodarsenal/blood_burned_string.png',
     },
     inputs: [
       {
@@ -6829,7 +7446,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Нить',
         icon: 'bloodmagic/vanilla/items/string.png',
       },
-      { ref: 'BM:weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'BM:weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['aaa', 'aba', 'aaa'] },
   },
@@ -6840,9 +7462,15 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'sigil_of_augmented_holding',
       name_en: 'Sigil of Augmented Holding',
       name_ru: 'Sigil of Augmented Holding',
+      icon: 'bloodmagic/items/bloodarsenal/sigil_of_augmented_holding.png',
     },
     inputs: [
-      { ref: 'BM:demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+      {
+        ref: 'BM:demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
       {
         ref: 'BM:masterBloodOrb',
         name_en: 'Master Blood Orb',
@@ -6871,6 +7499,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       { vanilla: 'chest', name_en: 'Chest', name_ru: 'Сундук' },
     ],
@@ -6879,9 +7508,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'sigil_of_lightning', name_en: 'Lightning Sigil', name_ru: 'Lightning Sigil' },
+    output: {
+      ref: 'sigil_of_lightning',
+      name_en: 'Lightning Sigil',
+      name_ru: 'Lightning Sigil',
+      icon: 'bloodmagic/items/bloodarsenal/sigil_of_lightning.png',
+    },
     inputs: [
-      { ref: 'blood_stone', name_en: 'Demonic Blood Stone', name_ru: 'Demonic Blood Stone' },
+      {
+        ref: 'blood_stone',
+        name_en: 'Demonic Blood Stone',
+        name_ru: 'Demonic Blood Stone',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+      },
       {
         vanilla: 'iron_block',
         name_en: 'Iron Block',
@@ -6892,6 +7531,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_infused_iron_block',
         name_en: 'Blood Infused Iron Block',
         name_ru: 'Blood Infused Iron Block',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_iron_block.png',
       },
       {
         ref: 'BM:baseItems',
@@ -6911,7 +7551,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Кровавый шар архимага',
         icon: 'bloodmagic/items/alchemicalwizardry/ArchmageBloodOrb.png',
       },
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['aba', 'cdc', 'efg'] },
   },
@@ -6922,9 +7567,15 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'glass_sacrificial_dagger',
       name_en: 'Glass Sacrificial Dagger',
       name_ru: 'Glass Sacrificial Dagger',
+      icon: 'bloodmagic/items/bloodarsenal/glass_sacrificial_dagger.png',
     },
     inputs: [
-      { ref: 'glass_shard', name_en: 'Glass Shard', name_ru: 'Glass Shard' },
+      {
+        ref: 'glass_shard',
+        name_en: 'Glass Shard',
+        name_ru: 'Glass Shard',
+        icon: 'bloodmagic/items/bloodarsenal/glass_shard.png',
+      },
       {
         ref: 'BM:sacrificialDagger',
         name_en: 'Sacrificial Knife',
@@ -6935,6 +7586,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'BM:magicianBloodOrb',
@@ -6952,9 +7604,15 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'glass_dagger_of_sacrifice',
       name_en: 'Glass Dagger of Sacrifice',
       name_ru: 'Glass Dagger of Sacrifice',
+      icon: 'bloodmagic/items/bloodarsenal/glass_dagger_of_sacrifice.png',
     },
     inputs: [
-      { ref: 'glass_shard', name_en: 'Glass Shard', name_ru: 'Glass Shard' },
+      {
+        ref: 'glass_shard',
+        name_en: 'Glass Shard',
+        name_ru: 'Glass Shard',
+        icon: 'bloodmagic/items/bloodarsenal/glass_shard.png',
+      },
       {
         ref: 'BM:daggerOfSacrifice',
         name_en: 'Dagger of Sacrifice',
@@ -6965,6 +7623,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'BM:magicianBloodOrb',
@@ -6978,9 +7637,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'glass_helmet', name_en: 'Glass Helmet', name_ru: 'Glass Helmet' },
+    output: {
+      ref: 'glass_helmet',
+      name_en: 'Glass Helmet',
+      name_ru: 'Glass Helmet',
+      icon: 'bloodmagic/items/bloodarsenal/glass_helmet.png',
+    },
     inputs: [
-      { ref: 'glass_shard', name_en: 'Glass Shard', name_ru: 'Glass Shard' },
+      {
+        ref: 'glass_shard',
+        name_en: 'Glass Shard',
+        name_ru: 'Glass Shard',
+        icon: 'bloodmagic/items/bloodarsenal/glass_shard.png',
+      },
       {
         ref: 'BM:apprenticeBloodOrb',
         name_en: 'Apprentice Blood Orb',
@@ -6993,9 +7662,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'glass_chestplate', name_en: 'Glass Chestplate', name_ru: 'Glass Chestplate' },
+    output: {
+      ref: 'glass_chestplate',
+      name_en: 'Glass Chestplate',
+      name_ru: 'Glass Chestplate',
+      icon: 'bloodmagic/items/bloodarsenal/glass_chestplate.png',
+    },
     inputs: [
-      { ref: 'glass_shard', name_en: 'Glass Shard', name_ru: 'Glass Shard' },
+      {
+        ref: 'glass_shard',
+        name_en: 'Glass Shard',
+        name_ru: 'Glass Shard',
+        icon: 'bloodmagic/items/bloodarsenal/glass_shard.png',
+      },
       {
         ref: 'BM:apprenticeBloodOrb',
         name_en: 'Apprentice Blood Orb',
@@ -7008,9 +7687,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'glass_leggings', name_en: 'Glass Leggings', name_ru: 'Glass Leggings' },
+    output: {
+      ref: 'glass_leggings',
+      name_en: 'Glass Leggings',
+      name_ru: 'Glass Leggings',
+      icon: 'bloodmagic/items/bloodarsenal/glass_leggings.png',
+    },
     inputs: [
-      { ref: 'glass_shard', name_en: 'Glass Shard', name_ru: 'Glass Shard' },
+      {
+        ref: 'glass_shard',
+        name_en: 'Glass Shard',
+        name_ru: 'Glass Shard',
+        icon: 'bloodmagic/items/bloodarsenal/glass_shard.png',
+      },
       {
         ref: 'BM:apprenticeBloodOrb',
         name_en: 'Apprentice Blood Orb',
@@ -7023,9 +7712,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'glass_boots', name_en: 'Glass Boots', name_ru: 'Glass Boots' },
+    output: {
+      ref: 'glass_boots',
+      name_en: 'Glass Boots',
+      name_ru: 'Glass Boots',
+      icon: 'bloodmagic/items/bloodarsenal/glass_boots.png',
+    },
     inputs: [
-      { ref: 'glass_shard', name_en: 'Glass Shard', name_ru: 'Glass Shard' },
+      {
+        ref: 'glass_shard',
+        name_en: 'Glass Shard',
+        name_ru: 'Glass Shard',
+        icon: 'bloodmagic/items/bloodarsenal/glass_shard.png',
+      },
       {
         ref: 'BM:apprenticeBloodOrb',
         name_en: 'Apprentice Blood Orb',
@@ -7044,6 +7743,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_stained_glass',
         name_en: 'Blood Stained Glass',
         name_ru: 'Blood Stained Glass',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stained_glass.png',
       },
       {
         vanilla: 'glass',
@@ -7061,6 +7761,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_burned_string',
         name_en: 'Blood Burned String',
         name_ru: 'Blood Burned String',
+        icon: 'bloodmagic/items/bloodarsenal/blood_burned_string.png',
       },
       {
         ref: 'BM:divinationSigil',
@@ -7078,12 +7779,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'life_imbued_helmet',
       name_en: 'Life Imbued Helmet',
       name_ru: 'Life Imbued Helmet',
+      icon: 'bloodmagic/items/bloodarsenal/life_imbued_helmet.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'BM:magicianBloodOrb',
@@ -7107,12 +7810,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'life_imbued_chestplate',
       name_en: 'Life Imbued Chestplate',
       name_ru: 'Life Imbued Chestplate',
+      icon: 'bloodmagic/items/bloodarsenal/life_imbued_chestplate.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'BM:magicianBloodOrb',
@@ -7136,12 +7841,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'life_imbued_leggings',
       name_en: 'Life Imbued Leggings',
       name_ru: 'Life Imbued Leggings',
+      icon: 'bloodmagic/items/bloodarsenal/life_imbued_leggings.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'BM:magicianBloodOrb',
@@ -7165,12 +7872,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'life_imbued_boots',
       name_en: 'Life Imbued Boots',
       name_ru: 'Life Imbued Boots',
+      icon: 'bloodmagic/items/bloodarsenal/life_imbued_boots.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'BM:magicianBloodOrb',
@@ -7190,9 +7899,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'vampire_ring', name_en: 'Vampire Ring', name_ru: 'Vampire Ring' },
+    output: {
+      ref: 'vampire_ring',
+      name_en: 'Vampire Ring',
+      name_ru: 'Vampire Ring',
+      icon: 'bloodmagic/items/bloodarsenal/vampire_ring.png',
+    },
     inputs: [
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
       {
         vanilla: 'stone',
         name_en: 'Stone',
@@ -7215,14 +7934,21 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'sacrifice_amulet',
       name_en: 'Amulet of Sacrifice',
       name_ru: 'Amulet of Sacrifice',
+      icon: 'bloodmagic/items/bloodarsenal/sacrifice_amulet.png',
     },
     inputs: [
       {
         ref: 'blood_burned_string',
         name_en: 'Blood Burned String',
         name_ru: 'Blood Burned String',
+        icon: 'bloodmagic/items/bloodarsenal/blood_burned_string.png',
       },
-      { ref: 'BM:weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'BM:weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
       {
         vanilla: 'gold_ingot',
         name_en: 'Gold Ingot',
@@ -7239,14 +7965,21 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'self_sacrifice_amulet',
       name_en: 'Amulet of Self Sacrifice',
       name_ru: 'Amulet of Self Sacrifice',
+      icon: 'bloodmagic/items/bloodarsenal/self_sacrifice_amulet.png',
     },
     inputs: [
       {
         ref: 'blood_burned_string',
         name_en: 'Blood Burned String',
         name_ru: 'Blood Burned String',
+        icon: 'bloodmagic/items/bloodarsenal/blood_burned_string.png',
       },
-      { ref: 'BM:weakBloodOrb', name_en: 'Weak Blood Orb', name_ru: 'Слабый кровавый шар' },
+      {
+        ref: 'BM:weakBloodOrb',
+        name_en: 'Weak Blood Orb',
+        name_ru: 'Слабый кровавый шар',
+        icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
+      },
       {
         vanilla: 'glowstone_dust',
         name_en: 'Glowstone Dust',
@@ -7269,6 +8002,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_infused_glowstone_dust',
         name_en: 'Blood Infused Glowstone Dust',
         name_ru: 'Blood Infused Glowstone Dust',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_glowstone_dust.png',
       },
       {
         vanilla: 'blaze_rod',
@@ -7286,6 +8020,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'self_sacrifice_amulet',
         name_en: 'Amulet of Self Sacrifice',
         name_ru: 'Amulet of Self Sacrifice',
+        icon: 'bloodmagic/items/bloodarsenal/self_sacrifice_amulet.png',
       },
       {
         vanilla: 'glowstone',
@@ -7293,7 +8028,12 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Светящийся камень',
         icon: 'bloodmagic/vanilla/blocks/glowstone.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['aba', 'cdc', 'ecf'] },
   },
@@ -7310,6 +8050,7 @@ export const RECIPES: readonly Recipe[] = [
         ref: 'blood_infused_glowstone_dust',
         name_en: 'Blood Infused Glowstone Dust',
         name_ru: 'Blood Infused Glowstone Dust',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_glowstone_dust.png',
       },
       {
         vanilla: 'blaze_rod',
@@ -7323,21 +8064,36 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Руна жертвоприношения',
         icon: 'bloodmagic/blocks/alchemicalwizardry/RuneOfSacrifice.png',
       },
-      { ref: 'sacrifice_amulet', name_en: 'Amulet of Sacrifice', name_ru: 'Amulet of Sacrifice' },
+      {
+        ref: 'sacrifice_amulet',
+        name_en: 'Amulet of Sacrifice',
+        name_ru: 'Amulet of Sacrifice',
+        icon: 'bloodmagic/items/bloodarsenal/sacrifice_amulet.png',
+      },
       {
         vanilla: 'gold_block',
         name_en: 'Gold Block',
         name_ru: 'Gold Block',
         icon: 'bloodmagic/vanilla/blocks/gold_block.png',
       },
-      { ref: 'amorphic_catalyst', name_en: 'Amorphic Catalyst', name_ru: 'Amorphic Catalyst' },
+      {
+        ref: 'amorphic_catalyst',
+        name_en: 'Amorphic Catalyst',
+        name_ru: 'Amorphic Catalyst',
+        icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['aba', 'cdc', 'ecf'] },
   },
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_stone', name_en: 'Blank Blood Stone', name_ru: 'Blank Blood Stone' },
+    output: {
+      ref: 'blood_stone',
+      name_en: 'Blank Blood Stone',
+      name_ru: 'Blank Blood Stone',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+    },
     inputs: [
       {
         ref: 'BM:blankSlate',
@@ -7355,6 +8111,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_stone',
       name_en: 'Reinforced Blood Stone',
       name_ru: 'Reinforced Blood Stone',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
     },
     inputs: [
       {
@@ -7369,15 +8126,39 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_stone', name_en: 'Imbued Blood Stone', name_ru: 'Imbued Blood Stone' },
-    inputs: [{ ref: 'BM:imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' }],
+    output: {
+      ref: 'blood_stone',
+      name_en: 'Imbued Blood Stone',
+      name_ru: 'Imbued Blood Stone',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+    },
+    inputs: [
+      {
+        ref: 'BM:imbuedSlate',
+        name_en: 'Imbued Slate',
+        name_ru: 'Пропитанная плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+      },
+    ],
     meta: { type: 'shaped', shape: ['aaa', 'aaa', 'aaa'] },
   },
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_stone', name_en: 'Demonic Blood Stone', name_ru: 'Demonic Blood Stone' },
-    inputs: [{ ref: 'BM:demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' }],
+    output: {
+      ref: 'blood_stone',
+      name_en: 'Demonic Blood Stone',
+      name_ru: 'Demonic Blood Stone',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+    },
+    inputs: [
+      {
+        ref: 'BM:demonicSlate',
+        name_en: 'Demonic Slate',
+        name_ru: 'Демоническая плитка',
+        icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+      },
+    ],
     meta: { type: 'shaped', shape: ['aaa', 'aaa', 'aaa'] },
   },
   {
@@ -7387,6 +8168,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_stone',
       name_en: 'Ethereal Blood Stone',
       name_ru: 'Ethereal Blood Stone',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
     },
     inputs: [
       {
@@ -7405,12 +8187,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_iron_block',
       name_en: 'Blood Infused Iron Block',
       name_ru: 'Blood Infused Iron Block',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_iron_block.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
     ],
     meta: { type: 'shaped', shape: ['aaa', 'aaa', 'aaa'] },
@@ -7422,9 +8206,15 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_stained_ice_packed',
       name_en: 'Blood Stained Packed Ice',
       name_ru: 'Blood Stained Packed Ice',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_stained_ice_packed.png',
     },
     inputs: [
-      { ref: 'blood_stained_ice', name_en: 'Blood Stained Ice', name_ru: 'Blood Stained Ice' },
+      {
+        ref: 'blood_stained_ice',
+        name_en: 'Blood Stained Ice',
+        name_ru: 'Blood Stained Ice',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stained_ice.png',
+      },
     ],
     meta: { type: 'shaped', shape: ['aa', 'aa'] },
   },
@@ -7435,12 +8225,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_glowstone',
       name_en: 'Blood Infused Glowstone',
       name_ru: 'Blood Infused Glowstone',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_glowstone.png',
     },
     inputs: [
       {
         ref: 'blood_infused_glowstone_dust',
         name_en: 'Blood Infused Glowstone Dust',
         name_ru: 'Blood Infused Glowstone Dust',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_glowstone_dust.png',
       },
     ],
     meta: { type: 'shaped', shape: ['aa', 'aa'] },
@@ -7448,22 +8240,30 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_lamp', name_en: 'Blood Lamp', name_ru: 'Blood Lamp' },
+    output: {
+      ref: 'blood_lamp',
+      name_en: 'Blood Lamp',
+      name_ru: 'Blood Lamp',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_lamp.png',
+    },
     inputs: [
       {
         ref: 'blood_infused_iron',
         name_en: 'Blood Infused Iron Ingot',
         name_ru: 'Blood Infused Iron Ingot',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
       },
       {
         ref: 'blood_stained_glass',
         name_en: 'Blood Stained Glass',
         name_ru: 'Blood Stained Glass',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stained_glass.png',
       },
       {
         ref: 'blood_infused_glowstone',
         name_en: 'Blood Infused Glowstone',
         name_ru: 'Blood Infused Glowstone',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_glowstone.png',
       },
     ],
     meta: { type: 'shaped', shape: ['aba', 'bcb', 'aba'] },
@@ -7475,22 +8275,39 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_diamond_block',
       name_en: 'Blood Infused Diamond Block',
       name_ru: 'Blood Infused Diamond Block',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_diamond_block.png',
     },
     inputs: [
-      { ref: 'blood_infused_diamond_bound', name_en: 'Bound Diamond', name_ru: 'Bound Diamond' },
+      {
+        ref: 'blood_infused_diamond_bound',
+        name_en: 'Bound Diamond',
+        name_ru: 'Bound Diamond',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
+      },
     ],
     meta: { type: 'shaped', shape: ['aaa', 'aaa', 'aaa'] },
   },
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_torch', name_en: 'Blood Torch', name_ru: 'Blood Torch' },
+    output: {
+      ref: 'blood_torch',
+      name_en: 'Blood Torch',
+      name_ru: 'Blood Torch',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_torch.png',
+    },
     inputs: [
-      { ref: 'bound_igniter', name_en: 'Bound Igniter', name_ru: 'Bound Igniter' },
+      {
+        ref: 'bound_igniter',
+        name_en: 'Bound Igniter',
+        name_ru: 'Bound Igniter',
+        icon: 'bloodmagic/items/bloodarsenal/bound_igniter.png',
+      },
       {
         ref: 'blood_infused_stick',
         name_en: 'Blood Infused Stick',
         name_ru: 'Blood Infused Stick',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_stick.png',
       },
     ],
     meta: { type: 'shaped', shape: ['a', 'b'] },
@@ -7502,12 +8319,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_stick',
       name_en: 'Blood Infused Stick',
       name_ru: 'Blood Infused Stick',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_stick.png',
     },
     inputs: [
       {
         ref: 'blood_infused_planks',
         name_en: 'Blood Infused Wooden Plank',
         name_ru: 'Blood Infused Wooden Plank',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_planks.png',
       },
     ],
     meta: { type: 'shaped', shape: ['a', 'a'] },
@@ -7519,17 +8338,20 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_pickaxe_wood',
       name_en: 'Blood Infused Wooden Pickaxe',
       name_ru: 'Blood Infused Wooden Pickaxe',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_pickaxe_wood.png',
     },
     inputs: [
       {
         ref: 'blood_infused_planks',
         name_en: 'Blood Infused Wooden Plank',
         name_ru: 'Blood Infused Wooden Plank',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_planks.png',
       },
       {
         ref: 'blood_infused_stick',
         name_en: 'Blood Infused Stick',
         name_ru: 'Blood Infused Stick',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_stick.png',
       },
     ],
     meta: { type: 'shaped', shape: ['aaa', ' b ', ' b '] },
@@ -7541,17 +8363,20 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_axe_wood',
       name_en: 'Blood Infused Wooden Axe',
       name_ru: 'Blood Infused Wooden Axe',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_axe_wood.png',
     },
     inputs: [
       {
         ref: 'blood_infused_planks',
         name_en: 'Blood Infused Wooden Plank',
         name_ru: 'Blood Infused Wooden Plank',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_planks.png',
       },
       {
         ref: 'blood_infused_stick',
         name_en: 'Blood Infused Stick',
         name_ru: 'Blood Infused Stick',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_stick.png',
       },
     ],
     meta: { type: 'shaped', shape: ['aa ', 'ab ', ' b '] },
@@ -7563,17 +8388,20 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_shovel_wood',
       name_en: 'Blood Infused Wooden Shovel',
       name_ru: 'Blood Infused Wooden Shovel',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_shovel_wood.png',
     },
     inputs: [
       {
         ref: 'blood_infused_planks',
         name_en: 'Blood Infused Wooden Plank',
         name_ru: 'Blood Infused Wooden Plank',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_planks.png',
       },
       {
         ref: 'blood_infused_stick',
         name_en: 'Blood Infused Stick',
         name_ru: 'Blood Infused Stick',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_stick.png',
       },
     ],
     meta: { type: 'shaped', shape: [' a ', ' b ', ' b '] },
@@ -7585,17 +8413,20 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_sword_wood',
       name_en: 'Blood Infused Wooden Sword',
       name_ru: 'Blood Infused Wooden Sword',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_sword_wood.png',
     },
     inputs: [
       {
         ref: 'blood_infused_planks',
         name_en: 'Blood Infused Wooden Plank',
         name_ru: 'Blood Infused Wooden Plank',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_planks.png',
       },
       {
         ref: 'blood_infused_stick',
         name_en: 'Blood Infused Stick',
         name_ru: 'Blood Infused Stick',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_stick.png',
       },
     ],
     meta: { type: 'shaped', shape: [' a ', ' a ', ' b '] },
@@ -7603,22 +8434,58 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_money', name_en: 'Blood Money x4', name_ru: 'Blood Money x4' },
-    inputs: [{ ref: 'blood_money', name_en: 'Blood Money x1', name_ru: 'Blood Money x1' }],
+    output: {
+      ref: 'blood_money',
+      name_en: 'Blood Money x4',
+      name_ru: 'Blood Money x4',
+      icon: 'bloodmagic/items/bloodarsenal/blood_money1.png',
+    },
+    inputs: [
+      {
+        ref: 'blood_money',
+        name_en: 'Blood Money x1',
+        name_ru: 'Blood Money x1',
+        icon: 'bloodmagic/items/bloodarsenal/blood_money1.png',
+      },
+    ],
     meta: { type: 'shaped', shape: ['aa', 'aa'] },
   },
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_money', name_en: 'Blood Money x16', name_ru: 'Blood Money x16' },
-    inputs: [{ ref: 'blood_money', name_en: 'Blood Money x4', name_ru: 'Blood Money x4' }],
+    output: {
+      ref: 'blood_money',
+      name_en: 'Blood Money x16',
+      name_ru: 'Blood Money x16',
+      icon: 'bloodmagic/items/bloodarsenal/blood_money1.png',
+    },
+    inputs: [
+      {
+        ref: 'blood_money',
+        name_en: 'Blood Money x4',
+        name_ru: 'Blood Money x4',
+        icon: 'bloodmagic/items/bloodarsenal/blood_money1.png',
+      },
+    ],
     meta: { type: 'shaped', shape: ['aa', 'aa'] },
   },
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'blood_money', name_en: 'Blood Money x64', name_ru: 'Blood Money x64' },
-    inputs: [{ ref: 'blood_money', name_en: 'Blood Money x16', name_ru: 'Blood Money x16' }],
+    output: {
+      ref: 'blood_money',
+      name_en: 'Blood Money x64',
+      name_ru: 'Blood Money x64',
+      icon: 'bloodmagic/items/bloodarsenal/blood_money1.png',
+    },
+    inputs: [
+      {
+        ref: 'blood_money',
+        name_en: 'Blood Money x16',
+        name_ru: 'Blood Money x16',
+        icon: 'bloodmagic/items/bloodarsenal/blood_money1.png',
+      },
+    ],
     meta: { type: 'shaped', shape: ['aa', 'aa'] },
   },
   {
@@ -7628,9 +8495,15 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_planks',
       name_en: 'Blood Infused Wooden Plank',
       name_ru: 'Blood Infused Wooden Plank',
+      icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_planks.png',
     },
     inputs: [
-      { ref: 'blood_infused_wood', name_en: 'Blood Infused Wood', name_ru: 'Blood Infused Wood' },
+      {
+        ref: 'blood_infused_wood',
+        name_en: 'Blood Infused Wood',
+        name_ru: 'Blood Infused Wood',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_wood.png',
+      },
     ],
     meta: { type: 'shapeless', shape: null },
   },
@@ -7643,7 +8516,14 @@ export const RECIPES: readonly Recipe[] = [
       name_ru: 'Чистая плитка',
       icon: 'bloodmagic/items/alchemicalwizardry/BlankSlate.png',
     },
-    inputs: [{ ref: 'blood_stone', name_en: 'Blank Blood Stone', name_ru: 'Blank Blood Stone' }],
+    inputs: [
+      {
+        ref: 'blood_stone',
+        name_en: 'Blank Blood Stone',
+        name_ru: 'Blank Blood Stone',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+      },
+    ],
     meta: { type: 'shapeless', shape: null },
   },
   {
@@ -7656,23 +8536,50 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/ReinforcedSlate.png',
     },
     inputs: [
-      { ref: 'blood_stone', name_en: 'Reinforced Blood Stone', name_ru: 'Reinforced Blood Stone' },
+      {
+        ref: 'blood_stone',
+        name_en: 'Reinforced Blood Stone',
+        name_ru: 'Reinforced Blood Stone',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+      },
     ],
     meta: { type: 'shapeless', shape: null },
   },
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'BM:imbuedSlate', name_en: 'Imbued Slate', name_ru: 'Пропитанная плитка' },
-    inputs: [{ ref: 'blood_stone', name_en: 'Imbued Blood Stone', name_ru: 'Imbued Blood Stone' }],
+    output: {
+      ref: 'BM:imbuedSlate',
+      name_en: 'Imbued Slate',
+      name_ru: 'Пропитанная плитка',
+      icon: 'bloodmagic/items/alchemicalwizardry/InfusedSlate.png',
+    },
+    inputs: [
+      {
+        ref: 'blood_stone',
+        name_en: 'Imbued Blood Stone',
+        name_ru: 'Imbued Blood Stone',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+      },
+    ],
     meta: { type: 'shapeless', shape: null },
   },
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'BM:demonicSlate', name_en: 'Demonic Slate', name_ru: 'Демоническая плитка' },
+    output: {
+      ref: 'BM:demonicSlate',
+      name_en: 'Demonic Slate',
+      name_ru: 'Демоническая плитка',
+      icon: 'bloodmagic/items/alchemicalwizardry/DemonSlate.png',
+    },
     inputs: [
-      { ref: 'blood_stone', name_en: 'Demonic Blood Stone', name_ru: 'Demonic Blood Stone' },
+      {
+        ref: 'blood_stone',
+        name_en: 'Demonic Blood Stone',
+        name_ru: 'Demonic Blood Stone',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+      },
     ],
     meta: { type: 'shapeless', shape: null },
   },
@@ -7686,7 +8593,12 @@ export const RECIPES: readonly Recipe[] = [
       icon: 'bloodmagic/items/alchemicalwizardry/baseItemEtherealSlate.png',
     },
     inputs: [
-      { ref: 'blood_stone', name_en: 'Ethereal Blood Stone', name_ru: 'Ethereal Blood Stone' },
+      {
+        ref: 'blood_stone',
+        name_en: 'Ethereal Blood Stone',
+        name_ru: 'Ethereal Blood Stone',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_stone_1.png',
+      },
     ],
     meta: { type: 'shapeless', shape: null },
   },
@@ -7697,6 +8609,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'amorphic_catalyst',
       name_en: 'Amorphic Catalyst',
       name_ru: 'Amorphic Catalyst',
+      icon: 'bloodmagic/items/bloodarsenal/amorphic_catalyst.png',
     },
     inputs: [
       {
@@ -7763,12 +8676,14 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_iron',
       name_en: 'Blood Infused Iron Ingot',
       name_ru: 'Blood Infused Iron Ingot',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_iron.png',
     },
     inputs: [
       {
         ref: 'blood_infused_iron_block',
         name_en: 'Blood Infused Iron Block',
         name_ru: 'Blood Infused Iron Block',
+        icon: 'bloodmagic/blocks/bloodarsenal/blood_infused_iron_block.png',
       },
     ],
     meta: { type: 'shapeless', shape: null },
@@ -7776,9 +8691,19 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'crafting',
     addon: 'bloodarsenal',
-    output: { ref: 'orange_juice', name_en: 'Orange Juice', name_ru: 'Orange Juice' },
+    output: {
+      ref: 'orange_juice',
+      name_en: 'Orange Juice',
+      name_ru: 'Orange Juice',
+      icon: 'bloodmagic/items/bloodarsenal/orange_juice.png',
+    },
     inputs: [
-      { ref: 'blood_orange', name_en: 'Blood Orange', name_ru: 'Blood Orange' },
+      {
+        ref: 'blood_orange',
+        name_en: 'Blood Orange',
+        name_ru: 'Blood Orange',
+        icon: 'bloodmagic/items/bloodarsenal/blood_orange.png',
+      },
       {
         vanilla: 'glass_bottle',
         name_en: 'Glass Bottle',
@@ -7795,6 +8720,7 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'juice_and_cookies',
       name_en: 'Juice and Cookies',
       name_ru: 'Juice and Cookies',
+      icon: 'bloodmagic/items/bloodarsenal/juice_and_cookies.png',
     },
     inputs: [
       {
@@ -7803,20 +8729,42 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Печенье',
         icon: 'bloodmagic/vanilla/items/cookie.png',
       },
-      { ref: 'orange_juice', name_en: 'Orange Juice', name_ru: 'Orange Juice' },
+      {
+        ref: 'orange_juice',
+        name_en: 'Orange Juice',
+        name_ru: 'Orange Juice',
+        icon: 'bloodmagic/items/bloodarsenal/orange_juice.png',
+      },
     ],
     meta: { type: 'shapeless', shape: null },
   },
   {
     source: 'binding',
     addon: 'bloodarsenal',
-    output: { ref: 'bound_bow', name_en: 'Bound Bow', name_ru: 'Bound Bow' },
-    inputs: [{ vanilla: 'bow', name_en: 'Bow', name_ru: 'Лук' }],
+    output: {
+      ref: 'bound_bow',
+      name_en: 'Bound Bow',
+      name_ru: 'Bound Bow',
+      icon: 'bloodmagic/items/bloodarsenal/bound_bow.png',
+    },
+    inputs: [
+      {
+        vanilla: 'bow',
+        name_en: 'Bow',
+        name_ru: 'Лук',
+        icon: 'bloodmagic/vanilla/items/bow_pulling_0.png',
+      },
+    ],
   },
   {
     source: 'binding',
     addon: 'bloodarsenal',
-    output: { ref: 'bound_sickle', name_en: 'Bound Sickle', name_ru: 'Bound Sickle' },
+    output: {
+      ref: 'bound_sickle',
+      name_en: 'Bound Sickle',
+      name_ru: 'Bound Sickle',
+      icon: 'bloodmagic/items/bloodarsenal/bound_sickle.png',
+    },
     inputs: [
       {
         vanilla: 'diamond_hoe',
@@ -7829,7 +8777,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'binding',
     addon: 'bloodarsenal',
-    output: { ref: 'bound_shears', name_en: 'Bound Shears', name_ru: 'Bound Shears' },
+    output: {
+      ref: 'bound_shears',
+      name_en: 'Bound Shears',
+      name_ru: 'Bound Shears',
+      icon: 'bloodmagic/items/bloodarsenal/bound_shears.png',
+    },
     inputs: [
       {
         vanilla: 'shears',
@@ -7846,19 +8799,26 @@ export const RECIPES: readonly Recipe[] = [
       ref: 'blood_infused_diamond_bound',
       name_en: 'Bound Diamond',
       name_ru: 'Bound Diamond',
+      icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_bound.png',
     },
     inputs: [
       {
         ref: 'blood_infused_diamond_active',
         name_en: 'Blood Infused Diamond (Active)',
         name_ru: 'Blood Infused Diamond (Active)',
+        icon: 'bloodmagic/items/bloodarsenal/blood_infused_diamond_active.png',
       },
     ],
   },
   {
     source: 'binding',
     addon: 'bloodarsenal',
-    output: { ref: 'bound_igniter', name_en: 'Bound Igniter', name_ru: 'Bound Igniter' },
+    output: {
+      ref: 'bound_igniter',
+      name_en: 'Bound Igniter',
+      name_ru: 'Bound Igniter',
+      icon: 'bloodmagic/items/bloodarsenal/bound_igniter.png',
+    },
     inputs: [
       {
         vanilla: 'flint_and_steel',
@@ -7871,7 +8831,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'binding',
     addon: 'bloodarsenal',
-    output: { ref: 'vampire_cape', name_en: 'Vampire Cape', name_ru: 'Vampire Cape' },
+    output: {
+      ref: 'vampire_cape',
+      name_en: 'Vampire Cape',
+      name_ru: 'Vampire Cape',
+      icon: 'bloodmagic/items/bloodarsenal/vampire_cape.png',
+    },
     inputs: [
       {
         vanilla: 'leather_chestplate',
@@ -7885,7 +8850,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'binding',
     addon: 'bloodarsenal',
-    output: { ref: 'vampire_greaves', name_en: 'Vampire Greaves', name_ru: 'Vampire Greaves' },
+    output: {
+      ref: 'vampire_greaves',
+      name_en: 'Vampire Greaves',
+      name_ru: 'Vampire Greaves',
+      icon: 'bloodmagic/items/bloodarsenal/vampire_greaves.png',
+    },
     inputs: [
       {
         vanilla: 'leather_leggings',
@@ -7899,7 +8869,12 @@ export const RECIPES: readonly Recipe[] = [
   {
     source: 'binding',
     addon: 'bloodarsenal',
-    output: { ref: 'vampire_boots', name_en: 'Vampire Boots', name_ru: 'Vampire Boots' },
+    output: {
+      ref: 'vampire_boots',
+      name_en: 'Vampire Boots',
+      name_ru: 'Vampire Boots',
+      icon: 'bloodmagic/items/bloodarsenal/vampire_boots.png',
+    },
     inputs: [
       {
         vanilla: 'leather_boots',

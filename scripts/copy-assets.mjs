@@ -26,6 +26,9 @@ const DIRS = [
   ['vanilla/textures/blocks', 'public/bloodmagic/vanilla/blocks'],
   // OBJ-модель Кровавого алтаря из мода (точная геометрия, не куб)
   ['bloodmagic/models', 'public/bloodmagic/models'],
+  // BloodArsenal — иконки предметов и блоков (хранятся рядом с Thaumcraft для удобства)
+  ['thaumcraft/textures/items/bloodarsenal', 'public/bloodmagic/items/bloodarsenal'],
+  ['thaumcraft/textures/blocks/bloodarsenal', 'public/bloodmagic/blocks/bloodarsenal'],
 ]
 const FILES = [
   ['bees/mockups/beeCombs.0.png', 'public/bees/beeCombs.0.png'],

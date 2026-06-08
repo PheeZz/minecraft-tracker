@@ -44,7 +44,22 @@ const normName = (s) =>
     .toLowerCase()
     .replace(/[^a-z0-9]/g, '')
 
+// Убираем BM:-префикс (BloodArsenal refs на BM-предметы вида BM:weakBloodOrb)
+const stripBmPrefix = (ref) => (typeof ref === 'string' ? ref.replace(/^BM:/, '') : ref)
+
+// Убираем item/block-префикс из camelCase ref (itemBloodPack → BloodPack, blockMasterStone → MasterStone)
+const stripTypePrefix = (ref) =>
+  typeof ref === 'string' ? ref.replace(/^(item|block)([A-Z])/, (_, _p, c) => c.toLowerCase()) : ref
+
+// Заменяет "teleposition" → "teleposer" в нормализованном ключе:
+// refs в данных используют слово Teleposition, а файлы иконок BM называются Teleposer
+const normTeleposer = (key) => key.replace('teleposition', 'teleposer')
+
+// Карта: нормализованный ref → путь иконки в public/.
+// Приоритет: bloodmagic (BM мод) > bloodarsenal (BA мод из thaumcraft/textures).
 const TEX = new Map()
+
+// Сначала сканируем BM текстуры (items и blocks, все подпапки)
 for (const kind of ['items', 'blocks']) {
   const base = resolve(root, 'bloodmagic/textures', kind)
   for (const mod of readdirSync(base)) {
@@ -56,6 +71,116 @@ for (const kind of ['items', 'blocks']) {
       if (!TEX.has(key)) TEX.set(key, `bloodmagic/${kind}/${mod}/${f}`)
     }
   }
+}
+
+// Затем сканируем BloodArsenal текстуры из thaumcraft/textures/bloodarsenal
+// (copy-assets.mjs копирует их в public/bloodmagic/{items,blocks}/bloodarsenal/)
+for (const kind of ['items', 'blocks']) {
+  const base = resolve(root, 'thaumcraft/textures', kind, 'bloodarsenal')
+  let files = []
+  try {
+    files = readdirSync(base)
+  } catch {
+    continue
+  }
+  for (const f of files) {
+    if (!f.endsWith('.png')) continue
+    const key = normName(f.slice(0, -4))
+    // BA-текстуры добавляем только если BM-текстура с тем же ключом отсутствует
+    if (!TEX.has(key)) TEX.set(key, `bloodmagic/${kind}/bloodarsenal/${f}`)
+  }
+}
+
+// Маппинг reg-кода baseAlchemyItems → имя файла иконки
+// (meta-предметы: каждый вариант имеет поле reg в данных)
+const ALCHEMY_ITEM_REG_ICON = {
+  Praesidium: 'baseAlchemyItemPraesidium.png',
+  Offensa: 'baseAlchemyItemOffensa.png',
+  OrbisTerrae: 'baseAlchemyItemOrbisTerrae.png',
+  StrengthenedCatalyst: 'baseAlchemyItemStrengthenedCatalyst.png',
+  ConcentratedCatalyst: 'baseAlchemyItemConcentratedCatalyst.png',
+  FracturedBone: 'baseAlchemyItemFracturedBone.png',
+  Virtus: 'baseAlchemyItemVirtus.png',
+  Reductus: 'baseAlchemyItemReductus.png',
+  Potentia: 'baseAlchemyItemPotentia.png',
+}
+
+// Ручной маппинг ref → {kind, file} для случаев, где нормализованное имя ref
+// не совпадает с именем текстурного файла (разный порядок слов, синонимы).
+// kind: 'items' или 'blocks'
+const REF_ICON_MAP = {
+  // Шары крови
+  weakBloodOrb: { kind: 'items', mod: 'alchemicalwizardry', file: 'WeakBloodOrb.png' },
+  // Слейты (в BM: "Infused" = "Imbued", "Demon" = "Demonic")
+  imbuedSlate: { kind: 'items', mod: 'alchemicalwizardry', file: 'InfusedSlate.png' },
+  demonicSlate: { kind: 'items', mod: 'alchemicalwizardry', file: 'DemonSlate.png' },
+  // Кристаллы активации (разные уровни используют один ref, но разные meta)
+  activationCrystal: {
+    kind: 'items',
+    mod: 'alchemicalwizardry',
+    file: 'activationCrystalAwakened.png',
+  },
+  // Ведро жизни
+  bucketLife: { kind: 'items', mod: 'alchemicalwizardry', file: 'LifeBucket.png' },
+  // Кристалл заклинаний
+  itemComplexSpellCrystal: { kind: 'items', mod: 'alchemicalwizardry', file: 'ComplexCrystal.png' },
+  // Кровавые руны (BlankRune — базовая текстура рун алтаря)
+  bloodRune: { kind: 'blocks', mod: 'alchemicalwizardry', file: 'BlankRune.png' },
+  // Bound Blade (energySword) — BoundTool.png ближайший визуально
+  energySword: { kind: 'items', mod: 'alchemicalwizardry', file: 'BoundTool.png' },
+  // Блоки
+  blockAltar: { kind: 'blocks', mod: 'alchemicalwizardry', file: 'BloodAltar_Top.png' },
+  blockTeleposer: { kind: 'blocks', mod: 'alchemicalwizardry', file: 'Teleposer_Top.png' },
+  blockHomHeart: { kind: 'blocks', mod: 'alchemicalwizardry', file: 'HomHeart_top.png' },
+  blockCrucible: { kind: 'blocks', mod: 'alchemicalwizardry', file: 'Crucible_Side.png' },
+  blockAlchemicCalcinator: {
+    kind: 'blocks',
+    mod: 'alchemicalwizardry',
+    file: 'AlchemicChemistrySet.png',
+  },
+  armourForge: { kind: 'blocks', mod: 'alchemicalwizardry', file: 'SoulForge.png' },
+  blockMasterStone: { kind: 'blocks', mod: 'alchemicalwizardry', file: 'MasterStone.png' },
+  // Предметы (item prefix dropped)
+  itemDestinationClearer: { kind: 'items', mod: 'alchemicalwizardry', file: 'TankClearer.png' },
+  itemAttunedCrystal: { kind: 'items', mod: 'alchemicalwizardry', file: 'AttunedCrystal1.png' },
+  itemTankSegmenter: { kind: 'items', mod: 'alchemicalwizardry', file: 'TankSegmenter1.png' },
+  itemKeyOfDiablo: { kind: 'items', mod: 'alchemicalwizardry', file: 'DiabloKey.png' },
+  // Soul Compacter — собственная текстура в BA blocks
+  compacter: { kind: 'blocks', mod: 'bloodarsenal', file: 'compacter_side.png' },
+  // Сигилы (порядок слов в ref ≠ порядок слов в имени файла)
+  itemCompressionSigil: {
+    kind: 'items',
+    mod: 'alchemicalwizardry',
+    file: 'CompressionSigil_activated.png',
+  },
+  sigil_of_divinity: { kind: 'items', mod: 'alchemicalwizardry', file: 'DivinationSigil.png' },
+  sigilOfElementalAffinity: {
+    kind: 'items',
+    mod: 'alchemicalwizardry',
+    file: 'ElementalSigil_activated.png',
+  },
+  itemSigilOfEnderSeverance: {
+    kind: 'items',
+    mod: 'alchemicalwizardry',
+    file: 'SigilOfSeverance_activated.png',
+  },
+  sigilOfHaste: { kind: 'items', mod: 'alchemicalwizardry', file: 'HasteSigil_activated.png' },
+  sigil_of_swimming: { kind: 'items', mod: 'alchemicalwizardry', file: 'WaterSigil.png' },
+  sigilOfTheFastMiner: {
+    kind: 'items',
+    mod: 'alchemicalwizardry',
+    file: 'MiningSigil_activated.png',
+  },
+  sigilOfTheBridge: { kind: 'items', mod: 'alchemicalwizardry', file: 'BridgeSigil_activated.png' },
+  sigilOfWind: { kind: 'items', mod: 'alchemicalwizardry', file: 'WindSigil_activated.png' },
+  // Blood Money — деньги различаются только количеством (используем blood_money1 из BA)
+  blood_money: { kind: 'items', mod: 'bloodarsenal', file: 'blood_money1.png' },
+  // Кровавые камни (разные уровни, одна форма) — берём blood_stone_1 из BA blocks
+  blood_stone: { kind: 'blocks', mod: 'bloodarsenal', file: 'blood_stone_1.png' },
+  // Blood TNT — side-текстура из BA blocks
+  blood_tnt: { kind: 'blocks', mod: 'bloodarsenal', file: 'blood_tnt_side.png' },
+  // LP Materializer — side-текстура из BA blocks
+  lp_materializer: { kind: 'blocks', mod: 'bloodarsenal', file: 'lp_materializer_side.png' },
 }
 
 // Нормализуем пути из item-icon-map.json: textures/{kind}/... → bloodmagic/{kind}/...
@@ -98,20 +223,66 @@ for (const kind of ['items', 'blocks']) {
 
 const unmatched = new Map()
 
+// Ищет иконку по одному ключу в TEX (прямой и teleposer-вариант)
+function texLookup(key) {
+  return TEX.get(key) ?? TEX.get(normTeleposer(key))
+}
+
 function iconFor(o) {
   if (!o || typeof o !== 'object') return undefined
+
+  // 1. Ручная карта по name_en
   if (o.name_en && MANMAP[o.name_en]) return MANMAP[o.name_en]
+
+  // 2. Ванильные текстуры
   if (o.vanilla) {
     if (o.name_en && VANILLA_MAP[o.name_en]) return VANILLA_MAP[o.name_en]
     if (o.name_en) {
       const h = VTEX.get(normName(o.name_en))
       if (h) return h
     }
+    // Fallback по vanilla-ref (строка вида "bow", "chest", "log"):
+    // ищем textures с именем начинающимся на этот ref (bow_standby, log_oak, etc.)
+    if (typeof o.vanilla === 'string' && o.vanilla !== 'true') {
+      const vref = normName(o.vanilla)
+      // Точное совпадение или первый файл с нужным префиксом
+      const exact = VTEX.get(vref)
+      if (exact) return exact
+      for (const [key, path] of VTEX) {
+        if (key.startsWith(vref)) return path
+      }
+    }
   }
+
+  // 3. baseAlchemyItems: резолв по reg-коду (meta-предметы с разными именами)
+  if (o.ref === 'baseAlchemyItems' && o.reg && ALCHEMY_ITEM_REG_ICON[o.reg]) {
+    return `bloodmagic/items/alchemicalwizardry/${ALCHEMY_ITEM_REG_ICON[o.reg]}`
+  }
+
+  // 4. Ручной маппинг ref → файл (случаи, где нормализация имени не совпадает)
+  if (o.ref) {
+    const rawRef = stripBmPrefix(o.ref)
+    const manEntry = REF_ICON_MAP[rawRef]
+    if (manEntry) return `bloodmagic/${manEntry.kind}/${manEntry.mod}/${manEntry.file}`
+  }
+
+  // 5. Поиск по ref (наиболее точный для BM/BA-предметов)
+  if (o.ref) {
+    const rawRef = stripBmPrefix(o.ref)
+    // 5a. Прямой нормализованный ref
+    const h1 = texLookup(normName(rawRef))
+    if (h1) return h1
+    // 5b. Ref без item/block-префикса (itemBloodPack → bloodpack → BloodPack.png)
+    const h2 = texLookup(normName(stripTypePrefix(rawRef)))
+    if (h2) return h2
+  }
+
+  // 6. Поиск по name_en (последний резерв — совпадение имени с именем файла)
   if (o.name_en) {
-    const h = TEX.get(normName(o.name_en))
+    const h = texLookup(normName(o.name_en))
     if (h) return h
   }
+
   if (o.name_en && !unmatched.has(o.name_en))
     unmatched.set(o.name_en, { ref: o.ref ?? null, name_ru: o.name_ru ?? null })
   return undefined
@@ -132,7 +303,7 @@ function toItemRef(o) {
 }
 
 // ---- кровавые шары ----
-// Маппинг field → имя файла иконки (WeakBloodOrb.png физически отсутствует — fallback в ItemIcon)
+// Маппинг field → имя файла иконки
 const ORB_ICON = {
   weakBloodOrb: 'WeakBloodOrb.png',
   apprenticeBloodOrb: 'ApprenticeBloodOrb.png',
