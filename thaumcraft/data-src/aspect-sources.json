@@ -2834,8 +2834,8 @@
         "ref": "Items.field_151101_aQ",
         "meta": null,
         "reg": "cooked_fished",
-        "name_en": "Cooked Fished",
-        "name_ru": "Cooked Fished"
+        "name_en": "Cooked Fish",
+        "name_ru": "Жареная рыба"
       },
       "mod": "Thaumcraft",
       "aspects": {

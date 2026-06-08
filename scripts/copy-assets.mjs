@@ -15,6 +15,9 @@ const DIRS = [
   ['genetics/textures/blocks', 'public/genetics/blocks'],
   ['thaumcraft/textures/items', 'public/thaumcraft/tex/items'],
   ['thaumcraft/textures/blocks', 'public/thaumcraft/tex/blocks'],
+  // ванильные предметы/блоки 1.7.10 — иконки ингредиентов в рецептах/сканах/плавке
+  ['vanilla/textures/items', 'public/thaumcraft/tex/vanilla/items'],
+  ['vanilla/textures/blocks', 'public/thaumcraft/tex/vanilla/blocks'],
 ]
 const FILES = [
   ['bees/mockups/beeCombs.0.png', 'public/bees/beeCombs.0.png'],

@@ -13,6 +13,10 @@ mkdirSync(outDir, { recursive: true })
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1)
 const FALLBACK_COLOR = '#c9a3ff'
 
+// Форматируем вывод проектным .prettierrc (printWidth/trailingComma), иначе
+// дефолты prettier расходятся с ESLint и генерят lint-варнинги в .data.ts.
+const PRETTIER = (await prettier.resolveConfig(resolve(outDir, 'aspects.data.ts'))) ?? {}
+
 // Ручная локализация «кривых» имён (без RU в данных): EN/ключ → RU.
 // Временная карта, пока имена не выверены из JAR. Файл thaumcraft/i18n/name-overrides.json.
 let OVERRIDES = {}
@@ -29,7 +33,7 @@ async function emit(file, header, body) {
   const code = `// АВТОГЕНЕРАЦИЯ (scripts/gen-thaumcraft.mjs). Не редактировать вручную.\n${header}\n${body}\n`
   writeFileSync(
     resolve(outDir, file),
-    await prettier.format(code, { parser: 'typescript', semi: false, singleQuote: true }),
+    await prettier.format(code, { ...PRETTIER, parser: 'typescript' }),
   )
 }
 
@@ -108,12 +112,53 @@ try {
 }
 const unmatched = new Map() // name_en → {ref, name_ru} (для адресной ручной разметки)
 
-// Путь текстуры: ручная карта → ТОЧНЫЙ матч имени файла по EN. ref-эвристику НЕ
-// используем — она конфликтит мета-варианты с общим ref (шарды/сердца големов и т.п.
-// → одна текстура на всех). Несматченное → текст (точность важнее охвата).
+// Ванильные иконки 1.7.10: курируемая карта по EN-имени (правит расхождения reg↔файл,
+// напр. Mossy Cobblestone → cobblestone_mossy) + индекс файлов по basename для прямых
+// совпадений по reg/EN. Пути с префиксом vanilla/ (см. copy-assets → tex/vanilla).
+let VANILLA_MAP = {}
+try {
+  const vm = JSON.parse(readFileSync(resolve(root, 'vanilla/item-icon-map.json'), 'utf8')).map ?? {}
+  for (const [name, p] of Object.entries(vm)) VANILLA_MAP[name] = `vanilla/${p}`
+} catch (e) {
+  // пустая карта = все ванильные иконки отвалятся молча — делаем регресс заметным
+  console.warn(
+    `thaumcraft: vanilla/item-icon-map.json не прочитан (${e.message}) — ванильные иконки по basename`,
+  )
+  VANILLA_MAP = {}
+}
+const VTEX = new Map()
+for (const kind of ['items', 'blocks']) {
+  let entries = []
+  try {
+    entries = readdirSync(resolve(root, 'vanilla/textures', kind))
+  } catch {
+    continue
+  }
+  for (const f of entries) {
+    if (!f.endsWith('.png')) continue
+    const key = normName(f.slice(0, -4))
+    if (!VTEX.has(key)) VTEX.set(key, `vanilla/${kind}/${f}`) // items раньше blocks → предмет важнее
+  }
+}
+
+// Путь текстуры: ручная карта TC → ванильная карта/индекс (для vanilla-ссылок) →
+// ТОЧНЫЙ матч имени файла TC по EN. ref-эвристику НЕ используем — она конфликтит
+// мета-варианты с общим ref (шарды/сердца големов → одна текстура на всех).
+// Ванильное резолвим только для ссылок с vanilla/reg, чтобы не путать модовые имена.
 function iconFor(o) {
   if (!o || typeof o !== 'object') return undefined
   if (o.name_en && MANMAP[o.name_en]) return MANMAP[o.name_en]
+  if (o.vanilla || o.reg) {
+    if (o.name_en && VANILLA_MAP[o.name_en]) return VANILLA_MAP[o.name_en]
+    if (o.reg) {
+      const h = VTEX.get(normName(o.reg))
+      if (h) return h
+    }
+    if (o.name_en) {
+      const h = VTEX.get(normName(o.name_en))
+      if (h) return h
+    }
+  }
   if (o.name_en) {
     const h = TEX.get(normName(o.name_en))
     if (h) return h
