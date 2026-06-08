@@ -182,7 +182,27 @@ function switchTo(id: TrackerId) {
 }
 .switcher__btn.is-active {
   border-color: var(--honey, var(--leaf));
-  box-shadow: 0 0 0 1px var(--honey, var(--leaf));
+  /* «дышит» в цвете активного трекера (--honey берётся из темы на <html>) */
+  animation: switcher-breathe 3.6s ease-in-out infinite;
+}
+@keyframes switcher-breathe {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px var(--honey, var(--leaf)),
+      0 0 5px -1px var(--honey, var(--leaf));
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px var(--honey, var(--leaf)),
+      0 0 15px 1px var(--honey, var(--leaf));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .switcher__btn.is-active {
+    animation: none;
+    box-shadow: 0 0 0 1px var(--honey, var(--leaf));
+  }
 }
 .switcher__btn:active {
   transform: scale(0.97);

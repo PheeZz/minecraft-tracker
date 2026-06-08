@@ -110,6 +110,35 @@
   }
 }
 
+/* «Комната дышит»: поверх статичного фона — очень медленный пульс кровавого
+   радиала. Слой фиксирован за контентом (z-index:-1), кликам не мешает. */
+[data-tracker='bloodmagic']::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(55% 45% at 80% 4%, rgba(224, 52, 74, 0.12), transparent 62%),
+    radial-gradient(46% 42% at 10% 102%, rgba(180, 30, 50, 0.1), transparent 60%);
+  animation: bm-room 10s ease-in-out infinite;
+}
+@keyframes bm-room {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-tracker='bloodmagic']::before {
+    animation: none;
+    opacity: 0.7;
+  }
+}
+
 /* Заголовки разделов — тонкая кровавая аура у дисплейного шрифта. */
 [data-tracker='bloodmagic'] .rp__title,
 [data-tracker='bloodmagic'] .sp__title,
