@@ -2,11 +2,13 @@
 // Панель рецептов BloodMagic.
 // Фильтрация по источнику (мультивыбор), тиру, текстовому поиску.
 // Карточки вынесены в RecipeCard.vue; логика фильтрации — в domain/filterRecipes.ts.
+// Диалог схемы алтаря — один экземпляр на всю панель, открывается по событию от карточки.
 import { computed, ref } from 'vue'
 import { RECIPES } from '../data/recipes.data'
 import type { RecipeSource } from '../domain/types'
 import { filterRecipes, availableTiers, SOURCE_LABELS } from '../domain/filterRecipes'
 import RecipeCard from './RecipeCard.vue'
+import AltarSchematicDialog from './AltarSchematicDialog.vue'
 
 const ALL_SOURCES = Object.keys(SOURCE_LABELS) as RecipeSource[]
 
@@ -29,6 +31,17 @@ const STEP = 60
 const shown = ref(STEP)
 const visible = computed(() => filtered.value.slice(0, shown.value))
 const remaining = computed(() => Math.max(0, filtered.value.length - shown.value))
+
+// Тир открытого диалога схемы алтаря; null — диалог закрыт
+const openTier = ref<number | null>(null)
+
+const openAltarDialog = (tier: number): void => {
+  openTier.value = tier
+}
+
+const closeAltarDialog = (): void => {
+  openTier.value = null
+}
 
 const resetShown = (): void => {
   shown.value = STEP
@@ -91,7 +104,12 @@ const selectTier = (t: number | null): void => {
     </header>
 
     <div v-if="visible.length" class="rp__grid">
-      <RecipeCard v-for="r in visible" :key="`${r.source}:${r.output.name_en}`" :recipe="r" />
+      <RecipeCard
+        v-for="r in visible"
+        :key="`${r.source}:${r.output.name_en}`"
+        :recipe="r"
+        @show-altar="openAltarDialog"
+      />
     </div>
     <p v-else class="rp__empty">Ничего не найдено.</p>
 
@@ -101,6 +119,9 @@ const selectTier = (t: number | null): void => {
       </button>
     </div>
   </section>
+
+  <!-- Диалог схемы алтаря — один экземпляр на панель, монтируется только при openTier != null -->
+  <AltarSchematicDialog v-if="openTier !== null" :tier="openTier" @close="closeAltarDialog" />
 </template>
 
 <style scoped>

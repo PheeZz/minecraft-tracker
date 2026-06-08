@@ -1,12 +1,16 @@
 <script setup lang="ts">
 // Карточка одного рецепта BloodMagic. Принимает готовый объект Recipe.
 // Вынесено из RecipesPanel для соблюдения лимита строк компонента.
+// Схема алтаря НЕ рендерится инлайн — открывается через emit('show-altar', tier).
 import { computed } from 'vue'
 import type { Recipe, ItemRef } from '../domain/types'
 import { SOURCE_LABELS } from '../domain/filterRecipes'
 import ItemIcon from './ItemIcon.vue'
 
 const props = defineProps<{ recipe: Recipe }>()
+
+// Клик по бейджу тира altar-рецепта открывает диалог структуры алтаря в родителе
+const emit = defineEmits<{ 'show-altar': [tier: number] }>()
 
 // Извлекаем tier2/tier3 ингредиенты из meta один раз — каждый v-if и v-for читает cached computed
 const tier2Inputs = computed<ItemRef[]>(() => {
@@ -34,7 +38,20 @@ const tier3Inputs = computed<ItemRef[]>(() => {
         </span>
         <span v-if="recipe.addon === 'bloodarsenal'" class="badge badge--addon">BloodArsenal</span>
         <span v-if="recipe.creativeOnly" class="badge badge--creative">только креатив</span>
-        <span v-if="recipe.minTier != null" class="badge badge--tier"
+        <!-- Для altar-рецептов бейдж тира — кликабельная кнопка, открывает схему в диалоге -->
+        <button
+          v-if="recipe.source === 'altar' && recipe.minTier != null"
+          type="button"
+          class="badge badge--tier badge--tier-btn"
+          :aria-label="`Показать структуру алтаря тира ${recipe.minTier}`"
+          @click="emit('show-altar', recipe.minTier!)"
+        >
+          Тир {{ recipe.minTier }}
+        </button>
+        <!-- Для прочих источников тир — обычный некликабельный бейдж -->
+        <span
+          v-else-if="recipe.source !== 'altar' && recipe.minTier != null"
+          class="badge badge--tier"
           >Тир {{ recipe.minTier }}</span
         >
         <span v-if="recipe.lp != null" class="badge badge--lp"
@@ -173,6 +190,27 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   background: rgba(255, 207, 107, 0.12);
   color: var(--amber);
   border: 1px solid rgba(255, 207, 107, 0.24);
+}
+
+/* Кнопка-бейдж тира для altar-рецептов: такие же визуальные параметры + курсор + hover */
+.badge--tier-btn {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.1s ease,
+    border-color 0.1s ease;
+}
+
+.badge--tier-btn:hover {
+  background: rgba(255, 207, 107, 0.24);
+  border-color: var(--amber);
+}
+
+.badge--tier-btn:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 1px;
 }
 
 .badge--lp {
