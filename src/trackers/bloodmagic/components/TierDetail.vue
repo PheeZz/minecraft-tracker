@@ -205,12 +205,19 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
         </div>
       </div>
       <!--
-        v-show вместо v-if: MultiblockView НЕ размонтируется при переключении на 2D.
-        3D-сцена живёт постоянно; при возврате на 3D показывается сразу (баг 1 исправлен).
-        render-loop на скрытом canvas работает дёшево; ResizeObserver охраняет zero-size.
+        v-show (не v-if): MultiblockView не размонтируется при 2D — 3D-сцена живёт.
+        <Transition> поверх v-show даёт кроссфейд/появление БЕЗ размонтажа (нет пустоты).
+        grid-stack (.td__views) — оба вида в одной ячейке: плавный кроссфейд без скачка.
+        appear — анимация появления 3D при первом показе.
       -->
-      <MultiblockView v-show="viewMode === '3d'" :blocks="currentVoxels" :height="360" />
-      <AltarSchematic v-show="viewMode === '2d'" :tier="tier" />
+      <div class="td__views">
+        <Transition name="view-fade" appear>
+          <MultiblockView v-show="viewMode === '3d'" :blocks="currentVoxels" :height="360" />
+        </Transition>
+        <Transition name="view-fade">
+          <AltarSchematic v-show="viewMode === '2d'" :tier="tier" />
+        </Transition>
+      </div>
     </div>
   </section>
 </template>
@@ -398,6 +405,41 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   gap: 6px;
 }
 
+/* Стек видов 2D/3D в одной ячейке — кроссфейд без скачка высоты при переключении */
+.td__views {
+  display: grid;
+}
+
+.td__views > * {
+  grid-area: 1 / 1;
+}
+
+/* Переход/появление 3D и 2D: fade + лёгкий зум */
+.view-fade-enter-active,
+.view-fade-leave-active {
+  transition:
+    opacity 0.24s ease,
+    transform 0.24s ease;
+}
+
+.view-fade-enter-from,
+.view-fade-leave-to {
+  opacity: 0;
+  transform: scale(0.985);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .view-fade-enter-active,
+  .view-fade-leave-active {
+    transition: opacity 0.12s ease;
+  }
+
+  .view-fade-enter-from,
+  .view-fade-leave-to {
+    transform: none;
+  }
+}
+
 .td__view-header {
   display: flex;
   align-items: center;
@@ -504,6 +546,9 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   display: flex;
   flex-direction: column;
   gap: 3px;
+  /* Кап высоты: длинный список рецептов не растягивает страницу и не уводит 3D вниз */
+  max-height: 168px;
+  overflow-y: auto;
 }
 
 .td__recipe-item {

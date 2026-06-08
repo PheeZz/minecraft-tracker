@@ -50,12 +50,19 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
         который на тяжёлой 3D-панели зависал и оставлял пустой контент.
         MultiblockView гасит render-loop на скрытых вкладках (onDeactivated).
       -->
-      <KeepAlive>
-        <BloodPathPanel v-if="panel === 'path'" key="path" />
-        <RitualsPanel v-else-if="panel === 'rituals'" key="rituals" />
-        <RecipesPanel v-else-if="panel === 'recipes'" key="recipes" />
-        <SigilsPanel v-else-if="panel === 'sigils'" key="sigils" />
-      </KeepAlive>
+      <!--
+        :duration форсирует таймер вместо transitionend — на тяжёлой 3D-панели
+        transitionend срабатывал ненадёжно и оставлял пустой контент; с явным
+        duration mode=out-in не зависает. KeepAlive сохраняет панели (3D без ремаунта).
+      -->
+      <Transition name="bmpanel" mode="out-in" :duration="200">
+        <KeepAlive>
+          <BloodPathPanel v-if="panel === 'path'" key="path" />
+          <RitualsPanel v-else-if="panel === 'rituals'" key="rituals" />
+          <RecipesPanel v-else-if="panel === 'recipes'" key="recipes" />
+          <SigilsPanel v-else-if="panel === 'sigils'" key="sigils" />
+        </KeepAlive>
+      </Transition>
     </div>
   </div>
 </template>
@@ -163,5 +170,36 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
   font-size: 13px;
   color: var(--muted);
   margin: 0;
+}
+
+/* Переход между суб-вкладками (fade + лёгкий сдвиг). :duration на Transition
+   гарантирует завершение даже если transitionend не сработает. */
+.bmpanel-enter-active,
+.bmpanel-leave-active {
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.bmpanel-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.bmpanel-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bmpanel-enter-active,
+  .bmpanel-leave-active {
+    transition: opacity 0.1s ease;
+  }
+
+  .bmpanel-enter-from,
+  .bmpanel-leave-to {
+    transform: none;
+  }
 }
 </style>
