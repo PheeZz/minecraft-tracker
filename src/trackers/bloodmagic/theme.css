@@ -124,6 +124,9 @@
     rgba(224, 52, 74, 0.1) 60%,
     rgba(224, 52, 74, 0.38) 100%
   );
+  /* Глушим дыхание сверху (там шапка/переключатель) — гаснет вверху, крепнет к низу. */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 16%, #000 42%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 16%, #000 42%);
   animation: bm-room 7s ease-in-out infinite;
 }
 @keyframes bm-room {
