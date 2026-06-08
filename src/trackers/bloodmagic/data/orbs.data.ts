@@ -1,0 +1,52 @@
+// Сгенерировано scripts/gen-bloodmagic.mjs — не редактировать вручную.
+import type { BloodOrb } from '../domain/types'
+export const ORBS: readonly BloodOrb[] = [
+  {
+    field: 'weakBloodOrb',
+    name_en: 'Weak Blood Orb',
+    name_ru: 'Слабый кровавый шар',
+    capacity_LP: 5000,
+    tier: 1,
+    consumptionRate: 2,
+  },
+  {
+    field: 'apprenticeBloodOrb',
+    name_en: 'Apprentice Blood Orb',
+    name_ru: 'Кровавый шар ученика',
+    capacity_LP: 25000,
+    tier: 2,
+    consumptionRate: 5,
+  },
+  {
+    field: 'magicianBloodOrb',
+    name_en: "Magician's Blood Orb",
+    name_ru: 'Кровавый шар мага',
+    capacity_LP: 150000,
+    tier: 3,
+    consumptionRate: 15,
+  },
+  {
+    field: 'masterBloodOrb',
+    name_en: 'Master Blood Orb',
+    name_ru: 'Кровавый шар мастера',
+    capacity_LP: 1000000,
+    tier: 4,
+    consumptionRate: 25,
+  },
+  {
+    field: 'archmageBloodOrb',
+    name_en: "Archmage's Blood Orb",
+    name_ru: 'Кровавый шар архимага',
+    capacity_LP: 10000000,
+    tier: 5,
+    consumptionRate: 50,
+  },
+  {
+    field: 'transcendentBloodOrb',
+    name_en: 'Transcendent Blood Orb',
+    name_ru: 'Трансцендентальный кровавый шар',
+    capacity_LP: 30000000,
+    tier: 6,
+    consumptionRate: 100,
+  },
+]

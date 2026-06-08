@@ -26,7 +26,8 @@
     "gen:genomes": "node scripts/gen-genomes.mjs",
     "gen:textures": "node scripts/gen-textures.mjs",
     "gen:thaumcraft": "node scripts/gen-thaumcraft.mjs",
-    "gen:thaumcraft-icons": "node scripts/gen-thaumcraft-icons.mjs"
+    "gen:thaumcraft-icons": "node scripts/gen-thaumcraft-icons.mjs",
+    "gen:bloodmagic": "node scripts/gen-bloodmagic.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

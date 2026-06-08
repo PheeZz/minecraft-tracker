@@ -44,6 +44,7 @@ public/thaumcraft/
 
 # диагностика генератора иконок (регенерируется)
 thaumcraft/textures/_unmatched-items.json
+bloodmagic/_unmatched-*.json
 
 # диагностика локализатора (регенерируется)
 thaumcraft/i18n/_needs-localization.json
