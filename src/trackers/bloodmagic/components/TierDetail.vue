@@ -132,8 +132,16 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
           </button>
         </div>
       </div>
-      <MultiblockView v-if="viewMode === '3d'" :blocks="currentVoxels" :height="360" />
-      <AltarSchematic v-else :tier="tier" />
+      <!-- Плавная смена 3D ↔ 2D: fade 160мс -->
+      <Transition name="view-fade" mode="out-in">
+        <MultiblockView
+          v-if="viewMode === '3d'"
+          :key="'3d'"
+          :blocks="currentVoxels"
+          :height="360"
+        />
+        <AltarSchematic v-else :key="'2d'" :tier="tier" />
+      </Transition>
     </div>
 
     <!-- Разблокировки: рецепты -->
@@ -358,6 +366,27 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   color: var(--dim);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Переход 2D ↔ 3D: только fade, без transform */
+.view-fade-enter-active {
+  transition: opacity 0.16s ease;
+}
+
+.view-fade-leave-active {
+  transition: opacity 0.12s ease;
+}
+
+.view-fade-enter-from,
+.view-fade-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .view-fade-enter-active,
+  .view-fade-leave-active {
+    transition: opacity 0.05s ease;
+  }
 }
 
 /* Разблокировки */

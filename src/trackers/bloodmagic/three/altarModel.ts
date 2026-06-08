@@ -6,6 +6,62 @@ import type { VoxelBlock } from './voxelTypes'
 // Геометрия модели в 16-юнитном пространстве блока → масштаб в мир-юниты
 const MODEL_SCALE = 1 / 16
 
+/** Длительность entrance-анимации появления модели (мс). */
+const ENTRANCE_MS = 350
+
+/**
+ * Запускает entrance-твин для только что добавленной модели алтаря.
+ * Масштаб: 0.85×MODEL_SCALE → MODEL_SCALE за ENTRANCE_MS мс (ease-out).
+ * Fade через opacity: 0 → 1 (материалы на время анимации transparent=true).
+ *
+ * Возвращает функцию обновления, которую нужно вызывать каждый кадр.
+ * Когда анимация завершена — функция больше ничего не делает (no-op).
+ */
+export function startEntranceTween(
+  THREE: typeof THREEType,
+  group: THREEType.Object3D,
+): (now: number) => void {
+  const startScale = MODEL_SCALE * 0.85
+  const endScale = MODEL_SCALE
+
+  // Собираем все материалы модели для fade; MeshLambertMaterial поддерживает opacity
+  const materials: THREEType.MeshLambertMaterial[] = []
+  group.traverse((child) => {
+    if (!(child instanceof THREE.Mesh)) return
+    const mats = Array.isArray(child.material) ? child.material : [child.material]
+    for (const mat of mats) {
+      const m = mat as THREEType.MeshLambertMaterial
+      m.transparent = true
+      m.opacity = 0
+      materials.push(m)
+    }
+  })
+
+  const startTime = performance.now()
+  let done = false
+
+  return function tick(now: number) {
+    if (done) return
+
+    // Прогресс [0..1] с ease-out (1 − (1−t)²)
+    const t = Math.min((now - startTime) / ENTRANCE_MS, 1)
+    const eased = 1 - (1 - t) * (1 - t)
+
+    group.scale.setScalar(startScale + (endScale - startScale) * eased)
+    for (const mat of materials) mat.opacity = eased
+
+    if (t >= 1) {
+      // Анимация завершена — сбрасываем transparent для сохранения производительности
+      group.scale.setScalar(endScale)
+      for (const mat of materials) {
+        mat.opacity = 1
+        mat.transparent = false
+      }
+      done = true
+    }
+  }
+}
+
 /**
  * Загружает OBJ-модель алтаря и настраивает позицию/материал.
  * Возвращает Object3D (группу) готовую к добавлению в сцену.

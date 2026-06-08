@@ -4,7 +4,7 @@ import type * as THREEType from 'three'
 import type { OrbitControls as OrbitControlsType } from 'three/examples/jsm/controls/OrbitControls.js'
 import type { VoxelBlock } from './voxelTypes'
 import { computeBounds, buildGrid } from './voxelGrid'
-import { loadAltarModel } from './altarModel'
+import { loadAltarModel, startEntranceTween } from './altarModel'
 
 export interface VoxelSceneOptions {
   onHover: (block: VoxelBlock | null, screenX: number, screenY: number) => void
@@ -157,6 +157,17 @@ export function createVoxelScene(
   controls.enableDamping = true
   controls.dampingFactor = 0.08
 
+  // Медленное авто-вращение для оживления сцены; выключается при первом взаимодействии
+  controls.autoRotate = true
+  controls.autoRotateSpeed = 0.6
+
+  // Одноразовый стоп авто-вращения при первом жесте пользователя
+  function stopAutoRotate() {
+    controls.autoRotate = false
+    controls.removeEventListener('start', stopAutoRotate)
+  }
+  controls.addEventListener('start', stopAutoRotate)
+
   const { load: loadTex, disposeAll: disposeTextures } = makeTextureCache(THREE)
 
   // Меши для raycast (кубы); OBJ-меши добавляются асинхронно
@@ -166,6 +177,9 @@ export function createVoxelScene(
 
   // Флаг защиты от добавления в сцену после dispose
   let disposed = false
+
+  // Активные entrance-твины: каждый — функция tick(now), no-op после завершения
+  const entranceTicks: Array<(now: number) => void> = []
 
   // Разделяем блоки: обычные кубы vs. модельные
   const cubeBlocks = blocks.filter((b) => b.model !== 'altar')
@@ -200,6 +214,8 @@ export function createVoxelScene(
         obj.traverse((child) => {
           if (child instanceof THREE.Mesh) meshes.push(child)
         })
+        // Запускаем entrance-анимацию появления модели
+        entranceTicks.push(startEntranceTween(THREE, obj))
       })
       .catch((err) => {
         console.warn('[altarModel] не удалось загрузить OBJ-модель алтаря:', err)
@@ -243,6 +259,9 @@ export function createVoxelScene(
   function renderLoop() {
     rafId = requestAnimationFrame(renderLoop)
     controls.update()
+    // Прогоняем активные entrance-твины (no-op после завершения каждого)
+    const now = performance.now()
+    for (const tick of entranceTicks) tick(now)
     renderer.render(scene, camera)
   }
   renderLoop()
@@ -261,6 +280,8 @@ export function createVoxelScene(
     cancelAnimationFrame(rafId)
     canvas.removeEventListener('mousemove', onMouseMove)
     canvas.removeEventListener('mouseleave', onMouseLeave)
+    // Снимаем stop-слушатель autoRotate, если пользователь не взаимодействовал
+    controls.removeEventListener('start', stopAutoRotate)
 
     // Освобождаем кубы
     for (const mesh of meshes) {
