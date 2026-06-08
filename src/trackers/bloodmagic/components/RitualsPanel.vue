@@ -296,42 +296,10 @@ function voxels(r: Ritual) {
 }
 
 .rp__detail-header {
-  position: relative;
-  overflow: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
-}
-
-/* Руническая печать — медленно вращающийся арканный глиф, «вытравленный» в панели.
-   Ритуалы в игре и есть наземные глифы — печать за шапкой задаёт ритуальный тон. */
-.rp__detail-header::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -34px;
-  width: 156px;
-  height: 156px;
-  margin-top: -78px;
-  background: url('../assets/runic-seal.svg') center / contain no-repeat;
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 0;
-  animation: bm-rotate 60s linear infinite;
-}
-
-/* Контент шапки — поверх печати */
-.rp__detail-titles,
-.rp__unlock-btn {
-  position: relative;
-  z-index: 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .rp__detail-header::before {
-    animation: none;
-  }
 }
 
 .rp__detail-titles {

@@ -110,13 +110,6 @@
   }
 }
 
-/* Медленное вращение — для рунической печати за шапкой ритуала. */
-@keyframes bm-rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Заголовки разделов — тонкая кровавая аура у дисплейного шрифта. */
 [data-tracker='bloodmagic'] .rp__title,
 [data-tracker='bloodmagic'] .sp__title,
