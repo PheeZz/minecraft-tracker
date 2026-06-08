@@ -147,13 +147,13 @@ const tier3Inputs = computed<ItemRef[]>(() => {
 /* Бейджи — горизонтальный ряд с переносом, единая высота и выравнивание */
 .rc__badges {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 4px;
-  align-items: center;
+  align-items: end;
   justify-content: flex-end;
   flex: none;
-  max-width: 160px;
+  max-width: 100px;
 }
 
 /* Единая база для всех бейджей: одинаковая высота, центровка, отступы */

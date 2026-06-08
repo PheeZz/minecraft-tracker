@@ -123,7 +123,7 @@ function voxels(r: Ritual) {
           :title="ritualStore.isUnlocked(selected.key) ? 'Снять отметку' : 'Отметить построенным'"
           @click="ritualStore.toggleRitual(selected.key)"
         >
-          {{ ritualStore.isUnlocked(selected.key) ? 'Построен ✓' : 'Построить?' }}
+          {{ ritualStore.isUnlocked(selected.key) ? 'Построено ✓' : 'Построено' }}
         </button>
       </div>
 
