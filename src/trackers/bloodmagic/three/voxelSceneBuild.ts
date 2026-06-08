@@ -63,6 +63,56 @@ export function buildVoxelMesh(
   return mesh
 }
 
+// --- Анимация появления структуры ---
+
+/** Уважать системную настройку «уменьшить движение». */
+function prefersReducedMotion(): boolean {
+  return (
+    typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+  )
+}
+
+/**
+ * Анимация появления кубов: scale 0→1 со стаггером по расстоянию от центра —
+ * структура «собирается» от алтаря наружу. Возвращает tick(now) для render-loop.
+ */
+export function startCubesEntrance(
+  meshes: readonly THREEType.Mesh[],
+  center: { cx: number; cy: number; cz: number },
+): (now: number) => void {
+  const DURATION = 460
+  const STAGGER = 260
+  let maxDist = 0.0001
+  const items = meshes.map((mesh) => {
+    const dist = Math.hypot(
+      mesh.position.x - center.cx,
+      mesh.position.y - center.cy,
+      mesh.position.z - center.cz,
+    )
+    if (dist > maxDist) maxDist = dist
+    return { mesh, dist }
+  })
+  for (const it of items) it.mesh.scale.setScalar(0.001)
+  const start = performance.now()
+  let done = false
+  return (now: number) => {
+    if (done) return
+    const t = now - start
+    let all = true
+    for (const it of items) {
+      const delay = (it.dist / maxDist) * STAGGER
+      let p = (t - delay) / DURATION
+      if (p < 1) all = false
+      p = p < 0 ? 0 : p > 1 ? 1 : p
+      it.mesh.scale.setScalar(1 - Math.pow(1 - p, 3)) // ease-out cubic
+    }
+    if (all) {
+      for (const it of items) it.mesh.scale.setScalar(1)
+      done = true
+    }
+  }
+}
+
 // --- Освобождение ресурсов OBJ-модели ---
 
 /** Освобождает геометрию и материалы всех мешей Object3D (рекурсивно). */
@@ -169,6 +219,7 @@ export function buildSceneContent(
 
   const cubeBlocks = newBlocks.filter((b) => b.model !== 'altar')
   const modelBlocks = newBlocks.filter((b) => b.model === 'altar')
+  const bounds = computeBounds(newBlocks)
 
   // Кубы — синхронно
   for (const b of cubeBlocks) {
@@ -177,8 +228,13 @@ export function buildSceneContent(
     meshes.push(mesh)
   }
 
+  // Анимация появления кубов (структура собирается от центра) — на create И update.
+  if (animateEntrance && meshes.length && !prefersReducedMotion()) {
+    entranceTicks.push(startCubesEntrance([...meshes], bounds))
+  }
+
   // Опорная сетка-пол для ориентации в координатах
-  const grid = newBlocks.length ? buildGrid(THREE, computeBounds(newBlocks)) : null
+  const grid = newBlocks.length ? buildGrid(THREE, bounds) : null
   if (grid) scene.add(grid)
 
   centerCamera(camera, controls, newBlocks)

@@ -51,11 +51,12 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
         MultiblockView гасит render-loop на скрытых вкладках (onDeactivated).
       -->
       <!--
-        :duration форсирует таймер вместо transitionend — на тяжёлой 3D-панели
-        transitionend срабатывал ненадёжно и оставлял пустой контент; с явным
-        duration mode=out-in не зависает. KeepAlive сохраняет панели (3D без ремаунта).
+        БЕЗ mode="out-in": он зависал при быстрых кликах (leave прерывался, enter не
+        наступал → пустой контент). Одновременный кроссфейд: уходящая панель
+        позиционируется absolute (.bmpanel-leave-active) и не двигает layout, входящая
+        сразу в потоке. Устойчиво к быстрым переключениям. KeepAlive хранит панели (3D без ремаунта).
       -->
-      <Transition name="bmpanel" mode="out-in" :duration="200">
+      <Transition name="bmpanel">
         <KeepAlive>
           <BloodPathPanel v-if="panel === 'path'" key="path" />
           <RitualsPanel v-else-if="panel === 'rituals'" key="rituals" />
@@ -140,6 +141,7 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
   flex: 1;
   min-height: 0;
   overflow: auto;
+  position: relative; /* для absolute-позиционирования уходящей панели при кроссфейде */
 }
 
 .bm__placeholder {
@@ -172,13 +174,18 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
   margin: 0;
 }
 
-/* Переход между суб-вкладками (fade + лёгкий сдвиг). :duration на Transition
-   гарантирует завершение даже если transitionend не сработает. */
+/* Кроссфейд суб-вкладок (одновременный, без out-in). Уходящая панель — absolute,
+   чтобы не толкать входящую и не прыгать по layout. Устойчиво к быстрым кликам. */
 .bmpanel-enter-active,
 .bmpanel-leave-active {
   transition:
     opacity 0.18s ease,
     transform 0.18s ease;
+}
+
+.bmpanel-leave-active {
+  position: absolute;
+  inset: 0;
 }
 
 .bmpanel-enter-from {

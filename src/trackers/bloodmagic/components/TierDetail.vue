@@ -223,11 +223,20 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
 </template>
 
 <style scoped>
+/* 2 колонки: слева текст (скроллится), справа структура (sticky — 3D всегда виден,
+   длинный список постройки/рецептов больше не уводит его за экран). */
 .td {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+  gap: 16px;
   padding: 16px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .td {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Заголовок */
@@ -403,6 +412,17 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   display: flex;
   flex-direction: column;
   gap: 6px;
+  grid-column: 2; /* правая колонка; закреплена, чтобы не прыгать при смене текста */
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+@media (max-width: 900px) {
+  .td__schematic {
+    grid-column: 1;
+    position: static;
+  }
 }
 
 /* Стек видов 2D/3D в одной ячейке — кроссфейд без скачка высоты при переключении */
@@ -518,6 +538,8 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   display: flex;
   flex-direction: column;
   gap: 14px;
+  grid-column: 1; /* левая колонка */
+  min-width: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

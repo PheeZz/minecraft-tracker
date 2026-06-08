@@ -159,8 +159,9 @@ export function createVoxelScene(
     opts.onHover(null, 0, 0)
 
     const old = content
-    // Строим новый контент до очистки старого, чтобы кадр не был пустым
-    content = buildSceneContent(newBlocks, false, buildParams)
+    // Строим новый контент с анимацией появления (структура «собирается»), затем
+    // убираем старый. Моргания нет — панель не ремаунтится (KeepAlive), сцена живёт.
+    content = buildSceneContent(newBlocks, true, buildParams)
     clearSceneContent(scene, old)
   }
 
