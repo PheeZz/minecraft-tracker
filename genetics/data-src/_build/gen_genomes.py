@@ -446,6 +446,7 @@ species_out = clean
 species_out.sort(key=lambda s:(s["mod"], s["en"]))
 
 meta = {
+    "server": "LoliLand",
     "source": "decompiled (CFR 0.152): forestry-4.2.16.64, binnie-mods-2.0.22.7 (extrabees), magicbees-2.4.4; lang from same JARs",
     "generated": "2026-06-06",
     "model": "genome = defaultTemplate -> branch overrides -> species overrides (Forestry/ExtraBees); modBase -> base-chain -> species (MagicBees)",
