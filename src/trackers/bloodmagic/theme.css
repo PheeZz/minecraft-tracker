@@ -118,13 +118,18 @@
   inset: 0;
   z-index: 30;
   pointer-events: none;
-  background: radial-gradient(125% 92% at 50% 46%, transparent 50%, rgba(224, 52, 74, 0.16) 100%);
-  animation: bm-room 9s ease-in-out infinite;
+  background: radial-gradient(
+    135% 100% at 50% 48%,
+    transparent 36%,
+    rgba(224, 52, 74, 0.1) 60%,
+    rgba(224, 52, 74, 0.38) 100%
+  );
+  animation: bm-room 7s ease-in-out infinite;
 }
 @keyframes bm-room {
   0%,
   100% {
-    opacity: 0.25;
+    opacity: 0.2;
   }
   50% {
     opacity: 1;
