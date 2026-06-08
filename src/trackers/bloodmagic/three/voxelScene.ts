@@ -3,6 +3,7 @@
 import type * as THREEType from 'three'
 import type { OrbitControls as OrbitControlsType } from 'three/examples/jsm/controls/OrbitControls.js'
 import type { VoxelBlock } from './voxelTypes'
+import { computeBounds, buildGrid } from './voxelGrid'
 
 export interface VoxelSceneOptions {
   onHover: (block: VoxelBlock | null, screenX: number, screenY: number) => void
@@ -97,34 +98,14 @@ function buildCamera(THREE: typeof THREEType, width: number, height: number) {
   return camera
 }
 
-/** Вычисляет bounding-box и позиционирует камеру так, чтобы вся структура была видна. */
+/** Позиционирует камеру по bounding-box так, чтобы вся структура была видна. */
 function centerCamera(
   camera: THREEType.PerspectiveCamera,
   controls: OrbitControlsType,
   blocks: VoxelBlock[],
 ) {
   if (!blocks.length) return
-
-  let minX = Infinity,
-    maxX = -Infinity
-  let minY = Infinity,
-    maxY = -Infinity
-  let minZ = Infinity,
-    maxZ = -Infinity
-
-  for (const b of blocks) {
-    minX = Math.min(minX, b.x)
-    maxX = Math.max(maxX, b.x)
-    minY = Math.min(minY, b.y)
-    maxY = Math.max(maxY, b.y)
-    minZ = Math.min(minZ, b.z)
-    maxZ = Math.max(maxZ, b.z)
-  }
-
-  const cx = (minX + maxX) / 2
-  const cy = (minY + maxY) / 2
-  const cz = (minZ + maxZ) / 2
-
+  const { cx, cy, cz, minX, maxX, minY, maxY, minZ, maxZ } = computeBounds(blocks)
   const span = Math.max(maxX - minX, maxY - minY, maxZ - minZ)
   const dist = span * 1.6 + 8
 
@@ -174,6 +155,10 @@ export function createVoxelScene(
     scene.add(mesh)
     return mesh
   })
+
+  // Опорная сетка-пол для ориентации в координатах
+  const grid = blocks.length ? buildGrid(THREE, computeBounds(blocks)) : null
+  if (grid) scene.add(grid)
 
   centerCamera(camera, controls, blocks)
 
@@ -239,6 +224,11 @@ export function createVoxelScene(
       for (const mat of mats) {
         mat.dispose()
       }
+    }
+
+    if (grid) {
+      grid.geometry.dispose()
+      ;(grid.material as THREEType.Material).dispose()
     }
 
     disposeTextures()
