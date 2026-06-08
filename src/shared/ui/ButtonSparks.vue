@@ -89,8 +89,9 @@ onUnmounted(() => window.clearTimeout(clearTimer))
   position: absolute;
   top: 38%;
   left: 22px;
-  width: 12px;
-  height: 12px;
+  /* Доп. рост на больших экранах поверх zoom — заметнее на 2K/4K. */
+  width: calc(12px * var(--app-scale, 1));
+  height: calc(12px * var(--app-scale, 1));
   color: var(--honey, var(--leaf, var(--accent)));
   opacity: 0;
   will-change: transform, opacity;
@@ -98,8 +99,8 @@ onUnmounted(() => window.clearTimeout(clearTimer))
 }
 
 .bsp__p :deep(svg) {
-  width: 12px;
-  height: 12px;
+  width: calc(12px * var(--app-scale, 1));
+  height: calc(12px * var(--app-scale, 1));
   display: block;
 }
 

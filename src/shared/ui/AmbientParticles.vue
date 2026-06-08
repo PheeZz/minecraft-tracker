@@ -106,9 +106,8 @@ const particles = computed<Particle[]>(() => {
       :class="`amb__p--${p.drift}`"
       :style="{
         left: `${p.left}%`,
-        width: `${p.size}px`,
-        height: `${p.size}px`,
         opacity: p.opacity,
+        '--sz': `${p.size}px`,
         '--dur': `${p.dur}s`,
         '--sway': `${p.sway}px`,
         animationDelay: `${p.delay}s`,
@@ -128,6 +127,10 @@ const particles = computed<Particle[]>(() => {
 
 .amb__p {
   position: absolute;
+  /* Слой fixed — CSS zoom оболочки его не масштабирует; компенсируем --app-scale,
+     иначе на 2K/4K частицы остаются крошечными. */
+  width: calc(var(--sz, 4px) * var(--app-scale, 1));
+  height: calc(var(--sz, 4px) * var(--app-scale, 1));
   border-radius: 50%;
   background: radial-gradient(circle, var(--honey, var(--leaf)) 0%, transparent 70%);
   filter: blur(0.4px);
@@ -149,7 +152,7 @@ const particles = computed<Particle[]>(() => {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(var(--sway), -110vh, 0);
+    transform: translate3d(calc(var(--sway) * var(--app-scale, 1)), -110vh, 0);
   }
 }
 
@@ -158,7 +161,7 @@ const particles = computed<Particle[]>(() => {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(var(--sway), 110vh, 0);
+    transform: translate3d(calc(var(--sway) * var(--app-scale, 1)), 110vh, 0);
   }
 }
 
