@@ -131,7 +131,7 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
   background: var(--accent-grad);
   color: var(--solid-ink);
   box-shadow: var(--glow-arcane-strong);
-  animation: bm-breathe 4s ease-in-out infinite;
+  animation: bm-tab-breathe 3.4s ease-in-out infinite;
 }
 
 .bm__tab:focus-visible {
