@@ -63,3 +63,80 @@
     linear-gradient(160deg, var(--bg), var(--bg2));
   background-attachment: fixed;
 }
+
+/* ── «Запретная магия»: живое арканное свечение ──────────────────────────
+   Элементы не просто подсвечены — они тлеют и дышат, будто напитаны кровью.
+   Анимации медленные и малоамплитудные: эффект «живого», а не мигания. */
+
+/* Медленный «вдох» ауры — для активных/выбранных состояний. */
+@keyframes bm-breathe {
+  0%,
+  100% {
+    box-shadow: var(--glow-arcane-soft);
+  }
+  50% {
+    box-shadow: var(--glow-arcane-strong);
+  }
+}
+
+/* «Угли»: артефакт тлеет алым с лёгким неровным мерцанием, как свеча. */
+@keyframes bm-ember {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 3px rgba(224, 52, 74, 0.5));
+  }
+  45% {
+    filter: drop-shadow(0 0 7px rgba(255, 107, 126, 0.8));
+  }
+  72% {
+    filter: drop-shadow(0 0 4px rgba(224, 52, 74, 0.58));
+  }
+}
+
+/* «Зачарованный блик»: периодический диагональный проблеск по магической ячейке —
+   как мерцание зачарованных предметов в Minecraft. Хост ставит .bm-glint. */
+[data-tracker='bloodmagic'] .bm-glint {
+  position: relative;
+  overflow: hidden;
+}
+[data-tracker='bloodmagic'] .bm-glint::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -40%;
+  width: 50%;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, rgba(255, 190, 200, 0.5), transparent);
+  transform: translateX(-220%) rotate(12deg);
+  animation: bm-glint 6.5s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes bm-glint {
+  0% {
+    transform: translateX(-220%) rotate(12deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.8;
+  }
+  20% {
+    transform: translateX(320%) rotate(12deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(320%) rotate(12deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Замораживаем «дыхание»/«угли»/«блик» — свечение остаётся, движения нет. */
+  [data-tracker='bloodmagic'] [class*='--active'],
+  [data-tracker='bloodmagic'] .bm__tab.on {
+    animation: none !important;
+  }
+  [data-tracker='bloodmagic'] .bm-glint::after {
+    animation: none;
+    opacity: 0;
+  }
+}

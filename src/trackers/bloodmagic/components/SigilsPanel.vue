@@ -63,7 +63,7 @@ const costLabel = (s: Sigil): string =>
 
     <div class="sp__grid" role="list">
       <div v-for="s in sorted" :key="s.field" class="sc" role="listitem" :title="s.name_en">
-        <div class="sc__icon-wrap">
+        <div class="sc__icon-wrap bm-glint">
           <ItemIcon
             :item="{ icon: sigilIcon(s), name_ru: s.name_ru, name_en: s.name_en }"
             :size="36"

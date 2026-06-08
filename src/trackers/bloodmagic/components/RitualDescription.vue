@@ -57,6 +57,13 @@ const loreExpanded = ref(false)
   border: 1px solid rgba(224, 52, 74, 0.28);
   align-self: flex-start;
   box-shadow: 0 0 8px rgba(224, 52, 74, 0.16);
+  animation: bm-breathe 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd__effect-badge {
+    animation: none;
+  }
 }
 
 .rd__purpose {

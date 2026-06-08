@@ -144,6 +144,18 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   color: var(--ink);
 }
 
+/* Итоговый предмет рецепта — артефакт, тлеет алым. */
+.rc__name :deep(.bm-icon) {
+  animation: bm-ember 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rc__name :deep(.bm-icon) {
+    animation: none;
+    filter: drop-shadow(0 0 4px rgba(224, 52, 74, 0.55));
+  }
+}
+
 /* Бейджи — горизонтальный ряд с переносом, единая высота и выравнивание */
 .rc__badges {
   display: flex;
@@ -203,16 +215,19 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   border: 1px solid #304080;
 }
 
+/* «только креатив» — запретный, недостижимый: фиолетовая аура. */
 .badge--creative {
-  background: rgba(120, 120, 120, 0.12);
-  color: var(--ink2);
-  border: 1px solid rgba(120, 120, 120, 0.24);
+  background: rgba(160, 107, 255, 0.14);
+  color: #d4bcff;
+  border: 1px solid rgba(160, 107, 255, 0.32);
+  box-shadow: 0 0 9px rgba(160, 107, 255, 0.22);
 }
 
 .badge--tier {
   background: rgba(255, 207, 107, 0.12);
   color: var(--amber);
   border: 1px solid rgba(255, 207, 107, 0.24);
+  box-shadow: 0 0 8px rgba(255, 207, 107, 0.14);
 }
 
 /* Кнопка-бейдж тира для altar-рецептов: такие же визуальные параметры + курсор + hover */
@@ -240,6 +255,7 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   background: rgba(224, 52, 74, 0.14);
   color: var(--honey-dk);
   border: 1px solid rgba(224, 52, 74, 0.28);
+  box-shadow: 0 0 9px rgba(224, 52, 74, 0.2);
 }
 
 /* LP-иконка внутри бейджа */

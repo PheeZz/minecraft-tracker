@@ -126,11 +126,12 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
   background: rgba(224, 52, 74, 0.08);
 }
 
-/* Активный суб-таб — усиленная кровавая аура */
+/* Активный суб-таб — усиленная кровавая аура, медленно «дышащая» */
 .bm__tab.on {
   background: var(--accent-grad);
   color: var(--solid-ink);
   box-shadow: var(--glow-arcane-strong);
+  animation: bm-breathe 4s ease-in-out infinite;
 }
 
 .bm__tab:focus-visible {

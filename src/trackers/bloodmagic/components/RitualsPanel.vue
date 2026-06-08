@@ -211,6 +211,19 @@ function voxels(r: Ritual) {
   flex: none;
 }
 
+/* Кристалл-артефакт в шапке выбранного ритуала — тлеет алым, как угли. */
+.rp__crystal-detail {
+  flex: none;
+  animation: bm-ember 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rp__crystal-detail {
+    animation: none;
+    filter: drop-shadow(0 0 4px rgba(224, 52, 74, 0.6));
+  }
+}
+
 .rp__filter-btn.on,
 .rp__filter-btn:hover {
   background: rgba(138, 16, 32, 0.2);

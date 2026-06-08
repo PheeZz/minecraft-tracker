@@ -115,7 +115,7 @@ function formatLP(lp: number): string {
   outline-offset: 1px;
 }
 
-/* Выбранный тир — кровавая аура */
+/* Выбранный тир — кровавая аура, медленно «дышащая» */
 .tl__row--active {
   background: rgba(138, 16, 32, 0.22);
   border-color: var(--solid);
@@ -123,6 +123,7 @@ function formatLP(lp: number): string {
   box-shadow:
     0 0 10px rgba(224, 52, 74, 0.2),
     inset 0 1px 0 rgba(255, 107, 126, 0.08);
+  animation: bm-breathe 4s ease-in-out infinite;
 }
 
 .tl__row--built {
@@ -137,9 +138,17 @@ function formatLP(lp: number): string {
   min-width: 22px;
 }
 
+/* Кровавый орб — магический артефакт: всегда тлеет алым, едва неровно мерцая. */
 .tl__orb-icon {
   flex: none;
-  opacity: 0.9;
+  animation: bm-ember 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl__orb-icon {
+    animation: none;
+    filter: drop-shadow(0 0 4px rgba(224, 52, 74, 0.6));
+  }
 }
 
 .tl__body {
