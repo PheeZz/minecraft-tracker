@@ -10,12 +10,17 @@ describe('tierBuildList', () => {
     expect(result.structural).toHaveLength(0)
   })
 
-  it('tier 2 — кумулятивно 4 обычных руны + 4 слота = итого 8 рун-блоков', () => {
+  it('tier 2 — 8 кровавых рун, 4 из них слоты апгрейда (угловые не слоты до T3)', () => {
     const result = tierBuildList(2)
-    // В T2: 4 isBloodRune && !isUpgradeSlot + 4 isUpgradeSlot = 8 блоков суммарно
-    expect(result.bloodRunes + result.upgradeSlots).toBe(8)
-    expect(result.bloodRunes).toBe(4)
+    // bloodRunes = все позиции isBloodRune; upgradeSlots ⊂ bloodRunes
+    expect(result.bloodRunes).toBe(8)
     expect(result.upgradeSlots).toBe(4)
+  })
+
+  it('tier 3 — 28 кровавых рун, все 28 апгрейдятся (угловые тоже стали слотами)', () => {
+    const result = tierBuildList(3)
+    expect(result.bloodRunes).toBe(28)
+    expect(result.upgradeSlots).toBe(28)
   })
 
   it('tier 3 — кумулятивно содержит глоустоун-столбы', () => {
@@ -58,21 +63,17 @@ describe('tierDelta', () => {
     expect(delta.upgradeSlots).toBe(full.upgradeSlots)
   })
 
-  it('tierDelta(3) = T3 − T2: upgradeSlots прирастают, glowstone появляются', () => {
+  it('tierDelta(3) = T3 − T2: +20 рун (28−8), +4 глоустоуна', () => {
     const d = tierDelta(3)
-    const t3 = tierBuildList(3)
-    const t2 = tierBuildList(2)
-    // upgradeSlots: T3=28, T2=4 → delta +24
-    expect(d.upgradeSlots).toBe(t3.upgradeSlots - t2.upgradeSlots)
-    // glowstone: T3=4, T2=0 → delta +4
-    expect(d.glowstone).toBe(t3.glowstone - t2.glowstone)
-    // bloodRunes: T3=0 < T2=4 — в T3 всё стало upgradeSlot, delta=0 (нельзя «удалить» блоки)
-    expect(d.bloodRunes).toBe(0)
+    // bloodRunes: T3=28, T2=8 → достроить 20 рун
+    expect(d.bloodRunes).toBe(20)
+    // glowstone: T3=4, T2=0 → +4
+    expect(d.glowstone).toBe(4)
   })
 
-  it('tierDelta(3): руны + слоты > 0 (T3 добавляет блоки к T2)', () => {
+  it('tierDelta(3): добавляются блоки к T2 (руны + глоустоун > 0)', () => {
     const d = tierDelta(3)
-    expect(d.bloodRunes + d.upgradeSlots + d.glowstone).toBeGreaterThan(0)
+    expect(d.bloodRunes + d.glowstone).toBeGreaterThan(0)
   })
 
   it('структурные блоки в delta: count может быть 0 (нет новых), не должно быть отрицательных', () => {

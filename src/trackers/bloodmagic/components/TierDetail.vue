@@ -72,13 +72,14 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
 
     <!-- Список строительных блоков -->
     <ul class="td__build-list">
-      <li v-if="buildData.bloodRunes > 0" class="td__build-item">
-        <span class="td__build-label">Кровавые руны</span>
+      <li v-if="buildData.bloodRunes > 0" class="td__build-item td__build-item--upgrade">
+        <span class="td__build-label">
+          Кровавые руны
+          <span v-if="showFull && buildData.upgradeSlots" class="td__build-sub">
+            из них апгрейдятся ★ {{ buildData.upgradeSlots }} (скорость/ёмкость/жертва)
+          </span>
+        </span>
         <span class="td__build-count">×{{ buildData.bloodRunes }}</span>
-      </li>
-      <li v-if="buildData.upgradeSlots > 0" class="td__build-item td__build-item--upgrade">
-        <span class="td__build-label">Слоты апгрейда ★</span>
-        <span class="td__build-count">×{{ buildData.upgradeSlots }}</span>
       </li>
       <li v-if="buildData.glowstone > 0" class="td__build-item">
         <span class="td__build-label">Глоустоун-столбы</span>
@@ -252,6 +253,14 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
 
 .td__build-label {
   color: var(--ink2);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.td__build-sub {
+  font-size: 10px;
+  color: var(--amber);
 }
 
 .td__build-count {

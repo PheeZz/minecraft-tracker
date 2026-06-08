@@ -7,9 +7,13 @@ import type { AltarBlock, BloodOrb, Recipe } from './types'
 
 /** Агрегированный список строительных блоков для тира. */
 export interface BuildList {
-  /** Базовые кровавые руны (isBloodRune && !isUpgradeSlot). */
+  /** Всего кровавых рун (isBloodRune) — физические блоки, которые ставит игрок. */
   bloodRunes: number
-  /** Слоты апгрейда (isBloodRune && isUpgradeSlot). */
+  /**
+   * Из них апгрейдятся (isUpgradeSlot) — ПОДМНОЖЕСТВО bloodRunes, не отдельные блоки.
+   * Любую руну-слот можно заменить на руну апгрейда. До T3 угловые руны не слоты
+   * (данные: T2 = 4 из 8 — подтверждено исходником мода и вики Sanguine Scientium).
+   */
   upgradeSlots: number
   /** Глоустоун-столбы (isPlacement). */
   glowstone: number
@@ -46,10 +50,9 @@ function aggregateComponents(blocks: readonly AltarBlock[]): BuildList {
   for (const b of blocks) {
     if (b.isPlacement) {
       glowstone += 1
-    } else if (b.isBloodRune && b.isUpgradeSlot) {
-      upgradeSlots += 1
     } else if (b.isBloodRune) {
       bloodRunes += 1
+      if (b.isUpgradeSlot) upgradeSlots += 1 // слот — подмножество рун, не отдельный блок
     }
   }
 
