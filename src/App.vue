@@ -6,6 +6,7 @@ import { TRACKER_MODULES, type TrackerId } from '@/shared/registry/trackers'
 import IconBase from '@/shared/ui/IconBase.vue'
 import ErrorBoundary from '@/shared/ui/ErrorBoundary.vue'
 import SupportLink from '@/shared/ui/SupportLink.vue'
+import ButtonSparks from '@/shared/ui/ButtonSparks.vue'
 import { message as liveMessage } from '@/shared/ui/useAnnouncer'
 
 const route = useRoute()
@@ -61,6 +62,7 @@ function switchTo(id: TrackerId) {
           <span class="switcher__title">{{ t.title }}</span>
           <span class="switcher__kicker">{{ t.kicker }}</span>
         </span>
+        <ButtonSparks :icon="t.mark" :active="t.id === activeTracker" />
       </button>
 
       <SupportLink class="switcher__support" />
@@ -165,6 +167,7 @@ function switchTo(id: TrackerId) {
 }
 
 .switcher__btn {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
