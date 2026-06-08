@@ -51,3 +51,6 @@ bloodmagic/_unmatched-*.json
 # диагностика локализатора (регенерируется)
 thaumcraft/i18n/_needs-localization.json
 thaumcraft/i18n/_garbage-names.json
+
+# временные скриншоты проверки (не коммитить)
+bm-*.png

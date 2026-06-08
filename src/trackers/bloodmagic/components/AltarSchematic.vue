@@ -1,95 +1,167 @@
 <script setup lang="ts">
-// Компонент top-down схемы мультиблок-структуры алтаря BloodMagic.
-// Режим large=true — для диалога (крупные клетки, до ~400px ширины).
-import { computed } from 'vue'
-import { altarFootprint } from '../domain/altarFootprint'
-import type { FootCell } from '../domain/altarFootprint'
+// Компонент послойной схемы мультиблок-структуры алтаря BloodMagic.
+// Режим large=true — для диалога (крупные клетки, повышенное разрешение).
+import { ref, computed } from 'vue'
+import { altarLayers } from '../domain/altarLayers'
+import { ALTAR_TIERS } from '../data/altar.data'
+import AltarLayerGrid from './AltarLayerGrid.vue'
 
 const props = defineProps<{ tier: number; large?: boolean }>()
 
-const footprint = computed(() => altarFootprint(props.tier))
+const base = import.meta.env.BASE_URL
 
-// В большом режиме (диалог) — вписываем в 400px; в маленьком (инлайн) — 220px
-const GRID_MAX_PX = computed(() => (props.large ? 400 : 220))
+const layers = computed(() => altarLayers(props.tier))
 
-// Размер клетки: вписываем всю сетку в максимальную ширину.
-// Минимум 12px чтобы клетки не были невидимыми на T6.
+// Данные тира для сводки
+const tierData = computed(() => ALTAR_TIERS.find((t) => t.tier === props.tier))
+
+// Максимальная ширина сетки: 520px в large, 260px в inline
+const GRID_MAX_PX = computed(() => (props.large ? 520 : 260))
+
+// Максимальный размер сетки по осям (X или Z) среди всех слоёв
+const maxGridDim = computed(() => layers.value.reduce((m, l) => Math.max(m, l.width, l.height), 1))
+
+// Размер клетки: вписываем в максимум; базово 34px (large) / 20px (inline), мин 12px
+const BASE_CELL = computed(() => (props.large ? 40 : 20))
 const cellPx = computed(() =>
-  Math.max(
-    12,
-    Math.floor(GRID_MAX_PX.value / Math.max(footprint.value.width, footprint.value.height)),
-  ),
+  Math.max(12, Math.min(BASE_CELL.value, Math.floor(GRID_MAX_PX.value / maxGridDim.value))),
 )
 
-// CSS grid через inline-style; overflowX приведён к допустимому типу CSS-свойства
-const gridStyle = computed(() => {
-  const needsScroll = props.large && footprint.value.width * cellPx.value > GRID_MAX_PX.value
-  return {
-    gridTemplateColumns: `repeat(${footprint.value.width}, ${cellPx.value}px)`,
-    width: `${footprint.value.width * cellPx.value}px`,
-    maxWidth: `${GRID_MAX_PX.value}px`,
-    overflowX: (needsScroll ? 'auto' : undefined) as 'auto' | undefined,
-  }
+// Самый плотный слой (максимальный count) — выбирается по умолчанию
+const defaultLayerIndex = computed(() => {
+  let maxCount = -1
+  let idx = 0
+  layers.value.forEach((l, i) => {
+    if (l.count > maxCount) {
+      maxCount = l.count
+      idx = i
+    }
+  })
+  return idx
 })
 
-// Метка многослойности: показываем «×N» когда ≥2 слоёв
-function layerLabel(cell: FootCell): string {
-  return cell.layers >= 2 ? `×${cell.layers}` : ''
+const activeLayerIndex = ref<number | null>(null)
+
+// Индекс активного слоя с учётом дефолта
+const currentIndex = computed(() =>
+  activeLayerIndex.value !== null ? activeLayerIndex.value : defaultLayerIndex.value,
+)
+
+const currentLayer = computed(() => layers.value[currentIndex.value] ?? null)
+
+// Сводка по тиру
+const summary = computed(() => {
+  const td = tierData.value
+  if (!td) return ''
+  const n = layers.value.length
+  return `Тир ${props.tier} · ${td.runeCount} рун · ${td.upgradeSlots} слотов апгрейда · ${n} слоёв`
+})
+
+function selectLayer(i: number): void {
+  activeLayerIndex.value = i
 }
 
-// CSS-класс модификатора клетки
-function cellMod(cell: FootCell): string {
-  return `sc__cell--${cell.kind}`
+// Клавиатурная навигация по степперу
+function onStepperKey(e: KeyboardEvent, i: number): void {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+    e.preventDefault()
+    selectLayer(Math.min(i + 1, layers.value.length - 1))
+  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+    e.preventDefault()
+    selectLayer(Math.max(i - 1, 0))
+  }
 }
 </script>
 
 <template>
-  <!-- T1: упрощённое сообщение вместо пустой сетки -->
-  <div v-if="tier <= 1" class="sc sc--empty">
-    <span class="sc__hint">Тир 1 · только алтарь, структура не нужна</span>
+  <!-- T1: только алтарь, схема не нужна -->
+  <div v-if="tier <= 1" class="sc sc--t1">
+    <div class="sc__t1-wrap">
+      <img
+        :src="`${base}bloodmagic/blocks/alchemicalwizardry/BloodAltar_Top.png`"
+        class="sc__t1-img"
+        alt="Алтарь крови"
+      />
+      <span class="sc__t1-hint">Тир 1 · только алтарь, окружающая структура не нужна</span>
+    </div>
   </div>
 
   <div v-else class="sc">
-    <span class="sc__sublabel">вид сверху</span>
+    <!-- Сводка тира -->
+    <p class="sc__summary">{{ summary }}</p>
 
-    <div class="sc__grid" :style="gridStyle" role="img" :aria-label="`Схема алтаря тир ${tier}`">
-      <div
-        v-for="(cell, i) in footprint.cells"
-        :key="i"
-        class="sc__cell"
-        :class="cellMod(cell)"
-        :style="{ width: `${cellPx}px`, height: `${cellPx}px` }"
-        :title="
-          cell.kind !== 'empty'
-            ? `(${cell.x},${cell.z})${cell.layers > 1 ? ` ×${cell.layers}` : ''}`
-            : undefined
-        "
-      >
-        <!-- Алтарь: символ-акцент в центре -->
-        <span v-if="cell.kind === 'altar'" class="sc__altar-icon" aria-hidden="true">✦</span>
-        <!-- Маркер столбов: «×N» контрастным текстом в правом нижнем углу -->
-        <span v-else-if="layerLabel(cell)" class="sc__layers" aria-hidden="true">{{
-          layerLabel(cell)
-        }}</span>
+    <!-- Крупная легенда сверху -->
+    <div class="sc__legend" aria-label="Обозначения блоков">
+      <div class="sc__leg-item">
+        <img
+          :src="`${base}bloodmagic/blocks/alchemicalwizardry/BloodAltar_Top.png`"
+          class="sc__leg-tex"
+          alt=""
+          aria-hidden="true"
+        />
+        <span>Алтарь</span>
+      </div>
+      <div class="sc__leg-item">
+        <img
+          :src="`${base}bloodmagic/blocks/alchemicalwizardry/BlankRune.png`"
+          class="sc__leg-tex"
+          alt=""
+          aria-hidden="true"
+        />
+        <span>Кровавая руна</span>
+      </div>
+      <div class="sc__leg-item">
+        <div class="sc__leg-tex sc__leg-upgrade-wrap">
+          <img
+            :src="`${base}bloodmagic/blocks/alchemicalwizardry/BlankRune.png`"
+            class="sc__leg-tex-inner"
+            alt=""
+            aria-hidden="true"
+          />
+          <span class="sc__leg-star" aria-hidden="true">★</span>
+        </div>
+        <span>Слот апгрейда</span>
+      </div>
+      <div class="sc__leg-item">
+        <img
+          :src="`${base}bloodmagic/vanilla/blocks/glowstone.png`"
+          class="sc__leg-tex"
+          alt=""
+          aria-hidden="true"
+        />
+        <span>Глоустоун-столб</span>
       </div>
     </div>
 
-    <!-- Легенда: одна строка под схемой -->
-    <div class="sc__legend" aria-hidden="true">
-      <span class="sc__leg-item"> <span class="sc__leg-dot sc__leg-dot--altar" />алтарь </span>
-      <span class="sc__leg-sep">·</span>
-      <span class="sc__leg-item"> <span class="sc__leg-dot sc__leg-dot--rune" />руна </span>
-      <span class="sc__leg-sep">·</span>
-      <span class="sc__leg-item">
-        <span class="sc__leg-dot sc__leg-dot--upgrade" />слот апгрейда
-      </span>
-      <span class="sc__leg-sep">·</span>
-      <span class="sc__leg-item"> <span class="sc__leg-dot sc__leg-dot--placement" />маяк </span>
-      <span class="sc__leg-sep">·</span>
-      <span class="sc__leg-item sc__leg-item--stack">
-        <span class="sc__leg-dot sc__leg-dot--rune" /><span class="sc__leg-stackmark">×N</span
-        >&thinsp;столб
-      </span>
+    <!-- Степпер слоёв -->
+    <div class="sc__stepper" role="tablist" aria-label="Слои структуры алтаря">
+      <button
+        v-for="(layer, i) in layers"
+        :key="layer.y"
+        type="button"
+        class="sc__step"
+        :class="{ 'sc__step--active': i === currentIndex }"
+        role="tab"
+        :aria-selected="i === currentIndex"
+        :aria-current="i === currentIndex ? 'true' : undefined"
+        :tabindex="i === currentIndex ? 0 : -1"
+        @click="selectLayer(i)"
+        @keydown="onStepperKey($event, i)"
+      >
+        <span class="sc__step-label">{{ layer.label }}</span>
+        <span class="sc__step-count">{{ layer.count }}</span>
+      </button>
+    </div>
+
+    <!-- Сетка текущего слоя -->
+    <div
+      v-if="currentLayer"
+      class="sc__grid-wrap"
+      :style="{ maxWidth: `${GRID_MAX_PX}px` }"
+      role="tabpanel"
+      :aria-label="`Слой: ${currentLayer.label}`"
+    >
+      <AltarLayerGrid :layer="currentLayer" :cell-px="cellPx" />
     </div>
   </div>
 </template>
@@ -98,163 +170,165 @@ function cellMod(cell: FootCell): string {
 .sc {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
   align-items: flex-start;
 }
 
-.sc--empty {
-  padding: 6px 0;
+/* ── T1 ── */
+.sc--t1 {
+  padding: 4px 0;
 }
 
-.sc__hint {
+.sc__t1-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sc__t1-img {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  border-radius: 4px;
+}
+
+.sc__t1-hint {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--dim);
   font-style: italic;
 }
 
-.sc__sublabel {
+/* ── Сводка ── */
+.sc__summary {
+  margin: 0;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
-  color: var(--dim);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.sc__grid {
-  display: grid;
-  gap: 1px;
-  line-height: 0;
-}
-
-/* ── Клетки ── */
-.sc__cell {
-  position: relative;
-  border-radius: 1px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Пустая клетка — едва видимая сетка */
-.sc__cell--empty {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-/* Руна — приглушённый кровавый квадрат БЕЗ золотой обводки */
-.sc__cell--rune {
-  background: rgba(138, 16, 32, 0.55);
-  border: 1px solid rgba(224, 52, 74, 0.35);
-}
-
-/* Слот апгрейда — ТОЛЬКО эта клетка золотая */
-.sc__cell--upgrade {
-  background: rgba(80, 50, 0, 0.6);
-  border: 2px solid var(--amber);
-  box-shadow: inset 0 0 3px rgba(255, 207, 107, 0.18);
-}
-
-/* Placement (маяк/глоустоун) — приглушённый фиолет */
-.sc__cell--placement {
-  background: rgba(80, 40, 120, 0.6);
-  border: 1px solid rgba(180, 100, 255, 0.45);
-}
-
-/* Алтарь — яркий центральный акцент: кровавый с подсветкой */
-.sc__cell--altar {
-  background: var(--solid);
-  border: 1px solid var(--honey-dk);
-  box-shadow: 0 0 5px rgba(224, 52, 74, 0.7);
-}
-
-/* Иконка алтаря */
-.sc__altar-icon {
-  font-size: 0.6em;
-  color: var(--honey-dk);
-  line-height: 1;
-  display: block;
-}
-
-/* Маркер столбов: «×N» в нижнем правом углу, контрастный цвет */
-.sc__layers {
-  position: absolute;
-  bottom: 0;
-  right: 1px;
-  font-size: 6px;
-  font-family: var(--font-mono);
-  font-weight: 900;
-  /* Белый текст с тёмной тенью — читается на любом фоне клетки */
-  color: #fff;
-  text-shadow:
-    0 0 2px #000,
-    0 0 3px rgba(0, 0, 0, 0.8);
-  line-height: 1;
-  pointer-events: none;
-  letter-spacing: -0.03em;
+  color: var(--ink2);
+  letter-spacing: 0.01em;
 }
 
 /* ── Легенда ── */
 .sc__legend {
-  font-family: var(--font-mono);
-  font-size: 8px;
-  color: var(--dim);
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 3px;
-  row-gap: 2px;
+  gap: 10px 16px;
+  padding: 8px 10px;
+  background: var(--card);
+  border: 1px solid var(--cardln);
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sc__leg-item {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink2);
 }
 
-.sc__leg-item--stack {
-  gap: 1px;
+/* Квадрат текстуры в легенде */
+.sc__leg-tex {
+  width: 22px;
+  height: 22px;
+  image-rendering: pixelated;
+  border-radius: 2px;
+  flex: none;
+  display: block;
 }
 
-.sc__leg-stackmark {
-  font-size: 7px;
-  color: var(--amber);
-  font-weight: 900;
-}
-
-.sc__leg-sep {
-  color: var(--dim);
-  opacity: 0.5;
-}
-
-.sc__leg-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 1px;
+/* Слот апгрейда в легенде: текстура + gold outline + звезда */
+.sc__leg-upgrade-wrap {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  outline: 2px solid var(--amber);
+  outline-offset: -1px;
+  border-radius: 2px;
+  overflow: hidden;
   flex: none;
 }
 
-.sc__leg-dot--altar {
-  background: var(--solid);
-  border: 1px solid var(--honey-dk);
+.sc__leg-tex-inner {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  display: block;
 }
 
-.sc__leg-dot--rune {
-  background: rgba(138, 16, 32, 0.55);
-  border: 1px solid rgba(224, 52, 74, 0.35);
+.sc__leg-star {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  font-size: 9px;
+  line-height: 1;
+  color: var(--amber);
+  text-shadow: 0 0 3px #000;
+  pointer-events: none;
 }
 
-/* Слот апгрейда в легенде — тоже золотой */
-.sc__leg-dot--upgrade {
-  background: rgba(80, 50, 0, 0.6);
-  border: 2px solid var(--amber);
+/* ── Степпер ── */
+.sc__stepper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
-.sc__leg-dot--placement {
-  background: rgba(80, 40, 120, 0.6);
-  border: 1px solid rgba(180, 100, 255, 0.45);
+.sc__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 8px;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink2);
+  background: var(--card);
+  border: 1px solid var(--cardln);
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1.2;
+  transition:
+    border-color 0.1s,
+    color 0.1s;
+}
+
+.sc__step:hover {
+  border-color: var(--honey-dk);
+  color: var(--ink);
+}
+
+.sc__step:focus-visible {
+  outline: 2px solid var(--honey-dk);
+  outline-offset: 1px;
+}
+
+/* Активный слой в степпере */
+.sc__step--active {
+  background: rgba(138, 16, 32, 0.18);
+  border-color: var(--solid);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.sc__step-label {
+  font-size: 11px;
+}
+
+/* Счётчик блоков в степпере — маленький dim-текст */
+.sc__step-count {
+  font-size: 9px;
+  color: var(--dim);
+  font-weight: 400;
+}
+
+/* ── Сетка ── */
+.sc__grid-wrap {
+  overflow-x: auto;
 }
 </style>

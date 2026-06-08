@@ -64,8 +64,9 @@ function onBackdrop(e: MouseEvent): void {
 }
 
 .dlg {
-  width: min(460px, 100%);
-  max-height: min(560px, 90vh);
+  /* Расширен до 620px чтобы легенда и сетка старших тиров помещались */
+  width: min(620px, 100%);
+  max-height: min(640px, 90vh);
   display: flex;
   flex-direction: column;
   background: var(--bg);
