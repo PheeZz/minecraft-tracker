@@ -62,7 +62,14 @@ const costLabel = (s: Sigil): string =>
     </header>
 
     <div class="sp__grid" role="list">
-      <div v-for="s in sorted" :key="s.field" class="sc" role="listitem" :title="s.name_en">
+      <div
+        v-for="(s, i) in sorted"
+        :key="s.field"
+        class="sc"
+        role="listitem"
+        :title="s.name_en"
+        :style="{ '--i': i }"
+      >
         <div class="sc__icon-wrap bm-glint">
           <ItemIcon
             :item="{ icon: sigilIcon(s), name_ru: s.name_ru, name_en: s.name_en }"
@@ -126,6 +133,26 @@ const costLabel = (s: Sigil): string =>
   padding: 10px 12px;
   box-shadow: var(--shadow-card);
   transition: box-shadow 0.15s ease;
+  /* Разовый каскад при появлении панели */
+  animation: sc-in 0.4s ease both;
+  animation-delay: calc(min(var(--i, 0), 20) * 26ms);
+}
+
+@keyframes sc-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc {
+    animation: none;
+  }
 }
 
 /* Hover-glow на карточке сигила — едва заметная кровавая аура */

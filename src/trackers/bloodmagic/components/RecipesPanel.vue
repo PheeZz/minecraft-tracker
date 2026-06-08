@@ -16,6 +16,10 @@ const query = ref('')
 const activeSources = ref<Set<RecipeSource>>(new Set())
 const activeTier = ref<number | null>(null)
 
+// Растёт при смене фильтра источника/тира (не поиска) — ключует грид, чтобы
+// карточки перемонтировались и каскадом появились заново. Поиск каскад не дёргает.
+const filterKey = ref(0)
+
 const tiers = availableTiers()
 
 const filtered = computed(() =>
@@ -56,11 +60,13 @@ const toggleSource = (src: RecipeSource): void => {
   else next.add(src)
   activeSources.value = next
   resetShown()
+  filterKey.value++
 }
 
 const selectTier = (t: number | null): void => {
   activeTier.value = activeTier.value === t ? null : t
   resetShown()
+  filterKey.value++
 }
 </script>
 
@@ -103,11 +109,12 @@ const selectTier = (t: number | null): void => {
       <span class="rp__count">{{ filtered.length }} / {{ RECIPES.length }}</span>
     </header>
 
-    <div v-if="visible.length" class="rp__grid">
+    <div v-if="visible.length" :key="filterKey" class="rp__grid">
       <RecipeCard
-        v-for="r in visible"
+        v-for="(r, i) in visible"
         :key="`${r.source}:${r.output.name_en}`"
         :recipe="r"
+        :style="{ '--i': i }"
         @show-altar="openAltarDialog"
       />
     </div>

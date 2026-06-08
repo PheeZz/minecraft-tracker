@@ -112,6 +112,27 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   transition:
     box-shadow 0.18s ease,
     border-color 0.18s ease;
+  /* Каскадное появление при смене фильтра: задержка по индексу с капом, чтобы
+     «показать ещё» (i≥22) не ждало секунды. */
+  animation: rc-in 0.4s ease both;
+  animation-delay: calc(min(var(--i, 0), 22) * 22ms);
+}
+
+@keyframes rc-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rc {
+    animation: none;
+  }
 }
 
 /* Лёгкий hover-glow — еле заметная кровавая аура при наведении */
