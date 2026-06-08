@@ -7,6 +7,7 @@ import IconBase from '@/shared/ui/IconBase.vue'
 import ErrorBoundary from '@/shared/ui/ErrorBoundary.vue'
 import SupportLink from '@/shared/ui/SupportLink.vue'
 import ButtonSparks from '@/shared/ui/ButtonSparks.vue'
+import AmbientParticles from '@/shared/ui/AmbientParticles.vue'
 import { message as liveMessage } from '@/shared/ui/useAnnouncer'
 
 const route = useRoute()
@@ -47,6 +48,7 @@ function switchTo(id: TrackerId) {
 
 <template>
   <div class="shell">
+    <AmbientParticles :tracker="activeTracker" />
     <a class="skip-link" href="#main-content">К основному содержимому</a>
     <nav class="switcher" aria-label="Переключатель трекеров">
       <button
