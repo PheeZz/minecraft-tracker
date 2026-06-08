@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// LP-калькулятор ритуала: активация, upkeep, worst-case расход, длительность орба мага.
+// LP-калькулятор ритуала: активация, поддержание, расход в худшем случае, длительность орба мага.
 // Все расчёты — domain/lp.ts; тут только отображение.
 import { computed } from 'vue'
 import type { Ritual } from '../domain/types'
@@ -32,13 +32,13 @@ const hasUpkeep = computed(() => ritual.upkeep_LP_per_tick > 0)
       </dd>
 
       <template v-if="hasUpkeep">
-        <dt class="rlc__dt">Расход (upkeep)</dt>
+        <dt class="rlc__dt">Расход (поддержание)</dt>
         <dd class="rlc__dd">
           <IconBase name="lp" class="rlc__lp-ic" />
           {{ formatLP(ritual.upkeep_LP_per_tick) }} LP / тик
         </dd>
 
-        <dt class="rlc__dt">Макс. слив (worst-case)</dt>
+        <dt class="rlc__dt">Макс. слив (худший случай)</dt>
         <dd class="rlc__dd rlc__dd--warn">
           <IconBase name="lp" class="rlc__lp-ic" />
           {{ formatLP(drainPerSec) }} LP/сек
@@ -48,13 +48,13 @@ const hasUpkeep = computed(() => ritual.upkeep_LP_per_tick > 0)
         <dt class="rlc__dt">{{ MAGICIAN_ORB.name_ru }}</dt>
         <dd class="rlc__dd">
           мин. {{ formatDuration(magicianDuration) }}
-          <span class="rlc__caveat">нижняя граница, worst-case</span>
+          <span class="rlc__caveat">нижняя граница, худший случай</span>
         </dd>
       </template>
 
       <template v-else>
         <dt class="rlc__dt">Расход</dt>
-        <dd class="rlc__dd rlc__dd--free">Без upkeep</dd>
+        <dd class="rlc__dd rlc__dd--free">Без расхода</dd>
       </template>
     </dl>
 
