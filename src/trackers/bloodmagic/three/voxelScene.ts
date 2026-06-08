@@ -69,7 +69,13 @@ export function createVoxelScene(
   let disposed = false
 
   // Мутабельный контент сцены (кубы, модели, сетка, твины)
-  let content: SceneContent = { meshes: [], modelObjects: [], grid: null, entranceTicks: [] }
+  let content: SceneContent = {
+    meshes: [],
+    modelObjects: [],
+    grid: null,
+    ambience: null,
+    entranceTicks: [],
+  }
 
   // Замыкания для передачи в buildSceneContent без прямого захвата переменной
   const buildParams = {

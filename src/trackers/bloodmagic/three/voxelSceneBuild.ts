@@ -5,6 +5,7 @@ import type { OrbitControls as OrbitControlsType } from 'three/examples/jsm/cont
 import type { VoxelBlock } from './voxelTypes'
 import { computeBounds, buildGrid } from './voxelGrid'
 import { loadAltarModel, startEntranceTween } from './altarModel'
+import { createAmbience, type Ambience } from './voxelAmbience'
 
 // --- Текстурный кеш ---
 
@@ -179,6 +180,8 @@ export interface SceneContent {
   modelObjects: THREEType.Object3D[]
   /** Сеточный пол */
   grid: THREEType.LineSegments | null
+  /** Атмосфера: угли + подсветка (null для пустой сцены) */
+  ambience: Ambience | null
   /** Активные entrance-твины (no-op после завершения) */
   entranceTicks: Array<(now: number) => void>
 }
@@ -237,6 +240,13 @@ export function buildSceneContent(
   const grid = newBlocks.length ? buildGrid(THREE, bounds) : null
   if (grid) scene.add(grid)
 
+  // Атмосфера: кровавые угли + пульсирующая подсветка под структурой
+  const ambience = newBlocks.length ? createAmbience(THREE, bounds) : null
+  if (ambience) {
+    scene.add(ambience.group)
+    entranceTicks.push(ambience.tick)
+  }
+
   centerCamera(camera, controls, newBlocks)
 
   // OBJ-модели — асинхронно (OBJLoader грузится отдельным чанком)
@@ -269,7 +279,7 @@ export function buildSceneContent(
       })
   }
 
-  return { meshes, modelObjects, grid, entranceTicks }
+  return { meshes, modelObjects, grid, ambience, entranceTicks }
 }
 
 /** Удаляет из сцены и освобождает контент (кубы, сетку, OBJ). */
@@ -296,5 +306,10 @@ export function clearSceneContent(scene: THREEType.Scene, old: SceneContent) {
     scene.remove(old.grid)
     old.grid.geometry.dispose()
     ;(old.grid.material as THREEType.Material).dispose()
+  }
+
+  if (old.ambience) {
+    scene.remove(old.ambience.group)
+    old.ambience.dispose()
   }
 }
