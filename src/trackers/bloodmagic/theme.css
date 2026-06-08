@@ -1,0 +1,61 @@
+/* Тема трекера BloodMagic — тёмная «кровь» (багровый/малиновый, тёмная магия). */
+[data-tracker='bloodmagic'] {
+  color-scheme: dark;
+  --bg: #0a0506;
+  --bg2: #050203;
+  --card: #170c0e;
+  --card2: #1f0f12; /* верх градиентной заливки карточки */
+  --cardln: #3a1c22;
+  --panel: rgba(23, 12, 14, 0.62);
+  --ink: #fbeef0;
+  --ink2: #ecd4d8;
+  --muted: #c89aa0;
+  --dim: #9c7176;
+  --honey: #e0344a; /* базовый акцент (общее имя токена) — кровь-алый */
+  --honey-dk: #ff6b7e; /* акцентный текст на тёмном — светло-красный */
+  --accent: var(--honey-dk);
+  --amber: #ffcf6b; /* золото — пометка слотов/требований */
+  --rust: #e0813c;
+  --src-f: #52e0a0; /* зелёный «изучено/выполнено» */
+  --src-f-soft: rgba(82, 224, 160, 0.16);
+  --src-e: #e04a6a;
+  --src-e-soft: rgba(224, 74, 106, 0.16);
+  --src-m: #ff6b7e;
+  --src-m-soft: rgba(255, 107, 126, 0.2);
+  --line: rgba(224, 52, 74, 0.16);
+  --alt: #ffb3bc;
+  --scroll-thumb: #4f1c24;
+
+  --solid: #8a1020; /* тёмный акцент — кнопки/активные состояния */
+  --solid-ink: #fbeef0;
+
+  --ring-cyan: rgba(255, 107, 126, 0.5);
+  --glow-cyan: rgba(224, 52, 74, 0.4);
+  --glow-green: rgba(82, 224, 160, 0.4);
+  --glow-violet: rgba(255, 107, 126, 0.42);
+  /* кровавые свечения по состояниям */
+  --glow-arcane: 0 0 18px rgba(224, 52, 74, 0.28);
+  --glow-arcane-soft: 0 0 12px rgba(224, 52, 74, 0.16);
+  --glow-goal: 0 0 22px rgba(255, 207, 107, 0.4);
+  --glow-done: 0 0 18px rgba(82, 224, 160, 0.34);
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-card-hi: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* карточка с тонкой красной аурой по краю — «окровавленный» вид */
+  --shadow-card-glow: 0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 0 0 1px rgba(224, 52, 74, 0.06), 0 6px 22px rgba(0, 0, 0, 0.42),
+    0 0 26px rgba(138, 16, 32, 0.1);
+  --accent-grad: linear-gradient(135deg, #ff6b7e, #e0344a);
+  --bar-grad: linear-gradient(90deg, var(--src-f), #ff6b7e);
+
+  --font-display: 'Unbounded', sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  background:
+    radial-gradient(58% 48% at 84% -12%, rgba(224, 52, 74, 0.18), transparent 62%),
+    radial-gradient(50% 46% at -6% 104%, rgba(180, 30, 50, 0.14), transparent 58%),
+    radial-gradient(34% 30% at 18% 18%, rgba(82, 224, 160, 0.04), transparent 70%),
+    radial-gradient(40% 38% at 50% 42%, rgba(224, 52, 74, 0.06), transparent 70%),
+    linear-gradient(160deg, var(--bg), var(--bg2));
+  background-attachment: fixed;
+}

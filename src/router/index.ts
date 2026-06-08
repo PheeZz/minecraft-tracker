@@ -52,6 +52,7 @@ const TITLE_SUFFIX: Record<TrackerId, string> = {
   bees: 'Forestry — схемы скрещивания',
   genetics: '— генетика пчёл',
   thaumcraft: '— магия и аспекты',
+  bloodmagic: '— кровавая магия',
 }
 
 /** Заголовок вкладки для трекера (ключевик впереди, бренд в хвосте). */

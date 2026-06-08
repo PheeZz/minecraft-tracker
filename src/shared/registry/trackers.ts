@@ -43,6 +43,14 @@ export const TRACKER_MODULES = [
     path: '/thaumcraft',
     view: () => import('@/trackers/thaumcraft/components/ThaumcraftView.vue'),
   },
+  {
+    id: 'bloodmagic',
+    title: 'Кровавая магия',
+    kicker: 'BloodMagic · Ритуалы',
+    mark: 'drop',
+    path: '/bloodmagic',
+    view: () => import('@/trackers/bloodmagic/components/BloodMagicView.vue'),
+  },
 ] as const satisfies readonly TrackerModule[]
 
 export type TrackerId = (typeof TRACKER_MODULES)[number]['id']

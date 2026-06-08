@@ -41,6 +41,8 @@ scripts/og/
 
 # запечённые иконки аспектов Thaumcraft (генерируемы)
 public/thaumcraft/
+# текстуры BloodMagic в public — копируются из bloodmagic/textures (генерируемы)
+public/bloodmagic/
 
 # диагностика генератора иконок (регенерируется)
 thaumcraft/textures/_unmatched-items.json
