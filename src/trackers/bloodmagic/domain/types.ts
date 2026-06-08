@@ -14,6 +14,8 @@ export interface BloodOrb {
   capacity_LP: number
   tier: number
   consumptionRate: number
+  /** Путь к иконке от public/ (опционально — ItemIcon покажет fallback при ошибке). */
+  icon?: string
 }
 
 export interface AltarBlock {

@@ -5,6 +5,7 @@ import { computed } from 'vue'
 import { ALTAR_TIERS } from '../data/altar.data'
 import { unlocksAtTier } from '../domain/progression'
 import { useProgressStore } from '../stores/useProgressStore'
+import ItemIcon from './ItemIcon.vue'
 
 const props = defineProps<{ modelValue: number }>()
 const emit = defineEmits<{ 'update:modelValue': [tier: number] }>()
@@ -16,6 +17,8 @@ interface TierRow {
   runeCount: number
   orbName: string | null
   orbCapacity: number | null
+  orbIcon: string | undefined
+  orbNameEn: string | null
 }
 
 const rows = computed<TierRow[]>(() =>
@@ -26,6 +29,8 @@ const rows = computed<TierRow[]>(() =>
       runeCount: t.runeCount,
       orbName: orb?.name_ru ?? null,
       orbCapacity: orb?.capacity_LP ?? null,
+      orbIcon: orb?.icon,
+      orbNameEn: orb?.name_en ?? null,
     }
   }),
 )
@@ -53,6 +58,12 @@ function formatLP(lp: number): string {
       @click="emit('update:modelValue', row.tier)"
     >
       <span class="tl__tier">T{{ row.tier }}</span>
+      <ItemIcon
+        v-if="row.orbIcon"
+        :item="{ icon: row.orbIcon, name_ru: row.orbName ?? '', name_en: row.orbNameEn ?? '' }"
+        :size="18"
+        class="tl__orb-icon"
+      />
       <span class="tl__body">
         <span v-if="row.orbName" class="tl__orb">{{ row.orbName }}</span>
         <span v-if="row.orbCapacity" class="tl__cap">{{ formatLP(row.orbCapacity) }} LP</span>
@@ -116,6 +127,11 @@ function formatLP(lp: number): string {
   font-weight: 800;
   color: var(--honey-dk);
   min-width: 22px;
+}
+
+.tl__orb-icon {
+  flex: none;
+  opacity: 0.9;
 }
 
 .tl__body {

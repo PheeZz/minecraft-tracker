@@ -132,14 +132,29 @@ function toItemRef(o) {
 }
 
 // ---- кровавые шары ----
-const orbs = bmSrc('blood-orbs.json').orbs.map((o) => ({
-  field: o.field,
-  name_en: o.name_en,
-  name_ru: o.name_ru,
-  capacity_LP: o.capacity_LP,
-  tier: o.tier,
-  consumptionRate: o.consumptionRate,
-}))
+// Маппинг field → имя файла иконки (WeakBloodOrb.png физически отсутствует — fallback в ItemIcon)
+const ORB_ICON = {
+  weakBloodOrb: 'WeakBloodOrb.png',
+  apprenticeBloodOrb: 'ApprenticeBloodOrb.png',
+  magicianBloodOrb: 'MagicianBloodOrb.png',
+  masterBloodOrb: 'MasterBloodOrb.png',
+  archmageBloodOrb: 'ArchmageBloodOrb.png',
+  transcendentBloodOrb: 'TranscendentBloodOrb.png',
+}
+
+const orbs = bmSrc('blood-orbs.json').orbs.map((o) => {
+  const iconFile = ORB_ICON[o.field]
+  const icon = iconFile ? `bloodmagic/items/alchemicalwizardry/${iconFile}` : undefined
+  return {
+    field: o.field,
+    name_en: o.name_en,
+    name_ru: o.name_ru,
+    capacity_LP: o.capacity_LP,
+    tier: o.tier,
+    consumptionRate: o.consumptionRate,
+    ...(icon ? { icon } : {}),
+  }
+})
 
 // ---- структура алтаря ----
 function normalizeAltarBlock(c) {

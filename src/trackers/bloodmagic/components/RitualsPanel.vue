@@ -4,6 +4,7 @@ import { ref, computed } from 'vue'
 import { RITUALS } from '../data/rituals.data'
 import type { Ritual } from '../domain/types'
 import MultiblockView from './MultiblockView.vue'
+import ItemIcon from './ItemIcon.vue'
 import RitualDescription from './RitualDescription.vue'
 import RitualLpCalc from './RitualLpCalc.vue'
 import RitualRuneBreakdown from './RitualRuneBreakdown.vue'
@@ -14,6 +15,17 @@ import { useRitualProgressStore } from '../stores/useRitualProgressStore'
 const CRYSTAL_LABELS: Record<number, string> = { 1: 'Слабый', 2: 'Пробуждённый' }
 function crystalLabel(level: number): string {
   return CRYSTAL_LABELS[level] ?? `Уровень ${level}`
+}
+
+// Маппинг уровня кристалла → путь к иконке в public/ (1=Weak, 2=Awakened, иное=Creative)
+function crystalIcon(level: number): string {
+  if (level === 1) return 'bloodmagic/items/alchemicalwizardry/activationCrystalWeak.png'
+  if (level === 2) return 'bloodmagic/items/alchemicalwizardry/activationCrystalAwakened.png'
+  return 'bloodmagic/items/alchemicalwizardry/activationCrystalCreative.png'
+}
+
+function crystalItemRef(level: number) {
+  return { icon: crystalIcon(level), name_ru: crystalLabel(level), name_en: `Crystal L${level}` }
 }
 
 // Уровни из данных без дублирования, отсортированы
@@ -67,6 +79,7 @@ function voxels(r: Ritual) {
           :class="{ on: filterLevel === lvl }"
           @click="filterLevel = lvl"
         >
+          <ItemIcon :item="crystalItemRef(lvl)" :size="14" class="rp__crystal-icon" />
           {{ crystalLabel(lvl) }}
         </button>
       </div>
@@ -93,7 +106,14 @@ function voxels(r: Ritual) {
     <div v-if="selected" class="rp__detail">
       <div class="rp__detail-header">
         <div class="rp__detail-titles">
-          <h3 class="rp__detail-name">{{ selected.name_ru }}</h3>
+          <div class="rp__detail-name-row">
+            <ItemIcon
+              :item="crystalItemRef(selected.crystalLevel)"
+              :size="18"
+              class="rp__crystal-detail"
+            />
+            <h3 class="rp__detail-name">{{ selected.name_ru }}</h3>
+          </div>
           <span class="rp__detail-en">{{ selected.name_en }}</span>
         </div>
         <button
@@ -181,6 +201,14 @@ function voxels(r: Ritual) {
   transition:
     color 0.15s,
     background 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Иконка кристалла в кнопке фильтра */
+.rp__crystal-icon {
+  flex: none;
 }
 
 .rp__filter-btn.on,
@@ -254,6 +282,17 @@ function voxels(r: Ritual) {
   display: flex;
   flex-direction: column;
   gap: 3px;
+}
+
+.rp__detail-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Иконка кристалла в заголовке детального вида */
+.rp__crystal-detail {
+  flex: none;
 }
 
 .rp__detail-name {

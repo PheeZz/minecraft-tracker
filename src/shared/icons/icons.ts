@@ -36,6 +36,8 @@ import heart from '@/assets/icons/heart.svg?raw'
 import aspect from '@/assets/icons/aspect.svg?raw'
 import arrow from '@/assets/icons/arrow.svg?raw'
 import drop from '@/assets/icons/drop.svg?raw'
+import ritual from '@/assets/icons/ritual.svg?raw'
+import sigil from '@/assets/icons/sigil.svg?raw'
 
 export const ICONS = {
   leaf,
@@ -69,6 +71,8 @@ export const ICONS = {
   aspect,
   arrow,
   drop,
+  ritual,
+  sigil,
 } as const
 
 export type IconName = keyof typeof ICONS

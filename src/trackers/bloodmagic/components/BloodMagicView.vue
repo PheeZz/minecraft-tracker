@@ -5,14 +5,16 @@ import RecipesPanel from './RecipesPanel.vue'
 import SigilsPanel from './SigilsPanel.vue'
 import BloodPathPanel from './BloodPathPanel.vue'
 import RitualsPanel from './RitualsPanel.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
+import type { IconName } from '@/shared/icons/icons'
 
 // ── Суб-табы трекера BloodMagic ──
 type Panel = 'path' | 'rituals' | 'sigils' | 'recipes'
-const PANELS: { id: Panel; label: string }[] = [
-  { id: 'path', label: 'Путь крови' },
-  { id: 'rituals', label: 'Ритуалы' },
-  { id: 'sigils', label: 'Сигилы' },
-  { id: 'recipes', label: 'Рецепты' },
+const PANELS: { id: Panel; label: string; icon: IconName }[] = [
+  { id: 'path', label: 'Путь крови', icon: 'drop' },
+  { id: 'rituals', label: 'Ритуалы', icon: 'ritual' },
+  { id: 'sigils', label: 'Сигилы', icon: 'sigil' },
+  { id: 'recipes', label: 'Рецепты', icon: 'grid' },
 ]
 
 // активная вкладка сохраняется — при возврате открывается последняя
@@ -35,6 +37,7 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
           :aria-pressed="panel === p.id"
           @click="panel = p.id"
         >
+          <IconBase :name="p.icon" class="bm__tab-icon" />
           {{ p.label }}
         </button>
       </div>
@@ -100,6 +103,17 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
   transition:
     color 0.15s ease,
     background 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Иконка слева от текста таба — 14px, наследует цвет кнопки */
+.bm__tab-icon {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  opacity: 0.85;
 }
 
 .bm__tab:hover:not(.on) {

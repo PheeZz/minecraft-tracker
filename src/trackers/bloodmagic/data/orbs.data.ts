@@ -8,6 +8,7 @@ export const ORBS: readonly BloodOrb[] = [
     capacity_LP: 5000,
     tier: 1,
     consumptionRate: 2,
+    icon: 'bloodmagic/items/alchemicalwizardry/WeakBloodOrb.png',
   },
   {
     field: 'apprenticeBloodOrb',
@@ -16,6 +17,7 @@ export const ORBS: readonly BloodOrb[] = [
     capacity_LP: 25000,
     tier: 2,
     consumptionRate: 5,
+    icon: 'bloodmagic/items/alchemicalwizardry/ApprenticeBloodOrb.png',
   },
   {
     field: 'magicianBloodOrb',
@@ -24,6 +26,7 @@ export const ORBS: readonly BloodOrb[] = [
     capacity_LP: 150000,
     tier: 3,
     consumptionRate: 15,
+    icon: 'bloodmagic/items/alchemicalwizardry/MagicianBloodOrb.png',
   },
   {
     field: 'masterBloodOrb',
@@ -32,6 +35,7 @@ export const ORBS: readonly BloodOrb[] = [
     capacity_LP: 1000000,
     tier: 4,
     consumptionRate: 25,
+    icon: 'bloodmagic/items/alchemicalwizardry/MasterBloodOrb.png',
   },
   {
     field: 'archmageBloodOrb',
@@ -40,6 +44,7 @@ export const ORBS: readonly BloodOrb[] = [
     capacity_LP: 10000000,
     tier: 5,
     consumptionRate: 50,
+    icon: 'bloodmagic/items/alchemicalwizardry/ArchmageBloodOrb.png',
   },
   {
     field: 'transcendentBloodOrb',
@@ -48,5 +53,6 @@ export const ORBS: readonly BloodOrb[] = [
     capacity_LP: 30000000,
     tier: 6,
     consumptionRate: 100,
+    icon: 'bloodmagic/items/alchemicalwizardry/TranscendentBloodOrb.png',
   },
 ]

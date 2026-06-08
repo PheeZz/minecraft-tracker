@@ -7,6 +7,17 @@ import { useProgressStore } from '../stores/useProgressStore'
 import AltarSchematic from './AltarSchematic.vue'
 import MultiblockView from './MultiblockView.vue'
 import { altarVoxels } from '../three/altarVoxels'
+import ItemIcon from './ItemIcon.vue'
+
+// Маппинг ref структурного блока → путь к иконке в public/
+const BLOCK_ICON: Record<string, string> = {
+  largeBloodStoneBrick: 'bloodmagic/blocks/alchemicalwizardry/LargeBloodStoneBrick.png',
+  blockCrystal: 'bloodmagic/blocks/alchemicalwizardry/ShardCluster.png',
+}
+
+function blockIcon(ref: string): string | undefined {
+  return BLOCK_ICON[ref]
+}
 
 const props = defineProps<{ tier: number }>()
 
@@ -49,7 +60,18 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
 
     <!-- Орб этого тира -->
     <div v-if="unlocks.orb" class="td__orb">
-      <span class="td__orb-name">{{ unlocks.orb.name_ru }}</span>
+      <div class="td__orb-row">
+        <ItemIcon
+          v-if="unlocks.orb.icon"
+          :item="{
+            icon: unlocks.orb.icon,
+            name_ru: unlocks.orb.name_ru,
+            name_en: unlocks.orb.name_en,
+          }"
+          :size="22"
+        />
+        <span class="td__orb-name">{{ unlocks.orb.name_ru }}</span>
+      </div>
       <span class="td__orb-stats">
         {{ formatLP(unlocks.orb.capacity_LP) }} LP · расход
         {{ unlocks.orb.consumptionRate }} LP/операцию
@@ -81,19 +103,49 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
     <ul class="td__build-list">
       <li v-if="buildData.bloodRunes > 0" class="td__build-item td__build-item--upgrade">
         <span class="td__build-label">
-          Кровавые руны
-          <span v-if="showFull && buildData.upgradeSlots" class="td__build-sub">
-            из них апгрейдятся ★ {{ buildData.upgradeSlots }} (скорость/ёмкость/жертва)
+          <ItemIcon
+            :item="{
+              icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+              name_ru: 'Кровавая руна',
+              name_en: 'Blood Rune',
+            }"
+            :size="16"
+            class="td__block-icon"
+          />
+          <span class="td__build-text">
+            Кровавые руны
+            <span v-if="showFull && buildData.upgradeSlots" class="td__build-sub">
+              из них апгрейдятся ★ {{ buildData.upgradeSlots }} (скорость/ёмкость/жертва)
+            </span>
           </span>
         </span>
         <span class="td__build-count">×{{ buildData.bloodRunes }}</span>
       </li>
       <li v-if="buildData.glowstone > 0" class="td__build-item">
-        <span class="td__build-label">Глоустоун-столбы</span>
+        <span class="td__build-label">
+          <ItemIcon
+            :item="{
+              icon: 'bloodmagic/vanilla/blocks/glowstone.png',
+              name_ru: 'Глоустоун',
+              name_en: 'Glowstone',
+            }"
+            :size="16"
+            class="td__block-icon"
+          />
+          Глоустоун-столбы
+        </span>
         <span class="td__build-count">×{{ buildData.glowstone }}</span>
       </li>
       <li v-for="s in buildData.structural" :key="s.ref" class="td__build-item">
-        <span class="td__build-label">{{ s.name_ru }}</span>
+        <span class="td__build-label">
+          <ItemIcon
+            v-if="blockIcon(s.ref)"
+            :item="{ icon: blockIcon(s.ref), name_ru: s.name_ru, name_en: s.ref }"
+            :size="16"
+            class="td__block-icon"
+          />
+          {{ s.name_ru }}
+        </span>
         <span class="td__build-count">×{{ s.count }}</span>
       </li>
       <li
@@ -217,6 +269,12 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   font-size: 12px;
 }
 
+.td__orb-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .td__orb-name {
   font-weight: 700;
   font-size: 13px;
@@ -289,6 +347,20 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
 
 .td__build-label {
   color: var(--ink2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+/* Иконка блока в строке постройки */
+.td__block-icon {
+  flex: none;
+}
+
+/* Обёртка текстового содержимого (имя + подпись апгрейда) */
+.td__build-text {
   display: flex;
   flex-direction: column;
   gap: 2px;
