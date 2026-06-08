@@ -110,6 +110,22 @@
   }
 }
 
+/* Медленное вращение — для рунической печати за шапкой ритуала. */
+@keyframes bm-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Заголовки разделов — тонкая кровавая аура у дисплейного шрифта. */
+[data-tracker='bloodmagic'] .rp__title,
+[data-tracker='bloodmagic'] .sp__title,
+[data-tracker='bloodmagic'] .td__title,
+[data-tracker='bloodmagic'] .rp__detail-name,
+[data-tracker='bloodmagic'] .bpp__ladder-title {
+  text-shadow: 0 0 14px rgba(224, 52, 74, 0.3);
+}
+
 /* «Зачарованный блик»: периодический диагональный проблеск по магической ячейке —
    как мерцание зачарованных предметов в Minecraft. Хост ставит .bm-glint. */
 [data-tracker='bloodmagic'] .bm-glint {
