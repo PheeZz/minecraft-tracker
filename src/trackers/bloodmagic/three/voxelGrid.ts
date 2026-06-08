@@ -46,26 +46,29 @@ export function computeBounds(blocks: readonly VoxelBlock[]): Bounds {
   }
 }
 
+/** Запас клеток сетки вокруг структуры с каждой стороны. */
+const GRID_MARGIN = 3
+
 /**
  * Опорная сетка на уровне пола структуры (под нижним слоем блоков).
- * Линии на границах блоков (полуцелые координаты) — как в Minecraft.
- * Центральные линии (через мастер-камень/алтарь) подсвечены ярче.
+ * Своя сетка из LineSegments (не GridHelper): линии ставятся ровно на грани блоков
+ * (полуцелые координаты) и симметрично покрывают структуру — поэтому она и выровнена
+ * по блокам, и отцентрована относительно постройки одновременно.
  */
-export function buildGrid(THREE: typeof THREEType, bounds: Bounds): THREEType.GridHelper {
-  const spanX = bounds.maxX - bounds.minX
-  const spanZ = bounds.maxZ - bounds.minZ
-  // Размер ОБЯЗАТЕЛЬНО чётный: блоки на целых координатах, грани — на полуцелых.
-  // GridHelper рисует линии шагом 1; при чётном size и сдвиге центра на 0.5 линии
-  // ложатся ровно на грани блоков (как сетка пола в Minecraft). Нечётный size сдвинул
-  // бы линии на центры блоков — мимо. +6 — запас вокруг структуры.
-  let size = Math.ceil(Math.max(spanX, spanZ)) + 6
-  if (size % 2 !== 0) size += 1
-  const grid = new THREE.GridHelper(size, size, 0xc04a4a, 0x44282a)
-  // Центр сетки — ближайшая полуцелая к центру структуры (выравнивание линий на грани);
-  // пол — на полблока ниже нижнего вокселя.
-  grid.position.set(Math.floor(bounds.cx) + 0.5, bounds.minY - 0.5, Math.floor(bounds.cz) + 0.5)
-  const mat = grid.material as THREEType.Material
-  mat.transparent = true
-  mat.opacity = 0.5
-  return grid
+export function buildGrid(THREE: typeof THREEType, bounds: Bounds): THREEType.LineSegments {
+  // Грани блоков — на полуцелых координатах; шаг 1 сохраняет их на гранях.
+  const y = bounds.minY - 0.5
+  const x0 = bounds.minX - 0.5 - GRID_MARGIN
+  const x1 = bounds.maxX + 0.5 + GRID_MARGIN
+  const z0 = bounds.minZ - 0.5 - GRID_MARGIN
+  const z1 = bounds.maxZ + 0.5 + GRID_MARGIN
+
+  const pts: number[] = []
+  for (let x = x0; x <= x1 + 0.001; x += 1) pts.push(x, y, z0, x, y, z1) // линии вдоль Z
+  for (let z = z0; z <= z1 + 0.001; z += 1) pts.push(x0, y, z, x1, y, z) // линии вдоль X
+
+  const geom = new THREE.BufferGeometry()
+  geom.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3))
+  const mat = new THREE.LineBasicMaterial({ color: 0x6a3636, transparent: true, opacity: 0.45 })
+  return new THREE.LineSegments(geom, mat)
 }
