@@ -5,6 +5,7 @@ import { computed } from 'vue'
 import type { Ritual } from '../domain/types'
 import { ORBS } from '../data/orbs.data'
 import { maxDrainPerSecond, minOrbDurationSeconds, formatLP, formatDuration } from '../domain/lp'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const { ritual } = defineProps<{ ritual: Ritual }>()
 
@@ -25,14 +26,21 @@ const hasUpkeep = computed(() => ritual.upkeep_LP_per_tick > 0)
 
     <dl class="rlc__grid">
       <dt class="rlc__dt">Активация</dt>
-      <dd class="rlc__dd rlc__dd--accent">{{ formatLP(ritual.activation_LP) }} LP</dd>
+      <dd class="rlc__dd rlc__dd--accent">
+        <IconBase name="lp" class="rlc__lp-ic" />
+        {{ formatLP(ritual.activation_LP) }} LP
+      </dd>
 
       <template v-if="hasUpkeep">
         <dt class="rlc__dt">Расход (upkeep)</dt>
-        <dd class="rlc__dd">{{ formatLP(ritual.upkeep_LP_per_tick) }} LP / тик</dd>
+        <dd class="rlc__dd">
+          <IconBase name="lp" class="rlc__lp-ic" />
+          {{ formatLP(ritual.upkeep_LP_per_tick) }} LP / тик
+        </dd>
 
         <dt class="rlc__dt">Макс. слив (worst-case)</dt>
         <dd class="rlc__dd rlc__dd--warn">
+          <IconBase name="lp" class="rlc__lp-ic" />
           {{ formatLP(drainPerSec) }} LP/сек
           <span class="rlc__caveat">при непрерывной работе</span>
         </dd>
@@ -98,8 +106,22 @@ const hasUpkeep = computed(() => ritual.upkeep_LP_per_tick > 0)
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 5px;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Миниатюрная LP-иконка в строках калькулятора */
+.rlc__lp-ic {
+  color: var(--honey-dk);
+  opacity: 0.75;
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+}
+
+.rlc__lp-ic :deep(svg) {
+  width: 11px;
+  height: 11px;
 }
 
 .rlc__dd--accent {

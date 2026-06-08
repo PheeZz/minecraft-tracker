@@ -43,18 +43,20 @@ const loreExpanded = ref(false)
   gap: 6px;
 }
 
+/* Бейдж эффекта ритуала — тонкая аура, «магичнее» */
 .rd__effect-badge {
   display: inline-block;
   font-family: var(--font-mono);
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  padding: 2px 8px;
+  padding: 3px 9px;
   border-radius: 5px;
   background: rgba(138, 16, 32, 0.22);
   color: var(--alt);
-  border: 1px solid var(--cardln);
+  border: 1px solid rgba(224, 52, 74, 0.28);
   align-self: flex-start;
+  box-shadow: 0 0 8px rgba(224, 52, 74, 0.16);
 }
 
 .rd__purpose {

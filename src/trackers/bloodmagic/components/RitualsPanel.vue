@@ -239,13 +239,24 @@ function voxels(r: Ritual) {
   margin-bottom: 2px;
 }
 
-.rp__item:hover {
-  background: rgba(138, 16, 32, 0.1);
+.rp__item {
+  transition:
+    background 0.12s,
+    box-shadow 0.15s;
 }
 
+.rp__item:hover {
+  background: rgba(138, 16, 32, 0.1);
+  box-shadow: var(--glow-card-hover);
+}
+
+/* Выбранный ритуал — тонкая боковая черта + лёгкое свечение */
 .rp__item.on {
   background: rgba(138, 16, 32, 0.22);
   color: var(--ink);
+  box-shadow:
+    inset 2px 0 0 var(--honey-dk),
+    var(--glow-arcane-soft);
 }
 
 .rp__item-name {

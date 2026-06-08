@@ -6,6 +6,7 @@ import { ALTAR_TIERS } from '../data/altar.data'
 import { unlocksAtTier } from '../domain/progression'
 import { useProgressStore } from '../stores/useProgressStore'
 import ItemIcon from './ItemIcon.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const props = defineProps<{ modelValue: number }>()
 const emit = defineEmits<{ 'update:modelValue': [tier: number] }>()
@@ -66,7 +67,10 @@ function formatLP(lp: number): string {
       />
       <span class="tl__body">
         <span v-if="row.orbName" class="tl__orb">{{ row.orbName }}</span>
-        <span v-if="row.orbCapacity" class="tl__cap">{{ formatLP(row.orbCapacity) }} LP</span>
+        <span v-if="row.orbCapacity" class="tl__cap">
+          <IconBase name="lp" class="tl__lp-ic" />
+          {{ formatLP(row.orbCapacity) }} LP
+        </span>
       </span>
       <span class="tl__runes">{{ row.runeCount }} рун</span>
       <span v-if="store.isBuilt(row.tier)" class="tl__built" aria-label="Построено">✓</span>
@@ -111,10 +115,14 @@ function formatLP(lp: number): string {
   outline-offset: 1px;
 }
 
+/* Выбранный тир — кровавая аура */
 .tl__row--active {
   background: rgba(138, 16, 32, 0.22);
   border-color: var(--solid);
   color: var(--ink);
+  box-shadow:
+    0 0 10px rgba(224, 52, 74, 0.2),
+    inset 0 1px 0 rgba(255, 107, 126, 0.08);
 }
 
 .tl__row--built {
@@ -154,6 +162,22 @@ function formatLP(lp: number): string {
   font-family: var(--font-mono);
   font-size: 10px;
   color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Миниатюрная LP-иконка в строке ёмкости орба */
+.tl__lp-ic {
+  color: var(--honey-dk);
+  opacity: 0.7;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tl__lp-ic :deep(svg) {
+  width: 10px;
+  height: 10px;
 }
 
 .tl__runes {

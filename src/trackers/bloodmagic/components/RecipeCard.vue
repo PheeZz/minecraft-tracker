@@ -6,6 +6,7 @@ import { computed } from 'vue'
 import type { Recipe, ItemRef } from '../domain/types'
 import { SOURCE_LABELS } from '../domain/filterRecipes'
 import ItemIcon from './ItemIcon.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 const props = defineProps<{ recipe: Recipe }>()
 
@@ -54,9 +55,10 @@ const tier3Inputs = computed<ItemRef[]>(() => {
           class="badge badge--tier"
           >Тир {{ recipe.minTier }}</span
         >
-        <span v-if="recipe.lp != null" class="badge badge--lp"
-          >{{ recipe.lp.toLocaleString() }} LP</span
-        >
+        <span v-if="recipe.lp != null" class="badge badge--lp">
+          <IconBase name="lp" class="badge-lp-ic" />
+          {{ recipe.lp.toLocaleString() }} LP
+        </span>
       </div>
     </div>
 
@@ -107,6 +109,17 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  transition:
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+/* Лёгкий hover-glow — еле заметная кровавая аура при наведении */
+.rc:hover {
+  box-shadow:
+    var(--shadow-card),
+    0 0 14px rgba(138, 16, 32, 0.18);
+  border-color: rgba(138, 16, 32, 0.45);
 }
 
 .rc__head {
@@ -131,21 +144,31 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   color: var(--ink);
 }
 
+/* Бейджи — горизонтальный ряд с переносом, единая высота и выравнивание */
 .rc__badges {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-end;
   flex: none;
+  max-width: 160px;
 }
 
+/* Единая база для всех бейджей: одинаковая высота, центровка, отступы */
 .badge {
   font-family: var(--font-mono);
   font-size: 9px;
   font-weight: 700;
   border-radius: 5px;
-  padding: 2px 6px;
+  padding: 3px 7px;
+  min-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
   white-space: nowrap;
+  line-height: 1;
 }
 
 .badge--src {
@@ -217,6 +240,19 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   background: rgba(224, 52, 74, 0.14);
   color: var(--honey-dk);
   border: 1px solid rgba(224, 52, 74, 0.28);
+}
+
+/* LP-иконка внутри бейджа */
+.badge-lp-ic {
+  color: var(--honey-dk);
+  opacity: 0.8;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-lp-ic :deep(svg) {
+  width: 9px;
+  height: 9px;
 }
 
 .rc__row {

@@ -4,6 +4,7 @@ import { computed } from 'vue'
 import { SIGILS } from '../data/sigils.data'
 import type { Sigil } from '../domain/types'
 import ItemIcon from './ItemIcon.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 // Маппинг field → путь к текстуре (относительно public/).
 // Приоритет: deactivated (базовый вид); если нет — activated; если нет — только имя.
@@ -71,6 +72,7 @@ const costLabel = (s: Sigil): string =>
         <div class="sc__body">
           <span class="sc__name">{{ s.name_ru }}</span>
           <span class="sc__cost" :class="{ 'sc__cost--passive': s.cost_LP_per_use === null }">
+            <IconBase v-if="s.cost_LP_per_use !== null" name="lp" class="sc__lp-ic" />
             {{ costLabel(s) }}
           </span>
         </div>
@@ -126,8 +128,10 @@ const costLabel = (s: Sigil): string =>
   transition: box-shadow 0.15s ease;
 }
 
+/* Hover-glow на карточке сигила — едва заметная кровавая аура */
 .sc:hover {
-  box-shadow: var(--shadow-card-glow);
+  box-shadow: var(--shadow-card-glow), var(--glow-card-hover);
+  border-color: rgba(138, 16, 32, 0.45);
 }
 
 .sc__icon-wrap {
@@ -163,6 +167,23 @@ const costLabel = (s: Sigil): string =>
   font-size: 11px;
   color: var(--honey-dk);
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* LP-иконка рядом со стоимостью сигила */
+.sc__lp-ic {
+  color: var(--honey-dk);
+  opacity: 0.75;
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+}
+
+.sc__lp-ic :deep(svg) {
+  width: 10px;
+  height: 10px;
 }
 
 .sc__cost--passive {

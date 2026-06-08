@@ -6,8 +6,10 @@ import { tierBuildList, tierDelta, unlocksAtTier } from '../domain/progression'
 import { useProgressStore } from '../stores/useProgressStore'
 import AltarSchematic from './AltarSchematic.vue'
 import MultiblockView from './MultiblockView.vue'
+import MultiblockDialog from './MultiblockDialog.vue'
 import { altarVoxels } from '../three/altarVoxels'
 import ItemIcon from './ItemIcon.vue'
+import IconBase from '@/shared/ui/IconBase.vue'
 
 // Маппинг ref структурного блока → путь к иконке в public/
 const BLOCK_ICON: Record<string, string> = {
@@ -25,6 +27,8 @@ const store = useProgressStore()
 const showFull = ref(false)
 /** '3d' по умолчанию, '2d' — плоская схема. */
 const viewMode = ref<'3d' | '2d'>('3d')
+/** Флаг: модалка с крупным 3D открыта. */
+const dialogOpen = ref(false)
 
 /** Вокселы текущего тира для 3D-вьюера. */
 const currentVoxels = computed(() => altarVoxels(props.tier, import.meta.env.BASE_URL))
@@ -43,15 +47,10 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
 </script>
 
 <template>
+  <!-- keyed-Transition: MultiblockView/AltarSchematic вынесены за обёртку — не ремаунтируются -->
   <section class="td">
-    <!--
-      Текстовая часть (заголовок, орб, список постройки) оборачивается в keyed-Transition
-      для плавной смены при переключении тира. MultiblockView/AltarSchematic
-      ВЫВЕДЕНЫ за пределы этой обёртки — они не размонтируются при смене тира.
-    -->
     <Transition name="tier-fade" mode="out-in">
       <div :key="tier" class="td__text-content">
-        <!-- Заголовок тира + чекбокс «построено» -->
         <header class="td__head">
           <h2 class="td__title">Тир {{ tier }}</h2>
           <label class="td__built-label">
@@ -65,7 +64,6 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
           </label>
         </header>
 
-        <!-- Орб этого тира -->
         <div v-if="unlocks.orb" class="td__orb">
           <div class="td__orb-row">
             <ItemIcon
@@ -80,13 +78,12 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
             <span class="td__orb-name">{{ unlocks.orb.name_ru }}</span>
           </div>
           <span class="td__orb-stats">
-            {{ formatLP(unlocks.orb.capacity_LP) }} LP · расход
-            {{ unlocks.orb.consumptionRate }} LP/операцию
+            <IconBase name="lp" class="lp-ic" />{{ formatLP(unlocks.orb.capacity_LP) }} LP &middot;
+            расход <IconBase name="lp" class="lp-ic" />{{ unlocks.orb.consumptionRate }} LP/операцию
           </span>
         </div>
         <div v-else class="td__orb td__orb--none">Орб этого тира не найден</div>
 
-        <!-- Переключатель полный/дельта -->
         <div class="td__mode-row">
           <button
             type="button"
@@ -106,7 +103,6 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
           </button>
         </div>
 
-        <!-- Список строительных блоков -->
         <ul class="td__build-list">
           <li v-if="buildData.bloodRunes > 0" class="td__build-item td__build-item--upgrade">
             <span class="td__build-label">
@@ -121,9 +117,9 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
               />
               <span class="td__build-text">
                 Кровавые руны
-                <span v-if="showFull && buildData.upgradeSlots" class="td__build-sub">
-                  из них апгрейдятся ★ {{ buildData.upgradeSlots }} (скорость/ёмкость/жертва)
-                </span>
+                <span v-if="showFull && buildData.upgradeSlots" class="td__build-sub"
+                  >из них апгрейдятся ★ {{ buildData.upgradeSlots }} (скорость/ёмкость/жертва)</span
+                >
               </span>
             </span>
             <span class="td__build-count">×{{ buildData.bloodRunes }}</span>
@@ -168,48 +164,55 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
           </li>
         </ul>
 
-        <!-- Разблокировки: рецепты -->
+        <!-- Разблокировки: без max-height/overflow — полный список (2D-колонка держит 3D sticky) -->
         <div v-if="unlocks.recipes.length" class="td__unlocks">
           <p class="td__section-label">Разблокирует рецептов: {{ unlocks.recipes.length }}</p>
           <ul class="td__recipe-list">
             <li v-for="r in unlocks.recipes" :key="r.output.name_en" class="td__recipe-item">
               {{ r.output.name_ru }}
-              <span v-if="r.lp" class="td__recipe-lp">{{ formatLP(r.lp) }} LP</span>
+              <span v-if="r.lp" class="td__recipe-lp">
+                <IconBase name="lp" class="lp-ic" />{{ formatLP(r.lp) }} LP
+              </span>
             </li>
           </ul>
         </div>
       </div>
     </Transition>
 
-    <!-- Схема/3D структуры: вынесена ЗА keyed-обёртку, чтобы не ремаунтировалась при смене тира -->
+    <!-- 3D/2D структуры: sticky правая колонка, не ремаунтируется при смене тира -->
     <div class="td__schematic">
       <div class="td__view-header">
         <p class="td__section-label">Структура</p>
-        <div class="td__view-toggle">
+        <div class="td__view-controls">
+          <div class="td__view-toggle">
+            <button
+              type="button"
+              class="td__view-btn"
+              :class="{ 'td__view-btn--active': viewMode === '3d' }"
+              @click="viewMode = '3d'"
+            >
+              3D
+            </button>
+            <button
+              type="button"
+              class="td__view-btn"
+              :class="{ 'td__view-btn--active': viewMode === '2d' }"
+              @click="viewMode = '2d'"
+            >
+              2D схема
+            </button>
+          </div>
           <button
             type="button"
-            class="td__view-btn"
-            :class="{ 'td__view-btn--active': viewMode === '3d' }"
-            @click="viewMode = '3d'"
+            class="td__expand-btn"
+            aria-label="Открыть 3D на весь экран"
+            @click="dialogOpen = true"
           >
-            3D
-          </button>
-          <button
-            type="button"
-            class="td__view-btn"
-            :class="{ 'td__view-btn--active': viewMode === '2d' }"
-            @click="viewMode = '2d'"
-          >
-            2D схема
+            <IconBase name="fit" />
           </button>
         </div>
       </div>
-      <!--
-        v-show (не v-if): MultiblockView не размонтируется при 2D — 3D-сцена живёт.
-        <Transition> поверх v-show даёт кроссфейд/появление БЕЗ размонтажа (нет пустоты).
-        grid-stack (.td__views) — оба вида в одной ячейке: плавный кроссфейд без скачка.
-        appear — анимация появления 3D при первом показе.
-      -->
+      <!-- v-show (не v-if): 3D-сцена живёт; grid-stack — кроссфейд без скачка высоты -->
       <div class="td__views">
         <Transition name="view-fade" appear>
           <MultiblockView v-show="viewMode === '3d'" :blocks="currentVoxels" :height="360" />
@@ -219,6 +222,14 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
         </Transition>
       </div>
     </div>
+
+    <!-- Модалка крупного 3D: v-if — dispose при закрытии автоматически через onBeforeUnmount -->
+    <MultiblockDialog
+      v-if="dialogOpen"
+      :tier="tier"
+      :blocks="currentVoxels"
+      @close="dialogOpen = false"
+    />
   </section>
 </template>
 
@@ -284,6 +295,13 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   background: rgba(138, 16, 32, 0.12);
   border: 1px solid var(--cardln);
   border-radius: 8px;
+  /* Тонкая кровавая аура вокруг карточки орба */
+  box-shadow: var(--shadow-card-glow);
+  transition: box-shadow 0.2s ease;
+}
+
+.td__orb:hover {
+  box-shadow: var(--glow-arcane), var(--shadow-card-glow);
 }
 
 .td__orb--none {
@@ -307,6 +325,10 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
 }
 
 /* Переключатель режима */
@@ -466,6 +488,13 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   justify-content: space-between;
 }
 
+/* Группа «переключатель видов + кнопка expand» */
+.td__view-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .td__view-toggle {
   display: flex;
   gap: 3px;
@@ -481,9 +510,10 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   color: var(--muted);
   cursor: pointer;
   transition:
-    border-color 0.1s,
-    color 0.1s,
-    background 0.1s;
+    border-color 0.15s,
+    color 0.15s,
+    background 0.15s,
+    box-shadow 0.15s;
 }
 
 .td__view-btn:hover:not(.td__view-btn--active) {
@@ -491,11 +521,47 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   color: var(--ink);
 }
 
+/* Активная кнопка вида 3D — лёгкое свечение */
 .td__view-btn--active {
   background: rgba(138, 16, 32, 0.2);
   border-color: var(--solid);
   color: var(--ink);
   font-weight: 700;
+  box-shadow: 0 0 8px rgba(224, 52, 74, 0.22);
+}
+
+/* Кнопка «развернуть на весь экран» */
+.td__expand-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--cardln);
+  border-radius: 5px;
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    background 0.15s;
+}
+
+.td__expand-btn:hover {
+  border-color: var(--honey-dk);
+  color: var(--honey-dk);
+}
+
+.td__expand-btn:focus-visible {
+  outline: 2px solid var(--honey-dk);
+  outline-offset: 1px;
+}
+
+.td__expand-btn .icon {
+  width: 13px;
+  height: 13px;
 }
 
 .td__section-label {
@@ -561,6 +627,8 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   gap: 6px;
 }
 
+/* Скролл убран: список теперь отображается полностью; левая колонка прокручивается
+   независимо, правая 3D — sticky. */
 .td__recipe-list {
   list-style: none;
   margin: 0;
@@ -568,9 +636,6 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   display: flex;
   flex-direction: column;
   gap: 3px;
-  /* Кап высоты: длинный список рецептов не растягивает страницу и не уводит 3D вниз */
-  max-height: 168px;
-  overflow-y: auto;
 }
 
 .td__recipe-item {
@@ -585,9 +650,34 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   color: var(--ink2);
 }
 
+/* LP-значение в строке рецепта: иконка + текст в ряд */
 .td__recipe-lp {
   font-family: var(--font-mono);
   font-size: 10px;
   color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Маленькая LP-иконка рядом с числами — единообразно по всему компоненту */
+.lp-ic {
+  display: inline-flex;
+  align-items: center;
+  color: var(--honey-dk);
+  opacity: 0.75;
+}
+
+.lp-ic :deep(svg),
+.lp-ic :deep(.icon) {
+  width: 11px;
+  height: 11px;
+}
+
+/* IconBase рендерит <span class="icon"> */
+:deep(.lp-ic.icon),
+.lp-ic :deep(span.icon svg) {
+  width: 11px;
+  height: 11px;
 }
 </style>
