@@ -16,10 +16,12 @@ const selectedTier = ref(1)
       <TierLadder v-model="selectedTier" />
     </aside>
     <main class="bpp__detail">
-      <!-- Плавная смена деталей тира: fade + лёгкий сдвиг по Y, 200мс -->
-      <Transition name="tier-fade" mode="out-in">
-        <TierDetail :key="selectedTier" :tier="selectedTier" />
-      </Transition>
+      <!--
+        :key убран — TierDetail обновляется реактивно через проп :tier.
+        Анимация смены тира теперь внутри TierDetail (только текстовая часть),
+        3D-сцена не размонтируется при смене тира.
+      -->
+      <TierDetail :tier="selectedTier" />
     </main>
   </div>
 </template>
@@ -59,42 +61,6 @@ const selectedTier = ref(1)
   flex: 1;
   min-width: 0;
   overflow-y: auto;
-}
-
-/* Переход при смене тира: fade + сдвиг по Y */
-.tier-fade-enter-active {
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
-}
-
-.tier-fade-leave-active {
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
-}
-
-.tier-fade-enter-from {
-  opacity: 0;
-  transform: translateY(6px);
-}
-
-.tier-fade-leave-to {
-  opacity: 0;
-  transform: translateY(-6px);
-}
-
-/* При prefers-reduced-motion убираем сдвиг, оставляем только fade */
-@media (prefers-reduced-motion: reduce) {
-  .tier-fade-enter-active,
-  .tier-fade-leave-active {
-    transition: opacity 0.1s ease;
-  }
-
-  .tier-fade-enter-from,
-  .tier-fade-leave-to {
-    transform: none;
-  }
 }
 
 /* Адаптив: на узких экранах лестница сверху */

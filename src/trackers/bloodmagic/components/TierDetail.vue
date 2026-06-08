@@ -44,124 +44,144 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
 
 <template>
   <section class="td">
-    <!-- Заголовок тира + чекбокс «построено» -->
-    <header class="td__head">
-      <h2 class="td__title">Тир {{ tier }}</h2>
-      <label class="td__built-label">
-        <input
-          type="checkbox"
-          :checked="isBuilt"
-          class="td__built-check"
-          @change="store.toggleTier(tier)"
-        />
-        <span class="td__built-text">{{ isBuilt ? 'Построено' : 'Отметить построенным' }}</span>
-      </label>
-    </header>
+    <!--
+      Текстовая часть (заголовок, орб, список постройки) оборачивается в keyed-Transition
+      для плавной смены при переключении тира. MultiblockView/AltarSchematic
+      ВЫВЕДЕНЫ за пределы этой обёртки — они не размонтируются при смене тира.
+    -->
+    <Transition name="tier-fade" mode="out-in">
+      <div :key="tier" class="td__text-content">
+        <!-- Заголовок тира + чекбокс «построено» -->
+        <header class="td__head">
+          <h2 class="td__title">Тир {{ tier }}</h2>
+          <label class="td__built-label">
+            <input
+              type="checkbox"
+              :checked="isBuilt"
+              class="td__built-check"
+              @change="store.toggleTier(tier)"
+            />
+            <span class="td__built-text">{{ isBuilt ? 'Построено' : 'Отметить построенным' }}</span>
+          </label>
+        </header>
 
-    <!-- Орб этого тира -->
-    <div v-if="unlocks.orb" class="td__orb">
-      <div class="td__orb-row">
-        <ItemIcon
-          v-if="unlocks.orb.icon"
-          :item="{
-            icon: unlocks.orb.icon,
-            name_ru: unlocks.orb.name_ru,
-            name_en: unlocks.orb.name_en,
-          }"
-          :size="22"
-        />
-        <span class="td__orb-name">{{ unlocks.orb.name_ru }}</span>
-      </div>
-      <span class="td__orb-stats">
-        {{ formatLP(unlocks.orb.capacity_LP) }} LP · расход
-        {{ unlocks.orb.consumptionRate }} LP/операцию
-      </span>
-    </div>
-    <div v-else class="td__orb td__orb--none">Орб этого тира не найден</div>
-
-    <!-- Переключатель полный/дельта -->
-    <div class="td__mode-row">
-      <button
-        type="button"
-        class="td__mode-btn"
-        :class="{ 'td__mode-btn--active': !showFull }"
-        @click="showFull = false"
-      >
-        Только прирост (Т{{ tier }} − Т{{ tier - 1 }})
-      </button>
-      <button
-        type="button"
-        class="td__mode-btn"
-        :class="{ 'td__mode-btn--active': showFull }"
-        @click="showFull = true"
-      >
-        Вся структура
-      </button>
-    </div>
-
-    <!-- Список строительных блоков -->
-    <ul class="td__build-list">
-      <li v-if="buildData.bloodRunes > 0" class="td__build-item td__build-item--upgrade">
-        <span class="td__build-label">
-          <ItemIcon
-            :item="{
-              icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
-              name_ru: 'Кровавая руна',
-              name_en: 'Blood Rune',
-            }"
-            :size="16"
-            class="td__block-icon"
-          />
-          <span class="td__build-text">
-            Кровавые руны
-            <span v-if="showFull && buildData.upgradeSlots" class="td__build-sub">
-              из них апгрейдятся ★ {{ buildData.upgradeSlots }} (скорость/ёмкость/жертва)
-            </span>
+        <!-- Орб этого тира -->
+        <div v-if="unlocks.orb" class="td__orb">
+          <div class="td__orb-row">
+            <ItemIcon
+              v-if="unlocks.orb.icon"
+              :item="{
+                icon: unlocks.orb.icon,
+                name_ru: unlocks.orb.name_ru,
+                name_en: unlocks.orb.name_en,
+              }"
+              :size="22"
+            />
+            <span class="td__orb-name">{{ unlocks.orb.name_ru }}</span>
+          </div>
+          <span class="td__orb-stats">
+            {{ formatLP(unlocks.orb.capacity_LP) }} LP · расход
+            {{ unlocks.orb.consumptionRate }} LP/операцию
           </span>
-        </span>
-        <span class="td__build-count">×{{ buildData.bloodRunes }}</span>
-      </li>
-      <li v-if="buildData.glowstone > 0" class="td__build-item">
-        <span class="td__build-label">
-          <ItemIcon
-            :item="{
-              icon: 'bloodmagic/vanilla/blocks/glowstone.png',
-              name_ru: 'Глоустоун',
-              name_en: 'Glowstone',
-            }"
-            :size="16"
-            class="td__block-icon"
-          />
-          Глоустоун-столбы
-        </span>
-        <span class="td__build-count">×{{ buildData.glowstone }}</span>
-      </li>
-      <li v-for="s in buildData.structural" :key="s.ref" class="td__build-item">
-        <span class="td__build-label">
-          <ItemIcon
-            v-if="blockIcon(s.ref)"
-            :item="{ icon: blockIcon(s.ref), name_ru: s.name_ru, name_en: s.ref }"
-            :size="16"
-            class="td__block-icon"
-          />
-          {{ s.name_ru }}
-        </span>
-        <span class="td__build-count">×{{ s.count }}</span>
-      </li>
-      <li
-        v-if="
-          !buildData.bloodRunes &&
-          !buildData.upgradeSlots &&
-          !buildData.glowstone &&
-          !buildData.structural.length
-        "
-        class="td__build-empty"
-      >
-        {{ showFull ? 'Только алтарь' : 'Нет изменений к предыдущему тиру' }}
-      </li>
-    </ul>
+        </div>
+        <div v-else class="td__orb td__orb--none">Орб этого тира не найден</div>
 
-    <!-- Схема/3D структуры -->
+        <!-- Переключатель полный/дельта -->
+        <div class="td__mode-row">
+          <button
+            type="button"
+            class="td__mode-btn"
+            :class="{ 'td__mode-btn--active': !showFull }"
+            @click="showFull = false"
+          >
+            Только прирост (Т{{ tier }} − Т{{ tier - 1 }})
+          </button>
+          <button
+            type="button"
+            class="td__mode-btn"
+            :class="{ 'td__mode-btn--active': showFull }"
+            @click="showFull = true"
+          >
+            Вся структура
+          </button>
+        </div>
+
+        <!-- Список строительных блоков -->
+        <ul class="td__build-list">
+          <li v-if="buildData.bloodRunes > 0" class="td__build-item td__build-item--upgrade">
+            <span class="td__build-label">
+              <ItemIcon
+                :item="{
+                  icon: 'bloodmagic/blocks/alchemicalwizardry/BlankRune.png',
+                  name_ru: 'Кровавая руна',
+                  name_en: 'Blood Rune',
+                }"
+                :size="16"
+                class="td__block-icon"
+              />
+              <span class="td__build-text">
+                Кровавые руны
+                <span v-if="showFull && buildData.upgradeSlots" class="td__build-sub">
+                  из них апгрейдятся ★ {{ buildData.upgradeSlots }} (скорость/ёмкость/жертва)
+                </span>
+              </span>
+            </span>
+            <span class="td__build-count">×{{ buildData.bloodRunes }}</span>
+          </li>
+          <li v-if="buildData.glowstone > 0" class="td__build-item">
+            <span class="td__build-label">
+              <ItemIcon
+                :item="{
+                  icon: 'bloodmagic/vanilla/blocks/glowstone.png',
+                  name_ru: 'Глоустоун',
+                  name_en: 'Glowstone',
+                }"
+                :size="16"
+                class="td__block-icon"
+              />
+              Глоустоун-столбы
+            </span>
+            <span class="td__build-count">×{{ buildData.glowstone }}</span>
+          </li>
+          <li v-for="s in buildData.structural" :key="s.ref" class="td__build-item">
+            <span class="td__build-label">
+              <ItemIcon
+                v-if="blockIcon(s.ref)"
+                :item="{ icon: blockIcon(s.ref), name_ru: s.name_ru, name_en: s.ref }"
+                :size="16"
+                class="td__block-icon"
+              />
+              {{ s.name_ru }}
+            </span>
+            <span class="td__build-count">×{{ s.count }}</span>
+          </li>
+          <li
+            v-if="
+              !buildData.bloodRunes &&
+              !buildData.upgradeSlots &&
+              !buildData.glowstone &&
+              !buildData.structural.length
+            "
+            class="td__build-empty"
+          >
+            {{ showFull ? 'Только алтарь' : 'Нет изменений к предыдущему тиру' }}
+          </li>
+        </ul>
+
+        <!-- Разблокировки: рецепты -->
+        <div v-if="unlocks.recipes.length" class="td__unlocks">
+          <p class="td__section-label">Разблокирует рецептов: {{ unlocks.recipes.length }}</p>
+          <ul class="td__recipe-list">
+            <li v-for="r in unlocks.recipes" :key="r.output.name_en" class="td__recipe-item">
+              {{ r.output.name_ru }}
+              <span v-if="r.lp" class="td__recipe-lp">{{ formatLP(r.lp) }} LP</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </Transition>
+
+    <!-- Схема/3D структуры: вынесена ЗА keyed-обёртку, чтобы не ремаунтировалась при смене тира -->
     <div class="td__schematic">
       <div class="td__view-header">
         <p class="td__section-label">Структура</p>
@@ -184,27 +204,13 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
           </button>
         </div>
       </div>
-      <!-- Плавная смена 3D ↔ 2D: fade 160мс -->
-      <Transition name="view-fade" mode="out-in">
-        <MultiblockView
-          v-if="viewMode === '3d'"
-          :key="'3d'"
-          :blocks="currentVoxels"
-          :height="360"
-        />
-        <AltarSchematic v-else :key="'2d'" :tier="tier" />
-      </Transition>
-    </div>
-
-    <!-- Разблокировки: рецепты -->
-    <div v-if="unlocks.recipes.length" class="td__unlocks">
-      <p class="td__section-label">Разблокирует рецептов: {{ unlocks.recipes.length }}</p>
-      <ul class="td__recipe-list">
-        <li v-for="r in unlocks.recipes" :key="r.output.name_en" class="td__recipe-item">
-          {{ r.output.name_ru }}
-          <span v-if="r.lp" class="td__recipe-lp">{{ formatLP(r.lp) }} LP</span>
-        </li>
-      </ul>
+      <!--
+        v-show вместо v-if: MultiblockView НЕ размонтируется при переключении на 2D.
+        3D-сцена живёт постоянно; при возврате на 3D показывается сразу (баг 1 исправлен).
+        render-loop на скрытом canvas работает дёшево; ResizeObserver охраняет zero-size.
+      -->
+      <MultiblockView v-show="viewMode === '3d'" :blocks="currentVoxels" :height="360" />
+      <AltarSchematic v-show="viewMode === '2d'" :tier="tier" />
     </div>
   </section>
 </template>
@@ -440,24 +446,43 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   letter-spacing: 0.05em;
 }
 
-/* Переход 2D ↔ 3D: только fade, без transform */
-.view-fade-enter-active {
-  transition: opacity 0.16s ease;
+/* Переход при смене тира: fade + лёгкий сдвиг по Y (ранее был в BloodPathPanel) */
+.tier-fade-enter-active {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
-.view-fade-leave-active {
-  transition: opacity 0.12s ease;
+.tier-fade-leave-active {
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
 }
 
-.view-fade-enter-from,
-.view-fade-leave-to {
+.tier-fade-enter-from {
   opacity: 0;
+  transform: translateY(6px);
+}
+
+.tier-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+/* Обёртка текстовой части — display:flex для сохранения layout */
+.td__text-content {
+  display: contents;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .view-fade-enter-active,
-  .view-fade-leave-active {
-    transition: opacity 0.05s ease;
+  .tier-fade-enter-active,
+  .tier-fade-leave-active {
+    transition: opacity 0.1s ease;
+  }
+
+  .tier-fade-enter-from,
+  .tier-fade-leave-to {
+    transform: none;
   }
 }
 

@@ -85,10 +85,17 @@ onBeforeUnmount(() => {
   sceneHandle = null
 })
 
-// При смене пропа blocks — пересоздать сцену
+// При смене пропа blocks — обновляем содержимое сцены без пересоздания renderer.
+// Полный initScene вызывается только при монтировании (первое создание).
 watch(
   () => props.blocks,
-  () => initScene(),
+  (newBlocks) => {
+    if (sceneHandle) {
+      sceneHandle.update(newBlocks)
+    } else {
+      // Сцена ещё не готова (initScene в процессе) — ждём onMounted
+    }
+  },
 )
 </script>
 
