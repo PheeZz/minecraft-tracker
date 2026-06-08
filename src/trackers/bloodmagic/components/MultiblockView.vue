@@ -29,9 +29,20 @@ function onHover(block: VoxelBlock | null, screenX: number, screenY: number) {
     tooltip.value = null
     return
   }
-  const rect = canvasRef.value?.getBoundingClientRect()
-  const offsetX = rect ? screenX - rect.left + 12 : screenX
-  const offsetY = rect ? screenY - rect.top - 8 : screenY
+  const canvas = canvasRef.value
+  const rect = canvas?.getBoundingClientRect()
+  if (!canvas || !rect) {
+    tooltip.value = { label: block.label, x: screenX, y: screenY }
+    return
+  }
+  // Курсор и rect — в визуальных координатах (с учётом CSS zoom оболочки),
+  // а left/top тултипа применяются в локальном пространстве .mbv. Доля по холсту
+  // безразмерна (zoom сокращается); умножаем на локальный размер холста —
+  // позиция совпадает с курсором при любом масштабе UI.
+  const fracX = (screenX - rect.left) / rect.width
+  const fracY = (screenY - rect.top) / rect.height
+  const offsetX = fracX * canvas.offsetWidth + 12
+  const offsetY = fracY * canvas.offsetHeight - 8
   tooltip.value = { label: block.label, x: offsetX, y: offsetY }
 }
 
