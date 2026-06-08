@@ -54,11 +54,16 @@ export function computeBounds(blocks: readonly VoxelBlock[]): Bounds {
 export function buildGrid(THREE: typeof THREEType, bounds: Bounds): THREEType.GridHelper {
   const spanX = bounds.maxX - bounds.minX
   const spanZ = bounds.maxZ - bounds.minZ
-  const size = Math.ceil(Math.max(spanX, spanZ)) + 5 // запас вокруг структуры
-  const divisions = size // ячейки 1×1 блок
-  const grid = new THREE.GridHelper(size, divisions, 0xc04a4a, 0x44282a)
-  // Пол — на полблока ниже нижнего вокселя; сдвиг 0.5 ставит линии на грани блоков
-  grid.position.set(0.5, bounds.minY - 0.5, 0.5)
+  // Размер ОБЯЗАТЕЛЬНО чётный: блоки на целых координатах, грани — на полуцелых.
+  // GridHelper рисует линии шагом 1; при чётном size и сдвиге центра на 0.5 линии
+  // ложатся ровно на грани блоков (как сетка пола в Minecraft). Нечётный size сдвинул
+  // бы линии на центры блоков — мимо. +6 — запас вокруг структуры.
+  let size = Math.ceil(Math.max(spanX, spanZ)) + 6
+  if (size % 2 !== 0) size += 1
+  const grid = new THREE.GridHelper(size, size, 0xc04a4a, 0x44282a)
+  // Центр сетки — ближайшая полуцелая к центру структуры (выравнивание линий на грани);
+  // пол — на полблока ниже нижнего вокселя.
+  grid.position.set(Math.floor(bounds.cx) + 0.5, bounds.minY - 0.5, Math.floor(bounds.cz) + 0.5)
   const mat = grid.material as THREEType.Material
   mat.transparent = true
   mat.opacity = 0.5
