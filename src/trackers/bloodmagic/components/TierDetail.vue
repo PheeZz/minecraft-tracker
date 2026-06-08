@@ -5,11 +5,18 @@ import { ref, computed } from 'vue'
 import { tierBuildList, tierDelta, unlocksAtTier } from '../domain/progression'
 import { useProgressStore } from '../stores/useProgressStore'
 import AltarSchematic from './AltarSchematic.vue'
+import MultiblockView from './MultiblockView.vue'
+import { altarVoxels } from '../three/altarVoxels'
 
 const props = defineProps<{ tier: number }>()
 
 const store = useProgressStore()
 const showFull = ref(false)
+/** '3d' по умолчанию, '2d' — плоская схема. */
+const viewMode = ref<'3d' | '2d'>('3d')
+
+/** Вокселы текущего тира для 3D-вьюера. */
+const currentVoxels = computed(() => altarVoxels(props.tier, import.meta.env.BASE_URL))
 
 const buildData = computed(() =>
   showFull.value ? tierBuildList(props.tier) : tierDelta(props.tier),
@@ -102,10 +109,31 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
       </li>
     </ul>
 
-    <!-- Схема структуры -->
+    <!-- Схема/3D структуры -->
     <div class="td__schematic">
-      <p class="td__section-label">Схема структуры</p>
-      <AltarSchematic :tier="tier" />
+      <div class="td__view-header">
+        <p class="td__section-label">Структура</p>
+        <div class="td__view-toggle">
+          <button
+            type="button"
+            class="td__view-btn"
+            :class="{ 'td__view-btn--active': viewMode === '3d' }"
+            @click="viewMode = '3d'"
+          >
+            3D
+          </button>
+          <button
+            type="button"
+            class="td__view-btn"
+            :class="{ 'td__view-btn--active': viewMode === '2d' }"
+            @click="viewMode = '2d'"
+          >
+            2D схема
+          </button>
+        </div>
+      </div>
+      <MultiblockView v-if="viewMode === '3d'" :blocks="currentVoxels" :height="360" />
+      <AltarSchematic v-else :tier="tier" />
     </div>
 
     <!-- Разблокировки: рецепты -->
@@ -277,11 +305,49 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
   padding: 4px 0;
 }
 
-/* Схема */
+/* Схема / 3D */
 .td__schematic {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.td__view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.td__view-toggle {
+  display: flex;
+  gap: 3px;
+}
+
+.td__view-btn {
+  font: inherit;
+  font-size: 10px;
+  padding: 3px 8px;
+  border: 1px solid var(--cardln);
+  border-radius: 5px;
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    border-color 0.1s,
+    color 0.1s,
+    background 0.1s;
+}
+
+.td__view-btn:hover:not(.td__view-btn--active) {
+  border-color: var(--honey);
+  color: var(--ink);
+}
+
+.td__view-btn--active {
+  background: rgba(138, 16, 32, 0.2);
+  border-color: var(--solid);
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .td__section-label {

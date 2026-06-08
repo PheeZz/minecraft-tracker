@@ -1,0 +1,253 @@
+// Вся three.js-логика сцены вынесена сюда; THREE и OrbitControls передаются
+// снаружи — компонент грузит их лениво и передаёт в эту функцию.
+import type * as THREEType from 'three'
+import type { OrbitControls as OrbitControlsType } from 'three/examples/jsm/controls/OrbitControls.js'
+import type { VoxelBlock } from './voxelTypes'
+
+export interface VoxelSceneOptions {
+  onHover: (block: VoxelBlock | null, screenX: number, screenY: number) => void
+}
+
+export interface VoxelSceneHandle {
+  resize: (width: number, height: number) => void
+  dispose: () => void
+}
+
+// --- Построение меша вокселя ---
+
+/** Создаёт кеш текстур — один TextureLoader на всю сцену. */
+function makeTextureCache(THREE: typeof THREEType) {
+  const cache = new Map<string, THREEType.Texture>()
+  const loader = new THREE.TextureLoader()
+
+  function load(path: string): THREEType.Texture {
+    if (cache.has(path)) return cache.get(path)!
+    const tex = loader.load(path)
+    // Пиксель-арт: никакой фильтрации
+    tex.magFilter = THREE.NearestFilter
+    tex.minFilter = THREE.NearestFilter
+    tex.colorSpace = THREE.SRGBColorSpace
+    cache.set(path, tex)
+    return tex
+  }
+
+  function disposeAll() {
+    cache.forEach((tex) => tex.dispose())
+    cache.clear()
+  }
+
+  return { load, disposeAll }
+}
+
+/** Материалы по 6 граням: +X,-X,+Y,-Y,+Z,-Z. */
+function buildFaceMaterials(
+  THREE: typeof THREEType,
+  block: VoxelBlock,
+  loadTex: (p: string) => THREEType.Texture,
+): THREEType.MeshLambertMaterial[] {
+  const top = loadTex(block.textures.top)
+  const bottom = loadTex(block.textures.bottom ?? block.textures.sides)
+  const side = loadTex(block.textures.sides)
+
+  // Слоты апгрейда — лёгкий золотой emissive-намёк
+  const emissive = block.upgrade
+    ? (new THREE.Color(0.3, 0.25, 0.0) as THREEType.Color)
+    : (new THREE.Color(0, 0, 0) as THREEType.Color)
+
+  const makeMat = (tex: THREEType.Texture) => new THREE.MeshLambertMaterial({ map: tex, emissive })
+
+  // Порядок граней BoxGeometry: +X,-X,+Y,-Y,+Z,-Z
+  return [makeMat(side), makeMat(side), makeMat(top), makeMat(bottom), makeMat(side), makeMat(side)]
+}
+
+/** Создаёт Mesh для одного вокселя. */
+function buildVoxelMesh(
+  THREE: typeof THREEType,
+  block: VoxelBlock,
+  loadTex: (p: string) => THREEType.Texture,
+): THREEType.Mesh {
+  const geometry = new THREE.BoxGeometry(1, 1, 1)
+  const materials = buildFaceMaterials(THREE, block, loadTex)
+  const mesh = new THREE.Mesh(geometry, materials)
+  mesh.position.set(block.x, block.y, block.z)
+  mesh.userData = { block }
+  return mesh
+}
+
+// --- Освещение и сцена ---
+
+function buildScene(THREE: typeof THREEType): THREEType.Scene {
+  const scene = new THREE.Scene()
+  scene.background = new THREE.Color(0x1a1010)
+
+  const ambient = new THREE.AmbientLight(0xffffff, 0.7)
+  scene.add(ambient)
+
+  const dirLight = new THREE.DirectionalLight(0xfff5e0, 1.2)
+  dirLight.position.set(10, 20, 15)
+  scene.add(dirLight)
+
+  return scene
+}
+
+// --- Камера ---
+
+function buildCamera(THREE: typeof THREEType, width: number, height: number) {
+  const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 500)
+  return camera
+}
+
+/** Вычисляет bounding-box и позиционирует камеру так, чтобы вся структура была видна. */
+function centerCamera(
+  camera: THREEType.PerspectiveCamera,
+  controls: OrbitControlsType,
+  blocks: VoxelBlock[],
+) {
+  if (!blocks.length) return
+
+  let minX = Infinity,
+    maxX = -Infinity
+  let minY = Infinity,
+    maxY = -Infinity
+  let minZ = Infinity,
+    maxZ = -Infinity
+
+  for (const b of blocks) {
+    minX = Math.min(minX, b.x)
+    maxX = Math.max(maxX, b.x)
+    minY = Math.min(minY, b.y)
+    maxY = Math.max(maxY, b.y)
+    minZ = Math.min(minZ, b.z)
+    maxZ = Math.max(maxZ, b.z)
+  }
+
+  const cx = (minX + maxX) / 2
+  const cy = (minY + maxY) / 2
+  const cz = (minZ + maxZ) / 2
+
+  const span = Math.max(maxX - minX, maxY - minY, maxZ - minZ)
+  const dist = span * 1.6 + 8
+
+  controls.target.set(cx, cy, cz)
+  camera.position.set(cx + dist * 0.6, cy + dist * 0.5, cz + dist * 0.8)
+  controls.update()
+}
+
+// --- Raycast / hover ---
+
+function buildRaycaster(THREE: typeof THREEType) {
+  return new THREE.Raycaster()
+}
+
+// --- Главная функция ---
+
+/**
+ * Строит воксельную сцену на canvas.
+ * THREE и OrbitControls передаются снаружи — это позволяет компоненту
+ * грузить их лениво через динамический import().
+ */
+export function createVoxelScene(
+  canvas: HTMLCanvasElement,
+  THREE: typeof THREEType,
+  OrbitControls: new (camera: THREEType.Camera, domElement: HTMLElement) => OrbitControlsType,
+  blocks: VoxelBlock[],
+  opts: VoxelSceneOptions,
+): VoxelSceneHandle {
+  const width = canvas.clientWidth || 600
+  const height = canvas.clientHeight || 360
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false })
+  renderer.setSize(width, height)
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+  const scene = buildScene(THREE)
+  const camera = buildCamera(THREE, width, height)
+  const controls = new OrbitControls(camera, canvas)
+  controls.enableDamping = true
+  controls.dampingFactor = 0.08
+
+  const { load: loadTex, disposeAll: disposeTextures } = makeTextureCache(THREE)
+
+  // Добавляем все вокселы в сцену
+  const meshes: THREEType.Mesh[] = blocks.map((b) => {
+    const mesh = buildVoxelMesh(THREE, b, loadTex)
+    scene.add(mesh)
+    return mesh
+  })
+
+  centerCamera(camera, controls, blocks)
+
+  // --- Raycast hover ---
+  const raycaster = buildRaycaster(THREE)
+  const mouse = new THREE.Vector2()
+  let rafId = 0
+  let lastHoveredBlock: VoxelBlock | null = null
+
+  function onMouseMove(e: MouseEvent) {
+    const rect = canvas.getBoundingClientRect()
+    mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1
+    mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1
+    raycaster.setFromCamera(mouse, camera)
+    const hits = raycaster.intersectObjects(meshes)
+    const hit = hits[0]?.object?.userData?.block as VoxelBlock | undefined
+
+    if (hit !== lastHoveredBlock) {
+      lastHoveredBlock = hit ?? null
+      opts.onHover(lastHoveredBlock, e.clientX, e.clientY)
+    } else if (hit) {
+      // Обновляем позицию тултипа при движении над тем же блоком
+      opts.onHover(hit, e.clientX, e.clientY)
+    }
+  }
+
+  function onMouseLeave() {
+    if (lastHoveredBlock !== null) {
+      lastHoveredBlock = null
+      opts.onHover(null, 0, 0)
+    }
+  }
+
+  canvas.addEventListener('mousemove', onMouseMove)
+  canvas.addEventListener('mouseleave', onMouseLeave)
+
+  // --- Render loop ---
+  function renderLoop() {
+    rafId = requestAnimationFrame(renderLoop)
+    controls.update()
+    renderer.render(scene, camera)
+  }
+  renderLoop()
+
+  // --- Handle ---
+
+  function resize(w: number, h: number) {
+    if (w === 0 || h === 0) return // контейнер скрыт (display:none при переключении) — пропускаем
+    camera.aspect = w / h
+    camera.updateProjectionMatrix()
+    renderer.setSize(w, h)
+  }
+
+  function dispose() {
+    cancelAnimationFrame(rafId)
+    canvas.removeEventListener('mousemove', onMouseMove)
+    canvas.removeEventListener('mouseleave', onMouseLeave)
+
+    // Освобождаем геометрию, материалы, текстуры каждого меша
+    for (const mesh of meshes) {
+      mesh.geometry.dispose()
+      const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material]
+      for (const mat of mats) {
+        mat.dispose()
+      }
+    }
+
+    disposeTextures()
+    controls.dispose()
+    renderer.dispose()
+    // dispose() освобождает GPU-ресурсы, но НЕ отпускает WebGL-контекст; форсируем,
+    // иначе контексты копятся при смене тира и браузер убивает старые (~16 лимит).
+    renderer.forceContextLoss()
+  }
+
+  return { resize, dispose }
+}
