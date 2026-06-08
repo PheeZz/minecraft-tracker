@@ -50,12 +50,9 @@ function buildFaceMaterials(
   const bottom = loadTex(block.textures.bottom ?? block.textures.sides)
   const side = loadTex(block.textures.sides)
 
-  // Слоты апгрейда — лёгкий золотой emissive-намёк
-  const emissive = block.upgrade
-    ? (new THREE.Color(0.3, 0.25, 0.0) as THREEType.Color)
-    : (new THREE.Color(0, 0, 0) as THREEType.Color)
-
-  const makeMat = (tex: THREEType.Texture) => new THREE.MeshLambertMaterial({ map: tex, emissive })
+  // Без emissive: блоки выглядят как в игре (руна — серый камень, не жёлтая).
+  // Различие слотов апгрейда показано в 2D-схеме (золотая рамка + легенда).
+  const makeMat = (tex: THREEType.Texture) => new THREE.MeshLambertMaterial({ map: tex })
 
   // Порядок граней BoxGeometry: +X,-X,+Y,-Y,+Z,-Z
   return [makeMat(side), makeMat(side), makeMat(top), makeMat(bottom), makeMat(side), makeMat(side)]
