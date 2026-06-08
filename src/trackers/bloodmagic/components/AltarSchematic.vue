@@ -1,8 +1,9 @@
 <script setup lang="ts">
 // Компонент послойной схемы мультиблок-структуры алтаря BloodMagic.
 // Режим large=true — для диалога (крупные клетки, повышенное разрешение).
+// Режим overview (по умолчанию) — top-down проекция всех слоёв без разделения.
 import { ref, computed } from 'vue'
-import { altarLayers } from '../domain/altarLayers'
+import { altarLayers, altarOverview } from '../domain/altarLayers'
 import { ALTAR_TIERS } from '../data/altar.data'
 import AltarLayerGrid from './AltarLayerGrid.vue'
 
@@ -11,43 +12,40 @@ const props = defineProps<{ tier: number; large?: boolean }>()
 const base = import.meta.env.BASE_URL
 
 const layers = computed(() => altarLayers(props.tier))
+const overview = computed(() => altarOverview(props.tier))
 
 // Данные тира для сводки
 const tierData = computed(() => ALTAR_TIERS.find((t) => t.tier === props.tier))
 
-// Максимальная ширина сетки: 520px в large, 260px в inline
-const GRID_MAX_PX = computed(() => (props.large ? 520 : 260))
+// Доступная ширина для сетки: 580px в large (диалог 620 − 2×20px паддинга), 256px inline
+const AVAILABLE_PX = computed(() => (props.large ? 580 : 256))
+const MIN_CELL = 14
+const MAX_CELL = 40
 
-// Максимальный размер сетки по осям (X или Z) среди всех слоёв
-const maxGridDim = computed(() => layers.value.reduce((m, l) => Math.max(m, l.width, l.height), 1))
-
-// Размер клетки: вписываем в максимум; базово 34px (large) / 20px (inline), мин 12px
-const BASE_CELL = computed(() => (props.large ? 40 : 20))
-const cellPx = computed(() =>
-  Math.max(12, Math.min(BASE_CELL.value, Math.floor(GRID_MAX_PX.value / maxGridDim.value))),
-)
-
-// Самый плотный слой (максимальный count) — выбирается по умолчанию
-const defaultLayerIndex = computed(() => {
-  let maxCount = -1
-  let idx = 0
-  layers.value.forEach((l, i) => {
-    if (l.count > maxCount) {
-      maxCount = l.count
-      idx = i
-    }
-  })
-  return idx
+// Размер клетки: вписываем весь grid в доступную ширину без горизонтального скролла.
+// Формула учитывает gap 2px между клетками: total = dim*cell + (dim-1)*2
+// => cell = floor((available - (dim-1)*2) / dim), затем clamp(MIN, ..., MAX)
+const cellPx = computed(() => {
+  const dim = Math.max(overview.value?.width ?? 1, overview.value?.height ?? 1)
+  const fitCell = Math.floor((AVAILABLE_PX.value - (dim - 1) * 2) / dim)
+  return Math.min(MAX_CELL, Math.max(MIN_CELL, fitCell))
 })
 
+// null = режим overview, число = индекс слоя
 const activeLayerIndex = ref<number | null>(null)
 
-// Индекс активного слоя с учётом дефолта
-const currentIndex = computed(() =>
-  activeLayerIndex.value !== null ? activeLayerIndex.value : defaultLayerIndex.value,
+const isOverview = computed(() => activeLayerIndex.value === null)
+
+const currentLayer = computed(() =>
+  isOverview.value ? overview.value : (layers.value[activeLayerIndex.value!] ?? null),
 )
 
-const currentLayer = computed(() => layers.value[currentIndex.value] ?? null)
+// Подпись под сеткой
+const gridCaption = computed(() =>
+  isOverview.value
+    ? `Вид сверху · все ${layers.value.length} слоёв`
+    : (currentLayer.value?.label ?? ''),
+)
 
 // Сводка по тиру
 const summary = computed(() => {
@@ -57,18 +55,25 @@ const summary = computed(() => {
   return `Тир ${props.tier} · ${td.runeCount} рун · ${td.upgradeSlots} слотов апгрейда · ${n} слоёв`
 })
 
+function selectOverview(): void {
+  activeLayerIndex.value = null
+}
+
 function selectLayer(i: number): void {
   activeLayerIndex.value = i
 }
 
-// Клавиатурная навигация по степперу
+// Клавиатурная навигация по степперу (−1 = кнопка overview)
 function onStepperKey(e: KeyboardEvent, i: number): void {
+  const lastIdx = layers.value.length - 1
   if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
     e.preventDefault()
-    selectLayer(Math.min(i + 1, layers.value.length - 1))
+    if (i === -1) selectLayer(0)
+    else selectLayer(Math.min(i + 1, lastIdx))
   } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
     e.preventDefault()
-    selectLayer(Math.max(i - 1, 0))
+    if (i === 0) selectOverview()
+    else if (i > 0) selectLayer(i - 1)
   }
 }
 </script>
@@ -133,18 +138,33 @@ function onStepperKey(e: KeyboardEvent, i: number): void {
       </div>
     </div>
 
-    <!-- Степпер слоёв -->
+    <!-- Степпер слоёв: кнопка «Вся компоновка» + послойные кнопки -->
     <div class="sc__stepper" role="tablist" aria-label="Слои структуры алтаря">
+      <!-- Кнопка overview — активна по умолчанию при открытии -->
+      <button
+        type="button"
+        class="sc__step sc__step--overview"
+        :class="{ 'sc__step--active': isOverview }"
+        role="tab"
+        :aria-selected="isOverview"
+        :aria-current="isOverview ? 'true' : undefined"
+        :tabindex="isOverview ? 0 : -1"
+        @click="selectOverview"
+        @keydown="onStepperKey($event, -1)"
+      >
+        <span class="sc__step-label">Вся компоновка</span>
+      </button>
+
       <button
         v-for="(layer, i) in layers"
         :key="layer.y"
         type="button"
         class="sc__step"
-        :class="{ 'sc__step--active': i === currentIndex }"
+        :class="{ 'sc__step--active': !isOverview && i === activeLayerIndex }"
         role="tab"
-        :aria-selected="i === currentIndex"
-        :aria-current="i === currentIndex ? 'true' : undefined"
-        :tabindex="i === currentIndex ? 0 : -1"
+        :aria-selected="!isOverview && i === activeLayerIndex"
+        :aria-current="!isOverview && i === activeLayerIndex ? 'true' : undefined"
+        :tabindex="!isOverview && i === activeLayerIndex ? 0 : -1"
         @click="selectLayer(i)"
         @keydown="onStepperKey($event, i)"
       >
@@ -153,14 +173,9 @@ function onStepperKey(e: KeyboardEvent, i: number): void {
       </button>
     </div>
 
-    <!-- Сетка текущего слоя -->
-    <div
-      v-if="currentLayer"
-      class="sc__grid-wrap"
-      :style="{ maxWidth: `${GRID_MAX_PX}px` }"
-      role="tabpanel"
-      :aria-label="`Слой: ${currentLayer.label}`"
-    >
+    <!-- Сетка активного режима (overview или конкретный слой) -->
+    <div v-if="currentLayer" class="sc__grid-wrap" role="tabpanel" :aria-label="gridCaption">
+      <p class="sc__grid-caption">{{ gridCaption }}</p>
       <AltarLayerGrid :layer="currentLayer" :cell-px="cellPx" />
     </div>
   </div>
@@ -327,8 +342,23 @@ function onStepperKey(e: KeyboardEvent, i: number): void {
   font-weight: 400;
 }
 
+/* Кнопка «Вся компоновка» чуть шире и с отделяющим отступом справа */
+.sc__step--overview {
+  padding-inline: 12px;
+  margin-right: 4px;
+  border-right: 1px solid var(--cardln);
+}
+
 /* ── Сетка ── */
 .sc__grid-wrap {
   overflow-x: auto;
+}
+
+/* Подпись над сеткой (вид сверху / название слоя) */
+.sc__grid-caption {
+  margin: 0 0 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
 }
 </style>

@@ -99,6 +99,65 @@ function buildLayerGrid(
   return { width, height, minX, minZ, cells }
 }
 
+// Проекция всех слоёв структуры сверху вниз (top-down overview).
+// Для каждой позиции (x,z) берётся один блок с наибольшим приоритетом:
+//   altar > upgrade > rune > placement > empty
+// Результат совместим с AltarLayer — можно передавать в AltarLayerGrid.
+export function altarOverview(tier: number): AltarLayer | null {
+  const layers = altarLayers(tier)
+  if (layers.length === 0) return null
+
+  const tierData = ALTAR_TIERS.find((t) => t.tier === tier)
+  if (!tierData) return null
+
+  // Собираем лучшую ячейку по (x,z) через приоритет kind
+  const map = new Map<string, { kind: LayerCellKind; name_ru: string }>()
+  for (const layer of layers) {
+    for (const cell of layer.cells) {
+      if (cell.kind === 'empty') continue
+      const key = `${cell.x},${cell.z}`
+      const existing = map.get(key)
+      if (!existing || KIND_PRIORITY[cell.kind] > KIND_PRIORITY[existing.kind]) {
+        map.set(key, { kind: cell.kind, name_ru: cell.name_ru })
+      }
+    }
+  }
+
+  // Вычисляем границы overview-сетки
+  if (map.size === 0) return null
+  const xs = [...map.keys()].map((k) => parseInt(k.split(',')[0]!))
+  const zs = [...map.keys()].map((k) => parseInt(k.split(',')[1]!))
+  const minX = Math.min(...xs)
+  const maxX = Math.max(...xs)
+  const minZ = Math.min(...zs)
+  const maxZ = Math.max(...zs)
+  const width = maxX - minX + 1
+  const height = maxZ - minZ + 1
+
+  // Разворачиваем в полный прямоугольник
+  const cells: LayerCell[] = []
+  for (let z = minZ; z <= maxZ; z++) {
+    for (let x = minX; x <= maxX; x++) {
+      const entry = map.get(`${x},${z}`)
+      cells.push({ x, z, kind: entry?.kind ?? 'empty', name_ru: entry?.name_ru ?? '' })
+    }
+  }
+
+  // count = все непустые блоки кроме алтаря (сумма по всем слоям)
+  const count = tierData.components.length
+
+  return {
+    y: 0,
+    label: 'Вся компоновка',
+    count,
+    width,
+    height,
+    minX,
+    minZ,
+    cells,
+  }
+}
+
 // Разбивает структуру алтаря заданного тира по уровням Y.
 // Слои отсортированы сверху вниз (больший Y первым — как смотрим сквозь структуру).
 // T1: возвращает пустой массив (алтарь не требует окружающей структуры).
