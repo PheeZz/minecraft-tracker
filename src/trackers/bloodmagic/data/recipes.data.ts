@@ -104,9 +104,17 @@ export const RECIPES: readonly Recipe[] = [
       name_ru: 'Трансцендентальный кровавый шар',
       icon: 'bloodmagic/items/alchemicalwizardry/TranscendentBloodOrb.png',
     },
-    inputs: [{ ref: 'blockCrystal', name_en: '', name_ru: '' }],
+    inputs: [
+      {
+        ref: 'blockCrystal',
+        name_en: 'Crystal Cluster',
+        name_ru: 'Кристальное скопление',
+        icon: 'bloodmagic/blocks/alchemicalwizardry/ShardCluster.png',
+      },
+    ],
     minTier: 6,
     lp: 200000,
+    creativeOnly: true,
     meta: { consumptionRate: 100, drainRate: 200, canBeFilled: false },
   },
   {
@@ -2617,7 +2625,7 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Камень',
         icon: 'bloodmagic/vanilla/blocks/stone.png',
       },
-      { ref: 'bloodRune', name_en: '', name_ru: '' },
+      { ref: 'bloodRune', name_en: 'Blood Rune', name_ru: 'Кровавая руна' },
       {
         ref: 'blankSlate',
         name_en: 'Blank Slate',
@@ -2908,7 +2916,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'blockCrystal', name_en: '', name_ru: '' },
+    output: {
+      ref: 'blockCrystal',
+      name_en: 'Crystal Cluster',
+      name_ru: 'Кристальное скопление',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/ShardCluster.png',
+    },
     inputs: [
       {
         ref: 'baseItems',
@@ -3427,7 +3440,12 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'blockStabilityGlyph', name_en: '', name_ru: '' },
+    output: {
+      ref: 'blockStabilityGlyph',
+      name_en: 'Glyph of Rigid Stability',
+      name_ru: 'Глиф непреклонной стабильности',
+      icon: 'bloodmagic/blocks/alchemicalwizardry/GlyphStability1.png',
+    },
     inputs: [
       {
         ref: 'crepitous',
@@ -3441,7 +3459,7 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Трансцендентальный кровавый шар',
         icon: 'bloodmagic/items/alchemicalwizardry/TranscendentBloodOrb.png',
       },
-      { ref: 'bloodRune', name_en: '', name_ru: '' },
+      { ref: 'bloodRune', name_en: 'Blood Rune', name_ru: 'Кровавая руна' },
       {
         ref: 'baseItems',
         name_en: 'Ethereal Slate',
@@ -3608,7 +3626,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: '', name_ru: '' },
+    output: { ref: 'bloodRune', name_en: 'Blood Rune', name_ru: 'Кровавая руна' },
     inputs: [
       {
         vanilla: 'stone',
@@ -3628,7 +3646,11 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: '', name_ru: '' },
+    output: {
+      ref: 'bloodRune',
+      name_en: 'Rune of Augmented Capacity',
+      name_ru: 'Руна дополнительной ёмкости',
+    },
     inputs: [
       {
         vanilla: 'stone',
@@ -3654,7 +3676,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: '', name_ru: '' },
+    output: { ref: 'bloodRune', name_en: 'Rune of Dislocation', name_ru: 'Руна дислокации' },
     inputs: [
       {
         vanilla: 'stone',
@@ -3680,7 +3702,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: '', name_ru: '' },
+    output: { ref: 'bloodRune', name_en: 'Rune of the Orb', name_ru: 'Руна шара' },
     inputs: [
       {
         vanilla: 'stone',
@@ -3701,7 +3723,11 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: '', name_ru: '' },
+    output: {
+      ref: 'bloodRune',
+      name_en: 'Rune of Superior Capacity',
+      name_ru: 'Руна улучшенной ёмкости',
+    },
     inputs: [
       {
         vanilla: 'obsidian',
@@ -3722,7 +3748,11 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Ведро',
         icon: 'bloodmagic/vanilla/items/bucket_empty.png',
       },
-      { ref: 'bloodRune', name_en: '', name_ru: '' },
+      {
+        ref: 'bloodRune',
+        name_en: 'Rune of Augmented Capacity',
+        name_ru: 'Руна дополнительной ёмкости',
+      },
     ],
     meta: { type: 'shaped_bloodorb', shape: ['srs', 'beb', 'sos'] },
   },
@@ -4166,7 +4196,7 @@ export const RECIPES: readonly Recipe[] = [
         name_ru: 'Камень',
         icon: 'bloodmagic/vanilla/blocks/stone.png',
       },
-      { ref: 'bloodRune', name_en: '', name_ru: '' },
+      { ref: 'bloodRune', name_en: 'Blood Rune', name_ru: 'Кровавая руна' },
       {
         ref: 'apprenticeBloodOrb',
         name_en: 'Apprentice Blood Orb',
@@ -5035,7 +5065,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'crafting',
-    output: { ref: 'bloodRune', name_en: '', name_ru: '' },
+    output: { ref: 'bloodRune', name_en: 'Rune of Acceleration', name_ru: 'Руна ускорения' },
     inputs: [
       {
         ref: 'baseItems',
@@ -5395,7 +5425,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityFallenAngelID', name_ru: 'entityFallenAngelID' },
+    output: { name_en: 'Fallen Angel', name_ru: 'Падший ангел' },
     inputs: [
       {
         ref: 'sanctus',
@@ -5438,7 +5468,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityLowerGuardianID', name_ru: 'entityLowerGuardianID' },
+    output: { name_en: 'Lower Guardian', name_ru: 'Низший страж' },
     inputs: [
       {
         vanilla: 'cobblestone',
@@ -5481,7 +5511,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityBileDemonID', name_ru: 'entityBileDemonID' },
+    output: { name_en: 'Bile Demon', name_ru: 'Желчный демон' },
     inputs: [
       {
         vanilla: 'poisonous_potato',
@@ -5559,7 +5589,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityWingedFireDemonID', name_ru: 'entityWingedFireDemonID' },
+    output: { name_en: 'Winged Fire Demon', name_ru: 'Крылатый огненный демон' },
     inputs: [
       {
         ref: 'aether',
@@ -5642,7 +5672,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entitySmallEarthGolemID', name_ru: 'entitySmallEarthGolemID' },
+    output: { name_en: 'Small Earth Golem', name_ru: 'Маленький земляной голем' },
     inputs: [
       {
         vanilla: 'clay_ball',
@@ -5667,7 +5697,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityIceDemonID', name_ru: 'entityIceDemonID' },
+    output: { name_en: 'Ice Demon', name_ru: 'Ледяной демон' },
     inputs: [
       {
         ref: 'crystallos',
@@ -5710,7 +5740,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityBoulderFistID', name_ru: 'entityBoulderFistID' },
+    output: { name_en: 'Boulder Fist', name_ru: 'Каменный кулак' },
     inputs: [
       {
         ref: 'terrae',
@@ -5753,7 +5783,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityShadeID', name_ru: 'entityShadeID' },
+    output: { name_en: 'Shade', name_ru: 'Тень' },
     inputs: [
       {
         ref: 'tennebrae',
@@ -5796,7 +5826,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityAirElementalID', name_ru: 'entityAirElementalID' },
+    output: { name_en: 'Air Elemental', name_ru: 'Элементаль воздуха' },
     inputs: [
       {
         ref: 'aether',
@@ -5839,7 +5869,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityWaterElementalID', name_ru: 'entityWaterElementalID' },
+    output: { name_en: 'Water Elemental', name_ru: 'Элементаль воды' },
     inputs: [
       {
         ref: 'aquasalus',
@@ -5882,7 +5912,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityEarthElementalID', name_ru: 'entityEarthElementalID' },
+    output: { name_en: 'Earth Elemental', name_ru: 'Элементаль земли' },
     inputs: [
       {
         ref: 'terrae',
@@ -5925,7 +5955,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityFireElementalID', name_ru: 'entityFireElementalID' },
+    output: { name_en: 'Fire Elemental', name_ru: 'Элементаль огня' },
     inputs: [
       {
         ref: 'incendium',
@@ -5968,7 +5998,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityShadeElementalID', name_ru: 'entityShadeElementalID' },
+    output: { name_en: 'Shade Elemental', name_ru: 'Элементаль тени' },
     inputs: [
       {
         ref: 'tennebrae',
@@ -6011,7 +6041,7 @@ export const RECIPES: readonly Recipe[] = [
   },
   {
     source: 'summoning',
-    output: { name_en: 'entityHolyElementalID', name_ru: 'entityHolyElementalID' },
+    output: { name_en: 'Holy Elemental', name_ru: 'Элементаль света' },
     inputs: [
       {
         ref: 'sanctus',

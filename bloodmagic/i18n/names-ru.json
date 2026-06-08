@@ -1,0 +1,84 @@
+{
+  "_comment": [
+    "Кюрированные оверрайды имён для трекера BloodMagic.",
+    "Формат ключей:",
+    "  '<ref>'         — предмет без меты (или мета 0 по умолчанию)",
+    "  '<ref>#<meta>'  — конкретная мета",
+    "  'entity:<idVar>' — маппинг entityIdVar → читаемое имя существа",
+    "Оверрайды имеют приоритет над lang-файлами.",
+    "Причины для ручного кюрирования:",
+    "  1. Баг мода (itemFluidSigil.name пустое в обоих lang)",
+    "  2. Мета-предметы без однозначного совпадения в lang",
+    "  3. Ванильные предметы без нормального RU-имени в данных"
+  ],
+
+  "blockCrystal": {
+    "name_en": "Crystal Cluster",
+    "name_ru": "Кристальное скопление"
+  },
+  "blockStabilityGlyph": {
+    "name_en": "Glyph of Rigid Stability",
+    "name_ru": "Глиф непреклонной стабильности"
+  },
+  "itemFluidSigil": {
+    "name_en": "Fluid Sigil",
+    "name_ru": "Сигил жидкости"
+  },
+
+  "entity:entityFallenAngelID": {
+    "name_en": "Fallen Angel",
+    "name_ru": "Падший ангел"
+  },
+  "entity:entityLowerGuardianID": {
+    "name_en": "Lower Guardian",
+    "name_ru": "Низший страж"
+  },
+  "entity:entityBileDemonID": {
+    "name_en": "Bile Demon",
+    "name_ru": "Желчный демон"
+  },
+  "entity:entityWingedFireDemonID": {
+    "name_en": "Winged Fire Demon",
+    "name_ru": "Крылатый огненный демон"
+  },
+  "entity:entitySmallEarthGolemID": {
+    "name_en": "Small Earth Golem",
+    "name_ru": "Маленький земляной голем"
+  },
+  "entity:entityIceDemonID": {
+    "name_en": "Ice Demon",
+    "name_ru": "Ледяной демон"
+  },
+  "entity:entityBoulderFistID": {
+    "name_en": "Boulder Fist",
+    "name_ru": "Каменный кулак"
+  },
+  "entity:entityShadeID": {
+    "name_en": "Shade",
+    "name_ru": "Тень"
+  },
+  "entity:entityAirElementalID": {
+    "name_en": "Air Elemental",
+    "name_ru": "Элементаль воздуха"
+  },
+  "entity:entityWaterElementalID": {
+    "name_en": "Water Elemental",
+    "name_ru": "Элементаль воды"
+  },
+  "entity:entityEarthElementalID": {
+    "name_en": "Earth Elemental",
+    "name_ru": "Элементаль земли"
+  },
+  "entity:entityFireElementalID": {
+    "name_en": "Fire Elemental",
+    "name_ru": "Элементаль огня"
+  },
+  "entity:entityShadeElementalID": {
+    "name_en": "Shade Elemental",
+    "name_ru": "Элементаль тени"
+  },
+  "entity:entityHolyElementalID": {
+    "name_en": "Holy Elemental",
+    "name_ru": "Элементаль света"
+  }
+}

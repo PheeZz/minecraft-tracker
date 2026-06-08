@@ -91,6 +91,8 @@ export interface Recipe {
   inputs: readonly ItemRef[]
   minTier?: number
   lp?: number
+  /** Рецепт недоступен в выживании — только творческий режим (например Transcendent Blood Orb) */
+  creativeOnly?: boolean
   /** Дополнительные поля специфичные для источника (consumptionRate, drainRate и т.д.) */
   meta?: Record<string, unknown>
 }

@@ -5,6 +5,7 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync } from 'n
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 import prettier from 'prettier'
+import { parseLang, applyLangNames } from './lib/lang.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const bmSrc = (f) => JSON.parse(readFileSync(resolve(root, 'bloodmagic/data-src', f), 'utf8'))
@@ -21,6 +22,21 @@ async function emit(file, header, body) {
     await prettier.format(code, { ...PRETTIER, parser: 'typescript' }),
   )
 }
+
+// ---- lang-файлы BloodMagic ----
+const langDir = resolve(root, 'bloodmagic/_assets/lang')
+const EN = parseLang(resolve(langDir, 'en_US.lang'))
+const RU = parseLang(resolve(langDir, 'ru_RU.lang'))
+
+// Кюрированные оверрайды (fluid sigil, entity-маппинг, и прочие неавтоматизируемые случаи)
+let NAMES_RU = {}
+try {
+  NAMES_RU = JSON.parse(readFileSync(resolve(root, 'bloodmagic/i18n/names-ru.json'), 'utf8'))
+} catch {
+  NAMES_RU = {}
+}
+
+// Константы и логика обогащения имён вынесены в scripts/lib/lang.mjs
 
 // ---- резолв иконок ----
 const normName = (s) =>
@@ -103,6 +119,8 @@ function iconFor(o) {
 
 function toItemRef(o) {
   if (!o || typeof o !== 'object') return { name_en: String(o ?? '?'), name_ru: String(o ?? '?') }
+  // Применяем имена из lang до резолва иконки
+  applyLangNames(o, EN, RU, NAMES_RU)
   const icon = iconFor(o)
   return {
     ...(o.ref ? { ref: o.ref } : {}),
@@ -127,13 +145,16 @@ const orbs = bmSrc('blood-orbs.json').orbs.map((o) => ({
 function normalizeAltarBlock(c) {
   // 'placement' = маркер позиции без конкретного варианта; остальное — числовой мета
   const isPlacement = c.meta === 'placement'
+  // Добавляем числовой meta в block для корректного резолва bloodRune-суффикса
+  const block = { ...(c.block ?? {}), meta: isPlacement ? 0 : (c.meta ?? 0) }
+  applyLangNames(block, EN, RU, NAMES_RU)
   return {
     x: c.x,
     y: c.y,
     z: c.z,
-    ref: c.block?.ref ?? '',
+    ref: block.ref ?? '',
     meta: isPlacement ? 0 : (c.meta ?? 0),
-    name_ru: c.block?.name_ru ?? c.block?.name_en ?? '',
+    name_ru: block.name_ru ?? block.name_en ?? '',
     isBloodRune: c.isBloodRune ?? false,
     isUpgradeSlot: c.isUpgradeSlot ?? false,
     isPlacement,
@@ -198,15 +219,20 @@ const sigils = bmSrc('sigils.json').sigils.map((s) => ({
 
 // ---- рецепты ----
 
+// Рецепты, результат которых может быть получен только в творческом режиме
+const CREATIVE_ONLY_OUTPUTS = new Set(['transcendentBloodOrb'])
+
 // altar (altar-recipes.json): result/input/minTier/liquidRequired_LP + consumptionRate/drainRate
 function fromAltarRecipe(r, addon) {
+  const output = toItemRef(r.result)
   return {
     source: 'altar',
     ...(addon ? { addon } : {}),
-    output: toItemRef(r.result),
+    output,
     inputs: [toItemRef(r.input)],
     minTier: r.minTier,
     lp: r.liquidRequired_LP,
+    ...(CREATIVE_ONLY_OUTPUTS.has(r.result?.ref) ? { creativeOnly: true } : {}),
     meta: {
       consumptionRate: r.consumptionRate,
       drainRate: r.drainRate,
@@ -254,7 +280,7 @@ function fromBindingRecipe(r, addon) {
   }
 }
 
-// summoning: entityIdVar как output-заглушка, altarTier, ingredients_main как inputs.
+// summoning: entityIdVar → человекочитаемое имя из NAMES_RU.
 // tier2/tier3 (если непусты) кладём в meta, чтобы панель могла их показать отдельно.
 function fromSummoningRecipe(r) {
   const tier2 = (r.ingredients_tier2 ?? []).map(toItemRef)
@@ -263,9 +289,13 @@ function fromSummoningRecipe(r) {
     ...(tier2.length ? { tier2 } : {}),
     ...(tier3.length ? { tier3 } : {}),
   }
+  // Резолвим имя существа через кюрированный маппинг entity:<idVar>
+  const entityOverride = NAMES_RU[`entity:${r.entityIdVar}`]
+  const entityNameEn = entityOverride?.name_en ?? r.entityIdVar
+  const entityNameRu = entityOverride?.name_ru ?? r.entityIdVar
   return {
     source: 'summoning',
-    output: { name_en: r.entityIdVar, name_ru: r.entityIdVar },
+    output: { name_en: entityNameEn, name_ru: entityNameRu },
     inputs: (r.ingredients_main ?? []).map(toItemRef),
     minTier: r.altarTier,
     ...(Object.keys(tierMeta).length ? { meta: tierMeta } : {}),

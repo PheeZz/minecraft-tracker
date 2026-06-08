@@ -33,6 +33,7 @@ const tier3Inputs = computed<ItemRef[]>(() => {
           {{ SOURCE_LABELS[recipe.source] }}
         </span>
         <span v-if="recipe.addon === 'bloodarsenal'" class="badge badge--addon">BloodArsenal</span>
+        <span v-if="recipe.creativeOnly" class="badge badge--creative">только креатив</span>
         <span v-if="recipe.minTier != null" class="badge badge--tier"
           >Тир {{ recipe.minTier }}</span
         >
@@ -160,6 +161,12 @@ const tier3Inputs = computed<ItemRef[]>(() => {
   background: #1a2240;
   color: #80aaff;
   border: 1px solid #304080;
+}
+
+.badge--creative {
+  background: rgba(120, 120, 120, 0.12);
+  color: var(--ink2);
+  border: 1px solid rgba(120, 120, 120, 0.24);
 }
 
 .badge--tier {
