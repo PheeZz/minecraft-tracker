@@ -20,6 +20,8 @@ export interface VoxelSceneHandle {
   resize: (width: number, height: number) => void
   /** Обновляет содержимое сцены без пересоздания renderer/camera/controls. */
   update: (blocks: VoxelBlock[]) => void
+  /** Пауза/возобновление render-loop (для скрытых вкладок под KeepAlive). */
+  setActive: (active: boolean) => void
   dispose: () => void
 }
 
@@ -117,7 +119,9 @@ export function createVoxelScene(
   canvas.addEventListener('mouseleave', onMouseLeave)
 
   // --- Render loop ---
+  let running = true
   function renderLoop() {
+    if (!running || disposed) return
     rafId = requestAnimationFrame(renderLoop)
     controls.update()
     // Прогоняем активные entrance-твины (no-op после завершения каждого)
@@ -126,6 +130,14 @@ export function createVoxelScene(
     renderer.render(scene, camera)
   }
   renderLoop()
+
+  /** Пауза (скрытая вкладка) / возобновление render-loop без потери сцены. */
+  function setActive(active: boolean) {
+    if (disposed || active === running) return
+    running = active
+    if (active) renderLoop()
+    else cancelAnimationFrame(rafId)
+  }
 
   // --- Handle ---
 
@@ -154,6 +166,7 @@ export function createVoxelScene(
 
   function dispose() {
     disposed = true
+    running = false
     cancelAnimationFrame(rafId)
     canvas.removeEventListener('mousemove', onMouseMove)
     canvas.removeEventListener('mouseleave', onMouseLeave)
@@ -167,5 +180,5 @@ export function createVoxelScene(
     renderer.forceContextLoss()
   }
 
-  return { resize, update, dispose }
+  return { resize, update, setActive, dispose }
 }

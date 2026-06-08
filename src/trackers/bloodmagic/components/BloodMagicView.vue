@@ -44,21 +44,18 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
     </nav>
 
     <div class="bm__body">
-      <Transition name="bmpanel" mode="out-in">
-        <!-- реализованные панели -->
+      <!--
+        KeepAlive: панели не размонтируются при смене вкладки — 3D-сцена сохраняется
+        (нет повторной инициализации и моргания). Без mode="out-in" Transition,
+        который на тяжёлой 3D-панели зависал и оставлял пустой контент.
+        MultiblockView гасит render-loop на скрытых вкладках (onDeactivated).
+      -->
+      <KeepAlive>
         <BloodPathPanel v-if="panel === 'path'" key="path" />
         <RitualsPanel v-else-if="panel === 'rituals'" key="rituals" />
         <RecipesPanel v-else-if="panel === 'recipes'" key="recipes" />
         <SigilsPanel v-else-if="panel === 'sigils'" key="sigils" />
-        <!-- заглушки для панелей в разработке -->
-        <section v-else :key="panel" class="bm__placeholder">
-          <div class="bm__placeholder-icon">🩸</div>
-          <p class="bm__placeholder-title">
-            {{ PANELS.find((p) => p.id === panel)?.label }} — скоро
-          </p>
-          <p class="bm__placeholder-sub">Панель в разработке</p>
-        </section>
-      </Transition>
+      </KeepAlive>
     </div>
   </div>
 </template>
@@ -166,23 +163,5 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
   font-size: 13px;
   color: var(--muted);
   margin: 0;
-}
-
-/* переход между вкладками — аналог thaumcraft */
-.bmpanel-enter-active,
-.bmpanel-leave-active {
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
-}
-
-.bmpanel-enter-from {
-  opacity: 0;
-  transform: translateY(6px);
-}
-
-.bmpanel-leave-to {
-  opacity: 0;
-  transform: translateY(-6px);
 }
 </style>

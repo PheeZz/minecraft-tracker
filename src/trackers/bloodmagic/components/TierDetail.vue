@@ -470,8 +470,12 @@ const isBuilt = computed(() => store.isBuilt(props.tier))
 }
 
 /* Обёртка текстовой части — display:flex для сохранения layout */
+/* Реальный flex-box (НЕ display:contents): на contents-элементе CSS-переходы
+   не работают — tier-fade не анимировался. Повторяем колонку с gap как у .td. */
 .td__text-content {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,7 +2,7 @@
 // Ленивый мост между Vue и three.js-сценой.
 // three грузится только при монтировании этого компонента,
 // не попадая в общий бандл.
-import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
+import { ref, watch, onMounted, onBeforeUnmount, onActivated, onDeactivated } from 'vue'
 import type { VoxelBlock } from '../three/voxelTypes'
 import type { VoxelSceneHandle } from '../three/voxelScene'
 
@@ -83,6 +83,15 @@ onBeforeUnmount(() => {
   resizeObserver?.disconnect()
   sceneHandle?.dispose()
   sceneHandle = null
+})
+
+// Под KeepAlive: на скрытой вкладке гасим render-loop, при возврате — оживляем
+// (+ resize, т.к. размер контейнера мог измениться, пока вкладка была скрыта).
+onDeactivated(() => sceneHandle?.setActive(false))
+onActivated(() => {
+  sceneHandle?.setActive(true)
+  const el = containerRef.value
+  if (el) sceneHandle?.resize(el.clientWidth, el.clientHeight)
 })
 
 // При смене пропа blocks — обновляем содержимое сцены без пересоздания renderer.
