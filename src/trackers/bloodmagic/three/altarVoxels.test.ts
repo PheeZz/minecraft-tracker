@@ -36,10 +36,26 @@ describe('altarVoxels', () => {
     }
   })
 
-  it('baseUrl корректно подставляется в пути текстур', () => {
+  it('baseUrl корректно подставляется в пути текстур (fallback)', () => {
     const voxels = altarVoxels(1, '/minecraft-tracker/')
     const altar = voxels[0]!
     expect(altar.textures.top).toContain('/minecraft-tracker/')
     expect(altar.textures.top).toContain('BloodAltar_Top.png')
+  })
+
+  it('центральный алтарь помечен model:"altar" для OBJ-рендеринга', () => {
+    for (const tier of [1, 2, 3, 4, 5]) {
+      const voxels = altarVoxels(tier)
+      const altar = voxels.find((v) => v.label === 'Алтарь крови')
+      expect(altar?.model, `тир ${tier}: model не "altar"`).toBe('altar')
+    }
+  })
+
+  it('остальные блоки (руны, камни) не имеют model', () => {
+    const voxels = altarVoxels(2)
+    const nonAltar = voxels.filter((v) => v.label !== 'Алтарь крови')
+    for (const v of nonAltar) {
+      expect(v.model, `блок "${v.label}" не должен иметь model`).toBeUndefined()
+    }
   })
 })

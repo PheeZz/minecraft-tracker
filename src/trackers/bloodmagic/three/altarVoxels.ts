@@ -52,9 +52,12 @@ function centralAltarVoxel(baseUrl: string): VoxelBlock {
     x: 0,
     y: 0,
     z: 0,
+    // Текстуры оставлены как fallback на случай, если OBJ не загрузился
     textures: altarTextures(baseUrl),
     label: 'Алтарь крови',
     upgrade: false,
+    // Помечаем для voxelScene: рисовать OBJ-моделью, а не кубом
+    model: 'altar',
   }
 }
 

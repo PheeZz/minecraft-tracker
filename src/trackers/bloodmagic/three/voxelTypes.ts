@@ -15,4 +15,9 @@ export interface VoxelBlock {
   label: string
   /** Слот апгрейда — подсвечивается золотым emissive-намёком. */
   upgrade?: boolean
+  /**
+   * Идентификатор кастомной 3D-модели вместо стандартного куба.
+   * 'altar' → OBJ-модель Кровавого алтаря (bloodaltar.obj + altar.png).
+   */
+  model?: 'altar'
 }

@@ -24,6 +24,8 @@ const DIRS = [
   // BloodMagic — ванильные иконки ингредиентов (рецепты используют bloodmagic/vanilla/...)
   ['vanilla/textures/items', 'public/bloodmagic/vanilla/items'],
   ['vanilla/textures/blocks', 'public/bloodmagic/vanilla/blocks'],
+  // OBJ-модель Кровавого алтаря из мода (точная геометрия, не куб)
+  ['bloodmagic/models', 'public/bloodmagic/models'],
 ]
 const FILES = [
   ['bees/mockups/beeCombs.0.png', 'public/bees/beeCombs.0.png'],

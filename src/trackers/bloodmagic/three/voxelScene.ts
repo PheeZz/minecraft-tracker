@@ -4,6 +4,7 @@ import type * as THREEType from 'three'
 import type { OrbitControls as OrbitControlsType } from 'three/examples/jsm/controls/OrbitControls.js'
 import type { VoxelBlock } from './voxelTypes'
 import { computeBounds, buildGrid } from './voxelGrid'
+import { loadAltarModel } from './altarModel'
 
 export interface VoxelSceneOptions {
   onHover: (block: VoxelBlock | null, screenX: number, screenY: number) => void
@@ -50,15 +51,12 @@ function buildFaceMaterials(
   const bottom = loadTex(block.textures.bottom ?? block.textures.sides)
   const side = loadTex(block.textures.sides)
 
-  // Без emissive: блоки выглядят как в игре (руна — серый камень, не жёлтая).
-  // Различие слотов апгрейда показано в 2D-схеме (золотая рамка + легенда).
   const makeMat = (tex: THREEType.Texture) => new THREE.MeshLambertMaterial({ map: tex })
-
   // Порядок граней BoxGeometry: +X,-X,+Y,-Y,+Z,-Z
   return [makeMat(side), makeMat(side), makeMat(top), makeMat(bottom), makeMat(side), makeMat(side)]
 }
 
-/** Создаёт Mesh для одного вокселя. */
+/** Создаёт Mesh для одного вокселя-куба. */
 function buildVoxelMesh(
   THREE: typeof THREEType,
   block: VoxelBlock,
@@ -70,6 +68,25 @@ function buildVoxelMesh(
   mesh.position.set(block.x, block.y, block.z)
   mesh.userData = { block }
   return mesh
+}
+
+// --- Освобождение ресурсов OBJ-модели ---
+
+/** Освобождает геометрию и материалы всех мешей Object3D (рекурсивно). */
+function disposeObject3D(obj: THREEType.Object3D) {
+  obj.traverse((child) => {
+    if (!('geometry' in child)) return
+    const mesh = child as THREEType.Mesh
+    mesh.geometry?.dispose()
+    const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material]
+    for (const mat of mats) {
+      if (!mat) continue
+      // Освобождаем текстуру, если она есть на материале
+      const mapMat = mat as THREEType.MeshLambertMaterial
+      mapMat.map?.dispose()
+      mat.dispose()
+    }
+  })
 }
 
 // --- Освещение и сцена ---
@@ -91,8 +108,7 @@ function buildScene(THREE: typeof THREEType): THREEType.Scene {
 // --- Камера ---
 
 function buildCamera(THREE: typeof THREEType, width: number, height: number) {
-  const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 500)
-  return camera
+  return new THREE.PerspectiveCamera(45, width / height, 0.1, 500)
 }
 
 /** Позиционирует камеру по bounding-box так, чтобы вся структура была видна. */
@@ -111,18 +127,15 @@ function centerCamera(
   controls.update()
 }
 
-// --- Raycast / hover ---
-
-function buildRaycaster(THREE: typeof THREEType) {
-  return new THREE.Raycaster()
-}
-
 // --- Главная функция ---
 
 /**
  * Строит воксельную сцену на canvas.
  * THREE и OrbitControls передаются снаружи — это позволяет компоненту
  * грузить их лениво через динамический import().
+ *
+ * Блоки с block.model === 'altar' рисуются OBJ-моделью (loadAltarModel);
+ * остальные — кубами (BoxGeometry) как прежде.
  */
 export function createVoxelScene(
   canvas: HTMLCanvasElement,
@@ -146,12 +159,24 @@ export function createVoxelScene(
 
   const { load: loadTex, disposeAll: disposeTextures } = makeTextureCache(THREE)
 
-  // Добавляем все вокселы в сцену
-  const meshes: THREEType.Mesh[] = blocks.map((b) => {
+  // Меши для raycast (кубы); OBJ-меши добавляются асинхронно
+  const meshes: THREEType.Mesh[] = []
+  // OBJ-группы для dispose
+  const modelObjects: THREEType.Object3D[] = []
+
+  // Флаг защиты от добавления в сцену после dispose
+  let disposed = false
+
+  // Разделяем блоки: обычные кубы vs. модельные
+  const cubeBlocks = blocks.filter((b) => b.model !== 'altar')
+  const modelBlocks = blocks.filter((b) => b.model === 'altar')
+
+  // Кубы — синхронно
+  for (const b of cubeBlocks) {
     const mesh = buildVoxelMesh(THREE, b, loadTex)
     scene.add(mesh)
-    return mesh
-  })
+    meshes.push(mesh)
+  }
 
   // Опорная сетка-пол для ориентации в координатах
   const grid = blocks.length ? buildGrid(THREE, computeBounds(blocks)) : null
@@ -159,8 +184,30 @@ export function createVoxelScene(
 
   centerCamera(camera, controls, blocks)
 
+  // OBJ-модели — асинхронно (OBJLoader грузится отдельным чанком)
+  const baseUrl: string = import.meta.env?.BASE_URL ?? '/'
+  for (const voxel of modelBlocks) {
+    loadAltarModel(THREE, baseUrl, voxel)
+      .then((obj) => {
+        // Сцена уже задиспоужена пока шла загрузка — освобождаем и уходим
+        if (disposed) {
+          disposeObject3D(obj)
+          return
+        }
+        scene.add(obj)
+        modelObjects.push(obj)
+        // Добавляем меши модели в пул raycast-а
+        obj.traverse((child) => {
+          if (child instanceof THREE.Mesh) meshes.push(child)
+        })
+      })
+      .catch((err) => {
+        console.warn('[altarModel] не удалось загрузить OBJ-модель алтаря:', err)
+      })
+  }
+
   // --- Raycast hover ---
-  const raycaster = buildRaycaster(THREE)
+  const raycaster = new THREE.Raycaster()
   const mouse = new THREE.Vector2()
   let rafId = 0
   let lastHoveredBlock: VoxelBlock | null = null
@@ -203,25 +250,38 @@ export function createVoxelScene(
   // --- Handle ---
 
   function resize(w: number, h: number) {
-    if (w === 0 || h === 0) return // контейнер скрыт (display:none при переключении) — пропускаем
+    if (w === 0 || h === 0) return // контейнер скрыт — пропускаем
     camera.aspect = w / h
     camera.updateProjectionMatrix()
     renderer.setSize(w, h)
   }
 
   function dispose() {
+    disposed = true
     cancelAnimationFrame(rafId)
     canvas.removeEventListener('mousemove', onMouseMove)
     canvas.removeEventListener('mouseleave', onMouseLeave)
 
-    // Освобождаем геометрию, материалы, текстуры каждого меша
+    // Освобождаем кубы
     for (const mesh of meshes) {
+      // OBJ-меши будут освобождены через modelObjects — пропускаем дубли
+      if (
+        modelObjects.some((obj) => {
+          let found = false
+          obj.traverse((c) => {
+            if (c === mesh) found = true
+          })
+          return found
+        })
+      )
+        continue
       mesh.geometry.dispose()
       const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material]
-      for (const mat of mats) {
-        mat.dispose()
-      }
+      for (const mat of mats) mat.dispose()
     }
+
+    // Освобождаем OBJ-модели
+    for (const obj of modelObjects) disposeObject3D(obj)
 
     if (grid) {
       grid.geometry.dispose()
@@ -231,8 +291,7 @@ export function createVoxelScene(
     disposeTextures()
     controls.dispose()
     renderer.dispose()
-    // dispose() освобождает GPU-ресурсы, но НЕ отпускает WebGL-контекст; форсируем,
-    // иначе контексты копятся при смене тира и браузер убивает старые (~16 лимит).
+    // Форсируем освобождение WebGL-контекста (браузер лимитирует ~16 контекстов)
     renderer.forceContextLoss()
   }
 
