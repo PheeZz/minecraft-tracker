@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { storage } from '@/shared/persistence/storage'
+import RecipesPanel from './RecipesPanel.vue'
+import SigilsPanel from './SigilsPanel.vue'
 
 // ── Суб-табы трекера BloodMagic ──
 type Panel = 'path' | 'rituals' | 'sigils' | 'recipes'
@@ -38,8 +40,11 @@ watch(panel, (p) => storage.set(PANEL_KEY, p))
 
     <div class="bm__body">
       <Transition name="bmpanel" mode="out-in">
-        <!-- заглушки панелей — реализация в отдельных фазах -->
-        <section :key="panel" class="bm__placeholder">
+        <!-- реализованные панели -->
+        <RecipesPanel v-if="panel === 'recipes'" key="recipes" />
+        <SigilsPanel v-else-if="panel === 'sigils'" key="sigils" />
+        <!-- заглушки для панелей в разработке -->
+        <section v-else :key="panel" class="bm__placeholder">
           <div class="bm__placeholder-icon">🩸</div>
           <p class="bm__placeholder-title">
             {{ PANELS.find((p) => p.id === panel)?.label }} — скоро

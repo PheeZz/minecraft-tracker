@@ -21,6 +21,9 @@ const DIRS = [
   // BloodMagic — иконки предметов и блоков
   ['bloodmagic/textures/items', 'public/bloodmagic/items'],
   ['bloodmagic/textures/blocks', 'public/bloodmagic/blocks'],
+  // BloodMagic — ванильные иконки ингредиентов (рецепты используют bloodmagic/vanilla/...)
+  ['vanilla/textures/items', 'public/bloodmagic/vanilla/items'],
+  ['vanilla/textures/blocks', 'public/bloodmagic/vanilla/blocks'],
 ]
 const FILES = [
   ['bees/mockups/beeCombs.0.png', 'public/bees/beeCombs.0.png'],

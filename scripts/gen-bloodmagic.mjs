@@ -37,14 +37,22 @@ for (const kind of ['items', 'blocks']) {
     for (const f of readdirSync(dir)) {
       if (!f.endsWith('.png')) continue
       const key = normName(f.slice(0, -4))
-      if (!TEX.has(key)) TEX.set(key, `textures/${kind}/${mod}/${f}`)
+      if (!TEX.has(key)) TEX.set(key, `bloodmagic/${kind}/${mod}/${f}`)
     }
   }
 }
 
+// Нормализуем пути из item-icon-map.json: textures/{kind}/... → bloodmagic/{kind}/...
+// (copy-assets.mjs кладёт bloodmagic/textures/items → public/bloodmagic/items, без сегмента textures/)
+const normalizeManmapPath = (p) =>
+  typeof p === 'string' ? p.replace(/^textures\//, 'bloodmagic/') : p
+
 let MANMAP = {}
 try {
-  MANMAP = JSON.parse(readFileSync(resolve(root, 'bloodmagic/textures/item-icon-map.json'), 'utf8'))
+  const raw = JSON.parse(
+    readFileSync(resolve(root, 'bloodmagic/textures/item-icon-map.json'), 'utf8'),
+  )
+  for (const [name, p] of Object.entries(raw)) MANMAP[name] = normalizeManmapPath(p)
 } catch {
   MANMAP = {}
 }
@@ -52,7 +60,7 @@ try {
 let VANILLA_MAP = {}
 try {
   const vm = JSON.parse(readFileSync(resolve(root, 'vanilla/item-icon-map.json'), 'utf8')).map ?? {}
-  for (const [name, p] of Object.entries(vm)) VANILLA_MAP[name] = `vanilla/${p}`
+  for (const [name, p] of Object.entries(vm)) VANILLA_MAP[name] = `bloodmagic/vanilla/${p}`
 } catch (e) {
   console.warn(`bloodmagic: vanilla/item-icon-map.json не прочитан (${e.message})`)
 }
@@ -68,7 +76,7 @@ for (const kind of ['items', 'blocks']) {
   for (const f of entries) {
     if (!f.endsWith('.png')) continue
     const key = normName(f.slice(0, -4))
-    if (!VTEX.has(key)) VTEX.set(key, `vanilla/${kind}/${f}`)
+    if (!VTEX.has(key)) VTEX.set(key, `bloodmagic/vanilla/${kind}/${f}`)
   }
 }
 
