@@ -1805,7 +1805,7 @@ export const BEES: Bee[] = [
       },
       {
         name: 'Смолистые соты',
-        pct: 30,
+        pct: 7,
         kind: 'specialty',
       },
     ],
@@ -1887,26 +1887,6 @@ export const BEES: Bee[] = [
         p2: 'Океаническая',
         chance: 8,
       },
-      {
-        p1: 'Лесная',
-        p2: 'Прилежная',
-        chance: 10,
-      },
-      {
-        p1: 'Прошлая',
-        p2: 'Луговая',
-        chance: 10,
-      },
-      {
-        p1: 'Неутомимая',
-        p2: 'Прорастающая',
-        chance: 10,
-      },
-      {
-        p1: 'Трудолюбивая',
-        p2: 'Процветающая',
-        chance: 8,
-      },
     ],
     products: [
       {
@@ -1916,21 +1896,6 @@ export const BEES: Bee[] = [
       },
       {
         name: 'Краситель',
-        pct: 10,
-        kind: 'specialty',
-      },
-      {
-        name: 'Медовые соты',
-        pct: 35,
-        kind: 'product',
-      },
-      {
-        name: 'Пшеничные соты',
-        pct: 30,
-        kind: 'product',
-      },
-      {
-        name: 'Семянные соты',
         pct: 10,
         kind: 'specialty',
       },
@@ -2100,26 +2065,6 @@ export const BEES: Bee[] = [
         p2: 'Тропическая',
         chance: 10,
       },
-      {
-        p1: 'Топкая',
-        p2: 'Водная',
-        chance: 10,
-      },
-      {
-        p1: 'Болотистая',
-        p2: 'Влажная',
-        chance: 8,
-      },
-      {
-        p1: 'Болотистая',
-        p2: 'Топкая',
-        chance: 8,
-      },
-      {
-        p1: 'Болотистая',
-        p2: 'Грибная',
-        chance: 8,
-      },
     ],
     products: [
       {
@@ -2130,16 +2075,6 @@ export const BEES: Bee[] = [
       {
         name: 'Кофейные соты',
         pct: 8,
-        kind: 'specialty',
-      },
-      {
-        name: 'Замшелые соты',
-        pct: 30,
-        kind: 'product',
-      },
-      {
-        name: 'Грибные соты',
-        pct: 15,
         kind: 'specialty',
       },
     ],
@@ -2445,16 +2380,6 @@ export const BEES: Bee[] = [
         p2: 'Энергетическая',
         chance: 8,
       },
-      {
-        p1: 'Зимняя',
-        p2: 'Прилежная',
-        chance: 10,
-      },
-      {
-        p1: 'Океаническая',
-        p2: 'Бесстрастная',
-        chance: 10,
-      },
     ],
     products: [
       {
@@ -2465,21 +2390,6 @@ export const BEES: Bee[] = [
       {
         name: 'Статические соты',
         pct: 8,
-        kind: 'specialty',
-      },
-      {
-        name: 'Морозные соты',
-        pct: 25,
-        kind: 'product',
-      },
-      {
-        name: 'Морозные соты',
-        pct: 20,
-        kind: 'product',
-      },
-      {
-        name: 'Ледяные соты',
-        pct: 10,
         kind: 'specialty',
       },
     ],
@@ -2911,11 +2821,6 @@ export const BEES: Bee[] = [
         p2: 'Отбелённая',
         chance: 5,
       },
-      {
-        p1: 'Суровая',
-        p2: 'Возбуждённая',
-        chance: 5,
-      },
     ],
     products: [
       {
@@ -2940,11 +2845,6 @@ export const BEES: Bee[] = [
         p2: 'Реликтовая',
         chance: 2,
       },
-      {
-        p1: 'Суровая',
-        p2: 'Заброшенная',
-        chance: 5,
-      },
     ],
     products: [
       {
@@ -2961,11 +2861,6 @@ export const BEES: Bee[] = [
         name: 'Фиолетовые окрашенные соты',
         pct: 15,
         kind: 'specialty',
-      },
-      {
-        name: 'Нестабильные соты',
-        pct: 12,
-        kind: 'product',
       },
     ],
   },
@@ -3229,6 +3124,258 @@ export const BEES: Bee[] = [
       {
         name: 'Кипящие соты',
         pct: 25,
+        kind: 'product',
+      },
+    ],
+  },
+  {
+    id: 'Прорастающая',
+    en: 'Growing',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Лесная',
+        p2: 'Прилежная',
+        chance: 10,
+      },
+    ],
+    products: [
+      {
+        name: 'Медовые соты',
+        pct: 35,
+        kind: 'product',
+      },
+    ],
+  },
+  {
+    id: 'Процветающая',
+    en: 'Thriving',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Неутомимая',
+        p2: 'Прорастающая',
+        chance: 10,
+      },
+    ],
+    products: [
+      {
+        name: 'Медовые соты',
+        pct: 35,
+        kind: 'product',
+      },
+    ],
+  },
+  {
+    id: 'Расцветающая',
+    en: 'Blooming',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Трудолюбивая',
+        p2: 'Процветающая',
+        chance: 8,
+      },
+    ],
+    products: [
+      {
+        name: 'Медовые соты',
+        pct: 35,
+        kind: 'product',
+      },
+    ],
+  },
+  {
+    id: 'Возделанная',
+    en: 'Farmed',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Прошлая',
+        p2: 'Луговая',
+        chance: 10,
+      },
+    ],
+    products: [
+      {
+        name: 'Пшеничные соты',
+        pct: 30,
+        kind: 'product',
+      },
+      {
+        name: 'Семянные соты',
+        pct: 10,
+        kind: 'specialty',
+      },
+    ],
+  },
+  {
+    id: 'Бесстрастная',
+    en: 'Frigid',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Зимняя',
+        p2: 'Прилежная',
+        chance: 10,
+      },
+    ],
+    products: [
+      {
+        name: 'Морозные соты',
+        pct: 25,
+        kind: 'product',
+      },
+    ],
+  },
+  {
+    id: 'Абсолютная',
+    en: 'Absolute',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Океаническая',
+        p2: 'Бесстрастная',
+        chance: 10,
+      },
+    ],
+    products: [
+      {
+        name: 'Морозные соты',
+        pct: 20,
+        kind: 'product',
+      },
+      {
+        name: 'Ледниковые соты',
+        pct: 10,
+        kind: 'specialty',
+      },
+    ],
+  },
+  {
+    id: 'Влажная',
+    en: 'Damp',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Топкая',
+        p2: 'Водная',
+        chance: 10,
+      },
+    ],
+    products: [
+      {
+        name: 'Замшелые соты',
+        pct: 30,
+        kind: 'product',
+      },
+    ],
+  },
+  {
+    id: 'Промокшая',
+    en: 'Sodden',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Болотистая',
+        p2: 'Влажная',
+        chance: 8,
+      },
+    ],
+    products: [
+      {
+        name: 'Замшелые соты',
+        pct: 30,
+        kind: 'product',
+      },
+    ],
+  },
+  {
+    id: 'Грибная',
+    en: 'Fungal',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Болотистая',
+        p2: 'Топкая',
+        chance: 8,
+      },
+      {
+        p1: 'Болотистая',
+        p2: 'Грибная',
+        chance: 8,
+      },
+    ],
+    products: [
+      {
+        name: 'Замшелые соты',
+        pct: 30,
+        kind: 'product',
+      },
+      {
+        name: 'Грибные соты',
+        pct: 15,
+        kind: 'specialty',
+      },
+    ],
+  },
+  {
+    id: 'Праздничная',
+    en: 'Celebratory',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Суровая',
+        p2: 'Возбуждённая',
+        chance: 5,
+      },
+    ],
+    products: [],
+  },
+  {
+    id: 'Чад',
+    en: 'Chad',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Развитая',
+        p2: 'Праздничная',
+        chance: 5,
+      },
+    ],
+    products: [
+      {
+        name: 'Торт',
+        pct: 100,
+        kind: 'product',
+      },
+      {
+        name: 'Плодородная пыльца',
+        pct: 50,
+        kind: 'specialty',
+      },
+      {
+        name: 'Молочные соты',
+        pct: 55,
+        kind: 'specialty',
+      },
+    ],
+  },
+  {
+    id: 'Опасная',
+    en: 'Hazardous',
+    source: 'E',
+    parents: [
+      {
+        p1: 'Суровая',
+        p2: 'Заброшенная',
+        chance: 5,
+      },
+    ],
+    products: [
+      {
+        name: 'Нестабильные соты',
+        pct: 12,
         kind: 'product',
       },
     ],
@@ -4249,7 +4396,7 @@ export const BEES: Bee[] = [
     parents: [
       {
         p1: 'Суровая',
-        p2: 'Золотоносная',
+        p2: 'Сверкающая',
         chance: 7,
       },
     ],
@@ -4874,7 +5021,7 @@ export const BEES: Bee[] = [
     source: 'M',
     parents: [
       {
-        p1: 'Золотоносная',
+        p1: 'Сверкающая',
         p2: 'Серебряная',
         chance: 10,
       },

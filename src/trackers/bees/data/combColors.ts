@@ -488,8 +488,8 @@ export const COMB_COLOR: Readonly<Record<string, TintColor>> = {
     src: 'E',
   },
   'Glacial Comb': {
-    p: '#4e8787',
-    s: '#cbf2f2',
+    p: '#a8e6f0',
+    s: '#6fc0e0',
     src: 'E',
   },
   'Теневые соты': {
@@ -1131,6 +1131,11 @@ export const COMB_COLOR: Readonly<Record<string, TintColor>> = {
     p: '#12e3d9',
     s: '#069e97',
     src: 'M',
+  },
+  'Ледниковые соты': {
+    p: '#a8e6f0',
+    s: '#6fc0e0',
+    src: 'E',
   },
   'Mundane Comb': {
     p: '#ff9859',
