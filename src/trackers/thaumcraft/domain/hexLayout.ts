@@ -18,6 +18,13 @@ const DIRS: ReadonlyArray<readonly [number, number]> = [
 
 const keyOf = (q: number, r: number): string => `${q},${r}`
 
+/**
+ * Шаг укладки связанных аспектов = 1 ячейка: цепочка непрерывна (соседние по связи
+ * аспекты стоят вплотную, как на столе). Разнос требуемых аспектов (≥3) обеспечивает
+ * решатель — он вставляет ≥2 промежуточных аспекта между требуемыми (см. solveResearch).
+ */
+const SPACING = 1
+
 /** Ближайшая свободная ячейка к точке p (BFS по сетке). */
 function nearestFree(p: HexPos, used: ReadonlySet<string>): HexPos {
   const seen = new Set<string>([keyOf(p.q, p.r)])
@@ -26,7 +33,7 @@ function nearestFree(p: HexPos, used: ReadonlySet<string>): HexPos {
     const c = queue.shift()!
     if (!used.has(keyOf(c.q, c.r))) return c
     for (const [dq, dr] of DIRS) {
-      const n = { q: c.q + dq, r: c.r + dr }
+      const n = { q: c.q + dq * SPACING, r: c.r + dr * SPACING }
       const k = keyOf(n.q, n.r)
       if (!seen.has(k)) {
         seen.add(k)
@@ -74,7 +81,7 @@ export function layoutSolution(solution: AspectSolution): Map<string, HexPos> {
       if (pos.has(m)) continue
       let cell: HexPos | null = null
       for (const [dq, dr] of DIRS) {
-        const c = { q: p.q + dq, r: p.r + dr }
+        const c = { q: p.q + dq * SPACING, r: p.r + dr * SPACING }
         if (!used.has(keyOf(c.q, c.r))) {
           cell = c
           break

@@ -49,6 +49,47 @@ export function aspectPath(
   return path
 }
 
+/**
+ * Ищет простой путь from→to длиной ≥ minEdges рёбер (но не длиннее minEdges+slack),
+ * чтобы разнести требуемые аспекты: на непрерывной цепочке они окажутся на ≥minEdges
+ * ячеек. Промежуточные узлы не из exclude (уже размещённые/требуемые) — без дублей и
+ * «коротких замыканий». Ограниченный DFS; возвращает кратчайший подходящий путь либо
+ * null (тогда вызывающий откатывается к обычной кратчайшей раскладке).
+ */
+function findSpacedPath(
+  from: string,
+  to: string,
+  adj: ReadonlyMap<string, ReadonlySet<string>>,
+  minEdges: number,
+  exclude: ReadonlySet<string>,
+  slack = 2,
+): string[] | null {
+  const maxEdges = minEdges + slack
+  let best: string[] | null = null
+  const path = [from]
+  const visited = new Set<string>([from])
+  const dfs = (node: string): void => {
+    const edges = path.length - 1
+    if (best && edges >= best.length - 1) return // уже не короче лучшего
+    if (node === to) {
+      if (edges >= minEdges) best = [...path]
+      return
+    }
+    if (edges >= maxEdges) return
+    for (const next of adj.get(node) ?? []) {
+      if (visited.has(next)) continue
+      if (next !== to && exclude.has(next)) continue // не подставляем чужие аспекты
+      visited.add(next)
+      path.push(next)
+      dfs(next)
+      path.pop()
+      visited.delete(next)
+    }
+  }
+  dfs(from)
+  return best
+}
+
 /** Решение мини-игры: какие аспекты лежат на поле и какие пары соединены. */
 export interface AspectSolution {
   /** Все аспекты решения (требуемые + промежуточные). */
@@ -99,9 +140,19 @@ export function solveResearch(
       break
     }
     need.delete(best.target)
-    for (let i = 0; i < best.path.length; i++) {
-      inNet.add(best.path[i]!)
-      if (i > 0) addEdge(best.path[i - 1]!, best.path[i]!)
+    // разносим требуемые аспекты: путь между ними — не короче 3 рёбер (≥2
+    // промежуточных), поэтому на непрерывной цепочке требуемые отстоят на ≥3 ячейки.
+    // Не вставляем уже размещённые/требуемые аспекты (exclude), чтобы не дублировать.
+    const exclude = new Set<string>([...inNet, ...req])
+    // разносим требуемые на ≥3 ячейки; фоллбек к обычному кратчайшему пути, если нельзя
+    const spaced =
+      best.path.length - 1 >= 3
+        ? best.path
+        : findSpacedPath(best.path[0]!, best.target, adj, 3, exclude)
+    const path = spaced ?? best.path
+    for (let i = 0; i < path.length; i++) {
+      inNet.add(path[i]!)
+      if (i > 0) addEdge(path[i - 1]!, path[i]!)
     }
   }
   return { nodes: [...inNet], edges, unreachable }

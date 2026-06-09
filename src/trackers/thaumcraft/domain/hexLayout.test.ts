@@ -21,7 +21,7 @@ describe('layoutSolution', () => {
     // уникальность координат
     const keys = new Set([...pos.values()].map((p) => `${p.q},${p.r}`))
     expect(keys.size).toBe(4)
-    // соседние по ребру — на расстоянии 1 (цепочка без коллизий укладывается смежно)
+    // соседние по связи — вплотную (расстояние 1): цепочка непрерывна
     for (const [x, y] of sol.edges) expect(hexDist(pos.get(x)!, pos.get(y)!)).toBe(1)
   })
 

@@ -7,7 +7,7 @@ import AspectHex from './AspectHex.vue'
 
 const props = defineProps<{ research: Research }>()
 
-const SIZE = 48 // радиус гекса (axial)
+const SIZE = 44 // радиус гекса (axial)
 const HEXW = Math.sqrt(3) * SIZE
 const HEXH = 2 * SIZE
 const PAD = HEXW / 2 + 12
